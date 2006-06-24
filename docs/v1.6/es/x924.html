@@ -1,0 +1,398 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+> Cunetas Recibibles</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual de usuario de Gnucash, contabilidad doméstica Gnu"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Cuentas Pagables/Cuentas Recibibles"
+HREF="t915.html"><LINK
+REL="PREVIOUS"
+TITLE="Cuentas Pagables/Cuentas Recibibles"
+HREF="t915.html"><LINK
+REL="NEXT"
+TITLE=" Cuentas Pagables"
+HREF="x986.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual de usuario de Gnucash, contabilidad doméstica Gnu</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t915.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Cuentas Pagables/Cuentas Recibibles</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x986.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-ARDEF">Cunetas Recibibles</H1
+><P
+>    </P
+><P
+>Primero, permítanos examinar las cuentas C/R. Después de todo,
+    realmente no queremos tener la <I
+CLASS="EMPHASIS"
+>necesidad</I
+> de trabajar
+    con las cuentas C/P porque siempre pagamos <I
+CLASS="EMPHASIS"
+>nuestras</I
+>
+    a tiempo, ¿no es verdad? :-)
+
+    </P
+><P
+>Como primera aproximación, permítanos asumir que no requerimos
+    que nuestros clientes paguen <I
+CLASS="EMPHASIS"
+>instantáneamente,</I
+> en
+    efectivo, en su lugar les entregamos un albarán, y les damos 30
+    días para pagar las facturas. (Después de los 30 días, podemos
+    empezar a cargar intereses y enviarles cartas para obligarle
+    a pagar :-)).
+
+    </P
+><P
+>Cuando hacemos un venta, las dos cuentas afectadas son
+    <I
+CLASS="EMPHASIS"
+>Ventas</I
+> (cuenta entrante) y <I
+CLASS="EMPHASIS"
+>Cuentas Recibibles.</I
+>
+    Las cuentas recibibles son un asiento, pero no es "líquido," ya
+    que no puede decir que esta vendido, y no es por supuesto caja.
+
+    </P
+><P
+>Luego cuando paguen la factura, entregándole un gran saco de
+    billetes (o, con más frecuencia, un cheque), transferiremos
+    la cantidad de la cuenta C/R a caja.
+
+    </P
+><P
+>La razón de que hagamos esto en dos pasos es porque hemos
+    decidido que necesitamos hacer nuestra anotaciones en cuentas
+    en base incremental y no en base a la caja, porque la mayoría
+    de nuestras transacciones no son solamente basadas en el intercambio
+    de caja de unas manos a otras, sino basadas en <I
+CLASS="EMPHASIS"
+> establecer
+    obligaciones.</I
+>
+
+    </P
+><P
+>En operaciones más sofisticadas, puede haber una secuencia más
+    compleja de documentos generados y registrados:
+
+    <P
+></P
+><UL
+><LI
+><P
+>Un cliente nos envía una <I
+CLASS="EMPHASIS"
+>Orden de Compra</I
+>, que
+      nos informa de su petición de compra.
+
+      </P
+></LI
+><LI
+><P
+>Creamos una <I
+CLASS="EMPHASIS"
+>Orden de trabajo</I
+> para
+      programar la producción de lo que el cliente está comprando
+
+      </P
+></LI
+><LI
+><P
+>Hacemos una <I
+CLASS="EMPHASIS"
+>Orden de transporte</I
+>, para transportar
+      los productos al cliente
+
+      </P
+></LI
+><LI
+><P
+>Una vez transportados, hacemos una <I
+CLASS="EMPHASIS"
+>factura</I
+>, que
+      representa nuestra <I
+CLASS="EMPHASIS"
+>petición de pago</I
+>
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>El hecho que se creen cuatro documentos para manejar esto
+    hace que exista mucho papeleo. Cosas como estas y otros
+    procesos parecidos explica porque las organizaciones grandes
+    tienden a tener grandes burocracias.
+
+    </P
+><P
+>Reportamos las ventas en nuestras cuentas de ventas tan
+    pronto como las hacemos. Desafortunadamente, podemos haber
+    vendido algunos productos con operaciones poco claras que no
+    conocemos porque son confusas, y con lo que quizá obtengamos
+    algunas "perdidas."
+
+    </P
+><P
+>Para determinar que partes de las Cuentas Recibibles puedan
+    ser de mayor riesgo, es típico catalogar las cuentas C/R en
+    base a la "edad" de las deudas, normalmente separado en varios
+    periodos de edades, impagados de 0-30 días, aquellos de 31-60 días,
+    de 61-90 días, y aquellos que están <I
+CLASS="EMPHASIS"
+>fuera de fechas.</I
+>
+
+    </P
+><P
+>En este punto (fuera de fechas), es bastante claro que un
+    cliente nunca pagará lo que debe, y tenemos que imputarlo como
+    <I
+CLASS="EMPHASIS"
+>Pérdidas.</I
+>
+
+    </P
+><P
+>Luego, es típico hacer una entrada en el registro como:
+
+    <DIV
+CLASS="TABLE"
+><A
+NAME="AEN960"><P
+><B
+>Tabla 2. Ejemplo de Entrada de Perdidas</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Cuenta</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>DR</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>CR</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Perdidas</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$10,000</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+><TD
+>&nbsp;</TD
+><TD
+>&nbsp;</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Cuentas Recibibles</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$10,000</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    </P
+><P
+>Podríamos haber reducido las <I
+CLASS="EMPHASIS"
+>Peticiones de Venta</I
+>,
+    pero las compañías prefieren seguir específicamente el dinero que
+    pierden con los malos clientes. 
+
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Advertencia: <I
+CLASS="EMPHASIS"
+>Concepto de Cuenta Avanzado.</I
+>
+    Las pérdidas es un ejemplo de "contra-cuenta." que no se puede referir
+    a <I
+CLASS="EMPHASIS"
+>dinero pagado a los rebeldes nicaragüenses,</I
+> pero
+    si la idea que la cuenta es una cuenta de entrada que tiene
+    un balance opuesto al normalmente esperado, para contradecir
+    el balance en otra cuenta entrante. La <A
+HREF="t1031.html"
+>Depreciación del Acumulado,</A
+>
+    se utiliza para disminuir el valor de un asiento con el tiempo, es
+    otro ejemplo de contracuenta.</I
+>
+
+    </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t915.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Inicio</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x986.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Cuentas Pagables/Cuentas Recibibles</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t915.html"
+ACCESSKEY="U"
+>Subir</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Cuentas Pagables</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

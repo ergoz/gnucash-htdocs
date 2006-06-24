@@ -1,0 +1,1177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Report Development</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash User Manual"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Stock Price Report"
+HREF="t6971.html"><LINK
+REL="NEXT"
+TITLE="      What's New?
+    "
+HREF="t7204.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash User Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t6971.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t7204.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN6979">Report Development</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t6978.html#XACC-REPORTDEV"
+>Report Development</A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-REPORTDEV">Report Development</H1
+><P
+> <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+> reports are generated in a
+manner that is quite reminiscent of web <A
+HREF="http://hoohoo.ncsa.uiuc.edu/cgi/"
+TARGET="_top"
+> CGI </A
+>; it involves:
+
+<P
+></P
+><UL
+><LI
+><P
+> Writing programs that generate "option dialogs."</P
+><P
+> Unlike the CGI approach, <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+>
+options wind up directly generating GNOME widgets, and do not use HTML
+FORM tagging.  The similarities are nonetheless quite conspicuous as
+the options systems both involve:
+
+<P
+></P
+><UL
+><LI
+><P
+> Building a property list that describes options and
+default values;</P
+></LI
+><LI
+><P
+> Submitting that property list for user
+input;</P
+></LI
+><LI
+><P
+> Returning another property list containing the user's
+input.</P
+></LI
+></UL
+></P
+></LI
+><LI
+><P
+> Writing programs that pull data from the application,
+based on the option property list, and then generate HTML
+output.</P
+><P
+> Many web applications produce HTML of questionable integrity
+since the developer generates HTML in the slap-happy manner of just
+printing out strings that might contain any sort of "pseudo-tagged"
+data.  In contrast, <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+> uses an
+HTML-oriented record structure which makes it harder to build
+<I
+CLASS="EMPHASIS"
+> bad </I
+> HTML than it is to build valid
+HTML. </P
+></LI
+></UL
+></P
+><P
+> This presentation will assume that the reader is already
+generally familiar with Scheme, particularly with the following
+concepts:
+
+<P
+></P
+><UL
+><LI
+><P
+> Binding values and functions using
+<TT
+CLASS="FUNCTION"
+>define</TT
+></P
+><P
+> As with:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>(define *value-x* 25)
+(define *value-y* 30)
+(define *string-a* "Here's a string!")
+(define *string-b* "A string with embedded quote \" ")
+(define (add-1 x)
+  (+ x 1))</PRE
+></TD
+></TR
+></TABLE
+></P
+></LI
+><LI
+><P
+> Defining local bindings using
+<TT
+CLASS="FUNCTION"
+>let</TT
+> and <TT
+CLASS="FUNCTION"
+>let</TT
+></P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>&#62; (define let-to-hide-stuff
+  (lambda (x y z)
+    (let ((x 25);; Local binding of x inside the let
+	  (w 11))
+      (display "Inside let, x is:") (display x) (newline)
+      (display "And w only exists inside the let as ") (display w)
+      (newline)
+      (display "Add x, y, z, w inside let:")
+      (display (+ x y z w)) (newline))
+    (display "Now, outside the let:") (newline)
+    (display "x is:") (display x) (newline)
+    (display "y is:") (display y) (newline)
+    (display "z is:") (display z) (newline)
+    (display "w is:") (display w) (newline)))
+&#62; (let-to-hide-stuff 10 20 30)
+&#62; (let-to-hide-stuff 10 20 30)
+Inside let, x is:25
+And w only exists inside the let as 11
+Add x, y, z, w inside let:86
+Now, outside the let:
+x is:10
+y is:20
+z is:30
+reference to undefined identifier: w
+w is:&#62; </PRE
+></TD
+></TR
+></TABLE
+></LI
+><LI
+><P
+> Defining lists using <TT
+CLASS="FUNCTION"
+>list</TT
+></P
+><P
+> As with:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>&#62; (list 1 2 3 "four" 'five)
+(1 2 3 "four" five)
+&#62; '(1 2 3 "four" five)
+(1 2 3 "four" five)</PRE
+></TD
+></TR
+></TABLE
+></P
+></LI
+><LI
+><P
+> Representing anonymous functions using
+<TT
+CLASS="FUNCTION"
+>lambda</TT
+></P
+><P
+> The <TT
+CLASS="FUNCTION"
+>add-1</TT
+> function shown earlier is
+<I
+CLASS="EMPHASIS"
+>actually</I
+> defined thus:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>(define add-1 
+  (lambda (x) (+ x 1)))</PRE
+></TD
+></TR
+></TABLE
+></P
+></LI
+><LI
+><P
+> The <TT
+CLASS="FUNCTION"
+>if</TT
+> control structure</P
+></LI
+><LI
+><P
+> Using <TT
+CLASS="FUNCTION"
+>map</TT
+> to apply a function to all the
+members of a list, producing another list, as with:
+
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>&#62; (map (lambda (x) (+ x 1)) '(1 2 3 4))
+(2 3 4 5)</PRE
+></TD
+></TR
+></TABLE
+>
+or
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>&#62; (map  (lambda (s n) (string-append s ":" (number-&#62;string n)))
+     '("one" "two" "three" "four") '(1 2 3 4))
+("one:1" "two:2" "three:3" "four:4")</PRE
+></TD
+></TR
+></TABLE
+></P
+></LI
+></UL
+></P
+><P
+> If the meanings of some of these are not too clear, see the
+references in the section on <A
+HREF="x6912.html"
+> Scheme
+Documentation, </A
+> and try running code such as the above using
+Guile.</P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN7040">Report Overview</H2
+><P
+> A GnuCash report is added to the system using the function
+<TT
+CLASS="FUNCTION"
+>gnc:define-report</TT
+>, to which one passes the
+following parameters:
+
+<P
+></P
+><UL
+><LI
+><P
+> <TT
+CLASS="STRUCTFIELD"
+><I
+>version</I
+></TT
+></P
+><P
+> This is a version number; not presently used to do anything
+particularly clever.</P
+></LI
+><LI
+><P
+> <TT
+CLASS="STRUCTFIELD"
+><I
+>name</I
+></TT
+></P
+><P
+> This is a <I
+CLASS="EMPHASIS"
+>not-translated</I
+> name for the
+report that is notably used to provide the name that will be added to
+the <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+> reporting
+menu.</P
+></LI
+><LI
+><P
+> <A
+HREF="t6978.html#OPTIONS-GENERATOR"
+> <TT
+CLASS="STRUCTFIELD"
+><I
+>options-generator </I
+></TT
+> </A
+></P
+><P
+> This argument is a function which takes no parameters, and
+generates a set of options that will be used to display a dialog that
+the user can use to select values for the report's parameters.</P
+><P
+> This will typically include things like date ranges and lists
+of accounts, to determine what data should be selected for the report,
+as well as other controls that determine how the data will be
+rendered. </P
+></LI
+><LI
+><P
+> <A
+HREF="t6978.html#RENDERER"
+><TT
+CLASS="STRUCTFIELD"
+><I
+>renderer</I
+></TT
+></A
+></P
+><P
+> The "renderer" does the work of generating the report.  It
+accepts a "database" of options, as generated by the <TT
+CLASS="STRUCTFIELD"
+><I
+>options-generator </I
+></TT
+>, pulls the corresponding data from
+the <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+> engine, and generates, as
+output, an object of type <TT
+CLASS="SGMLTAG"
+> html-document </TT
+>, which is
+what the <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+> report engine knows how to
+display.</P
+></LI
+></UL
+></P
+><P
+> A trivial example might look like the following:
+
+<DIV
+CLASS="INFORMALEXAMPLE"
+><A
+NAME="AEN7071"><P
+></P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+> 
+(let ()
+  (define (options-generator)
+     (let ((options (gnc:new-options)))  ;;; Create new option list
+          options))       ;;; Return it
+  (define (renderer options)
+    (let ((document (gnc:make-html-document)))
+       document))      ;;; Generates an empty document
+  (gnc:define-report
+   'version 1
+   'name (N_ "Trivial Example")
+   'options-generator options-generator
+   'renderer renderer))</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+></P
+><P
+> Note that reports are typically defined inside a <A
+HREF="t6978.html#LET"
+> <TT
+CLASS="FUNCTION"
+> let </TT
+> </A
+> environment; the "work
+functions" will thereby all be invisible to code outside the
+<TT
+CLASS="FUNCTION"
+> let </TT
+> environment, which means you won't need to
+worry about coming up with unique function names.  Only the report
+name forcibly needs to be unique. </P
+><P
+> So long as each report is similarly wrapped in a <TT
+CLASS="FUNCTION"
+> let</TT
+> environment, you could call <I
+CLASS="EMPHASIS"
+> all </I
+> of
+the "rendering" functions <TT
+CLASS="FUNCTION"
+> rendition </TT
+> without
+causing any conflicts.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="OPTIONS-GENERATOR">The options-generator
+function</H2
+><P
+> The options generator introduces a number of additional
+functions that are used to set up option dialogs.
+
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+> 
+(define (options-generator)
+  (let ((option-set (gnc:new-options)))  <A
+NAME="NEWOPTS"
+><B
+>(1)</B
+></A
+>
+ (gnc:options-add-report-date!  <A
+NAME="OPTDATE"
+><B
+>(2)</B
+></A
+>
+  option-set pagename-general "End Date" "a")
+ (gnc:options-add-date-interval!  <A
+NAME="OPTDATERNG"
+><B
+>(3)</B
+></A
+>
+  option-set pagename-general "From" "To" "a")
+ (gnc:options-add-interval-choice!  <A
+NAME="OPTINT"
+><B
+>(4)</B
+></A
+>
+  option-set pagename-general 
+  "Step Size" "b" 'YearDelta)
+ (gnc:options-add-account-levels! <A
+NAME="OPTACL"
+><B
+>(5)</B
+></A
+>
+  option-set pagename-general
+  "Show Accounts down to Level" "c" 2)
+ (gnc:options-add-account-selection! <A
+NAME="OPTACC"
+><B
+>(6)</B
+></A
+>
+  option-set pagename-general "Account Display Depth"
+  "Always show subaccounts" "Accounts" "a" 3 
+  *LIST-OF-INCOME-AND-EXPENSE-ACCOUNTS* 
+ options))       </PRE
+></TD
+></TR
+></TABLE
+>
+<DIV
+CLASS="CALLOUTLIST"
+><DL
+COMPACT="COMPACT"
+><DT
+><A
+HREF="t6978.html#NEWOPTS"
+><B
+>(1)</B
+></A
+></DT
+><DD
+><TT
+CLASS="FUNCTION"
+>gnc:new-options</TT
+> creates a new, empty set of
+options.  This has to be run first; the later functions need to have
+an option set to refer to.</DD
+><DT
+><A
+HREF="t6978.html#OPTDATE"
+><B
+>(2)</B
+></A
+></DT
+><DD
+><TT
+CLASS="FUNCTION"
+>gnc:options-add-report-date!</TT
+> adds a selection
+option that indicates a single date, generally used as the end
+date.</DD
+><DT
+><A
+HREF="t6978.html#OPTDATERNG"
+><B
+>(3)</B
+></A
+></DT
+><DD
+><TT
+CLASS="FUNCTION"
+>gnc:options-add-date-interval!</TT
+> adds in a
+selection option that allows specifying a range of
+dates.</DD
+><DT
+><A
+HREF="t6978.html#OPTINT"
+><B
+>(4)</B
+></A
+></DT
+><DD
+><TT
+CLASS="FUNCTION"
+>gnc:options-add-interval-choice!</TT
+> adds a selection
+option that allows choosing between various time intervals, including
+days, weeks, two-week periods, months, and years.</DD
+><DT
+><A
+HREF="t6978.html#OPTACL"
+><B
+>(5)</B
+></A
+></DT
+><DD
+> <TT
+CLASS="FUNCTION"
+>gnc:options-add-account-levels!</TT
+> adds an option indicating
+how deep a set of account levels should be shown.</DD
+><DT
+><A
+HREF="t6978.html#OPTACC"
+><B
+>(6)</B
+></A
+></DT
+><DD
+> <TT
+CLASS="FUNCTION"
+>gnc:options-add-account-selection!</TT
+> allows selecting a set
+of accounts.</DD
+><DD
+><P
+> Note that the last argument is a list of
+accounts from which to select, which means <A
+HREF="t6978.html#FILTACC"
+>filtering a list of relevant accounts, </A
+> at some point.</P
+></DD
+></DL
+></DIV
+></P
+><P
+> There are also additional option functions:
+
+<P
+></P
+><UL
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:options-add-currency!</TT
+> to
+select a currency;</P
+></LI
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:options-add-plot-size!</TT
+> to
+control how a graphical plot should be sized.</P
+></LI
+></UL
+></P
+><P
+> Underlying these are the following base "option generator"
+functions defined in <TT
+CLASS="FILENAME"
+>options-utilities.scm</TT
+> that
+may be used to create new kinds of options:
+
+<P
+></P
+><UL
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:register-option</TT
+></P
+></LI
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:make-date-option</TT
+></P
+></LI
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:make-multichoice-option</TT
+></P
+></LI
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:make-simple-boolean-option</TT
+></P
+></LI
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:make-account-list-option</TT
+></P
+></LI
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:make-currency-option</TT
+></P
+></LI
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:make-number-range-option</TT
+></P
+></LI
+></UL
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="ACCESSING-DATA">Accessing GnuCash Data</H2
+><P
+> There are several forms of data that you may wish to access:</P
+><P
+></P
+><UL
+><LI
+><P
+> <A
+HREF="t6978.html#FILTACC"
+> Accounting Info </A
+></P
+></LI
+><LI
+><P
+> <A
+HREF="t6978.html#STOCKPRICES"
+> Stock Prices </A
+></P
+></LI
+><LI
+><P
+> <A
+HREF="t6978.html#ACCOPTION"
+> Reading Option Data </A
+></P
+></LI
+></UL
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="FILTACC">Accessing Engine Data</H3
+><P
+> The functions used to access the various forms of accounting
+data may be found in the file <TT
+CLASS="FILENAME"
+> src/g-wrap/gnc.html</TT
+>. </P
+><DIV
+CLASS="NOTE"
+><P
+></P
+><TABLE
+CLASS="NOTE"
+WIDTH="100%"
+BORDER="0"
+><TR
+><TD
+WIDTH="25"
+ALIGN="CENTER"
+VALIGN="TOP"
+><IMG
+SRC="./stylesheet-images/note.gif"
+HSPACE="5"
+ALT="Note"></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+><P
+> Need some examples here... </P
+></TD
+></TR
+></TABLE
+></DIV
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="ACCOPTION">Accessing Option Data</H3
+><P
+> Functions <TT
+CLASS="FUNCTION"
+>gnc:lookup-option</TT
+>,
+<TT
+CLASS="FUNCTION"
+>gnc:report-options</TT
+>, and
+<TT
+CLASS="FUNCTION"
+>gnc:option-value</TT
+> are the crucial functions you
+are likely to use from <TT
+CLASS="FILENAME"
+> src/scm/options.scm</TT
+></P
+><P
+> Exerpted from <TT
+CLASS="FILENAME"
+> src/scm/report/hello-world.scm</TT
+> is the following:
+
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>;; First, build some helper functions for looking up option values.
+(define (get-op section name)
+  (gnc:lookup-option (gnc:report-options report-obj) section name))
+    
+(define (op-value section name)
+  (gnc:option-value (get-op section name)))
+    
+;; The next thing we do is make local variables for all the specific
+;; options in the set of options given to the function. 
+(let 
+    ((bool-val     (op-value "Hello, World!" "Boolean Option"))
+     (mult-val     (op-value "Hello, World!" "Multi Choice Option"))
+     (string-val   (op-value "Hello, World!" "String Option"))
+     (date-val     (gnc:date-option-absolute-time
+		    (op-value "Hello, World!" "Just a Date Option")))
+     (date2-val    (gnc:date-option-absolute-time
+		    (op-value "Hello, World!" "Time and Date Option")))
+     (rel-date-val (gnc:date-option-absolute-time
+		    (op-value "Hello, World!" "Relative Date Option")))
+     (combo-date-val (gnc:date-option-absolute-time
+		      (op-value "Hello, World!" "Combo Date Option")))
+     (num-val      (op-value "Hello, World!" "Number Option"))
+     (bg-color-op  (get-op   "Hello, World!" "Background Color"))
+     (txt-color-op (get-op   "Hello, World!" "Text Color"))
+     (accounts     (op-value "Hello Again"   "An account list option"))
+     (list-val     (op-value "Hello Again"   "A list option"))
+     (crash-val    (op-value "Testing"       "Crash the report")))
+  (now-do-stuff-with-options))</PRE
+></TD
+></TR
+></TABLE
+></P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="STOCKPRICES">Stock Prices</H3
+><DIV
+CLASS="WARNING"
+><P
+></P
+><TABLE
+CLASS="WARNING"
+WIDTH="100%"
+BORDER="0"
+><TR
+><TD
+WIDTH="25"
+ALIGN="CENTER"
+VALIGN="TOP"
+><IMG
+SRC="./stylesheet-images/warning.gif"
+HSPACE="5"
+ALT="Warning"></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+><P
+> The stock price database is under construction, so it is a bit
+early to get specific about this...</P
+></TD
+></TR
+></TABLE
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="HTML-GENERATION">HTML Generation functions</H2
+><P
+> Reports are generated as a tree of <A
+HREF="x6939.html#GUILE"
+> Guile</A
+> records, rooted by an &#60;html-document&#62; record, which
+consists of style information, a title, and a list of
+&#60;html-object&#62; records that consist of a rendition function and a
+further list of objects.</P
+><P
+> We might generate a simple report thus:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>(define (build-simple-document)
+  (let* ((document (gnc:make-html-document))
+	 ;;; Here are a couple of helper functions
+	 (addfpara (lambda (obj)
+		    (gnc:html-document-add-object!
+		     document
+		     (gnc:make-html-text         
+		      (gnc:html-markup-p obj)))))
+	 (addpara (lambda (text)
+		    (addfpara 
+		     (gnc:html-markup/format text)))))
+       ;;; Set the title
+    (gnc:html-document-set-title! document (_ "Simple List of Values"))
+    ;;; Add in a paragraph of text
+    (addpara 
+     (_ "This is a simple report, starting with a paragraph of text"))
+    (addpara
+     (_ "Next, we calculate random values, adding them to a balance."))
+    (let loop
+	((balance 0))
+      (if (&#60; balance 500)
+	  (let ((newamt (- (random 500 200))))  ;;; Random number
+	    (addfpara 
+	       (gnc:html-markup/format 
+		(_ "Another random adjustment of %s yields %s")
+		(gnc:html-markup-tt (number-&#62;string newamt))
+		(gnc:html-markup-b (number-&#62;string balance))))
+	      (loop (+ balance newamt)))))
+    document))  ;;; Finally, return the document</PRE
+></TD
+></TR
+></TABLE
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="RENDERER">The rendition function</H2
+><P
+> The rendition function is where the functions from the
+preceding sections all come together.
+
+<P
+></P
+><UL
+><LI
+><P
+> It takes, as input, a "database" of options generated
+once the user adds their input to the dialog produced by the <A
+HREF="t6978.html#OPTIONS-GENERATOR"
+> options-generator</A
+>.</P
+></LI
+><LI
+><P
+> It uses those options to control how it <A
+HREF="t6978.html#ACCESSING-DATA"
+> accesses GnuCash data </A
+> </P
+></LI
+><LI
+><P
+> Finally, from that data, it <A
+HREF="t6978.html#HTML-GENERATION"
+> generates a "database" of HTML
+output. </A
+></P
+></LI
+></UL
+></P
+><P
+> The rendition function provides, as its return value, the
+"database of HTML," which <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+> then
+displays in an HTML viewer.
+
+<DIV
+CLASS="INFORMALEXAMPLE"
+><A
+NAME="AEN7198"><P
+></P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+> 
+(define (renderer options)
+  (let ((document (gnc:make-html-document)))
+ document))      ;;; Generates an empty document</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN7200">For More Information</H2
+><P
+> If you need more information, or have developed a new report
+that may be of use to others, please contact the GnuCash development
+mailing list at <TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto: gnucash-devel@gnucash.org "
+> gnucash-devel@gnucash.org </A
+>&#62;</TT
+>. </P
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t6971.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t7204.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Stock Price Report</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>What's New?</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

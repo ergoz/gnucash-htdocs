@@ -1,0 +1,288 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Lead Developers</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual de usuario de Gnucash, contabilidad doméstica Gnu"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="About GnuCash"
+HREF="t3.html"><LINK
+REL="PREVIOUS"
+TITLE="Versioning"
+HREF="x74.html"><LINK
+REL="NEXT"
+TITLE="Fixers and Patchers"
+HREF="x118.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual de usuario de Gnucash, contabilidad doméstica Gnu</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x74.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>About GnuCash</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x118.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-DEVELOPERS">Lead Developers</H1
+><P
+>    <DIV
+CLASS="GLOSSLIST"
+><DL
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:rclark@hmc.edu"
+>rclark@hmc.edu</A
+>&#62;</TT
+> Robin Clark</B
+></DT
+><DD
+><P
+>wrote the original <TT
+CLASS="APPLICATION"
+>X-Accountant</TT
+> in
+    Motif as a school project, taking it to version 0.9 by October
+    1997.  Although every single
+    line of his code has been re-written, his name appears as a
+    credit in almost every file.  Such is the magic of copyrights.</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:linas@linas.org"
+>linas@linas.org</A
+>&#62;</TT
+> Linas Vepstas</B
+></DT
+><DD
+><P
+>liked what he saw: the GUI was slick, the code was
+      documented and well structured, and it was all GPL'ed. And so he
+      re-wrote it: adding cell-widgets to XbaeMatrix, so that the
+      combobox and arrows would make an even slicker GUI, rewrote the
+      <TT
+CLASS="APPLICATION"
+>X-Accountant</TT
+> internals to add
+      double-entry, an account hierarchy, split out a transaction
+      mini-engine, add support for stocks, and spiffed up the help
+      menus. That was version 1.0 as of January 1998. For
+      version 1.1 &#38; 1.2, the engine was expanded and refined, and the
+      register window code completely redesigned and made mostly
+      Motif-(and GUI-)independent. 
+    Linas is now active with Gnumatic Incorporated, a company formed to
+    enhance and support GnuCash for everyone, from home desktop users
+    to commercial and professional accountants.</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:jcollins@gnucash.org"
+>jcollins@gnucash.org</A
+>&#62;</TT
+> Jeremy
+      Collins</B
+></DT
+><DD
+><P
+>publicized the <TT
+CLASS="APPLICATION"
+>GnoMoney</TT
+> project widely
+      and broadly, and then changed its name to
+      <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+>. 
+      (Actually, put the selection
+      of the name up to popular vote.  Democracy is not
+      a good way to pick names.)
+      Jeremy registered the domain name, and created and maintained
+      the gnucash.org web site for years,
+      and got the initial GTK/gnome code working.
+      </P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:rlb@cs.utexas.edu"
+>rlb@cs.utexas.edu</A
+>&#62;</TT
+> Rob Browning</B
+></DT
+><DD
+><P
+>abused everyone for not using Perl, and then after we
+      added Perl support, dumped Perl in favor of Guile/Scheme
+      support.  Rob built the build
+      infrastructure, hacked the gtk code, and is whacking the file format.
+      Also, the re-write of reports and statement downloading in scheme,
+      the g-wrap guile wrapper, and the user preferences.</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:dave@krondo.com"
+>dave@krondo.com</A
+>&#62;</TT
+> Dave Peticolas</B
+></DT
+><DD
+><P
+>hacks obsessively on GnuCash. But he can stop anytime he
+      wants to. Really.
+      (As he is now the gatekeeper of the GnuCash CVS tree, be nice to him,
+      or he may decide to stop hacking in the middle of your patch).
+      </P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:grib@billgribble.com"
+>grib@billgribble.com</A
+>&#62;</TT
+> Bill
+      Gribble</B
+></DT
+><DD
+><P
+>    is not shy, or softly spoken.  So don't be shy if you find a bug in
+    his code: QIF import, query API and transaction search, check-printing,
+    commodity and currency support, gtkhtml integration and report printing.
+    </P
+></DD
+></DL
+></DIV
+>
+
+ </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x74.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Inicio</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x118.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Versioning</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t3.html"
+ACCESSKEY="U"
+>Subir</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Fixers and Patchers</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

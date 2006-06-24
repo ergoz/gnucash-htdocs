@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>O Conjunto de Documentação GnuCash</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="UP"
+TITLE=" Modificar a Documentação GnuCash "
+HREF="t6724.html"><LINK
+REL="PREVIOUS"
+TITLE=" Modificar a Documentação GnuCash "
+HREF="t6724.html"><LINK
+REL="NEXT"
+TITLE=" GnuCash e Scheme "
+HREF="t6809.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t6724.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Modificar a Documentação GnuCash</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t6809.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-DOCBOOKUSE">O Conjunto de Documentação GnuCash</H1
+><P
+> A documentação do GnuCash é gerida como um LIVRO, composte por 
+um conjunto de "ARTIGOS" DocBook. </P
+><P
+> O documento principal é o <TT
+CLASS="FILENAME"
+>gnucash.sgml</TT
+>, que na 
+verdade contém apenas a informação "sequencial" sobre que ficheiros têm de 
+ser analisados para criar o corpo do documento, cada ficheiro representando 
+um dos ARTIGOS. </P
+><P
+> Note que nomes de ficheiros para o resultado em HTML gerado são definidos 
+de três formas:</P
+><P
+></P
+><UL
+><LI
+><P
+> A etiqueta (tag) ID de cada ARTIGO define um 
+nome de ficheiro;</P
+></LI
+><LI
+><P
+> A etiqueta (tag) ID para cada SECT1 define um nome de ficheiro, excepto 
+se for a primeira SECT1 no ARTIGO;</P
+></LI
+><LI
+><P
+> Se você criar um novo ARTIGO ou SECT1 sem uma etiqueta ID, 
+os nomes dos ficheiros serão gerados com nomes tais como 
+<TT
+CLASS="FILENAME"
+>t1234.html</TT
+>, <TT
+CLASS="FILENAME"
+>x892.html</TT
+> e semelhantes.
+Eles terão um aspecto bem aleatório. </P
+><P
+> Isto é algo mau; certifique-se que especifica uma etiqueta ID ao 
+ARTIGO ou SECT1. </P
+></LI
+></UL
+><P
+> O Estilo é controlado pelo documento DSSSL, 
+<TT
+CLASS="FILENAME"
+>mysheet.dsl</TT
+>, utilizando as convenções 
+documentadas em <A
+HREF="x6777.html#MODSTYLE"
+> Folhas de Estilo Modulares para DocBook</A
+></P
+><P
+> Componentes que têm de ser instalados para que o comando 
+<B
+CLASS="COMMAND"
+>jade -ioutput.html -d mysheet.dsl -t sgml
+gnucash.sgml</B
+> funcione incluem:
+
+<P
+></P
+><UL
+><LI
+><P
+> <A
+HREF="http://www.jclark.com/jade/"
+TARGET="_top"
+>Jade</A
+> ou <A
+HREF="http://www.netfolder.com/DSSSL/index.html"
+TARGET="_top"
+>DSSSL/OpenJade </A
+></P
+></LI
+><LI
+><P
+> O DTD DocBook 3.1, disponível em <A
+HREF="http://docbook.org"
+TARGET="_top"
+> DocBook.org </A
+></P
+></LI
+><LI
+><P
+> <A
+HREF="http://nwalsh.com/docbook/dsssl/index.html"
+TARGET="_top"
+> Folhas de Estilo 
+Modulares </A
+></P
+></LI
+></UL
+></P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t6724.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t6809.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Modificar a Documentação GnuCash</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t6724.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>GnuCash e Scheme</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

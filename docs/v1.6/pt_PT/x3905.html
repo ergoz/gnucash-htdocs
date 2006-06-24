@@ -1,0 +1,333 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Introdução ao ficheiro QIF</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Importar Dados do Quicken Para o GnuCash"
+HREF="t3867.html"><LINK
+REL="PREVIOUS"
+TITLE="Importar Dados do Quicken Para o GnuCash"
+HREF="t3867.html"><LINK
+REL="NEXT"
+TITLE="Como utilizar a janela de Importação QIF"
+HREF="x3942.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t3867.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Importar Dados do Quicken Para o GnuCash</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x3942.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="INTRO">Introdução ao ficheiro QIF</H1
+><P
+>    
+    </P
+><P
+>Os ficheiros QIF são ficheiros de texto simples formatados como pares 
+"etiqueta-valor". No início de cada linha existe uma "etiqueta" de caracter 
+único seguida imediatamente por um "valor", que se extende até ao final da 
+linha.  </P
+><P
+> Não tenha medo de abrir um ficheiro QIF utilizando o <TT
+CLASS="APPLICATION"
+> less </TT
+>
+ou o editor de texto de sua preferência caso esteja a ter problemas em importar 
+correctamente dados do Quicken; são grandes as probabilidades de um simples 
+procurar-e-substituir corrigirem qulquer problema que possa estar a ter com o 
+ficheiro QIF. E um procurar-e-substituir de expressões regulares fará o resto.
+
+    </P
+><P
+>Colecções de pares etiqueta-valor constituem registos de vários tipos. 
+Existem registos pata armazenar os nomes e descrições das suas contas e das 
+categorias de receitas e despesas que definiu no Quicken. Existem registos 
+para definir "classes" do Quicken (uma espécie de sub-contas, uma espécie de 
+categorias, mas não exactamente qualquer uma delas). E existem registos para 
+descrever transacções.
+
+    </P
+><P
+>Aqui está um registo de transacção típico do Quicken:
+    <TT
+CLASS="LITERAL"
+><P
+CLASS="LITERALLAYOUT"
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!Type:Bank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D6/20/97<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T-500<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N1012<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L[Visa]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+&nbsp;&nbsp;&nbsp;&nbsp;</P
+></TT
+>
+
+    </P
+><P
+>A etiqueta ! denota o início de uma secção de registos de um 
+determinado tipo. Neste caso, transacções de Banco (Bank). "Type:Cat" 
+significa uma secção de descrições de Categorias, "Account" significa 
+descrições de contas, e por aí em diante.  
+
+    </P
+><P
+>A etiqueta D denota a data. Note a coadunação com o "problema" do 
+Ano 2000. Aqui está uma "característica" adorável de algumas versões do 
+Quicken e datas em 2000:
+      <TT
+CLASS="LITERAL"
+><P
+CLASS="LITERALLAYOUT"
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D1/&nbsp;1'&nbsp;0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T-640.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CX<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N511<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PJoe&nbsp;Bob<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRent:Apartment<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P
+></TT
+>
+
+    </P
+><P
+>Auuu! Felizmente o importador QIF do GnuCash consegue gerir todos os 
+formatos de datas estranhos que a lista de programadores do GnuCash encontrou.
+
+    </P
+><P
+>O campo T é o montante "Total" da transacção. Se existirem parcelas, 
+a some de todas os montantes das parcelas encontra-se num campo T. Dinheiro 
+que está a sair da conta está negativo.  
+
+    </P
+><P
+>O campo N é um "Número", que é normalmente um número de cheque ou 
+qualquer outro número identificativo da transacção. 
+
+    </P
+><P
+>O campo C representa o estado de limpa/reconciliada da transacção. 
+Um x ou X neste campo significa que a transacção está "Limpa", um * 
+significa que a transacção está "Reconciliada". 
+      
+    </P
+><P
+>O campo M são as notas (memo) da transacção. 
+
+    </P
+><P
+>O campo P é o destinarário (a quem foi pago). 
+
+    </P
+><P
+>O campo L é a linha da Categoria/Conta. Se o valor neste campo 
+estiver delimitado por parêntesis rectos, como [Visa], significa que 
+esta transacção é uma transferência para a conta do Quicken chamada Visa. 
+Se não existirem parêntesis rectos , a transacção está na Categoria 
+indicada (como por exemplo Renda:Apartamento).  
+
+    </P
+><P
+>A etiqueta ^ significa Fim de Registo.  
+
+    </P
+><P
+>Os utilizadores Quicken que estiverem a aproveitar as Classes 
+verão um caracter de barra (/) seguido do nome da classe no final da 
+linha da Categoria (como por exemplo [Visa]/Projecto)
+      
+    </P
+><P
+>Se uma transacção tiver "parcelas", significando que esta é uma 
+única transacção "nesta" conta mas está "dividida" por múltiplas contas 
+de fonte/destino, então as parcelas estarão descritas com campos S para 
+a categoria/conta/classe de cada parcela, um campo $ para o montante da 
+parcela, e um campo E para uma nota (memo) da parcela. O total de todos 
+os campos $ num registo de transacção deverão ser iguais ao campo T.
+
+      </P
+><P
+>Note que em nenhum lado do registo de transacção, nem em mais parte 
+alguma do ficheiro, o Quicken armazena o nome da conta que o ficheiro 
+descreve. Não me pergunte porque o não faz, pois eu também não sei. O Microsoft 
+Money (que também consegue gravar ficheiros QIF) utiliza um "truque" para 
+colocar a informação no ficheiro. Se a primeira transacção de Banco no 
+ficheiro tiver como destinarário do pagamento "Opening Balance" (Saldo 
+Inicial), a linha L conterá o nome da conta que o ficheiro descreve:
+
+    <TT
+CLASS="LITERAL"
+><P
+CLASS="LITERALLAYOUT"
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!Type:Bank<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D12/03/95<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T4,706.57<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CX<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POpening&nbsp;Balance<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L[New&nbsp;Bank]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+&nbsp;&nbsp;&nbsp;&nbsp;</P
+></TT
+>&#13;</P
+><P
+>Os registos de Saldo Inicial são tratados de forma especial, 
+visto não significarem o que parecem indicar (se interpretar o registo 
+à letra, como uma transferência de $4706.57 do [New Bank] para o [New 
+Bank], o seu saldo são uns maravilhosos $0.00). Na secção de <A
+HREF="x3959.html#DIALOG-ACCOUNTS"
+>Pastas de Contas</A
+> existe um debate sobre o que fazemos com eles.
+
+      </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN3937">Exportações Quicken de Multi-conta</H2
+><P
+>O Quicken e alguns outros programas que utilizam QIF como formato 
+de exportação sabem como armazenar o histórico de múltiplas contas num 
+único ficheiro QIF. Eles fazem-no antecedendo o conjunto de transacções 
+de/para essa conta com um registo "!Account".&#13;</P
+><P
+>O Importador QIF deverá ser capaz de processar correctamente estes 
+ficheiros. Você poderá reparar que a "Conta QIF Defeito" parece algo aleatória;
+para exportações de múltiplas contas, a conta inferida é a primeira conta 
+com um registo de Saldo Inicial. No entanto, visto que o Quicken indica 
+especificamente a conta pata cada transacção numa exportação de múltiplas contas, 
+a probabilidade de você obter incorrectamente transacções na conta de defeito 
+são reduzidas.
+
+      <A
+NAME="HOW-TO-QIF"
+></A
+></P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t3867.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x3942.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Importar Dados do Quicken Para o GnuCash</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t3867.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Como utilizar a janela de Importação QIF</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,262 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Relatório de Impostos / Exportação TXF</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE=" Construir relatórios personalizados"
+HREF="x4420.html"><LINK
+REL="NEXT"
+TITLE="Menus Principais"
+HREF="t4473.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x4420.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t4473.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN4435">Relatório de Impostos / <A
+HREF="t6698.html"
+>Exportação TXF</A
+></H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t4434.html#AEN4438"
+></A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN4438"></H1
+><P
+>  <A
+HREF="xacc-tax-report-example.html"
+TARGET="_top"
+>    <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/report-tax.png"></SPAN
+> 
+  </A
+></P
+><P
+>Este relatório permite-lhe ver todas as Receitas e Despesas relaccionadas com impostos. 
+      Visualisavel até à décima-quinta subconta. Sub-contas inferiores são ignoradas.
+
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>NOTE:</I
+> Para que isto funcione, o utilizador tem 
+      de separar rendimentos tributáveis dos não tributáveis para contas 
+      diferentes, tal como despesas dedutíveis e não dedutíveis. O utilizador 
+      tem também de Definir o Estado de tributação de cada conta tributável. 
+      A janela "Informação de Impostos" na opção de menu "Contas" permite-o. 
+      Existe um ficheiro taxreport.xac no directório dos exemplos, que mostra 
+      uma forma como isto pode ser configurado. 
+    </P
+><P
+>    <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/report-tax-options.png"></SPAN
+> 
+
+    </P
+><P
+>Opções definíveis para este relatório incluem:
+    
+    <P
+></P
+><UL
+><LI
+><P
+>As datas de início e de fim - defeito: Desde o Início do Ano.
+                </P
+></LI
+><LI
+><P
+>Período Alternativo: (Ano é relativo desde:)
+  <P
+></P
+><UL
+><LI
+><P
+>Utilizar Desde - Até (defeito se data actual é 
+            posterior a 16 de Abril)</P
+></LI
+><LI
+><P
+>1º, 2º, 3º e 4º Trimestres Fiscais Estimados 
+          (Desde: ano)</P
+></LI
+><LI
+><P
+>Ano anterior (ano anterior a Desde: ano) (defeito se 
+            a data actual é anterior a 16 de Abril) </P
+></LI
+><LI
+><P
+>1º, 2º, 3º e 4º Trimestres Fiscais Estimados 
+           do ano anterior</P
+></LI
+></UL
+></P
+></LI
+><LI
+><P
+>As contas sobre as quais o relatório será gerado. 
+        Todas as subcontas tributáveis das contas seleccionadas são automaticamente 
+        apresentadas. Se nenhuma conta for seleccionada, todas as contas 
+        tributáveis são apresentadas. Contas não tributáveis não são visíveis, 
+        mesmo que seleccionadas, mas as sub-contas tributáveis serão 
+        visualisáveis.</P
+></LI
+><LI
+><P
+>Suprimir valores 0.00</P
+></LI
+><LI
+><P
+>Mostrar nome completo da conta</P
+></LI
+></UL
+>&#13;</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x4420.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t4473.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Construir relatórios personalizados</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Menus Principais</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

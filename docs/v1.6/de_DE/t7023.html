@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>GnuCash Y2K Readiness</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash Online-Handbuch"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Report Development"
+HREF="t6797.html"><LINK
+REL="NEXT"
+TITLE="GNU General Public License"
+HREF="t7041.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash Online-Handbuch</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t6797.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t7041.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN7024">GnuCash Y2K Readiness</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t7023.html#AEN7026"
+></A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN7026"></H1
+><P
+>GnuCash versions 1.1.25 and later store all dates as seconds and
+nanoseconds, where the seconds are stored in a 64-bit signed
+integer. This should suffice to store dates into both the distant past
+as well as the distant future, so long as they fall not
+<I
+CLASS="EMPHASIS"
+>too</I
+> many orders of magnitude outside
+cosmologists' estimations of the age of the universe.  </P
+><P
+>The file format for version 1.1.25 and later stores dates in the
+above-described fashion.  </P
+><P
+>Some internal routines use the <TT
+CLASS="FUNCTION"
+>time_t</TT
+> type
+to express seconds. Note that on most OSes, this is a 32-bit quantity,
+and is thus limited to the Unix epoch, roughly December 1901 thru Jan
+2038. It is reasonable to expect that <TT
+CLASS="FUNCTION"
+>time_t</TT
+> will
+migrate to the use of 64 bit values by that time.  </P
+><P
+>Backup and log files are time-stamped using the standard Unix
+<TT
+CLASS="FUNCTION"
+>ctime()</TT
+> routine, which takes a
+<TT
+CLASS="FUNCTION"
+>time_t</TT
+> argument. Thus, the backup and log
+mechanism may experience trouble in 2038, assuming your present Unix
+continues to be in service at that time without any remediation.</P
+><P
+>Note that GnuCash also correctly recognizes February 29th, 2000
+as a "leap day," another of the "critical Y2K dates."  </P
+><P
+>This is all highly suggestive that GnuCash should cope
+reasonably well with the transition to the new millennium, whether you
+consider that takes place in 2000 or in 2001...  </P
+><P
+>Y2K issues are described in more detail at <A
+HREF="http://www.ntlug.org/~cbbrowne/linuxy2k.html"
+TARGET="_top"
+>Linux and Year
+2000.</A
+> </P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t6797.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t7041.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Report Development</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>GNU General Public License</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

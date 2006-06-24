@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Mais dicas</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Importar Dados do Quicken Para o GnuCash"
+HREF="t3867.html"><LINK
+REL="PREVIOUS"
+TITLE='O Botão "OK"'
+HREF="x3987.html"><LINK
+REL="NEXT"
+TITLE="Um Guia Para Antigos Utilizadores do Quicken"
+HREF="t4024.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x3987.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Importar Dados do Quicken Para o GnuCash</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t4024.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN4001">Mais dicas</H1
+><P
+>    <A
+NAME="OPENING-BALANCE"
+></A
+></P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN4005">Saldo Inicial</H2
+><P
+>Se os seus ficheiros Quicken tiverem registos de "Saldo Inicial", você 
+verá na pasta de Contas uma conta chamada "Saldo Inicial". Justificar a 
+origem dos saldos inicials é uma espécie de problema, quando se pensa nisso, 
+pois eles vêm de contas que estão fora do âmbito do universo GnuCash. A 
+sugestão que eu vi na lista de programadores do GnuCash foi a fazer a Saldos 
+Iniciais apontar para uma conta GnuCash chamada "Ganhos Retidos", do tipo 
+Passivo. Eu não percebo isto completamente, mas parece-me razoável, e é o 
+defeito para contas chamadas "Saldo Inicial".
+
+    <A
+NAME="EMPTY-CATEGORY"
+></A
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN4009">Categoria vazia</H2
+><P
+>Na vista de Categorias, você poderá verificar uma entrada vazia nas 
+Categorias QIF. As transacções Quicken não são obrigadas a ter uma Categoria, 
+mas as transacções GnuCash são obrigadas a ter uma fonte e um destino. A 
+categoria vazia permite-lhe seleccionar para que conta GnuCash todas as 
+transacções sem categoria vão. Isto geralmente são vários cheques que você 
+passou, levantamentos de dinheiro, etc., pelo que provavelmente você quererá 
+po-las na conta "Outras Despesas" ou algo semelhante. poderá fazer sentido 
+colocar isto numa conta de passivo; diga-me se tiver uma boa explicação sobre 
+como isto deveria ser.
+
+    <A
+NAME="DIVIDEND-CATEGORY"
+></A
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN4013">Categoria de Dividendos</H2
+><P
+>As transacções de acções do Quicken têm um padrão reconhecível para pagamento 
+de dividendos. Se o importador conseguir dizer com toda a certeza que uma transacção 
+é uma transferência de dividendos então por defeito irá criar uma conta de receitas 
+de "Dividendos". Esta categoria normalmente não está presente no ficheiro Quicken, 
+pelo que está a ser criada a partir do nada.
+
+      <A
+NAME="FUND-FAMILIES"
+></A
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN4017">Famílias de fundos</H2
+><P
+>O Quicken tem a abstracção de uma única conta representar uma "família de 
+fundos" com o objectivo de permitir mais facilmente transferir entre cárias contas 
+dentro da mesma família. O Importador GnuCash irá SEMPRE perceber isto erradamente 
+da primeira vez, porque o Quicken coloca explicitamente a informação incorrecta no 
+ficheiro. A conta "cobertor" que representa a família de fundos como um todo deveria 
+provavelmente ser uma conta Bancária, visto as transferências de e para ela no 
+ficheiro Quicken estão denominadas em moeda e não em acções. O saldo de tal conta é 
+suposto ser sempre de zero visto você apenas a utilizar como intermediária entre 
+duas contas na família. Se tudo correr bem eu corrigirei este problema a partir do 
+momento em que alguem me diga como deveria isto funcionar.
+      
+      <A
+NAME="BROKERAGE-ACCOUNTS"
+></A
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN4021">Contas em corretoras</H2
+><P
+>Contas em correctoras são algo que realmente me confunde. Basicamente, o meu 
+raciocínio é de que a conta de corretora em si deveria ser provavelmente uma conta 
+Bancária. A única coisa estranha é em coisas como dividendos pagos em títulos sobre 
+a conta de corretagem. Se você estiver a utilizar uma conta de Dividendos, poderá 
+perder a informação sobre de onde o dividendo veio. O importador tenta gravar esta 
+informação colocando o nome do título no campo "Destinatário" (que no GnuCash surge 
+no campo de Descrição para a transacção). Caso tenha uma ideia melhor avise-me.
+    
+  </P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x3987.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t4024.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>O Botão "OK"</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t3867.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Um Guia Para Antigos Utilizadores do Quicken</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

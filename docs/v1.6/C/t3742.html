@@ -1,0 +1,699 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Stock Ticker</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash User Manual"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="	Getting quotes online
+      "
+HREF="x3733.html"><LINK
+REL="NEXT"
+TITLE="Printing Checks"
+HREF="t3895.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash User Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x3733.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t3895.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN3743">Stock Ticker</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t3742.html#AEN3745"
+>Price Sources for Automatic Price Updates</A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN3745">Price Sources for Automatic Price Updates</H1
+><P
+>To get automatic price updates from the Internet for for 
+<A
+HREF="t945.html#STOCKACCT"
+>stock accounts</A
+>, you need to set
+the price source appropriately.  This can be done in the new
+account dialog box, when the account is created, or changed at
+any time by selecting the account in an account window, and chosing
+"edit account" from the main menu.  Both dialog boxes have a
+section called "Price Quote Source".</P
+><P
+>To enable automatic price updates, do the following:</P
+><P
+></P
+><UL
+><LI
+><P
+>	      Make sure the "get online quotes" check box is checked.
+	      
+	    </P
+></LI
+><LI
+><P
+>Enter a valid ticker symbol in the text box marked "Security:"
+	  A ticker symbol is the code that identifies the stock or fund - 
+	  to take a familiar example, International Business Machines'
+	  ticker symbol is IBM, listed on the New York Stock Exchange.
+	  To take another example, McDonald's Corpororation is MCD.
+	</P
+></LI
+><LI
+><P
+>Select a quote source from the pull-down menu. Currently
+    supported quote sources include <I
+CLASS="EMPHASIS"
+>Yahoo</I
+>,
+    <I
+CLASS="EMPHASIS"
+>Yahoo Europe</I
+>, <I
+CLASS="EMPHASIS"
+>Fidelity
+    Investments</I
+>, <I
+CLASS="EMPHASIS"
+>T. Rowe Price</I
+>, the
+    <I
+CLASS="EMPHASIS"
+>Vanguard Group</I
+>, <I
+CLASS="EMPHASIS"
+>the Australian
+    Stock Exchange</I
+> (ASX) and
+    <I
+CLASS="EMPHASIS"
+>TIAA-CREF</I
+>.  Note that Yahoo will provide
+    price quotes for many mutual funds <I
+CLASS="EMPHASIS"
+>including</I
+>
+    Fidelity, T.Rowe Price and Vanguard, and that the quoted prices at
+    Yahoo <I
+CLASS="EMPHASIS"
+>should</I
+> be identical to those that may
+    be found at the source sites (otherwise, somebody's reporting
+    wrong information!). If you choose Yahoo Europe, you should append
+    the market code for the security, such as PA for Paris, BE for
+    Berlin, etc. Example: 12150.PA (a Peugeot security in the Paris
+    market).  The table below lists the codes for the various markets.
+    </P
+></LI
+><LI
+><P
+>Ensure that the currency of the account matches the source
+    of the stock you have selected. This means:
+
+        <P
+></P
+><UL
+><LI
+><P
+>Quotes from the <I
+CLASS="EMPHASIS"
+>Australian Stock Exchange</I
+>
+          (ASX) should be in Australian dollars (AUD).
+
+          </P
+></LI
+><LI
+><P
+>Quotes from <I
+CLASS="EMPHASIS"
+>Yahoo Europe</I
+> should be in Euros
+          (ECU)
+
+          </P
+></LI
+><LI
+><P
+>Quotes from <I
+CLASS="EMPHASIS"
+>Yahoo</I
+>, <I
+CLASS="EMPHASIS"
+>Fidelity
+      Investments</I
+>, <I
+CLASS="EMPHASIS"
+>T. Rowe Price</I
+> 
+      and the <I
+CLASS="EMPHASIS"
+>Vanguard
+      Group</I
+> should be in US Dollars (USD).
+        </P
+></LI
+></UL
+>
+	</P
+></LI
+><LI
+><P
+>Select the correct timezone setting (FIXME: WHAT IS THE CORRECT
+TIMEZONE SETTING???)
+	      </P
+></LI
+></UL
+><DIV
+CLASS="NOTE"
+><P
+></P
+><TABLE
+CLASS="NOTE"
+WIDTH="100%"
+BORDER="0"
+><TR
+><TD
+WIDTH="25"
+ALIGN="CENTER"
+VALIGN="TOP"
+><IMG
+SRC="./stylesheet-images/note.gif"
+HSPACE="5"
+ALT="Note"></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+><P
+>Instructions for updating prices are found in the documentation
+on the <A
+HREF="t3678.html"
+>price editor</A
+>.</P
+></TD
+></TR
+></TABLE
+></DIV
+><DIV
+CLASS="TABLE"
+><A
+NAME="AEN3786"><P
+><B
+>Table 14. Code List for European Markets</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Code</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Market</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>PA</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Paris</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>BC</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Barcelona</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>BE</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Berlin</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>BI</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Bilbao</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>BR</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Brême</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CO</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Copenhagen</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>D</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Dusseldorf</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>F</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Frankfurt</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>H</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Hamburg</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>HA</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Hanover</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>L</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>London</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>MA</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Madrid</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>MC</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Madrid (M.C.)</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>MI</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Milan</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>MU</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Munich</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>O</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Oslo</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>ST</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Stockholm</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>SG</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Stuttgart</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>VA</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Valence</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>FX</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Xetra</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><DIV
+CLASS="TABLE"
+><A
+NAME="AEN3854"><P
+><B
+>Table 15. Pseudo-symbols that can be used for TIAA-CREF quotes</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Name</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Pseudo-symbol</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Stock</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CREFstok</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Money Market</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CREFmony</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Equity Index</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CREFequi</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Inflation-Linked Bond</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CREFinfb</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Bond Market</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CREFbond</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>TIAA Real Estate</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>TIAAreal</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Social Choice</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CREFsoci</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Teachers PA Stock Index</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>TIAAsndx</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Global Equities</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CREFglob</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Teachers PA Select Stock</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>TIAAsele</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Growth</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CREFgrow</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x3733.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t3895.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Getting quotes online</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Printing Checks</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

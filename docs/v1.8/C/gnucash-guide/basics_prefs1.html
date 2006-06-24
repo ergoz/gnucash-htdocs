@@ -1,0 +1,107 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>2.4. Setting Preferences</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Concepts Guide v1.8"><link rel="up" href="chapter2.html" title="Chapter 2. The Basics"><link rel="previous" href="basics_interface1.html" title="2.3. The GnuCash Interface"><link rel="next" href="basics_help1.html" title="2.5. Getting Help"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">2.4. Setting Preferences</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="basics_interface1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 2. The Basics</th><td width="20%" align="right"> <a accesskey="n" href="basics_help1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="basics_prefs1"></a>2.4. Setting Preferences</h2></div></div><p>
+GnuCash allows you to customize your session by setting several preference options.  From the menu select <b>Edit</b> -&gt; <b>Preferences</b>, then make your desired changes using the list of items shown on the left.  Once you have finished making your preference changes,  select Apply or OK to apply the changes to your session.  (Selecting Apply applies the changes while leaving the Preferences window still open. Selecting OK applies the changes and closes the Preferences window.)  At any time, you can click on the Default button to return the options to the default preference setting.
+     </p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics_acctprefs2"></a>2.4.1. Accounts</h3></div></div><p>
+The <b>Accounts</b> item lets you set the following options:
+     </p><div class="itemizedlist"><ul><li><p>
+<b>Account Separator</b> - The account separator is the character that separates a parent account from its sub-account, for example Utilities:Electric.  The default is a :(Colon), but you can also select /(Slash), \(Backslash), -(Dash) or .(Period).  Parent accounts and sub-accounts are discussed in section 3.4
+     </p></li><li><p>
+<b>Reversed-balance accounts types</b> - This option lets you determine whether account balances will display as  positive or negative numbers:
+   <div class="itemizedlist"><ul><li><p>
+<b>None</b> shows all credit balances as negative and all debit balances as positive.  (See Accounting Terminology note in this chapter for more information on debits and credits.)
+     </p></li><li><p>
+<b>Credit Accounts</b> (default) displays a positive  balance for account types that would normally carry a credit balance (income, credit, liability, equity).   See Chapter 3 for more information on these account types.
+     </p></li><li><p>
+<b>Income &amp; Expense</b> assigns a positive credit balance to income account balances and a negative debit balance to expense account balances.  See Chapter 3 for more information on these account types.
+     </p></li></ul></div>
+     </p></li><li><p>
+<b>Use accounting labels</b> - Select this option if you want column headings to refer to debits and credits instead of the default informal headings. (See Accounting Terminology note in this chapter for more information on debits and credits.)
+     </p></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics_business2"></a>2.4.2. Business</h3></div></div><p>
+The <b>Business</b> item lets you set the following options:
+     </p><div class="itemizedlist"><ul><li><p>
+<b>Number of Rows</b> - Lets you select the default number of
+register rows to display in invoices, bills and expense vouchers.
+     </p></li><li><p>
+<b>Invoice (or Bill) Tax Included?</b> - Determines whether taxes specified in the Tax Table are already included in the value of the item.  Set this if you're in a locale (like Australia) where the taxes (e.g. GST) is included in the price of your goods.  In the US, where the tax is added to the value, you do not want to set Tax Included.
+     </p></li><li><p>
+<b>Notify Bills Due?</b> - Lets you set whether you want to be notified of when a bill is soon to be due.  If selected, you can specify the number of days in advance to notify with the <b>Bills Due Days:</b> option.
+     </p></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics_general2"></a>2.4.3. General</h3></div></div><p>
+In <b>General</b>, you will see the default settings shown here:
+
+    <div class="screenshot"><div class="mediaobject"><img src="figures/basics_preference.png" alt="The Preferences dialog"><div class="caption"><p>This image shows the <b>GnuCash Preferences
+	       </b> dialog where the options of how GnuCash looks 
+	       and acts are setup.
+	       </p></div></div></div>
+     </p><div class="itemizedlist"><ul><li><p>
+<b>Show Advanced Settings</b> - When this is selected, GnuCash displays the <b>Advanced</b> item in the <b>GnuCash Preferences</b> dialog.  You must click on "Apply" before the advanced page will be displayed.
+     </p></li><li><p>
+<b>Tool Bar Buttons</b> - Select whether to display icons, text, or both on the tool bar.
+     </p></li><li><p>
+<b>Display "Tip of the Day"</b> - You can turn on or off the option to display the &#8220;Tip of the Day&#8221; dialog on startup.
+     </p></li><li><p>
+<b>Display negative amounts in red</b> - If you turn off this option, GnuCash will display negative numbers in black.
+     </p></li><li><p>
+<b>Automatic Decimal Point</b> - This option will automatically insert a decimal point into numbers you type in.
+     </p></li><li><p>
+<b>Auto Decimal Places</b> - If you select the <b>Automatic Decimal Point</b> option, this option allows you to set the number of decimal places to be used.
+    </p></li><li><p>
+<b>No account list setup on new file</b> - This option turns off
+the display of the <b>New Account Hierarchy Setup</b> druid when <b>File</b> -&gt; <b>New File</b> is selected.
+     </p></li><li><p>
+<b>Days to retain log files</b> - This option deletes log files (and backup files) after the number of days set here.
+     </p></li><li><p>
+<b>Use file compression</b> - This option determines whether the GnuCash data file will be compressed or not.
+     </p></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics_international2"></a>2.4.4. International</h3></div></div><p>
+The <b>International</b> preferences item allows you to control the country specific behavior of GnuCash.
+    </p><div class="itemizedlist"><ul><li><p>
+<b>Date Format</b> - This item controls the appearance of the date.  The available options are US, UK, Europe, ISO, and Locale.  Choosing "Locale" will automatically determine the date format based on your operating system settings.
+     </p></li><li><p>
+<b>New Account Default Currency</b> - This item determines which currency will be selected by default when creating new accounts.
+     </p></li><li><p>
+<b>Default Report Currency</b> - This item determines which currency will be used by default when creating reports.
+     </p></li><li><p>
+<b>Use 24-hour time format</b> - This item toggles the use of 24 hour time format.
+     </p></li><li><p>
+<b>Enable Euro support</b> - If selected, enables support for the European Union EURO currency.
+     </p></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics_onlinebank2"></a>2.4.5. On-line Banking</h3></div></div><p>
+The <b>On-line Banking &amp; Importing</b> item contains only one option, <b>QIF Verbose Documentation</b>.  The first time you use the importer (discussed later in this chapter), you may notice that the importer has detailed instructions on how to import a file.  Once you have become familiar with using the importer, you might want to turn off this option.  Turning off the option gives you less detail in the importer dialogs.
+    </p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics_reconcile2"></a>2.4.6. Reconcile</h3></div></div><p>
+The <b>Reconcile</b> preferences item affects the behavior of GnuCash when reconciling accounts.  More information about reconciling accounts can be found in "Chapter 4: Entering Transactions" of this guide.
+    </p><div class="itemizedlist"><ul><li><p>
+<b>Automatic interest transfer</b> - If selected, prior to reconciling an account which charges or pays interest, prompt the user to enter a transaction for the interest charge or payment.  Currently only enabled for Bank, Credit, Mutual, Asset, Receivable, Payable, and Liability accounts.
+     </p></li><li><p>
+<b>Automatic credit card payments</b> - If selected, after reconciling a credit card statement, prompt the user to enter a credit card payment.
+     </p></li><li><p>
+<b>Check off cleared transactions</b> - If selected, automatically check off cleared transactions when reconciling.
+     </p></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics_regprefs2"></a>2.4.7. Register</h3></div></div><p>
+The <b>Register</b> preferences item affects the behavior of the transaction register windows.  More information about the transaction register can be found in "Chapter 4: Entering Transactions" of this guide.
+    </p><div class="itemizedlist"><ul><li><p>
+<b>Default Register Style</b> - you can choose from 3 different styles for register windows, <b>Basic Ledger</b> (default), <b>Auto-Split Ledger</b>, and <b>Transaction Journal</b>.  The basic style is a standard one-line register where everything appears on a single line.  The auto-split style is similar to the basic style except that the current transaction is split-expanded.  The journal style has every transaction split-expanded.
+     </p></li><li><p>
+<b>Double Line Mode</b> - If selected, show two lines of information for each transaction instead of one.
+     </p></li><li><p>
+<b>'Enter' moves to blank transaction</b> - If selected, move to the blank transaction after the user presses 'enter', otherwise move down on row.
+     </p></li><li><p>
+<b>Confirm before changing reconciled</b> - If selected, use a dialog to confirm a change to a reconciled transaction.
+     </p></li><li><p>
+<b>Register font:</b> - The font to use in the transaction register window.
+     </p></li><li><p>
+<b>Register hint font:</b> - The font to use to show hints in the transaction register window.
+     </p></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics_registercolors2"></a>2.4.8. Register Colors</h3></div></div><p>
+The <b>Register Colors</b> preferences item changes the appearance of the register window.  To change the color of one of the items listed, simply click on the color box and choose the new color.  More information about the transaction register can be found in "Chapter 4: Entering Transactions" of this guide.
+    </p><p>
+If selected, the item <b>Double mode colors alternate with transactions</b> configures the register window to alternate between the primary and secondary colors with each transaction, instead of each row.
+    </p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics_schedtrans2"></a>2.4.9. Scheduled Transactions</h3></div></div><p>
+The <b>Scheduled Transactions</b> preferences item affects the behavior of GnuCash for scheduling transactions.  More information about scheduled transactions can be found in "Chapter 4: Entering Transactions" of this guide.
+    </p><div class="itemizedlist"><ul><li><p>
+<b>Run on GnuCash start</b> - If selected, the "Since-Last-Run" window will appear on GnuCash startup.
+     </p></li><li><p>
+<b>Auto-Create new Scheduled Transactions by default</b> - If selected, new Scheduled Transactions will have the 'Auto Create' flag set by default.
+     </p></li><li><p>
+<b>Notify on new, auto-created Scheduled Transactions</b> - If selected, new Scheduled Transactions will have the 'Auto Create' flag set to 'Notify' by default.
+     </p></li><li><p>
+<b>Default number of days in advance to create</b> - The default number of days in advance to create new Scheduled Transactions.
+     </p></li><li><p>
+<b>Default number of days in advance to remind</b> - The default nubbier of days in advance to remind on new Scheduled Transactions.
+     </p></li><li><p>
+<b>Template Register Lines:</b> - Number of lines in the template register to display.
+     </p></li></ul></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="basics_interface1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="basics_help1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">2.3. The GnuCash Interface </td><td width="20%" align="center"><a accesskey="u" href="chapter2.html">Up</a></td><td width="40%" align="right"> 2.5. Getting Help</td></tr></table></div></body></html>

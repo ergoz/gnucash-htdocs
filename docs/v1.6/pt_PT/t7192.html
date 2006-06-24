@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Preparação do GnuCash para o Ano 2000</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="      Que Novidades Há?
+    "
+HREF="t7125.html"><LINK
+REL="NEXT"
+TITLE="Licença Pública Geral GNU"
+HREF="t7210.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t7125.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t7210.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN7193">Preparação do GnuCash para o Ano 2000</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t7192.html#AEN7195"
+></A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN7195"></H1
+><P
+>A versão 1.1.25 e posteriores do GnuCash armazenam todas as datas 
+como segundos e nanosegundos, onde os segundos são armazenados como 
+inteiros de 64 bits com sinal. Isto deverá ser suficiente para guardar 
+datas de um passado distante bem como de um futuro longinquo, desde que 
+não caiam <I
+CLASS="EMPHASIS"
+>demasiado</I
+> longe, em ordens de magnitude, das 
+estimativas dos cosmólogos em relação à idade do universo.  </P
+><P
+>O formato de ficheiro para a versão 1.1.25 e posteriores armazena 
+as datas no formato supra-citado.  </P
+><P
+>Algumas das rotinas internas utilizam a função <TT
+CLASS="FUNCTION"
+>time_t</TT
+> 
+para exprimir segundos. Note que na maior parte dos SOs, este é um valor de 32-bit, 
+e está assim limitado à época Unix, aproximadamente Dezembro 1901 até Janeiro 
+2038. Será razoável admitir que a <TT
+CLASS="FUNCTION"
+>time_t</TT
+> será migrada até essa 
+altura para a utilização de valores de 64 bit.  </P
+><P
+>Ficheiros de salvaguarda e de registo (log) são marcados com hora (time-stamped) 
+utilizando a rotina standard Unix<TT
+CLASS="FUNCTION"
+>ctime()</TT
+>, que recebe um argumento
+do tipo <TT
+CLASS="FUNCTION"
+>time_t</TT
+>. Assim, os mecanismos de salvaguarda e registo 
+poderão ter problemas em 2038, assumindo que o seu Unix actual continuará em serviço 
+até essa data sem qualquer modificação.</P
+><P
+>Note que o GnuCash também reconhece correctamente o 29 de Fevereiro de 2000
+como sendo "dia bissexto", outra das "datas críticas do Ano 2000".  </P
+><P
+>Isto é tudo muito sugestivo de que o GnuCash deverá assimilar razoavelmente 
+bem a transicção para o novo milénio, quer você considere que tal toma lugar em 
+2000 ou em 2001...  </P
+><P
+>Questões do Ano 2000 são descritas em mais detalhe em <A
+HREF="http://www.ntlug.org/~cbbrowne/linuxy2k.html"
+TARGET="_top"
+>Linux e o Ano 2000.</A
+> </P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t7125.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t7210.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Que Novidades Há?</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Licença Pública Geral GNU</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,365 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Common Report Options</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash User Manual"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE='Creating a "commodity"'
+HREF="t1784.html"><LINK
+REL="NEXT"
+TITLE="Currency Handling and Double Entry Bookkeeping"
+HREF="t1872.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash User Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t1784.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t1872.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN1801">Common Report Options</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t1800.html#AEN1803"
+></A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN1803"></H1
+><P
+>Many reports share similar sorts of options.  Some common ones
+include:</P
+><P
+></P
+><UL
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+><A
+NAME="XACC-OPTIONS-REPORT-TITLE"
+></A
+>Report Title</I
+></P
+><P
+>Set the title of the report.  This doesn't affect anything
+else, but can be handy if you need to print the report for later
+viewing.</P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+><A
+NAME="XACC-OPTIONS-DATE"
+></A
+>Date Options</I
+></P
+><P
+>Reports typically allow you to specify either a single date, or
+a date range, for the report.  Dates can be specified in two ways:
+directly (using the date selector), or selecting a "relative" date
+from the menu.  Relative dates allow you to specify dates like "the
+beginning of this year" or "today", and are highly convenient for
+doing "rolling reports".</P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+><A
+NAME="XACC-OPTIONS-INTERVAL"
+></A
+>Interval/Step Size</I
+></P
+><P
+>This option is used on bar charts to determine the interval
+which each bar represents.  Typical values are daily, weekly,
+monthly, and yearly.</P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+><A
+NAME="XACC-OPTIONS-ACCOUNTS"
+></A
+>Accounts</I
+></P
+><P
+>Most reports give you the opportunity to select the appropriate
+accounts.  Note that some reports only allow you to select certain 
+types of accounts - for instance, an expense piechart only allows
+expense accounts to be selected.  </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+><A
+NAME="XACC-OPTIONS-SHOW-FULL-NAMES"
+></A
+>Show full 
+Account Names</I
+></P
+><P
+>Many reports and graphs let you select whether to display short
+account names (for example "power") or full account names (for example
+"utilities:power").</P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+><A
+NAME="XACC-OPTIONS-INCLUDE-SUBACCOUNTS"
+></A
+>
+Include Subaccounts?</I
+></P
+><P
+>Summary reports typically have "include all subaccounts" option,
+which if selected ensures that all subaccounts are included if the
+parent account is.</P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+><A
+NAME="XACC-OPTIONS-DEPTH"
+></A
+>Depth</I
+></P
+><P
+>This option allows the selection of how "deep" the 
+report displays subaccounts.  If the subaccounts go deeper 
+than selected, most reports will calculate an overall value
+for all the subaccounts and include it in a higher-level
+total.  If you want to make sure every account selected is 
+individually displayed, select "All".</P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+><A
+NAME="XACC-OPTIONS-STYLE-SHEET"
+></A
+>Style Sheet</I
+></P
+><P
+>Select a Style Sheet.  Style sheets control how reports are 
+displayed.  At the moment, there are two style sheets, 
+"default" and "technicolor".  You can customize each of these from
+the global Style Sheet menu item.</P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+><A
+NAME="XACC-OPTIONS-PLOT-DIMENSIONS"
+></A
+>Plot
+	Dimensions</I
+></P
+><P
+>There are "Width" and "Height"
+    options for most of the graphs, which specify the 
+    displayed dimensions
+    (in pixels).</P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+><A
+NAME="XACC-OPTIONS-REPORT-CURRENCY"
+></A
+>Report Currency</I
+></P
+><P
+>Most reports allow you to select the report currency (the default
+is your "home" currency).  Generally, values will be converted to
+this currency for graphical display or summarization.</P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+><A
+NAME="XACC-OPTIONS-PRICE-SOURCE"
+></A
+>Price Source</I
+></P
+><P
+>Select how stock and currency prices are calculated in this report.
+You can choose a weighted average of prices over all transactions, 
+prices at current values, or prices at the time of the report date.</P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+><A
+NAME="XACC-OPTIONS-GRAPH-TOTALS"
+></A
+>Totals</I
+></P
+><P
+>Some piecharts display totals in the chart legend if this option is
+	  selected.
+	  </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+><A
+NAME="XACC-OPTIONS-MAX-SLICES"
+></A
+>Maximum Slices</I
+></P
+><P
+>Controls the maximum number of slices displayed in a piechart - other accounts
+	  will be placed in a slice marked "other".
+	</P
+></LI
+></UL
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t1784.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t1872.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Creating a "commodity"</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Currency Handling and Double Entry Bookkeeping</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

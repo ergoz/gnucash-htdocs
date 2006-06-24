@@ -1,0 +1,695 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Depreciation of Assets</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash Online-Handbuch"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Depreciation and Capital Gains"
+HREF="t1217.html"><LINK
+REL="PREVIOUS"
+TITLE="Depreciation and Capital Gains"
+HREF="t1217.html"><LINK
+REL="NEXT"
+TITLE="Balance Tracking Report"
+HREF="t1595.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash Online-Handbuch</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t1217.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Depreciation and Capital Gains</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t1595.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-DEPR">Depreciation of Assets</H1
+><P
+>Compared to the often uncertain estimates one has to do
+    where appreciation of assets is concerned, we are on somewhat
+    firmer ground here.
+
+    <P
+></P
+><UL
+><LI
+><P
+>Governments tend to set up precise rules as to how you
+      are required to calculate depreciation for tax purposes.
+      </P
+></LI
+><LI
+><P
+>It is easy to look up in references such as "Blue Books"
+      estimates of what an automobile should be worth after 3 years
+      of use.
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>Since depreciation of assets is very often driven by tax
+    policies, the discussion of depreciation will focus in that
+    direction, on some of the more common depreciation calculation
+    schemes.
+
+    </P
+><P
+>While there has been some discussion about how to accomplish
+    automated calculation and creation of transactions to handle
+    things like depreciation, there is not yet any working code, so
+    for now, you will have to do calculations by hand.
+
+    </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1455">Depreciation schemes</H2
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1457">Linear Depreciation</H3
+><P
+>Linear depreciation diminishes the value of an asset by a
+    fixed amount each period until the net value is zero. This is
+    the <I
+CLASS="EMPHASIS"
+>simplest</I
+> calculation, as you estimate a useful
+    lifetime, and simply divide the cost equally across that
+    lifetime.
+
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Example:</I
+> You have bought a computer for $1500 and
+    wish to depreciate it over a period of 5 years. Each year the
+    amount of depreciation is $300, leading to the following
+    calculations:
+    
+
+    <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1463"><P
+><B
+>Table 7. Example 1</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Year</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Depreciation</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Remaining Value</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>300</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1200</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>2</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>300</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>900</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>3</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>300</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>600</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>4</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>300</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>300</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>5</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>300</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>0</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    </P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1492">Geometric Depreciation</H3
+><P
+>Each period the asset is depreciated by a fixed percentage
+    of its value in the previous period. In this scheme the rest
+    value of an asset decreases exponentially leaving a value at
+    the end that is larger than zero ( <I
+CLASS="EMPHASIS"
+>i.e.</I
+> - a resale
+    value).
+
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Beware: Tax authorities may require (or allow) a larger
+    percentage in the first period.</I
+> On the other hand, in
+    Canada, this is reversed, as they permit only a <I
+CLASS="EMPHASIS"
+>half</I
+>
+    share of "Capital Cost Allowance" in the first year.
+    The result of this approach is that asset value decreases
+    more rapidly at the beginning than at the end which is <I
+CLASS="EMPHASIS"
+>    probably</I
+> more realistic for most assets than a linear
+    scheme. This is certainly true for automobiles.
+
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Example:</I
+> We take the same example as above,
+    with an annual depreciation of 30%.
+
+    <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1502"><P
+><B
+>Table 8. Example 2</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Year</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Depreciation</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Remaining Value</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>450</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1050</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>2</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>315</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>735</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>3</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>220.50</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>514.50</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>4</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>154.35</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>360.15</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>5</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>108.05</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>252.10</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    </P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1531">Sum of digits</H3
+><P
+>A third method most often employed in Anglo/Saxon countries
+    is the "sum of digits" method. Here is an illustration:
+
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Example:</I
+> First you divide the asset value
+    by the sum of the years of use, <I
+CLASS="EMPHASIS"
+>e.g.</I
+> for our example
+    from above with an asset worth $1500 that is used over a period
+    of five years you get 1500/(1+2+3+4+5)=100. Depreciation and
+    asset value are then calculated as follows:
+
+    <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1537"><P
+><B
+>Table 9. Example 3</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Year</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Depreciation</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Remaining Value</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>100*5=500</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>2</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>100*4=400</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>600</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>3</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>100*3=300</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>300</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>4</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>100*2=200</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>100</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>5</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>100*1=100</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>0</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    </P
+></DIV
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1566">The Handling of Depreciation in GnuCash</H2
+><P
+>In order to keep track of the depreciation of an asset, you
+    need :
+
+    <P
+></P
+><UL
+><LI
+><P
+>An <I
+CLASS="EMPHASIS"
+>Asset Cost</I
+> asset account to keep track of the
+      original value;
+
+      </P
+></LI
+><LI
+><P
+>An <I
+CLASS="EMPHASIS"
+>Accumulated Depreciation</I
+> asset account in
+      which to collect the sum of all of the years' depreciation
+      amounts;
+
+      </P
+></LI
+><LI
+><P
+>A <I
+CLASS="EMPHASIS"
+>Depreciation Expense</I
+> expense account in which
+      to record periodic depreciation expenses.
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>The first step is to record the purchase of your
+    asset by transferring the money from bank bank account to the
+    <I
+CLASS="EMPHASIS"
+>asset cost</I
+> account. Afterwards, in each accounting
+    period you record the depreciation as an expense in the
+    appropriate account.
+    The two windows below show your asset account and the main
+    window after the third year of depreciation using a "sum of
+    digits" scheme for the example above.
+    <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/depr-asset.png"></SPAN
+>
+     <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/depr-main.png"></SPAN
+>
+    
+
+    </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1591">A Word of Caution</H2
+><P
+>Since depreciation and tax issues are closely related, you
+    may not always be free in choosing your preferred method.
+    Fixing wrong calculations will cost a whole lot more time and
+    trouble than getting the calculations right the first time, so
+    if you plan to depreciate assets, it is wise to make sure of
+    the schemes you will be permitted <I
+CLASS="EMPHASIS"
+>or required</I
+> to
+    use.&#13;</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t1217.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t1595.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Depreciation and Capital Gains</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t1217.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Balance Tracking Report</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

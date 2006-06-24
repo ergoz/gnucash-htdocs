@@ -1,0 +1,1458 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Fixers and Patchers</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual de usuario de Gnucash, contabilidad doméstica Gnu"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="About GnuCash"
+HREF="t3.html"><LINK
+REL="PREVIOUS"
+TITLE="Lead Developers"
+HREF="x80.html"><LINK
+REL="NEXT"
+TITLE="Supported Operating Systems"
+HREF="x562.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual de usuario de Gnucash, contabilidad doméstica Gnu</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x80.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>About GnuCash</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x562.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-CONTRIBUTORS">Fixers and Patchers</H1
+><P
+>The <I
+CLASS="EMPHASIS"
+>cast of thousands</I
+> includes:
+
+    <DIV
+CLASS="GLOSSLIST"
+><DL
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:arensb@cfar.umd.edu"
+>arensb@cfar.umd.edu</A
+>&#62;</TT
+> Andrew
+      Arensburger</B
+></DT
+><DD
+><P
+>for FreeBSD and other patches</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:matt_armstrong@bigfoot.com"
+>matt_armstrong@bigfoot.com</A
+>&#62;</TT
+> Matt
+      Armstrong</B
+></DT
+><DD
+><P
+>for misc fixes</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:warlord@MIT.EDU"
+>warlord@MIT.EDU</A
+>&#62;</TT
+> Derek
+      Atkins</B
+></DT
+><DD
+><P
+>build system patch</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:fred@moremagic.com"
+>fred@moremagic.com</A
+>&#62;</TT
+> Fred Baube</B
+></DT
+><DD
+><P
+>for attempted Java port/MoneyDance</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:dennisb@cs.chalmers.se"
+>dennisb@cs.chalmers.se</A
+>&#62;</TT
+> Dennis
+      Björklund</B
+></DT
+><DD
+><P
+>Swedish translation</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:bojsen@worldnet.att.net"
+>bojsen@worldnet.att.net</A
+>&#62;</TT
+> Per
+      Bojsen</B
+></DT
+><DD
+><P
+>several core dump fixes</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:tboldt@attglobal.net"
+>tboldt@attglobal.net</A
+>&#62;</TT
+> Terry Boldt
+      </B
+></DT
+><DD
+><P
+>financial calculator and expression parser</P
+></DD
+><DT
+><B
+><A
+HREF="simon.britnell@peace.com"
+TARGET="_top"
+>Simon
+      Britnell</A
+></B
+></DT
+><DD
+><P
+>patch to RPM spec</P
+></DD
+><DT
+><B
+><A
+HREF="http://www.hex.net/~cbbrowne"
+TARGET="_top"
+>Christopher B.
+      Browne</A
+></B
+></DT
+><DD
+><P
+>for perl stock scripts, Guile-based QIF import code, lots
+      of changes to English documentation, and lots of guile
+      code</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:conrad@mail.watersprite.com.au"
+>conrad@mail.watersprite.com.au</A
+>&#62;</TT
+> Conrad
+      Canterford</B
+></DT
+><DD
+><P
+>register bug fix</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:wwc@wwcnet.nu"
+>wwc@wwcnet.nu</A
+>&#62;</TT
+> Bill
+      Carlson</B
+></DT
+><DD
+><P
+>performance improvements</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:carol@io.com"
+>carol@io.com</A
+>&#62;</TT
+> Carol
+      Champagne</B
+></DT
+><DD
+><P
+>documentation</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:grahamc@zeta.org.au"
+>grahamc@zeta.org.au</A
+>&#62;</TT
+> Graham
+      Chapman</B
+></DT
+><DD
+><P
+>for the xacc-rpts addon package</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:georgec@sco.com"
+>georgec@sco.com</A
+>&#62;</TT
+> George Chen</B
+></DT
+><DD
+><P
+>for MS-Money QIF support</P
+></DD
+><DT
+><B
+><A
+HREF="mailtochina@thewrittenword.com"
+TARGET="_top"
+>Albert
+      Chin-A-Young</A
+></B
+></DT
+><DD
+><P
+>configure.in patch</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:jcollins@gnucash.org"
+>jcollins@gnucash.org</A
+>&#62;</TT
+> Jeremey
+      Collins</B
+></DT
+><DD
+><P
+>for GnoMoney and GTK port</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:mcondell@bbn.com"
+>mcondell@bbn.com</A
+>&#62;</TT
+> Matthew
+      Condell</B
+></DT
+><DD
+><P
+>FreeBSD patch</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:pcondon@rackspace.com"
+>pcondon@rackspace.com</A
+>&#62;</TT
+> Patrick
+      Condron</B
+></DT
+><DD
+><P
+>for webserver and T1 connection.</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:raphael.dechenaux@worldonline.fr"
+>raphael.dechenaux@worldonline.fr</A
+>&#62;</TT
+> Raphael
+      Dechenaux</B
+></DT
+><DD
+><P
+>register patch</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:Ciaran.Deignan@bull.net"
+>Ciaran.Deignan@bull.net</A
+>&#62;</TT
+> Ciaran
+      Deignan</B
+></DT
+><DD
+><P
+>for AIX binary version</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:gjditchfield@acm.org"
+>gjditchfield@acm.org</A
+>&#62;</TT
+> Glen
+      Ditchfield</B
+></DT
+><DD
+><P
+>updated documentation</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:tyson@tyse.net"
+>tyson@tyse.net</A
+>&#62;</TT
+> Tyson Dowd</B
+></DT
+><DD
+><P
+>for config/make patches and debian maintenance</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:ripley@xs4all.nl"
+>ripley@xs4all.nl</A
+>&#62;</TT
+> Koen D'Hondt</B
+></DT
+><DD
+><P
+>for Solaris patches to XmHTML</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:bob@mostly.com"
+>bob@mostly.com</A
+>&#62;</TT
+> Bob Drzyzgula</B
+></DT
+><DD
+><P
+>for budgeting design notes</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:pjf@schools.net.au"
+>pjf@schools.net.au</A
+>&#62;</TT
+> Paul
+      Fenwick</B
+></DT
+><DD
+><P
+>ASX support, Finance::Quote</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:hfiguiere@teaser.fr"
+>hfiguiere@teaser.fr</A
+>&#62;</TT
+> Hubert
+      Figuiere</B
+></DT
+><DD
+><P
+>patch to <TT
+CLASS="APPLICATION"
+>gnc-prices</TT
+></P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:frob@df.ru"
+>frob@df.ru</A
+>&#62;</TT
+> Valek Filippov
+      </B
+></DT
+><DD
+><P
+>Russian translation</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:ju_finck@mail.netwave.de"
+>ju_finck@mail.netwave.de</A
+>&#62;</TT
+> Jan-Uwe
+      Finck</B
+></DT
+><DD
+><P
+>for German message translation</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:kevinfinn@mediaone.net"
+>kevinfinn@mediaone.net</A
+>&#62;</TT
+> Kevin
+      Finn</B
+></DT
+><DD
+><P
+>auto-decimal point patch, options patch</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:rjf@aracnet.com"
+>rjf@aracnet.com</A
+>&#62;</TT
+> Ron
+      Forrester</B
+></DT
+><DD
+><P
+>for gnome patches</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:DFreese@osc.uscg.mil"
+>DFreese@osc.uscg.mil</A
+>&#62;</TT
+> Dave
+      Freese</B
+></DT
+><DD
+><P
+>for leap-year fix</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:jgoerzen@complete.org"
+>jgoerzen@complete.org</A
+>&#62;</TT
+> John
+      Goerzen</B
+></DT
+><DD
+><P
+>file i/o fix for 64-bit architectures</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:grib@billgribble.com"
+>grib@billgribble.com</A
+>&#62;</TT
+> Bill
+      Gribble</B
+></DT
+><DD
+><P
+>QIF import code, check printing, transaction find
+      dialog</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:mhamada@redhat.com"
+>mhamada@redhat.com</A
+>&#62;</TT
+> Mitsuo
+      Hamada</B
+></DT
+><DD
+><P
+>Japanese translations</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:otto@bug.redhat.com"
+>otto@bug.redhat.com</A
+>&#62;</TT
+> Otto
+      Hammersmith</B
+></DT
+><DD
+><P
+>for RedHat RPM packaging</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:offby1@blarg.net"
+>offby1@blarg.net</A
+>&#62;</TT
+> Eric Hanchrow</B
+></DT
+><DD
+><P
+>updated currency documentation</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:haral@codec.ro"
+>haral@codec.ro</A
+>&#62;</TT
+> Alexandru
+      Harsanyi</B
+></DT
+><DD
+><P
+>for fixing miscellaneous core dumps and lockups.</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:john@dhh.gt.org"
+>john@dhh.gt.org</A
+>&#62;</TT
+> John Hasler</B
+></DT
+><DD
+><P
+>engine patch</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:hellan@acm.org"
+>hellan@acm.org</A
+>&#62;</TT
+> Jon Kåre
+      Hellan</B
+></DT
+><DD
+><P
+>for fixing miscellaneous core dumps and lockups.</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:PrakashK@bigfoot.com"
+>PrakashK@bigfoot.com</A
+>&#62;</TT
+> Prakash
+      Kailasa</B
+></DT
+><DD
+><P
+>for gnome build fixes</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:small@arcadia.spb.ru"
+>small@arcadia.spb.ru</A
+>&#62;</TT
+> Alexey
+      Kakunin</B
+></DT
+><DD
+><P
+>quickfill patch for cyrillic</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:tkludy@csd.sgi.com"
+>tkludy@csd.sgi.com</A
+>&#62;</TT
+> Tom Kludy</B
+></DT
+><DD
+><P
+>for SGI Irix port</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:sk@xgm.de"
+>sk@xgm.de</A
+>&#62;</TT
+> Sven Kuenzler</B
+></DT
+><DD
+><P
+>for SuSE README file</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:blarsen@ada-works.com"
+>blarsen@ada-works.com</A
+>&#62;</TT
+> Bryan
+      Larsen</B
+></DT
+><DD
+><P
+>guile budget report</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:mellon@andare.fugue.com"
+>mellon@andare.fugue.com</A
+>&#62;</TT
+> Ted
+      Lemon</B
+></DT
+><DD
+><P
+>for NetBSD port</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:y-le-ny@ifrance.com"
+>y-le-ny@ifrance.com</A
+>&#62;</TT
+> Yannick Le
+      Ny</B
+></DT
+><DD
+><P
+>pour la traduction en Français</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:glikely@nortelnetworks.com"
+>glikely@nortelnetworks.com</A
+>&#62;</TT
+> Grant
+      Likely</B
+></DT
+><DD
+><P
+>gnome and engine patches</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:martinh@pegasus.cc.ucf.edu"
+>martinh@pegasus.cc.ucf.edu</A
+>&#62;</TT
+> Heath
+      Martin</B
+></DT
+><DD
+><P
+>major work on the gnome register</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:mgmartin@abacusnet.net"
+>mgmartin@abacusnet.net</A
+>&#62;</TT
+> Matt
+      Martin</B
+></DT
+><DD
+><P
+>guile error handling code</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:rgmerk@mira.net"
+>rgmerk@mira.net</A
+>&#62;</TT
+> Robert Graham
+      Merkel</B
+></DT
+><DD
+><P
+>reporting, gnome, and configuration patches.</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:juanmagm@mail.com"
+>juanmagm@mail.com</A
+>&#62;</TT
+> Juan Manuel
+      García Molina</B
+></DT
+><DD
+><P
+>spanish translation</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:molnarc@mandrakesoft.com"
+>molnarc@mandrakesoft.com</A
+>&#62;</TT
+> Christopher
+      Molnar</B
+></DT
+><DD
+><P
+>build system patch</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:mooney@dogbert.cc.ndsu.NoDak.edu"
+>mooney@dogbert.cc.ndsu.NoDak.edu</A
+>&#62;</TT
+> Tim
+      Mooney</B
+></DT
+><DD
+><P
+>port to alpha-dec-osf4.0f</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:gam3@ann.softgams.com"
+>gam3@ann.softgams.com</A
+>&#62;</TT
+> G. Allen Morris
+      III</B
+></DT
+><DD
+><P
+>for QIF core dump fix</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:dres@phoenixdsl.com"
+>dres@phoenixdsl.com</A
+>&#62;</TT
+> James
+      LewisMoss</B
+></DT
+><DD
+><P
+>design doc patches</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:sjmurdoch@bigfoot.com"
+>sjmurdoch@bigfoot.com</A
+>&#62;</TT
+> Steven
+      Murdoch</B
+></DT
+><DD
+><P
+>gnc-prices fix for London exchange</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:brent@baton.phys.lsu.edu"
+>brent@baton.phys.lsu.edu</A
+>&#62;</TT
+> Brent
+      Neal</B
+></DT
+><DD
+><P
+>TIAA-CREF support</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:stefan-ml@snobis.de"
+>stefan-ml@snobis.de</A
+>&#62;</TT
+> Stefan
+      Nobis</B
+></DT
+><DD
+><P
+>German translation patch</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:spacey@inch.com"
+>spacey@inch.com</A
+>&#62;</TT
+> Peter
+      Norton</B
+></DT
+><DD
+><P
+>for a valiant attempt at a GTK port</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:webmaster@obsidian.uia.net"
+>webmaster@obsidian.uia.net</A
+>&#62;</TT
+> OmNiBuS
+      </B
+></DT
+><DD
+><P
+>web site graphics and content</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:gordo@pincoya.com"
+>gordo@pincoya.com</A
+>&#62;</TT
+> Gordon Oliver
+      </B
+></DT
+><DD
+><P
+>multiple currency status line patch</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:mopyr@IPM.Lviv.UA"
+>mopyr@IPM.Lviv.UA</A
+>&#62;</TT
+> Myroslav
+      Opyr</B
+></DT
+><DD
+><P
+>for misc patches</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:laurent.pelecq@wanadoo.fr"
+>laurent.pelecq@wanadoo.fr</A
+>&#62;</TT
+> Laurent
+      Pélecq</B
+></DT
+><DD
+><P
+>i18n patches with gettext</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:Alain.Peyrat@nmu.alcatel.fr"
+>Alain.Peyrat@nmu.alcatel.fr</A
+>&#62;</TT
+> Alain
+      Peyrat</B
+></DT
+><DD
+><P
+>for <TT
+CLASS="FILENAME"
+>configure.in</TT
+> patches</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:peter@wuzel.m.isar.de"
+>peter@wuzel.m.isar.de</A
+>&#62;</TT
+> Peter
+      Pointner</B
+></DT
+><DD
+><P
+>motif and configuration patches</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:maufk@csv.warwick.ac.uk"
+>maufk@csv.warwick.ac.uk</A
+>&#62;</TT
+> Gavin
+      Porter</B
+></DT
+><DD
+><P
+>for euro style dates</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:tpo@spin.ch"
+>tpo@spin.ch</A
+>&#62;</TT
+> Tomas Pospisek</B
+></DT
+><DD
+><P
+>debian patches</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:rr@sco.com"
+>rr@sco.com</A
+>&#62;</TT
+> Ron Record</B
+></DT
+><DD
+><P
+>for SCO Unixware and OpenServer binaries</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:Keith.Refson@earth.ox.ac.uk"
+>Keith.Refson@earth.ox.ac.uk</A
+>&#62;</TT
+> Keith
+      Refson</B
+></DT
+><DD
+><P
+>Solaris fixes</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:schoenberger@signsoft.com"
+>schoenberger@signsoft.com</A
+>&#62;</TT
+> Dirk
+      Schoenberger</B
+></DT
+><DD
+><P
+>began the Qt/KDE port</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:jan.schrage@urz.uni-heidelberg.de"
+>jan.schrage@urz.uni-heidelberg.de</A
+>&#62;</TT
+> Jan
+      Schrage</B
+></DT
+><DD
+><P
+>documentation patches</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:cls@seawood.org"
+>cls@seawood.org</A
+>&#62;</TT
+> Christopher
+      Seawood</B
+></DT
+><DD
+><P
+>for XbaeMatrix core dump</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:aleseveso@tiscalinet.it"
+>aleseveso@tiscalinet.it</A
+>&#62;</TT
+> Alessandro
+      Seveso</B
+></DT
+><DD
+><P
+>Italian translations</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:msimons@fsimons01.erols.com"
+>msimons@fsimons01.erols.com</A
+>&#62;</TT
+> Mike
+      Simons</B
+></DT
+><DD
+><P
+>misc <TT
+CLASS="FILENAME"
+>configure.in</TT
+> patches</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:rich@brake.demon.co.uk"
+>rich@brake.demon.co.uk</A
+>&#62;</TT
+> Richard
+      Skelton</B
+></DT
+><DD
+><P
+>for Solaris cleanup</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:spruth@bigfoot.com"
+>spruth@bigfoot.com</A
+>&#62;</TT
+> Henning
+      Spruth</B
+></DT
+><DD
+><P
+>for German text and euro date rework</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:robby.stephenson@usa.net"
+>robby.stephenson@usa.net</A
+>&#62;</TT
+> Robby
+      Stephenson</B
+></DT
+><DD
+><P
+>register &#38; file history patches</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:stimming@uclink.berkeley.edu"
+>stimming@uclink.berkeley.edu</A
+>&#62;</TT
+> Christian
+      Stimming</B
+></DT
+><DD
+><P
+>report patch</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:bszx@bszxdomain.edu.eu.org"
+>bszx@bszxdomain.edu.eu.org</A
+>&#62;</TT
+> Bartek
+      Szady</B
+></DT
+><DD
+><P
+>engine and build system patches</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:tma@iis.fhg.de"
+>tma@iis.fhg.de</A
+>&#62;</TT
+> Herbert Thoma</B
+></DT
+><DD
+><P
+>gnome register &#38; euro support patches</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:detrout@earthlink.net"
+>detrout@earthlink.net</A
+>&#62;</TT
+> Diane
+      Trout</B
+></DT
+><DD
+><P
+>scheme qif import patch</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:uschold@cs.ucf.edu"
+>uschold@cs.ucf.edu</A
+>&#62;</TT
+> Richard
+      -Gilligan- Uschold</B
+></DT
+><DD
+><P
+>tax report and txf export</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:rkw@dataplex.net"
+>rkw@dataplex.net</A
+>&#62;</TT
+> Richard
+      Wackerbarth</B
+></DT
+><DD
+><P
+>patch to <TT
+CLASS="APPLICATION"
+>gnc-prices</TT
+>, qif import fixes</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:rob@valinux.com"
+>rob@valinux.com</A
+>&#62;</TT
+> Rob Walker</B
+></DT
+><DD
+><P
+>guile and register patches</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:dwmw2@infradead.org"
+>dwmw2@infradead.org</A
+>&#62;</TT
+> David
+      Woodhouse</B
+></DT
+><DD
+><P
+>Great Britain translations</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:gooch@ic.EECS.Berkeley.EDU"
+>gooch@ic.EECS.Berkeley.EDU</A
+>&#62;</TT
+> Ken
+      Yamaguchi</B
+></DT
+><DD
+><P
+>QIF import fixes; MYM import</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:shimpei@gol.com"
+>shimpei@gol.com</A
+>&#62;</TT
+> Shimpei
+      Yamashita</B
+></DT
+><DD
+><P
+>Japanese translation</P
+></DD
+></DL
+></DIV
+>
+
+ </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x80.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Inicio</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x562.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Lead Developers</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t3.html"
+ACCESSKEY="U"
+>Subir</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Supported Operating Systems</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

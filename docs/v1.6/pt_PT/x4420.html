@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+> Construir relatórios personalizados</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Relatórios"
+HREF="t4347.html"><LINK
+REL="PREVIOUS"
+TITLE="Folhas de Estilos"
+HREF="x4416.html"><LINK
+REL="NEXT"
+TITLE="Relatório de Impostos / Exportação TXF"
+HREF="t4434.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x4416.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Relatórios</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t4434.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-CUSTOMREPORTS">Construir relatórios personalizados</H1
+><P
+> É possível escrever os seus proprios relatórios para suprir as 
+suas necessidades, caso saiba programar um pouco. Terá de saber <A
+HREF="t6809.html#SCHEME"
+>Scheme</A
+> (uma linguagem de programação semelhante 
+a LISP), sendo uma óptima ideia ter por perto uma cópia do código-fonte 
+do <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+>.</P
+><P
+>O interface de relatórios encontra-se documentado em <A
+HREF="t6899.html"
+>Desenvolvimento de Relatórios</A
+>; mas poderá ter uma boa ideia de 
+como funciona examinando o ficheiro <TT
+CLASS="FILENAME"
+>src/scm/report/hello-world.scm</TT
+> na árvore de código do <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+>.</P
+><P
+>Também terá de aceder a dados do "motor" para obter informação para o 
+seu relatório. Isto é conseguido através de um conjunto de funções de envolvimento 
+(wrapper) <A
+HREF="t6809.html#SCHEME"
+> Scheme </A
+> que se encontram documentadas 
+no ficheiro <TT
+CLASS="FILENAME"
+>src/g-wrap/gnc.html</TT
+>. Poderá desejar examinar 
+alguns dos outros relatórios em <TT
+CLASS="FILENAME"
+> src/scm/report </TT
+> para uma 
+indicação de como as funções são utilizadas.</P
+><P
+>De momento, os relatórios são produzidos chamando uma API que gera HTML, 
+que retorna um dialecto de HTML e o apresenta utilizando um widget HTML.  Isto 
+tem limitações (particularmente quando se tenta alinhar com precisão objectos, 
+tal como pode ser necessário na impressão de facturas em papel pré-impresso, por 
+exemplo), pelo que futuramente poderá ser necessária uma nova interface de geração 
+de relatórios.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x4416.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t4434.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Folhas de Estilos</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t4347.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Relatório de Impostos / <A
+HREF="t6698.html"
+>Exportação TXF</A
+></TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

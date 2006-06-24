@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>3.3. Putting It All Together</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Concepts Guide v1.8"><link rel="up" href="chapter3.html" title="Chapter 3. Accounts"><link rel="previous" href="accts_types1.html" title="3.2. GnuCash Accounts"><link rel="next" href="chapter4.html" title="Chapter 4. Transactions"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.3. Putting It All Together</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="accts_types1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 3. Accounts</th><td width="20%" align="right"> <a accesskey="n" href="chapter4.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="accts_examples1"></a>3.3. Putting It All Together</h2></div></div><p>
+Let's go through the process of building a common personal finance <b>chart of accounts</b> using the information we have learned from this chapter.  A chart of accounts is simply a new GnuCash file in which you groups your accounts to track your finances.  In building this chart of accounts, the first task is to divide the items you want to track into the basic account types of accounting.  This is fairly simple, let's go through an example. 
+    </p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="accts_examples_situation2"></a>3.3.1. Simple Example</h3></div></div><p>
+Let us assume you have a checking and a savings account at a bank, and are employed and thus receive a paycheck.  You have a credit card (Visa), and you pay monthly utilities in the form of rent, phone, and electricity.  Naturally, you also need to buy groceries.  For now, we will not worry about how much money you have in the bank, how much you owe on the credit card, etc.  We want to simply build the framework for this chart of accounts.
+    </p><p>
+Your <b>assets</b> would be the bank savings and checking account.  Your 
+<b>liabilities</b> are the credit card.  Your <b>Equity</b> would be the starting values of your bank accounts and credit card (we do not have those amounts yet, but we know they exist).  You have <b>income</b> in the form of a salary, and <b>expenses</b> in the form of groceries, rent, electricity, phone, and taxes (Federal, Social Security, Medicare) on your salary.  Simple, isn't it?
+   </p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="accts_examples_toplevel2"></a>3.3.2. The Basic Top Level Accounts</h3></div></div><p>
+Now, we must decide how you want to group these accounts.  Most likely, you want your assets groups together, your liabilities grouped together, your Equity grouped together, your income grouped together, and your expenses grouped together.  This is the most common way of building a GnuCash chart of accounts, and it is highly recommended that you always begin this way.
+   </p><p>
+Start with a clean GnuCash file (do not select any predefined accounts) and build this basic starting account structure (<b>File</b> -&gt; <b>New Account...</b>).
+   <div class="orderedlist"><ol type="1"><li><p>
+Account name <b>Assets</b> (account type <b>Assets</b>, parent account <b>New top level account</b>)
+     </p></li><li><p>
+Account name <b>Liabilities</b> (account type <b>Liabilities</b>, parent account <b>New top level account</b>)
+     </p></li><li><p>
+Account name <b>Equity</b> (account type <b>Equity</b>, parent account <b>New top level account</b>)
+     </p></li><li><p>
+Account name <b>Income</b> (account type <b>Income</b>, parent account <b>New top level account</b>)
+     </p></li><li><p>
+Account name <b>Expenses</b> (account type <b>Expenses</b>, parent account <b>New top level account</b>)
+     </p></li></ol></div>
+  </p><div class="screenshot"><div class="mediaobject"><img src="figures/accts_toplevel.png" alt="The Basic Top-level Accounts"><div class="caption"><p>This image shows the basic top-level accounts.
+	       </p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="accts_examples_organization2"></a>3.3.3. Making Sub-Accounts</h3></div></div><p>
+We can now add to this basic top-level tree structure by inserting some real transaction-holding sub-accounts.  Notice that the tax accounts are placed within a sub-account named &quot;Taxes&quot;.  You can make sub-accounts within sub-accounts.  This is typically done with a group of related accounts (such as tax accounts in this example).
+   <div class="orderedlist"><ol type="1"><li><p>
+Account name <b>Checking</b> (account type <b>Bank</b>, parent account <b>Asset</b>)
+     </p></li><li><p>
+Account name <b>Savings</b> (account type <b>Bank</b>, parent account <b>Asset</b>)
+     </p></li><li><p>
+Account name <b>Visa</b> (account type <b>Credit Card</b>, parent account <b>Liabilities</b>)
+     </p></li><li><p>
+Account name <b>Salary</b> (account type <b>Income</b>, parent account <b>Income</b>)
+     </p></li><li><p>
+Account name <b>Phone</b> (account type <b>Expenses</b>, parent account <b>Expenses</b>)
+     </p></li><li><p>
+Account name <b>Electricity</b> (account type <b>Expenses</b>, parent account <b>Expenses</b>)
+     </p></li><li><p>
+Account name <b>Rent</b> (account type <b>Expenses</b>, parent account <b>Expenses</b>)
+     </p></li><li><p>
+Account name <b>Groceries</b> (account type <b>Expenses</b>, parent account <b>Expenses</b>)
+     </p></li><li><p>
+Account name <b>Taxes</b> (account type <b>Expenses</b>, parent account <b>Expenses</b>)
+     </p></li><li><p>
+Account name <b>Federal</b> (account type <b>Expenses</b>, parent account <b>Expenses:Taxes</b>)
+     </p></li><li><p>
+Account name <b>Social Security</b> (account type <b>Expenses</b>, parent account <b>Expenses:Taxes</b>)
+     </p></li><li><p>
+Account name <b>Medicare</b> (account type <b>Expenses</b>, parent account <b>Expenses:Taxes</b>)
+     </p></li><li><p>
+Account name <b>Starting Balances</b> (account type <b>Equity</b>, parent account <b>Equity</b>)
+     </p></li></ol></div>
+  </p><div class="screenshot"><div class="mediaobject"><img src="figures/accts_tree.png" alt="The Basic Chart of Accounts"><div class="caption"><p>This image shows a simple chart of accounts.
+	       </p></div></div></div><p>
+Save this chart of accounts somewhere, as we will continue to use it in the later chapters.
+  </p><p>
+You have now created a chart of accounts to track a simple household budget.  With this basic framework in place, we can now begin to populate the accounts with transactions.  The next chapter will cover this subject in greater detail.
+  </p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="accts_types1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="chapter4.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">3.2. GnuCash Accounts </td><td width="20%" align="center"><a accesskey="u" href="chapter3.html">Up</a></td><td width="40%" align="right"> Chapter 4. Transactions</td></tr></table></div></body></html>

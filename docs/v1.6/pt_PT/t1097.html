@@ -1,0 +1,389 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Contas a Pagar/Contas a Receber</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Janela de Nova Conta"
+HREF="t1069.html"><LINK
+REL="NEXT"
+TITLE=" Contas a Pagar"
+HREF="x1153.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t1069.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x1153.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN1098">Contas a Pagar/Contas a Receber</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t1097.html#XACC-ARDEF"
+>Contas a Receber</A
+></DT
+><DT
+><A
+HREF="x1153.html"
+>Contas a Pagar</A
+></DT
+><DT
+><A
+HREF="x1163.html"
+>Despesas Pré-Pagas</A
+></DT
+></DL
+></DIV
+><P
+>C/R (Contas a Receber) e C/P (Contas a Pagar) são utilizadas 
+por empresas para registar vendas pelas quais não serão imediatamente 
+pagas, ou para registar contas que receberam, mas apenas irão pagar 
+mais tarde. Este tipo de contas é utilizado principalmente quando 
+você tem muitas facturas e recibos a entrar e sair, e não lhes deseja 
+perder o controlo apenas porque não as paga/é pago imediatamente.</P
+><P
+>Para a maior parte dos utilizadores domésticos, C/R e C/P são demasiado 
+complicadas e confusas para valerem o esforço.&#13;</P
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-ARDEF">Contas a Receber</H1
+><P
+>Vamos assumir que em vez de requerer que os seus clientes 
+lhe paguem <I
+CLASS="EMPHASIS"
+>imediatamente,</I
+> em dinheiro, 
+lhes emite uma factura e lhes dá 30 dias para efectuar o pagamento. 
+(Após 30 dias, podemos começar a cobrar juros e a enviar cartas de 
+caloteiro :-)). Quando efectuamos uma venda, as duas contas afectadas 
+são <I
+CLASS="EMPHASIS"
+>Vendas</I
+> (uma conta de receitas) e 
+<I
+CLASS="EMPHASIS"
+>Contas a Receber.</I
+> Contas a Receber são 
+activos, mas não são líquidos pois não os pode vender imediatamente, 
+e certamente não são dinheiro. Quando o cliente paga a factura, você 
+transfere o montante de C/R para Dinheiro. Isto é feito em dois passos 
+pois você decidiu efectuar a sua contabilidade na base da efectivação  
+e não no do dinheiro. Isto deve-se a que a maioria das suas transacções 
+não se baseiam apenas em dinheiro trocar de mãos, mas antes em 
+<I
+CLASS="EMPHASIS"
+>contrair obrigações (ou dívidas).</I
+></P
+><P
+>Em operações mais sofisticadas, pode existir uma muito mais 
+    complexa sequência de documentos gerados e acompanhados:
+
+    <P
+></P
+><UL
+><LI
+><P
+>Um cliente envia uma <I
+CLASS="EMPHASIS"
+>Ordem de Compra</I
+>,
+      que autoriza a compra.
+
+      </P
+></LI
+><LI
+><P
+>Uma <I
+CLASS="EMPHASIS"
+>Ordem de Produção</I
+> calendariza a produção 
+      do que quer que seja que o cliente deseja adquirir.
+      </P
+></LI
+><LI
+><P
+>Uma <I
+CLASS="EMPHASIS"
+>Guia de Remessa</I
+> é emitida, para enviar os 
+      bens para o cliente.
+
+      </P
+></LI
+><LI
+><P
+>Uma vez enviados, uma <I
+CLASS="EMPHASIS"
+>Factura</I
+> é emitida, representando 
+      um <I
+CLASS="EMPHASIS"
+>pedido de pagamento</I
+>.
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>As vendas são registadas assim que ocorrem. Infelizmente, você 
+    pode acabar por vender produtos a operadores mal-intencionados 
+    desconhecendo tal facto, e ficar com uma "dívida incobrável". 
+    Por forma a determinar que partes das Contas a Receber parecem 
+    estar mais em risco, é normal organizar as C/R baseadas na "idade" 
+    das dívidas, sendo comum a segmentação em várias idades, de 
+    pagamentos em aberto à 0-30 dias, em aberto à 31-60 dias, 61-90 dias, 
+    e depois aqueles que estão <I
+CLASS="EMPHASIS"
+>mesmo atrasados.</I
+>
+    A dada altura, poderá tornar-se óbvio que o cliente nunca irá pagar 
+    o que deve, e temos de registar a dívida como <I
+CLASS="EMPHASIS"
+>Dívida Incobrável.</I
+>
+    Nessa altura, é normal registar a entrada da seguinte forma:
+    (Atenção às especificidades da lei portuguesa sobre prazos de incobrabilidade)
+    <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1127"><P
+><B
+>Table 2. Exemplo de Custo de Dívida Incobrável</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Conta</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Déb.</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Créd.</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Custo de Dív. Incobrável</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>100,000$</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+><TD
+>&nbsp;</TD
+><TD
+>&nbsp;</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Contas a Receber</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>100,000$</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    </P
+><P
+>Poderia ter reduzido as <I
+CLASS="EMPHASIS"
+>Receitas de Vendas</I
+>, mas 
+    as empresas tendem a preferir controlar especificamente os montantes 
+    que vão perdendo para maus clientes.
+
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Aviso: <I
+CLASS="EMPHASIS"
+>Conceito Contabilístico Avançado.</I
+> 
+    Dívidas Incobráveis são um exemplo de uma "contra-conta". Não nos 
+    referimos a <I
+CLASS="EMPHASIS"
+>montantes pagos aos rebeldes na Niquerágua,</I
+> 
+    mas antes ao conceito de que a conta é uma conta de receita que é 
+    esperado conter um saldo oposto ao que normalmente deveria, para que 
+    contra-balance o saldo de outra conta de receitas. 
+    <A
+HREF="t1195.html"
+>Amortizações Acumuladas,</A
+> utilizada 
+    para reduzir o valor de um activo ao longo do tempo, é outro exemplo de 
+    uma contra-conta.</I
+>
+
+    </P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t1069.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x1153.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Janela de Nova Conta</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Contas a Pagar</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

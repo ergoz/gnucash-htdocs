@@ -1,0 +1,447 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+> Importação de Ficheiros QIF do Quicken</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Um Guia Para Antigos Utilizadores do Quicken"
+HREF="t4024.html"><LINK
+REL="PREVIOUS"
+TITLE=' "Categories" do Quicken'
+HREF="x4031.html"><LINK
+REL="NEXT"
+TITLE="  Iniciar a Utilização
+      "
+HREF="t4111.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x4031.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Um Guia Para Antigos Utilizadores do Quicken</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t4111.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-QIF">Importação de Ficheiros QIF do Quicken</H1
+><P
+> O GnuCash suporta a importação de Ficheiros de Importação 
+    Quicken (QIF). (Note: Apenas a Versão 3.0 do QIF Quicken foi 
+    formalmente testada até agora.) 
+
+    </P
+><P
+>Note que o formato QIF é representativo de um modelo de dados 
+    de certa forma peculiar que não é tão expressivo quanto se poderia 
+    desejar; requer despejar um ficheiro de dados separado por cada 
+    conta, em vez de permitir que tenha um ficheiro que represente 
+    <I
+CLASS="EMPHASIS"
+>todas</I
+> as contas que possa ter tido no Quicken.
+
+    </P
+><P
+>Além disso, apesar de existirem planos para o fazer no futuro,
+    não existe, de momento, uma forma de mapear os nomes de contas ou 
+    categorias utilizadas no Quicken para um conjunto <I
+CLASS="EMPHASIS"
+>diferente</I
+> 
+    de nomes de contas que possa estar a utilizar no GnuCash.
+
+    </P
+><P
+>Devido a isto, por favor leia esta secção cuidadosamente. Poderá 
+    ficar de certa forma desapontado com os resultados de uma importação 
+    QIF; isto dar-lhe-á pelo menos expectativas mais reais sobre o que 
+    irá acontecer.
+
+    </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN4044">Criar Ficheiros QIF</H2
+><P
+>    </P
+><P
+>Para criar um conjunto de ficheiros <TT
+CLASS="FILENAME"
+>QIF</TT
+> do Quicken, 
+    realize os seguintes procedimentos:
+
+    <P
+></P
+><UL
+><LI
+><P
+>        Inicie o Quicken. 
+
+        </P
+><P
+>Ele corre bobre o <A
+HREF="http://www.winehq.com/"
+TARGET="_top"
+>Wine,</A
+>
+        o Wabi da Caldera, e sem dúvida no VMWare, pelo que isto não requer 
+        forçosamente que tenha de correr o Windows.
+      
+
+      </P
+></LI
+><LI
+><P
+>        Seleccione a conta que deseja exportar. 
+
+        </P
+><P
+>O Quicken apenas consegue exportar uma conta para cada ficheiro de dados,
+        o que significa que se tiver várias contas, isto poderá provar-se ser 
+        um processo enfastidiante. (Por outro lado, deverá ser 
+        <I
+CLASS="EMPHASIS"
+>muito menos</I
+> penoso que introduzir todos os dados 
+        do zero.)
+      
+
+      </P
+></LI
+><LI
+><P
+>        Seleccione o menu <B
+CLASS="GUIMENU"
+>Ficheiro</B
+> e escolha a entrada <B
+CLASS="GUIMENU"
+>Exportar...</B
+>. 
+
+        </P
+><P
+>Isto irá fazer surgir uma janela que pede um nome de ficheiro,
+        datas efectivas, bem como uma série de caixas de visto,
+        incluindo <B
+CLASS="GUIMENU"
+>Transacções</B
+>, <B
+CLASS="GUIMENU"
+>Listas de Contas</B
+>,
+        <B
+CLASS="GUIMENU"
+>Listas de Categorias</B
+>, etc.
+
+        </P
+><P
+>Para os melhores resultados, deverá certificar-se de que essas três estão 
+        com o visto.
+
+        </P
+><P
+>Caso <I
+CLASS="EMPHASIS"
+>não</I
+> coloque visto na caixa <B
+CLASS="GUIMENU"
+>Lista 
+        de Contas</B
+>, então provavelmente o nome da sua conta será 
+        perdido e isso causará problemas quando mais tarde tentar importar 
+        os dados para o GnuCash.
+      
+    </P
+></LI
+></UL
+>
+    Agora tem um conjunto de ficheiros <TT
+CLASS="FILENAME"
+>.QIF</TT
+>, pelo que 
+    deverá executar o GnuCash. 
+
+    </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN4071">Carregar ficheiros QIF no GnuCash</H2
+><P
+>    <P
+></P
+><UL
+><LI
+><P
+>Para importar um ficheiro QIF do Quicken, seleccione o menu <B
+CLASS="GUIMENU"
+>Ficheiro</B
+> e escolha a opção <B
+CLASS="GUIMENU"
+>Importar QIF</B
+>.
+
+      </P
+></LI
+><LI
+><P
+>O ficheiro importado será acrescentado a quaisquer outros dados 
+      que tenha correntemente no GnuCash. A fusão permite que multiplas 
+      contas Quicken sejam importadas e reunidas num único grupo de contas.
+      
+      
+    </P
+></LI
+></UL
+>
+
+    </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN4081">Coisas a Notar Sobre Importações QIF</H2
+><P
+>    <P
+></P
+><UL
+><LI
+><P
+>        <I
+CLASS="EMPHASIS"
+>Procura de Entradas Duplicadas</I
+> 
+
+        </P
+><P
+>Note que durante uma fusão, uma procura é feita por transacções 
+        duplicadas, sendo os duplicados removidos. Uma transacção duplicada 
+        é uma onde a data, descrição (destinatário), notas, quantidade, 
+        preço por acção, e contas de débito/crédito ou categorias coincidem 
+        <I
+CLASS="EMPHASIS"
+>exactamente.</I
+> Assim, a fusão <I
+CLASS="EMPHASIS"
+>deverá
+        </I
+> ser segura excepto se você tiver várias transacções no 
+        mesmo dia, para a mesma conta, com o mesmo montante, com a mesma 
+        descrição e notas.
+
+        </P
+><P
+>Infelizmente isto <I
+CLASS="EMPHASIS"
+>pode</I
+> ocorrer, sendo o cenário 
+        típico um que involva vários levantamentos de uma máquina Multibanco, 
+        com o mesmo montante, no mesmo dia.
+      
+
+      </P
+></LI
+><LI
+><P
+>        <I
+CLASS="EMPHASIS"
+>Contas Vazias</I
+> 
+
+        </P
+><P
+>Note que quando a <B
+CLASS="GUIMENU"
+>Lista de Contas</B
+> e a <B
+CLASS="GUIMENU"
+>        Lista de Categorias</B
+> é exportada do Quicken, <I
+CLASS="EMPHASIS"
+>todas</I
+>
+        as contas e categorias serão exportadas, mesmo se estiverem 
+        vazias e não contenham transacções. Quando estas são importadas,
+        irão surgir como contas com saldo zero. Caso não planeie utilizar 
+        tais contas, esteja à vontade para as apagar. Melhoramentos futuros 
+        poderão permitir-lhe apagar essas contas "em massa", ou torna-las 
+        invisíveis sem que tenha de as apagar.
+      
+
+      </P
+></LI
+><LI
+><P
+>        <I
+CLASS="EMPHASIS"
+>QIF Mark II</I
+> Um projecto em curso 
+        é o de contruir uma ferramenta de importação alternativa em 
+        Guile que será mais flexível e que, em virtude de ser guardada 
+        como um conjunto de scripts Scheme, poderá ser modificada sem 
+        a necessidade de recompilar toda a aplicação. 
+
+        </P
+><P
+>Neste momento, ela parseia com sucesso ficheiros <TT
+CLASS="FILENAME"
+>QIF</TT
+>; 
+        o que falta é a tarefa (bastante complexa) de determinar a correspondência 
+        apropriada entre as <I
+CLASS="EMPHASIS"
+>Categorias</I
+> do Quicken
+        e os equivalentes no GnuCash. Esta é uma das fraquezas mais significativas 
+        com o esquema actual de importação QIF.
+      
+
+      </P
+></LI
+><LI
+><P
+>        <I
+CLASS="EMPHASIS"
+>Mais sobre QIF</I
+> 
+
+        </P
+><P
+>Mais detalhes sobre o Formato de Troca de Dados QIF podem ser encontrados 
+        <A
+HREF="t3867.html"
+>aqui.</A
+>
+      
+    </P
+></LI
+></UL
+>
+&#13;</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x4031.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t4111.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>"Categories" do Quicken</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t4024.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Iniciar a Utilização</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

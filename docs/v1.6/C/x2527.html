@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+> The Rule of Double-Entry Accounting</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash User Manual"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Understanding Double-Entry Accounting"
+HREF="t2504.html"><LINK
+REL="PREVIOUS"
+TITLE="Why Use Double-Entry Accounting?"
+HREF="x2522.html"><LINK
+REL="NEXT"
+TITLE="Using Double-Entry in GnuCash"
+HREF="x2549.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash User Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x2522.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Understanding Double-Entry Accounting</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x2549.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-DOUBLEENTRYRULE">The Rule of Double-Entry Accounting</H1
+><P
+>In a double-entry transaction, an equal amount of money is
+    always transferred from one account (or group of accounts) to
+    another account (or group of accounts).  Accountants use the terms
+    <I
+CLASS="EMPHASIS"
+>debit</I
+> and <I
+CLASS="EMPHASIS"
+> credit</I
+> to
+    describe whether money is being transferred <I
+CLASS="EMPHASIS"
+>    to</I
+> or <I
+CLASS="EMPHASIS"
+> from</I
+> an
+    account. </P
+><P
+> Money is recorded in the debit column, which is the left
+    column, when it is being transferred <I
+CLASS="EMPHASIS"
+>to</I
+> an
+    account.  Money is recorded in the credit column, which is the
+    right column, when it is being transferred
+    <I
+CLASS="EMPHASIS"
+>from</I
+> an account. For every transaction, the
+    total of debits (left column entries)
+    must equal the total of credits (right column entries).
+
+    </P
+><P
+> You don't have to use the terms "debit" and "credit" to use
+    GnuCash, however.  GnuCash registers default to "common" column
+    headings such as "deposit" and "withdrawal"---if you are more
+    comfortable with those headings, use them.  If you prefer the
+    credit and debit headings, you can change the column headings to
+    "use accounting labels" from the menu item
+    <B
+CLASS="GUIMENUITEM"
+>Settings|Preferences...General</B
+>.</P
+><P
+>The main concept to remember, regardless of terminology, is
+    that all transactions involve a transfer of some amount of money
+    from a source to a destination. For example, if you write a check
+    for $50 to buy groceries, you record that as a transfer of $50
+    from the checking account to the groceries expense account.  In
+    accounting terms, this is a credit to checking and a debit to
+    groceries expense:</P
+><P
+CLASS="LITERALLAYOUT"
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit&nbsp;Groceries&nbsp;&nbsp;&nbsp;50<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit&nbsp;Checking&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50</P
+><P
+>What about your paycheck?  You can see that money goes into a bank
+      account, but where does it come from?  In double-entry, the
+      money has to have a source, and the source of your paycheck is
+      an income account.  So to enter the deposit of a $500 paycheck
+      in your checking account, you record a transfer of $500 from an
+      income account to a checking account.  In accounting terms, this
+      is a credit to income and a debit to the bank account:</P
+><P
+CLASS="LITERALLAYOUT"
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debit&nbsp;Checking&nbsp;&nbsp;500<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit&nbsp;Income&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;500</P
+><TABLE
+CLASS="SIDEBAR"
+BORDER="1"
+CELLPADDING="5"
+><TR
+><TD
+><DIV
+CLASS="SIDEBAR"
+><A
+NAME="AEN2543"><P
+><B
+>Insider knowledge:</B
+></P
+><P
+>        Bank statements are often written up from the bank's
+        perspective, which is exactly <I
+CLASS="EMPHASIS"
+>opposite</I
+> to
+        yours.  When you deposit that paycheck in the bank, you are
+        giving the bank money which they promise to pay you back
+        someday.  So to the bank, your deposit is a loan; it is money
+        they owe you.  Since that money is a
+        <I
+CLASS="EMPHASIS"
+>source</I
+> of funds to the bank, they show a
+        <I
+CLASS="EMPHASIS"
+>credit</I
+> to your checking account when you
+        deposit money in it.</P
+></DIV
+></TD
+></TR
+></TABLE
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x2522.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x2549.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Why Use Double-Entry Accounting?</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t2504.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Using Double-Entry in GnuCash</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,398 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>A Janela de Reconciliação</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="    Começar a utilizar o GnuCash
+  "
+HREF="x4146.html"><LINK
+REL="NEXT"
+TITLE="O Registo de Contas"
+HREF="t4213.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x4146.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t4213.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN4155">A Janela de Reconciliação</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t4154.html#AEN4166"
+>Reconciliar</A
+></DT
+></DL
+></DIV
+><P
+>A Janela de Reconciliação é utilizada para reconciliar uma conta 
+    GnuCash com o extracto que o banco ou outra instituição lhe enviou.
+    A reconciliação é útil não apenas para confirmar os seus registos 
+    contra os do banco,  mas também para ter uma ideia mais correcta das 
+    transacções em aberto, por ex. cheques por levantar.
+    </P
+><P
+>    No fundo da janela de conta, existem dois saldos actuais: o saldo 
+    "limpo e reconciliado" e o saldo "total". O saldo "limpo e reconciliado" 
+    deverá corresponder a quanto dinheiro o banco pensa que você tem na sua 
+    conta e o saldo "total" inclui transacções pendentes.
+    </P
+><P
+>    Por exemplo, quando você passa um cheque para algo, deverá introduzir a 
+    transacção no GnuCash.  O campo de reconciliação (<TT
+CLASS="GUILABEL"
+><B
+>R</B
+></TT
+>) 
+    da transacção deverá inicalmente conter <TT
+CLASS="LITERAL"
+>n</TT
+> (nova). 
+    A sua nova entrada irá contribuir para o saldo "total", mas não para o 
+    saldo "limpo e reconciliado". Mais tarde, se achar que o cheque foi 
+    levantado, poderá clicar no campo <TT
+CLASS="GUILABEL"
+><B
+>R</B
+></TT
+> da transacção 
+    para o mudar para <TT
+CLASS="LITERAL"
+>c</TT
+> (limpo). Quando o fizer, o 
+    saldo "limpo e reconciliado" irá mudar para incluir este montante. Quando 
+    o extracto bancário chegar, poderá então compara-la com o que registou no 
+    GnuCash, utilizando a janela de Reconciliação.
+    Lá, poderá alterar o campo <TT
+CLASS="GUILABEL"
+><B
+>R</B
+></TT
+> para <TT
+CLASS="LITERAL"
+>y</TT
+> 
+    (reconciliada).   Não poderá reconciliar na janela de registo, sendo 
+    mesmo necessária a utilização da janela de reconciliação. Uma vez uma 
+    transacção seja marcada como "reconciliada", não mais poderá ser facilmente 
+    modificada.
+    </P
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN4166">Reconciliar</H1
+><P
+>    <P
+></P
+><UL
+><LI
+><P
+>Seleccione <B
+CLASS="GUIMENU"
+>Reconciliar</B
+> no menu de Contas, 
+      e o GnuCash pedri-lhe-á para introduzir o saldo final do 
+      extracto bancário.
+
+    </P
+><DIV
+CLASS="MEDIAOBJECT"
+><P
+><IMG
+SRC="image/recninfo.png"></P
+></DIV
+></LI
+><LI
+><P
+>Introduza a data do final do período que o extracto cobre,
+     o saldo final do extracto e prima <B
+CLASS="GUIBUTTON"
+>OK</B
+>.  
+     A janela de Reconciliação surgirá.  Ela tem o seguinte aspecto:
+
+     </P
+><DIV
+CLASS="MEDIAOBJECT"
+><P
+><IMG
+SRC="image/recnwin.png"></P
+></DIV
+><P
+>Os grupos <TT
+CLASS="GUILABEL"
+><B
+>Débitos</B
+></TT
+> e <TT
+CLASS="GUILABEL"
+><B
+>Créditos</B
+></TT
+>
+     listam todas as transacções por reconciliar.  A coluna 
+     '<TT
+CLASS="GUILABEL"
+><B
+>R</B
+></TT
+>' mostra se as transacções foram limpas 
+     ou reconciliadas.
+
+     </P
+></LI
+><LI
+><P
+>Agora, examine cada item no extracto bancário e procure o item 
+     correspondente na janela de Reconciliação.   
+
+     </P
+><P
+>Caso não consiga encontrar uma, então talvez se tenha esquecido de 
+     introduzir uma transacção, ou não sabia que a transacção tinha ocorrido.  
+     Pode utilizar o botão <B
+CLASS="GUIBUTTON"
+>Nova</B
+> na barra de ferramentas, 
+     ou a opção de menu <B
+CLASS="GUIMENUITEM"
+>Nova</B
+> no menu de 
+     <B
+CLASS="GUIMENU"
+>Transacções</B
+>, para abrir uma janela de registo e 
+     introduzir a transacção em falta.  O novo item irá aparecer na janela de 
+     Reconciliação quando primir <B
+CLASS="GUIBUTTON"
+>Introduzir</B
+> após 
+     inserir a transacção.
+
+     </P
+><P
+>Quando encontrar o item na janela de Reconciliação, compare o montante 
+     do item com o montante do extracto.  Caso não sejam iguais, poderá ter 
+     cometido um erro ao introduzir a transacção no GnuCash.  Pode utilizar 
+     o botão <B
+CLASS="GUIBUTTON"
+>Editar</B
+> na barra de ferramentas, ou a opção 
+     de menu <B
+CLASS="GUIMENUITEM"
+>Editar</B
+> no menu de 
+     <B
+CLASS="GUIMENU"
+>Transacções</B
+>, para abrir uma janela de registo e 
+     corrigir a transacção.
+
+     </P
+><P
+>Se os montantes coincidirem, clique no item na janela de Reconciliação. 
+     A coluna '<TT
+CLASS="GUILABEL"
+><B
+>R</B
+></TT
+>' irá mudar de '<TT
+CLASS="LITERAL"
+>n</TT
+>' ou 
+     '<TT
+CLASS="LITERAL"
+>c</TT
+>' para '<TT
+CLASS="LITERAL"
+>y</TT
+>' (reconciliada) .
+
+     </P
+><P
+>Repita isto para cada entrada que surja no extracto bancário, 
+        verificando que os montantes coincidem com os do GnuCash e 
+        marcando as transacções no GnuCash à medida que vão sendo reconciliadas. 
+      
+      </P
+></LI
+><LI
+><P
+>No fundo da janela de "Reconciliação" existe um campo "Diferença", que deverá 
+      mostrar 0$00 quando tiver terminado a reconciliação. Caso mostre outro valor, 
+      ou deixou escapar transacções, ou alguns montantes poderão estar incorrectos 
+      no GnuCash. (Ou, mais dificilmente, o banco poderá ter cometido um erro.) 
+      </P
+></LI
+><LI
+><P
+>Quando tiver marcado todos os itens no extracto bancário, e quando 
+      a Diferença for 0$00, prima o botão <B
+CLASS="GUIBUTTON"
+>Terminar</B
+> 
+      na barra de ferramentas ou seleccione <B
+CLASS="GUIMENUITEM"
+>Terminar</B
+> 
+      no menu <B
+CLASS="GUIMENU"
+>Reconciliação</B
+> (esta última opção funcionará 
+      mesmo que a "Diferença" não seja 0$00).
+          A janela de Reconciliação irá fechar. 
+      Na <A
+HREF="t4213.html"
+>janela de Registo</A
+>, o campo 
+      <TT
+CLASS="GUILABEL"
+><B
+>R</B
+></TT
+> das transacções reconciliadas irá mudar 
+      para '<TT
+CLASS="LITERAL"
+>y</TT
+>'.
+      
+    </P
+></LI
+></UL
+></P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x4146.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t4213.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Começar a utilizar o GnuCash</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>O Registo de Contas</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

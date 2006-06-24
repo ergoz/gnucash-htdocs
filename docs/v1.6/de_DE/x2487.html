@@ -1,0 +1,297 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Using Double-Entry in GnuCash</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash Online-Handbuch"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Understanding Double-Entry Accounting"
+HREF="t2442.html"><LINK
+REL="PREVIOUS"
+TITLE=" The Rule of Double-Entry Accounting"
+HREF="x2465.html"><LINK
+REL="NEXT"
+TITLE="GnuCash and the EURO"
+HREF="t2522.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash Online-Handbuch</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x2465.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Understanding Double-Entry Accounting</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t2522.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-DOUBLEUSE">Using Double-Entry in GnuCash</H1
+><P
+>Let's try an example that applies double-entry accounting to
+        using GnuCash.  We will record the deposit of a $500 paycheck. </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN2490">Creating Accounts</H2
+><P
+>          To enter a paycheck deposit, you first need to create two
+          accounts.  The first account is a checking account.  Click
+          the <B
+CLASS="GUIBUTTON"
+>New</B
+> button in the main window
+          toolbar to create a new account, then enter the following
+          account details in the dialog box that appears:
+
+<P
+CLASS="LITERALLAYOUT"
+>&nbsp;Account&nbsp;Name:&nbsp;&nbsp;&nbsp;"Checking"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;Account&nbsp;Type:&nbsp;&nbsp;&nbsp;&nbsp;Highlight&nbsp;"Bank"&nbsp;&nbsp;&nbsp;<br>
+&nbsp;Parent&nbsp;Account:&nbsp;&nbsp;Highlight&nbsp;"New&nbsp;top&nbsp;level&nbsp;account"</P
+>
+  </P
+><P
+> Click "OK" to complete setup, then create a second income
+        account.  Click the <B
+CLASS="GUIBUTTON"
+>New</B
+> button again, and enter these
+        details in the dialog box:
+
+<P
+CLASS="LITERALLAYOUT"
+>&nbsp;Account&nbsp;Name:&nbsp;&nbsp;&nbsp;"Salary"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;Account&nbsp;Type:&nbsp;&nbsp;&nbsp;&nbsp;Highlight&nbsp;"Income"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;Parent&nbsp;Account:&nbsp;&nbsp;Highlight&nbsp;"New&nbsp;top&nbsp;level&nbsp;account"</P
+></P
+><TABLE
+CLASS="SIDEBAR"
+BORDER="1"
+CELLPADDING="5"
+><TR
+><TD
+><DIV
+CLASS="SIDEBAR"
+><A
+NAME="AEN2498"><P
+><B
+>Insider knowledge:</B
+></P
+><P
+>    GnuCash provides several different types of accounts, discussed in
+    the <A
+HREF="t883.html"
+>Account Types </A
+>
+    section. Debits increase your asset and expense accounts, while
+    credits increase your income, liability and equity accounts.
+    Income and expense accounts are also discussed in more detail in
+    the <A
+HREF="t2762.html"
+>Income/Expense</A
+>
+    section.</P
+></DIV
+></TD
+></TR
+></TABLE
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN2503">Creating Transactions</H2
+><P
+>To create a double-entry transaction for the paycheck deposit:
+
+<P
+></P
+><OL
+TYPE="1"
+><LI
+><P
+> Open the Checking account register you just created by double-clicking
+                on the account name in the main window.
+      </P
+></LI
+><LI
+><P
+>Tab to the Description field and enter "Paycheck Deposit." 
+      
+    </P
+></LI
+><LI
+><P
+>Tab to the Transfer field and select the Salary account from the
+                pull-down menu. 
+      
+    </P
+></LI
+><LI
+><P
+> Tab to the Deposit column and enter "500," then hit "Enter" to
+                record the transaction. Now your Checking account
+                shows a debit entry of 500. 
+    </P
+></LI
+><LI
+><P
+>Highlight the transaction again and click the "Jump" toolbar
+                button to see the transaction's effect on the Salary
+                account.  Notice that in the Salary account, you now
+                have a matching credit entry of 500 that GnuCash entered
+                automatically for you. 
+    </P
+></LI
+></OL
+>
+    </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN2517">Changing Transactions</H2
+><P
+>        What if you want to edit this transaction to increase the
+        paycheck deposit to $600?  To <I
+CLASS="EMPHASIS"
+>change</I
+> a
+        double-entry transaction, simply select the transaction in any
+        register in which it appears, then make your changes and
+        record the transaction.  In this case, you can either edit the
+        transaction from the Checking account register or the Salary
+        account register.  Any changes made will be automatically
+        reflected in both accounts and all windows displaying the
+        transaction.
+    </P
+><P
+>        To change the transfer account, simply select a new account
+        from the pull-down menu. When you record the transaction, this
+        account change will be reflected in all affected accounts.
+        Similarly, when a double-entry transaction is deleted, entries
+        will be deleted from all affected accounts, and balances will
+        automatically be recalculated for those accounts.
+
+      </P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x2465.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t2522.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>The Rule of Double-Entry Accounting</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t2442.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>GnuCash and the EURO</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,338 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Configurar uma Procura</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="UP"
+TITLE='Encontrar transacções com a janela "Procurar Transacções"'
+HREF="t2971.html"><LINK
+REL="PREVIOUS"
+TITLE="Como utilizar a janela de Procurar Transacções"
+HREF="x3000.html"><LINK
+REL="NEXT"
+TITLE="Modificar a sua procura"
+HREF="x3073.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x3000.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Encontrar transacções com a janela "Procurar Transacções"</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x3073.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN3016">Configurar uma Procura</H1
+><P
+>    </P
+><P
+>Pode procurar transacções por qualquer um dos (ou todos os) 
+critérios seguintes.  Cada um tem uma pasta na janela onde você 
+pode inserir o(s) valor(es) de busca e método de comparação. 
+    <P
+></P
+><UL
+><LI
+><P
+> Contas afectadas pela transacção
+      </P
+></LI
+><LI
+><P
+> Data de efectivação da transacção
+      </P
+></LI
+><LI
+><P
+> O texto no campo de Descrição
+      </P
+></LI
+><LI
+><P
+> O texto no campo de Número
+      </P
+></LI
+><LI
+><P
+> O Montante das parcelas da transacção
+      </P
+></LI
+><LI
+><P
+> O texto no campo de Notas
+      </P
+></LI
+><LI
+><P
+> Número de acções numa transacção de acções
+      </P
+></LI
+><LI
+><P
+> Preço da Acção numa transacção de acções
+      </P
+></LI
+><LI
+><P
+> O texto no campo da Acção
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>Se especificar multiplos critérios na procura, todos os 
+critérios têm de ser verdadeiros para que a transacção seja mostrada.
+
+    <A
+NAME="ACCOUNTSEARCH"
+></A
+></P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN3041">Procuras por Conta</H2
+><P
+>Na pasta de contas, seleccione as contas relevantes e depois 
+escolha se deseja visualisar transacções que afectem Qualquer, Todas 
+ou Nenhuma destas contas.
+      
+    </P
+><P
+>Se seleccionar "Todas" as contas na lista no topo da pasta, as 
+únicas transacções que serão mostradas são as que afectarem todas as 
+contas seleccionadas.  </P
+><P
+> Por exemplo, se seleccionar <I
+CLASS="EMPHASIS"
+>Minha Conta à Ordem</I
+> 
+e <I
+CLASS="EMPHASIS"
+> Minha Conta VISA</I
+> e depois escolher <I
+CLASS="EMPHASIS"
+>Todas</I
+>, apenas transferências da Conta à Ordem para a Visa serão mostradas.
+
+    </P
+><P
+>Se seleccionar "Qualquer" da caixa, transacções que afectem 
+qualquer uma das contas serão mostradas.  Por exemplo, se seleccionar "Minha 
+COnta à Ordem" e "Minha Conta VISA" e depois seleccionar "Qualquer", a sua 
+conta à ordem e conta VISA serão mostradas conjuntamente na janela de 
+Resultados da Procura.
+      
+    </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="DATE">Procuras por Data</H2
+><P
+>Na pasta de Data, pode especificar um intrevalo de datas para as 
+transacções que deseja encontrar.  Os campos de ano, mês e dia estão na 
+ordem que especificar em <B
+CLASS="GUIMENU"
+> Preferências:Internacional:Formato da Data</B
+>.
+
+    </P
+><P
+>De dejea localizar qualquer transacção antes de uma determinada data,
+especifique a sua data na segunda zona de entrada e introduza uma data passada 
+distante na primeira zona de entrada.  A data por defeito é 1 de Janeiro de 1900, 
+que deverá ser distante o suficiente para as necessidades da maioria das pessoas.  </P
+><P
+>Da mesma forma, se deseja encontrar transacções após uma determinada data,
+coloque-a na primeira zona de entrada e coloque uma data posterior à sua última 
+transacção na segunda zona.
+
+      <A
+NAME="AMOUNT"
+></A
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN3057">Procuras por Montante</H2
+><P
+>As procuras nas pastas de Montante, Acções e Preço permitem-lhe 
+procurar por quantidades específicas em vários campos das transacções.  
+Tem de introduzir o montante (na caixa de entrada) e o tipo de comparação 
+(com o menu de opções à esquerda da caixa de entrada).  O montante na 
+caixa de entrada é sempre positivo.
+
+    </P
+><P
+>Para a pasta de Montante, tem de indicar se está interessado em 
+débitos, créditos ou ambos.
+
+      <A
+NAME="STRING"
+></A
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN3062">Procuras por Texto</H2
+><P
+>Nas pastas Descrição, Número, Notas e Acção, pode especificar 
+um texto que será comparado com o campo respectivo das parcelas e 
+transacções.  <P
+></P
+><UL
+><LI
+><P
+> Por defeito, o tipo de comparação utilizada é indiferente à 
+capitalização e sobre pedaços do texto. </P
+></LI
+><LI
+><P
+> Caso seleccione "Coincidir Capitalização" no botão de opção, a busca 
+será por um pedaço de texto que coincida, incluindo na capitalização.  </P
+></LI
+><LI
+><P
+>Se o botão de "Expressão Regular" for seleccionado, a procura 
+interpreta o texto que introduzir como uma expressão regular extendida 
+POSIX; a indiferença ou não à capitalização é ainda determinada pelo 
+botão "Coincidir Capitalização".</P
+></LI
+></UL
+>
+      
+    <A
+NAME="MODIFY"
+></A
+></P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x3000.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x3073.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Como utilizar a janela de Procurar Transacções</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t2971.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Modificar a sua procura</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

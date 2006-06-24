@@ -1,0 +1,334 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Introduction to the QIF file</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash Online-Handbuch"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Importing Quicken Data Into GnuCash"
+HREF="t3810.html"><LINK
+REL="PREVIOUS"
+TITLE="Importing Quicken Data Into GnuCash"
+HREF="t3810.html"><LINK
+REL="NEXT"
+TITLE="How to use the QIF Import dialog"
+HREF="x3885.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash Online-Handbuch</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t3810.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Importing Quicken Data Into GnuCash</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x3885.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="INTRO">Introduction to the QIF file</H1
+><P
+>    
+    </P
+><P
+>QIF files are plain text files formatted as "tag-value" pairs.
+At the beginning of each line there is a single character "tag"
+followed immediately by the "value", which extends to the end of the
+line.  </P
+><P
+> Don't be afraid to pop up a QIF file using <TT
+CLASS="APPLICATION"
+> less </TT
+>
+or the text editor of your choice if you are having problems getting
+some Quicken data imported correctly; chances are a simple
+search-and-replace can fix just about any problem you might have with
+a QIF file.  And a regexp search-and-replace will get the rest.
+
+    </P
+><P
+>Collections of tag-value pairs form records of various types.
+There are records to store the names and descriptions of your accounts
+and of expense and income categories that you have defined in Quicken.
+There are records to define Quicken "classes" (sort of like
+sub-accounts, sort of like categories, but not exactly like either).
+And there are records to describe transactions.
+
+    </P
+><P
+>Here's a typical Quicken transaction record:
+    <TT
+CLASS="LITERAL"
+><P
+CLASS="LITERALLAYOUT"
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!Type:Bank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D6/20/97<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T-500<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N1012<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L[Visa]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+&nbsp;&nbsp;&nbsp;&nbsp;</P
+></TT
+>
+
+    </P
+><P
+>The ! tag denotes the start of a section of records of a 
+certain type.  In this case, Bank transactions.  Type:Cat means
+a section of Category descriptions, Account means account 
+descriptions, and so on.  
+
+    </P
+><P
+>The D tag denotes the date.  Note y2k compliance "issue".
+Here's a lovely "feature" of some version of Quicken and dates in 
+2000:
+      <TT
+CLASS="LITERAL"
+><P
+CLASS="LITERALLAYOUT"
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D1/&nbsp;1'&nbsp;0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T-640.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CX<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N511<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PJoe&nbsp;Bob<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LRent:Apartment<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P
+></TT
+>
+
+    </P
+><P
+>Ouch!  Fortunately the GnuCash QIF importer can handle all of
+the wacky date formats that the gnucash-devel list can find.
+
+    </P
+><P
+>The T field is the "Total" amount of the transaction.  If there
+are splits, the sum of all the split amounts is in a T field.   Money
+going out of the account is negative.  
+
+    </P
+><P
+>The N field is a "Number", which is usually a check number or 
+some other identifying number for the transaction. 
+
+    </P
+><P
+>The C field represents the clearing/reconciliation state of the 
+transaction.  An x or X in this field means the transaction is 
+"Cleared", a * means the transaction is Reconciled. 
+      
+    </P
+><P
+>The M field is the transaction memo. 
+
+    </P
+><P
+>The P field is the Payee. 
+
+    </P
+><P
+>The L field is the Category/Account line.  If the value in this
+field is enclosed in square brackets, like [Visa], this transaction is
+a transfer to the Quicken account named Visa.  If there are no square
+brackets, the transaction is in the named Category (like
+Rent:Apartment).  
+
+    </P
+><P
+>The ^ tag means End of Record.  
+
+    </P
+><P
+>Quicken users taking advantage of Classes will see a slash (/)
+character followed by the class name appended on the Category line
+(like [Visa]/Project)
+      
+    </P
+><P
+>If a transaction has "splits", meaning that it is a single
+transaction with "this" account but is "split" into multiple
+source/destination accounts, the splits are described with S fields
+for the category/account/class of each split, an $ field for the
+amount of the split, and an E field for a per-split memo.  The total
+of all the $ fields in a transaction record should equal the T field.
+
+      </P
+><P
+>Note that nowhere in the transaction record, nor anywhere
+else in the file, does Quicken store the name of the account that the
+file describes.  Don't ask me why not, I don't know either.  Microsoft
+Money (which also can save QIF files) uses a "trick" to get the
+information in the file.  If the very first Bank transaction in the
+file has a payee of "Opening Balance", the L line contains the name of
+the account that the file describes:
+
+    <TT
+CLASS="LITERAL"
+><P
+CLASS="LITERALLAYOUT"
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!Type:Bank<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D12/03/95<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T4,706.57<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CX<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POpening&nbsp;Balance<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L[New&nbsp;Bank]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+&nbsp;&nbsp;&nbsp;&nbsp;</P
+></TT
+>&#13;</P
+><P
+>Opening Balance records are handled specially, since they don't
+mean what the data appear to indicate (if you interpret the record
+literally, as a transfer of $4706.57 from [New Bank] to [New Bank],
+your new balance is a whopping $0.00).  In the <A
+HREF="x3902.html#DIALOG-ACCOUNTS"
+>Accounts Tab</A
+> section there's a discussion
+of what we do with them.
+
+      </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN3880">Multi-account Quicken exports</H2
+><P
+>Quicken and some other programs who use QIF as an export format
+know how to put the history of multiple accounts into a single QIF
+file.  They do this by prepending an "!Account" record before the set
+of transactions to/from that account.&#13;</P
+><P
+>The QIF Importer should be able to handle these files fine.  You
+may notice that the "Default QIF Account" seems somewhat arbitrary;
+for multiple-account exports, the guessed account is the first one
+with an Opening Balance record.  However, since Quicken explicitly
+lists the account for every transaction in multi-account exports, you
+aren't likely to get any transactions in the default account other
+than those that are supposed to be there.
+
+      <A
+NAME="HOW-TO-QIF"
+></A
+></P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t3810.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x3885.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Importing Quicken Data Into GnuCash</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t3810.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>How to use the QIF Import dialog</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

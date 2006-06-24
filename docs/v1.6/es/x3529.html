@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+> Construir listados personalizados</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual de usuario de Gnucash, contabilidad doméstica Gnu"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Listados"
+HREF="t3478.html"><LINK
+REL="PREVIOUS"
+TITLE=" La Ventana de Listados"
+HREF="x3501.html"><LINK
+REL="NEXT"
+TITLE="Tax Report / TXF Export"
+HREF="t3542.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual de usuario de Gnucash, contabilidad doméstica Gnu</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x3501.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Listados</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t3542.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-CUSTOMREPORTS">Construir listados personalizados</H1
+><P
+> Es posible escribir sus propios listados para satisfacer
+sus necesidades, si puede programar un poco. Necesitará conocer
+SCHEME (un lenguaje de programación parecido a LISP), además
+es una idea excelente disponer de una copia del código fuente de
+<TT
+CLASS="APPLICATION"
+>GnuCash</TT
+>.</P
+><P
+>La interfície de listados está indocumentada, pero puede
+obtener una idea de como funciona examinando el archivo <TT
+CLASS="FILENAME"
+>src/scm/report/hello-world.scm </TT
+> en la distribución
+del código fuente de <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+>.</P
+><P
+>También necesitará acceder a los datos del "motor" para
+rellenar de datos su listado. Esto se consigue con un conjunto
+de funciones de Scheme que están documentadas en el archivo
+<TT
+CLASS="FILENAME"
+>src/g-wrap/gnc.html</TT
+>. Quizá desee examinar
+alguno de los listados en <TT
+CLASS="FILENAME"
+> src/scm/report </TT
+> 
+para tener un punto de referencia de como están hechos.</P
+><P
+>Por el momento, los listados se hacen creando internamente
+páginas HTML y procesándolas con un control HTML ("widget").
+(Próximas versiones de GnuCash esperemos que soporten un sistema
+más flexible).  </P
+><P
+>Si necesita más información, o ha desarrollado un nuevo
+listado que sea de utilidad para otros usuarios, por favor
+contacte con la lista de correo del desarrollo de GnuCash en
+<TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto: gnucash-devel@gnucash.org "
+> gnucash-devel@gnucash.org </A
+>&#62;</TT
+>.&#13;</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x3501.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Inicio</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t3542.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>La Ventana de Listados</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t3478.html"
+ACCESSKEY="U"
+>Subir</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Tax Report / <A
+HREF="t5916.html"
+>TXF Export</A
+></TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

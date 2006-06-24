@@ -1,0 +1,331 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Importing Quicken Data Into GnuCash</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash Online-Handbuch"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Printing"
+HREF="t3800.html"><LINK
+REL="NEXT"
+TITLE="Introduction to the QIF file"
+HREF="x3848.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash Online-Handbuch</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t3800.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x3848.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN3811">Importing Quicken Data Into GnuCash</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t3810.html#OVERVIEW"
+>Overview</A
+></DT
+><DT
+><A
+HREF="x3848.html"
+>Introduction to the QIF file</A
+></DT
+><DT
+><A
+HREF="x3885.html"
+>How to use the QIF Import dialog</A
+></DT
+><DT
+><A
+HREF="x3902.html"
+>The "Files" Tab</A
+></DT
+><DT
+><A
+HREF="x3909.html"
+>The "Accounts" and "Categories" Tabs</A
+></DT
+><DT
+><A
+HREF="x3925.html"
+>The Account Picker</A
+></DT
+><DT
+><A
+HREF="x3930.html"
+>The "OK" Button</A
+></DT
+><DT
+><A
+HREF="x3944.html"
+>More hints</A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="OVERVIEW">Overview</H1
+><P
+>    </P
+><P
+>Quicken is one of the best-selling programs in the history of
+the Universe.  Pretty much everyone that has owned a PC or Mac since
+the late 80's has had a copy of it lying around somewhere, and lots of
+people actually use it to keep track of their finances.  Why?  Because
+it works pretty well and Intuit has (to their credit) done a good job
+of keeping up with what people want the program to do.
+
+    </P
+><P
+>They've done such a good job, in fact, that lots of Linux folks
+keep a Windows partition on their machine just so they can run Quicken
+and the latest shoot-em-up games.  So of course we want to give you a
+way to suck all your Quicken data into GnuCash and remove one more
+barrier to putting a nice <TT
+CLASS="FUNCTION"
+> ext2 </TT
+> filesystem on that Windows
+partition.
+
+    </P
+><P
+>The problem is that GnuCash is a real double-entry accounting
+system and Quicken has a pretty simplistic view about what an account
+is, what a transaction is, and, most critically, is severely flawed in its datamodel, that is, <I
+CLASS="EMPHASIS"
+> what it saves in
+data files.</I
+> &#13;</P
+><P
+> Briefly, QIF files just don't contain enough information to
+completely and accurately reconstruct your Quicken account hierarchy
+in the GnuCash double entry system without some educated guessing by
+the import code as well as some guidance, provided by you.
+<P
+></P
+><UL
+><LI
+><P
+> QIF files omit small things that may be fairly accurately inferred by 
+examining the data.&#13;</P
+><P
+> For instance, are numbers in decimal-radix [1,000.00 ==
+1000] form or European comma-radix form [1.000,00 == 1000]?  </P
+><P
+> Or are
+dates <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+> m/d/y </PRE
+></TD
+></TR
+></TABLE
+> or <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+> y/m/d</PRE
+></TD
+></TR
+></TABLE
+>?&#13;</P
+></LI
+><LI
+><P
+> More problematic are major things where there is little way of
+guessing.&#13;</P
+><P
+> For instance, determining the currency the file is denominated in.&#13;</P
+><P
+> Or what <I
+CLASS="EMPHASIS"
+> account </I
+> the file describes.&#13;</P
+></LI
+></UL
+></P
+><P
+> GnuCash's QIF importer does a remarkably good job of guessing what
+it can, but you <I
+CLASS="EMPHASIS"
+> do </I
+> have to keep an eye on it.  Fortunately,
+the system is designed so that you can correct problems <I
+CLASS="EMPHASIS"
+> before</I
+> you changes are dropped into your GnuCash accounts.  Nothing is
+done to your GnuCash accounts until you click the final "OK" button.
+
+    </P
+><P
+>In the next section, I'll give an overview of the QIF file and
+its "features".  This may seem unnecessarily technical, but if you at
+least glance through it you will be much better able to understand
+what's going on if you are having to jump through hoops to make make a
+problematic file work right, and how you might be able to jump right
+in and edit the QIF file to fix really tough problems.
+
+    </P
+><P
+>There are two major "paths" for using the GnuCash QIF importer.
+<P
+></P
+><UL
+><LI
+><P
+> One is the "I am a Quicken user just migrating to GnuCash" path.&#13;</P
+></LI
+><LI
+><P
+> The other is the "I am downloading some updates from my bank as a
+QIF file" path.&#13;</P
+></LI
+></UL
+>&#13;</P
+><P
+> This document mainly focuses on the former case, since new users
+are likely to need the most help and you really can't get started
+using GnuCash until you can get your old records in.  Fortunately,
+once you learn to do the former, the latter should be a piece of cake.
+      &#13;</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t3800.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x3848.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Printing</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Introduction to the QIF file</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

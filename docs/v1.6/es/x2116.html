@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+> Las Reglas de la Cuentas con Doble Entrada</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual de usuario de Gnucash, contabilidad doméstica Gnu"
+HREF="index.html"><LINK
+REL="UP"
+HREF="t2100.html"><LINK
+REL="PREVIOUS"
+TITLE=" ¿Qué son las Cuentas con Doble Entrada?"
+HREF="x2108.html"><LINK
+REL="NEXT"
+TITLE=" Utilizando Doble Entrada"
+HREF="x2136.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual de usuario de Gnucash, contabilidad doméstica Gnu</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x2108.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x2136.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-DOUBLEENTRYRULE">Las Reglas de la Cuentas con Doble Entrada</H1
+><P
+>La forma intuitiva de comprender la doble entrada es como
+    una transferencia de una cuenta de banco a otra, donde la
+    cantidad tomada de una de las cuentas debe ser igual a la
+    depositada en la otra. Esto es efectivamente la "regla"
+    del balance con doble entrada; si añade algo en una cuenta,
+    lo debe substraer de otro sitio. Cuando este proceso se
+    realiza de forma regular y consistente, conduce a la
+    identidad de la cuenta:
+
+    <A
+NAME="IDENTITY"
+></A
+>
+    <TT
+CLASS="ENVAR"
+>Total de Deber = Total de Haber.</TT
+>
+
+
+    </P
+><P
+>hay otro aspecto importante de la doble entrada que
+    debe ser también comprendido: para obtener una pintura
+    completa, debe registrar ventas y gastos. Cuando deposita
+    sus pagos en la cuenta del banco, ese dinero no apareció
+    "del cielo". Por lo que, cuando registra un depósito a
+    ese banco, debe registrar su beneficio en una cuenta de
+    ventas: el dinero que va al banco viene de su cuenta
+    de ventas. Una vez más, añadir en un lugar lo que se substrae
+    de otro. Registrando correctamente sus ventas y gastos,
+    puede mantener registrado su equidad: Simplemente ponga,
+    después de años de beneficios y gastos, lo que resta es lo
+    que tiene, menos la cantidad que gastó.
+    </P
+><P
+>(En este punto, la documentación debería explicar con mayor detalle
+que sucede cuando gasta dinero para comprar un sofá (excepto por el
+dinero perdido por impuestos y transporte, su capital no debe variar
+mucho), y que sucede cuando ese sofá pierde valor (depreciación).
+De nuevo, hay transferencias de dinero entre cuentas. Lo que queda
+de nuevo está equilibrado. Esté seguro que anotarlo utilizando
+la doble entrada contra cuentas de gastos y ventas es la forma
+correcta de registrar el cambio en el tiempo.) 
+    </P
+><P
+>    Esto es explicado con mayor detalle en el capitulo
+    <A
+HREF="t2315.html"
+>Ventas/Compras</A
+>.
+
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Conocimiento Profundo</I
+> 
+    El programa GnuCash trata el "Deber" como valores positivos,
+    y el "Haber" como valores negativos, por lo que identidad de
+    las cuentas se simplifica a
+    <TT
+CLASS="LITERAL"
+>valor<SUB
+>1</SUB
+> + 
+    valor<SUB
+>2</SUB
+> + 
+    valor<SUB
+>3</SUB
+> + ...
+    = 0</TT
+>
+    Llamar esto
+    registrado de <I
+CLASS="EMPHASIS"
+>doble</I
+> entrada  es un poco equivocado; 
+    Sería más correcto llamarlo registrado de <I
+CLASS="EMPHASIS"
+>múltiples</I
+>
+    entradas. Desafortunadamente, hay 700 años de historia del uso
+    de este término, que desaconseja cambiarlo. (Y piensa en partes
+    de Unix que son engañosas y viejas!)
+
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Conocimiento profundo:</I
+>
+    Los extractos bancarios son escritos con frecuencia desde
+    la perspectiva del <I
+CLASS="EMPHASIS"
+>banco</I
+>, que es exactamente
+    la opuesta a la suya. Por ejemplo, cuando usted hace un depósito
+    en el banco les deja el dinero el cual le prometen devolver algún
+    día. par el banco, su dinero es un débito: es el dinero que
+    le deben. Por lo que, cuando recibe un extracto del banco,
+    puede ver que los columnas están mal llamadas: Los depósitos
+    están marcados como "débitos", y sus pagos como "créditos".
+    Esta práctica es particularmente común con bancos más viejos y
+    conservadores.
+    </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x2108.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Inicio</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x2136.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>¿Qué son las Cuentas con Doble Entrada?</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t2100.html"
+ACCESSKEY="U"
+>Subir</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Utilizando Doble Entrada</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

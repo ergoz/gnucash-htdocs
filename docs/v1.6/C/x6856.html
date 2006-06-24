@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>The GnuCash Documentation Set</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash User Manual"
+HREF="index.html"><LINK
+REL="UP"
+TITLE=" Hacking GnuCash Documentation "
+HREF="t6803.html"><LINK
+REL="PREVIOUS"
+TITLE=" Hacking GnuCash Documentation "
+HREF="t6803.html"><LINK
+REL="NEXT"
+TITLE=" GnuCash and Scheme "
+HREF="t6888.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash User Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t6803.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Hacking GnuCash Documentation</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t6888.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-DOCBOOKUSE">The GnuCash Documentation Set</H1
+><P
+> The GnuCash documentation is managed as a BOOK, composed of a
+set of DocBook "ARTICLES." </P
+><P
+> The main document is <TT
+CLASS="FILENAME"
+>gnucash.sgml</TT
+>, which
+really contains only the "sequencing" information on what files are to
+be consulted to make up the body of the document, each file
+representing one of the ARTICLEs. </P
+><P
+> Note that filenames for the HTML output files are generated in
+three ways:</P
+><P
+></P
+><UL
+><LI
+><P
+> The ID tag for each ARTICLE defines a
+filename;</P
+></LI
+><LI
+><P
+> The ID tag for each SECT1 defines a filename, unless
+it is the first SECT1 in an ARTICLE;</P
+></LI
+><LI
+><P
+> If you create a new ARTICLE or SECT1 without an ID
+tag, filenames will be generated with names like
+<TT
+CLASS="FILENAME"
+>t1234.html</TT
+>, <TT
+CLASS="FILENAME"
+>x892.html</TT
+>, and
+such.  They will look quite random. </P
+><P
+> This is a bad thing; make sure you assign an ID tag to the
+ARTICLE or SECT1. </P
+></LI
+></UL
+><P
+> Styling is controlled by the DSSSL document,
+<TT
+CLASS="FILENAME"
+>mysheet.dsl</TT
+>, using the conventions documented in
+the <A
+HREF="x6856.html#MODSTYLE"
+> Modular DocBook Stylesheets</A
+></P
+><P
+> Components that need to be installed in order for the command
+<B
+CLASS="COMMAND"
+>jade -ioutput.html -d mysheet.dsl -t sgml
+gnucash.sgml</B
+> to work include:
+
+<P
+></P
+><UL
+><LI
+><P
+> <A
+HREF="http://www.jclark.com/jade/"
+TARGET="_top"
+>Jade</A
+> or <A
+HREF="http://www.netfolder.com/DSSSL/index.html"
+TARGET="_top"
+>DSSSL/OpenJade </A
+></P
+></LI
+><LI
+><P
+> The DocBook 3.1 DTD, available from <A
+HREF="http://docbook.org"
+TARGET="_top"
+> DocBook.org </A
+></P
+></LI
+><LI
+><P
+> Norman Walsh's <A
+HREF="http://nwalsh.com/docbook/dsssl/index.html"
+TARGET="_top"
+> Modular DocBook
+Stylesheets </A
+></P
+></LI
+></UL
+></P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t6803.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t6888.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Hacking GnuCash Documentation</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t6803.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>GnuCash and Scheme</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

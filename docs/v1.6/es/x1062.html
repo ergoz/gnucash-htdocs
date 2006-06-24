@@ -1,0 +1,980 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+> Ganancias de capital - Apreciación de acciones</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual de usuario de Gnucash, contabilidad doméstica Gnu"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Pérdida y Ganancia de Capital"
+HREF="t1031.html"><LINK
+REL="PREVIOUS"
+TITLE="Pérdida y Ganancia de Capital"
+HREF="t1031.html"><LINK
+REL="NEXT"
+TITLE=" Depreciación de objetos"
+HREF="x1285.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual de usuario de Gnucash, contabilidad doméstica Gnu</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t1031.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Pérdida y Ganancia de Capital</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x1285.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-CAPITALGAINS">Ganancias de capital - Apreciación de acciones</H1
+><P
+>    <A
+NAME="APPR"
+></A
+> 
+
+    </P
+><P
+>La apreciación de acciones es, en general, un asunto
+    bastante difícil de tratar. Esto es porque, por algunas
+    clases de acciones, es difícil de estimar correctamente
+    un incremento del valor <I
+CLASS="EMPHASIS"
+>antes de que la acción es
+    realmente vendido.</I
+>
+
+    </P
+><P
+>Si usted invierte en <A
+HREF="t3579.html"
+>acciones</A
+>
+    que son tratados con base diaria en los mercados abiertos como
+    el mercado de existencias, los precios pueden bastante exactos,
+    y vender la acción al precio del mercado puede ser tan simple
+    como llamar a un corredor de borsa y notificarle una
+    <I
+CLASS="EMPHASIS"
+>Orden de Mercado.</I
+>
+
+    </P
+><P
+>Por otro lado, casas en su vecindario son vendidas con bastante
+    menos frecuencia, porque estas vendas conllevan un gasto
+    considerable, y conllevan negociaciones, que significan que
+    estimar el precio es bastante impreciso. De igual forma, vender
+    un coche usado también conlleva un proceso de negociación que
+    hace el poner un preciso poco predecible.
+
+    </P
+><P
+>Más difíciles de estimar son los valores de objetos coleccionables
+    como joyas, objetos de arte, tarjetas de béisbol, etc... El
+    mercado de estos objetos es mucho menos abierto que los
+    mercados de acciones.
+
+    </P
+><P
+>Peor todavía son los objetos de un tipo. Las empresas, a menudo,
+    tienen maquinaria y equipo especializado para construir un
+    producto muy específico que ha costado millones o centenares de
+    millones; este equipamiento puede <I
+CLASS="EMPHASIS"
+>no tener valor</I
+>
+    fuera de este contexto específico. En estos casos, varios valores
+    arbritarios se pueden poner al objeto, <I
+CLASS="EMPHASIS"
+>ninguno</I
+>
+    de ellos correcto objetivamente.
+
+    </P
+><P
+>Supongamos que compra un objeto que espera que incremente
+    en valor, como una pintura de Degas, y quiere valorarla.
+    (La compañía de seguros tendrá cura de ello, incluso si
+    nadie más lo hace.)
+
+    </P
+><P
+>Propiamente valorar el valor que continuamente se incrementa de
+    un Degas requerirá al menos tres, o muy posiblemente las cuatro
+    cuentas siguientes (más una cuenta de banco o caja de donde
+    proviene el dinero para la compra):
+
+    <P
+></P
+><UL
+><LI
+><P
+>Un asiento de <I
+CLASS="EMPHASIS"
+>Coste del objeto</I
+> para valorar
+      el valor original de la pintura,
+
+      </P
+></LI
+><LI
+><P
+>Una cuenta de <I
+CLASS="EMPHASIS"
+>Ganancias acumuladas y no realizadas del
+      objeto</I
+> para guardar la valoración del incremento en
+      el valor, y
+
+      </P
+></LI
+><LI
+><P
+>Una cuenta de <I
+CLASS="EMPHASIS"
+>haberes de las ganancias acumuladas del
+      objeto</I
+> en la cual se guardan la parte de haberes de
+      las ganancias anuales que consiga, y
+
+      </P
+></LI
+><LI
+><P
+>Una cuenta de <I
+CLASS="EMPHASIS"
+>haberes de las ganancias realizadas del
+      objeto</I
+> en la cual se guardan los haberes realizados
+      cuando venda el objeto.
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>Las <I
+CLASS="EMPHASIS"
+>ganancias acumuladas</I
+> casi no afectan su
+    base de haberes para fines fiscales de <I
+CLASS="EMPHASIS"
+>haberes</I
+>,
+    en otro lado podría tener algún efecto en los impuestos de
+    <I
+CLASS="EMPHASIS"
+>propiedad</I
+>.
+
+    </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1095">El tratamiento de ganancias de capital en GnuCash</H2
+><P
+>    </P
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1098">La Adquisición</H3
+><P
+>La primera cosa que tiene que hacer es crear la <I
+CLASS="EMPHASIS"
+>cuenta
+    de coste del objeto</I
+>, luego transferir la suma que ha
+    pagado por esta pintura desde su cuenta de banco a esta cuenta
+    del objeto para registrar la compra.
+
+    </P
+><P
+>Un mes más tarde, tiene razones para sospechar que el valor de
+    la pintura ha incrementado en 1200 dólares. Para registrar esto
+    transfiera 1200 dólares desde su cuenta de haberes de 
+    <I
+CLASS="EMPHASIS"
+>ganancias acumuladas del objeto</I
+> a su cuenta del objeto.
+
+    </P
+><P
+>Su ventana principal se parecerá a:
+    <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/appr-main1.png"></SPAN
+> 
+
+    </P
+><P
+>y su cuenta del objeto se parecerá a:
+    <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/appr-asset1.png"></SPAN
+> 
+
+    </P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1116">Mientras Posea el Objeto</H3
+><P
+>La apreciación del objeto es una serie de haberes pero 
+    <I
+CLASS="EMPHASIS"
+>no</I
+> es dinero en caja (dinero líquido).
+
+    </P
+><P
+>Las personas que poseen "acciones" en 1999 de IPOs de
+    compañías relacionadas con Linux como Red Hat Software y VA Linux
+    Systems podría verificar esto. Ellos poseen acciones o opciones que
+    <I
+CLASS="EMPHASIS"
+>teóricamente</I
+> eran valoradas en millones de dólares.
+
+    </P
+><P
+>Eso no significa que actualmente sean millonarios: los principales
+    participantes tienen que poseer sus acciones por lo menos seis
+    meses antes de poder vender <I
+CLASS="EMPHASIS"
+>cualquiera</I
+> de ellas.
+    El hecho que ellos <I
+CLASS="EMPHASIS"
+>no pueden</I
+> vender significa que
+    mientras en teoría podrían poseer millones de dólares en dinero,
+    en realidad, a finales de 1999, no había forma legal de
+    <I
+CLASS="EMPHASIS"
+>conseguir</I
+> esos millones.
+
+    </P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1126">Venda del objeto</H3
+><P
+>Decimos que un mes más tarde los precios por las pinturas
+    de Degas han subido un poco más, en su caso alrededor de 2500 dólares,
+    según su estimación. Esperaría registrar estos 2500 dólares en su
+    haber como se ha hecho antes, y luego decide vender la pintura.
+
+    </P
+><P
+>Ahora se plantean tres posibilidades:
+
+    <P
+></P
+><UL
+><LI
+><P
+>        Su estimación optimística del valor de la pintura
+        fue correcto.
+
+        </P
+><P
+>La cuenta de haberes se deja a parte (o quizás transfiera
+        de una cuenta de haber de <I
+CLASS="EMPHASIS"
+>Ganancia Acumulada</I
+> a
+        una cuenta de haber de <I
+CLASS="EMPHASIS"
+>Ganancia Realizada</I
+>), y
+        la registración de la operación sería parecido a:
+
+        <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1136"><P
+><B
+>Tabla 3. Convertir una Ganancia Acumulada a una Ganancia Realizada</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Cuenta</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Cantidad</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Caja</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$16055</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Pintura</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$11000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Haber de Ganancia Realizada</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$5055</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+        </P
+><P
+>Y si cualquier cantidad ha sido acumulado como <I
+CLASS="EMPHASIS"
+>Ganancia
+        Acumulada,</I
+> la cantidad del objeto debe ser eliminada,
+        con una diferencia de valor <I
+CLASS="EMPHASIS"
+>negativa</I
+> para el
+        haber de la <I
+CLASS="EMPHASIS"
+>Ganancia Acumulada</I
+>. Si el total que
+        ha sido acumulado fue de 5000 dólares, entonces la transacción
+        se podría parecer a la siguiente:
+
+        <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1157"><P
+><B
+>Tabla 4. Ganancias acumuladas convertidas en Pérdidas Realizadas</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Cuenta</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Cantidad</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Caja</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$16055</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Pintura</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$11000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Ganancia acumulada del objeto</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$5000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Haber de Ganancia Realizada</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$5055</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Haber de Ganancia Acumulada</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$5000</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+        </P
+><P
+>Observe que las cuentas de haberes difieren una de la otra por
+        lo que el haber <I
+CLASS="EMPHASIS"
+>actual</I
+> resultante de la
+        transacción es sólo de 55 dólares. Los restantes 5000 dólares
+        habían sido reconocido previamente como <I
+CLASS="EMPHASIS"
+>Haber de
+        Ganancia Acumulada.</I
+>
+      
+
+      </P
+></LI
+><LI
+><P
+>        Fue demasiado optimista sobre el valor de la pintura.
+
+        </P
+><P
+>En lugar de los 16055 dólares que pensó que valía la pintura
+        solamente se se ofrecen 15000 por ella. Pero aún así decide
+        vender, porque valora más los 15000 dólares que la pintura.
+
+        </P
+><P
+>Los números cambian un poco, perno no demasiado.
+
+        <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1187"><P
+><B
+>Tabla 5. Ganancias Acumuladas convertido en Ganancias Realizadas</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Cuenta</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Cantidad</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Caja</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$15000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Pintura</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$11000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Ganancia Acumulada del Objeto</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$5000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Haber de la Ganancia Realizada</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$4000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Haber de la Ganancia Acumulada</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$5000</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+        </P
+><P
+>Observe que los dos cuentas de haberes difieren una de
+        la otra por lo que el haber <I
+CLASS="EMPHASIS"
+>actual</I
+>
+        resultante de la transacción se convierte en una
+        <I
+CLASS="EMPHASIS"
+>pérdida</I
+> de 1000 dólares. Este es correcto,
+        porque había reconocido con anterioridad 5000 dólares
+        en el haber.
+      
+
+      </P
+></LI
+><LI
+><P
+>        Consigue vender su pintura por más de lo que había
+        pensado en sus sueños más salvajes.
+
+        </P
+><P
+>El valor extra es, de nuevo, registrado como una ganancia,
+        <I
+CLASS="EMPHASIS"
+>i.e.</I
+> un haber. 
+
+        <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1217"><P
+><B
+>Tabla 6. Ganancias Acumuladas convertidas en Ganancias Realizadas</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Cuenta</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Cantidad</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Caja</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$50000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Pintura</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$11000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Ganancia Acumulada del Objeto</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$5000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Ganancia Realizada del Objeto</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$39000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Haber de Ganancia Acumulada</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$5000</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+      
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>En la práctica, es importante mantener el <I
+CLASS="EMPHASIS"
+>Haber de
+    Ganancia Acumulada</I
+> separado de el <I
+CLASS="EMPHASIS"
+>Haber de
+    Ganancia Realizada</I
+> como el modo más elegante de ignorar
+    los impuestos de las autoridades, que solamente cargan
+    impuestos en las <I
+CLASS="EMPHASIS"
+>Ganancias Realizadas.</I
+>
+
+    </P
+><P
+>Ahora, vamos a ver el segundo caso discutido.
+    <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/appr-main2.png"></SPAN
+>
+     <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/appr-asset2.png"></SPAN
+> 
+
+    </P
+></DIV
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1255">Precaución sobre la Valoración</H2
+><P
+>    </P
+><P
+>Como se ha visto en este ejemplo, para objetos no financieros,
+    puede ser difícil estimar correctamente el valor "real" de
+    un objeto.
+
+    </P
+><P
+>Es bastante sencillo contar su riqueza basándose en
+    estimaciones cuestionables que no reflejan "dinero en el
+    banco."
+
+    </P
+><P
+>Lo mismo, cuando trabaja con apreciaciones de objetos,
+
+    <P
+></P
+><UL
+><LI
+><P
+>        Sea precavido con sus estimaciones del valor de los objetos. 
+
+        </P
+><P
+>No eché a volar su pensamiento.
+      
+
+      </P
+></LI
+><LI
+><P
+>        Nunca, en ningún caso, cuente en dinero lo que no tiene
+        en el banco o como caja.
+
+        </P
+><P
+>Hasta que no haya vendió su objeto y posea el dinero, cualquier
+        número en papel (o soporte magnético en disco) son meramente éso,
+        números.
+
+        </P
+><P
+>Si pudiera convencer realmente a un banquero que le prestará
+        dinero, usando los objetos como garantía, ésto es una
+        evidencia razonable que sus objetos tienen valor, pero los
+        prestamistas son sospechosos profesionalmente de
+        sobreestimaciones del valor de objetos.
+
+        </P
+><P
+>Tenga cuidado: Las posesiones de muchas compañías que
+        aparece como "aprovechable" en el papel está fuera de
+        negociación como el resultado de sacarlo de <I
+CLASS="EMPHASIS"
+>caja,</I
+>
+        precisamente porque los "objetos valorables" no son la misma
+        cosa que caja.
+      
+    </P
+></LI
+></UL
+>
+
+    </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1271">Tasación de Ganancias de Capital</H2
+><P
+>    </P
+><P
+>Las políticas de tasación varían considerablemente entre
+    países, por lo que es virtualmente imposible decir nada
+    que sea universalmente útil.
+
+    </P
+><P
+>De todos modos, es <I
+CLASS="EMPHASIS"
+>común</I
+> para los haberes
+    generados de ganancias de capital no estén sujetos a tasación
+    hasta el día que el objeto es realmente vendido, y a veces
+    incluso no entonces.
+
+    </P
+><P
+>Los propietarios de casas estadounidenses <I
+CLASS="EMPHASIS"
+>normalmente</I
+>
+    encuentran que cuando venden sus residencias, las ganancias de
+    capital que ocurren están exentas de tasación. Parece que
+    las ventas de casas en otros países se trata de forma diferente,
+    tasando estas ganancias. Las autoridades alemanas, por ejemplo,
+    tasa estas ganancias solamente si el propietario tenía la casa
+    en propiedad por un periodo inferior a diez años.
+
+    </P
+><P
+><A
+HREF="mailto:cbbrowne@hex.net"
+TARGET="_top"
+>Tengo</A
+> un historia de
+mis días de preparación profesional para tasaciones donde una
+familia vendió una granja y esperaba una <I
+CLASS="EMPHASIS"
+>considerable</I
+>
+factura de impuestos que sería virtualmente nada debido a que había
+sido los propietarios desde antes de 1971 (que es una "Fecha de
+Valoración" en Canada) y debido a siendo una granja <I
+CLASS="EMPHASIS"
+>lechera</I
+>,
+con algunas deducciones resultantes <I
+CLASS="EMPHASIS"
+>realmente peculiares.</I
+></P
+><P
+>La moraleja de esta historia es que aunque la explicación aquí
+es bastante sencilla, la tasación a menudo llegar a ser terriblemente
+complicada... </P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t1031.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Inicio</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x1285.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Pérdida y Ganancia de Capital</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t1031.html"
+ACCESSKEY="U"
+>Subir</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Depreciación de objetos</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

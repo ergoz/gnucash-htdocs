@@ -1,0 +1,448 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>      What's New?
+    </TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash User Manual"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Report Development"
+HREF="t6978.html"><LINK
+REL="NEXT"
+TITLE="GnuCash Y2K Readiness"
+HREF="t7271.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash User Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t6978.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t7271.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN7205">What's New?</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t7204.html#AEN7207"
+>What's new in GnuCash 1.6?</A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN7207">What's new in GnuCash 1.6?</H1
+><P
+>      Hello to all our existing GnuCash users!  A lot has changed since 1.4.x,
+      and we believe that our new version is a major improvement on the old 
+      version.  Virtually every aspect of the program has changed, and 
+      lots of new capabilities have been added.
+    </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN7210">New File Format</H2
+><P
+>	We have switched to an XML-based text file format.  GnuCash will read
+	your existing 1.4 files without conversion.  However, 1.6 will
+	always save your files in the new format.</P
+><P
+>The new format is much, much more flexible than the old,
+	and was required for all the other new features, as well as 
+	many other features to be added in the future.  In addition,
+	because it is based on XML, it makes it much easier for
+	external tools to manipulate GnuCash files.
+      </P
+><P
+>	We have tested the
+	new format extensively, but, as always, it pays to keep a
+	backup of your old data handy, just in case.
+      </P
+><P
+>	As a small example of the improvements made possible by the
+	new file format, GnuCash 1.4 uses "floating-point" numbers
+	for its internal calculations, just like a calculator.
+	Unfortunately, floating-point numbers are (rarely)
+	susceptible to rounding errors.  Therefore, GnuCash has
+	changed to fixed-point number representation stored to
+	exactly the accuracy required.  Even some expensive
+	proprietary "enterprise" accounting 
+	packages do not support this vital feature.
+      </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN7216">New Interface</H2
+><P
+>The interface has been massively revamped to make it 
+	faster and easier to use.</P
+><P
+></P
+><UL
+><LI
+><P
+>The register has been totally
+	    revamped.  The confusing auto-balancing has been
+	    reworked, the multi-line modes are much improved -
+	    making it much easier to handle split transactions,
+	    and you can now display a report of the transactions
+	    in a register, making it easy to export or print them.
+	  </P
+></LI
+><LI
+><P
+>The QIF importer's interface is now much
+	    simpler to use</P
+></LI
+><LI
+><P
+>The main window has been totally revamped.
+	    You now have the choice of displaying the account window
+	    and one or more reports in a tabbed-notebook style view,
+	    as multiple top-level windows, or all in the one
+	    window.</P
+></LI
+><LI
+><P
+>	    The help window is now fully indexed and searchable.
+	  </P
+></LI
+><LI
+><P
+>	    The financial calculator, available from the "Tools"
+	    menu, lets you calculate loan repayments and compound
+	    interest easily.
+	  </P
+></LI
+></UL
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN7230">Reports</H2
+><P
+>The reporting architecture has changed radically for
+	this release - and so reports are now more informative,
+	flexible, and attractive than ever before.  Some of the
+	improvements and new features include:
+      </P
+><P
+></P
+><UL
+><LI
+><P
+>	    The new gtkhtml "widget" is used for report display.
+	    The new display engine is faster, and produces 
+	    better-looking output.
+	  </P
+></LI
+><LI
+><P
+>	    Reports are now saved from session to session.  
+	    To make this more useful, "rolling reports" with
+	    date ranges specified using symbolic dates such 
+	    as "today" or "beginning of this year" are now
+	    available.
+	  </P
+></LI
+><LI
+><P
+>	    <I
+CLASS="EMPHASIS"
+>Stylesheets</I
+> control report
+	    formatting, allowing you to customize the look
+	    of your report.
+	  </P
+></LI
+><LI
+><P
+>	    Reports now display useful information when 
+	    multiple currencies are involved.
+	  </P
+></LI
+><LI
+><P
+>	    Virtually every individual report has been 
+	    radically improved, with nicer layout, 
+	    closer correspondence with standard accounting
+	    procedures, and radically improved flexibility
+	    and configurability.
+	  </P
+></LI
+><LI
+><P
+>	    Multiple reports can be packed together
+	    into the one window for convenient display
+	    of all the financial information you want,
+	    using the multicolumn view, a special 
+	    "container" report.
+	  </P
+></LI
+><LI
+><P
+>	      Last, but certainly not least, reports can now
+	    be printed.  Yay!
+	    </P
+></LI
+></UL
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN7249">Graphs</H2
+><P
+>	One of our most long-awaited features, GnuCash can now
+	display your financial data in attractive bar, pie, and
+	scatter plots.  This feature is provided through the
+	use of the GUPPI plotting tool.
+      </P
+><P
+>	We could talk about the graphs all day, but they're 
+	  much more interesting to look at than talk about - 
+	  for example:
+	  </P
+><DIV
+CLASS="MEDIAOBJECT"
+><P
+><IMG
+SRC="image/asset-piechart.png"></P
+></DIV
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN7257">The Online World</H2
+><P
+>GnuCash can get price quotes online, with the 
+	aid of Paul Fenwick's Finance::Quote module.  
+	Finance::Quote continues to add more price sources, 
+	allowing more international users to have more 
+	convenient access to stock prices online.</P
+><P
+>A major improvement of the new version is the
+	ability to get price quotes from within the program 
+	itself, without having to run a helper application.
+	The ability to update price quotes from the command
+	line remains, however.
+      </P
+><P
+>	Mozilla not stable enough for you yet?  Don't like
+	Galeon?  Don't have the libraries installed for 
+	Konqueror?  Well, then, wait until you try GnuCash,
+	the only web browser that also tracks your finances.
+	Seriously, GnuCash can be used to display simple
+	web pages using the "Frame URL" report - 
+	handy for displaying web-based financial
+	information, and particularly in combination with
+	the multicolumn view.
+      </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN7262">A taste of the Future</H2
+><P
+>GnuCash now supports using Postgres as a backend
+	data store.  While perhaps not so important in a personal
+	finance package, as GnuCash is extended to support 
+	business accounting features database support will 
+	be needed to handle massive datasets.</P
+><P
+>The Postgres backend allows multiple simultaneous
+        users to work on the same set of accounts at the same 
+        time. When one user makes a change to a transaction,
+        the change is sent to the Postgres database, and other
+        users see the effect of that change within (10) seconds.
+        The Postgres backend also maintains an audit trail
+        of modified transactions, allowing you to see what changed,
+        when. (Currently, there is no GUI to review the audit trail,
+        one must be an SQL user to review the trail).  The
+        Postgres backend also 'caches' data, so that a user
+        only sees the data they are working with, without requiring
+        that the entire contents of the database be loaded into  
+        GnucCash.  This should make it possible to work with much 
+        larger datasets.  The Postgres backend is currently 'beta',
+        meaning that it works, but hasn't been well-tested, and
+        may contain bugs.
+      </P
+><P
+>Similarly, an RPC backend exists, which allows you
+	to seperate the engine and interface and have them 
+	running on totally seperate machines.  Developments
+	using this facility to build independent, specific-function
+	clients have already commenced.
+      </P
+><P
+>Budgeting and scheduled transactions are perhaps 
+	GnuCash's most requested features.  Unfortunately,
+	they didn't make it this time around, but developers
+	are already working hard towards adding this support,
+	to go into the main development verison soon after the
+	1.6 release, for inclusion in the next stable version
+	(which will probably be 2.0).
+      </P
+><P
+>Similarly, more sophisticated automatic handling 
+	of dividend and brokerages for stock tracking began,
+	but didn't make the feature cut this time around.
+	Expect this to be sorted out in the next major release.
+      </P
+><P
+>This is just a taste of what's coming in the future.
+	However, with GnuCash, <I
+CLASS="EMPHASIS"
+>you</I
+> are in 
+	a position to get what you want.  The GnuCash developers
+	are easy to contact (see the webpage for more details),
+	and love to hear how GnuCash can be improved.  If you are
+	a programmer, consider contributing to GnuCash development
+	and helping to turn GnuCash into the program that you want
+	it to be.
+      </P
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t6978.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t7271.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Report Development</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>GnuCash Y2K Readiness</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

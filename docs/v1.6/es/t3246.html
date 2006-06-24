@@ -1,0 +1,374 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Ventana de Reconciliación</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual de usuario de Gnucash, contabilidad doméstica Gnu"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE=" Importación de archivos QIF de Quicken"
+HREF="x3171.html"><LINK
+REL="NEXT"
+TITLE="Ventana de Registros"
+HREF="t3302.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual de usuario de Gnucash, contabilidad doméstica Gnu</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x3171.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t3302.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN3247">Ventana de Reconciliación</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><P
+>La ventana de Reconciliación se utiliza para reconciliar una 
+    cuenta GnuCash con el extracto que el banco u otra institución
+    le envía.
+
+    </P
+><P
+>Por ejemplo, cuando escribe un cheque para alguien, debe introducir
+    la transacción en GnuCash. El campo (<TT
+CLASS="GUILABEL"
+><B
+>R</B
+></TT
+>) de la
+    reconciliación de la transacción inicialmente contendrá
+    <TT
+CLASS="LITERAL"
+>n</TT
+> (no reconciliado). Más adelante, si piensa
+    que el cheque se ha hecho efectivo, puede apretar el campo
+    <TT
+CLASS="GUILABEL"
+><B
+>R</B
+></TT
+> de la transacción para cambiarlo a
+    <TT
+CLASS="LITERAL"
+>c</TT
+> (limpio, pero no reconciliado).
+
+    </P
+><P
+>A final de mes, recibe el extracto bancario, quizás incluyendo
+    cheques cancelados. En este momento, debe "reconciliar" su cuenta,
+    esto es, corresponden sus registros personales con la documentación
+    proporcionada por el banco.
+
+    </P
+><P
+></P
+><UL
+><LI
+><P
+>Abra la ventana de reconciliación seleccionando
+    <B
+CLASS="GUIMENUITEM"
+>Reconciliar...</B
+> del menú
+    <B
+CLASS="GUIMENU"
+>Cuentas</B
+> de la
+    <A
+HREF="t3302.html"
+>ventana de registros</A
+>
+    de la cuenta. GnuCash le pedirá alguna información del
+    extracto.
+
+    </P
+><DIV
+CLASS="MEDIAOBJECT"
+><P
+><IMG
+SRC="image/recninfo.png"></P
+></DIV
+></LI
+><LI
+><P
+>Introduzca la fecha del final del periodo que extracto cubre,
+     y el balance final del extracto, y apriete <B
+CLASS="GUIBUTTON"
+>Aceptar</B
+>.
+     La ventana de Reconciliación aparecerá. Se parece a esto:
+
+     </P
+><DIV
+CLASS="MEDIAOBJECT"
+><P
+><IMG
+SRC="image/recnwin.png"></P
+></DIV
+><P
+>Los grupos <TT
+CLASS="GUILABEL"
+><B
+>Fondos Entrantes</B
+></TT
+> y
+     <TT
+CLASS="GUILABEL"
+><B
+>Fondos Salientes</B
+></TT
+> muestran todas las
+     transacciones no reconciliadas. Las columnas '<TT
+CLASS="GUILABEL"
+><B
+>?</B
+></TT
+>'
+     muestran el estado de las transacciones (limpias o reconciliadas).
+
+     </P
+></LI
+><LI
+><P
+>Ahora, examine cada elemento en el extracto bancario, y busque
+     el elemento correspondiente en la ventana de Reconciliación.
+
+     </P
+><P
+>Si no puede encontrar ninguno, entonces quizás se olvidó de
+     introducir la transacción, o no conocía que la transacción tuvo
+     lugar. Puede utilizar el botón <B
+CLASS="GUIBUTTON"
+>Nuevo</B
+> en
+     la barra de herramientas, o la opción de menú <B
+CLASS="GUIMENUITEM"
+>Nuevo</B
+>
+     del menú <B
+CLASS="GUIMENU"
+>Transacción</B
+>, para abrir una ventan
+     de registros y introducir la transacción que falta. El nuevo
+     elemento aparecerá en la ventana de Reconciliación cuando apriete
+     <B
+CLASS="GUIBUTTON"
+>enter</B
+> después de introducir la transacción.
+
+     </P
+><P
+>Cuando encuentre el elemento en la ventana de Reconciliación,
+     compare la cantidad con la cantidad del extracto. Si no son iguales,
+     debe haber cometido un error cuando introdució la transacción en
+     GnuCash. Puede utilizar el botón <B
+CLASS="GUIBUTTON"
+>Editar</B
+> de la 
+     barra de herramientas, o la opción del menú <B
+CLASS="GUIMENUITEM"
+>Editar</B
+>
+     del menú <B
+CLASS="GUIMENU"
+>Transacción</B
+>, para abrir la ventana de
+     Registros y corregir el problema (transacción).
+
+     </P
+><P
+>Si las cantidades coinciden, apriete en el elemento en la ventana
+     de Reconciliación. El valor de la columna '<TT
+CLASS="GUILABEL"
+><B
+>?</B
+></TT
+>'
+     cambiará de '<TT
+CLASS="LITERAL"
+>n</TT
+>' o '<TT
+CLASS="LITERAL"
+>c</TT
+>' a '<TT
+CLASS="LITERAL"
+>y</TT
+>' (reconciliado).
+
+     </P
+><P
+>Entonces repita este proceso para cada elemento que aparece
+        en el extracto bancario, verificando que las cantidades
+        correspondan con las de GnuCash, y marcando las transacciones
+        de GnuCash como reconciliadas.
+      
+
+      </P
+></LI
+><LI
+><P
+>En la parte inferior de la ventanas hay un campo diferencia,
+      que debe ser 0.00 cuando haya finalizado la reconciliación.
+      Si no lo es, entonces o ha omitido transacciones, o algunas
+      cantidades quizás sean incorrectas en GnuCash. (O, menos 
+      probable, el banco haya cometido un error.)
+      
+      
+
+      </P
+></LI
+><LI
+><P
+>Cuando haya completado el proceso para todos los elementos
+      en el extracto bancario, y la diferencia sea 0.00, debe
+      apretar el botón <B
+CLASS="GUIBUTTON"
+>Finalizar</B
+> en la
+      barra de herramientas o seleccionar <B
+CLASS="GUIMENUITEM"
+>Finalizar</B
+>
+      del menú <B
+CLASS="GUIMENU"
+>Reconciliar</B
+>. La ventana de Reconciliación
+      se cerrará. En la <A
+HREF="t3302.html"
+>Ventana de
+      Reconciliación</A
+>, el campo <TT
+CLASS="GUILABEL"
+><B
+>R</B
+></TT
+> de las
+      transacciones reconciliadas se cambiará a '<TT
+CLASS="LITERAL"
+>y</TT
+>'.
+      
+      
+    </P
+></LI
+></UL
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x3171.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Inicio</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t3302.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Importación de archivos QIF de Quicken</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Ventana de Registros</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

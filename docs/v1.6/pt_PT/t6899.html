@@ -1,0 +1,1173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Desenvolvimento de Relatórios</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Relatório de Cotações de Acções"
+HREF="t6892.html"><LINK
+REL="NEXT"
+TITLE="      Que Novidades Há?
+    "
+HREF="t7125.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t6892.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t7125.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN6900">Desenvolvimento de Relatórios</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t6899.html#XACC-REPORTDEV"
+>Desenvolvimento de Relatórios</A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-REPORTDEV">Desenvolvimento de Relatórios</H1
+><P
+> Os relatórios do <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+> são gerados 
+de uma forma que é bastante retrospectiva dos <A
+HREF="http://hoohoo.ncsa.uiuc.edu/cgi/"
+TARGET="_top"
+> CGI </A
+> da web; envolve:
+
+<P
+></P
+><UL
+><LI
+><P
+> Escrever programas que gerem "janelas de opções".</P
+><P
+> Ao contrário da aproximação CGI, as opções do <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+> acabam por gerar directamente widgets GNOME, e não utilizam 
+etiquetas de FORMs HTML.  As semelhanças são, no entanto, bastante grandes 
+já que ambos os sistemas de opções involvem:
+
+<P
+></P
+><UL
+><LI
+><P
+> Construir uma lista de propriedades que descreve opções e 
+valores de defeito;</P
+></LI
+><LI
+><P
+> Submeter essa lista de propriedades para que o utilizador 
+faça modificações;</P
+></LI
+><LI
+><P
+> Retornar outra lista de propriedades contendo as modificações 
+do utilzador.</P
+></LI
+></UL
+></P
+></LI
+><LI
+><P
+> Escrever programas que obtenham dados da aplicação,
+baseados na lista de propriedades das opções, e depois gerem resultados 
+em HTML.</P
+><P
+> Muitas aplicações web produzem HTML de integridade questionável 
+visto o programador gerar HTML na forma atabalhoada de apenas imprimir 
+comandos que possam conter um tipo de dados com "pseudo-etiquetas". 
+Por contraste, <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+> utiliza uma estrutura 
+de registos orientada para o HTML que torna mais difícil construir 
+<I
+CLASS="EMPHASIS"
+> mau </I
+> HTML do que o torna escrever HTML correcto.</P
+></LI
+></UL
+></P
+><P
+> Esta apresentação irá assumir que o leitor já está de uma forma 
+genérica familiarizado com o Scheme, particularmente com os seguintes 
+conceitos:
+
+<P
+></P
+><UL
+><LI
+><P
+> Ligar valores e funções utilizando 
+<TT
+CLASS="FUNCTION"
+>define</TT
+></P
+><P
+> Como em:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>(define *value-x* 25)
+(define *value-y* 30)
+(define *string-a* "Aqui está uma string!")
+(define *string-b* "Uma string com uma aspa \" embebida")
+(define (add-1 x)
+  (+ x 1))</PRE
+></TD
+></TR
+></TABLE
+></P
+></LI
+><LI
+><P
+> Definir ligações locais utilizando 
+<TT
+CLASS="FUNCTION"
+>let</TT
+> e <TT
+CLASS="FUNCTION"
+>let</TT
+></P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>&#62; (define let-to-hide-stuff
+  (lambda (x y z)
+    (let ((x 25);; Local binding of x inside the let
+    (w 11))
+      (display "Dentro do let, x é:") (display x) (newline)
+      (display "E w apenas existe dentro do let como ") (display w)
+      (newline)
+      (display "Adicionar x, y, z, w dentro do let:")
+      (display (+ x y z w)) (newline))
+    (display "Agora, fora do let:") (newline)
+    (display "x é:") (display x) (newline)
+    (display "y é:") (display y) (newline)
+    (display "z é:") (display z) (newline)
+    (display "w é:") (display w) (newline)))
+&#62; (let-to-hide-stuff 10 20 30)
+&#62; (let-to-hide-stuff 10 20 30)
+Dentro do let, x é:25
+E w apenas existe dentro do let como 11
+Adicionar x, y, z, w dentro do let:86
+Agora, fora do let:
+x é:10
+y é:20
+z é:30
+reference to undefined identifier: w
+w é:&#62; </PRE
+></TD
+></TR
+></TABLE
+></LI
+><LI
+><P
+> Definir listas utilizando <TT
+CLASS="FUNCTION"
+>list</TT
+></P
+><P
+> Como em:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>&#62; (list 1 2 3 "four" 'five)
+(1 2 3 "four" five)
+&#62; '(1 2 3 "four" five)
+(1 2 3 "four" five)</PRE
+></TD
+></TR
+></TABLE
+></P
+></LI
+><LI
+><P
+> Representar funções anónimas utilizando
+<TT
+CLASS="FUNCTION"
+>lambda</TT
+></P
+><P
+> A função <TT
+CLASS="FUNCTION"
+>add-1</TT
+> mostrada anteriormente é 
+<I
+CLASS="EMPHASIS"
+>na verdade</I
+> definida como:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>(define add-1 
+  (lambda (x) (+ x 1)))</PRE
+></TD
+></TR
+></TABLE
+></P
+></LI
+><LI
+><P
+> A estrutura de controlo <TT
+CLASS="FUNCTION"
+>if</TT
+></P
+></LI
+><LI
+><P
+> Utilizar <TT
+CLASS="FUNCTION"
+>map</TT
+> para aplicar uma função a todos 
+os membros de uma lista, produzindo outra lista, como em:
+
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>&#62; (map (lambda (x) (+ x 1)) '(1 2 3 4))
+(2 3 4 5)</PRE
+></TD
+></TR
+></TABLE
+>
+ou
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>&#62; (map  (lambda (s n) (string-append s ":" (number-&#62;string n)))
+     '("one" "two" "three" "four") '(1 2 3 4))
+("one:1" "two:2" "three:3" "four:4")</PRE
+></TD
+></TR
+></TABLE
+></P
+></LI
+></UL
+></P
+><P
+> Se os significados de alguns destes não são muito claros, veja as 
+referências na secção sobre <A
+HREF="x6833.html"
+> Documentação 
+Scheme</A
+>, e tente executar código como o acima utilizando Guile.</P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN6961">Visão Geral de Relatórios</H2
+><P
+> Um relatório do GnuCash é adicionado ao sistena utilizando a função 
+<TT
+CLASS="FUNCTION"
+>gnc:define-report</TT
+>, para a qual são passados os seguintes 
+parâmetros:
+
+<P
+></P
+><UL
+><LI
+><P
+> <TT
+CLASS="STRUCTFIELD"
+><I
+>versão</I
+></TT
+></P
+><P
+> Este é um número de versão; actualmente não é utilizado para 
+fazer nada particularmente inteligente.</P
+></LI
+><LI
+><P
+> <TT
+CLASS="STRUCTFIELD"
+><I
+>nome</I
+></TT
+></P
+><P
+> Este é um nome <I
+CLASS="EMPHASIS"
+>não-traduzido</I
+> para o 
+relatório que é notavelmente utilizado para disponibilizar o nome 
+que será adicionado ao menu de relatórios do <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+>.</P
+></LI
+><LI
+><P
+> <A
+HREF="t6899.html#OPTIONS-GENERATOR"
+> <TT
+CLASS="STRUCTFIELD"
+><I
+>gerador de opções </I
+></TT
+> </A
+></P
+><P
+> Este argumento é uma função que não leva parâmetros, e gera um conjunto 
+de opções que serão utilizadas para apresentar uma janela que o utilizador 
+pode utilizar para seleccionar valores para os parâmetros do relatório.</P
+><P
+> Isto tipicamente irá incluir coisas como intrevalos de datas e listas 
+de contas, para determinar que dados deverão ser seleccionados para o relatório, 
+bem como outros controlos que determinam como os dados irão ser visualizados. </P
+></LI
+><LI
+><P
+> <A
+HREF="t6899.html#RENDERER"
+><TT
+CLASS="STRUCTFIELD"
+><I
+>visualizador</I
+></TT
+></A
+></P
+><P
+> O "visualizador" faz o trabalho de gerar o relatório.  Aceita 
+uma "base de dados" de opções, tal como a gerada pelo <TT
+CLASS="STRUCTFIELD"
+><I
+>gerador de opções </I
+></TT
+>, obtem os dados correspondentes do 
+motor do <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+>, e gera, como resultado, 
+um objecto do tipo <TT
+CLASS="SGMLTAG"
+> documento html </TT
+>, que é o que o 
+motor de relatórios do <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+> sabe como 
+apresentar.</P
+></LI
+></UL
+></P
+><P
+> Um exemplo trivial poderá assemelhar-se ao seguinte:
+
+<DIV
+CLASS="INFORMALEXAMPLE"
+><A
+NAME="AEN6992"><P
+></P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+> 
+(let ()
+  (define (options-generator)
+     (let ((options (gnc:new-options)))  ;;; Criar nova lista de opções
+          options))       ;;; Devolve-la
+  (define (renderer options)
+    (let ((document (gnc:make-html-document)))
+       document))      ;;; Gera um documento vazio
+  (gnc:define-report
+   'version 1
+   'name (N_ "Trivial Example")
+   'options-generator options-generator
+   'renderer renderer))</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+></P
+><P
+> Note que os relatórios são tipicamente definidos dentro de um ambiente <A
+HREF="t6899.html#LET"
+> <TT
+CLASS="FUNCTION"
+> let </TT
+> </A
+>; as "funções 
+de trabalho" serão assim todas invisíveis para o código fora do 
+ambiente <TT
+CLASS="FUNCTION"
+> let </TT
+>, o que significa que não precisará 
+de se preocupar em criar nomes de funções únicos.  Apenas o nome do relatório 
+tem forçosamente de ser único. </P
+><P
+> Desde que cada relatório esteja do mesmo modo envolto num ambiente 
+<TT
+CLASS="FUNCTION"
+> let </TT
+>, você poderia chamar a <I
+CLASS="EMPHASIS"
+> todas </I
+> 
+as funções de "renderização" <TT
+CLASS="FUNCTION"
+> rederizar </TT
+> sem causar 
+quaisquer conflitos.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="OPTIONS-GENERATOR">A função de gerador de opções</H2
+><P
+> O gerador de opções introduz um número adicional de funções 
+que são utilizadas para definir janelas de opções.
+
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+> 
+(define (options-generator)
+  (let ((option-set (gnc:new-options)))  <A
+NAME="NEWOPTS"
+><B
+>(1)</B
+></A
+>
+ (gnc:options-add-report-date!  <A
+NAME="OPTDATE"
+><B
+>(2)</B
+></A
+>
+  option-set pagename-general "End Date" "a")
+ (gnc:options-add-date-interval!  <A
+NAME="OPTDATERNG"
+><B
+>(3)</B
+></A
+>
+  option-set pagename-general "From" "To" "a")
+ (gnc:options-add-interval-choice!  <A
+NAME="OPTINT"
+><B
+>(4)</B
+></A
+>
+  option-set pagename-general 
+  "Step Size" "b" 'YearDelta)
+ (gnc:options-add-account-levels! <A
+NAME="OPTACL"
+><B
+>(5)</B
+></A
+>
+  option-set pagename-general
+  "Show Accounts down to Level" "c" 2)
+ (gnc:options-add-account-selection! <A
+NAME="OPTACC"
+><B
+>(6)</B
+></A
+>
+  option-set pagename-general "Account Display Depth"
+  "Always show subaccounts" "Accounts" "a" 3 
+  *LIST-OF-INCOME-AND-EXPENSE-ACCOUNTS* 
+ options))       </PRE
+></TD
+></TR
+></TABLE
+>
+<DIV
+CLASS="CALLOUTLIST"
+><DL
+COMPACT="COMPACT"
+><DT
+><A
+HREF="t6899.html#NEWOPTS"
+><B
+>(1)</B
+></A
+></DT
+><DD
+><TT
+CLASS="FUNCTION"
+>gnc:new-options</TT
+> cria um conjunto novo de opções, 
+vazio.  Isto tem de ser executado primeiro; as funções seguintes necessitam 
+de ter um conjunto de opções a que se referir.</DD
+><DT
+><A
+HREF="t6899.html#OPTDATE"
+><B
+>(2)</B
+></A
+></DT
+><DD
+><TT
+CLASS="FUNCTION"
+>gnc:options-add-report-date!</TT
+> adiciona uma opção de 
+selecção que indica uma data única, geralmente utilizada como a data de 
+final.</DD
+><DT
+><A
+HREF="t6899.html#OPTDATERNG"
+><B
+>(3)</B
+></A
+></DT
+><DD
+><TT
+CLASS="FUNCTION"
+>gnc:options-add-date-interval!</TT
+> adiciona uma opção de 
+selecção que permite especificar um intrevalo de datas.</DD
+><DT
+><A
+HREF="t6899.html#OPTINT"
+><B
+>(4)</B
+></A
+></DT
+><DD
+><TT
+CLASS="FUNCTION"
+>gnc:options-add-interval-choice!</TT
+> adiciona uma opção 
+de selecção que permite escolher entre vários intrevalos de tempo, incluindo 
+dias, semanas, quinzenas, meses, e anos.</DD
+><DT
+><A
+HREF="t6899.html#OPTACL"
+><B
+>(5)</B
+></A
+></DT
+><DD
+> <TT
+CLASS="FUNCTION"
+>gnc:options-add-account-levels!</TT
+> adiciona uma opção que indica 
+até que profundidade um conjunto de níveis de contas deverá ser mostrado.</DD
+><DT
+><A
+HREF="t6899.html#OPTACC"
+><B
+>(6)</B
+></A
+></DT
+><DD
+> <TT
+CLASS="FUNCTION"
+>gnc:options-add-account-selection!</TT
+> permite seleccionar um 
+conjunto de contas.</DD
+><DD
+><P
+> Note que o último argumento é uma lista 
+de contas de onde seleccionar, o que significa ser necessário, a um determinado 
+ponto, <A
+HREF="t6899.html#FILTACC"
+>filtrar uma lista de contas relevantes</A
+>.</P
+></DD
+></DL
+></DIV
+></P
+><P
+> Existem ainda funções de opções adicionais:
+
+<P
+></P
+><UL
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:options-add-currency!</TT
+> para 
+seleccionar uma moeda;</P
+></LI
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:options-add-plot-size!</TT
+> para 
+controlar como um gráfico deverá ser dimensionado.</P
+></LI
+></UL
+></P
+><P
+> Subjacentes a estas existem as seguintes funções base do "gerador 
+de opções" definidas em <TT
+CLASS="FILENAME"
+>options-utilities.scm</TT
+>, que 
+podem ser utilizadas para criar novos tipos de opções:
+
+<P
+></P
+><UL
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:register-option</TT
+></P
+></LI
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:make-date-option</TT
+></P
+></LI
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:make-multichoice-option</TT
+></P
+></LI
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:make-simple-boolean-option</TT
+></P
+></LI
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:make-account-list-option</TT
+></P
+></LI
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:make-currency-option</TT
+></P
+></LI
+><LI
+><P
+> <TT
+CLASS="FUNCTION"
+>gnc:make-number-range-option</TT
+></P
+></LI
+></UL
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="ACCESSING-DATA">Aceder aos Dados do GnuCash</H2
+><P
+> Existem vários formatos de dados que poderá querer aceder:</P
+><P
+></P
+><UL
+><LI
+><P
+> <A
+HREF="t6899.html#FILTACC"
+> Informação de Contas </A
+></P
+></LI
+><LI
+><P
+> <A
+HREF="t6899.html#STOCKPRICES"
+> Preços de Acções </A
+></P
+></LI
+><LI
+><P
+> <A
+HREF="t6899.html#ACCOPTION"
+> Dados de Leitura de Opções </A
+></P
+></LI
+></UL
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="FILTACC">Aceder aos Dados do Motor</H3
+><P
+> As funções utilizadas para aceder às várias formas de dados 
+contabilísticos podem ser encontradas no ficheiro <TT
+CLASS="FILENAME"
+> src/g-wrap/gnc.html</TT
+>. </P
+><DIV
+CLASS="NOTE"
+><P
+></P
+><TABLE
+CLASS="NOTE"
+WIDTH="100%"
+BORDER="0"
+><TR
+><TD
+WIDTH="25"
+ALIGN="CENTER"
+VALIGN="TOP"
+><IMG
+SRC="./stylesheet-images/note.gif"
+HSPACE="5"
+ALT="Note"></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+><P
+> São necessários alguns exemplos aqui... </P
+></TD
+></TR
+></TABLE
+></DIV
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="ACCOPTION">Aceder a Dados de Opções</H3
+><P
+> Functions <TT
+CLASS="FUNCTION"
+>gnc:lookup-option</TT
+>,
+<TT
+CLASS="FUNCTION"
+>gnc:report-options</TT
+>, e
+<TT
+CLASS="FUNCTION"
+>gnc:option-value</TT
+> são as funções cruciais 
+que mais provavelmente utilizará em <TT
+CLASS="FILENAME"
+> src/scm/options.scm</TT
+></P
+><P
+> Um excerto do <TT
+CLASS="FILENAME"
+> src/scm/report/hello-world.scm</TT
+> é o seguinte:
+
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>;; Primeiro, construir algumas funções de apoio para procurar valores de opções.
+(define (get-op section name)
+  (gnc:lookup-option (gnc:report-options report-obj) section name))
+    
+(define (op-value section name)
+  (gnc:option-value (get-op section name)))
+    
+;; O próximo passo é criar variáveis locais para todas as opções 
+;; específicas no conjunto de opções passado à função. 
+(let 
+    ((bool-val     (op-value "Hello, World!" "Boolean Option"))
+     (mult-val     (op-value "Hello, World!" "Multi Choice Option"))
+     (string-val   (op-value "Hello, World!" "String Option"))
+     (date-val     (gnc:date-option-absolute-time
+        (op-value "Hello, World!" "Just a Date Option")))
+     (date2-val    (gnc:date-option-absolute-time
+        (op-value "Hello, World!" "Time and Date Option")))
+     (rel-date-val (gnc:date-option-absolute-time
+        (op-value "Hello, World!" "Relative Date Option")))
+     (combo-date-val (gnc:date-option-absolute-time
+          (op-value "Hello, World!" "Combo Date Option")))
+     (num-val      (op-value "Hello, World!" "Number Option"))
+     (bg-color-op  (get-op   "Hello, World!" "Background Color"))
+     (txt-color-op (get-op   "Hello, World!" "Text Color"))
+     (accounts     (op-value "Hello Again"   "An account list option"))
+     (list-val     (op-value "Hello Again"   "A list option"))
+     (crash-val    (op-value "Testing"       "Crash the report")))
+  (now-do-stuff-with-options))</PRE
+></TD
+></TR
+></TABLE
+></P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="STOCKPRICES">Preços de Acções</H3
+><DIV
+CLASS="WARNING"
+><P
+></P
+><TABLE
+CLASS="WARNING"
+WIDTH="100%"
+BORDER="0"
+><TR
+><TD
+WIDTH="25"
+ALIGN="CENTER"
+VALIGN="TOP"
+><IMG
+SRC="./stylesheet-images/warning.gif"
+HSPACE="5"
+ALT="Warning"></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+><P
+> A base de dados de preços de acções está em desenvolvimento, pelo que 
+é um pouco sedo para ser específico sobre isto...</P
+></TD
+></TR
+></TABLE
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="HTML-GENERATION">Funções de Geração HTML</H2
+><P
+> Os relatórios são gerados como uma árvore de registos <A
+HREF="x6860.html#GUILE"
+> 
+Guile</A
+>, tendo como raíz um registo &#60;documento html&#62;, que consiste em 
+informação de estilos, um título, e uma lista de registos &#60;objecto html&#62; que 
+consistem numa função de renderização e noutra lista de objectos.</P
+><P
+> Poderemos assim gerar um relatório simples:
+<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>(define (build-simple-document)
+  (let* ((document (gnc:make-html-document))
+   ;;; Aqui está um par de funções auxiliares
+   (addfpara (lambda (obj)
+        (gnc:html-document-add-object!
+         document
+         (gnc:make-html-text         
+          (gnc:html-markup-p obj)))))
+   (addpara (lambda (text)
+        (addfpara 
+         (gnc:html-markup/format text)))))
+       ;;; Definir o título
+    (gnc:html-document-set-title! document (_ "Simple List of Values"))
+    ;;; Adicionar um parágrafo de texto
+    (addpara 
+     (_ "This is a simple report, starting with a paragraph of text"))
+    (addpara
+     (_ "Next, we calculate random values, adding them to a balance."))
+    (let loop
+  ((balance 0))
+      (if (&#60; balance 500)
+    (let ((newamt (- (random 500 200))))  ;;; Random number
+      (addfpara 
+         (gnc:html-markup/format 
+    (_ "Another random adjustment of %s yields %s")
+    (gnc:html-markup-tt (number-&#62;string newamt))
+    (gnc:html-markup-b (number-&#62;string balance))))
+        (loop (+ balance newamt)))))
+    document))  ;;; Finalmente, devolver o documento</PRE
+></TD
+></TR
+></TABLE
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="RENDERER">A função de renderização</H2
+><P
+> A função de renderização é onde as funções das secções anteriores 
+se juntam.
+
+<P
+></P
+><UL
+><LI
+><P
+> Recebe, como entrada, uma "base de dados" de opções geradas 
+assim que o utilizador adiciona os seus dados à janela produzida pelo 
+<A
+HREF="t6899.html#OPTIONS-GENERATOR"
+> generador de opções </A
+>.</P
+></LI
+><LI
+><P
+> Utiliza essas opções para controlar como <A
+HREF="t6899.html#ACCESSING-DATA"
+> 
+aceder aos dados do GnuCash </A
+> </P
+></LI
+><LI
+><P
+> Finalmente, a partir desses dados, <A
+HREF="t6899.html#HTML-GENERATION"
+> gera 
+uma "base de dados" de texto HTML. </A
+></P
+></LI
+></UL
+></P
+><P
+> A fnção de renderização disponibiliza, como valor de retorno, a "base de dados 
+de HTML," que o <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+> apresenta no visualizador de HTML.
+
+<DIV
+CLASS="INFORMALEXAMPLE"
+><A
+NAME="AEN7119"><P
+></P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+> 
+(define (renderer options)
+  (let ((document (gnc:make-html-document)))
+ document))      ;;; Gera um documento vazio</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN7121">Para Mais Informações</H2
+><P
+> Se necessitar de mais informações, ou tiver desenvolvido um 
+relatório novo que possa ser útil para outros, por favor contacte a 
+lista de desenvolvimento do GnuCash em <TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto: gnucash-devel@gnucash.org "
+> gnucash-devel@gnucash.org </A
+>&#62;</TT
+>. </P
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t6892.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t7125.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Relatório de Cotações de Acções</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Que Novidades Há?</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,449 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+> Quicken QIF File Import</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash Online-Handbuch"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="A Guide for Former Users of Quicken"
+HREF="t3967.html"><LINK
+REL="PREVIOUS"
+TITLE=" Quicken Categories"
+HREF="x3974.html"><LINK
+REL="NEXT"
+TITLE="The Reconciliation Window"
+HREF="t4054.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash Online-Handbuch</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x3974.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>A Guide for Former Users of Quicken</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t4054.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-QIF">Quicken QIF File Import</H1
+><P
+> GnuCash supports the import of Quicken
+    Import Files (QIF). (Note: Only Quicken Version 3.0 QIF has
+    been formally tested so far.) 
+
+    </P
+><P
+>Note that the QIF format is representative of a somewhat
+    peculiar data model that is not as expressive as one might
+    wish; it requires dumping out a separate data file for each
+    account, rather than permitting you to have one file that
+    represents <I
+CLASS="EMPHASIS"
+>all</I
+> of the accounts you might have had in
+    Quicken.
+
+    </P
+><P
+>Furthermore, while there are plans to do so in the future,
+    there is not, at this point, a way of mapping the account or
+    category names used in Quicken to a <I
+CLASS="EMPHASIS"
+>different</I
+> set of
+    account names that you might be using in GnuCash.
+
+    </P
+><P
+>As a result, please read this section carefully. You may be
+    somewhat disappointed with the results of a QIF import; this
+    will at least give you some more accurate expectations as to
+    what will happen.
+
+    </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN3987">Creating QIF Files</H2
+><P
+>    </P
+><P
+>To create a set of Quicken <TT
+CLASS="FILENAME"
+>QIF</TT
+> files, perform the
+    following procedure:
+
+    <P
+></P
+><UL
+><LI
+><P
+>        Start Quicken. 
+
+        </P
+><P
+>It works on <A
+HREF="http://www.winehq.com/"
+TARGET="_top"
+>Wine,</A
+>
+        Caldera's Wabi, and doubtless on VMWare, so this may not
+        forcibly require that you run Windows.
+      
+
+      </P
+></LI
+><LI
+><P
+>        Select the account that you wish to export. 
+
+        </P
+><P
+>Quicken can only export one account to each data file,
+        which means that if you have many accounts, this may prove
+        to be a somewhat tedious process. (On the other hand, it
+        should be a whole lot <I
+CLASS="EMPHASIS"
+>less</I
+> tedious than entering
+        the data from scratch.)
+      
+
+      </P
+></LI
+><LI
+><P
+>        Choose the menu <B
+CLASS="GUIMENU"
+>File</B
+> and select the <B
+CLASS="GUIMENU"
+>        Export...</B
+> menu entry. 
+
+        </P
+><P
+>This will provide a dialog that requests a filename,
+        effective dates, as well as a series of checkboxes,
+        including <B
+CLASS="GUIMENU"
+>Transactions</B
+>, <B
+CLASS="GUIMENU"
+>Accounts List</B
+>,
+        <B
+CLASS="GUIMENU"
+>Category List</B
+>, and so forth.
+
+        </P
+><P
+>For best results, you should make sure that those three
+        are checked.
+
+        </P
+><P
+>If you do <I
+CLASS="EMPHASIS"
+>not</I
+> check the <B
+CLASS="GUIMENU"
+>Accounts List</B
+>
+        box, then the name of your account will likely be lost, and
+        that will cause problems when you try to import the data
+        into GnuCash later.
+      
+    </P
+></LI
+></UL
+>
+    Now you have a set of <TT
+CLASS="FILENAME"
+>.QIF</TT
+> files, and should run
+    GnuCash. 
+
+    </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN4014">Loading QIF files into GnuCash</H2
+><P
+>    <P
+></P
+><UL
+><LI
+><P
+>To import a Quicken QIF file, choose the menu <B
+CLASS="GUIMENU"
+>      File</B
+> and select the entry <B
+CLASS="GUIMENU"
+>Import QIF</B
+>.
+
+      </P
+></LI
+><LI
+><P
+>The imported file will be merged with whatever other data
+      you currently have in GnuCash. The merge allows multiple
+      Quicken accounts to be imported and merged into one account
+      group.
+      
+      
+    </P
+></LI
+></UL
+>
+
+    </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN4024">Things To Note About QIF Import</H2
+><P
+>    <P
+></P
+><UL
+><LI
+><P
+>        <I
+CLASS="EMPHASIS"
+>Duplicate Entry Scanning</I
+> 
+
+        </P
+><P
+>Note that during merge, a scan is made for duplicate
+        transactions, and duplicates are removed. A duplicate
+        transaction is one where the date, description (payee),
+        memo, quantity, share price, and debited/credited accounts
+        or categories match <I
+CLASS="EMPHASIS"
+>exactly.</I
+> Thus, the merge <I
+CLASS="EMPHASIS"
+>        should</I
+> be safe unless you have multiple transactions
+        on the same date, to the same account, for the same amount,
+        with the same description and memo.
+
+        </P
+><P
+>This unfortunately <I
+CLASS="EMPHASIS"
+>can</I
+> occur, the typical
+        scenario involving where you make multiple withdrawals of
+        identical amounts from ATM machines on the same day.
+      
+
+      </P
+></LI
+><LI
+><P
+>        <I
+CLASS="EMPHASIS"
+>Empty Accounts</I
+> 
+
+        </P
+><P
+>Note that when the <B
+CLASS="GUIMENU"
+>Accounts List</B
+> and <B
+CLASS="GUIMENU"
+>        Category List</B
+> is exported from Quicken, <I
+CLASS="EMPHASIS"
+>all</I
+>
+        accounts and categories will be exported, even if they are
+        empty and contain no transactions. When these are imported,
+        they will appear as accounts with a balance of zero. If you
+        do not plan to use such accounts, feel free to delete them.
+        Future enhancements may allow you to delete them "en
+        masse," or to make them invisible without deleting
+        them.
+      
+
+      </P
+></LI
+><LI
+><P
+>        <I
+CLASS="EMPHASIS"
+>QIF Mark II</I
+> An ongoing project is to build an
+        alternative import utility in Guile that will be more
+        flexible, and which, by virtue of being stored as a set of
+        Scheme scripts, may be modified without needing to
+        recompile the whole application. 
+
+        </P
+><P
+>At this point, it successfully parses <TT
+CLASS="FILENAME"
+>QIF</TT
+>
+        files; what remains is the (rather complex task) of
+        determine appropriate correspondences between the Quicken
+        <I
+CLASS="EMPHASIS"
+>Categories</I
+> and the GnuCash equivalents. That is one
+        of the most significant weaknesses with the present QIF
+        import scheme.
+      
+
+      </P
+></LI
+><LI
+><P
+>        <I
+CLASS="EMPHASIS"
+>More about QIF</I
+> 
+
+        </P
+><P
+>Further details about the QIF Interchange Format may be
+        found <A
+HREF="t3810.html"
+>        here.</A
+>
+      
+    </P
+></LI
+></UL
+>
+&#13;</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x3974.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t4054.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Quicken Categories</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t3967.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>The Reconciliation Window</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

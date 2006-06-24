@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Guile Scheme</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash Online-Handbuch"
+HREF="index.html"><LINK
+REL="UP"
+TITLE=" GnuCash and Scheme "
+HREF="t6707.html"><LINK
+REL="PREVIOUS"
+TITLE="Scheme Documentation"
+HREF="x6731.html"><LINK
+REL="NEXT"
+TITLE="Stock Price Report"
+HREF="t6790.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash Online-Handbuch</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x6731.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>GnuCash and Scheme</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t6790.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-GUILE">Guile Scheme</H1
+><P
+> <A
+HREF="http://www.guile.org/"
+TARGET="_top"
+> Guile </A
+>
+is an implementation of <A
+HREF="t6707.html#SCHEME"
+> Scheme </A
+> in use
+with various FSF projects.  It is particularly intended to be readily
+embedded into applications written in C.
+
+<P
+></P
+><UL
+><LI
+><P
+> <A
+HREF="ftp://ftp.red-bean.com/pub/guile/"
+TARGET="_top"
+>Directory of /pub/guile at red-bean.com</A
+> </P
+><P
+> This is the ``official'' location where experimental Guile
+source code resides.  </P
+></LI
+><LI
+><P
+><A
+HREF="http://www.gnu.org/software/goops/goops.html"
+TARGET="_top"
+> GOOPS</A
+> - CLOS for Guile </P
+></LI
+><LI
+><A
+NAME="GWRAP"><P
+> <A
+HREF="http://www.cs.cmu.edu/~chrislee/Software/g-wrap/"
+TARGET="_top"
+> g-wrap</A
+> </P
+><P
+> G-Wrap is a portable tool for easily importing types,
+functions, and constants from C into <A
+HREF="t6707.html#SCHEME"
+> Scheme</A
+> interpreters.  G-Wrap supports <A
+HREF="x6758.html#GUILE"
+> Guile</A
+> and RScheme.</P
+><P
+> <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+> uses G-Wrap to connect
+together Guile and the <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+> engine.</P
+></LI
+><LI
+><P
+><A
+HREF="http://srfi.schemers.org/"
+TARGET="_top"
+>SRFI - Scheme Requests For Implementation </A
+></P
+><P
+> One of the longstanding deficiencies of Scheme has been that
+the language definition is deliberately spartan, lacking in
+functionality.  Compare the terse Scheme definition, <A
+HREF="x6731.html#R5RS"
+> R5RS </A
+> with that of <A
+HREF="http://www.cons.org/"
+TARGET="_top"
+>Common Lisp, </A
+> which has a greatly larger, more functional
+<A
+HREF="http://www.harlequin.com/education/books/HyperSpec/"
+TARGET="_top"
+>HyperSpec specification. </A
+> (Aside: The HyperSpec is arguably
+one of the best and most sophisticated sets of documentation ever
+constructed using HTML.)</P
+><P
+> The SRFI process seeks to essentially add sets of library
+functions to provide extended functionality that can be portable
+across Scheme implementations.  This has included libraries for
+manipulating sets, characters, strings, "packages," records, dates,
+objects.</P
+><P
+> <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+> makes use of SRFI 1 (Lists),
+8 (multiple value binding; used by SRFI 1), and 19 (Dates). </P
+></LI
+></UL
+></P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x6731.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t6790.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Scheme Documentation</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t6707.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Stock Price Report</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

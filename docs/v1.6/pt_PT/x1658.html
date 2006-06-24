@@ -1,0 +1,331 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>  Explicar Juro Composto
+      </TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Cálculo de Empréstimos e Juros"
+HREF="t1641.html"><LINK
+REL="PREVIOUS"
+TITLE="Cálculo de Empréstimos e Juros"
+HREF="t1641.html"><LINK
+REL="NEXT"
+TITLE='Criar um "activo"'
+HREF="t1700.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t1641.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Cálculo de Empréstimos e Juros</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t1700.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-COMPOUND-INTEREST">Explicar Juro Composto</H1
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1660">Introdução</H2
+><P
+>    O GnuCash oferece a funcionalidade de executar cálculos simples 
+    de juros para empréstimos e depósitos com juros, dando-lhe a 
+    possibilidade de responder a questões como "Quanto tempo demorarei 
+    a pagar este empréstimo?", "Qual destes depósitos a prazo gera 
+    melhores rendimentos?", e "Que montante de prestação terei de pagar 
+    para amortizar este empréstimo em cinco anos?"  A calculadora financeira 
+    do GnuCash da-lhe essa informação e muito mais.
+      </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1663">Como Funciona o Juro</H2
+><P
+>    Existem duas ópticas quando se fala de juros - contas que 
+    pagam juros tais como contas a prazo e contas de poupança, 
+    em que as instituições financeiras lhe pagam pela utilização 
+    do seu dinheiro.  Alternativamente, podemos falar de juros 
+    no contexto dos empréstimos, onde você paga à instituição 
+    financeira por utilizar o dinheiro deles. Para tornar as 
+    coisas mais simples, falaremos primeiro de empréstimos.
+  </P
+><P
+>    Primeiro, vamos considerar o empréstimo mais simples 
+    possível com uma taxa de juro simples e onde o amortizamos 
+    no final do prazo.  Por exemplo, digamos que pedimos 
+    emprestados 10.000cts (em termos financeiros, o 
+    <I
+CLASS="EMPHASIS"
+>Valor Actual</I
+> é 10.000cts) por um 
+    ano à taxa de juro anual de 10% que não é composta. Quanto 
+    devemos nós no final do período?
+          Neste caso, calcular o <I
+CLASS="EMPHASIS"
+>Valor Futuro</I
+> 
+    que devemos é simples: basta
+  </P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>    Valor Futuro = Valor Actual + (10 % * Valor Actual)
+                 = 10,000 + (10% * 10,000)
+                 = 11,000
+  </PRE
+></TD
+></TR
+></TABLE
+><P
+>    Agora, vamos tornar as coisas um pouco mais interessantes.
+    Vamos fazer com que o juro seja <I
+CLASS="EMPHASIS"
+>composto</I
+> 
+    mensalmente.  Após o primeiro mês, você deverá 
+  </P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>    Valor Futuro = 10,000 + (10% * 1/12)
+                 ~= 10,083.33
+  </PRE
+></TD
+></TR
+></TABLE
+><P
+>Agora, para o segundo mês, você pagará juros sobre os 
+    10,083.83, pelo que o valor no final do segundo mês é:
+    </P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>    Valor Futuro = 10,083.83 + (10% * 1/12)
+                ~= 10167.36
+  </PRE
+></TD
+></TR
+></TABLE
+><P
+>    Eventualmente, após 12 meses, você deverá 11.047.130$, em vez 
+    dos 11.000cts que teria de pagar com a taxa de juro simples.
+  </P
+><P
+>    De seguida, faremos as coisas mais complexas novamente - digamos 
+    que vamos efectuar um <I
+CLASS="EMPHASIS"
+>pagamento periódico</I
+> de 
+    200cts no final de cada mês?  Bem, vejamos.  Após um mês, você 
+    deveria:
+  </P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>    Valor Futuro  = Valor Actual + Juro - Pagamento Periódico
+          após mês 1 = 10,000 + (10% * 1/12) - 200 
+                  = 9,883.33
+  </PRE
+></TD
+></TR
+></TABLE
+><P
+>    Após um ano, se fizer os cálculos, ainda estará a dever 
+    8.534.020$ (se eu tiver feito correctamente as contas . . .)
+  </P
+><P
+>    Para o nosso exemplo final, considere <I
+CLASS="EMPHASIS"
+>composição contínua</I
+>,
+    onde os juros são cobrados continuamente.  Explicar este cálculo em detalhe 
+    requer um pouco de matemática de nível universitário, mas, grosso modo,
+    imagine que os períodos de pagamento são, muito, muito, muito pequenos!  
+    Não consigo facilmente mostrar-lhe os cálculos para isto, mas isso não interessa. 
+    A calculadora financeira do GnuCashpode efectua-los!
+  </P
+><P
+>    Assim, para resumir, os seguintes pedaços de informação são utilizados 
+    no cálculo de juros:
+  </P
+><P
+></P
+><UL
+><LI
+><P
+>Valor Actual</P
+></LI
+><LI
+><P
+>Valor Futuro</P
+></LI
+><LI
+><P
+>Taxa de Juro</P
+></LI
+><LI
+><P
+>Número de Períodos de Pagamento</P
+></LI
+><LI
+><P
+>Montante Prestação</P
+></LI
+><LI
+><P
+>Tipo de Capitalização (discreto ou contínuo)</P
+></LI
+><LI
+><P
+>Intrevalo de Capitalização (se discreto)</P
+></LI
+><LI
+><P
+>Altura de Pagamento (início ou fim do período)</P
+></LI
+></UL
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t1641.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t1700.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Cálculo de Empréstimos e Juros</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t1641.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Criar um "activo"</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

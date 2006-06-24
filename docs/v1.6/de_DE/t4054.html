@@ -1,0 +1,404 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>The Reconciliation Window</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash Online-Handbuch"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE=" Quicken QIF File Import"
+HREF="x3979.html"><LINK
+REL="NEXT"
+TITLE="The Account Register"
+HREF="t4113.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash Online-Handbuch</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x3979.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t4113.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN4055">The Reconciliation Window</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t4054.html#AEN4066"
+>Reconciling</A
+></DT
+></DL
+></DIV
+><P
+>The Reconciliation window is used to reconcile a GnuCash account with
+    a statement that a bank or other institution has sent you.
+    Reconciliation is useful not only to double-check your records
+    against those of your bank,  but also to get a better idea of
+    outstanding transactions, e.g. uncashed checks.
+    </P
+><P
+>    At the bottom of the account window, there are two running balances:
+    the "cleared and reconciled" balance, and the "total" balance.
+    The "cleared and reconciled" balance should correspond to how much
+    money the bank thinks you have in your account, and the "total" balance
+    includes outstanding transactions.
+    </P
+><P
+>    For example, when you write a check for something, you should enter
+    the transaction into GnuCash.  The reconciliation
+    (<TT
+CLASS="GUILABEL"
+><B
+>R</B
+></TT
+>) field of the transaction will initially
+    contain <TT
+CLASS="LITERAL"
+>n</TT
+> (new).  Your new entry will contribute
+    to the "total" balance, but not to the "cleared and reconciled"
+    balance.  Later, if you think
+    that the check has been cashed, you might click on the transaction's
+    <TT
+CLASS="GUILABEL"
+><B
+>R</B
+></TT
+> field to change it to <TT
+CLASS="LITERAL"
+>c</TT
+>
+    (cleared).  When you do this, the "cleared and reconciled" balance
+    will change to include this amount. 
+    When the bank statement arrives, you can then compare
+    it to what you've recorded in GnuCash in the Reconciliation window.
+    There, you will be able to change the <TT
+CLASS="GUILABEL"
+><B
+>R</B
+></TT
+> field
+    to <TT
+CLASS="LITERAL"
+>y</TT
+> (reconciled).   You cannot reconcile in the
+    register window, you must use the reconciliation window. Once a
+    transaction has been marked "reconciled", it can no longer
+    be easily changed.
+    </P
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN4066">Reconciling</H1
+><P
+>    <P
+></P
+><UL
+><LI
+><P
+>Choose <B
+CLASS="GUIMENU"
+>Reconcile</B
+> from the Accounts menu, 
+      and GnuCash will prompt you to
+      enter the ending balance from the bank statement.
+
+    </P
+><DIV
+CLASS="MEDIAOBJECT"
+><P
+><IMG
+SRC="image/recninfo.png"></P
+></DIV
+></LI
+><LI
+><P
+>Enter the date of the end of the period that the statement covers,
+     and the final balance from the statement, and press
+     <B
+CLASS="GUIBUTTON"
+>OK</B
+>.  The Reconcile window will pop up.  It
+     looks like this:
+
+     </P
+><DIV
+CLASS="MEDIAOBJECT"
+><P
+><IMG
+SRC="image/recnwin.png"></P
+></DIV
+><P
+>The <TT
+CLASS="GUILABEL"
+><B
+>Debits</B
+></TT
+> and <TT
+CLASS="GUILABEL"
+><B
+>Credits</B
+></TT
+>
+     groups list all the unreconciled transactions.  The
+     '<TT
+CLASS="GUILABEL"
+><B
+>R</B
+></TT
+>' columns show whether the transactions have 
+     been cleared or reconciled.
+
+     </P
+></LI
+><LI
+><P
+>Now, examine each item on the bank statement, and look for the
+     matching item in the Reconcile window.   
+
+     </P
+><P
+>If you cannot find one, then perhaps you forgot to enter a
+     transaction, or did not know that the transaction had happened.  You
+     can use the <B
+CLASS="GUIBUTTON"
+>New</B
+> button on the tool bar, or the
+     <B
+CLASS="GUIMENUITEM"
+>New</B
+> menu item in the
+     <B
+CLASS="GUIMENU"
+>Transaction</B
+> menu, to open a register window and
+     enter the missing transaction.  The new item will appear in the
+     Reconcile window when you press <B
+CLASS="GUIBUTTON"
+>enter</B
+> after
+     entering the transaction.
+
+     </P
+><P
+>When you find the item in the Reconcile window, compare the amount in
+     the item to the amount on the statement.  If they disagree, you may
+     have made an error when you entered the transaction in GnuCash.  You
+     can use the <B
+CLASS="GUIBUTTON"
+>Edit</B
+> button on the tool bar, or the
+     <B
+CLASS="GUIMENUITEM"
+>Edit</B
+> menu item in the
+     <B
+CLASS="GUIMENU"
+>Transaction</B
+> menu, to open a register window and
+     correct the transaction.
+
+     </P
+><P
+>If the amounts agree, click on the item in the Reconcile window. The
+     '<TT
+CLASS="GUILABEL"
+><B
+>R</B
+></TT
+>' column will change to '<TT
+CLASS="LITERAL"
+>y</TT
+>'
+     (reconciled) from '<TT
+CLASS="LITERAL"
+>n</TT
+>' or '<TT
+CLASS="LITERAL"
+>c</TT
+>'.
+
+     </P
+><P
+>You then repeat this for each item that appears on the
+        bank statement, verifying that the amounts match with the
+        amounts in GnuCash, and marking off transactions in GnuCash
+        as they are reconciled.
+      
+      </P
+></LI
+><LI
+><P
+>At the bottom of the "Reconcile" window is a "Difference" field, which
+      should show $0.00 when you are done reconciling. If it shows some other value,
+      then either you have missed transactions, or some amounts may
+      be incorrect in GnuCash. (Or, less likely,
+      the bank may have made an error.)
+      </P
+></LI
+><LI
+><P
+>When you have marked off all the items on the
+      bank statement, and when the difference is $0.00, press the
+      <B
+CLASS="GUIBUTTON"
+>Finish</B
+> button on the tool bar or select
+      <B
+CLASS="GUIMENUITEM"
+>Finish</B
+> from the
+      <B
+CLASS="GUIMENU"
+>Reconcile</B
+> menu (the latter method will work
+      even if your "Difference" isn't $0.00).
+					The Reconcile window will close.
+      In the <A
+HREF="t4113.html"
+>Register window</A
+>, the
+      <TT
+CLASS="GUILABEL"
+><B
+>R</B
+></TT
+> field of the reconciled transactions will
+      change to '<TT
+CLASS="LITERAL"
+>y</TT
+>'.
+      
+    </P
+></LI
+></UL
+></P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x3979.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t4113.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Quicken QIF File Import</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>The Account Register</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>
