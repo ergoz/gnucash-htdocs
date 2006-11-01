@@ -1,0 +1,110 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>4.7. Putting It All Together</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_txns.html" title="Chapter 4. Transactions"><link rel="previous" href="txns-sxn1.html" title="4.6. Scheduled Transactions"><link rel="next" href="chapter_cbook.html" title="Chapter 5. Checkbook"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">4.7. Putting It All Together</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="txns-sxn1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 4. Transactions</th><td width="20%" align="right"> <a accesskey="n" href="chapter_cbook.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="txns-puttoget1"></a>4.7. Putting It All Together</h2></div></div><p>In the previous sections of this chapter the concepts and mechanics
+    of working with transactions in GnuCash has been discussed. This section
+    will expand upon the chart of accounts initially built in the previous
+    chapter, by setting some opening balances, adding transactions and a
+    scheduled transaction.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="txns-puttoget-openfile"></a>4.7.1. Open GnuCash file</h3></div></div><p>Start with opening the previous datafile we stored,
+      <tt>gcashdata_3emptyAccts</tt>, and store it as
+      <tt>gcashdata_4</tt> directly. The main window should look
+      something like this:</p><div class="screenshot"><div class="mediaobject"><img src="figures/txns_puttoget_Charts.png" alt="Starting point for Putting It All Together"><div class="caption"><p>This image shows the starting point for this
+          section.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="txns-puttoget-open2"></a>4.7.2. Opening Balances</h3></div></div><p>As shown earlier with the <b>Asset:Checking</b>
+      account, the starting balances in an account are typically assigned to a
+      special account called <b>Equity:Opening Balance</b>. To
+      start filling in this chart of account, begin by setting the starting
+      balances for the accounts. Assume that there is $1000 in the savings
+      account and $500 charged on the credit card.</p><div class="orderedlist"><ol type="1"><li><p>Open the <b>Assets:Savings</b> account register.
+          Select <b>View</b> from the menu and check to make sure
+          you are in Basic Ledger style. You will view your transactions in
+          the other modes later, but for now let's enter a basic transaction
+          using the basic default style.</p></li><li><p>From the <b>Asset:Savings</b> account register
+          window, enter a basic 2 account transaction to set your starting
+          balance to $1000, transferred from <b>Equity:Opening
+          Balance</b>. Remember, basic transactions transfer money from
+          a source account to a destination account. Record the transaction
+          (press the 'enter' key, or click on the 'enter' icon).</p></li><li><p>From the <b>Asset:Checking</b> account register
+          window, enter a basic 2 account transaction to set your starting
+          balance to $1000, transferred from <b>Equity:Opening
+          Balance</b>.</p></li><li><p>From the <b>Liabilities:Visa</b> account
+          register window, enter a basic 2 account transaction to set your
+          starting balance to $500, transferred from <b>Equity:Opening
+          Balance</b>. This is done by entering the $500 as a "charge"
+          in the Visa account (or "decrease" in the Opening Balance account),
+          since it is money you borrowed. Record the transaction (press the
+          'enter' key, or click on the 'enter' icon).</p></li></ol></div><p>You should now have 3 accounts with opening balances set.
+      <b>Assets:Checking</b>,
+      <b>Assets:Savings</b>, and
+      <b>Liabilities:Visa</b>.</p><div class="screenshot"><div class="mediaobject"><img src="figures/txns_puttoget_Charts1.png" alt="Chart accounts after setting opening balance"><div class="caption"><p>This image shows the opening
+          balances.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="txns-puttoget-add2"></a>4.7.3. Additional Transaction Examples</h3></div></div><p>Now add some more transactions to simulate a month's expenses.
+      During the month, $78 is spent on electricity, $45 on phone, and $350 on
+      rent. All paid by check.We also spend $45.21 on groceries, receive $670
+      as salary, and paids our Internet bill this month, Finally, let's move
+      $100 from the savings account to the checking account.</p><div class="orderedlist"><ol type="1"><li><p>Open the <b>Expenses:Electricity</b> account
+          register and enter a simple 2 account transaction to pay the $78
+          electrical bill at the end of the current month (eg: March 28,
+          2006). Enter a description (eg: Light Company) and the check number
+          (eg: 102). The <b>Transfer</b> account should be
+          <b>Assets:Checking</b>.</p></li><li><p>Open the <b>Assets:Checking</b> account register
+          and enter a simple 2 account transaction to pay the $45 phone bill
+          at the end of the current month (eg: March 28, 2006). Enter a
+          description (eg: Phone Company Name) and the check number (eg: 103).
+          The <b>Transfer</b> account should be
+          <b>Expenses:Phone</b>. Notice that you can enter
+          expense transactions from either the credit side (the expense
+          accounts) or the debit side (the asset account).</p></li><li><p>Open the <b>Expenses:Rent</b> account register
+          and enter a simple 2 account transaction to pay the $350 in rent at
+          the end of the current month (eg: March 28, 2006). Enter a
+          description (eg: April Rent) and the check number (eg: 104). The
+          <b>Transfer</b> account should be
+          <b>Assets:Checking</b>.</p></li><li><p>Duplicate this transaction using the
+          Duplicate button in the tool bar. Start by
+          clicking on the current rent transaction, and click on the
+          <b>Duplicate</b> icon. Enter the transaction date a
+          month out in the future (eg: April 28, 2006), and notice the blue
+          line separator that GnuCash uses to separate future transactions
+          from current ones. In this way, you can enter transactions before
+          they occur.</p><p>You could also set up a scheduled transaction to pay your
+          rent, since the value of the rent is likely to be constant for the
+          foreseeable future. <div class="itemizedlist"><ul><li><p>Start by clicking on the current (April 28) rent
+                transaction, and click on the <b>Schedule</b>
+                icon</p></li><li><p>Change to <b>Monthly</b>, change
+                description if needed and press OK</p></li></ul></div></p></li><li><p>To transfer money from your savings account to your checking
+          account, open the <b>Assets:Savings</b> account
+          regischildsplay-alphabet-sounds-svter, add a new transaction setting
+          the Transfer to <b>Assets:Checking</b> in the amount
+          of $100 (date 6 March, 2006).</p></li><li><p>As another example of a simple 2 account transaction, add
+          another transaction to describe the purchase of $45.21 worth of
+          groceries on 5 of March. From within the Asset:Checking account, you
+          would set <b>Transfer</b> to
+          <b>Expenses:Groceries</b>. The account register should
+          now appear:</p></li><li><p>To add a paycheck transaction from the
+          <b>Assets:Checking</b> account register window, click
+          on a new transaction line, and click on <b>Split</b>.
+          First enter the description of this transaction on the first line
+          (eg: "Employers R Us"), as well as the date (14 March). In the
+          "split" line below this, enter the deposit into
+          <b>Asset:Checking</b> (eg:$670) (This is due to a
+          current bug, that demands the first line in a split is the actual
+          account). Follow this with the various tax deposits
+          (<b>Asset:Checking</b> (eg: $670),
+          <b>Expenses:Taxes:Federal</b> (eg: $180),
+          <b>Expenses:Taxes:Medicare</b> (eg: $90), and
+          <b>Expenses:Taxes:Social Security</b> (eg: $60)) and
+          lastly the gross total of your paycheck (eg: $1000) as a withdrawal
+          transfer from <b>Income:Salary</b>.</p></li><li><p>You also need to pay for your Internet subscription of 20 USD on
+          the 28th.</p></li></ol></div><div class="screenshot"><div class="mediaobject"><img src="figures/txns_puttoget_Charts2.png" alt="Chart accounts after setting all the various
+            transactions"><div class="caption"><p>This image shows the ending balances after <a href="chapter_txns.html" title="Chapter 4. Transactions">Chapter 4</a>.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="txns-puttoget-save"></a>4.7.4. Save file</h3></div></div><p>Before we go to the report section, lets save the GnuCash data
+      file (<tt>gcashdata_4</tt>).</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="txns-puttoget-reports"></a>4.7.5. Reports</h3></div></div><p>But only having data available on the computer screen will not
+      make your accountant happy, therefore GnuCash comes with a large number
+      of highly customizable reports.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">More details on the reports will be in the Report chapter</p></td></tr></table></div><p>Lets have a look at a <b>Cash Flow</b>, and a
+      <b>Transaction</b> Report.</p><div class="orderedlist"><ol type="1"><li><p>First lets have a look at the <b>Cash Flow</b>
+          report for the month of March.</p><p>Select the cash flow report from <b>Reports</b>
+          -&gt; <b>Income &amp; Expense</b> -&gt;
+          <b>Cash Flow</b></p><div class="screenshot"><div class="mediaobject"><img src="figures/txns_CashFlow.png" alt="Cash Flow report for the month of March"><div class="caption"><p>This image shows the Cash Flow report after <a href="chapter_txns.html" title="Chapter 4. Transactions">Chapter 4</a>.</p></div></div></div><p>To get this customized report, right click in the report and
+          choose <b>Report Options</b>. Then set the time
+          period, and specify which accounts you want in the report</p></li><li><p>Now lets have a look at corresponding transaction report for
+          the Checking account.</p><p>Select the transaction report from <b>Reports</b>
+          -&gt; <b>Transaction Report</b></p><div class="screenshot"><div class="mediaobject"><img src="figures/txns_TransactionRptChecking.png" alt="Transaction Report for the Checking account during
+                March"><div class="caption"><p>This image shows the Transaction Report for the
+              Checking account during March. </p></div></div></div></li><li><p>Now lets change the transaction report to only show the
+          various Expenses account.</p><div class="screenshot"><div class="mediaobject"><img src="figures/txns_TransactionRptExpenses.png" alt="Transaction Report for the Expenses accounts during
+                March"><div class="caption"><p>This image shows the Transaction Report for the
+              various Expense accounts during March. </p></div></div></div></li></ol></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="txns-sxn1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="chapter_cbook.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">4.6. Scheduled Transactions </td><td width="20%" align="center"><a accesskey="u" href="chapter_txns.html">Up</a></td><td width="40%" align="right"> Chapter 5. Checkbook</td></tr></table></div></body></html>

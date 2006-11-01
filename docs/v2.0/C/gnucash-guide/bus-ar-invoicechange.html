@@ -1,0 +1,33 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>12.9. Changing the Invoice Appearance</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_bus_ar.html" title="Chapter 12. Accounts Receivable"><link rel="previous" href="bus-ar-payment1.html" title="12.8. Process Payment"><link rel="next" href="chapter13.html" title="Chapter 13. Accounts Payable"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">12.9. Changing the Invoice Appearance</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bus-ar-payment1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 12. Accounts Receivable</th><td width="20%" align="right"> <a accesskey="n" href="chapter13.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="bus-ar-invoicechange"></a>12.9. Changing the Invoice Appearance</h2></div></div><p>The default Invoice style, as shown in <a href="bus-ar-invoices1.html#bus-ar-invoiceprint2" title="12.6.5. Print">Print</a>, is fairly barren. The default invoice
+    style leaves the top part of the form blank, so you can print on company
+    letterhead paper. There are some things you can do to change invoice
+    appearance.</p><p>Use <b>File</b> -&gt; <b>Properties</b> to
+    enter your company name and address, which is printed on the right side of
+    invoices.</p><p>To add a customized background, heading banner or logo to invoices,
+    modify the invoice style sheets. To do this, go to <b>Edit</b>
+    -&gt; <b>Style Sheets</b> and make a <b>New</b>
+    style sheet. You will see a window like this:</p><div class="screenshot"><div class="mediaobject"><img src="figures/bus_ar_invoicechange1.png" alt="New Style Sheet Window"><div class="caption"><p>The New Style Sheet window.</p></div></div></div><p>You must select the <b>Fancy</b> style sheet template,
+    and choose a name for your new style sheet. When you click the
+    <b>OK</b> button, the HTML Style Sheet editor window is
+    displayed. This window contains four tabs, Colors, General, Images, and
+    Tables. The Colors tab allows you to change the colors of various sections
+    of the invoice. The General tab allows you to set the Preparer and
+    Prepared for information, and to enable links. The Images tab allows you
+    to import graphics into the style sheet. The Tables tab allows you to
+    adjust the spacing around the tables which make up the invoice.</p><p>To include a company logo, banner heading and background image, use
+    your favorite graphics application such as The Gimp or OpenOffice Draw to
+    save the images in either GIF or PNG format. Then import them into the
+    style sheet using the Images tab.</p><p>Below is an example that imports all three types of images.</p><div class="screenshot"><div class="mediaobject"><img src="figures/bus_ar_invoicechange2.png" alt="HTML Style Sheets example"><div class="caption"><p>The HTML Style Sheets window with an example Background
+        Tile, Heading Banner, and Logo.</p></div></div></div><p>The images are placed in the invoice as follows. The
+    <b>Background Tile</b> is tiled to become the background
+    image, the <b>Heading Banner</b> goes to above the invoice
+    text, and the <b>Logo</b> is placed in the upper left corner
+    of the invoice to the left of the Heading Banner. You will probably have
+    to try a few different sized images until you get the invoices to print
+    nicely. Some sizing suggestions are that the Logo should be 1 square cm
+    (~0.5 inch), and the Heading Banner should be 15 cm (~6 inches) wide and 1
+    cm (~0.5 inch) tall.</p><p>With the style sheet configured, when you print the invoice, you
+    select the style sheet to use from the <b>Options</b> menu.
+    Below is the resultant invoice after applying the style sheet demonstrated
+    above.</p><div class="screenshot"><div class="mediaobject"><img src="figures/bus_ar_invoicechange3.png" alt="HTML Style Sheets example"><div class="caption"><p>The hideous invoice which results from the graphics
+        selected in the style sheet.</p></div></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bus-ar-payment1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="chapter13.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">12.8. Process Payment </td><td width="20%" align="center"><a accesskey="u" href="chapter_bus_ar.html">Up</a></td><td width="40%" align="right"> Chapter 13. Accounts Payable</td></tr></table></div></body></html>

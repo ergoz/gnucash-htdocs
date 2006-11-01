@@ -1,0 +1,80 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>8.2. Setting Up Accounts</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter8.html" title="Chapter 8. Investments"><link rel="previous" href="invest_concepts1.html" title="8.1. Basic Concepts"><link rel="next" href="invest_int1.html" title="8.3. Interest Bearing Accounts"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.2. Setting Up Accounts</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="invest_concepts1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 8. Investments</th><td width="20%" align="right"> <a accesskey="n" href="invest_int1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="invest_accounts1"></a>8.2. Setting Up Accounts</h2></div></div><p>To setup investment accounts in GnuCash you can either use the
+    predefined investment account hierarchy or create your own. The minimum
+    you need to do to track investments is to setup an asset account for each
+    type of investment you own. However, as we have seen in previous chapters,
+    it is usually more logical to create a structured account hierarchy,
+    grouping related investments together. For example, you may want to group
+    all your publicly traded stocks under a parent account named after the
+    brokerage firm you used to buy the stocks.</p><p>Regardless of how you setup your account hierarchy, remember that
+    you can always move accounts around later (without losing the work you've
+    put into them), so your initial account hierarchy does not have to be
+    perfect.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest_predefined2"></a>8.2.1. Predefined Accounts</h3></div></div><p>To use the predefined investment account hierarchy, you
+      <b>must</b> create a new GnuCash file. This will run the
+      <b>New Account Hierarchy Setup</b> druid. After choosing
+      the default currency to use, you will be asked to <b>Choose
+      accounts to create</b>. At this point, choose the "Investment
+      Accounts" option (along with any others you are interested in). Assuming
+      only “Investment Accounts” were selected, this will create
+      an account hierarchy as shown below.</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_accountspredef.png" alt="Setup Interest Investment"><div class="caption"><p>This is an screen image of the "Accounts" tab after
+          creating a new file and selecting only the default investment
+          accounts. </p></div></div></div><p>You will probably at least want to add a <b>Bank</b>
+      account to the Assets and probably an <b>Equity:Opening
+      Balance</b> account, as we have done in previous chapters. Don't
+      forget to save your new account file with a relevant name!</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest_custom2"></a>8.2.2. Custom Accounts Example</h3></div></div><p>You can also manually setup your own investment account hierarchy.
+      The following is a somewhat more complicated example of setting up
+      GnuCash to track your investments, which has the advantage that it
+      groups each different investment under the brokerage that deals with the
+      investments. This way it is easier to compare the statements you get
+      from your brokerage with the accounts you have in GnuCash and spot where
+      GnuCash differs from the statement. <div class="literallayout"><p><br>
+ Assets<br>
+    Investments<br>
+       Brokerage Accounts<br>
+          I*Trade<br>
+             Stocks<br>
+                ACME Corp<br>
+             Money Market Funds<br>
+                I*Trade Municipal Fund<br>
+             Cash<br>
+          My Stockbroker<br>
+             Money Market Funds<br>
+                Active Assets Fund<br>
+             Government Securities<br>
+                Treas Bond xxx<br>
+                Treas Note yyy<br>
+             Mutual Funds<br>
+                Fund A<br>
+                Fund B<br>
+             Cash<br>
+ Income<br>
+    Investments<br>
+       Brokerage Accounts<br>
+          Capital Gains<br>
+             I*Trade<br>
+             My Stockbroker<br>
+          Dividends<br>
+             I*Trade<br>
+                Taxable<br>
+                Non-taxable<br>
+             My Stockbroker<br>
+                Taxable<br>
+                Non-taxable<br>
+          Interest Income<br>
+             I*Trade<br>
+                Taxable<br>
+                Non-taxable<br>
+             My Stockbroker<br>
+                Taxable<br>
+                Non-taxable<br>
+ Expenses<br>
+    Investment Expenses<br>
+       Commissions<br>
+          I*Trade<br>
+          My Stockbroker<br>
+       Management Fees<br>
+          I*Trade<br>
+          My Stockbroker<br>
+ </p></div></p><p>There really is no unique way to set up your investment account
+      hierarchy. Play around, try different layouts until you find something
+      which divides your investment accounts into logical groups which make
+      sense to you.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="invest_concepts1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="invest_int1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">8.1. Basic Concepts </td><td width="20%" align="center"><a accesskey="u" href="chapter8.html">Up</a></td><td width="40%" align="right"> 8.3. Interest Bearing Accounts</td></tr></table></div></body></html>
