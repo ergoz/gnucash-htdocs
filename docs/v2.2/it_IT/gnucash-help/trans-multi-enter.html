@@ -1,0 +1,53 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>6.4. Transazioni con suddivisioni multiple</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="help.html" title="GnuCash Manuale di aiuto"><link rel="up" href="ch_Common_Trans_Ops.html" title="Capitolo 6. Operazioni comuni per le transazioni"><link rel="previous" href="trans-enter.html" title="6.3. Inserire una transazione dal registro"><link rel="next" href="trans-currency-enter.html" title="6.5. Transazioni in valuta multipla"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">6.4. Transazioni con suddivisioni multiple</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="trans-enter.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 6. Operazioni comuni per le transazioni</th><td width="20%" align="right"> <a accesskey="n" href="trans-currency-enter.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="trans-multi-enter"></a>6.4. Transazioni con suddivisioni multiple</h2></div></div><p>La finestra del registro può apparire lievemente differente in funzione delle opzioni di visualizzazione 
+      selezionate. Nel seguito verrà descritto il processo di inserimento di una transazione con suddivisioni multiple
+      quando lo stile del registro è impostato a quello di "libro mastro basilare". In GnuCash una "suddivisione" si ha quando
+      il denaro è trasferito da o verso due o più conti per una stessa transazione. Il cursore viene automaticamente posizionato nel campo 
+      della data all'apertura della finestra del registro.</p><p>Le righe per i conti multipli non saranno visualizzate nella modalità a "libro mastro basilare" a meno che
+    non vengano selezionate o l'icona <b>Suddivisione</b> o l'opzione <b>Operazioni &gt; Suddividi 
+    transazione</b>.
+    </p><div class="orderedlist"><ol type="1"><li><p>Selezionando la piccola icona a destra del campo della data, verrà visualizzato un calendario da 
+	   cui è possibile selezionare la data. SI utilizzino le frecce per selezionare il mese e l'anno corretto e infine 
+	   si selezioni il giorno. Premendo nuovamente la piccola icona verrà chiuso il calendario. E' anche possibile
+	   digitare dalla tastiera la data e GnuCash cercherà di completarla mentre si sta scrivendo.</p></li><li><p>Si prema <b>Tab</b> per selezionare o spostarsi nel campo del "Nr.". Qui è possibile assegnare un 
+	   numero alla transazione quale, per esempio, il numero dell'assegno. Premendo <b>+</b> (più) verrà
+	   automaticamente un numero aumentato di una unità rispetto a quello dell'ultima transazione dotata di numero.</p></li><li><p>Premere di nuovo <b>Tab</b> per selezionare o spostarsi nel campo della  "Descrizione". Qui è possibile inserire
+	   il nome del beneficiario o qualsiasi altra descrizione relativa alla transazione. GnuCash tenterà di completare automaticamente
+	   il nome del beneficiario mentre si starà scrivendo.</p></li><li><p>A questo punto possono accadere due fatti alla pressione del tasto <b>Tab</b>: se GnuCash individua
+	   una transazione esistente corrispondente, il cursore salterà in uno dei campi per l'importo, compilando
+	   automaticamente il campo del conto di trasferimento; selezionando un campo qualsiasi con il mouse invece di utilizzare il tasto di
+             tabulazione non verrà compilato automaticamente il campo del conto di trasferimento. Se non ci sono transazioni esistenti corrispondenti,
+	   GnuCash sposterà il cursore nel campo del "Trasferimento" quando è visualizzata una sola riga per la transazione.</p></li><li><p>Quando si digita all'interno del campo del conto, GnuCash tenterà di completare automaticamente il nome del conto
+	   con quello di uno esistente. La ricerca avviene alfabeticamente, quindi digitando "Us" verrà individuato la sezione Uscite della
+             lista dei conti. Quando è stata isolata la sezione, è possibile muoversi tra i conti figli premendo i <b>:</b> (due punti).
+	  Se, dopo aver digitato "Ex", si preme <b>:</b>, allora il cursore si sposterà nel primo conto figlio nella lista dei conti. 
+	  La pressione di una combinazione di tasti e dei <b>:</b> permette di muoversi rapidamente attraverso la struttura ad 
+	  albero dei conti. L'icona triangolare a destra del riquadro del "Trasferimento" rappresenta un metodo alternativo per selezionare 
+	  un conto; i tasti <b>freccia sù</b> e <b>freccia giù</b>  permettono di muoversi nella lista dei
+	  conti visualizzata.
+           </p></li><li><p>Il campo seguente (R) è relativo allo stato di riconciliazione della transazione ed è descritto nella sezione <b>Riconciliazione
+	   di un conto con un estratto conto</b>.  <a href="acct-reconcile.html" title="5.8. Riconciliare un conto a un estratto conto">Sezione 5.8</a></p></li><li><p>Premere ancora <b>Tab</b> per spostarsi nel primo campo dell'importo. I nomi delle due colonne successive
+	   sono diversi in funzione del tipo di conto aperto. Per esempio, i conti bancari visualizzano i nomi "Deposito" e "Prelievo", i conti per le
+	   carte di credito mostrano "Pagamento" e "Addebito" mentre i conti per le azioni visualizzano "Quote", "Prezzo", "Compra" e "Vendi".</p></li><li><p>Inserire l'importo della transazione nel campo corretto. Prima di premere <b>Tab</b>
+          o <b>Invio</b> si legga il passo successivo.</p></li><li><p>Per inserire delle ulteriori suddivisioni, si prema l'icona Suddivisione sulla
+	 barra degli strumenti o si selezioni la voce <b>Operazioni -&gt; Suddividi transazione</b>. 
+	 Per le transazioni che contengono più di una suddivisione, viene visualizzata la scritta "--Transazione suddivisa--" e sarà
+	 necessario utilizzare il pulsante Suddivisione per mostrarne i dettagli.</p></li><li><p>La transazione verrà espansa, i titoli delle colonne dell'importo cambieranno e l'intestazione della colonna "Trasferimento"
+	 sarà vuota. La prima riga contiene la descrizione e l'importo della transazione. La seconda riga contiene
+	 il nome del conto attualmente aperto nel campo del "Conto" e l'importo della transazione. La terza riga
+	 contiene il nome del conto di trasferimento nel campo del "Conto". Se l'importo non risulterà bilanciato, GnuCash lo indicherà 
+	 inserendo delle celle grigie nelle colonne dell'importo e riportando l'ammontare non bilanciato nell'ultima riga vuota 
+	 del registro.</p></li><li><p>Quando viene selezionata una delle righe più corte, le intestazioni delle colonne cambiano. La prima e l'ultima 
+	 ("Data" e "Saldo") non avranno un titolo; "Nr." cambierà in "Operazione", "Descrizione" in "Promemoria" e
+	 la colonna vuota del "Trasferimento" cambierà il titolo in "Conto". Le ultime due colonne dell'importo visualizzeranno i titoli
+	 descritti al passo sette.</p></li><li><p>I campi "Operazione" e "Promemoria" sono opzionali in questa fase; il primo può contenere una descrizione
+	 del tipo di conto di trasferimento coinvolto mentre il secondo è destinato a una descrizione aggiuntiva della
+	 transazione.</p></li><li><p>Move to the missing amount field on the third line and fill in the amount. Premendo il tasto 
+	 <b>Invio</b>, selezionando l'icona Inserisci o andando in
+            <b>Transazione -&gt; Inserisci transazione</b> si sposterà il cursore nella
+	    riga successiva</p></li><li><p>La colonna del conto contiene una lista dei conti di trasferimento. Questa colonna è utilizzata per aggiungere
+	 delle suddivisioni. Il metodo descritto al passo cinque, può essere utilizzato per selezionare un ulteriore conto su una riga vuota
+	 Si possono aggiungere quante suddivisioni si desiderano.</p></li><li><p>Quando la transazione è bilanciata, le celle grigie spariranno come anche l'importo visualizzato
+	 nell'ultima riga vuota.</p></li><li><p>Premendo <b>Invio</b>, come descritto più sopra, si salterà alla transazione
+	 successiva. Selezionando la transazione successiva verrà chiusa automaticamente la suddivisione oppure si potrà chiuderla
+	manualmente premendo l'icona Suddivisione oppure selezionando la voce del menu
+	<b>Operazioni -&gt; Suddividi transazione</b>.</p></li></ol></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="trans-enter.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="help.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="trans-currency-enter.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">6.3. Inserire una transazione dal registro </td><td width="20%" align="center"><a accesskey="u" href="ch_Common_Trans_Ops.html">Risali</a></td><td width="40%" align="right"> 6.5. Transazioni in valuta multipla</td></tr></table></div></body></html>

@@ -1,0 +1,122 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2.3. The GnuCash Interface</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_basics.html" title="Chapter 2. The Basics"><link rel="previous" href="basics-entry1.html" title="2.2. Data Entry Concepts"><link rel="next" href="basics-prefs1.html" title="2.4. Setting Preferences"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">2.3. The GnuCash Interface</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="basics-entry1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 2. The Basics</th><td width="20%" align="right"> <a accesskey="n" href="basics-prefs1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="basics-interface1"></a>2.3. The GnuCash Interface</h2></div></div><p>The very first time you open GnuCash, you will see the
+    <b>Welcome to GnuCash!</b> dialog. From there, GnuCash
+    provides other tools to help you easily find what you are looking for.
+    Let's take a look at some of the common screens and dialog boxes you will
+    see.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-setup2"></a>2.3.1. Create a new set of accounts</h3></div></div><p>The <b>New Account Hierarchy Setup</b> druid allows
+      you to create several accounts at once. When you open GnuCash the first
+      time, you will get this dialog:</p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_NewAccountHierarchySetup.png" alt="The New Account Hierarchy Setup Druid"><div class="caption"><p>This image shows the first screen of the <b>New
+            Account Hierarchy Setup</b> Druid.</p></div></div></div><p>Click Next and follow the instructions
+      provided in the dialog. The dialog provides a default set of accounts
+      with predefined account types, and you simply select the accounts you
+      want. For more information on account types, see 
+      <a href="accts-types1.html" title="3.2. GnuCash Accounts">GnuCash Accounts</a>.</p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_NewAccountHierarchySetup_currency.png" alt="The New Account Hierarchy Setup Druid - Currency"><div class="caption"><p>This image shows the second screen of the <b>New
+            Account Hierarchy Setup</b> Druid where you select the
+            currency.</p></div></div></div><p>The currency you select here, will be assigned to all the
+      <b>accounts</b> created in this druid.</p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_NewAccountHierarchySetup_Accounts.png" alt="The New Account Hierarchy Setup Druid - Choose
+            accounts"><div class="caption"><p>This image shows the third screen of the <b>New
+            Account Hierarchy Setup</b> Druid where you choose the
+            various accounts.</p></div></div></div><p>Select one or more of the predefined account-groups here. For more
+      information on account types, see 
+      <a href="accts-types1.html" title="3.2. GnuCash Accounts">GnuCash Accounts</a>.</p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_NewAccountHierarchySetup_Setup.png" alt="The New Account Hierarchy Setup Druid - Configure"><div class="caption"><p>This image shows the fourth screen of the <b>New
+            Account Hierarchy Setup</b> Druid where you can set
+            <b>Opening Balance</b>.</p></div></div></div><p>In this dialog you will be able to set an <b>Opening
+      Balance</b> on each of the accounts, as well as indicate if it
+      the account should be a <b>Placeholder</b> (only
+      sub-accounts allowed, no transactions. Like Current Assets in above
+      image)</p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_NewAccountHierarchySetup_Finish.png" alt="The New Account Hierarchy Setup Druid - Finish"><div class="caption"><p>This image shows the Last screen of the <b>New
+            Account Hierarchy Setup</b> Druid.</p></div></div></div><p>Click Apply to create all the accounts and
+      leave the druid.</p><p>If you intend to import your data from another program and you
+      want to keep the same account names you used in that program, you may
+      want to delay setting up default accounts at this time. You can simply
+      import the data and the account names into GnuCash from the other
+      program (<a href="basics-import1.html" title="2.7. Importing QIF Files">Importing QIF Files</a> explains how to do this).</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-tip2"></a>2.3.2. Tip of the Day</h3></div></div><p>GnuCash provides a <b>Tip of the Day</b> dialog to
+      give helpful hints for using the program:</p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_TipOfDay.png" alt="The Tip of the Day"><div class="caption"><p>This image shows the <b>Tip of the
+            Day</b>.</p></div></div></div><p>These tips provide useful information for beginning users. To view
+      more of the tips, click Next to continue. If you
+      do not wish to see this dialog box on start-up, deselect the box next to
+      <b>Show tips at startup</b>. When you have
+      finished viewing the helpful tips, click Close to
+      close the Tip dialog.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-main2"></a>2.3.3. Account Tree Window</h3></div></div><p>You should now see the <b>Accounts</b> window, which
+      appears as shown below. The exact layout of the account tree will depend
+      on which default accounts you selected during the New Account Hierarchy
+      Setup. In this example, the "Common Accounts" are shown.</p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_Accounts.png" alt="The Account Tree Window"><div class="caption"><p>This image shows the <b>Accounts</b>
+            window.</p></div></div></div><p>The Account Tree window provides an overview of the data contained
+      in the current file. It contains a list of account names and their
+      current balances. From this window, you can open any of the accounts.
+      The individual account windows are called account registers. GnuCash
+      allows you to have as many account registers open as you wish.</p><p>At the top of this window is the title bar, which displays the
+      file name (once you have saved the file.) Below that is the menu bar.
+      You can access the menu options by either clicking on these menu
+      headings or by using shortcuts and access key combinations, covered
+      later in this chapter. Next is the tool bar, which contains buttons
+      for the most common functions.</p><p>The account tree appears below the tool bar. Once you have
+      started creating accounts, the account names will appear in the account
+      tree. You can customize which headings show up by using the
+      small down-arrow at the far right just above the account tree.</p><p>At the bottom is the status bar, which tells you
+      information about what you own (Net Assets) and how much money you have
+      made (Profits).</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-register2"></a>2.3.4. Account Register Window</h3></div></div><p>The Account Register windows are used to enter and edit your
+      account data. As the name suggests, they look similar to a checkbook
+      register. When you double-click an account name in the
+      <b>Accounts</b> window, the <b>Register</b>
+      window for that account will open.</p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_CheckAccount.png" alt="The Checking Account Register"><div class="caption"><p>This image shows The <b>Checking Account - Register
+            </b> with several transactions.</p></div></div></div><p><a href="chapter_txns.html" title="Chapter 4. Transactions">Chapter 4</a> explains more about account 
+      register windows and how to
+      enter data into them. For now, note that the parts of an account
+      register window are similar to the parts of the account tree window
+      described earlier. The title bar at the top contains the account name.
+      Below that, the menu bar contains menu options related to the account
+      register. Tool bar buttons simplify common data entry functions. The
+      status bar at the bottom of the window, displays some account balances
+      covered in <a href="chapter_txns.html" title="Chapter 4. Transactions">Chapter 4</a>. At the bottom of the 
+      account register window,
+      information appears about the current location of the cursor.</p><p>You can resize the various columns that GnuCash displays, but keep
+      in mind that the description column will automatically expand to fill all unused
+        space.  Therefore you should increase the size of all your other columns
+        first and then decrease the size of the description column.
+      </p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-toolbar2"></a>2.3.5. Tool Bar Buttons</h3></div></div><p>Both the account tree window and the account register window
+      contain tool bar buttons. These buttons provide quick access to common
+      functions such as Save and
+      Open in the account tree window and
+      Record and Delete in the
+      account register window. If you are not sure what a button does, move
+      the mouse pointer over that button, and you should see a description of
+      the function appear.</p><p>Here is a summary of the account tree window buttons:</p><div class="itemizedlist"><ul><li><p>Save - Use this function often to save
+          the current file to disk.</p></li><li><p>Close - Use this function to close the
+          current notebook page.</p></li><li><p>Open, Edit,
+          New and Delete - These
+          are functions related to accounts. They are discussed in 
+          <a href="chapter_accts.html" title="Chapter 3. Accounts">Chapter 3</a>.</p></li></ul></div><p>Register buttons are discussed in <a href="chapter_txns.html" title="Chapter 4. Transactions">Chapter 4</a>.
+      </p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-options2"></a>2.3.6. Menu Items</h3></div></div><p>The account tree window and the account register window both
+      contain menu headings in a menu bar. Clicking on a menu heading brings
+      up the menu items for that heading.</p><p>You can click on the account tree menu headings and then move the
+      mouse pointer over the menu items to see what they do. As the pointer
+      moves over a menu item, a description of the item appears in the lower
+      left-hand corner of the window. To select a menu item, click on
+      it.</p><p>You can also access the most common menu items in a window by
+      right-clicking the mouse anywhere in that window. In the account tree
+      window, this will bring up a list of account items. In the account
+      register window, this will bring up a list of transaction items.</p><p>Other ways of accessing menu items are through keyboard shortcuts
+      and access keys, described next.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-shortcut2"></a>2.3.7. Menu Shortcuts</h3></div></div><p>All of the menu items have access keys which are
+      marked by underlined characters in the menu names. Pressing the
+      <b>Alt</b> key with the underlined character in the menu
+      heading will bring up the menu items for that heading. Once the menu
+      items are displayed, type the underlined character in the menu item to
+      activate it. For example, typing Alt+F in the main window brings up the <b>File</b>
+      menu, then typing <b>S</b> will save the file.  Access keys
+       are fixed and may not be changed by users.</p><p>Some of the more commonly used menu items also have shortcut keys
+      that directly activate the command without having to traverse the menu
+      structure.  These shortcuts typically use the <b>Ctrl</b>
+      key, although they can use any key combination.  Menu shortcuts are
+      displayed at the end of each menu item.  These shortcuts may be edited
+      by users by setting a preference in the "Menu and Toolbar" preference
+      panel.</p><p>GnuCash, as a Gnome application, also allows you to define your
+      own menu shortcuts. To define a shortcut, first go to the "Menu and
+      Toolbar" preference panel and select the "Editable menu accelerators"
+      check box.  Then return to GnuCash, click on the menu header and move
+      the mouse pointer over the menu item. While the menu item is
+      highlighted, press a key or key combination to set the shortcut. You
+      should now see your shortcut choice next to the item in the menu. To
+      delete a shortcut, press the <b>Delete</b> key while the menu
+      item is highlighted.  Be careful when setting shortcuts as Gnome does
+      no checking on the key values pressed, and you can easily do things
+      like set a letter of the alphabet as your shortcut.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="basics-entry1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="basics-prefs1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">2.2. Data Entry Concepts </td><td width="20%" align="center"><a accesskey="u" href="chapter_basics.html">Up</a></td><td width="40%" align="right"> 2.4. Setting Preferences</td></tr></table></div></body></html>

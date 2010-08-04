@@ -1,0 +1,40 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>6.4. Entering Payments</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_cc.html" title="Chapter 6. Credit Cards"><link rel="previous" href="cc-entercharge1.html" title="6.3. Entering Charges"><link rel="next" href="cc-together1.html" title="6.5. Putting It All Together"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">6.4. Entering Payments</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="cc-entercharge1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 6. Credit Cards</th><td width="20%" align="right"> <a accesskey="n" href="cc-together1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="cc-enterpay1"></a>6.4. Entering Payments</h2></div></div><p>Most payments to your credit card bill are entered as transfers from
+    a bank account (asset) to the credit card account (liability). When you
+    pay the monthly bill, you are withdrawing money from a bank account to pay
+    down the credit card balance. This transaction decreases both your bank
+    account balance and the amount of credit card debt you owe.</p><p>When you return a purchase, you receive a refund on your credit
+    card. This is another type of payment in that it decreases the amount of
+    credit card debt you owe. If you recorded the original purchase
+    transaction as a transfer from the credit card account to the expense, you
+    now simply reverse that transaction: transfer the money back from the
+    expense to the credit card account. This transaction decreases both the
+    expense account balance and the credit card account balance. For example,
+    if you originally recorded a credit card purchase of clothing, the
+    transaction is a transfer from the credit card account to the clothing
+    expense account. If you then return that clothing for a refund, you simply
+    transfer the money back from the clothing expense account to the credit
+    card account.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">A common mistake is to enter a refund as income. It is not income,
+      but rather a "negative expense". That is why you must transfer money
+      from the expense account to your credit card when you receive a
+      refund.</p></td></tr></table></div><p>To clarify this, let's run through an example. You bought some jeans
+    for $74.99 on your VISA card, but realized one day later that they are too
+    big and want to return them. The shop gracefully agrees, and refunds your
+    credit card.</p><div class="orderedlist"><ol type="1"><li><p>Start with opening the previous datafile we stored
+        (<tt>gcashdata_5</tt>), and store it as
+        <tt>gcashdata_6</tt>.</p></li><li><p>Open the <b>Liabilities:Visa</b> account register
+        and enter a simple 2 account transaction to pay the $74.99 jeans
+        purchase. The <b>Transfer</b> account should be
+        <b>Expenses:Clothes</b> and you
+        <b>Charge</b> your Visa account with the $74.99.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Since we had not created the Expense:Clothes account
+          previously, GnuCash will prompt us to create it. Just remember to
+          create it as an Expense account</p></td></tr></table></div></li><li><p>Enter the refund in one of the following way.</p><div class="itemizedlist"><ul><li><p>Enter the same transaction as the purchase transaction, but
+            instead of a "Charge" amount, use a "Payment" amount in the Credit
+            Card account register.</p></li><li><p>Select the purchase transaction you want to refund (that is
+            the Jeans transaction in our case), and selecting
+            <b>Transaction</b> -&gt; <b>Add Reversing
+            Transaction</b>. Modify the date as needed.</p></li></ul></div><p>After reversing the transaction, your credit card account should
+        look something like this </p><div class="screenshot"><div class="mediaobject"><img src="figures/cc_Reversing_Transaction_1.png" alt="Refunded a credit card purchase"><div class="caption"><p>This image shows <b>Liability:Credit Card -
+                Register</b> after reversing a purchase
+                transaction.</p></div></div></div><p>and the <b>Expenses:Clothes</b> register should
+        look something like this </p><div class="screenshot"><div class="mediaobject"><img src="figures/cc_Reversing_Transaction_2.png" alt="Refunded a credit card purchase"><div class="caption"><p>This image shows <b>Expenses:Clothes</b>
+                register after reversing a purchase transaction.</p></div></div></div></li><li><p>Save the GnuCash data file.</p></li></ol></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="cc-entercharge1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="cc-together1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">6.3. Entering Charges </td><td width="20%" align="center"><a accesskey="u" href="chapter_cc.html">Up</a></td><td width="40%" align="right"> 6.5. Putting It All Together</td></tr></table></div></body></html>

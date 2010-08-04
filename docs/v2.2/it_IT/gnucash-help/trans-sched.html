@@ -1,0 +1,37 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>6.11. Pianificare le transazioni</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="help.html" title="GnuCash Manuale di aiuto"><link rel="up" href="ch_Common_Trans_Ops.html" title="Capitolo 6. Operazioni comuni per le transazioni"><link rel="previous" href="acct-jump.html" title="6.10. Saltare al registro di un altro conto"><link rel="next" href="sched-editor.html" title="6.12. Finestra di modifica della transazione pianificata"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">6.11. Pianificare le transazioni</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="acct-jump.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 6. Operazioni comuni per le transazioni</th><td width="20%" align="right"> <a accesskey="n" href="sched-editor.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="trans-sched"></a>6.11. Pianificare le transazioni</h2></div></div><p>Le transazioni pianificate permetto di essere avvisati o di inserire automaticamente le transazioni
+     in una data specificata. Questa proprietà combinata con il druido <b>Dall'ultimo avvio...
+      </b> (<a href="trans-sched-slr.html" title="7.2. Druido dall'ultimo avvio">Sezione 7.2</a>) permette di rivedere e inserire le transazioni. Il druido per il
+      <b>Rimborso di mutui e ipoteche</b> (<a href="trans-sched-loans.html" title="7.3. Druido per rimborso di mutui e ipoteche">Sezione 7.3</a>) permette di
+      configurare una transazione pianificata per ripagare un prestito con un tasso di interesse composto. L'"editor transazioni 
+      pianificate" (<a href="sched-editor.html" title="6.12. Finestra di modifica della transazione pianificata">Sezione 6.12</a>) permette di creare e modificare le transazioni che stanno per essere
+      inserite automaticamente nel registro.</p><p>Il metodo più semplice per  configurare una transazione pianificata consiste nell'utilizzare come modello una 
+     transazione esistente nella finestra del registro di un conto. Selezionare la transazione che si desidera utilizzare
+     come modello e poi selezionare o l'icona <b>Pianifica</b> sulla barra degli strumenti o andare in 
+     <b>Operazioni -&gt; Pianifica...</b>. Verrà aperta la finestra dal titolo <b>Crea 
+     Transazione pianificata</b>.</p><div class="itemizedlist"><ul><li><p><b>Nome:</b> inserire un nome per la transazione pianificata. Questo verrà utilizzato
+         nel campo della descrizione per la transazione.</p></li><li><p><b>Frequenza:</b> selezionare l'intervallo di tempo intercorrente tra due pianificazioni. Le 
+	date in cui la transazione verrà inserita saranno visualizzate nel mini calendario in basso.</p></li><li><p><b>Data d'inizio:</b>selezionare una data iniziale per la transazione pianificata.</p></li><li><p><b>Senza fine:</b> se la transazione non ha un termine.</p></li><li><p><b>Data di termine:</b> selezionare una data finale per la transazione pianificata.</p></li><li><p><b>Numero di occorrenze:</b> inserire il numero di volte con cui si desidera che la 
+	transazione venga inserita nel registro.</p></li></ul></div><p>Il pulsante <b>Avanzate...</b> apre la finestra dell'"Editor transazioni pianificate
+        per modificare la transazione. Questa è descritta nell'apposita sezione:
+        <a href="sched-editor.html" title="6.12. Finestra di modifica della transazione pianificata">Sezione 6.12</a>.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="sched-trans-win"></a>6.11.1. Finestra della transazione pianificata</h3></div></div><p>La finestra per le transazioni pianificate permette di accedere alla lista delle transazioni 
+	 pianificate e di crearle, modificarle o eliminarle; fornisce anche un calendario. Fermando il cursore per 
+	 qualche secondo su una data visualizzata dal calendario, verrà mostrata una piccola finestra contenente 
+	 l'elenco delle transazioni pianificate per quella stessa data; per chiudere la piccola finestra è sufficiente
+	 premere su di essa un'altra volta. Le date evidenziate in giallo sul calendario
+	 rappresentano i giorni in cui sono pianificate delle transazioni.</p><p>Il riquadro superiore della finestra delle transazioni pianificate contiene una lista
+	 delle transazioni pianificate attualmente impostate. Questa lista elenca il nome della transazione, se questa è attiva
+	 ai fini della pianificazione, la frequenza (mese o giorno) con cui la transazione deve essere inserita, l'ultima data 
+	 in cui è stata inserita e la prossima data in cui verrà inserita.</p><p>Sul lato destro del riquadro è presenta una freccia rivolta verso il basso che, quando premuta, visualizza
+	 una lista delle voci visualizzate nell'elenco delle transazioni. Togliendo la spunta a una voce, questa verrà rimossa 
+	 dal riquadro.</p><p>La barra degli strumenti di questa finestra contiene tre pulsanti per creare, cancellare o modificare una transazione
+	 pianificata. Premendo le icone «Nuovo» o «Modifica» verrà aperto l'"Editor transazioni pianificate". Premendo invece 
+	 «Elimina» verrà cancellata la transazione pianificata selezionata. Le stesse opzioni sono raggiungibili anche attraverso
+	 
+          Le stesse opzioni sono anche raggiungibile attraverso il menu <b>Pianifica -&gt; Nuovo/Modifica/Cancella</b>,
+         nella linguetta della transazione pianificata.</p><p>Al di sotto della lista delle transazioni pianificate, è posizionato il calendario delle "prossime scadenze"; qui
+           è visualizzato il calendario fino all'anno seguente e sono evidenziate le date in cui sono previste delle transazioni 
+	   pianificate.  Cliccando su di una data nel calendario, verrà aperta una finestra con la lista delle transazioni pianificate 
+	   per quella stessa data. Spostando il puntatore al di sopra di un'altra data, cambierà di conseguenza anche la lista 
+	   delle transazioni. Cliccando di nuovo sul calendario verrà chiusa la finestra contenente la lista delle transazioni.</p><p>La finestra per le transazioni pianificate è accessibile sia dalla linguetta dei conti che da quella del registro
+	 attraverso la voce del menu <b>Operazioni -&gt; Transazioni pianificate -&gt; Editor transazioni 
+	 pianificate</b>,</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="acct-jump.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="help.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="sched-editor.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">6.10. Saltare al registro di un altro conto </td><td width="20%" align="center"><a accesskey="u" href="ch_Common_Trans_Ops.html">Risali</a></td><td width="40%" align="right"> 6.12. Finestra di modifica della transazione pianificata</td></tr></table></div></body></html>

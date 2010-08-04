@@ -1,0 +1,96 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>8.6. Impostare il prezzo delle quote</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_invest.html" title="Capitolo 8. Investimenti"><link rel="previous" href="invest-buy-stock1.html" title="8.5. Acquistare le quote"><link rel="next" href="invest-sell1.html" title="8.7. Vendere le azioni"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.6. Impostare il prezzo delle quote</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="invest-buy-stock1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 8. Investimenti</th><td width="20%" align="right"> <a accesskey="n" href="invest-sell1.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="invest-stockprice1"></a>8.6. Impostare il prezzo delle quote</h2></div></div><p>Il valore di una commodity, come quello di un'azione, deve essere impostato.
+    I conti per le azioni tengono traccia della quantità di azioni in proprio possesso,
+    ma il valore dell'azione è impostato nella finestra dell'<b>Editor prezzi</b>.
+    I valori impostati nell'editor prezzi possono essere aggiornati manualmente o
+    automaticamente.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest-stockprice-initial2"></a>8.6.1. Impostare per la prima volta l'editor dei prezzi</h3></div></div><p>Per utilizzare l'editor dei prezzi per registrare il prezzo di un'azione, occorre
+      prima di tutto inserire l'azione. Per farlo, aprire l'editor dei prezzi
+      (<b>Strumenti</b> -&gt; <b>Editor prezzi</b>) e
+      premere il pulsante Aggiungi. La prima volta che
+      viene inserita una commodity/azione, questa finestra sarà vuoto ad eccezione
+      del pulsante di controllo in basso. Selezionare la commodity che si vuole
+      inserire nell'editor prezzi. A questo punto, inserire il prezzo della commodity
+      manualmente. Sono presenti 5 campi nella finestra di una nuova commodity:</p><div class="itemizedlist"><ul><li><p><b>Titolo</b> - il nome della commodity,
+          deve essere scelto dalla lista che compare premendo Seleziona....</p></li><li><p><b>Valuta</b> - la valuta in cui il prezzo è espresso.</p></li><li><p><b>Data</b> - data di validità del prezzo.</p></li><li><p><b>Tipo</b> - uno tra: <b>Offerta</b>
+          (il prezzo di acquisto del mercato), <b>Domanda</b> (il prezzo di
+          vendita del mercato), <b>Ultimo</b> (il prezzo dell'ultima
+          transazione), <b>Valore del capitale netto</b> (prezzo del fondo comune per
+          quota) o <b>Sconosciuto</b>. Le azioni e le valute normalmente forniscono
+          i loro prezzi come "offerta", "domanda" o "ultimo". I fondi comuni sono spesso
+          indicati come "valore del capitale netto". Per altre commodity, scegliere semplicemente
+          "sconosciuto". Questa opzione è solo a scopo informativo e non è utilizzata da
+          GnuCash.</p></li><li><p><b>Prezzo</b> - il prezzo di una unità di questa
+          commodity.</p></li></ul></div><p>Esempio di come aggiungere la commodity AMZN dall'Editor prezzi,
+      con un valore iniziale di €40,50 per azione.</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_peditor.png" alt="Editor prezzi"><div class="caption"><p>Aggiunta della commodity AMZN all'editor prezzi, impostando un
+          valore iniziale di €40,50 per azione.</p></div></div></div><p>Premere OK quando si è finito. Una volta eseguita
+      l'impostazione iniziale della commodity nell'editor prezzi, non sarà necessario effettuarlo
+      di nuovo, anche nell'eventualità che si utilizzi questa commodity in un altro conto.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest-stockprice-manual2"></a>8.6.2. Impostazione manuale del prezzo delle azioni</h3></div></div><p>Se il prezzo della commodity (azione) cambia, è possibile aggiustarne il valore
+      dall'editor prezzi, selezionando poi la commodity, premendo il pulsante
+      modifica e inserendo il nuovo prezzo.</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_peditor2.png" alt="Editor prezzi"><div class="caption"><p>La finestra principale dell'editor prezzi, che mostra la lista di tutte
+          le commodity inserite.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest-stockprice-auto2"></a>8.6.3. Configurazione per la ricezione automatica delle quotazioni</h3></div></div><p>Se si possiedono più di due commodity, ci si stancherà presto di doverne
+      aggiornare i prezzi costantemente. GnuCash è in grado di scaricare automaticamente
+      i prezzi più recenti delle proprie commodity utilizzando Internet. Questo avviene
+      grazie al modulo di Perl denominato Finance::Quote, che deve essere installato
+      per poter attivare questa funzione.</p><p>Per determinare se il modulo Perl Finance::Quote è già installato sul
+      proprio sistema, scrivere nel terminale “perldoc Finance::Quote” e
+      controllare se è disponibile la documentazione. Se questa è presente, allora
+      il modulo è installato, contrariamente no.</p><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="invest-stockprice-auto-install3"></a>8.6.3.1. Installare Finance::Quote</h4></div></div><p>Per installare Finance::Quote chiudure da subito le sessioni di GnuCash
+        in esecuzione. Trovare poi la cartella in cui GnuCash è installato
+        cercando la stringa “gnc-fq-update” (senza gli apostrofi).
+        Spostarsi in quella directory, aprire una finestra del terminale e eseguire come root 
+        il comando “gnc-fq-update”(senza gli apostrofi). Verrà così avviata
+        una sessione di aggiornamento Perl CPAN che cercherà e installerà, attraverso Internet,
+        il modulo Finance::Quote nel sistema. Il programma gnc-fq-update program è interattivo: comunque,
+        con la maggior parte dei sistemi basterà rispondere “no” alla prima domanda: “Are you
+        ready for manual configuration? [yes]” e l'aggiornamento continuerà automaticamente
+        da questo punto.</p><p>Dopo il completamento dell'installazione, occorre avviare il programma di prova “gnc-fq-dump”,
+        nella stessa directory, distribuito con GnuCash per verificare se
+        Finance::Quote è installato e se funziona a dovere.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Se non ci si sente sicuri nell'esecuzione di questa procedura, è possibile
+          spedire una email alla GnuCash-user mailing list
+          (<tt>&lt;<a href="mailto:gnucash-user@gnucash.org">gnucash-user@gnucash.org</a>&gt;</tt>) per richiedere assistenza oppure andare sul canale
+          GnuCash IRC su irc.gnome.org. E' comunque possibile saltare questa procedura e aggiornare manualmente 
+          i prezzi delle proprie azioni.</p></td></tr></table></div></div><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="invest-stockprice-auto-configure3"></a>8.6.3.2. Impostare i titoli per le quotazioni online</h4></div></div><p>Con il modulo Finance::Quote installato e correttamente funzionante, si devono impostare
+        i propri titolo in GnuCash al fine di utilizzare questa funzione per ottenere automaticamente le informazioni
+        aggiornate sui prezzi. Ogni qualvolta si intende creare dei nuovi titoli o modificarne di già esistenti, 
+        utilizzare la funzione Strumenti -&gt; Editor titoli, per modificare il titolo
+        e controllare il pulsante <b>Ricevi quotazioni</b>. Sarà ora possibile modificare l'impostazione
+        per il <b>Tipo di fonte</b>, il menu a comparsa per indicare la fonte(i) specifica e il
+        <b>Fuso orario</b> per le quotazioni. Al termine delle modifiche, premere <b>Chiudi</b> 
+        per chiudere la finestra dell'editor titoli e tornare all'editro prezzidi; premere poi il pulsante Ricevi 
+        quotazioni per aggiornare i prezzi delle azioni con Internet.</p><p>Il comando “gnucash --add-price-quotes $HOME/gnucash-filename”
+        può essere utilizzato per prelevare il prezzo corrente delle proprie azioni. Il file specificato
+        “$HOME/gnucash-filename” dipende dal nome e della posizione del proprio file dei dati.
+        Questo può essere determinato dal nome visualizzato nella cornice in alto della finestra di
+        GnuCash, prima del simbolo “-”. Il nome del file può anche essere trovato in “File -&gt;”:
+        il primo elemento della lista, a cui è associato il numero 1, è il nome del file attualmente aperto.</p><p>Questa procedura può essere automatizzata creando un comando di crontab. Per esempio,
+        per aggiornare il proprio file Venerdì sera (alle 16:00) dopo la chiusura della borsa (l'orario può
+        essere diverso a seconda del fuso), è possibile aggiungere il comando seguente alla lista del crontab:</p><p>0 16 * * 5 gnucash --add-price-quotes $HOME/gnucash-filename &gt;
+        /dev/null 2&gt;&amp;1</p><p>Si ricordi che i “prezzi” dei fondi comuni rappresentano dei “valori di capitale
+        netto(NAV)” e richiedono diverse ore dopo la chiusura dei mercati per essere disponibili. Se i NAV vengono scaricati 
+        prima del giorno in cui vengono determinati, saranno ricevuti i valori del giorno precedente.</p></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest-stockprice-view2"></a>8.6.4. Mostrare i valori delle quotazioni</h3></div></div><p>La finestra principale del conto, per default, mostra esclusivamente la quantità
+      di ogni commodity che si possiede, nella colonna con l'intestazione
+      <b>Totale</b>. Nel caso delle azioni, questa commodity è rappresentata dal
+      numero di quote. Spesso, comunque, si desidera visualizzare il valore delle proprie azioni
+      in termini di valuta. Questo è possibile selezionando la linguetta denominata “conti”,
+      cliccando sul pulsante Opzioni nella barra del titolo (la piccola freccia
+      verso il basso nel lato destro della finestra principale) e selezionando l'opzione di visualizzazione
+      del campo “Totale (EUR)”. Verr inserita una nuova colonna, nella finestra principale, intitolata
+      <b>Totale (EUR)</b> che esprimerà il valore di tutte le commodity nella valuta del resoconto.</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_stockvalue.png" alt="Visualizzazione del valore delle azioni"><div class="caption"><p>Visualizzazione del valore di un'azione nella finestra principale utilizzando
+          il Totale nelle opzioni della valuta del resoconto.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest-stockprice-report"></a>8.6.5. Selezionare la "fonte del prezzo" nei resoconti del valore delle azioni</h3></div></div><p>La maggior parte dei resoconti per le attività forniti da GnuCash presentano diverse opzioni che premettono di
+      configurare e modificare un certo numero di parametri dei resoconti. La finestra delle opzioni viene visualizzata 
+      selezionando la linguetta del resoconto e cliccando sull'icona Opzioni sulla barra degli
+      strumenti o selezionando il menu <b>Modifica -&gt; Opzioni resoconto</b>. La linguetta "Generale" nella
+      finestra che verrà aperta, contiene vari parametri relativi al resoconto; uno di questi è la "Fonte del prezzo" 
+      che permette di scegliere fra tre metodi alternativi per determinare il prezzo delle azioni riportato nel 
+      resoconto:</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_stockvalue_report_options.png" alt="Determinare le fonti dei prezzi delle azioni per i resoconti"><div class="caption"><p>Determinazione del valore di un'azione in un resoconto
+          impostando l'opzione della fonte del prezzo.</p></div></div></div><div class="itemizedlist"><ul><li><p><b>Media pesata</b> - fornisce un grafico del prezzo
+          pesato su tutte le <b>transazioni</b>. <b>NON</b> 
+          verrà considerato il prezzo definito nell' editor prezzi.</p></li><li><p><b>Più recente</b> - visualizza il valore delle azioni
+          nel tempo basandosi unicamente sul prezzo <b>più recente</b>
+          disponibile dall'editor dei prezzi. Il prezzo che figura nelle
+          transazioni <b>NON</b> è considerato.</p></li><li><p><b>Più vicino temporalmente</b> - il grafico è basato
+          esclusivamente sui prezzi disponibili nell'editor prezzi. Il valore
+          delle proprie azioni a ogni passo temporale è calcolato in base
+          al valore più vicino temporalmente disponibile nell'editor 
+          dei prezzi.</p></li></ul></div><div class="screenshot"><div class="mediaobject"><img src="figures/invest_stockvalue_report.png" alt="Un istogramma delle attività ottenuto basandosi sul prezzo 
+            Più vicino temporalmente."><div class="caption"><p>Prevedere quale valore avrebbero avuto le proprie azioni
+          sui mercati azionari.</p></div></div></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="invest-buy-stock1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="invest-sell1.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">8.5. Acquistare le quote </td><td width="20%" align="center"><a accesskey="u" href="chapter_invest.html">Risali</a></td><td width="40%" align="right"> 8.7. Vendere le azioni</td></tr></table></div></body></html>

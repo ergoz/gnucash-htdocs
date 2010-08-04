@@ -1,0 +1,81 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>4.5. Reconciliation</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_txns.html" title="Chapter 4. Transactions"><link rel="previous" href="txns-shortcuts1.html" title="4.4. Using Entry Shortcuts"><link rel="next" href="txns-sxn1.html" title="4.6. Scheduled Transactions"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">4.5. Reconciliation</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="txns-shortcuts1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 4. Transactions</th><td width="20%" align="right"> <a accesskey="n" href="txns-sxn1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="txns-reconcile1"></a>4.5. Reconciliation</h2></div></div><p>Transactions are typically checked against bank statements - a
+    process known as "reconciliation". GnuCash keeps track of the
+    reconciliation status of each transaction.</p><p>The reconciliation status of a transaction is shown by the
+    reconciliation (R) field. 'y' indicates that a transaction has been
+    reconciled, 'n' indicates that it has not, and 'c' indicates that it has
+    been cleared, but not reconciled. You can toggle the reconciliation status
+    between 'n' and 'c' by clicking in the (R) field; you can set it to 'y' by
+    using the Reconciliation Window.</p><p>At the bottom of the account window, there are two running totals:
+    'Balance', and 'Cleared'. 'Cleared' should correspond to how much money
+    the bank thinks you have in your account, while 'Balance' includes
+    outstanding transactions.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="txns-reconcile-window2"></a>4.5.1. Reconcile Window</h3></div></div><p>The Reconciliation Window is used to reconcile a GnuCash account
+      with a statement that a bank or other institution has sent you.
+      Reconciliation is useful not only to double-check your records against
+      those of your bank, but also to get a better idea of outstanding
+      transactions, e.g. uncashed checks.</p><p>At the bottom of the account window, there are two running
+      balances: the "cleared and reconciled" balance, and the "total" balance.
+      The "cleared and reconciled" balance should correspond to how much money
+      the bank thinks you have in your account, and the "total" balance
+      includes outstanding transactions.</p><p>For example, when you write a check for something, you should
+      enter the transaction into GnuCash. The reconciliation (R) field of the
+      transaction will initially contain n (new). Your new entry will
+      contribute to the "total" balance, but not to the "cleared and
+      reconciled" balance. Later, if you think that the check has been cashed,
+      you might click on the transaction's R field to change it to c
+      (cleared). When you do this, the "cleared and reconciled" balance will
+      change to include this amount. When the bank statement arrives, you can
+      then compare it to what you've recorded in GnuCash in the Reconciliation
+      window. There, you will be able to change the R field to y (reconciled).
+      You cannot reconcile in the register window, you must use the
+      reconciliation window. Once a transaction has been marked "reconciled",
+      it can no longer be easily changed.</p><p>To use the Reconciliation Windows, select an account from the
+      account tree and click on <b>Actions</b> -&gt;
+      <b>Reconcile</b>. A window will appear in which you can
+      enter the reconcile information.</p><div class="screenshot"><div class="mediaobject"><img src="figures/txns_reconcile_window1.png" alt="Reconcile Window"><div class="caption"><p>The initial reconcile window.</p></div></div></div><div class="itemizedlist"><ul><li><p><b>Reconcile Info: Statement Date</b> - this is
+          the date of the statement you will be reconciling against.</p></li><li><p><b>Reconcile Info: Starting Balance</b> - this
+          is a non-editable item which displays the balance from the previous
+          reconciliation. It should match the starting balance in your
+          statement.</p></li><li><p><b>Reconcile Info: Ending Balance</b> - this is
+          the ending balance as it appears in the statement.</p></li><li><p><b>Reconcile Info: Include Sub-accounts</b> -
+          select this if you want to include the sub-accounts of the currently
+          selected account in this reconciliation.</p></li><li><p><b>Enter Interest Payment</b> - click here to
+          enter an interest transaction to the account to be
+          reconciled.</p></li></ul></div><p>Click on the Ok button, and you will see
+      the transactions listing reconcile window:</p><div class="screenshot"><div class="mediaobject"><img src="figures/txns_reconcile_window2.png" alt="Reconcile Window"><div class="caption"><p>The transactions listing in the reconcile
+          window.</p></div></div></div><p>The two lists called <b>Funds In</b> and
+      <b>Funds Out</b> lists all the unreconciled transactions.
+      The 'R' columns show whether the transactions have been cleared or
+      reconciled.</p><p>Now, examine each item on the bank statement, and look for the
+      matching item in the Reconcile window.</p><p>If you cannot find one, then perhaps you forgot to enter a
+      transaction, or did not know that the transaction had happened. You can
+      use the New button on the tool bar, or the New menu item in the
+      Transaction menu, to open a register window and enter the missing
+      transaction. The new item will appear in the Reconcile window when you
+      press enter after entering the transaction.</p><p>When you find the item in the Reconcile window, compare the amount
+      in the item to the amount on the statement. If they disagree, you may
+      have made an error when you entered the transaction in GnuCash. You can
+      use the Edit button on the tool bar, or the
+      <b>Edit</b> menu item in the Transaction menu, to open a
+      register window and correct the transaction.</p><p>If the amounts agree, click on the item in the Reconcile window.
+      The 'R' column will change to 'y' (reconciled) from 'n' or 'c'.  You
+      may also use the up/down arrow keys to scroll to the item and then
+      press the space key.  This will also change the 'R' column to show the
+      item as reconciled.</p><p>You then repeat this for each item that appears on the bank
+      statement, verifying that the amounts match with the amounts in GnuCash,
+      and marking off transactions in GnuCash as they are reconciled.</p><p>At the bottom of the "Reconcile" window is a "Difference" field,
+      which should show $0.00 when you are done reconciling. If it shows some
+      other value, then either you have missed transactions, or some amounts
+      may be incorrect in GnuCash. (Or, less likely, the bank may have made an
+      error.)</p><p>When you have marked off all the items on the bank statement, and
+      when the difference is $0.00, press the Finish button on the tool bar or
+      select Finish from the Reconcile menu. The Reconcile window will close.
+      In the Register window, the R field of the reconciled transactions will
+      change to 'y'.</p><p>In this case, we have not received all the information yet, so we
+      simply press the Postpone, so we can continue at
+      a later stage. Observe that the 'R' column indicates we cleared ('c')
+      two transactions. They have not been reconciled yet, but we have
+      verified these two transactions so they have been marked as cleared. If
+      you look at the status bar at the bottom of the account register, you
+      will see a summary of what has been reconciled and what has been cleared
+      (<b>Cleared:USD 954.79 Reconciled:USD 0.00</b>)</p><div class="screenshot"><div class="mediaobject"><img src="figures/txns_reconcile_window3.png" alt="Checking account"><div class="caption"><p>The Checking account after postponed the
+          reconciliation.</p></div></div></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="txns-shortcuts1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="txns-sxn1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">4.4. Using Entry Shortcuts </td><td width="20%" align="center"><a accesskey="u" href="chapter_txns.html">Up</a></td><td width="40%" align="right"> 4.6. Scheduled Transactions</td></tr></table></div></body></html>

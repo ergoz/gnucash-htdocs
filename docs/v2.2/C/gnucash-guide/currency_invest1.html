@@ -1,0 +1,40 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>10.7. Tracking Currency Investments (How-To)</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_currency.html" title="Chapter 10. Multiple Currencies"><link rel="previous" href="currency_purchase1.html" title="10.6. Recording Purchases in a Foreign Currency (How-To)"><link rel="next" href="currency_reconcile1.html" title="10.8. Reconciling Statements in a Foreign Currency (How-To)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">10.7. Tracking Currency Investments (How-To)</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="currency_purchase1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 10. Multiple Currencies</th><td width="20%" align="right"> <a accesskey="n" href="currency_reconcile1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="currency_invest1"></a>10.7. Tracking Currency Investments (How-To)</h2></div></div><p>Currency investment is when you decide to invest in different
+    countries currency, and hope that their currency will raise in value
+    relative your own currency.</p><p>When you enter these transactions into GnuCash, you will have to
+    decide on how much details you would like to have.</p><p>If you are not interested in details at all, a very simple account
+    structure would be enough. Something like this;</p><div class="literallayout"><p><br>
+    Assets:Investments:Currency:Bank (USD)<br>
+    Assets:Investments:Currency:XXX (XXX)</p></div><p>But, if you do want to be able to track the Capital Gains or Losses,
+    as well as the various fees, you do need a bit more complexed layout.
+    Something like this;</p><div class="literallayout"><p><br>
+    Assets:Investments:Currency:Bank                    (USD)<br>
+    Assets:Investments:Currency:Currency Bank:XXX       (XXX)<br>
+    Expenses:Investments:Currency:Currency Bank:XXX     (XXX)<br>
+    Income:Investments:Currency Bank:Capital Gains:XXX  (XXX)</p></div><p>Where XXX is the currency you are investing in.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">
+       There is currently (30 April 2006) a small bug ( 
+       <a href="http://bugzilla.gnome.org/show_bug.cgi?id=340041" target="_top"><i>340041</i>
+       </a>) in GnuCash, that makes it impossible to track currency investments 
+       capital gains. 
+    </p></td></tr></table></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="currency_invest12"></a>10.7.1. Purchasing a currency investment</h3></div></div><p>A typical purchase order might be something like this, seen from
+      the Assets:Investments:Currency:Bank.</p><p><div class="table"><p><b>Table 10.1. Buying a currency with a Split Transaction Scheme</b></p><table summary="Buying a currency with a Split Transaction Scheme" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td><b>Account</b></td><td><b>Deposit</b></td><td><b>Withdrawal</b></td></tr><tr><td>Assets:Investments:Currency:Bank</td><td> </td><td>Invested Amount</td></tr><tr><td>Expenses:Investments:Currency:Currency Bank:XXX</td><td>Exchange Fee</td><td> </td></tr><tr><td>Assets:Investments:Currency:XXX</td><td>Invested Amount - Exchange Fee</td><td> </td></tr></tbody></table></div>You should get an Exchange Rate window popping up when you
+      leave the last row in the split above (Currency Transaction). If this
+      window do not pop up, right click on the row, and select <b>Edit
+      Exchange Rate</b>. In the Exchange Rate window you specify the
+      exchange rate you got from the bank.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="currency_invest13"></a>10.7.2. Selling a currency investment</h3></div></div><p>Entering an currency you are selling is done in the same way as
+      buying one except the you are now transfering money from the Currency
+      account to your Savings account (very much similar to (<a href="invest-sell1.html" title="8.7. Selling Shares">Selling Shares</a>).</p><p>The proper recording of the currency sale *must* be done using a
+      split transaction. In the split transaction, you must account for the
+      profit (or loss) as coming from an Income:Capital Gains account (or
+      Expense:Capital Loss). To balance this income, you will need to enter
+      the Currency asset twice in the split. Once to record the actual sale
+      (using the correct amount and correct exchange rate) and once to balance
+      the income profit (setting the amount to 0).</p><p>In short, a selling Currency transaction should look something
+      like below, seen again from the Assets:Investments:Currency:Bank.</p><div class="table"><p><b>Table 10.2. Selling a currency with a Split Transaction Scheme</b></p><table summary="Selling a currency with a Split Transaction Scheme" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td><b>Account</b></td><td><b>Deposit</b></td><td><b>Withdrawal</b></td></tr><tr><td>Assets:Investments:Currency:Bank</td><td>Sold Amount - Exchange Fee</td><td> </td></tr><tr><td>Expenses:Investments:Currency:Currency Bank:XXX</td><td>Exchange Fee</td><td> </td></tr><tr><td>Assets:Investments:Currency:XXX</td><td> </td><td>Sold Amount</td></tr><tr><td>Income:Investments:Currency Bank:Capital
+              Gains:XXX</td><td>[LOSS]</td><td>PROFIT</td></tr><tr><td>Assets:Investments:Currency:XXX</td><td>PROFIT (with To Amount = 0)</td><td>[LOSS (with To Amount = 0) ]</td></tr></tbody></table></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">
+           There is currently (30 April 2006) a small bug ( 
+
+          <a href="http://bugzilla.gnome.org/show_bug.cgi?id=340041" target="_top"><i>340041</i>
+          </a>
+
+           ) in GnuCash, that makes it impossible to track currency investments capital gains. 
+      </p></td></tr></table></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="currency_purchase1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="currency_reconcile1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">10.6. Recording Purchases in a Foreign Currency (How-To) </td><td width="20%" align="center"><a accesskey="u" href="chapter_currency.html">Up</a></td><td width="40%" align="right"> 10.8. Reconciling Statements in a Foreign Currency (How-To)</td></tr></table></div></body></html>

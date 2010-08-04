@@ -1,0 +1,106 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>5.4. Creare un nuovo conto</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="help.html" title="GnuCash Manuale di aiuto"><link rel="up" href="setup-accounts.html" title="Capitolo 5. Impostare, modificare e lavorare con i conti"><link rel="previous" href="chart-edit.html" title="5.3. Modificare una struttura dei conti"><link rel="next" href="acct-edit.html" title="5.5. Modificare un conto"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.4. Creare un nuovo conto</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="chart-edit.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 5. Impostare, modificare e lavorare con i conti</th><td width="20%" align="right"> <a accesskey="n" href="acct-edit.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="acct-create"></a>5.4. Creare un nuovo conto</h2></div></div><p>La finestre di dialogo delle proprietà <b>Nuovo conto</b> consta di due linguette, quella 
+         <b>Generali</b> e quella del <b>Bilancio d'apertura</b>. Si accede a questa finestra 
+         andando in<b>File -&gt; Nuovo conto...</b> o premendo l'icona <b>Nuovo</b> nella barra 
+         strumenti dalla finestra della visualizzazione ad albero dei conti.
+        </p><p>Creare un nuovo conto richiede la pianificazione di alcuni dettagli che vengono inseriti nella finestra di dialogo
+        per il nuovo conto. </p><div class="itemizedlist"><ul><li><p>Il tipo di conto di cui si ha bisogno.</p></li><li><p>Dove si deve posizionare nella struttura dei conti.</p></li><li><p>Se è previsto un bilancio preventivo.</p></li><li><p>Se c'è la necessità di una commodity (titolo/valuta) per il conto.</p></li><li><p>Se si ha bisogno dell'aggiornamento online del prezzo della commodity.</p></li></ul></div><p>Questi dettagli sono descritti nel seguito.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="gen-info"></a>5.4.1. Linguetta delle informazioni generali</h3></div></div><p>La linguetta "Generali" permette l'accesso alle informazioni di base del
+          conto. Fornisce un modo di collegare il conto alle informazioni sulle azioni se si tratta
+          di un tipo di conto per la valuta, per i fondi comuni o per le azioni.
+          Qui, il conto, può anche essere marcato come un conto segnaposto; viene inoltre mostrato se
+          è identificato come conto relativo alle tasse (che è configurato attravesro il menu «Modifica
+          -&gt; Opzioni tasse»).
+          </p><p>Sono presenti sei riquadri nella sezione Identificazione di questa linguetta.</p><p>Il riquadro superiore contiene le informazioni sul conto.</p><div class="orderedlist"><ol type="1"><li><p><b>Nome conto:</b> immettere qui un nome per il conto come conto corrente 
+              bancario primario.</p></li><li><p><b>Codice conto:</b> inserire un codice del conto opzionale come descritto
+              nella sezione "Come creare una struttura dei conti".</p></li><li><p><b>Descrizione:</b> inserire una descrizione opzionale per il conto.</p></li><li><p><b>Titolo/valuta:</b> </p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Il campo tipo alla voce <b>Seleziona titolo</b> dipende dalla selezione fatta 
+                 nel pannello <b>Tipo di conto</b> nella schermata <b>Nuovo conto</b>.</p></td></tr></table></div><div class="itemizedlist"><ul><li><p>Per i conti diversi da azioni e fondi comuni questa dovrebbe essere la valuta predefinita
+               cioè EUR (Euro) o il simbolo della propria valuta locale. Se questo conto è per una valuta estera, premere
+               il pulsante <b>Seleziona...</b> per scegliere una valuta differente dalla lista a comparsa
+               delle valute.</p></li><li><p>Per i conti contenenti azioni e fondi comuni selezionare dapprima "azioni" o "fondi comuni" 
+               nel riquadro del <b>Tipo di conto</b>, poi il <b>Conto padre</b>, infine usare 
+               il pulsante <b>Seleziona...</b>, per scegliere il tipo (normalmente il mercato dove il titolo
+               viene scambiato) e il titolo dalla "finestra scegliere titolo".</p><p>Se il titolo o il fondo di cui si ha bisogno non compare nella lista ma si è in possesso del tipo
+               corretto sarà necessario creare il titolo o il fondo. Per creare una commodity per i conti di fondi comuni
+               e azioni, selezionare <b>Nuovo...</b> nella schermata di scelta del titolo/valuta, per aprire
+               la schermata di<b>Nuovo titolo:</b>. Le opzioni qui presenti sono descritte in dettaglio nella
+               sezione sulla modifica del titolo<a href="tool-security-edit.html" title="7.7. Modificare i titoli">Sezione 7.7</a>.
+               Inserire un nome, un simbolo, selezionare il tipo e infine premere <b>Chiudi</b> per creare il titolo.
+               Dopo che il titolo è stato creato, selezionare <b>Tipo:</b> (normalmente la borsa dove il titolo 
+               viene scambiato), il nome nella lista a comparsa di <b>Valuta/titolo:</b> e <b>Chiudi</b>
+               per chiudere la finestra.</p></li></ul></div></li><li><p><b>Frazione minima:</b> scegliere la frazione minima che verrà registrata.</p></li><li><p><b>Note:</b> riquadro per inserire del testo liberamente; è utilizzato per qualsiasi
+              nota aggiuntiva relativa al conto.</p></li></ol></div><p>Sotto a questi pannelli, sono presenti dei riquadri: uno mostra se il conto è
+	    <b>Relativo alle tasse</b> (impostabile tramite il menu «Modifica
+          -&gt; Opzioni tasse»), mentre gli altri due permettono di marcare il conto come
+            <b>Segnaposto</b> e <b>Nascosto</b>.
+           </p><p>L'opzione <b>Relativo alle tasse</b> permette di marcare il conto per essere incluso
+           nelle esportazioni relative alle tasse. Questo attributo dovrebbe solamente essere impostato per i conti
+           delle entrate e delle uscite. Consultare la sezione sui resoconti delle tasse e sull'esportazione dei file
+           TXF nel capitolo sui resoconti (<a href="report-general.html" title="8.1. Resoconti generali">Sezione 8.1</a>).</p><p>L'opzione <b>Segnaposto</b> indica che il conto rappresenta solamente un segnaposto nella
+           struttura; è utilizzato solamente per permettere l'impostazione di una struttura di conti. Inoltre, se il conto
+           è un segnaposto, non potrà contenere delle transazioni: le transazioni potranno essere inserite solamente negli
+           eventuali suoi sottoconti.</p><p>L'opzione <b>Nascosto</b> indica a GnuCash di nascondere questo conto (e ogni suo sottoconto)
+           nella struttura dei conti e di non visualizzarlo nella lista a comparsa dei conti nella finestra del registro. 
+           Per disabilitare questa opzione occorrerà andare in  <b>Visualizza -&gt; Filtra per...</b> nella finestra 
+           della struttura dei conti, e abilitare l'opzione <b>visualizza i conti nascosti</b>. In questo
+           modo sarà possibile selezionare il conto e riaprire questa finestra.</p><p>Il riquadro seguente contiene una lista di <b>Tipi di conto</b>. Selezionarne uno in base alla
+           descrizione fornita nella sezione sui tipi di conti di GnuCash.</p><p>Il riquadro successivo contiene la struttura ad albero dei conti da cui scegliere un <b>conto padre</b>. 
+	   Per creare una nuova struttura dei conti selezionare l'opzione nuovo conto di livello principale. Se il conto padre è di un 
+           certo tipo , allora alcune delle scelte nella tipologia del conto non saranno selezionabili. Per esempio, se il conto
+           padre è "Attività" allora i conti  "Capitali", "uscite" e "entrate" non saranno selezionabili; in questo modo si aiuta 
+           l'utente a mantenere una corretta struttura dei conti.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="Online-price-setup"></a>5.4.2. Procedura per abilitare l'aggiornamento dei prezzi
+       online.</h3></div></div><div class="itemizedlist"><ul><li><p>Si crei il conto per il fondo comune o per le azioni impostando il campo "titolo/valuta", come
+		descritto nel seguito.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Suggerimento</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Quando si creano questi tipi di conti, si consiglia di creare anche dei conti delle entrate
+                 per registrare i dividendi, i guadagni in capitale (nel lungo e nel breve periodo) e i conti per le
+                 uscite per registrare le commissioni e le perdite ( se si considerano le perdite come uscite).</p></td></tr></table></div></li><li><p>Si creino il fondo comune o le azioni sia con utilizzando l'editor di titoli per le azioni o fondi 
+               esistenti o la finestra per il nuovo titolo/valuta.</p><p>Selezionare l'opzione <b>Ricevi quotazioni online</b>, il <b>tipo di fonte per le quote</b> 
+               e il <b>Fuso orario.</b></p><p>Per la ricezione delle quotazioni via internet, è necessario avere abilitato le opzioni per la ricezione 
+               delle quote online e il fuso orario.</p><div class="itemizedlist"><ul><li><p><b>Ricevi quotazioni online</b> - questa opzione permette di abilitare lo specifico titolo o azioni alla
+               ricezione delle quotazioni da una fonte online.</p></li><li><p><b>Tipo di fonte per le quote</b> - selezionare, fra le tre opzioni disponibili, il tipo di
+               fonte da cui ricevere le quotazioni. Le fonti <b>Multi-riga</b> quali "Europe" possono essere usate
+               quando si desidera superare i problemi di connessione con un unica fonte. Scegliendo invece <b>Singola</b>,
+               verranno ricercate informazioni solo dalla fonte specificata.</p><p>Dopo aver selezionato il tipo di fonte per le quotazioni, selezionare un elemento della relativa lista a a comparsa.
+               Attualmente fra le fonti disponibili e supportate, si ricordano: Yahoo, Yahoo Europe, Fidelity
+               Investments, T. Rowe Price, the Vanguard Group, the Australian Stock Exchange
+               (ASX) e TIAA-CREF.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Si noti che Yahoo fornirà le quotazioni per diversi fondi comuni compresi Fidelity, T.Rowe Price e Vanguard, e che 
+               i prezzi indicati da Yahoo dovrebbero essere identici a quelli che è possibile reperire nei siti di origine.</p></td></tr></table></div><p>Se si sceglie Yahoo Europe o Europe, è necessario indicare il codice della borsa per il titolo,
+               come, per esempio, PA per Parigi, BE per Berlino ecc... Esempio: 12150.PA (un titolo Peugeot sul mercato di
+               Parigi). <a href="apas01.html#Code4EurMrks" title="Tabella A.1. Lista dei codici delle borse per i mercati Europei">Tabella A.1. Lista dei codici delle borse per i mercati Europei</a> elenca i codici per i vari mercati Europei.</p><p>Pseudo-simboli per i fondi TIAA-CREF sono elencati nella tabella <a href="apas02.html#PsSymbs-TIAA-CREF" title="Tabella A.2. Pseudo simboli da utilizzare per le quotazioni TIAA-CREF">Tabella A.2. Pseudo simboli da utilizzare per le quotazioni TIAA-CREF</a>.
+              </p></li><li><p><b>Fuso orario</b> - selezionare il fuso orario per la quota che
+               si desidera ricevere. Per esempio, Yahoo fornisce le quotazioni con il fuso orario
+               della costa orientale degli Stati Uniti, quindi occorre scegliere America/New York 
+               se si utilizza questa fonte per le quotazioni.</p></li></ul></div></li><li><p>Per sapere se il modulo di Perl Finance::Quote è già installato nel sistema,
+				 digitare “perldoc Finance::Quote” in una finestra del terminale
+				 e verificare se c'è qualche documentazione disponibile. Se c'è la documentazione
+				 allora il modulo è installato altrimenti no.</p><p>Per installare Finance::Quote;</p><div class="orderedlist"><ol type="1"><li><p>Chiudere ogni sessione di GnuCash aperta.</p></li><li><p>Trovare la cartella dove GnuCash è installato cercando la stringa “gnc-fq-update”
+                (senza le virgolette).</p></li><li><p>Spostarsi in questa directory, aprire una finestra del terminale ed eseguire come root 
+               il comando “gnc-fq-update” (senza le virgolette). Si aprirà una sessione di aggiornamento
+               di Perl CPAN che installerà nel sistema, attraverso internet, il modulo Finance::Quote. Il programma 
+               gnc-fq-update è interattivo, comunque, con la maggior parte dei sistemi, si potrà rispondere “no”
+               alla prima domanda: “Eseguire la configurazione manuale? [sì]” e l'aggiornamento continuerà 
+               automaticamente da questo punto.</p></li></ol></div><p>Quando l'installazione è terminata, eseguire il programma di test “gnc-fq-dump”, nella stessa 
+             directory, distribuito con GnuCash per verificare se Finance::Quote è installato e funziona correttamente.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Se non ci si sente sicuri nell'esecuzione di questi passaggi, è possibile contattare la mailing
+              list degli utenti di GnuCash (<tt>&lt;<a href="mailto:gnucash-user@gnucash.org">gnucash-user@gnucash.org</a>&gt;</tt>) per chiedere aiuto o andare nell canale IRC 
+              di GnuCash su irc.gnome.org. E' anche possibile saltare questi passaggi e aggiornare manualmente i prezzi delle
+              proprie azioni.</p></td></tr></table></div></li><li><p>Selezionare una commodity nell'editor dei prezzi.</p></li><li><p>Selezionare Ricevi quotazioni nella finestra di modifica prezzo.</p></li><li><p>Controllare l'ultimo prezzo per il titolo selezionato.</p></li></ul></div><p>Se si desidera aggiornare le quotazioni dalla linea di comando, è possibile farlo con il comando 
+          seguente:</p><p><b><tt>gnucash --add-price-quotes &lt;gnucash-file-name&gt;</tt></b>
+          </p><p>Il comando <b><tt>gnucash --add-price-quotes &lt;gnucash-file-name&gt;</tt></b>
+			 può essere utilizzato per ottenere il prezzo corrente delle proprie azioni. Il file specificato
+			 “&lt;gnucash-file-name&gt;” dipenderà dal nome e dalla posizione del proprio file 
+			 dei dati. Questo può essere individuato dal nome visualizzato nella cornice in alto nella finestra
+			 di GnuCash prima del “-”.  Il nome del file può anche essere trovato in “File -&gt;”
+          “lista a discesa”, il primo elemento, numerato 1, è il nome del file attualmente aperto.</p><p>Questa procedure può essere automatizzata creando un comando di crontab. Per esempio,
+        per aggiornare il proprio file Venerdì sera (alle 18:00) dopo la chiusura della borsa (l'orario può
+        essere diverso a seconda del fuso), è possibile aggiungere il comando seguente alla lista del crontab:</p><p>0 18 * * 5 gnucash --add-price-quotes $HOME/gnucash-filename &gt; /dev/null 2&gt;e1</p><p>Si ricordi che i “prezzi” dei fondi comuni rappresentano dei “valori di capitale
+        netto(NAV)” e richiedono diverse ore dopo la chiusura dei mercati per essere disponibili. Se i NAV vengono scaricati 
+        prima del giorno in cui vengono determinati, saranno ricevuti i valori del giorno precedente.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="open-balance"></a>5.4.3. Bilanci di apertura</h3></div></div><p>La linguetta del bilancio di apertura è visibile solo quando si crea un nuovo conto.
+          Il bilancio di apertura è utilizzato per registrare il saldo iniziale di un conto. Questo 
+          permette di utilizzarlo in due differenti situazioni. Se si usa GnuCash per la prima volta
+          per registrare delle transazioni, può essere usato come saldo iniziale. Se i conti
+          sono chiusi alla fine di un periodo e dei nuovi conti sono creati, è utilizzato per
+          chiudere e trasferire i saldi in avanti.</p><p>In questa linguetta sono presenti tre riquadri. Quello superiore contiene le <b>Informazioni
+           sul saldo</b>.</p><div class="itemizedlist"><ul><li><p><b>Saldo:</b> immettere il saldo con cui inizializzare il conto.</p></li><li><p><b>Data:</b> scegliere qui la data con cui il bilancio di apertura deve essere 
+              registrato.</p></li></ul></div><p>Il riquadro successivo è quello del <b>Tipo di trasferimento</b>.</p><div class="itemizedlist"><ul><li><p><b>Utilizza il conto del capitale per i bilanci di apertura:</b> in questo modo si
+              trasferisce il bilancio di apertura per il conto da un conto standard del capitale chiamato bilanci di 
+              apertura.</p></li><li><p><b>Selezionare il conto di trasferimento:</b> questa opzione abilita il riquadro 
+              inferiore in modo che un conto differente possa essere utilizzato per trasferire il bilancio di 
+              apertura.</p></li></ul></div><p>L'ultimo riquadro è quello del <b>Conto di trasferimento</b>. Selezionare il conto da 
+          utilizzare per il bilancio d'apertura scegliendo fra quelli della lista nel riquadro.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="chart-edit.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="help.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="acct-edit.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">5.3. Modificare una struttura dei conti </td><td width="20%" align="center"><a accesskey="u" href="setup-accounts.html">Risali</a></td><td width="40%" align="right"> 5.5. Modificare un conto</td></tr></table></div></body></html>

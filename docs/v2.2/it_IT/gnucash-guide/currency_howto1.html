@@ -1,0 +1,47 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>10.5. Registrare e aggiornare i tassi di cambio per le valute (come fare)</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_currency.html" title="Capitolo 10. Valute multiple"><link rel="previous" href="currency_prefs1.html" title="10.4. Impostare le preferenze internazionali"><link rel="next" href="currency_purchase1.html" title="10.6. Registrare gli acquisti in valuta estera (come fare)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">10.5. Registrare e aggiornare i tassi di cambio per le valute (come fare)</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="currency_prefs1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 10. Valute multiple</th><td width="20%" align="right"> <a accesskey="n" href="currency_purchase1.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="currency_howto1"></a>10.5. Registrare e aggiornare i tassi di cambio per le valute (come fare)</h2></div></div><p>GnuCash è in grado di aggiornare i tassi di cambio delle valute in 
+    due modi, uno manuale e uno automatico. Nelle due sezioni seguenti
+    verranno illustrate entrambe le procedure.</p><p>Prima di iniziare, è bene dare uno sguardo alla struttura dei conti</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_main1.png" alt="Impostazione iniziale multi-valuta dei conti bancari"><div class="caption"><p>Impostazione iniziale di 3 conti bancari con valute 
+        differenti.</p></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="currency_howto_Manual"></a>10.5.1. Aggiornare manualmente i tassi di cambio</h3></div></div><p>Si apra l'editor dei prezzi andando in <b>Strumenti</b> -&gt;
+      <b>Editor prezzi</b>.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_BeforeGetOnlineQuotes.png" alt="Finestra dell'editor prezzi"><div class="caption"><p>Finestra dell'editor prezzi. </p></div></div></div><p>Scegliere il pulsante Aggiungi per aggiungere un
+      nuovo tasso di cambio per la valuta. Verrà aperta una finestra che permette di scegliere
+      la commodity per cui si vuole definire il tasso di cambio. Premere
+      Seleziona, impostare il <b>Tipo</b> a
+      valuta e il campo <b>Titolo/valuta</b> a EUR (Euro).
+      La finestra dovrebbe apparire simile a questa:</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_selectcurr.png" alt="Selezionare come commodity l'Euro"><div class="caption"><p>Finestra della scelta della commodity nell'editor dei prezzi</p></div></div></div><p>Premere Ok e nella finestra di scelta della 
+      commodity, impostare il tasso di cambio tra la commodity selezionata e
+      la valuta corrente. In questo esempio, si imposterà il tasso di cambio
+      a 1EUR uguale a 1USD.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_selectcomm.png" alt="Scelta della commodity"><div class="caption"><p>Finestra dell'editor prezzi per la scelta della commodity</p></div></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/currency_peditor.png" alt="Finestra dell'editor prezzi"><div class="caption"><p>La Finestra dell'editor prezzi dopo aver impostato
+          il tasso di cambio tra Euro e dollaro USA</p></div></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/currency_main2.png" alt="Struttura dei conti"><div class="caption"><p>Struttura dei conti dopo aver impostato il
+          tasso di cambio tra Euro e dollaro USA.</p></div></div></div><p>Si osservi che poiché non è stato impostato il tasso di cambio
+        per HKD, GnuCash non converte l'HKD in EUR. Questo verrà aggiunto nella sezione 
+        successiva.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="currency_howto_Auto"></a>10.5.2. Aggiornare automaticamente i tassi di cambio</h3></div></div><p>Nella sezione precedente è stato mostrato come sia possibile
+      definire manualmente un nuovo tasso di cambio per una valuta. Esiste 
+      però un metodo più semplice per ottenere lo stesso risultato.</p><p>Si apra la finestra dell'editor dei prezzi dal menu <b>Strumenti</b> -&gt;
+      <b>Editor prezzi</b>.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_peditor.png" alt="Finestra dell'editor prezzi"><div class="caption"><p>Finestra dell'editor prezzi prima di ottenere le
+          quotazioni online.</p></div></div></div><p>Premere il pulsante Ricevi quotazioni per caricare
+      automaticamente i vari tassi di cambio di cui si ha bisogno.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">
+         Se il pulsante Ricevi quotazioni è disabilitato, 
+         significa che il modulo di PerlFinance::Quote non è installato. 
+         Per informazioni su come installarlo, consultare
+         <a href="invest-stockprice1.html#invest-stockprice-auto2" title="8.6.3. Configurazione per la ricezione automatica delle quotazioni">Sezione 8.6.3</a>
+      </p></td></tr></table></div><p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_AfterGetOnlineQuotes.png" alt="Finestra dell'editor prezzi"><div class="caption"><p>Finestra dell'editor prezzi dopo aver ottenuto le 
+            quotazioni online. </p></div></div></div></p><p>GnuCash scaricherà autonomamente i tassi di cambio per
+      tutte le valute utilizzate nei vari conti. Questo accadrà ogni
+      qualvolta verrà premuto il pulsante Ricevi quotazioni
+      o se si è impostato GnuCash per scaricare automaticamente le quotazioni
+      o i tassi di cambio come descritto in <a href="invest-stockprice1.html#invest-stockprice-auto2" title="8.6.3. Configurazione per la ricezione automatica delle quotazioni">Sezione 8.6.3</a></p><p>Tornando ora alla struttura principale dei conti, si noterà che
+      GnuCash ha automaticamente convertito l'importo in HKD in EUR nei conti
+      padre che sono in Euro come anche nella colonna del Totale (EUR).
+      Inoltre i conti in dollari USA sono stati aggiornati con gli ultimi
+      tassi di cambio.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_main3.png" alt="Finestra dell'editor prezzi"><div class="caption"><p> Struttura dei conti dopo aver ottenuto le quotazioni
+          online.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="currency_howto_disable"></a>10.5.3. Come disabilitare il recupero della valuta</h3></div></div><p>Ogni volta che si crea un conto che utilizza una valuta diversa da quella predefinita,
+      verrà automaticamente abilitata la ricezione delle quotazioni online per quella stessa valuta.
+      Comunque, se in seguito il conto viene cancellato, GnuCash non disabiliterà automaticamente
+      la ricezione delle quotazioni.</p><p>
+        Quando sarà stato cancellato anche l'ultimo conto con una particolare valuta e non si vorrà 
+        ricevere più gli aggiornamenti sulla valuta, procedere nel seguente modo:
+      </p><div class="itemizedlist"><ul><li><p>aprire la finestra dei titoli selezionando
+          <b>Strumenti</b> -&gt; <b>Editor titoli</b>;</p></li><li><p>assicurarsi che sia attivata l'opzione <b>visualizza le valute 
+          Nazionali</b>;</p></li><li><p>espandere la riga denominata "CURRENCY";</p></li><li><p>fare doppio clic sulla valuta per cui si desidera disabilitare la
+          ricezione delle quotazioni;</p></li><li><p>deselezionare l'opzione <b>ricevi quotazioni online</b> e
+          premere «OK».</p></li></ul></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="currency_prefs1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="currency_purchase1.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">10.4. Impostare le preferenze internazionali </td><td width="20%" align="center"><a accesskey="u" href="chapter_currency.html">Risali</a></td><td width="40%" align="right"> 10.6. Registrare gli acquisti in valuta estera (come fare)</td></tr></table></div></body></html>

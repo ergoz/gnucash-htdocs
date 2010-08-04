@@ -1,0 +1,80 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>3.3. In pratica</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_accts.html" title="Capitolo 3. Conti"><link rel="previous" href="accts-types1.html" title="3.2. Conti in GnuCash"><link rel="next" href="chapter_txns.html" title="Capitolo 4. Transazioni"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.3. In pratica</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="accts-types1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 3. Conti</th><td width="20%" align="right"> <a accesskey="n" href="chapter_txns.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="accts-examples1"></a>3.3. In pratica</h2></div></div><p>Si procederà ora a descrivere il processo di creazione di una
+    <b>struttura dei conti</b> per la gestione delle finanze personali
+    utilizzando le informazioni apprese in questo capitolo.
+    Una <b>struttura dei conti</b> è semplicemente un
+    nuovo file di GnuCash in cui i propri conti vengono raggruppati
+    per tenere traccia delle proprie finanze. Per realizzare la struttura,
+    il primo passo consiste nel dividere le voci che si vogliono controllare
+    nei 5 conti base della contabilità. Questa procedura è semplice;
+    si proceda attraverso un esempio.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="accts-examples-situation2"></a>3.3.1. Esempio semplice</h3></div></div><p>Si assuma di avere acceso presso la banca un conto corrente e un conto 
+      di risparmio, e di essere assunti in un'azienda ricevendo quindi uno stipendio.
+      Si ipotizzi inoltre di possedere una carta di credito (Visa) e di pagare,
+      con cadenza mensile, dei servizi quali affitto, telefono ed elettricità.
+      E' inoltre indispensabile fare acquisti almeno di alimentari. Per ora non
+      è necessario sapere quanto denaro si ha in banca, quanto si deve
+      pagare per la carta di credito ecc... Si vuole, per ora, solo realizzare la struttura
+      che contiene tutti questi conti.</p><p>Le <b>attività</b> saranno costituite dal conto corrente
+      e dai risparmi in banca. Le <b>passività</b> saranno invece imputabili
+      alla carta di credito. Il <b>capitale</b> sarà invece la somma
+      tra i conti bancari e la carta di credito (non si hanno ancora a disposizione
+      gli importi per essi, ma si sa che esistono). Si ha anche una <b>entrata</b>
+      sotto forma di stipendio, e delle <b>uscite</b> identificabili come
+      spese varie in negozi, affitto, elettricità, telefono e tasse (statali, assistenza
+      sanitaria ecc...) che gravano sullo stipendio. Semplice vero?</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="accts-examples-toplevel2"></a>3.3.2. I conti base di livello principale</h3></div></div><p>Occorre ora decidere come raggruppare i conti. Probabilmente,
+      si vorranno raggruppare i conti delle attività in uno unico così come anche
+      quelli delle passività, del capitale, delle entrate e delle uscite. Questo
+      rappresenta il metodo più ovvio per creare una struttura dei conti in GnuCash
+      e si raccomanda di ragionare comunque sempre in questi termini.</p><p>Conviene iniziare con un file di GnuCash vuoto (non si selezioni
+      alcun conto predefinito) nel quale realizzare la struttura
+      (<b>File</b> -&gt; <b>Nuovo
+      conto...</b>).</p><div class="orderedlist"><ol type="1"><li><p>Nome conto <b>Attività</b> (tipo di conto
+          <b>Attività</b>, conto padre <b>nuovo conto di
+          livello principale</b>)</p><div class="screenshot"><div class="mediaobject"><img src="figures/accts_CreateAssetsAccount.png" alt="Creazione di un conto delle attività"><div class="caption"><p>Questa immagine mostra la finestra di creazione di un
+                  <b>conto</b> delle attività</p></div></div></div></li><li><p>Nome conto <b>Passività</b> (tipo di conto
+          <b>Passività</b>, conto padre <b>nuovo conto di
+          livello principale</b>)</p></li><li><p>Nome conto <b>Capitali</b> (tipo di conto
+          <b>Capitali</b>, conto padre <b>nuovo conto di
+          livello principale</b>)</p></li><li><p>Nome conto <b>Entrate</b> (tipo di conto
+          <b>Entrata</b>, conto padre <b>nuovo conto di
+          livello principale</b>)</p></li><li><p>Nome conto <b>Uscite</b> (tipo di conto
+          <b>Uscita</b>, conto padre <b>nuovo conto di
+          livello principale</b>)</p></li></ol></div><p>Quando tutti i conti di livello principale sono stati creati, la pagina principale
+      dei conti in GnuCash dovrebbe essere simile a questa:</p><div class="screenshot"><div class="mediaobject"><img src="figures/accts_toplevel.png" alt="I conti base di livello principale"><div class="caption"><p>Questa immagine mostra i conti base di livello principale.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="accts-examples-organization2"></a>3.3.3. Creare i sottoconti</h3></div></div><p>A questo punto si può creare la struttura ad albero dei conti partendo
+      dai conti a livello principale e aggiungendo dei sottoconti in grado di
+      contenere delle transazioni. Si noti come i conti per le tasse siano tutti
+      inseriti in un sottoconto denominato tasse. I conti e i sottoconti possono infatti a loro
+      volta contenere altri sottoconti: questo è utile quando si considera un 
+      gruppo di conti appartenenti a una stessa categoria (come i conti per le tasse in
+      questo esempio). <div class="orderedlist"><ol type="1"><li><p>Nome conto <b>Conto corrente</b> (tipo di conto
+            <b>Banca</b>, conto padre
+            <b>Attività</b>)</p></li><li><p>Nome conto <b>Conto risparmio</b> (tipo di conto
+            <b>Banca</b>, conto padre
+            <b>Attività</b>)</p></li><li><p>Nome conto <b>Visa</b> (tipo di conto
+            <b>Carta di credito</b>, conto padre
+            <b>Passività</b>)</p></li><li><p>Nome conto <b>Stipendio</b> (tipo di conto
+            <b>Entrata</b>, conto padre
+            <b>Entrate</b>)</p></li><li><p>Nome conto <b>Telefono</b> (tipo di conto
+            <b>Uscita</b>, conto padre
+            <b>Uscite</b>)</p></li><li><p>Nome conto <b>Elettricità</b> (tipo di conto
+            <b>Uscita</b>, conto padre
+            <b>Uscite</b>)</p></li><li><p>Nome conto <b>Affitto</b> (tipo di conto
+            <b>Uscita</b>, conto padre
+            <b>Uscite</b>)</p></li><li><p>Nome conto <b>Alimentari</b> (tipo di conto
+            <b>Uscita</b>, conto padre
+            <b>Uscite</b>)</p></li><li><p>Nome conto <b>Imposte</b> (tipo di conto
+            <b>Uscita</b>, conto padre
+            <b>Uscite</b>)</p></li><li><p>Nome conto <b>Statali</b> (tipo di conto
+            <b>Uscita</b>, conto padre
+            <b>Uscite:Imposte</b>)</p></li><li><p>Nome conto <b>Previdenza sociale</b> (tipo di
+            conto <b>Uscite</b>, conto padre
+            <b>Uscite:Imposte</b>)</p></li><li><p>Nome conto <b>Assistenza sanitaria</b> (tipo di conto
+            <b>Uscita</b>, conto padre
+            <b>Uscite:Imposte</b>)</p></li><li><p>Nome conto <b>Bilancio di apertura</b> (tipo di
+            conto <b>Capitali</b>, conto padre
+            <b>Capitali</b>)</p></li></ol></div></p><p>Dopo la creazione dei sottoconti aggiuntivi, il risultato finale
+      dovrebbe assomigliare a quello riportato di seguito:</p><div class="screenshot"><div class="mediaobject"><img src="figures/accts_tree.png" alt="La semplice struttura dei conti"><div class="caption"><p>Questa immagine mostra una semplice struttura dei conti.</p></div></div></div><p>Salvare ora la struttura dei conti creata con il nome
+      <tt>gcashdata_3</tt>, e anche come <tt>gcashdata_3emptyAccts</tt>,
+      dato che si continuerà a utilizzare questi file nei capitoli successivi.</p><p>E' stata appena creata una struttura di conti per tenere
+      traccia delle spese familiari. Con questa ossatura in posizione,
+      si può procedere a popolare i conti con delle transazioni; il prossimo capitolo si occuperà
+      approfonditamente di questo argomento.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="accts-types1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="chapter_txns.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">3.2. Conti in GnuCash </td><td width="20%" align="center"><a accesskey="u" href="chapter_accts.html">Risali</a></td><td width="40%" align="right"> Capitolo 4. Transazioni</td></tr></table></div></body></html>

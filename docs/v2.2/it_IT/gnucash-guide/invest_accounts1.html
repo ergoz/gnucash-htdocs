@@ -1,0 +1,80 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>8.2. Impostare i conti</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_invest.html" title="Capitolo 8. Investimenti"><link rel="previous" href="invest_concepts1.html" title="8.1. Concetti di base"><link rel="next" href="invest_int1.html" title="8.3. Conti che maturano interessi"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.2. Impostare i conti</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="invest_concepts1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 8. Investimenti</th><td width="20%" align="right"> <a accesskey="n" href="invest_int1.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="invest_accounts1"></a>8.2. Impostare i conti</h2></div></div><p>Per impostare i conti per gli investimenti in GnuCash, si possono
+    utilizzare le strutture predefinite o creare la propria struttura personalizzata. 
+    IL minimo da fare per tracciare gli investimenti consiste nell'impostare
+    un conto per ogni investimento. Comunque, come già visto nei precedenti capitoli,
+    è generalmente più logico creare un diagramma dei conti strutturato in modo
+    da raggruppare gli investimenti tra loro correlati. Per esempio, si potrebbero voler
+    raggruppare tutte le proprie azioni scambiate pubblicamente sotto un unico conto padre
+    con il nome della società di mediazione utilizzata per l'acquisto delle 
+    azioni stesse.</p><p>Indipendentemente da come è stata impostata la struttura dei conti, si ricordi che
+    è sempre possibile spostare i conti in seguito (senza perdere il lavoro svolto fino a 
+    quel punto); la struttura dei conti non deve quindi essere perfetta da subito.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest_predefined2"></a>8.2.1. Conti predefiniti</h3></div></div><p>Per utilizzare le strutture predefinite dei conti per gli investimenti,
+      si <b>deve</b> creare un nuovo file di GnuCash. In questo modo verrà
+      attivato il druido per la <b>Creazione di una nuova struttura dei conti</b>.
+      Dopo aver impostata la valuta da utilizzare, verrà richiesto di <b>scegliere
+      i conti da creare</b>. A questo punto, scegliere l'opzione "Conti investimenti" 
+      (assieme a qualsiasi altra scelta si voglia). Ipotizzando di scegliere solo i
+      “Conti investimenti”, verrà creata la struttura dei conti mostrata
+      qui sotto.</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_AccountsPredef.png" alt="Impostazione degli investimenti"><div class="caption"><p>Questa immagine mostra la schermata della linguetta "Conti" dopo la
+          creazione di un nuovo file e la scelta dei soli "conti investimenti". </p></div></div></div><p>Probabilmente sarà necessario aggiungere almeno il conto <b>Banca</b>
+      alla famiglia <b>Attività</b> e anche un conto <b>Capitali:Bilanci
+      d'apertura</b>, come è già stato spiegato nei capitoli precedenti. Non si dimentichi
+      di salvare il nuovo file creato con un nome adatto.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest_custom2"></a>8.2.2. Esempio di conti personalizzati</h3></div></div><p>E' anche possibile impostare la propria struttura dei conti personalizzata.
+      Quella riportata di seguito, rappresenta un esempio un po' più complicato
+      di impostazioni di GnuCash per tenere traccia dei propri investimenti; questa
+      impostazione presenta il vantaggio di raggruppare ogni investimento a seconda
+      della società di mediazione che si occupa dell'investimento. In questo modo
+      risulterà più facile confrontare i documenti che si ricevono dalla società di 
+      mediazione con i conti che si hanno in GnuCash e individuare subito 
+      le eventuali discrepanze. <div class="literallayout"><p><br>
+ Attività<br>
+    Investimenti<br>
+       Conto brokeraggio<br>
+          I*Trade<br>
+             Azioni<br>
+                ACME Corp<br>
+             Fondi del mercato monetario<br>
+                I*Trade Municipal Fund<br>
+             Cash<br>
+          Brocker<br>
+             Fondi del mercato monetario<br>
+                Active Assets Fund<br>
+             Titoli governativi<br>
+                Treas Bond xxx<br>
+                Treas Note yyy<br>
+             Fondi Comuni<br>
+                Fondo A<br>
+                Fondo B<br>
+             Liquidi<br>
+ Entrate<br>
+    Investimenti<br>
+       Conto brokeraggio<br>
+          Guadagni in capitale<br>
+             I*Trade<br>
+             Brocker<br>
+          Dividendi<br>
+             I*Trade<br>
+                Tassabile<br>
+                Non-tassabile<br>
+             Brocker<br>
+                Tassabile<br>
+                Non-tassabile<br>
+          Interest Income<br>
+             I*Trade<br>
+                Tassabile<br>
+                Non-tassabile<br>
+             Brocker<br>
+                Tassabile<br>
+                Non-tassabile<br>
+ Uscite<br>
+    Spese dell'investimento<br>
+       Commissioni<br>
+          I*Trade<br>
+          Brocker<br>
+       Costi di gestione<br>
+          I*Trade<br>
+          Brocker<br>
+ </p></div></p><p>Non esiste una soluzione unica per l'impostazione della struttura dei
+      conti per gli investimenti. Occorre provare disposizioni differenti fino a
+      quando non si trova la soluzione che suddivide i conti degli investimenti nel
+      modo che si ritiene personalmente più logico.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="invest_concepts1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="invest_int1.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">8.1. Concetti di base </td><td width="20%" align="center"><a accesskey="u" href="chapter_invest.html">Risali</a></td><td width="40%" align="right"> 8.3. Conti che maturano interessi</td></tr></table></div></body></html>

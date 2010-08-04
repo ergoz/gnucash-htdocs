@@ -1,0 +1,100 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>8.4. Impostare il portafoglio dell'investimento</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_invest.html" title="Capitolo 8. Investimenti"><link rel="previous" href="invest_int1.html" title="8.3. Conti che maturano interessi"><link rel="next" href="invest-buy-stock1.html" title="8.5. Acquistare le quote"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.4. Impostare il portafoglio dell'investimento</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="invest_int1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 8. Investimenti</th><td width="20%" align="right"> <a accesskey="n" href="invest-buy-stock1.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="invest-setup1"></a>8.4. Impostare il portafoglio dell'investimento</h2></div></div><p>Ora che è stata costruita la struttura dei conti, in questa sezione verrà mostrato
+    come creare e popolare i conti con il proprio portafoglio di investimenti. Dopo questa
+    impostazione di partenza , si potrebbero possedere anche delle quota azionarie acquistate
+    prima di iniziare ad utilizzare GnuCash. In questo caso, si seguano le istruzioni fornite
+    nella sezione più avanti <a href="invest-buy-stock1.html#invest-buy-stock2" title="8.5.1. Immettere delle quote preesistenti"><b>Immissione delle quote preesistenti
+    </b></a>. Se invece le azioni sono state appena acquistate riferirsi alla sezione
+    <a href="invest-buy-stock1.html#invest-buy-new2" title="8.5.2. Acquistare nuove quote"><b>Acquisto di nuove quote</b>
+    </a>.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest-setup-stockaccounts2"></a>8.4.1. Impostare i conti per le azioni e per i fondi comuni</h3></div></div><p>Questa sezione mostrerà come aggiungere dei conti per le azioni e
+      per i fondi comuni in GnuCash. In questa sezione, si ipotizzerà di utilizzare
+      la struttura dei conti di base introdotta nella sezione precedente, ma
+      i principi qui descritti potranno essere applicati a qualsiasi struttura
+      dei conti.</p><p>Si dovrebbe avere, all'interno del conto di livello principale <b>Attività</b>,
+      un conto denominato <b>Azioni</b>. Espandere la struttura ad
+      albero dei conti cliccando sull'“indicatore a triangolo che punta verso destra”
+      a fianco del nome del conto fino a raggiungere la profondità della struttura desiderata. 
+      A questo punto occorre creare un sottoconto (di tipo <b>azioni</b>) del conto
+      delle azioni per ogni azione che si possiede: ogni azione ha un conto separato. La denominazione
+      di questi conti è generalmente assegnata utilizzando l'abbreviazione ticker dell'azione,
+      anche se il nome assegnato può anche essere qualsiasi parola che sia chiara per gli utilizzatori.
+      Per esempio, è possibile nominare i conti come <b>AMZN</b>,
+      <b>IBM</b> e <b>NST</b> per le proprie azioni Amazon,
+      IBM and NSTAR rispettivamente. Sotto è riportato un esempio schematico di disposizione (che mostra
+      solamente i sottoconti del conto delle attività).</p><div class="literallayout"><p><br>
+ Attività<br>
+    Investimenti<br>
+       Conto brokeraggio<br>
+          Bond<br>
+          Fondi comuni<br>
+          Indice di mercato<br>
+          Azioni<br>
+             AMZN<br>
+             IBM<br>
+             NST<br>
+ </p></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Se si desidera registrare le entrate (dividendi, interessi, guadagni
+        in conto capitale) per singola azione e per ogni fondo comune, sarà necessario
+        creare i conti Entrate:Dividendi:SIMBOLO AZIONE, Entrate:Guadagni in capitale (Lungo):SIMBOLO AZIONE,
+        Entrate:Guadagni in capitale (breve):SIMBOLO AZIONE e Entrate:Interessi:SIMBOLO AZIONE
+        per ogni azione che si possiede e che fornisce interessi e dividendi.</p></td></tr></table></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest-setup-example2"></a>8.4.2. Esempio di conto per le azioni</h3></div></div><p>Comne esempio, si assuma di possedere attualmente 100 azioni
+      di Amazon. Creare quindi il conto AMZN selezionando il conto <b>Azioni</b> e premendo il menu
+      <b>File</b> -&gt; <b>Nuovo conto</b>. Verrà mostrata la finestra per l'impostazione
+      del nuovo conto; seguire la procedura descritta di seguito per impostare il nuovo conto delle azioni.</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_newaccount.png" alt="Finestra per il nuovo conto"><div class="caption"><p>Finestra per il nuovo conto</p></div></div></div><div class="orderedlist"><ol type="1"><li><p><b>Nome del conto</b> - normalmente, utilizzare l'abbreviazione del simbolo
+          ticker, per esempio: “AMZN”</p></li><li><p><b>Codice del conto</b> - è un campo opzionale; utilizzare il codice CUSIP,
+          il simbolo riportato sui giornali, l'ID della famiglia dei fondi comuni o un codice di propria 
+          scelta.</p></li><li><p><b>Descrizione</b> - campo opzionale che può contenere una descrizione dettagliata
+           della commodity o dell'azione. Si noti che questo campo è mostrato di default nella finestra della
+           struttura dei conti.</p></li><li><p><b>Tipo di conto</b> - selezionare la tipologia di conto che sta per essere creato
+          dalla lista in basso a sinistra.</p></li><li><p><b>Conto padre</b> - selezionare il conto padre per il nuovo
+          conto dalla lista in basso a destra. E' possibile espandere la lista se
+          necessario.</p></li><li><p><b>Creazione del nuovo titolo</b> - per utilizzare una nuova azione,
+          è necessario creare l'azione come una nuova commodity</p><div class="itemizedlist"><ul><li><p><b>Selezionare Titolo/valuta</b> - premere il pulsante
+              “Seleziona ...” alla fine della riga del campo
+              <b>Titolo/valuta</b>. Occorre cambiare il titolo dal valore
+              predefinito (la valuta predefinita) a quello dell'azione. Verrà quindi aperta la finestra
+              di “Selezione del titolo”.</p></li><li><p><b>Tipo</b> - cambiare il <b>tipo</b> da quello attuale al
+              mercato in cui il titolo/commodity è scambiato (NASDAQ in questo esempio).</p><p>Premere il pulsante “Nuovo” per aprire la finestra del
+              “Nuovo titolo”.</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_selectsecurity.png" alt="Finestra di scelta del titolo"><div class="caption"><p>Finestra di scelta del titolo </p></div></div></div></li><li><p><b>Creare il titolo</b> - premere il pulsante
+              <b>Nuovo...</b> e inserire le informazioni appropriate per 
+              l'azione nel modulo <b>Nuovo
+              titolo</b>.</p><div class="itemizedlist"><ul><li><p>Il <b>Nome completo:</b> è
+                  “Amazon.com Inc”.</p></li><li><p>Il <b>Simbolo/abbreviazione:</b> è
+                  “AMZN”. Il simbolo è l'identificativo utilizzato
+                  dalla fonte delle quotazioni impostate alcune righe più sotto
+                  nel modulo. Si noti che diverse fonti possono utilizzare simboli differenti;
+                  un esempio è Ericsson: nella borsa di Stoccolma è identificato dal simbolo
+                  ERIC-B mentre su Yahoo è ERRICB.ST</p></li><li><p>Il <b>Tipo:</b> dovrebbe già essere
+                  “NASDAQ”.</p></li><li><p>Il <b>Codice CUSIP o altro:</b> è possibile inserire qui
+                  un altro codice numerico o del testo (lasciare vuoto in questo
+                  esempio).</p></li><li><p>La <b>Frazione scambiata:</b> dovrebbe essere impostata
+                  alla frazione minima del titolo che può essere scambiata, generalmente 1/100
+                  o 1/10000.</p></li><li><p>L'opzione “Ricevi quotazioni online” e i campi
+                  della fonte delle quotazioni e del fuso orario devono essere selezionati
+                  per definire la fonte per l'aggiornamento online dei prezzi. Consultare anche
+                  la sezione 
+                  <a href="invest-stockprice1.html#invest-stockprice-auto2" title="8.6.3. Configurazione per la ricezione automatica delle quotazioni">
+                    “Impostare automaticamente il prezzo delle azioni”</a>.</p><p>Se il pulsante “Ricevi quotazioni online” non è selezionabile,
+                  allora il pacchetto Finance::Quote non è installato.
+                  Consultare la
+                   <a href="invest-stockprice1.html#invest-stockprice-auto-install3" title="8.6.3.1. Installare Finance::Quote">
+                    “Installare Finance::Quote”</a>.</p><p>Più sotto è riportata un'immagine di come dovrebbe apparire la finestra 
+                  quando il processo è terminato: <div class="screenshot"><div class="mediaobject"><img src="figures/invest_newsecurity.png" alt="Finestra del nuovo titolo"><div class="caption"><p>Finestra del nuovo titolo </p></div></div></div></p></li><li><p><b>Salvataggio del titolo</b> - premere il pulsante
+                  <b>OK</b> per salvare il nuovo titolo; verrà chiusa la finestra
+                  del “Nuovo titolo” e si ritornerà alla finestra del
+                  “Nuovo conto”.</p></li></ul></div></li></ul></div></li><li><p><b>Selezione del titolo</b> - si dovrebbe ora vedere
+          il nuovo titolo creato come voce della lista a comparsa di
+          <b>Titolo/valuta</b>. Selezionarlo (probabilmente lo è
+          già) e premere <b>OK</b>.</p></li><li><p><b>Frazione minima</b> - specificare la minima frazione
+          scambiata dell'azione o della commodity.</p></li><li><p><b>Note</b> - inserire qui qualsiasi messaggio
+          o nota relativo a questo titolo o commodity.</p></li><li><p><b>Relativo alle tasse</b> - abilitare l'opzione se se le transazioni
+          contenute in questo conto saranno considerate nei resoconti per le imposte.</p></li><li><p><b>Segnaposto</b> - abilitare l'opzione se questo conto
+          è un “Segnaposto”, cioè se non potrà contenere delle
+          transazioni.</p></li><li><p><b>Fine</b> - ora si dovrebbe essere automaticamente tornati
+          alla finestra del nuovo conto, con la riga <b>simbolo/abbreviazione:</b> impostata a
+          “AMZN (Amazon.com Inc)”. Premere <b>OK</b> per salvare
+          questo nuovo conto delle azioni.</p></li></ol></div><p>E' stato creato il conto per le azioni Amazon e la finestra dei conti dovrebbe
+      assomigliare a questa (si noti che sono presenti anche altri conti:
+      un conto bancario e un conto per i capitali):</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_setup_current.png" alt="Impostazione del portafoglio"><div class="caption"><p>Questa immagine è successiva alla creazione del primo conto per le azioni
+          (AMZN)</p></div></div></div><p>Aprire la finestra del registro per il conto AMZN (doppio clic su di esso). Qui è mostrata la
+      vista del <b>Portafoglio</b>. Essa fornisce una panoramica del portafoglio delle azioni
+      inclusi il numero di azioni acquistate e vendute. Ovviamente, non sono ancora state acquistate o vendute delle azioni,
+      e quindi il portafoglio non contiene alcuna transazione.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="invest_int1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="invest-buy-stock1.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">8.3. Conti che maturano interessi </td><td width="20%" align="center"><a accesskey="u" href="chapter_invest.html">Risali</a></td><td width="40%" align="right"> 8.5. Acquistare le quote</td></tr></table></div></body></html>

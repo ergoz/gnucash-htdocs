@@ -1,0 +1,63 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>7.8. Vendere una casa o un'auto (come fare)</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_loans.html" title="Capitolo 7. Prestiti"><link rel="previous" href="loans_Reconciling.html" title="7.7. Riconciliazione con il resoconto del prestito (come fare)"><link rel="next" href="loans_missing1.html" title="7.9. Documentazione mancante sui prestiti"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.8. Vendere una casa o un'auto (come fare)</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="loans_Reconciling.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 7. Prestiti</th><td width="20%" align="right"> <a accesskey="n" href="loans_missing1.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="id2704153"></a>7.8. Vendere una casa o un'auto (come fare)</h2></div></div><p>Quando si desidera registrare in GnuCash l'acquisto della propria casa, si hanno
+    diverse possibilità. Nel seguito ne verranno analizzate due: una in cui è stato registrato
+    solamente l'importo dell'acquisto e ora l'importo di vendita, l'altra dove si è seguito
+    l'andamento del mercato immobiliare e si sono registrati i vari guadagni non realizzati 
+    al passare del tempo.</p><p></p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2704179"></a>7.8.1. Transazione semplice</h3></div></div><p>In questo modo si registrerà solamente il prezzo di vendita.</p><p>Nel seguito verranno presentati due esempi di vendita di una casa; uno con
+      profitto e uno in perdita. Se si desidera invece vendere un'auto, si sostituiscano
+      i conti per la casa con quelli per l'auto.</p><p><div class="literallayout"><p><br>
+-Attività<br>
+  -Beni immobili<br>
+    -Casa<br>
+  -Attività correnti<br>
+    -Conto risparmi<br>
+-Entrate<br>
+  -Guadagni in capitale (lungo)<br>
+    -Casa<br>
+    </p></div></p><div class="itemizedlist"><ul><li><p>Si supponga di aver acquistato tempo fa una casa per €300.000, e che ora
+          si riesca venderla per €600.000. Come registrarlo in GnuCash?</p><p>E' necessario aumentare il saldo del conto bancario di
+          €600.000 e diminuire il saldo di un altro conto di €600.000. Il conto per la casa
+          contiene solamente €300.000 cioè il prezzo di acquisto, così questo importo deve essere
+          spostato nel conto bancario. Mancano ancora però €300.000; questi devono essere prelevati 
+          dal conto Entrate:Guadagni in capitale (lungo):Casa. La transazione suddivisa inserita 
+          nel proprio conto della <b>banca</b> (<b>Attività:Beni 
+          immobili:Conto risparmio</b>) dovrebbe assomigliare a questa.</p><p><div class="table"><p><b>Tabella 7.3. Vendere un bene (casa) con un profitto</b></p><table summary="Vendere un bene (casa) con un profitto" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td>Conto</td><td>Aumento</td><td>Diminuzione</td></tr><tr><td>Attività:Attività correnti:Conto risparmio</td><td>€600.000</td><td> </td></tr><tr><td>Attività:Beni immobili:Casa</td><td> </td><td>€300.000</td></tr><tr><td>Entrate:Guadagni in capitale (lungo):Casa</td><td> </td><td>€300.000</td></tr></tbody></table></div></p></li><li><p>Si supponga di aver acquistato tempo fa una casa per €300.000 ma, a
+          causa della costruzione di un aeroporto nelle vicinanze, sia ora possibile
+          venderla per soli €230.000. Come registralo in GnuCash?</p><p>Il conto bancario deve aumentare di €230.000 e un altro conto deve diminuire
+          della stessa cifra. Il conto per la casa contiene €300.000 che è un valore superiore
+          a quello di vendita; si spostino solamente €230.000 da questo conto verso quello bancario.
+          Rimangono ancora €70.000 sul conto della casa che devono essere rimossi spostandoli
+          nel conto Entrate:Guadagni in capitale (lungo):Casa come perdita. La transazione
+          suddivisa da inserire nel conto <b>Casa</b> (<b>Attività:Beni
+          Immobili:Casa</b>) dovrebbe essere come questa.</p><p><div class="table"><p><b>Tabella 7.4. Vendere un bene (casa) in perdita</b></p><table summary="Vendere un bene (casa) in perdita" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td>Conto</td><td>Aumento</td><td>Diminuzione</td></tr><tr><td>Attività:Beni immobili:Casa</td><td> </td><td>€300.000</td></tr><tr><td>Attività:Attività correnti:Conto risparmio</td><td>€230.000</td><td> </td></tr><tr><td>Entrate:Guadagni in capitale (lungo):Casa</td><td>€70.000</td><td> </td></tr></tbody></table></div></p></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2702105"></a>7.8.2. Una transazione più complessa</h3></div></div><p>In questo esempio verranno illustrati alcuni concetti di contabilità
+      più complessi. Per maggiori dettagli sul questo argomento, consultare il
+      <a href="chapter_capgain.html" title="Capitolo 9. Guadagni in conto capitale">Capitolo 9. Guadagni in conto capitale</a></p><p>Nel seguito si ipotizzerà che che sia stato accuratamente stimato il valore
+      della propria casa. Negli altri casi (sovra e sottostima), si consulti il
+      <a href="chapter_capgain.html" title="Capitolo 9. Guadagni in conto capitale">Capitolo 9. Guadagni in conto capitale</a>.</p><p><div class="literallayout"><p><br>
+-Attività<br>
+    -Beni immobili<br>
+        -Casa<br>
+            -Costo<br>
+            -Guadagni non realizzati<br>
+    -Attività correnti<br>
+        -Conto risparmi<br>
+-Entrate<br>
+    -Guadagni realizzati<br>
+        -Casa<br>
+    -Guadagni non realizzati<br>
+        -Casa<br>
+    </p></div></p><p>Si supponga di aver acquistato in passato una casa per €300.000 e che sia stato
+          tenuto sotto controllo il mercato immobiliare registrando il valore della casa
+          a una certa data. Al momento di venderla, è stato determinato un valore di mercato
+          pari a €600.000.</p><p>La differenza tra €600,000 (valore di mercato stimato) e 
+          €300.000 (costo di acquisto) è l'attuale valore del guadagno non realizzato. Quindi si 
+          ha un valore totale di €300.000 nel proprio conto <b>Attività:Beni immobili:Casa:Guadagni
+          non realizzati</b>.</p><p>Come registrare questa transazione di vendita?</p><p>Per registrala si dovrà aumentare il saldo del conto bancario con i €600.000 e diminuire
+          il saldo di un altro conto di €600.000. Prima di tutto occorre cambiare il conto delle entrate
+          da guadagni non realizzati a Guadagni realizzati. Infine è sufficiente trasferire l'intero importo
+          dal sottoconto "Attività:Beni immobili:Casa".</p><p>La transazione inserita nel conto
+          <b>Entrate:Guadagni realizzati:Casa</b> 
+          dovrebbe assomigliare a questa.</p><p><div class="table"><p><b>Tabella 7.5. Vendere un bene (casa) con un profitto</b></p><table summary="Vendere un bene (casa) con un profitto" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td>Conto</td><td>Aumento</td><td>Diminuzione</td></tr><tr><td>Entrate:Guadagni realizzati:Casa</td><td>€300.000</td><td> </td></tr><tr><td>Entrate:Guadagni non realizzati:Casa</td><td> </td><td>€300.000</td></tr></tbody></table></div></p><p>La transazione inserita nel conto 
+          <b>Attività:Attività correnti:Conto risparmio</b> 
+          dovrebbe assomigliare a questa.</p><p><div class="table"><p><b>Tabella 7.6. Vendere un bene (casa) con un profitto 2</b></p><table summary="Vendere un bene (casa) con un profitto 2" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td>Conto</td><td>Aumento</td><td>Diminuzione</td></tr><tr><td>Attività:Attività correnti:Conto risparmio</td><td>€600.000</td><td> </td></tr><tr><td>Attività:Beni immobili:Casa:Costo</td><td> </td><td>€300.000</td></tr><tr><td>Attività:Beni immobili:Casa:Guadagni non realizzati</td><td> </td><td>€300.000</td></tr></tbody></table></div></p><p>Dopo la registrazione della transazione, si noterà che il conto delle attività
+            per la casa ha un valore nullo, il conto dei risparmi è aumentato di €600.000 e ,in ultimo,
+            il conto "Entrate:Guadagni realizzati" è aumentato di €300.000.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="loans_Reconciling.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="loans_missing1.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">7.7. Riconciliazione con il resoconto del prestito (come fare) </td><td width="20%" align="center"><a accesskey="u" href="chapter_loans.html">Risali</a></td><td width="40%" align="right"> 7.9. Documentazione mancante sui prestiti</td></tr></table></div></body></html>
