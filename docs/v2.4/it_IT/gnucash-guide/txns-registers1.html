@@ -1,0 +1,109 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>4.2. Il registro contabile</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_txns.html" title="Capitolo 4. Transazioni"><link rel="prev" href="txns-concepts1.html" title="4.1. Concetti base"><link rel="next" href="txns-regstyle1.html" title="4.3. Scegliere uno stile per il registro"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">4.2. Il registro contabile</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="txns-concepts1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 4. Transazioni</th><td width="20%" align="right"> <a accesskey="n" href="txns-regstyle1.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="4.2. Il registro contabile"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="txns-registers1"></a>4.2. Il registro contabile</h2></div></div></div><p>Il <span class="emphasis"><strong>registro contabile</strong></span> è la finestra di
+    GnuCash che permette di visualizzare e modificare le transazioni
+    preesistenti o di aggiungerne di nuove per un particolare conto.
+    Per entrare nel registro contabile, è sufficiente selezionare
+    il nome del conto nella finestra di visualizzazione ad albero dei
+    conti, ed eseguire un doppio click per aprirlo. In alternativa, è
+    possibile premere il pulsante <span class="guibutton">Apri</span> nella barra
+    strumenti o utilizzare il menu che compare premedno il tasto destro del mouse. GnuCash 
+    visualizzerà così la finestra del registro contabile.</p><div class="sect2" title="4.2.1. Transazione semplice"><div class="titlepage"><div><div><h3 class="title"><a name="txns-registers-twoaccount2"></a>4.2.1. Transazione semplice</h3></div></div></div><p>Per esempio, partendo con la struttura dei conti creata nel 
+      capitolo precedente e salvata nel file di nome <code class="filename">gcashdata_3</code>, si clicchi due
+      volte sul sottoconto <span class="guilabel"><strong>Conto corrente</strong></span> del conto attività.
+      Si aggiunga ora una semplice transazione al conto corrente. Quando si creano
+      per la prima volta dei conti in GnuCash, è generalmente necessario
+      impostare, per alcuni di essi, un bilancio di apertura.</p><p>Nella prima riga delle transazioni, inserire una data (es:
+      1 Marzo 2006), una descrizione (es: Bilancio di apertura), selezionare
+      il menu a tendina del trasferimento e selezionare <span class="guilabel"><strong>Capitali:Bilanci 
+      d'apertura</strong></span>, aggiungere un deposito del valore di €1.000, e premere
+      «invio». Il registro contabile dovrebbe apparire simile a quello in figura:</p><div class="screenshot"><div class="mediaobject"><img src="figures/txns_register_2account.png" alt="Conto corrente - Registro"><div class="caption"><p>Questa immagine mostra il <span class="guilabel"><strong>registro di Attività:Conto corrente
+          </strong></span> dopo aver inserito una transazione per il valore
+          iniziale.</p></div></div></div><p>Impostare il bilancio di apertura di un conto è un esempio
+      di una semplice transazione che coinvolge due conti: in questo caso
+      i conti <span class="guilabel"><strong>Attività:Conto corrente</strong></span> e <span class="guilabel"><strong>Capitali:Bilanci
+      d'apertura</strong></span>.</p><p>Per fare un altro esempio di semplice transazione a due, se ne aggiunga 
+      un'altra per descrivere un acquisto di 45.21€ di alimentari. Dalla posizione
+      attività:conto corrente, devono essere <span class="guilabel"><strong>trasferiti</strong></span>
+      a <span class="guilabel"><strong>Uscite:Alimentari</strong></span>. Ora il registro contabile dovrebbe
+      apparire così:</p><div class="screenshot"><div class="mediaobject"><img src="figures/txns_register_2account2.png" alt="Conto corrente - Registro"><div class="caption"><p>Questa immagine mostra il <span class="guilabel"><strong>registro di Attività:Conto corrente
+          </strong></span> dopo aver inserito una transazione per l'acquisto di
+          alimentari.</p></div></div></div></div><div class="sect2" title="4.2.2. Transazione suddivisa"><div class="titlepage"><div><div><h3 class="title"><a name="txns-registers-multiaccount2"></a>4.2.2. Transazione suddivisa</h3></div></div></div><p>Il bisogno di una transazione che coinvolge 3 o più conti sorge quando
+      è necessario suddividere o il conto "da" o il conto "a" in una transazione
+      in più conti. L'esempio classico di questa situazione si verifica quando
+      si riceve lo stipendio. Il compenso che si riceve è sicuramente meno
+      dello stipendio lordo a causa delle tasse, del fondo pensione e altre voci.
+      Perciò la singola transazione relativa alla ricezione dello stipendio coinvolge
+      altri conti oltre a quelli di <span class="guilabel"><strong>Attività:Conto corrente</strong></span> e
+      <span class="guilabel"><strong>Entrate:Stipendio</strong></span>.</p><p>Per aggiungere una transazione per lo stipendio dalla finestra di registro 
+      del conto <span class="guilabel"><strong>Attività:Conto corrente</strong></span>, fare clic in una nuova 
+      riga della transazione e premere <span class="guilabel"><strong>Suddivisione</strong></span>.
+      Immettere dapprima la descrizione della transazione nella prima linea (per esempio: 
+      "Employers R Us"). Nella linea "di suddivisione" sotto a questa, immettere
+      il deposito nel conto <span class="guilabel"><strong>Attività:Conto corrente</strong></span> (es: €670) 
+      (questo è a causa di un bug, che richiede che la prima linea di una suddivisione 
+      sia relativa ql conto attuale). In seguito inserire i vari depositi per le tasse
+      (<span class="guilabel"><strong>Attività:Conto corrente</strong></span> (es: €670),
+      <span class="guilabel"><strong>Uscite:Tasse:Statali</strong></span> (es: €180),
+      <span class="guilabel"><strong>Uscite:Tasse:Assistenza sanitaria</strong></span> (es: €90) e
+      <span class="guilabel"><strong>Uscite:Tasse:Previdenza sociale</strong></span> (es: €60)) e
+      per ultimo il totale lordo dello stipendio (es: €1000) come prelievo da <span class="guilabel"><strong>
+      Entrate:Stipendio</strong></span>. Alla fine la suddivisione dovrebbe assomigliare
+      a questa:</p><div class="screenshot"><div class="mediaobject"><img src="figures/txns_register_multiaccount.png" alt="Registro del conto - suddivisione di una transazione"><div class="caption"><p>Questa immagine mostra il <span class="guilabel"><strong>registro di Attività:Conto corrente
+          </strong></span> dopo aver aggiunto una transazione suddivisa per lo
+          stipendio.</p></div></div></div></div><div class="sect2" title="4.2.3. Caratteristiche del registro del conto"><div class="titlepage"><div><div><h3 class="title"><a name="txns-registers-features2"></a>4.2.3. Caratteristiche del registro del conto</h3></div></div></div><p>La barra del titolo nel registro del conto, mostra il nome del conto
+      che, in questo caso è <span class="guilabel"><strong>Attività:Conto corrente</strong></span>. Sotto
+      alla barra del titolo, la barra del menu mostra le voci disponibili per il
+      registro del conto e la barra degli strumenti contiene degli utili pulsanti
+      che assistono nelle operazioni con il registro del conto.</p><p>Sebbene ogni transazione ha almeno due suddivisioni, tutto ciò che 
+      si vede nel registro di base è un sommario delle suddivisioni che interessano
+      il conto selezionato. Nella colonna del trasferimento, sono elencati gli altri 
+      conti da cui il denaro è <span class="emphasis"><strong>trasferito</strong></span> verso o da questo conto.
+      Se la transazione coinvolge più di due conti, GnuCash visualizza la scritta
+      <span class="guilabel"><strong>-- Transazione suddivisa --</strong></span> a indicare che si tratta di
+      una transazione con più suddivisioni. E' possibile visualizzare individualmente
+      le suddivisioni di ogni transazione premendo il pulsante <span class="guilabel"><strong>Suddivisione</strong></span> 
+      nella barra strumenti mentre è selezionata la transazione.</p><p>Per le transazioni suddivise, la prima linea rappresenta la
+      <span class="emphasis"><strong>linea della transazione</strong></span>. Contiene una
+      <span class="guilabel"><strong>Data</strong></span>, un <span class="guilabel"><strong>Nr.</strong></span> opzionale (quale
+      il numero dell'assegno), la <span class="guilabel"><strong>Descrizione</strong></span> della transazione, 
+      l'importo totale che interessa il conto selezionato (<span class="guilabel"><strong>Deposito Tot</strong></span>
+      qui) e il <span class="guilabel"><strong>Saldo</strong></span> aggiornato dopo la transazione corrente.
+      Si noti che nella vista espansa, l'intestazione della colonna <span class="guilabel"><strong>Trasferimento</strong></span>
+      scompare, e non viene visualizzato nessun nome di conto in questo campo.
+      Questa riga mostra solamente un sommario degli effetti della transazione sul conto selezionato.
+      Per avere informazioni più dettagliate, occorre visualizzare le suddivisioni
+      che compongono la transazione.</p><p>Le righe parziali sotto a quella della transazione, sono le
+      <span class="emphasis"><strong>righe delle suddivisioni</strong></span> e sono separate da linee grigie.
+      Quando si seleziona una delle linee di suddivisione, l'intestazione della 
+      colonna cambia, visualizzando le voci relative ai campi della suddivisione:</p><div class="screenshot"><div class="mediaobject"><img src="figures/txns_registersplit2.png" alt="Come cambiano le intestazioni per una suddivisione"><div class="caption"><p>Questa immagine mostra come le intestazioni cambino per una
+          suddivisione.</p></div></div></div><p>Ogni suddivisione contiene un campo <span class="guilabel"><strong>Operazione</strong></span>
+	opzionale o del tipo di suddivisione, che può essere immesso digitandolo oppure 
+	scegliendolo da	una lista a comparsa. La suddivisione presenta anche un campo 
+	per il <span class="guilabel"><strong>Promemoria</strong></span>	per descrivere la suddivisione stessa. 
+	Ogni suddivisione coinvolge un <span class="guilabel"><strong>Conto</strong></span>, che può essere selezionato 
+	da una lista a comparsa che comprende tutti i propri conti. Il campo 
+	<span class="guilabel"><strong>R</strong></span> indica se la suddivisione è stata riconciliata. Le ultime 
+	due colonne riportano l'importo della suddivisione e se il denaro è in entrata o 
+	in uscita dal conto.</p><p>Come discusso nella <a class="xref" href="basics-accounting1.html" title="2.1. Concetti di contabilità">Sezione 2.1, «Concetti di contabilità»</a>, gli addebiti
+	totali (o dare, inseriti nella colonna di sinistra) devono eguagliare gli accrediti
+	totali (o avere, inseriti nella colonna di destra) per ogni transazione. Nell'esempio
+	mostrato sopra, gli addebiti totali sono pari agli accrediti totali e la 
+	transazione è quindi bilanciata. Si nota che la riga della transazione contiene
+	lo stesso importo in addebito presente nella riga della suddivisione 
+	<span class="guilabel"><strong>Conto corrente</strong></span>. Perché viene mostrata due volte?
+	perché la riga della transazione è semplicemente un <span class="emphasis"><strong>sommario</strong></span> 
+	degli effetti della transazione sul conto a cui appartiene. La stessa transazione
+	in un conto diverso, avrebbe una linea della transazione differente che mostra
+	gli effetti su quel particolare conto. Questo si può vedere selezionando un'altra riga
+	di suddivisione e premendo il pulsante <span class="guilabel"><strong>Salta</strong></span> sulla barra
+	degli strumenti.</p><p>In questo esempio, se si salta al conto
+      <span class="guilabel"><strong>Entrate:Stipendio</strong></span>, GnuCash mostra la stessa
+      transazione nel registro del conto <span class="guilabel"><strong>Entrate:Stipendio</strong></span>:</p><div class="screenshot"><div class="mediaobject"><img src="figures/txns_registersplit3.png" alt="Uno sguardo al conto Entrate:Stipendio"><div class="caption"><p>Questa immagine mostra un salto al conto
+          <span class="guilabel"><strong>Entrate:Stipendio</strong></span>.</p></div></div></div><p>Si noti che il totale nella riga della transazione, somma gli
+	effetti sul conto <span class="guilabel"><strong>Entrate:Stipendio</strong></span> invece che sul
+	<span class="guilabel"><strong>Conto corrente</strong></span>, perché si sta guardando il registro del conto
+	<span class="guilabel"><strong>Entrate:Stipendio</strong></span>. Le suddivisioni sono esattamente le stesse,
+	ma la riga della transazione rispecchia ora l'accredito al conto 
+	<span class="guilabel"><strong>Entrate:Stipendio</strong></span>.</p><p>In basso a sinistra nella finestra del registro, GnuCash visualizza
+	degli utili messaggi mentre ci si muove nel registro. A destra, invece,
+	è possibile leggere il saldo attuale del conto e il totale delle
+	suddivisioni liquidate.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="txns-concepts1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="txns-regstyle1.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">4.1. Concetti base </td><td width="20%" align="center"><a accesskey="u" href="chapter_txns.html">Risali</a></td><td width="40%" align="right"> 4.3. Scegliere uno stile per il registro</td></tr></table></div></body></html>

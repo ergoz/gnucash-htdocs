@@ -1,0 +1,65 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>9.4. Example</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_capgain.html" title="Chapter 9. Capital Gains"><link rel="prev" href="capgain_accounts1.html" title="9.3. Account Setup"><link rel="next" href="capgain_tax1.html" title="9.5. Taxation"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">9.4. Example</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="capgain_accounts1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 9. Capital Gains</th><td width="20%" align="right"> <a accesskey="n" href="capgain_tax1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="9.4. Example"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="capgain_example1"></a>9.4. Example</h2></div></div></div><p>Let’s suppose you buy an asset expected to increase in value, say a
+    Degas painting, and want to track this. (The insurance company will care
+    about this, even if nobody else does.)</p><p>Start with an account hierarchy similar to than shown in <a class="xref" href="capgain_accounts1.html" title="9.3. Account Setup">Section 9.3, “Account Setup”</a>, but replace <span class="quote">“<span class="quote">ITEM1</span>”</span> with <span class="quote">“<span class="quote">Degas</span>”</span> and you
+    can remove the <span class="quote">“<span class="quote">ITEM2</span>”</span> accounts. We will assume that the Degas painting
+    had an initial value of one hundred thousand dollars. Begin by giving your
+    self $100,000 in the bank and then transferring that from your bank
+    account to your <span class="emphasis"><strong>Assets:Fixed Assets:Degas:Cost</strong></span> account (the asset
+    purchase transaction). You should now have a main account window which
+    appears like this:</p><div class="screenshot"><div class="mediaobject"><img src="figures/capgain_appmain.png" alt="Asset Appreciation Main Window"><div class="caption"><p>The asset appreciation example main window
+        </p></div></div></div><div class="sect2" title="9.4.1. Unrealized Gains"><div class="titlepage"><div><div><h3 class="title"><a name="capgain_exampleunrealized2"></a>9.4.1. Unrealized Gains</h3></div></div></div><p>A month later, you have reason to suspect that the value of your
+      painting has increased by $10,000 (an unrealized gain). In order to
+      record this you transfer $10,000 from your <span class="emphasis"><strong>Accrued Gains</strong></span> income account
+      (<span class="emphasis"><strong>Income:Unrealized Gains</strong></span>) to your asset Unrealized Gains account
+      (<span class="emphasis"><strong>Assets:Fixed Assets:Degas:Unrealized Gain</strong></span>). Your main window will
+      resemble this:</p><div class="screenshot"><div class="mediaobject"><img src="figures/capgain_app2main.png" alt="Asset Appreciation Main Window"><div class="caption"><p>Chart of Accounts after unrealized
+          gain</p></div></div></div></div><div class="sect2" title="9.4.2. Selling"><div class="titlepage"><div><div><h3 class="title"><a name="capgain_examplesell2"></a>9.4.2. Selling</h3></div></div></div><p>Let’s suppose another month later prices for Degas paintings have
+      gone up some more, in this case about $20,000, you estimate. You duly
+      record the $20,000 as an unrealized income like above, then decide to
+      sell the painting.</p><p>Three possibilities arise. You may have <span class="emphasis"><strong>accurately
+      estimated</strong></span> the unrealized gain,
+      <span class="emphasis"><strong>underestimated</strong></span> the unrealized gain, or
+      <span class="emphasis"><strong>overestimated</strong></span> the unrealized gain.</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p><span class="emphasis"><strong>Accurate estimation</strong></span> of unrealized
+          gain.</p><p>Your optimistic estimate of the painting’s value was correct.
+          First you must record that the profits made are now realized gains,
+          not unrealized gains. Do this by transferring the income from the
+          <span class="emphasis"><strong>Income:Unrealized Gains</strong></span> to the 
+          <span class="emphasis"><strong>Income:Realized Gains</strong></span> account.</p><p>Secondly, you must credit your bank account with the selling
+          price of the painting. This money comes directly from your
+          <span class="emphasis"><strong>Assets:Fixed Assets:Degas</strong></span> sub-accounts. Transfer the full
+          <span class="emphasis"><strong>Assets:Fixed Assets:Degas:Cost</strong></span> value into 
+          <span class="emphasis"><strong>Assets:Fixed Assets:Savings Account</strong></span>, and the full 
+          <span class="emphasis"><strong>Assets:Fixed Assets:Degas:Unrealized Gain</strong></span> into 
+          <span class="emphasis"><strong>Assets:Fixed Assets:Savings Account</strong></span>.</p><p>These transactions should now appear as follows:</p><div class="table"><a name="id3103650"></a><p class="title"><b>Table 9.1. Turning an Accrued Gain into a Realized Gain</b></p><div class="table-contents"><table summary="Turning an Accrued Gain into a Realized Gain" border="1"><colgroup><col><col><col><col></colgroup><tbody><tr><td><span class="emphasis"><strong>Account</strong></span></td><td><span class="emphasis"><strong>Transfer to</strong></span></td><td><span class="emphasis"><strong>Transaction Amount</strong></span></td><td><span class="emphasis"><strong>Account Total</strong></span></td></tr><tr><td>Income:Unrealized Gains</td><td>Income:Realized Gains</td><td>$30,000</td><td>$0</td></tr><tr><td>Assets:Fixed Assets:Degas:Cost</td><td>Assets:Fixed Assets:Savings Account</td><td>$100,000</td><td>$0</td></tr><tr><td>Assets:Fixed Assets:Degas:Unrealized Gains</td><td>Assets:Fixed Assets:Savings Account</td><td>$30,000</td><td>$0</td></tr></tbody></table></div></div><p><br class="table-break"></p><p>This leaves the <span class="emphasis"><strong>Assets:Fixed Assets:Savings Account</strong></span> account
+          with a total of $130000 and <span class="emphasis"><strong>Income:Realized Gains</strong></span> with a total of
+          $30000.</p><div class="screenshot"><div class="mediaobject"><img src="figures/capgain_app3main.png" alt="Asset Appreciation Main Window"><div class="caption"><p>Chart of Accounts after realized
+              gain</p></div></div></div></li><li class="listitem"><p><span class="emphasis"><strong>Under estimation</strong></span> of unrealized
+          gain.</p><p>You were over-optimistic about the value of the painting.
+          Instead of the $130000 you thought the painting was worth are only
+          offered $120000. But you still decide to sell, because you value
+          $120000 more than you value the painting. The numbers change a
+          little bit, but not too dramatically.</p><p>The transactions should now appear as follows (observe the
+          last transaction which balances the <span class="emphasis"><strong>Unrealized Gains</strong></span>
+          accounts):</p><div class="table"><a name="id3103821"></a><p class="title"><b>Table 9.2. Turning an Accrued Gain into a Realized Gain</b></p><div class="table-contents"><table summary="Turning an Accrued Gain into a Realized Gain" border="1"><colgroup><col><col><col><col></colgroup><tbody><tr><td><span class="emphasis"><strong>Account</strong></span></td><td><span class="emphasis"><strong>Transfer to</strong></span></td><td><span class="emphasis"><strong>Transaction Amount</strong></span></td><td><span class="emphasis"><strong>Account Total</strong></span></td></tr><tr><td>Income:Unrealized Gains</td><td>Income:Realized Gains</td><td>$20,000</td><td>$10,000</td></tr><tr><td>Assets:Fixed Assets:Degas:Cost</td><td>Assets:Fixed Assets:Savings Account</td><td>$100,000</td><td>$0</td></tr><tr><td>Assets:Fixed Assets:Degas:Unrealized Gains</td><td>Assets:Fixed Assets:Savings Account</td><td>$20,000</td><td>$10,000</td></tr><tr><td>Assets:Fixed Assets:Degas:Unrealized Gains</td><td>Income:Unrealized Gains</td><td>$10,000</td><td>$0</td></tr></tbody></table></div></div><p><br class="table-break"></p><p>This leaves the <span class="emphasis"><strong>Assets:Fixed Assets:Savings Account</strong></span> account
+          with a total of $120000 and <span class="emphasis"><strong>Income:Realized Gains</strong></span> with a total of
+          $20000.</p></li><li class="listitem"><p><span class="emphasis"><strong>Over estimation</strong></span> of unrealized
+          gain.</p><p>You manage to sell your painting for more than you thought in
+          your wildest dreams ($150,000). The extra value is, again, recorded
+          as a gain, i.e. an income.</p><p>The transactions should now appear as follows (observe the
+          last transaction which balances the Unrealized Gains
+          accounts):</p><div class="table"><a name="id3103963"></a><p class="title"><b>Table 9.3. Turning an Accrued Gain into a Realized Gain</b></p><div class="table-contents"><table summary="Turning an Accrued Gain into a Realized Gain" border="1"><colgroup><col><col><col><col></colgroup><tbody><tr><td><span class="emphasis"><strong>Account</strong></span></td><td><span class="emphasis"><strong>Transfer to</strong></span></td><td><span class="emphasis"><strong>Transaction Amount</strong></span></td><td><span class="emphasis"><strong>Account Total</strong></span></td></tr><tr><td>Income:Unrealized Gains</td><td>Income:Realized Gains</td><td>$50,000</td><td>$-20,000</td></tr><tr><td>Assets:Fixed Assets:Degas:Cost</td><td>Assets:Fixed Assets:Savings Account</td><td>$100,000</td><td>$0</td></tr><tr><td>Assets:Fixed Assets:Degas:Unrealized Gains</td><td>Assets:Fixed Assets:Savings Account</td><td>$50,000</td><td>$-20,000</td></tr><tr><td>Income:Unrealized Gains</td><td>Assets:Fixed Assets:Degas:Unrealized Gains</td><td>$20,000</td><td>$0</td></tr></tbody></table></div></div><p><br class="table-break"></p><p>This leaves the <span class="emphasis"><strong>Assets:Fixed Assets:Savings Account</strong></span> account
+          with a total of $150,000 and <span class="emphasis"><strong>Income:Realized Gains</strong></span> with a total of
+          $50,000.</p></li></ol></div></div><div class="sect2" title="9.4.3. Caution about Valuation"><div class="titlepage"><div><div><h3 class="title"><a name="capgain_examplecaution2"></a>9.4.3. Caution about Valuation</h3></div></div></div><p>As we see in this example, for non-financial assets, it may be
+      difficult to correctly estimate the <span class="quote">“<span class="quote">true</span>”</span> value of an asset. It is
+      quite easy to count yourself rich based on questionable estimates that
+      do not reflect <span class="quote">“<span class="quote">money in the bank</span>”</span>.</p><p>When dealing with appreciation of assets,</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Be careful with your estimation of values. Do not indulge in
+          wishful thinking.</p></li><li class="listitem"><p>Never, ever, count on money you do not have in your bank or as
+          cash. Until you have actually sold your asset and got the money, any
+          numbers on paper (or magnetic patterns on your hard disk) are merely
+          that. If you could realistically convince a banker to lend you
+          money, using the assets as collateral, that is a pretty reasonable
+          evidence that the assets have value, as lenders are professionally
+          suspicious of dubious overestimations of value. Be aware: all too
+          many companies that appear <span class="quote">“<span class="quote">profitable</span>”</span> on paper go out of business
+          as a result of running out of cash, precisely because "valuable
+          assets" were not the same thing as cash.</p></li></ul></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="capgain_accounts1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="capgain_tax1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">9.3. Account Setup </td><td width="20%" align="center"><a accesskey="u" href="chapter_capgain.html">Up</a></td><td width="40%" align="right"> 9.5. Taxation</td></tr></table></div></body></html>

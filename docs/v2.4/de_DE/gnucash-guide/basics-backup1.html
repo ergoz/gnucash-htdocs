@@ -1,0 +1,125 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2.8. Datensicherung</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash-Kurs und Konzepte"><link rel="up" href="chapter-basics.html" title="Kapitel 2. Die Grundlagen"><link rel="prev" href="basics-import1.html" title="2.7. Daten importieren"><link rel="next" href="basics-together1.html" title="2.9. Alles Zusammensetzen"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">2.8. Datensicherung</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="basics-import1.html">&lt;&lt;&lt; Zurück</a> </td><th width="60%" align="center">Kapitel 2. Die Grundlagen</th><td width="20%" align="right"> <a accesskey="n" href="basics-together1.html">Weiter &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="2.8. Datensicherung"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="basics-backup1"></a>2.8. Datensicherung</h2></div></div></div><a class="indexterm" name="id2877120"></a><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/important.png"></img></td><th align="left" valign="top">Wichtig</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">
+        Dieses Kapitel können Sie überspringen, sie beim ersten
+        Speichern eines der ab Version 2.4.0 verfügbaren
+        Datenbankformate gewählt haben.  Datenbanken benutzen interne
+        Mechanismen zur Sicherung und Wiederherstellung bei
+        Systemausfällen, die leistungsfähiger sind, als der beim
+        XML-Format verwendete Mechanismus.
+      </p></td></tr></table></div><p>GnuCash erzeugt verschiedene Arten von Dateien um
+      sicherzustellen, dass Ihre Daten nicht verloren gehen.  Die
+      folgenden Dateinamenserweiterung kommen vor: gnucash, log, LCK,
+      LNK in demselben Ordner wie ihre primäre Datei.
+    </p><pre class="programlisting">
+gcashdata.gnucash gcashdata.gnucash.20100414185747.gnucash
+gcashdata.gnucash.20100414223248.log
+gcashdata.gnucash.20100415114340.gnucash
+gcashdata.gnucash.20100415154508.log
+gcashdata.gnucash.20100415173322.gnucash
+gcashdata.gnucash.20100415194251.log
+gcashdata.gnucash.7f0982.12093.LNK gcashdata.gnucash.LCK
+</pre><p>Was es mit diesen Dateien für eine Bewandtnis hat, ist im
+    folgenden Abschnitt beschrieben.</p><div class="sect2" title="2.8.1. Sicherungsdatei (.jjjjMMddhhmmss.gnucash)"><div class="titlepage"><div><div><h3 class="title"><a name="basics-backupxac2"></a>2.8.1. Sicherungsdatei (.jjjjMMddhhmmss.gnucash)</h3></div></div></div><a class="indexterm" name="id2877180"></a><p>Jedes mal wenn Sie ihre Datei speichern, wird gleichzeitig
+        eine Sicherungsdatei mit der Dateinamensendung
+        jjjjMMddhhmmss.gnucash gespeichert.  Diese Sicherungsdatei ist
+        eine vollständige Kopie Ihrer Datendatei.  Die
+        Dateinamensendung gibt Jahr, Monat, Tag und Zeit der Sicherung
+        an.  Zum Beispiel bedeutet der
+        Dateiname <code class="filename">gcashdata.gnucash.20010404185747.gnucash</code>,
+        dass die Sicherungskopie der Datei gcashdata.gnucash am
+        4. April 2010 um 18:57:47 Uhr erfolgte.
+      </p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Anmerkung</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">
+          Bei Versionen vor 2.4.0 hatte die Datendatei standardmäßig
+          keine Dateinamenserweiterung.  Sie Sicherungsdatei endete
+          statt auf gnucash auf xac.  Die obige Beispieldatei hätte
+          also gcashdata.20100414185747.xac geheißen.
+        </p></td></tr></table></div><p>Um eine alte Sicherungsdatei wiederherzustellen, öffnen
+        Sie einfach die .gnucash Datei mit dem Datum, zu dem Sie
+        zurück kehren wollen.  Achten Sie unbedingt darauf, dass Sie
+        die Datei unter einem anderen Namen speichern!
+      </p></div><div class="sect2" title="2.8.2. Logdatei (.log)"><div class="titlepage"><div><div><h3 class="title"><a name="basics-backuplog2"></a>2.8.2. Logdatei (.log)</h3></div></div></div><a class="indexterm" name="id2877248"></a><p>Jedes mal wenn Sie eine Datei in GnuCash öffnen, wird ein
+        .log erzeugt und nach demselben Schema benannt, wie die
+        Sicherungskopie.  Wenn Sie mit GnuCash arbeiten und die
+        geöffnete Datei verändern, werden diese Veränderungen in der
+        Logdatei protokolliert.  Logdateien sind keine vollständige
+        Sicherung Ihrer Daten - sie sind lediglich eine Aufzeichnung
+        der Veränderungen, die sie in der aktuellen GnuCash Sitzung
+        vorgenommen haben.
+      </p><p>
+        In dem Fall, dass Sie GnuCash versehentlich beenden, zum
+        Beispiel durch einen Stromausfall oder einen Systemabsturz,
+        ist es möglich, den größten Teil Ihrer Arbeit seit dem letzten
+        Speichern durch Einspielen dieses log Datei wieder her zu
+        stellen.  Ist das System abgestürzt nachdem Sie gesichert
+        haben und bevor Sie neue Daten eingegeben haben, müssen Sie
+        die Logdatei nicht einspielen!  In diesem Fall gehen Sie vor,
+        wie im nächsten <a class="xref" href="basics-backup1.html#basics-backuplock2" title="2.8.3. Blockdateien (.LNK und .LCK)">Abschnitt 2.8.3, „Blockdateien (.LNK und .LCK)“</a>
+        beschrieben.
+      </p><p>
+        Das Einspielen geschieht folgendermaßen:
+      <a class="indexterm" name="id2877295"></a>
+      </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Öffnen Sie die zuletzt gespeicherte GnuCash
+          Datei.</p></li><li class="listitem"><p>Gehen Sie zu
+            <span class="guimenu"><strong>Datei</strong></span> → <span class="guimenuitem"><strong>Importieren</strong></span> → <span class="guimenuitem"><strong>Einträge
+            aus Logdatei abspielen…</strong></span>
+            und wählen Sie genau diejenige Logdatei mit demselben
+            Datum wie es die soeben geöffnete Datei trug.  Stellen Sie
+            sicher, dass Sie wirklich die richte Logdatei benutzen, da
+            Sie andernfalls schweren Schaden in Ihren Konten anrichten
+            können!
+          </p></li></ul></div><p>Das Einspielen der Logdatei wird alle Buchungen
+        wiederherstellen, die das Saldo seit dem letzten Speichern
+        verändert haben, einschließlich derjenigen aus terminierten
+        Buchungen und Geschäftsvorfällen (Rechnungen und
+        Forderungen, etc.).
+      </p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="warning" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/warning.png"></img></td><th align="left" valign="top">Warnung</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Änderungen in den terminierten Buchungen, oder den
+          eigentlichen Rechnungsbelegen werden NICHT wieder her
+          gestellt und die zugehörigen Buchungen, auch wenn Sie wieder
+          her gestellt wurden, werden möglicherweise nicht korrekt
+          zugeordnet und sollten daher besonders überprüft werden.
+          Insbesondere bei geschäftlichen Buchungsvorgängen kann es
+          erforderlich sein, dass Sie einige löschen und erneut
+          eingeben müssen.  Tun Sie dies nicht, kann es sein, dass
+          trotz korrekten Saldos einige Berichte falsch sind.
+        </p></td></tr></table></div></div><div class="sect2" title="2.8.3. Blockdateien (.LNK und .LCK)"><div class="titlepage"><div><div><h3 class="title"><a name="basics-backuplock2"></a>2.8.3. Blockdateien (.LNK und .LCK)</h3></div></div></div><a class="indexterm" name="id2877399"></a><p>
+        Gelegentlich werden Sie .LNK und .LCK Dateien auftauchen
+        sehen.  Diese speichern keine Daten, sondern werden erzeugt um
+        zu verhindern, dass mehrere Benutzer dieselbe Datei
+        gleichzeitig öffnen können.  Diese Dateien werden automatisch
+        erzeugt, sobald Sie Ihre eigene Datei öffnen, damit niemand
+        sonst darauf zugreifen kann.  Wenn Sie Ihre GnuCash Sitzung
+        beenden oder eine andere Datei öffnen, wird GnuCash die Blockade
+        der ersten Datei aufheben, indem es die LCK und LNK Dateien
+        löscht.
+      </p><p>
+        Wenn GnuCash nicht ordnungsgemäß beendet wird während Sie eine
+        Datei geöffnet haben, werden die LCK und LNK Dateien nicht
+        gelöscht.  Beim nächsten Start von GnuCash, werden Sie eine
+        Warnmeldung erhalten, dass die Datei blockiert ist.  </p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_lock.png" alt="Warnmeldung, dass Blockdateien gefunden werden"><div class="caption"><p>Die Abbildung zeigt die Warnung, dass Blockdateien
+            gefunden werden.
+            </p></div></div></div><p>
+        Die Warnmeldung erscheint, weil die LNK und LCK Dateien in
+        Ihrem Ordner gefunden wurden.  Es ist
+        sicher <span class="guibutton">Trotzdem öffnen</span> zu wählen, aber
+        Sie sollten die LNK und LCK Dateien löschen (von der
+        Kommandozeile oder mit dem Dateimanager).  Sobald die Dateien
+        entfernt sind, wird die Warnmeldung nicht mehr erscheinen,
+        sofern GnuCash nicht wieder abstürzt.
+      </p></div><div class="sect2" title="2.8.4. Dateimanagement"><div class="titlepage"><div><div><h3 class="title"><a name="basics-backupmanage2"></a>2.8.4. Dateimanagement</h3></div></div></div><a class="indexterm" name="id2877504"></a><p>
+        Welche Dateien sollten Sie also aufbewahren?  Behalten müssen
+        Sie natürlich Ihre Datendatei, die sie daran erkennen, dass
+        sie nur die Dateiendung .gnucash hat, also zu
+        Beispiel <code class="filename">mein_Name.gnucash</code>.  Es ist
+        ferner eine gute Idee, einige der jüngeren
+        jjjjMMddhhmmss.gnucash Dateien aufzubewahren.  Sie können aber
+        getrost die Logdateien löschen, da diese nur bei der
+        Wiederherstellung nach einem Systemabsturz gebraucht werden.
+        Sie sollten ebenfalls alle .LCK und .LNK Dateien löschen, die
+        sie nach dem Beenden von GnuCash noch finden.  Wenn Sie Ihre
+        Daten manuell in einem anderen Ordner sichern wollen, müssen
+        sie nur Ihre Datendatei kopieren - sonst nichts.
+      </p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Anmerkung</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">
+          GnuCash löscht automatisch alle .xac, .log Dateien, die älter
+          als 30 Tage sind.  Sie können dieses Verhalten in den
+          Voreinstellungen <a class="xref" href="basics-prefs1.html#basics-general2" title="2.4.1. Allgemein">Abschnitt 2.4.1, „Allgemein“</a>
+          ändern.
+        </p></td></tr></table></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="basics-import1.html">&lt;&lt;&lt; Zurück</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right"> <a accesskey="n" href="basics-together1.html">Weiter &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">2.7. Daten importieren </td><td width="20%" align="center"><a accesskey="u" href="chapter-basics.html">Nach oben</a></td><td width="40%" align="right"> 2.9. Alles Zusammensetzen</td></tr></table></div></body></html>

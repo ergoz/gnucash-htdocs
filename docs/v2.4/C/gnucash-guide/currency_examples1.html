@@ -1,0 +1,112 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>10.7. Putting It All Together (Examples)</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_currency.html" title="Chapter 10. Multiple Currencies"><link rel="prev" href="currency_reconcile1.html" title="10.6. Reconciling Statements in a Foreign Currency (How-To)"><link rel="next" href="chapter_dep.html" title="Chapter 11. Depreciation"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">10.7. Putting It All Together (Examples)</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="currency_reconcile1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 10. Multiple Currencies</th><td width="20%" align="right"> <a accesskey="n" href="chapter_dep.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="10.7. Putting It All Together (Examples)"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="currency_examples1"></a>10.7. Putting It All Together (Examples)</h2></div></div></div><p>In this Putting It All Together you will use quite a bit of what you
+    have learned so far in this guide with a bit of a twist. The twist being
+    a lot of different currencies.</p><div class="sect2" title="10.7.1. Basic scenario"><div class="titlepage"><div><div><h3 class="title"><a name="id3107497"></a>10.7.1. Basic scenario</h3></div></div></div><p>The following are the basic scenarios.</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>You live in Australia and use AUD as our default
+          currency</p></li><li class="listitem"><p>You win the lottery as well as inherit some money</p></li><li class="listitem"><p>You pay of your existing house loan</p></li><li class="listitem"><p>You purchase some stocks in Sweden using SEK (Ericsson
+          B-Fria)</p></li><li class="listitem"><p>You purchase some stocks in HK using HKD (Beijing
+          Airport)</p></li><li class="listitem"><p>You purchase some stocks in US using USD (Amazon)</p></li><li class="listitem"><p>You lend some EURO to a friend (Peter)</p></li><li class="listitem"><p>You borrow some money from a Japanese bank</p></li><li class="listitem"><p>You buy a house in New Zealand</p></li><li class="listitem"><p>You use a credit card in Australia</p></li><li class="listitem"><p>You would like to have maximum control of your expenses</p></li></ul></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Again these samples are not intended as a valid and
+          accurate advice. They are only to be considered as a sample for
+          the techniques used in <strong class="application"><code>GnuCash</code></strong>, and not as an Investment Advice.
+          Please consult a proper financial advisor for more information
+          regarding international investments/loans.</p></td></tr></table></div></div><div class="sect2" title="10.7.2. Configure Accounts"><div class="titlepage"><div><div><h3 class="title"><a name="id3107611"></a>10.7.2. Configure Accounts</h3></div></div></div><p>This time let’s start with a fresh and new <strong class="application"><code>GnuCash</code></strong> data file, so
+      <span class="guimenu"><strong>File</strong></span> → <span class="guimenuitem"><strong>New File</strong></span>, and edit
+      preferences (<span class="guimenu"><strong>Edit</strong></span> → <span class="guimenuitem"><strong>Preferences</strong></span>,
+      <span class="guimenu"><strong>Gnucash</strong></span> → <span class="guimenuitem"><strong>Preferences</strong></span> on Mac OS X) 
+      to set Default Currency as AUD. Since you have
+      decided to be able to track as much of your various expenses and incomes
+      as possible, the following account hierarchy could be used;</p><div class="literallayout"><p><br>
+Assets:Current Assets:Savings Account         (AUD)<br>
+      </p></div><p></p></div><div class="sect2" title="10.7.3. Opening Balance"><div class="titlepage"><div><div><h3 class="title"><a name="id3107686"></a>10.7.3. Opening Balance</h3></div></div></div><p>You open the mail one morning, and to your enormous surprise find
+      that you are the last living relative of a very distant relative who
+      happened to be very rich. And also $500,000 AUD richer. That was not the
+      last though, another mail states you won the lottery, and got $250,000
+      AUD for that. </p><p>To record these transaction we need the following accounts</p><div class="literallayout"><p><br>
+Equity:Lottery         (AUD)<br>
+Equity:Inheritance     (AUD)      <br>
+      </p></div><p>The transactions you enter into your 
+      <span class="emphasis"><strong>Assets:Current Assets:Savings Account</strong></span>
+      should look like this.</p><div class="table"><a name="id3104740"></a><p class="title"><b>Table 10.3. You come into some extra money</b></p><div class="table-contents"><table summary="You come into some extra money" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td>Account</td><td>Increase</td><td>Decrease</td></tr><tr><td>Income:Lottery</td><td>$250,000</td><td> </td></tr><tr><td>Income:Inheritance</td><td>$500,000</td><td> </td></tr></tbody></table></div></div><br class="table-break"><p>And the Chart of Accounts looks like this after above transactions have been entered.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_PutTogether_AfterMoney.png" alt="Chart Of Accounts"><div class="caption"><p>
+            Chart Of Accounts after receiving some money
+          </p></div></div></div></div><div class="sect2" title="10.7.4. Purchase a house"><div class="titlepage"><div><div><h3 class="title"><a name="id3104837"></a>10.7.4. Purchase a house</h3></div></div></div><p>At last you can afford to pay of that house loan you had to take some years ago 
+      (with a $50,000 deposit).</p><div class="literallayout"><p><br>
+Assets:Fixed Assets:House                  (AUD) $300,000<br>
+Liabilities:Loans:Mortgage                 (AUD) $250,000<br>
+Expenses:Interest:Mortgage Interest        (AUD)<br>
+Equity:Opening Balance                     (AUD) $50,000<br>
+      </p></div><p>After you have had a small chat with your Mortgage bank, they
+      agree to let you pay it all of in one go, plus some interest (AUD
+      30,000). You should enter the following split transaction into
+      <span class="emphasis"><strong>Assets:Fixed Assets:House</strong></span> account.</p><div class="table"><a name="id3107989"></a><p class="title"><b>Table 10.4. Paying of the house mortgage</b></p><div class="table-contents"><table summary="Paying of the house mortgage" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td>Account</td><td>Increase</td><td>Decrease</td></tr><tr><td>Assets:Current Assets:Savings Account</td><td> </td><td>280000</td></tr><tr><td>Expenses:Interest:Mortgage Interest</td><td>30000</td><td> </td></tr><tr><td>Liabilities:Loans:Mortgage</td><td>250000</td><td> </td></tr></tbody></table></div></div><br class="table-break"><p>The <span class="emphasis"><strong>Liabilities:Loans:Mortgage</strong></span> account Transaction Ledger looks like 
+      this after the transactions have been entered</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_PutTogether_AussieHouse.png" alt="House Mortgage"><div class="caption"><p>
+            Transaction Ledger of the House Loan
+          </p></div></div></div></div><div class="sect2" title="10.7.5. Stock Purchasing"><div class="titlepage"><div><div><h3 class="title"><a name="id3108102"></a>10.7.5. Stock Purchasing</h3></div></div></div><p>Since you quite suddenly have a lot of money in your bank account,
+      you decide to visit a Financial Advisor, and after his recommendation
+      (remember, this is fictional - Not a genuine stock purchase advice) you
+      decide to purchase Telecommunication (Ericsson in Sweden), Beijing
+      Airport (Hong Kong), and Amazon (USA).</p><p>The needed accounts to track these investments looks like
+      this.</p><div class="literallayout"><p><br>
+Assets:Investments:Swedish Broker:ERIC.ST                 (STOCK ERIC.ST Yahoo)<br>
+Assets:Investments:Swedish Broker:Bank                    (SEK)<br>
+Assets:Investments:HK Broker:0694.HK                      (STOCK 0694.HK Yahoo)<br>
+Assets:Investments:HK Broker:Bank                         (HKD)<br>
+Assets:Investments:US Broker:AMZN                         (STOCK AMZN Nasdaq)<br>
+Assets:Investments:US Broker:Bank                         (USD)<br>
+Expenses:Investments:Commissions:Swedish Broker:ERIC.ST   (SEK)<br>
+Expenses:Investments:Commissions:HK Broker:0694.HK        (HKD)<br>
+Expenses:Investments:Commissions:US Broker:AMZN           (USD)<br>
+Expenses:Investments:Currency Transfer                    (AUD)<br>
+</p></div><p>You decide to invest $100,000 into each stock, and to do this
+      we first do a currency transaction to the various bank accounts
+      associated with the stock. </p><p>The transaction you enter into your 
+      <span class="emphasis"><strong>Assets:Current Assets:Savings Account</strong></span>
+      should look like this.</p><div class="table"><a name="id3108155"></a><p class="title"><b>Table 10.5. Transfer money to overseas with a multiple currency transaction
+        split.</b></p><div class="table-contents"><table summary="Transfer money to overseas with a multiple currency transaction
+        split." border="1"><colgroup><col><col><col><col><col></colgroup><tbody><tr><td>Account</td><td>Deposit</td><td>Withdrawal</td><td>Exchange Rate</td><td>Transaction Fee</td></tr><tr><td>Assets:Investments:Swedish Broker:Bank</td><td>100000</td><td> </td><td>5.5869</td><td>35</td></tr><tr><td>Assets:Investments:HK Broker:Bank</td><td>100000</td><td> </td><td>5.8869</td><td>30</td></tr><tr><td>Assets:Investments:USD Broker:Bank</td><td>100000</td><td> </td><td>0.7593</td><td>25</td></tr></tbody></table></div></div><br class="table-break"><p>Now when there is some money in the various stock brokerage
+      accounts, you ask each broker to buy stocks for the certain amount.
+      Remember to execute the transaction from the stocks associated bank
+      account, and if the Exchange Rate window do not pop up, right click the
+      row and manually start it. Enter the number of stocks you purchase in
+      the last entry (To Amount:).</p><p>
+        </p><div class="table"><a name="id3108264"></a><p class="title"><b>Table 10.6. Purchasing oversea stocks</b></p><div class="table-contents"><table summary="Purchasing oversea stocks" border="1"><colgroup><col><col><col><col></colgroup><tbody><tr><td>Stock Symbol</td><td>Number of shares</td><td>Amount</td><td>Commission</td></tr><tr><td>ERIC.ST</td><td>15000</td><td>270000</td><td>400</td></tr><tr><td>0694.HK</td><td>70000</td><td>280000</td><td>300</td></tr><tr><td>AMZN</td><td>1000</td><td>32000</td><td>25</td></tr></tbody></table></div></div><p><br class="table-break">
+      </p><p>As you can see in the Chart of Accounts, you have now purchased stocks in three
+      different currencies (HK, USD, as well as in SEK), but the Chart of Account (as seen below)
+      do not indicate how much it is valued in your home currency, AUD.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_PutTogether_AfterStocks.png" alt="Chart of Account after Stocks"><div class="caption"><p>
+            Some of the accounts in Chart of Accounts after the stock purchase
+          </p></div></div></div><p>Next section will ensure you get the various exchange rates so <strong class="application"><code>GnuCash</code></strong> can show your
+      total worth in the local currency (AUD in this case)</p></div><div class="sect2" title="10.7.6. Get the online quotes"><div class="titlepage"><div><div><h3 class="title"><a name="id3108406"></a>10.7.6. Get the online quotes</h3></div></div></div><p>To get the current exchange rates and stock quotes, go to
+      <span class="guimenu"><strong>Tools</strong></span> → <span class="guimenuitem"><strong>Price Editor</strong></span> and then
+      click on <span class="guibutton">Get Quotes</span>. </p><p></p></div><div class="sect2" title="10.7.7. Lending money to a friend"><div class="titlepage"><div><div><h3 class="title"><a name="id3108440"></a>10.7.7. Lending money to a friend</h3></div></div></div><p>Peter has run into some difficulties all the way over in Europe
+      Land. Since he is a very dear pal of yours, you decide to help him out
+      with a personal loan of 40,000 Euro.</p><p>
+        </p><div class="literallayout"><p><br>
+Assets:Money owed to me:Euro:Peter            (Euro)<br>
+Income:Interest Income:Peter                  (Euro)<br>
+Expenses:Bank Charge                          (AUD)<br>
+        </p></div><p>
+      </p><p>This is a
+        simple currency transaction from your Savings Account (AUD), to your
+        Assets:Money owed to me:Peter (EURO) account. You got the exchange rate
+        of 0.606161, which means you need to withdraw AUD 65,989.10, as well as
+        pay the service fee of 35 AUD.</p></div><div class="sect2" title="10.7.8. Buying property in New Zealand with a loan from Japan"><div class="titlepage"><div><div><h3 class="title"><a name="id3108476"></a>10.7.8. Buying property in New Zealand with a loan from Japan</h3></div></div></div><p>Your long time Japanese friend offers you a Japanese house loan if
+      you purchase a property overseas, with only AUD 50,000 as deposit. After
+      having discussed this with your Financial Advisor in Australia and gone
+      through the various risks and benefits related to your situation, you
+      decide to accept his offer. </p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Again, this should not be taken as a financial advice. Please
+        consult with a registered financial advisor before undertaking
+        investing (or speculating) in overseas markets, or local markets for
+        that matter.</p><p xmlns="">A word of warning might be of interest here, taking a loan
+        overseas for a very low interest rate might seem like a very good
+        deal. Do keep in mind though that the exchange rate might change and
+        can change drastically. If you take a loan in your local currency, you
+        only have to worry about the interest rate. Taking a loan overseas,
+        then you have to worry about the interest rate and the exchange rate.
+        </p></td></tr></table></div><p>You found a nice small cottage in a small coastal town near
+      Auckland which would be a perfect summer house, and you decide to use
+      the money from Japan for this purpose.</p><p>We need the following accounts for this example;</p><div class="literallayout"><p><br>
+Liabilities:Loans:Japan Loan                  (JPY)<br>
+Expenses:Interest:Japan Loan                  (JPY)<br>
+Expenses:Mortgage Adm Fees:Japan Loan         (JPY)<br>
+Assets:Current Assets:Japan Bank              (JPY)<br>
+Assets:Fixed Assets:NZ House                  (NZ)<br>
+</p></div><div class="table"><a name="id3108535"></a><p class="title"><b>Table 10.7. Buying a NZ House Split Transaction</b></p><div class="table-contents"><table summary="Buying a NZ House Split Transaction" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td>Account</td><td>Increase</td><td>Decrease</td></tr><tr><td>Assets:Fixed Assets:NZ House</td><td>300000 (NZD)</td><td> </td></tr><tr><td>Assets:Current Assets:Savings Account</td><td> </td><td>50000 (AUD) (1.18926)</td></tr><tr><td>Liabilities:Loans:Japan Loan</td><td> </td><td>28000000 (JPY) (0.0137609)</td></tr><tr><td>Expenses:Mortgage Adm Fees:Japan Loan</td><td>300000 (JPY) (0.0137609)</td><td> </td></tr></tbody></table></div></div><br class="table-break"></div><div class="sect2" title="10.7.9. Whats next?"><div class="titlepage"><div><div><h3 class="title"><a name="id3108616"></a>10.7.9. Whats next?</h3></div></div></div><p>As you have seen in the above examples you have only done the initial purchases. 
+      The rest, that is various selling, and unrealized gains tracking is left for you to 
+      ponder upon.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="currency_reconcile1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="chapter_dep.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">10.6. Reconciling Statements in a Foreign Currency (How-To) </td><td width="20%" align="center"><a accesskey="u" href="chapter_currency.html">Up</a></td><td width="40%" align="right"> Chapter 11. Depreciation</td></tr></table></div></body></html>

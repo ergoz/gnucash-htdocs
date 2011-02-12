@@ -1,0 +1,99 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>8.1. Basic Concepts</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_invest.html" title="Chapter 8. Investments"><link rel="prev" href="chapter_invest.html" title="Chapter 8. Investments"><link rel="next" href="invest_accounts1.html" title="8.2. Setting Up Accounts"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.1. Basic Concepts</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="chapter_invest.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 8. Investments</th><td width="20%" align="right"> <a accesskey="n" href="invest_accounts1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="8.1. Basic Concepts"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="invest_concepts1"></a>8.1. Basic Concepts</h2></div></div></div><p>An investment is something that you purchase in the hopes of
+    generating income, or that you hope to sell in the future for more than
+    you paid. Using this simple definition, many things could be considered
+    investments: the house you live in, a valuable painting, stocks in
+    publicly traded companies, your savings account at the bank, or a
+    certificate of deposit. These many types of investments will be discussed
+    in this chapter in terms of how to track them using <strong class="application"><code>GnuCash</code></strong>.</p><div class="sect2" title="8.1.1. Terminology"><div class="titlepage"><div><div><h3 class="title"><a name="invest_terms2"></a>8.1.1. Terminology</h3></div></div></div><p>Before discussing investments specifically, it will be helpful to
+      present a glossary of investment terminology. The terms presented below
+      represent some of the basic concepts of investing. It is a good idea to
+      become familiar with these terms, or at least, refer back to this list
+      if you encounter an unfamiliar word in the later sections.</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><strong>Capital gains</strong></span> is the difference between
+          the purchase and selling prices of an investment. If the selling
+          price is lower than the purchase price, this is called a
+          <span class="emphasis"><strong>capital loss</strong></span>. Also known as <span class="emphasis"><strong>realized
+          gain/loss</strong></span>.</p></li><li class="listitem"><p><span class="emphasis"><strong>Commission</strong></span> is the fee you pay to a broker
+          to buy or sell securities.</p></li><li class="listitem"><p><span class="emphasis"><strong>Common stock</strong></span> is a security that
+          represents a certain fractional ownership of a company. This is what
+          you buy when you <span class="quote">“<span class="quote">buy stock</span>”</span> in a company on the open market. This
+          is also sometimes known as <span class="emphasis"><strong>capital
+          stock</strong></span>.</p></li><li class="listitem"><p><span class="emphasis"><strong>Compounding</strong></span> is the concept that the
+          reinvested interest can later earn interest of its own (interest on
+          interest). This is often referred to as <span class="emphasis"><strong>compound
+          interest</strong></span>.</p></li><li class="listitem"><p><span class="emphasis"><strong>Dividends</strong></span> are cash payments a company
+          makes to shareholders. The amount of this payment is usually
+          determined as some amount of the profits of the company. Note that
+          not all common stocks give dividends.</p></li><li class="listitem"><p><span class="emphasis"><strong>Equities</strong></span> are investments in which the
+          investor becomes part (or whole) owner in something. This includes
+          common stock in a company, or real estate.</p></li><li class="listitem"><p><span class="emphasis"><strong>Interest</strong></span> is what a borrower pays a lender
+          for the use of their money. Normally, this is expressed in terms of
+          a percentage of the principal per year. For example, a savings
+          account with 1% interest (you are the lender, the bank is the
+          borrower) will pay you $1 for every $100 you keep there per
+          year.</p></li><li class="listitem"><p><span class="emphasis"><strong>Liquidity</strong></span> is a measure of how easily
+          convertible an investment is to cash. Money in a savings account is
+          very liquid, while money invested in a house has low liquidity
+          because it takes time to sell a house.</p></li><li class="listitem"><p><span class="emphasis"><strong>Principal</strong></span> is the original amount of money
+          invested or borrowed.</p></li><li class="listitem"><p><span class="emphasis"><strong>Realized vs Unrealized Gain/Loss</strong></span>,
+          unrealized gain or loss occurs when you’ve got a change in price of
+          an asset. You realize the gain/loss when you actually sell the
+          asset. See also <span class="emphasis"><strong>capital gain/loss</strong></span>.</p></li><li class="listitem"><p><span class="emphasis"><strong>Return</strong></span> is the total income plus capital
+          gains or losses of an investment. See also
+          <span class="emphasis"><strong>Yield</strong></span>.</p></li><li class="listitem"><p><span class="emphasis"><strong>Risk</strong></span> is the probability that the return
+          on investment is different from what was expected. Investments are
+          often grouped on a scale from low risk (savings account, government
+          bonds) to high risk (common stock, junk bonds). As a general rule of
+          thumb, the higher the risk the higher the possible return.</p></li><li class="listitem"><p><span class="emphasis"><strong>Shareholder</strong></span> is a person who holds common
+          stock in a company.</p></li><li class="listitem"><p><span class="emphasis"><strong>Stock split</strong></span> occurs when a company offers
+          to issue some additional multiple of shares for each existing stock.
+          For example, a <span class="quote">“<span class="quote">2 for 1</span>”</span> stock split means that if you own 100
+          shares of a stock, you will receive an additional 100 at no cost to
+          you. The unit price of the shares will be adjusted so there is no
+          net change in the value, so in this example the price per share will
+          be halved.</p></li><li class="listitem"><p><span class="emphasis"><strong>Valuation</strong></span> is the process of determining
+          the market value or the price the investment would sell at in a
+          <span class="quote">“<span class="quote">reasonable time frame</span>”</span>.</p></li><li class="listitem"><p><span class="emphasis"><strong>Yield</strong></span> is a measure of the amount of money
+          you earn from an investment (IE: how much income you receive from
+          the investment). Typically this is reported as a percentage of the
+          principal amount. Yield does not include capital gains or loses (see
+          Return). Eg: A stock sells for $100 and gives $2 in dividends per
+          year has a yield of 2%.</p></li></ul></div></div><div class="sect2" title="8.1.2. Types of Investments"><div class="titlepage"><div><div><h3 class="title"><a name="invest_types2"></a>8.1.2. Types of Investments</h3></div></div></div><p>Below is presented some of the broad types of investments
+      available, and examples of each type.</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><strong>Interest-bearing account or
+          instrument</strong></span></p><p>This type of investment usually allows you immediate access to
+          your money, and will typically pay you interest every month based on
+          the amount of money you have deposited. Examples are bank savings
+          accounts (and some interest bearing checking accounts) and cash
+          accounts at your brokerage. This is a very low risk investment, in
+          the US these accounts are often insured against loss, to a specified
+          limit.</p><p>Sometimes an interest bearing investment is
+          <span class="emphasis"><strong>time-locked</strong></span>. This type of investment requires
+          you to commit your money to be invested for a given period of time
+          for which you receive a set rate of return. Usually, the longer you
+          commit the higher the interest rates. If you withdraw your money
+          before the maturity date, you will usually have to pay an early
+          withdrawal penalty. This is a relatively lower risk investment.
+          Examples are certificates of deposit or some government bonds. Other
+          types of Bonds may have higher yields based on the higher risks from
+          the quality of the issuer’s <span class="quote">“<span class="quote">credit rating</span>”</span>.</p></li><li class="listitem"><p><span class="emphasis"><strong>Stocks and Mutual Funds</strong></span></p><p>This is an investment you make in a company, in which you
+          effectively become a part owner. There is usually no time lock on
+          publicly traded stock, however there may be changes in the tax rates
+          you pay on capital gains depending on how long you hold the stock.
+          Thus, stocks are typically quite liquid, you can access your money
+          relatively quickly. This investment is a higher risk, as you have no
+          guarantee on the future price of a stock.</p><p>A mutual fund is a group investment mechanism in which you can
+          buy into many stocks simultaneously. For example, a "S&amp;P 500
+          index fund" is a fund which purchases all 500 stocks listed in the
+          Standard and Poor’s index. When you buy a share of this fund, you
+          are really buying a small amount of each of the 500 stocks contained
+          within the fund. Mutual funds are treated exactly like a single
+          stock, both for tax purposes and in accounting.</p></li><li class="listitem"><p><span class="emphasis"><strong>Fixed Assets</strong></span></p><p>Assets that increase in value over time are another form of
+          investment. Examples include a house, a plot of land, or a valuable
+          painting. This type of investment is very difficult to determine the
+          value of until you sell it. The tax implications of selling these
+          items is varied, depending on the item. For example, you may have
+          tax relief from selling a house if it is your primary residence, but
+          may would not receive this tax break on an expensive
+          painting.</p><p>Fixed asset investments are discussed in the chapter on
+          <span class="quote">“<span class="quote">Depreciation and Capital Gains</span>”</span>. Typically, there is not much to do
+          in terms of accounting for fixed asset investments except recording
+          the buying and selling transactions.</p></li></ul></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="chapter_invest.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="invest_accounts1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">Chapter 8. Investments </td><td width="20%" align="center"><a accesskey="u" href="chapter_invest.html">Up</a></td><td width="40%" align="right"> 8.2. Setting Up Accounts</td></tr></table></div></body></html>

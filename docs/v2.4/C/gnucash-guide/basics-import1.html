@@ -1,0 +1,58 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2.7. Importing QIF Files</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_basics.html" title="Chapter 2. The Basics"><link rel="previous" href="basics-files1.html" title="2.6. Creating and Saving Files"><link rel="next" href="basics-backup1.html" title="2.8. Backing Up and Recovering Data"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">2.7. Importing QIF Files</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="basics-files1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 2. The Basics</th><td width="20%" align="right"> <a accesskey="n" href="basics-backup1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="basics-import1"></a>2.7. Importing QIF Files</h2></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">This section tells you how to initially import data from other
+      financial programs that use QIF (Quicken® Interchange Format). 
+
+      </p></td></tr></table></div><p>To import data from Quicken®, MS Money, or other programs that
+    use QIF(Quicken® Interchange
+    Format), you must first export your data to a QIF file. One way to do this
+    is to export each account as a separate QIF file. An easier way, available
+    in Quicken® 98 and beyond, is to
+    export all accounts at once into a single QIF file. Check your program's
+    manual to determine if this option is available.</p><p>Once your data is in QIF form, follow the easy 3-step import process
+    described below. Before you get started, though, please note that part of
+    the import process involves checking for duplicate transactions, so it is
+    very important that you load <b>all</b> of your QIF files
+    before importing. Duplicate transactions result when more than one account
+    is involved. For example, if one of your transactions transferred money
+    from savings to checking, you would end up with this same transaction
+    recorded twice - once in the savings account and once in the checking
+    account.</p><p>To import QIF files:</p><div class="orderedlist"><ol type="1"><li><p>Load all of the QIF files containing data you wish to
+        import.</p><p>To do this, select <b>File</b> -&gt;
+        <b>Import</b> -&gt; <b>Import
+        QIF...</b> from the menu. When the <b>QIF
+        Import</b> dialog box appears, click
+        Next and follow the instructions to guide you
+        through the process of loading your files.</p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_QIF_Import_welcome.png" alt="The QIF Import Druid"><div class="caption"><p>This image shows the start of the <b>QIF
+              Import</b> Druid.</p></div></div></div><p>You will be prompted for a filename to load. Use the
+        Select button to select your QIF file and click
+        Next to load it. Once the file is loaded,
+        select Load another file if you have more files
+        to load. When you have loaded all your QIF files, click
+        Next to continue with the import
+        process.</p></li><li><p>Review the GnuCash accounts to be created.</p><p>The importer then matches up your QIF accounts and categories
+        with GnuCash accounts and gives you a brief description of the
+        matching process. Clicking Next will bring you
+        to a view comparing your QIF accounts with the corresponding GnuCash
+        accounts created. To change an account name, select the row containing
+        that account name and edit the name in the dialog box provided. Click
+        Next when you have finished making changes, and
+        proceed through a similar category matching process. QIF income and
+        expense categories import as GnuCash income and expense accounts (see
+        <a href="accts-concepts1.html" title="3.1. Basic Accounting Concepts">Basic Accounting Concepts</a> for more on this). 
+        Make changes to these account names if
+        necessary, and click Next to continue.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">If you are not sure what changes are needed, it is safe to
+          accept the GnuCash account names. It is easy to edit the accounts
+          later if you find you need to make a change.</p></td></tr></table></div><p>From the drop-down list, select a standard currency to be used
+        for imported accounts and click Next to
+        continue. If you have stocks, mutual funds, or other securities, you
+        will be prompted for additional information. The importer dialog will
+        ask for the exchange or listing (i.e. NASDAQ), the security's full
+        name, and the ticker symbol. If you do not have this information
+        handy, you can edit the account information later, once the import is
+        complete. Click Next to continue.</p></li><li><p>Tell GnuCash to import the data.</p><p>The last step is the import. Once you have verified your account
+        names and investment information, click Finish
+        in the <b>Update your GnuCash accounts</b> page to
+        complete the import process. Depending upon the size of your file, the
+        import might take a few minutes to complete, so a progress bar
+        displays the percentage finished. When the import process is complete,
+        GnuCash will return you to the main window, which should now display
+        the names of the accounts you imported.</p></li></ol></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="basics-files1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="basics-backup1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">2.6. Creating and Saving Files </td><td width="20%" align="center"><a accesskey="u" href="chapter_basics.html">Up</a></td><td width="40%" align="right"> 2.8. Backing Up and Recovering Data</td></tr></table></div></body></html>

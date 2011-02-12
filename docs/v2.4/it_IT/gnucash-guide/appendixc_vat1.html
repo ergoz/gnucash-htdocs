@@ -1,0 +1,83 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>C.1. UK Vat</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="appendixc.html" title="Appendice C. Contributed Account Trees"><link rel="prev" href="appendixc.html" title="Appendice C. Contributed Account Trees"><link rel="next" href="appendixd.html" title="Appendice D. Formati di file ausiliari"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">C.1. UK Vat</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="appendixc.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Appendice C. Contributed Account Trees</th><td width="20%" align="right"> <a accesskey="n" href="appendixd.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="C.1. UK Vat"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="appendixc_vat1"></a>C.1. UK Vat</h2></div></div></div><p>
+Account types (only shown if different to parent type)
+ </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>[E] Expense</p></li><li class="listitem"><p>[I] Income</p></li><li class="listitem"><p>[A] Asset</p></li><li class="listitem"><p>[L] Liability</p></li><li class="listitem"><p>[Q] Equity</p></li><li class="listitem"><p>[B] Bank accounts</p></li><li class="listitem"><p>[C] Credit Cards</p></li><li class="listitem"><p>[R] Accounts Receivable</p></li><li class="listitem"><p>[P] Accounts Payable</p></li></ul></div><p>(Box n) refers to VAT form box number (I actually have these as
+descriptions to the account to remind me)</p><p>Add all the (Box n -part)  together to get the whole (Box n)
+The VAT shows you liability - if its negative they owe you.</p><p>Capital Equipment (Box 7 - part) and (Box 6 - part) is the value of all *additions* (purchases) made over the VAT return period - not the absolute value, nor the difference in value unless that difference is wholly due to new purchases. Depreciation, losses (e.g a write off of faulty item) and other reductions in capital value are not included. If you sell a capital item then that sale and its VAT is recorded under Income. The asset is 'converted to cash', so the 'net of VAT' increase in your bank account, when the invoice is payed, is matched by a decrease in capital.</p><div class="literallayout"><p><br>
+Bank Accounts [B]<br>
+  |___ Main Account<br>
+  |___  Reserve Account<br>
+<br>
+Cash [A]<br>
+<br>
+Assets [A]<br>
+  |___ Capital Equipment    (Box 7 - Part) - additions only, not absolute value<br>
+  |           |___ Computers      Can be depreciated to zero this year<br>
+  |           |___ EEC reverse VAT purchase  (Box 6 - Part) create sub-accounts if needed<br>
+  |___  Other<br>
+<br>
+Receivable [R] Customers to whom you give credit - (business section)<br>
+<br>
+<br>
+Cards [C]<br>
+  |___  Card 1<br>
+<br>
+Liabilities [L]<br>
+  |___  Owed Corp Tax<br>
+  |___  Owed Fees<br>
+  |___  Owed Tax / NI<br>
+  |___  Other<br>
+<br>
+VAT [L]   Net (Box 5)<br>
+  |___ i/p [A]   purchases (Box4)<br>
+  |___  o/p [L]     (Box3)<br>
+             |___EEC   on reverse VAT purchases (Box 2)<br>
+             |___Sales   all including zero rate UK/ EEC  and World (Box1)<br>
+<br>
+Payable [P]   Suppliers who give you credit (business section)<br>
+<br>
+Equity [Q]<br>
+  |___  Corp Tax<br>
+  |___  Director's Loan<br>
+  |___  Dividends<br>
+  |             |___  Director1<br>
+  |             |___  Director2<br>
+  |             |___  Shareholder 1<br>
+  |___ Grants (and stuff that does not count as income)<br>
+  |___Opening Balances<br>
+<br>
+Income [I]   (Box 6 - part)<br>
+   |___ Interest<br>
+   |___ Misc<br>
+   | ___ Sales<br>
+                |___ EEC<br>
+                |     |____ goods  (Box 8) (sub accounts as needed)<br>
+                |     |____ services includes software (sub accounts as needed)<br>
+                | ___ UK<br>
+                |____ World<br>
+<br>
+Expenses [E]<br>
+        |__Depreciation<br>
+        |__ Emoluments<br>
+        |            |___ Directors Fees<br>
+        |            |___ NI Employer<br>
+        |            |___ Employee 1<br>
+        |                     |___NI<br>
+        |                     |___Net Salary<br>
+        |                     |___Stakeholder<br>
+        |                     |___Tax<br>
+        |___ Other Non VAT Expenses<br>
+        |___ VAT Purchases    (Box 7 - part)<br>
+                    |___  Accountancy<br>
+                    |___  Bank Charges<br>
+                    |___  Consumables<br>
+                    |___  EEC  reverse VAT purchases  (Box 6 - Part)<br>
+                    |         |___ goods (Box 9) (sub accounts as needed)<br>
+                    |         |___ services   includes software (sub accounts as needed)<br>
+                    |___  Office<br>
+                    |___  Phone and Internet<br>
+                    |___  Software<br>
+                    |___  Subscriptions<br>
+                    |___  Sundry<br>
+                    |___  Travel / Accom <br>
+<br>
+</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="appendixc.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="appendixd.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">Appendice C. Contributed Account Trees </td><td width="20%" align="center"><a accesskey="u" href="appendixc.html">Risali</a></td><td width="40%" align="right"> Appendice D. Formati di file ausiliari</td></tr></table></div></body></html>

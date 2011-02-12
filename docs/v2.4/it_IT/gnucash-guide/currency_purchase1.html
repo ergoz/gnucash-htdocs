@@ -1,0 +1,101 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>10.6. Registrare gli acquisti in valuta estera (come fare)</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_currency.html" title="Capitolo 10. Valute multiple"><link rel="prev" href="currency_howto1.html" title="10.5. Registrare e aggiornare i tassi di cambio per le valute (come fare)"><link rel="next" href="currency_invest1.html" title="10.7. Tracciare gli investimenti in valuta (come fare)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">10.6. Registrare gli acquisti in valuta estera (come fare)</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="currency_howto1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 10. Valute multiple</th><td width="20%" align="right"> <a accesskey="n" href="currency_invest1.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="10.6. Registrare gli acquisti in valuta estera (come fare)"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="currency_purchase1"></a>10.6. Registrare gli acquisti in valuta estera (come fare)</h2></div></div></div><p>E' possibile operare in due modi differenti.</p><p>1) utilizzando la funzione fornita da GnuCash per il cambio della valuta
+    tra i conti quando si effettuano delle transazioni. Questo è utile principalmente
+    per le transazioni che avvengono in una volta sola e non per quelle che
+    avvengono ripetutamente.</p><p>2) Utilizzando conti separati per questi acquisti, dove tutti i conti
+    interessati utilizzano la stessa valuta. Questo è il metodo raccomandato, dato che
+    permette di seguire e tracciare meglio le operazioni. In questo modo, si
+    esegue una sola transazione per il cambio di valuta e dopo di questa si
+    operano delle normali transazioni.</p><p>Nel prosieguo di questa sezione, ci si baserà su una impostazione del tipo
+    2)</p><div class="sect2" title="10.6.1. Acquistare un bene in valuta estera"><div class="titlepage"><div><div><h3 class="title"><a name="currency_purchase2"></a>10.6.1. Acquistare un bene in valuta estera</h3></div></div></div><p>Si ipotizzi che la propria residenza abituale sia in Emilia-Romagna, quindi si utilizzi
+      l'EURO come valuta predefinita; ma, amando i viaggi alle Bahamas per la pesca,
+      si decida di acquistare una barca. Per farlo, si apra un conto bancario in Jamaica,
+      si trasferisca del denaro dall'Italia e poi si effettui l'acquisto della barca
+      dei propri sogni (in versione ridotta (!)).</p><p>Per registrare tutto questo in GnuCash si utilizzerà la seguente struttura 
+      dei conti</p><div class="literallayout"><p><br>
+-Attività                        (EUR)<br>
+   -Attività correnti              (EUR)<br>
+      -Banca italiana       (EUR)<br>
+      -Banca Jamaicana      (JMD)<br>
+   -Beni immobili                  (EUR)<br>
+      -Barca                (JMD)<br>
+-Capitali                        (EUR)<br>
+   -Bilanci di apertura<br>
+      -EUR                  (EUR)<br>
+<br>
+Nota: la valuta di ogni conto è riportata fra parentesi.<br>
+ </p></div><p>Dapprima occorre trasferire del denaro (€10.000) in Jamaica utilizzando
+      il conto bancario abituale in Italia (con un saldo di €100.000). La banca
+      fissa un tasso di cambio di 1 EUR = 64 JMD e addebita €150 per il
+      trasferimento del denaro.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_MoveMoney.png" alt="Trasferimento di valuta"><div class="caption"><p>Trasferimento di denaro in Jamaica</p></div></div></div><p>Selezionare la riga della transazione in Jamaica (€9.850,00), premere il tasto 
+      destro del mouse e selezionare <span class="guilabel"><strong>Modifica tasso di cambio</strong></span></p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_SetExchangeRate.png" alt="Modifica tasso di cambio"><div class="caption"><p>La finestra in cui viene specificato il tasso di cambio per una
+          transazione in valuta</p></div></div></div><p>Come tasso di cambio si immetta 1 EUR = 64 JMD, dato che questo è il valore
+      fornito dalla propria banca. Premere «Ok» nella finestra di trasferimento del fondo 
+      (modifica del tasso di cambio) e salvare la transazione suddivisa. Sotto è riportata
+      un'immagine di come dovrebbe presentarsi la struttura dei conti principale.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_BeforeBoat.png" alt="Struttura dei conti prima dell'acquisto della barca"><div class="caption"><p>Struttura dei conti prima dell'acquisto della 
+          barca</p></div></div></div><p>Si supponga di aver trovato la barca e, poiché si tratta di un affare a soli JMD 509.000, si 
+      decide di acquistarla. Per registrare questa transazione in GnuCash, basta
+      inserire una semplice transazione nel conto Attività:Attività correnti:Banca Jamaicana
+      prelevando 509.000 JMD e trasferendoli in Attività:Beni immobili:Barca</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_AfterBoat.png" alt="Struttura dei conti dopo l'acquisto della barca"><div class="caption"><p>Struttura dei conti dopo l'acquisto della 
+          barca</p></div></div></div><p>La struttura dei conti mostra ora che il conto in banca è stato ridotto
+      del valore della barca (JMD 509.000), e che il conto della barca nei beni immobili
+      è aumentato dello stesso importo. Se è anche stato attivato nel CoA (scelta
+      delle colonne) la voce "Totale (EUR)", verrà mostrato il valore corrispondente
+      in EURO. Il valore in EURO rispecchierà sempre l'ultimo tasso di cambio che è
+      stato automaticamente o manualmente aggiornato con GnuCash.
+      </p></div><div class="sect2" title="10.6.2. Acquistare azioni estere"><div class="titlepage"><div><div><h3 class="title"><a name="currency_purchase3"></a>10.6.2. Acquistare azioni estere</h3></div></div></div><p>Un esempio più complicato</p><p>Questo esempio mostra come acquistare azioni scambiate in una valuta
+      differente da quella normale.</p><p>In questo esempio si ipotizza di essere in Italia e di aver quindi impostato
+      la valuta predefinita a EUR. Si decide di acquistare alcune azioni a Hong Kong valutate in
+      HKD.Si desidera anche essere in grado di registrare le varie entrate e uscite
+      per ogni azione e per mediatore (brocker).</p><p>Le azioni che si desidera acquistare sono le Beijing Airport (Hong Kong)
+      (Dopotutto le Olimpiadi del 2008 a Beijing sono terminate e il prezzo è tornato 
+      normale).</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">
+         Le azioni di cui sopra (Beijing Airport) sono state scelte solo per
+         le finalità di questo esempio, e non dovrebbero essere prese come una pubblicità
+         per l'acquisto delle azioni.
+      </p></td></tr></table></div><p>E' necessario trovare quale sia il simbolo ticker dell'azione.
+      Per farlo, è utile un pò di ricerca su internet e, in particolare,
+      su <a class="ulink" href="http://finance.yahoo.com/lookup" target="_top"><em class="citetitle">Yahoo! Finance - Ticker
+      Symbol Lookup</em></a> (http://finance.yahoo.com/lookup).
+      Questo porta a:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><strong>Beijing Airport</strong></span> ha il simbolo
+          0694.HK su Yahoo</p></li></ul></div><p>Dato che si desidera registrare tutte le varie entrate e uscite, si perviene alla 
+      seguente struttura dei conti:</p><div class="literallayout"><p><br>
+Attività:Investimenti:Conto di brockeraggio:Boom:0694.HK     (Beijing Airport)<br>
+Attività:Investimenti:Conto di brockeraggio:Boom:Banca        (HKD)<br>
+Capitali:Bilanci di apertura:HKD                            (HKD)<br>
+Uscite:Commissioni:Boom.0694.HK                      (HKD)<br>
+Entrate:Investimenti:Dividendi:Boom:0694.HK               (HKD)<br>
+      </p></div><p>La struttura dei conti assomiglia a questa dopo la creazione di tutti i conti 
+      necessari:</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_BeforeStocks.png" alt="Struttura dei conti per azioni internazionali"><div class="caption"><p>Struttura dei conti per azioni 
+          internazionali</p></div></div></div><p>Le informazioni sull'azione sono visualizzabili nell'editor titoli
+      (<span class="guimenu"><strong>Strumenti</strong></span> -&gt; 
+      <span class="guimenu"><strong>Editor titoli</strong></span>):</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_Commodities.png" alt="Titoli Internazionali"><div class="caption"><p>Titoli Internazionali</p></div></div></div><p>Se non si è ancora trasferito del denaro (HKD 50.000) al conto di brockeraggio
+      (Attività:Investimenti:Conto brokeraggio:Boom:Banca), lo si faccia ora o utilizzando il conto del 
+      capitale (HKD), o trasferendo denaro da un conto bancario esistente (trasferimento di valuta).</p><p>Si assuma che il prezzo di una azione sia di 3 HKD. Per registrare l'acquisto,
+      si apra il conto dei liquidi di brokeraggio in HKD
+      (Attività:Investimenti:Conto brockeraggio:Boom:Banca) e si inserisca:</p><div class="literallayout"><p><br>
+    Acquisto delle azioni <br>
+	Attività:Investimenti:Conto di brockeraggio:Boom:Banca  Prelievo 50.000<br>
+	Uscite:Investimenti:Commissioni:Boom_HKD	Deposito 500<br>
+	Attività:Investimenti:Conto di brockeraggio:Boom:0694  Deposito 49.500 (16.500 quote)<br>
+    </p></div><p>Se non viene visualizzata automaticamente la finestra del "Tasso di cambio", si clicchi con
+      il tasto destro del mouse nella riga dell'azione e si selezioni 
+      <span class="guilabel"><strong>Modifica tasso di cambio</strong></span>. Nella finestra che verrà aperta, inserire
+      il numero di azioni (16.500) nel campo <span class="guilabel"><strong>Trasferisci a:</strong></span> 
+      </p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_ToAmount.png" alt="Trasferimento di fondi"><div class="caption"><p>Impostazione del numero di quote nella finestra del trasferimento fondi</p></div></div></div><p>Se si ritorna alla struttura dei conti, si vedrà che il totale del conto è stato
+      modificato in funzione delle quote acquistate.
+      </p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_AfterStocks.png" alt="Azioni Internazionali acquistate"><div class="caption"><p>
+            Struttura dei conti con alcune azioni Internazionali
+          </p></div></div></div><p>Come si può vedere, il totale in Euro potrebbe essere zero se non è
+      stato impostato alcun tasso di cambio tra EUR e HKD. Per porvi rimedio,
+      andare in <span class="guimenu"><strong>Strumenti</strong></span> -&gt; <span class="guimenu"><strong>Editor prezzi</strong></span>
+      e premere il pulsante <span class="guibutton">Ricevi quotazioni</span> per far sì che
+      GnuCash recuperi automaticamente i vari tassi di cambio di cui si 
+      ha bisogno.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Questo esempio mostra come le azioni possano essere acquistate
+          on una valuta qualsiasi inserendo la transazione relativa nel registro del
+          conto dove risiede il denaro utilizzato per pagarle. E' anche possibile inserire
+          la transazione dal registro del conto dell'azione, ma si proceda con cautela!
+         Operando in questo secondo modo, GnuCash assumerà che il prezzo qui inserito sia
+          espresso nella valuta del conto padre dell'azione.</p><p xmlns="">In questo esempio, il conto padre (Attività:Investimenti:Conto brockeraggio:Boom) 
+          è impostato in HKD. Dato che si tratta della stessa valuta con cui viene espresso il
+          prezzo dell'azione, l'acquisto può essere inserito tranquillamente, in questo caso, 
+          dal registro del conto dell'azione.</p></td></tr></table></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="currency_howto1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="currency_invest1.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">10.5. Registrare e aggiornare i tassi di cambio per le valute (come fare) </td><td width="20%" align="center"><a accesskey="u" href="chapter_currency.html">Risali</a></td><td width="40%" align="right"> 10.7. Tracciare gli investimenti in valuta (come fare)</td></tr></table></div></body></html>

@@ -1,0 +1,59 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>12.5. Cliente</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_bus_ar.html" title="Capitolo 12. Crediti correnti"><link rel="prev" href="bus-ar-components1.html" title="12.4. Componenti del sistema"><link rel="next" href="bus-ar-invoices1.html" title="12.6. Fattura"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">12.5. Cliente</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bus-ar-components1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 12. Crediti correnti</th><td width="20%" align="right"> <a accesskey="n" href="bus-ar-invoices1.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="12.5. Cliente"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="bus-ar-customers1"></a>12.5. Cliente</h2></div></div></div><p>Per cliente si intende un singolo o una società alla quale vengono venduti
+    beni o servizi. Il cliente deve essere registrato nel sistema dei crediti 
+    correnti.</p><div class="sect2" title="12.5.1. Registrare un nuovo cliente"><div class="titlepage"><div><div><h3 class="title"><a name="bus-ar-custnew2"></a>12.5.1. Registrare un nuovo cliente</h3></div></div></div><p>Per inserire un nuovo cliente, selezionare la voce
+      <span class="guimenu"><strong>Impresa</strong></span> -&gt; <span class="guimenu"><strong>Cliente</strong></span> -&gt;
+      <span class="guimenu"><strong>Nuovo cliente</strong></span>. Compilare le informazioni richieste
+      quali il nome della società, l'indirizzo, il numero di telefono e di fax, 
+      ecc... Qui sotto è riportata una lista di altre opzioni:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="guilabel"><strong>Identificazione - Numero cliente</strong></span> - può essere un numero qualsiasi utile 
+            per riferirsi a questo preciso cliente. Il campo può essere lasciato vuoto, nel qual caso un 
+            numero verrà assegnato automaticamente.</p></li><li class="listitem"><p><span class="guilabel"><strong>Identificazione - Attivo</strong></span> - differenzia i clienti attivi da quelli inattivi. 
+            E' utile quando si hanno molti clienti e si desidera visualizzare
+            solamente quelli attivi.</p></li><li class="listitem"><p><span class="guilabel"><strong>Indirizzo di pagamento - Nome</strong></span> - è il nome della persona che deve
+            ricevere la fattura.</p></li><li class="listitem"><p><span class="guilabel"><strong>Note</strong></span> - permette di inserire qualsiasi nota aggiuntiva relativa al
+            cliente.</p></li><li class="listitem"><p><span class="guilabel"><strong>Informazioni di pagamento - valuta</strong></span> -
+          determina la valuta predefinita di pagamento.</p></li><li class="listitem"><p><span class="guilabel"><strong>Informazioni di pagamento - Termini</strong></span> - permette di specificare
+          i termini di pagamento predefiniti per questo cliente. I termini di pagamento devono essere impostati 
+          preventivamente utilizzando la funzione
+          disponibile in <span class="guimenu"><strong>Impresa</strong></span> -&gt; <span class="guimenu"><strong>Termini di pagamento</strong></span>.</p></li><li class="listitem"><p><span class="guilabel"><strong>Informazioni di pagamento - Sconto</strong></span> - applica
+          al cliente una percentuale di sconto predefinita al momento della creazione
+          della fattura. Inserire un valore compreso tra 0 e 100. E' possibile ignorare
+          lo sconto predefinito alla creazione della fattura.</p></li><li class="listitem"><p><span class="guilabel"><strong>Informazioni di pagamento - Limite di credito</strong></span> -
+          registra il massimo credito che si desidera fare al cliente.
+          Questo campo è per propria conoscenza; GnuCash non utilizza questo
+          valore.</p></li><li class="listitem"><p><span class="guilabel"><strong>Informazioni sul pagamento - Tasse incluse</strong></span> - permette 
+            di definire se le tasse sono incluse nelle voci della fattura. E' possibile 
+            scegliere fra: 
+          </p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p><span class="guilabel"><strong>sì</strong></span> significa che le tasse sono già
+                incluse negli importi della fattura.</p></li><li class="listitem"><p><span class="guilabel"><strong>no</strong></span> significa che le tasse non sono incluse.</p></li><li class="listitem"><p><span class="guilabel"><strong>usa globale</strong></span> utilizza le impostazioni globali
+                configurate nelle preferenze globali accessibili dal menu
+                <span class="guimenu"><strong>Modifica</strong></span> -&gt;
+                <span class="guimenu"><strong>Preferenze</strong></span>.</p></li></ul></div></li><li class="listitem"><p><span class="guilabel"><strong>Informazioni di pagamento - Tabella delle imposte</strong></span> -
+          specifica una tabella delle imposte predefinita da applicare alle voci che compongono
+          la fattura. La tabella delle imposte
+          deve prima essere creata utilizzando la voce del menu <span class="guimenu"><strong>Impresa</strong></span> -&gt; 
+          <span class="guimenu"><strong>Tabella imposte</strong></span>.</p></li><li class="listitem"><p><span class="guilabel"><strong>Indirizzo di spedizione</strong></span> - permette di inserire un 
+          indirizzo di spedizione per il cliente se è diverso dall'indirizzo di pagamento.
+          L'indirizzo di spedizione è per propria conoscenza; GnuCash non utilizza questo
+          valore.</p></li></ul></div><p>La finestra di registrazione di un nuovo cliente assomiglia a
+      questa:</p><div class="screenshot"><div class="mediaobject"><img src="figures/bus_ar_custnew.png" alt="Finestra di registrazione di un nuovo cliente"><div class="caption"><p>Finestra di registrazione di un nuovo cliente</p></div></div></div></div><div class="sect2" title="12.5.2. Trovare e modificare un cliente"><div class="titlepage"><div><div><h3 class="title"><a name="bus-ar-custfind2"></a>12.5.2. Trovare e modificare un cliente</h3></div></div></div><p>Per trovare un cliente, utilizzare la funzione
+      <span class="guimenu"><strong>Impresa</strong></span> -&gt; <span class="guimenu"><strong>Cliente</strong></span> -&gt;
+      <span class="guimenu"><strong>Trova cliente</strong></span>. E' poi possibile selezionare, dalla
+      finestra dei risultati, un cliente da <span class="guilabel"><strong>Visualizzare o 
+      modificare</strong></span>. Questa finestra è anche utilizzata per
+      selezionare un cliente quando si crea una nuova fattura e quando
+      si procede a un pagamento.</p><div class="screenshot"><div class="mediaobject"><img src="figures/bus_ar_custfind.png" alt="Finestra di ricerca del cliente"><div class="caption"><p>Finestra di ricerca del cliente </p></div></div></div><p>Se dalla ricerca vengono restituiti molti elementi corrispondenti,
+      è possibile filtrare i risultati eseguendo una ulteriore ricerca tra questi
+      ultimi. Il gruppo dei risultati attuali viene analizzato quando è selezionata
+      l'opzione <span class="guilabel"><strong>Perfeziona la ricerca attiva</strong></span>. GnuCash rende
+      disponibile questa opzione solamente dopo che è stata eseguita con successo la
+      ricerca iniziale.</p><p>Se il cliente che si sta cercando non è stato trovato con il criterio di
+      ricerca inserito, è possibile cambiare il criterio di ricerca  e selezionando l'opzione
+      <span class="guilabel"><strong>Nuova ricerca</strong></span> seguita dal pulsante <span class="guibutton">Trova</span>.
+      Il passo più importante è la selezione dell'opzione <span class="guilabel"><strong>Nuova ricerca</strong></span>.
+      Se il venditore non è tra i risultati della ricerca originale e si effettua una ricerca 
+      tra i risultati ottenuti, il venditore non verrà trovato anche se il criterio di 
+      ricerca è stato cambiato.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Per visualizzare una lista dei clienti attivi, si imposti il criterio di ricerca
+        a "corrisponde all'espressione regolare" e si inserisca un singolo punto "." nel 
+        campo del testo da ricercare. Assicurarsi che non sia selezionata l'opzione 
+        <span class="guilabel"><strong>Cerca solo tra i dati selezionati</strong></span>, poi premere 
+        <span class="guibutton">Trova</span>. L'espressione regolare "." significa trovare tutto.</p></td></tr></table></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bus-ar-components1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="bus-ar-invoices1.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">12.4. Componenti del sistema </td><td width="20%" align="center"><a accesskey="u" href="chapter_bus_ar.html">Risali</a></td><td width="40%" align="right"> 12.6. Fattura</td></tr></table></div></body></html>

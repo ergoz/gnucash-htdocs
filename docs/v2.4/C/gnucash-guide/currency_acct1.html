@@ -1,0 +1,93 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>10.2. Account Setup</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_currency.html" title="Chapter 10. Multiple Currencies"><link rel="prev" href="currency_concepts1.html" title="10.1. Basic Concepts"><link rel="next" href="currency_howto1.html" title="10.3. Recording/Updating Currency Exchange (How-To)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">10.2. Account Setup</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="currency_concepts1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 10. Multiple Currencies</th><td width="20%" align="right"> <a accesskey="n" href="currency_howto1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="10.2. Account Setup"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="currency_acct1"></a>10.2. Account Setup</h2></div></div></div><p>Your default account currency is set in the <span class="guilabel"><strong>Account</strong></span> tab 
+    under <span class="guimenu"><strong>Edit</strong></span> → <span class="guimenuitem"><strong>Preferences</strong></span>
+    (<span class="guimenu"><strong>Gnucash</strong></span> → <span class="guimenuitem"><strong>Preferences</strong></span> on Mac OS X).
+    You should set this parameter correctly, as it will save you much time when building
+    your account structure.</p><p>Similarly, <strong class="application"><code>GnuCash</code></strong> offers an option to
+    set your preferred currency for displaying reports (like the balance
+    sheet and income statement). The option is called <span class="guilabel"><strong>Default
+    Report Currency</strong></span>, and is in the <span class="guilabel"><strong>Reports</strong></span>
+    tab of the <span class="guilabel"><strong>GnuCash Preferences</strong></span> screen.
+    You’ll want to set both options when you start using
+    <strong class="application"><code>GnuCash</code></strong> because if (for example) your accounts
+    are all in Canadian Dollars but the generated reports are all in US
+    Dollars, the reports will just say that there is <span class="quote">“<span class="quote">no
+    data/transactions (or only zeroes) for the selected time
+    period</span>”</span>.</p><p>When you create a new account, you have the option to define the
+    commodity. For currency accounts, you can specify any one of the hundreds
+    of currencies supported by <strong class="application"><code>GnuCash</code></strong> by simply selecting it from the
+    currency commodity list. You will notice that the default currency is
+    always whatever you have defined in the preferences. So, if you mostly
+    work with Euros, but have the occasional Ethiopian Birr account, be sure
+    to set your preferences to Euro.</p><p>As an example, let’s set up a typical bank account scenario where
+    you mostly work in US Dollars, but do also have a European bank account
+    using the Euro currency, as well as one bank account in Hong Kong using
+    Hong Kong Dollars. So, setup 3 bank accounts, one using the Euro currency,
+    one in US Dollars, and another in Hong Kong Dollars. One possible account
+    structure for this would be:</p><div class="literallayout"><p><br>
+-Assets                          (USD)<br>
+   -Current Assets           (USD)<br>
+      -US Bank                 (USD)<br>
+      -European Bank       (EUR)<br>
+      -HK Bank             (HKD)<br>
+-Equity                          (USD)<br>
+   -Opening Balances<br>
+      -USD            (USD)<br>
+      -EUR            (EUR)   <br>
+      -EUR            (HKD)<br>
+<br>
+Note: the currency of each account is shown in parenthesis.<br>
+ </p></div><p>Since in this example you mostly work in USD, all of the parent
+    accounts are set to USD. Of course, if you mostly work in Euros, you could
+    change the currency of these parent accounts to EUR. To totals shown in
+    the account tree window will always be converted to the currency of each
+    particular account. Notice, we also setup 3 Starting Balances equity
+    accounts, used to initially populate the 3 banks.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">You could also setup just a single Starting Balance account and
+      use a currency transfer to populate the <span class="quote">“<span class="quote">different currency</span>”</span> accounts.
+      However, this is more advanced option, which is explained in a later
+      section (<a class="xref" href="currency_purchase1.html#currency_purchase2" title="10.4.1. Purchase of an asset with foreign currency">Section 10.4.1, “Purchase of an asset with foreign currency”</a>.</p></td></tr></table></div><p>Below you see the result of this example, in which you start with
+    USD 10,000, EUR 10,000 as well as HKD 10,000 in the three bank accounts.
+    Notice that the total of the parent accounts only show the value of the
+    currency of sub-accounts with matching currencies. In the future you can
+    setup the exchange rates between the currencies, and the parent accounts
+    will calculate the converted value of all sub-accounts. See the later
+    section (<a class="xref" href="currency_howto1.html" title="10.3. Recording/Updating Currency Exchange (How-To)">Section 10.3, “Recording/Updating Currency Exchange (How-To)”</a>) on how to do this.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_main1.png" alt="Initial multi currency Account Bank Setup"><div class="caption"><p>Initial setup of 3 bank accounts with different
+        currencies. </p></div></div></div><p>Notice that the "Total (Report)" column is being displayed. This is
+    configured in the column header row, select <span class="guibutton">Arrow
+    down</span> and select <span class="quote">“<span class="quote">Total(USD)</span>”</span>.</p><div class="sect2" title="10.2.1. User-Defined Currencies"><div class="titlepage"><div><div><h3 class="title"><a name="currency_acct_user2"></a>10.2.1. User-Defined Currencies</h3></div></div></div><p>Usually when we talk about currencies, we mean
+      government-backed currencies (or more precisely, currencies defined
+      in the international standard called <a class="ulink" href="http://en.wikipedia.org/wiki/ISO_4217" target="_top">ISO 4217</a>).
+      <strong class="application"><code>GnuCash</code></strong> does not allow you to create your
+      own currencies. If you want to track non-<acronym class="acronym">ISO</acronym>
+      currencies, you can use either of two workarounds, depending on which
+      fits your needs better.</p><p>Let’s say for example that you want to track RewardMiles,
+      which count how many loyalty points you’ve earned by buying
+      from a certain group of businesses. The account which tracks your
+      RewardMiles will be <span class="emphasis"><strong>Assets:Other:LoyaltyGroupRewardMiles</strong></span>.</p><p>The first method is to define a new security, of type FUND,
+      called RewardMiles. This is pretty straightforward–when you
+      create the new <span class="emphasis"><strong>LoyaltyGroupRewardMiles</strong></span> account, just set the account
+      type to <span class="guilabel"><strong>Stock</strong></span> or <span class="guilabel"><strong>Mutual
+      Fund</strong></span>, click the <span class="guibutton">Select...</span> button
+      next to the <span class="guilabel"><strong>Security/currency:</strong></span> box, and click
+      <span class="guibutton">New</span> to define a new security of type
+      FUND.</p><p>This is not really what the stock and mutual fund account types
+      are meant for, but <strong class="application"><code>GnuCash</code></strong> usually lets you
+      decide how you want to use it, instead of dictating. The downside is
+      that you’ll have to enter a <span class="quote">“<span class="quote">price</span>”</span> for every
+      transaction involving RewardMiles, because
+      <strong class="application"><code>GnuCash</code></strong> needs the prices to figure out the
+      monetary value of RewardMiles and treat them as one of your
+      assets.</p><p>The second method is to use one of the <span class="quote">“<span class="quote">dummy</span>”</span>
+      currencies to track the RewardMiles. The dummy currencies are
+      <span class="quote">“<span class="quote">XTS (Code for testing purposes)</span>”</span> and <span class="quote">“<span class="quote">XXX (No
+      currency)</span>”</span>. If you use one of these for your
+      LoyaltyGroupRewardMiles account, you can enter transactions into the
+      account without having to enter share prices for every transaction.
+      And, you can keep using the same two dummy currencies to track all
+      sorts of amounts–vacation dollars earned and used so far this
+      year, vacation hours earned and used, health insurance benefits
+      allowance used and remaining, and so on. You can well imagine that
+      <strong class="application"><code>GnuCash</code></strong> can be used as a hub for all sorts
+      of personal metrics, in addition to finances.</p><p>The drawback here is that you cannot define exchange rates for
+      the dummy currencies to convert them to <acronym class="acronym">ISO</acronym>
+      currencies. If you want to do that, you really should use the first
+      method.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="currency_concepts1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="currency_howto1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">10.1. Basic Concepts </td><td width="20%" align="center"><a accesskey="u" href="chapter_currency.html">Up</a></td><td width="40%" align="right"> 10.3. Recording/Updating Currency Exchange (How-To)</td></tr></table></div></body></html>
