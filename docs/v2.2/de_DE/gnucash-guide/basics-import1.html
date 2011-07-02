@@ -1,0 +1,290 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2.7. Daten importieren</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash-Kurs und Konzepte"><link rel="up" href="chapter-basics.html" title="Kapitel 2. Die Grundlagen"><link rel="previous" href="basics-files1.html" title="2.6. Dateien neu anlegen, öffnen oder speichern"><link rel="next" href="basics-backup1.html" title="2.8. Datensicherung"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">2.7. Daten importieren</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="basics-files1.html">&lt;&lt;&lt; Zurück</a> </td><th width="60%" align="center">Kapitel 2. Die Grundlagen</th><td width="20%" align="right"> <a accesskey="n" href="basics-backup1.html">Nach vorne &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="basics-import1"></a>2.7. Daten importieren</h2></div></div><a class="indexterm" name="id2748828"></a><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-import-general"></a>2.7.1. Allgemeines Konzept</h3></div></div><a class="indexterm" name="id2748842"></a><p>
+      Wenn Sie von einem anderen Buchführungs- oder Finanzprogrammen auf GnuCash umsteigen wollen, 
+      wenn Sie vorhandene Daten mit GnuCash auswerten wollen, oder wenn Sie Kontoumsätze von der Internetseiten 
+      Ihrer Bank heruntergeladen haben, müssen Sie diese Daten in GnuCash importieren. 
+    </p><p>
+    GnuCash kann eine Reihe unterschiedlicher Formate direkt importieren:
+    <div class="screenshot"><div class="mediaobject"><img src="figures/basics_import_menue.png" alt="Importieren Menü"><div class="caption"><p>Die Abbildung zeigt das <b>Importieren</b> Menü.</p></div></div></div>
+    </p><p>
+      Die Formate unterscheiden sich sehr in ihrer Komplexität. 
+      Während im CSV-Format nur einfache Buchungen von einem einzigen Konto und in einer Währung importiert werden können, 
+      kann mit OFX ein vollständiger Kontenplan einschließlich Wertpapierkonten, verschiedener Währungen 
+      und sämtlicher Buchungen importiert werden.  OFX und der Vorgänger QIF kommen daher in Betracht, 
+      wenn beim Wechsel zu GnuCash ein größerer Datenbestand importiert werden soll, während die anderen Formate
+      eher geeignet sind, wenn wenige Buchungen eingepflegt werden sollen.
+    </p><p>
+      Um die Daten als Buchung in GnuCash einfügen zu können, müssen diese mindestens
+      <b>Datum</b>,
+      <b>Beschreibung</b>,
+      <b>Konto</b>,
+      <b>Gegenkonto</b> und einen
+      <b>Betrag</b> enthalten.  Ob und in welcher Form
+      diese Daten vorliegen, hängt von dem jeweiligen Datei-Format
+      ab. Fehlende Informationen müssen gegebenenfalls vom Benutzer
+      beigesteuert werden.  Einige Daten, wie
+      die <b>Vorgangsnummer</b>, sind optional.
+      Andere, wie das zu verwendende <b>Gegenkonto</b>,
+      können in den Daten kaum enthalten sein (da sie von Ihrem
+      aktuellen Kontenplan abhängen), sind aber erforderlich, um die Buchung durchführen zu können.
+    </p><p>Der Vorgang des Datenimports kann in 3 Phasen unterteilt
+    werden:</p><div class="orderedlist"><ol type="1"><li><p>
+          <b>Einlesen der Daten (formatabhängig).</b>
+          Je nachdem, in welchem Format die Dateien vorliegen und welche
+          Informationen dieses enthält, kann die Mitwirkung des
+          Benutzers erforderlich sein (z.B. Eingabe der Reihenfolge von
+          Feldern, Datums- und Zahlenformat, Kontoname).           
+          Liegen die erforderlichen Informationen vor, werden die Daten eingelesen
+          und den Bestandteilen eines Buchungssatz zugeordnet. </p></li><li><p>
+          <b>Zuordnen der Buchungssätze zu GnuCash Konten.</b> 
+          Nachdem die Daten eingelesen wurden, muss
+          jeder Buchung ein Gegenkonto zugeordnet werden.  Dazu
+          vergleicht GnuCash die einzufügenden Buchungen mit bereits
+          bekannten Buchungen, die in einer internen Liste geführt
+          werden. 
+        </p><p> 
+          Zum Vergleich benutzt GnuCash den <a href="glossary.html#bayes"><i>Bayes-Algorithmus</i></a>,
+          der die Wahrscheinlichkeit, dass eine Übereinstimmung besteht berechnet und als Punktwert ausgibt.
+          Findet GnuCash keine Übereinstimmung bzw. bleibt diese
+          unterhalb der Zuordnungsschwelle, wird als Gegenbuchungskonto
+          ein <b>Ausgleichskonto</b> in der jeweiligen Währung zugeordnet.  
+          Andernfalls geschieht die Weiterverarbeitung abhängig vom Grad der
+          Übereinstimmung und dem Überschreiten dreier Schwellenwerte:
+          <div class="orderedlist"><ol type="a" compact><li><p>Zuordnungsschwelle: der Buchung wird ein
+              GnuCash-Konto zugeordnet.  Sie müssen die Zuordnung
+              bestätigen.</p></li><li><p>Auto-Hinzufügeschwelle: der Buchung wird
+              automatisch ein GnuCash-Konto zugeordnet, eine Bestätigung
+              ist nicht erforderlich.</p></li><li><p>Auto-Abgleichschwelle: der Buchung wird
+              automatisch ein GnuCash-Konto zugeordnet und die Buchung
+              als abgeglichen markiert.</p></li></ol></div>
+          GnuCash merkt sich diese Zuordnung und erkennt die Buchung das
+          nächste mal automatisch.  
+          Das Einstellen der Schwellenwerte wird in <a href="basics-prefs1.html#basics-onlinebank2" title="2.4.10. Onlinebanking">Abschnitt 2.4.10</a> beschrieben.
+        </p><p>
+          Je nach dem, wie gut die automatische Zuordnung gelingt und wie vollständig die vorliegenden Daten sind,
+          kann in dieser Phase mehrfach das Eingreifen des Benutzer erforderlich oder sinnvoll sein.
+        </p></li><li><p>
+          <b>Aktualisieren der GnuCash Konten.</b>
+          Zunächst wird geprüft, ob die Buchung bereits vorhanden ist.
+          Ist dies der Fall, wird gegebenenfalls nur der
+          Abgleichstatus erhöht, andernfalls wird der Buchungssatz eingefügt.
+        </p></li></ol></div><p>
+      Nachfolgend wird der Import von Dateien in den verschiedenen Formaten beschrieben.  
+      Im Verzeichnis <tt>gnucash-docs/guide/de_DE</tt> finden Sie eine Beispieldatei
+      in jedem Format.
+    </p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-import-csv"></a>2.7.2. CSV-Dateien importieren</h3></div></div><a class="indexterm" name="id2749180"></a><p>
+        Die nachfolgende Datei entspricht dem Format, wie es von einer
+        großen deutschen Bank zum Download angeboten wird:
+      </p><div class="example"><p><a name="ex1"></a><b>Beispiel 2.1. gnc_sample_csv.csv</b></p><pre class="programlisting">
+Umsätze persönliches Konto (00);;;Kundennummer: 4562945739 
+26.08.2010 - 04.09.2010 
+Letzter Kontostand;;;;752,54;EUR
+Buchungstag;Wert;Verwendungszweck;Soll;Haben;Währung
+26.08.2010;26.08.2010;"EC TANKSTELLE AN DER B";-42,33;;EUR
+01.09.2010;01.09.2010;"03/232347 KRANKENVERS";-511,97;;EUR
+03.09.2010;03.09.2010;"KLEINHOLZ 3077/09";;376,97;EUR
+04.09.2010;04.09.2010;"LOTTO";;1000,00;EUR
+04.09.2010;04.09.2010;"LOTTO *STORNO*";-1000,00;;EUR
+Kontostand;04.09.2010;;;575,21;EUR
+</pre></div><p>
+        Sehen Sie sich die Daten zunächst genau an.  Trennzeichen
+        ist offensichtlich das ;(Semikolon).  In der 4. Zeile stehen
+        Spaltenüberschriften.  Zählen Sie Semikolons ab, können Sie
+        sehen, dass die Beträge in der Spalte 'Soll' ein negatives
+        Vorzeichen haben.
+      </p><p>
+        Um diese Daten importieren zu können, müssen Sie zuerst dafür
+        sorgen, dass alle Zeilen die gleiche Spaltenzahl haben und nur Buchungen enthalten.
+        Löschen Sie dazu mit einem Editor die ersten 4 und die letzte
+        Zeile. Dann müssen Sie das Vorzeichen der Sollbuchungen
+        entfernen, da dies aus Sicht von GnuCash eine doppelte Negation
+        darstellt. Die Datei sieht jetzt so aus:
+      </p><pre class="programlisting">
+26.08.2010;26.08.2010;"EC TANKSTELLE AN DER B";42,33;;EUR
+01.09.2010;01.09.2010;"03/232347 KRANKENVERS";511,97;;EUR
+03.09.2010;03.09.2010;"KLEINHOLZ 3077/09";;376,97;EUR
+04.09.2010;04.09.2010;"LOTTO";;1000,00;EUR
+04.09.2010;04.09.2010;"LOTTO *STORNO*";1000,00;;EUR
+</pre><p>und kann nun importiert werden.</p><p>Über
+        <b>Datei</b>-&gt;<b>Importieren</b>-&gt;<b>CSV
+        importieren…</b> können Sie die
+        Datei auswählen, die sodann geöffnet wird.  Als nächstes
+        erscheint das Fenster <b>CSV-Datei
+        importieren</b>:
+      </p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_import_csv1.png" alt="Fenster CSV-Datei importieren"><div class="caption"><p>Die Abbildung zeigt das Fenster <b>CSV-Datei
+            importieren</b>.</p></div></div></div><p>
+        Nun müssen das Trennzeichen, Datumsformat und die Bedeutung
+        jeder Spalte festgelegt werden.
+      </p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_import_csv3.png" alt="Fenster CSV-Datei importieren - Auswahl der
+            Bedeutung der Spalten"><div class="caption"><p>Die Abbildung zeigt das Fenster <b>CSV-Datei
+              importieren</b> - Auswahl der Bedeutung der
+              Spalten.  Bei Spalten die nicht importiert werden können
+              (hier Wert und Währung), bleibt die Bedeutung auf
+              'keine'.
+            </p></div></div></div><p>
+        Nach Klick auf OK erscheint eine
+        hierarchische Liste der GnuCash Konten. Das zu bebuchende Konto
+        kann ausgewählt oder neu angelegt werden.  Nach Klick
+        auf OK wird die Datei vollständig
+        eingelesen und eine Liste der Buchungssätze erzeugt.  Damit
+        ist die erste Phase abgeschlossen.  Das weitere Vorgehen ist
+        in <a href="basics-import1.html#basics-import-general1" title="2.7.7. Buchungszuordnung für Allgemeinen Import">Abschnitt 2.7.7</a> beschrieben.
+      </p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-import-mt94x"></a>2.7.3. MT940/MT942-Dateien importieren</h3></div></div><a class="indexterm" name="id2749435"></a><p>
+        MT940 (MT=Message Type) ist der SWIFT-Standard zur elektronischen Übermittlung von Kontoauszug-Daten. 
+        Bei verschiedenen Onlinebanking-Programmen wird MT940 als Schnittstelle verwendet zu anderen Programmen, 
+        mit denen die Kontoauszug-Daten weiter verarbeitet werden.
+        MT942 ist das Format zur Übermittlung von Vormerkposten.
+      </p><p>
+        Zum Import von MT940/MT942-Dateien:
+        <div class="orderedlist"><ol type="1"><li><p>die zu importierende Datei auswählen,
+            </p></li><li><p>
+              das zu bebuchende Konto wählen,
+            </p></li><li><p>weiter bei <a href="basics-import1.html#basics-import-general1" title="2.7.7. Buchungszuordnung für Allgemeinen Import">Abschnitt 2.7.7</a>.
+            </p></li></ol></div>
+      </p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-import-dtaus"></a>2.7.4. DTAUS-Dateien importieren</h3></div></div><a class="indexterm" name="id2749505"></a><p>
+        Datenträgeraustausch-Dateien (DTAUS), dienen dem Austausch von 
+        Überweisungsaufträgen zwischen Banken oder Kunde und Bank.
+        <a href="basics-import1.html#basics-import-mt94x" title="2.7.3. MT940/MT942-Dateien importieren">Import wie oben</a>.
+      </p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-import-qif"></a>2.7.5. QIF-Dateien importieren</h3></div></div><a class="indexterm" name="id2749535"></a><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Anmerkung</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">
+          Dieser Abschnitt zeigt Ihnen, wie Sie bei der Einrichtung
+          neuer Konten Daten von anderen Finanzprogrammen im QIF
+          (Quicken®
+          Interchange Format) Format importieren.  
+        </p></td></tr></table></div><p>
+        Um Daten
+        von Quicken®, MS
+        Money, oder anderen Programmen im QIF-Format importieren zu
+        können, müssen Sie die Daten zunächst aus diesen Programmen im
+        QIF-Format exportieren.  Eine Möglichkeit dies zu tun ist es,
+        jedes Konto in eine separate QIF-Datei zu exportieren.
+        Einfacher ist es, verfügbar
+        ab Quicken® 98, alle
+        Konten zusammen in einer einzigen QIF-Datei zu speichern.
+        Prüfen Sie die Programm Dokumentation, ob diese Möglichkeit
+        besteht.
+        <div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/important.png"></img></td><th align="left" valign="top">Wichtig</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Dies nur sinnvoll, wenn alle Konten die gleiche Währung haben! 
+          QIF-Dateien enthalten keine Wechselkurse, so dass Umbuchungen in eine 
+          Fremdwährung nicht korrekt importiert werden können!</p></td></tr></table></div>
+      </p><p>
+        Sobald Ihre Daten in QIF-Form vorliegen, folgen Sie dem
+        einfachen 3-stufigen Prozess, der nachfolgend beschrieben
+        wird.  Bevor Sie beginnen bedenken Sie bitte, dass der Import
+        Prozess das Prüfen auf Duplikate beinhaltet.  Es ist daher
+        sehr wichtig, dass <b>alle</b> QIF-Dateien
+        vorliegen, bevor Sie mit dem Import beginnen.  Duplikate
+        treten auf, wenn mehr als ein Konto an der Transaktion
+        beteiligt ist.  Wenn Sie zum Beispiel Geld von Ihrem Sparkonto
+        aufs Girokonto übertragen, würde der gleiche Vorgang zweimal
+        gebucht - einmal beim Importieren der Daten des Girokontos und
+        einmal beim Importieren der Daten des Sparkontos.
+      </p><p>
+        QIF-Dateien enthalten keine Angaben zur Währung eines Kontos und
+        unzureichende Angaben zur Währungskonten und Aktienkonten, so dass diese
+        Daten während des Imports erfragt werden.
+      </p><p>
+        Zum Import von QIF-Dateien:
+      </p><div class="orderedlist"><ol type="1"><li><p>
+            Laden Sie alle QIF-Dateien, die Sie importieren wollen.
+          </p><p>
+            Wählen Sie dazu das
+            Menü <b>Datei</b>-&gt;<b>Importieren</b>-&gt;<b>QIF-Datei
+            importieren…</b>.  Wenn
+            der <b>QIF-Datei importieren</b> Assistent
+            erscheint, klicken Sie den Vor
+            Knopf und folgen den Instruktionen, die Sie beim Laden
+            Ihrer Dateien unterstützen.
+
+            <div class="screenshot"><div class="mediaobject"><img src="figures/basics_QIF_Import_welcome.png" alt="Der QIF-Datei importieren Assistent"><div class="caption"><p>Die Abbildung zeigt den Startbildschirm
+                  des <b>QIF-Datei importieren</b>
+                  Assistenten.
+                  </p></div></div></div>
+            Geben Sie den Namen der zu ladenden Datei ein, oder
+            klicken Sie den Auswählen Knopf um
+            das Dateisystem zu durchsuchen.  Klicken
+            Sie Vor um die Datei zu laden.
+            Sobald die Datei geladen ist, können Sie
+            mit Eine weitere Datei öffnen den
+            Schritt erneut durchlaufen, wenn Sie mehrere Dateien laden
+            müssen.  Haben Sie alle QIF-Dateien geladen, klicken
+            Sie Vor um den Import Prozess
+            fortzusetzen.
+          </p></li><li><p>
+            Überprüfen Sie die Konten, die GnuCash erzeugen soll.
+          </p><p>
+            Der Importalgorithmus ordnet dann Ihre QIF-Konten und
+            Kategorien den GnuCash Konten zu und gibt Ihnen eine kurze
+            Beschreibung des Zuordnungsprozesses.  Klicken
+            Sie Vor, um die eine
+            Gegenüberstellung Ihrer QIF-Konten mit den
+            korrespondierenden GnuCash Konten zu sehen.  Um einen
+            Kontonamen zu ändern, wählen Sie die betreffende Zeile aus
+            und bearbeiten den Name in dem erscheinenden Dialog.
+            Klicken Sie Vor wenn Sie mit der
+            Korrektur fertig sind und gehen in ähnlicher Weise die den
+            den QIF-Kategorien gegenübergestellten GnuCash Konten durch.
+            QIF Ertrags- und Aufwandskategorien werden als GnuCash
+            Ertrags- und Aufwandskonten importiert (siehe <a href="chapter-accts.html" title="Kapitel 3. Konten">Kapitel 3. Konten</a> für näheres dazu).  
+            Nehmen Sie die notwendigen
+            Veränderungen vor und klicken Vor
+            um fortzufahren.
+          </p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Anmerkung</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns=""> Wenn Sie sich nicht sicher sind, ob Änderungen
+              erforderlich sind, akzeptieren Sie die von GnuCash
+              vorgeschlagenen Kontonamen. Sie können die Änderungen
+              leicht später vornehmen, falls sich dies als
+              erforderlich herausstellen sollte.
+            </p></td></tr></table></div><p>
+            Von der Dropdown Liste können Sie die Währung der
+            importierten Konten auswählen.
+            Mit Vor gelangen Sie zum nächsten
+            Schritt.  Haben Sie Aktien, Fonds, oder andere
+            Wertpapiere, sind weitere Angaben erforderlich.  Der
+            Import Dialog wird nach dem Handelsplatz (z.B. NASDAQ),
+            dem vollen Namen des Papiers und dem Ticker Symbol fragen.
+            Wenn Sie diese Informationen nicht zur Hand haben, können
+            Sie die Informationen nachträglich eingeben, sobald der
+            Importvorgang abgeschlossen ist. Klicken
+            Sie Vor um fortzufahren.
+          </p></li><li><p>
+            GnuCash zeigt Ihnen sodann eine Liste möglicher Duplikate.
+            Wenn Sie sicher sind, dass ein Duplikat vorliegt, können
+            Sie dieses markieren, um es von dem Import auszuschließen.
+            Klicken Sie dann Vor um die
+            Bearbeitung abzuschließen.
+          </p><p>
+            Der letzte Schritt ist das Einfügen der Daten.  Wenn Sie
+            die Kontonamen und Wertpapierdaten verifiziert haben,
+            klicken Sie den Knopf Anwenden auf
+            der <b>Aktualisieren Ihrer GnuCash Konten</b>
+            Seite, um den Import Prozess abzuschließen.  Abhängig von
+            der Größe Ihrer Datei, kann der Import ein paar Minuten
+            dauern.  Ein Fortschrittsbalken zeigt daher den
+            Prozentsatz der abgeschlossenen Buchungen an.  Wenn der
+            Import Vorgang komplett ist, wird GnuCash zu der
+            Kontenübersicht zurück kehren, die jetzt die Namen der
+            importierten Konten zeigen sollte.
+          </p></li></ol></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-import-ofx"></a>2.7.6. OFX/QFX-Dateien importieren</h3></div></div><a class="indexterm" name="id2749946"></a><p>
+        OFX (<i>open financial exchange</i>) 
+        oder QFX (der Quicken Dialekt von OFX) sind der Nachfolger von QIF.
+        OFX Dateien können alle erforderlichen Informationen enthalten, um einen
+        vollständigen Kontenplan automatisch importieren zu können. Lediglich
+        das Einfügen einer Liste von Buchungssätzen in bestehende Konten dürfte
+        weiterhin Eingriffe des Benutzers erfordern, wie in 
+        <a href="basics-import1.html#basics-import-general1" title="2.7.7. Buchungszuordnung für Allgemeinen Import">Abschnitt 2.7.7</a> beschrieben.
+      </p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-import-general1"></a>2.7.7. Buchungszuordnung für Allgemeinen Import</h3></div></div><p>
+        ToDo
+      </p><a class="indexterm" name="id2749992"></a><div class="screenshot"><div class="mediaobject"><img src="figures/basics_import_general1.png" alt="Fenster Buchungszuordnung für Allgemeinen
+            Import"><div class="caption"><p>Die Abbildung zeigt das
+            Fenster <b>Buchungszuordnung für Allgemeinen
+            Import</b>.</p></div></div></div><p>
+        ToDo
+      </p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_import_help.png" alt="Fenster Buchungsimport Hilfe"><div class="caption"><p>Die Abbildung zeigt das
+            Fenster <b>Buchungsimport Hilfe</b>.</p></div></div></div><p>
+        ToDo
+      </p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_import_general2.png" alt="Fenster Buchungszuordnung für Allgemeinen
+            Import"><div class="caption"><p>Die Abbildung zeigt das
+            Fenster <b>Buchungszuordnung für Allgemeinen
+            Import</b> nach manuellem Abgleich der
+            Konten.</p></div></div></div><p>
+        ToDo
+      </p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_import_done.png" alt="Kontobuch nach Import 
+            der Daten aus Beispiel 2.1. gnc_sample_csv.csv"><div class="caption"><p>Die Abbildung zeigt das Kontobuch nach Import 
+            der Daten aus <a href="basics-import1.html#ex1" title="Beispiel 2.1. gnc_sample_csv.csv">Beispiel 2.1. gnc_sample_csv.csv</a>.</p></div></div></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="basics-files1.html">&lt;&lt;&lt; Zurück</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right"> <a accesskey="n" href="basics-backup1.html">Nach vorne &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">2.6. Dateien neu anlegen, öffnen oder speichern </td><td width="20%" align="center"><a accesskey="u" href="chapter-basics.html">Nach oben</a></td><td width="40%" align="right"> 2.8. Datensicherung</td></tr></table></div></body></html>

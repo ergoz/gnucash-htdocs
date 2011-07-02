@@ -2,16 +2,16 @@
     ways to setup depreciation accounts. We will present here a general method
     which should be flexible enough to handle most situations. The first
     account you will need is an <b>Asset Cost</b> account
-    (GnuCash account type "asset"), which is simply a place where you record
+    (<b><tt>GnuCash</tt></b> account type "asset"), which is simply a place where you record
     the original purchase of the asset. Usually this purchase is accomplished
     by a transaction from your bank account.</p><p>In order to keep track of the depreciation of the asset, you will
     need two depreciation accounts. The first is an <b>Accumulated
     Depreciation</b> account in which to collect the sum of all of the
-    depreciation amounts, and will contain negative values. In GnuCash, this
+    depreciation amounts, and will contain negative values. In <b><tt>GnuCash</tt></b>, this
     is an account type <b>asset</b>. The Accumulated
     Depreciation account is balanced by a <b>Depreciation
     Expense</b> account, in which all periodic depreciation expenses
-    are recorded. In GnuCash, this is an account type
+    are recorded. In <b><tt>GnuCash</tt></b>, this is an account type
     <b>expense</b>.</p><p>Below is a generic account hierarchy for tracking the depreciation
     of 2 assets, ITEM1 and ITEM2. The "Asset Cost" accounts are balanced by
     the "Bank" account, the Accumulated Depreciation account is balanced by
@@ -43,7 +43,7 @@
     mentioned in the paragraph above you will have to open the account
     register windows. As with most things, there are many ways to do it, find
     a way that works best for you.</p><p>The actual input of the depreciation amounts is done by hand every
-    accounting period. There is no way in GnuCash (as of yet) to perform the
+    accounting period. There is no way in <b><tt>GnuCash</tt></b> (as of yet) to perform the
     depreciation scheme calculations automatically, or to input the values
     automatically into the appropriate accounts. However, since an accounting
     period is typically one year, this really is not much work to do by

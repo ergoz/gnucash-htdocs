@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>10.6. Recording Purchases in a Foreign Currency (How-To)</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_currency.html" title="Chapter 10. Multiple Currencies"><link rel="previous" href="currency_howto1.html" title="10.5. Recording/Updating Currency Exchange (How-To)"><link rel="next" href="currency_invest1.html" title="10.7. Tracking Currency Investments (How-To)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">10.6. Recording Purchases in a Foreign Currency (How-To)</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="currency_howto1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 10. Multiple Currencies</th><td width="20%" align="right"> <a accesskey="n" href="currency_invest1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="currency_purchase1"></a>10.6. Recording Purchases in a Foreign Currency (How-To)</h2></div></div><p>You can do it in two different ways.</p><p>1) Use GnuCash build in currency exchange between accounts when you
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>10.6. Recording Purchases in a Foreign Currency (How-To)</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_currency.html" title="Chapter 10. Multiple Currencies"><link rel="previous" href="currency_howto1.html" title="10.5. Recording/Updating Currency Exchange (How-To)"><link rel="next" href="currency_invest1.html" title="10.7. Tracking Currency Investments (How-To)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">10.6. Recording Purchases in a Foreign Currency (How-To)</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="currency_howto1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 10. Multiple Currencies</th><td width="20%" align="right"> <a accesskey="n" href="currency_invest1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="currency_purchase1"></a>10.6. Recording Purchases in a Foreign Currency (How-To)</h2></div></div><p>You can do it in two different ways.</p><p>1) Use <b><tt>GnuCash</tt></b> build in currency exchange between accounts when you
     do your transactions. This is mainly used for one time transactions, and
     nothing which happens regurarly.</p><p>2) Use separate accounts for this Purchase, where all involved
     accounts use the same currency. This is the recommended method, since it
@@ -10,7 +10,7 @@
       Bahamas and go fishing. You like it so much so you decided to purchase a
       boat there. To do this, you opened a bank account in Jamaica, moved some
       money from US, and then purchased your dream boat (smallest
-      version)</p><p>To record this in GnuCash we use the following basic account
+      version)</p><p>To record this in <b><tt>GnuCash</tt></b> we use the following basic account
       structure</p><div class="literallayout"><p><br>
 -Assets                          (USD)<br>
    -Current Assets           (USD)<br>
@@ -33,7 +33,7 @@ Note: the currency of each account is shown in parenthesis.<br>
       window, and then save this split transaction. Below is how it now looks
       in the main Chart of Accounts.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_BeforeBoat.png" alt="Chart of Accounts before purchasing the boat"><div class="caption"><p>Chart of Accounts before purchasing the
           boat</p></div></div></div><p>You find the boat, and since it's a bargain at JMD 509,000 you
-      decide to buy it. To record this transaction in GnuCash, you will need
+      decide to buy it. To record this transaction in <b><tt>GnuCash</tt></b>, you will need
       to enter a simple transaction in Assets:Current Assets:Jamaican Bank
       withdrawing 509,000 and transfering it to Assets:Fixed
       Assets:Boat</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_AfterBoat.png" alt="Chart of Accounts after purchasing the boat"><div class="caption"><p>Chart of Accounts after purchasing the
@@ -42,7 +42,7 @@ Note: the currency of each account is shown in parenthesis.<br>
       boat account has been increased with the same amount. If you also have turned
       on the CoA (Column Choice) "Total (USD)" you will see the corresponding
       value in USD. The USD value will always reflect the latest currency exchange
-      rate you have either automatically or manually updated GnuCash with.
+      rate you have either automatically or manually updated <b><tt>GnuCash</tt></b> with.
       </p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="currency_purchase3"></a>10.6.2. Purchasing foreign stocks</h3></div></div><p>This example will show how to purchase stocks that are priced in a
       different currency than your normal currency.</p><p>Assume that you live in New York and therefore you have set the
       default currency to USD. You decide to purchase a stock traded in Hong
@@ -87,7 +87,7 @@ Buy Stocks<br>
       purchased shares reflected in the stock account's total.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_AfterStocks.png" alt="Purchased international stocks"><div class="caption"><p>
             Chart of Accounts with some international stocks
           </p></div></div></div><p>However, as you can see, the USD totals may be zero if
-      GnuCash doesn't have an exchange rate between USD and HKD.
+      <b><tt>GnuCash</tt></b> doesn't have an exchange rate between USD and HKD.
       To fix this, go to
       <b>Tools</b> -&gt; <b>Price Editor</b>
       and click the Get Quotes button to

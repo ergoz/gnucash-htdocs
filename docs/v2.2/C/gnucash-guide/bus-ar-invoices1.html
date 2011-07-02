@@ -1,5 +1,5 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>12.6. Invoices</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_bus_ar.html" title="Chapter 12. Accounts Receivable"><link rel="previous" href="bus-ar-customers1.html" title="12.5. Customers"><link rel="next" href="bus-ar-jobs1.html" title="12.7. Customer Jobs"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">12.6. Invoices</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bus-ar-customers1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 12. Accounts Receivable</th><td width="20%" align="right"> <a accesskey="n" href="bus-ar-jobs1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="bus-ar-invoices1"></a>12.6. Invoices</h2></div></div><p>An invoice is the paperwork you send to a customer to request
-    payment for products or services rendered. GnuCash can generate and track
+    payment for products or services rendered. <b><tt>GnuCash</tt></b> can generate and track
     invoices.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="bus-ar-invoicenew2"></a>12.6.1. New</h3></div></div><p>To send an invoice to a customer you must first create a new
       invoice. To create an invoice use <b>Business</b> -&gt;
       <b>Customer</b> -&gt; <b>New Invoice</b>. The
@@ -94,14 +94,14 @@
       -&gt; <b>Customer</b> -&gt; <b>Find Invoice</b>
       application. From the results of the search, you can select an invoice
       to edit or view.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Before you can edit a posted invoice, you will need to
-        <b>Unpost</b> it.</p></td></tr></table></div><p>One of the design goals in GnuCash's Account Receivable system was
+        <b>Unpost</b> it.</p></td></tr></table></div><p>One of the design goals in <b><tt>GnuCash</tt></b>'s Account Receivable system was
       to allow different processes to get to the same state, so you can reach
       an invoice from different directions based on the way you think about
       the problem:</p><div class="itemizedlist"><ul><li><p>You can search for the customer first, then list their
           invoices.</p></li><li><p>You can search for invoices by number or by company
           name.</p></li><li><p>You can list invoices associated with a customer job.</p></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="bus-ar-invoiceprint2"></a>12.6.5. Print</h3></div></div><p>After you post an invoice, you should print it and send it to your
       customer. To print an invoice use <b>File</b> -&gt;
-      <b>Print Invoice</b> menu item.</p><p>An example of the default GnuCash invoice print output is shown
+      <b>Print Invoice</b> menu item.</p><p>An example of the default <b><tt>GnuCash</tt></b> invoice print output is shown
       below.</p><div class="screenshot"><div class="mediaobject"><img src="figures/bus_ar_invoiceprint.png" alt="Invoice Print Output"><div class="caption"><p>Invoice Print Output </p></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">You can modify the appearance of the invoice, IE: add a company
         logo, etc. To do so, see the <a href="bus-ar-invoicechange.html" title="12.9. Changing the Invoice Appearance">Changing the Invoice Appearance</a>.</p></td></tr></table></div><p>Invoices can also be printed from the main window by selecting
       <b>Reports</b> -&gt; <b>Business Reports</b>
@@ -114,14 +114,14 @@
           <b>Invoice Number</b> field.</p></li><li><p>Search for the invoice as usual.</p></li></ol></div><p>You can also print invoices from within the Process Payment
       dialog. See the <a href="bus-ar-payment1.html" title="12.8. Process Payment">Process Payment</a> for instructions on
       how to do so.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="bus-ar-invoicestarting2"></a>12.6.6. Assign Starting Invoice Number</h3></div></div><p>There is no easy way to assign an automatic starting invoice
-      number. GnuCash starts with number 1 and increments from there. You can
+      number. <b><tt>GnuCash</tt></b> starts with number 1 and increments from there. You can
       manually type an invoice number into the text box each time you create
       an invoice, but this gets tiring and sooner or later leads to duplicate
       numbers.</p><p>You can change the starting invoice number if it is important you.
       There is no user interface to change the number at this time. You have
       to hand edit your XML data file. The relevant entry is in the "counters"
       section near the beginning of the file. The file must be re-opened after
-      editing.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">GnuCash optionally compresses files. Disable compression and
+      editing.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns=""><b><tt>GnuCash</tt></b> optionally compresses files. Disable compression and
         save before editing the file. To enable or disable compression use
         <b>Edit</b> -&gt; <b>Preferences</b>, access
         the <b>General</b> tab, and select or deselect the

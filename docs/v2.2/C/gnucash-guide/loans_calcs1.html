@@ -1,7 +1,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>7.3. Calculations</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_loans.html" title="Chapter 7. Loans"><link rel="previous" href="loans_accounts1.html" title="7.2. Setting Up Accounts"><link rel="next" href="loans_mortgage1.html" title="7.4. House Mortgage (How-To)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.3. Calculations</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="loans_accounts1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 7. Loans</th><td width="20%" align="right"> <a accesskey="n" href="loans_mortgage1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="loans_calcs1"></a>7.3. Calculations</h2></div></div><p>Determining loan amortization schedules, periodic payment amounts,
     total payment value, or interest rates can be somewhat complex. To help
-    facilitate these kinds of calculations, GnuCash has a built-in Financial
-    Calculator. To access the calculator, go to <b>Tools</b>-&gt;<b>Financial Calculator</b>.</p><div class="screenshot"><div class="mediaobject"><img src="figures/loans_fcalc.png" alt="Financial Calculator"><div class="caption"><p>The GnuCash Financial Calculator.</p></div></div></div><p>The Financial Calculator can be used to calculate any one of the
+    facilitate these kinds of calculations, <b><tt>GnuCash</tt></b> has a built-in Financial
+    Calculator. To access the calculator, go to <b>Tools</b>-&gt;<b>Financial Calculator</b>.</p><div class="screenshot"><div class="mediaobject"><img src="figures/loans_fcalc.png" alt="Financial Calculator"><div class="caption"><p>The <b><tt>GnuCash</tt></b> Financial Calculator.</p></div></div></div><p>The Financial Calculator can be used to calculate any one of the
     parameters: <b>Payment Periods</b>, <b>Interest
     Rate</b>, <b>Present Value</b>, <b>Periodic
     Payment</b>, or <b>Future Value</b> given that the
@@ -84,7 +84,7 @@ Continuous Interest: <b>i = ln[(1+ieff)^PF]</b><br>
 </p></div><p>From this equation, functions which solve for the individual
         variables can be derived. For a detailed explanation of the derivation
         of this equation, see the comments in the file src/calculation/fin.c
-        from the GnuCash source code. The A, B, and C variables are defined
+        from the <b><tt>GnuCash</tt></b> source code. The A, B, and C variables are defined
         first, to make the later equations simpler to read.</p><div class="literallayout"><p><br>
 <b>A = (1 + i)^n - 1</b><br>
 <b>B = (1 + iX)/i</b><br>

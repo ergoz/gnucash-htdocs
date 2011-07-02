@@ -20,7 +20,7 @@
           usually give their quotes as one of bid, ask or last. Mutual funds
           are often given as net asset value. For other commodities, simply
           choose "Unknown". This option is for informational purposes only, it
-          is not used by GnuCash.</p></li><li><p><b>Price</b> - the price of one unit of this
+          is not used by <b><tt>GnuCash</tt></b>.</p></li><li><p><b>Price</b> - the price of one unit of this
           commodity.</p></li></ul></div><p>As an example of adding the AMZN commodity to the price editor,
       with an initial value of $40.50 per share.</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_peditor.png" alt="Price Editor"><div class="caption"><p>Adding the AMZN commodity to the price editor, with
           an initial value of $40.50 per share.</p></div></div></div><p>Click OK when finished. Once you have
@@ -30,7 +30,7 @@
       value by entering the Price Editor, selecting the commodity, clicking on
       edit and entering the new price.</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_peditor2.png" alt="Price Editor"><div class="caption"><p>The main price editor window, showing the list of all
           known commodities.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest-stockprice-auto2"></a>8.6.3. Configuring for Automatic Retrieval of Quotes</h3></div></div><p>If you have more than a couple of commodities, you will tire of
-      having to update their prices constantly. GnuCash has the ability to
+      having to update their prices constantly. <b><tt>GnuCash</tt></b> has the ability to
       automatically download the most recent price for your commodities using
       the Internet. This is accomplished through the Perl module
       Finance::Quote, which must be installed in order to activate this
@@ -39,8 +39,8 @@
       a terminal window and check to see if there is any documentation
       available. If you see the documentation, then the module is installed,
       if you do not see the documentation, then it has not been
-      installed.</p><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="invest-stockprice-auto-install3"></a>8.6.3.1. Installing Finance::Quote</h4></div></div><p>To install Finance::Quote begin by first closing any GnuCash
-        applications you have running. Second, locate the folder where GnuCash
+      installed.</p><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="invest-stockprice-auto-install3"></a>8.6.3.1. Installing Finance::Quote</h4></div></div><p>To install Finance::Quote begin by first closing any <b><tt>GnuCash</tt></b>
+        applications you have running. Second, locate the folder where <b><tt>GnuCash</tt></b>
         is installed by searching for “gnc-fq-update” (without the quotes).
         Change to that directory, open a root shell and run the command
         “gnc-fq-update” (without the quotation marks). This will
@@ -50,13 +50,13 @@
         should be able to answer “no” to the first question: “Are you
         ready for manual configuration? [yes]” and the update will
         continue automatically from that point.</p><p>After installation is complete, you should run the “gnc-fq-dump”
-        test program, in the same directory, distributed with GnuCash to test
+        test program, in the same directory, distributed with <b><tt>GnuCash</tt></b> to test
         if Finance::Quote is installed and working properly.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">If you feel uncomfortable about performing any of these steps,
-          please either email the GnuCash-user mailing list
-          (<tt>&lt;<a href="mailto:gnucash-user@gnucash.org">gnucash-user@gnucash.org</a>&gt;</tt>) for help or come to the GnuCash IRC
+          please either email the <b><tt>GnuCash</tt></b>-user mailing list
+          (<tt>&lt;<a href="mailto:gnucash-user@gnucash.org">gnucash-user@gnucash.org</a>&gt;</tt>) for help or come to the <b><tt>GnuCash</tt></b> IRC
           channel on irc.gnome.org. You can also leave out this step and
           manually update your stock prices.</p></td></tr></table></div></div><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="invest-stockprice-auto-configure3"></a>8.6.3.2. Configuring Securities for Online Quotes</h4></div></div><p>With Finance::Quote installed and functioning correctly, you
-        must configure your GnuCash securities to use this feature to
+        must configure your <b><tt>GnuCash</tt></b> securities to use this feature to
         obtain updated price information automatically. Whether creating new securities or modifying securities
         that have already been setup, use the Tools -&gt; Security Editor, to edit the
         security and check the <b>Get Online Quotes</b> box. You will
@@ -68,7 +68,7 @@
         can be used to fetch the current prices of your stocks.  The file specified
         “$HOME/gnucash-filename” will depend on the name and location of your
         data file.
-        This can be determined by the name displayed in the top frame of the GnuCash window,
+        This can be determined by the name displayed in the top frame of the <b><tt>GnuCash</tt></b> window,
         before the “-”.  The file name can also be found “File -&gt;”
         “pull down list”, the first item, numbered 1, is the name of the currently
         open file.</p><p>This can be automated by creating a crontab entry. For example,
@@ -90,7 +90,7 @@
       (USD)”. You will see a new column in the main window entitled
       <b>Total (USD)</b> that will express the value of all
       commodities in the report currency.</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_stockvalue.png" alt="Viewing Stock Value"><div class="caption"><p>Viewing the value of a stock commodity in the main
-          window using the Total in Report Currency option.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest-stockprice-report"></a>8.6.5. Selecting "Price Source" in Stock Value Reports</h3></div></div><p>Most GnuCash Asset reports have options to set/modify a number of parameters for the report.  The
+          window using the Total in Report Currency option.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest-stockprice-report"></a>8.6.5. Selecting "Price Source" in Stock Value Reports</h3></div></div><p>Most <b><tt>GnuCash</tt></b> Asset reports have options to set/modify a number of parameters for the report.  The
        Options windows is displayed by selecting the report tab then clicking on either the Options
        icon in the menu bar or selecting <b>Edit -&gt; Report Options</b>.  The tab "General" in the
        resulting window contains various parameters for the report.  One of these is "Price Source" which of offers

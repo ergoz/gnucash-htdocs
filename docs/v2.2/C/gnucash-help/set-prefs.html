@@ -1,96 +1,175 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>9.2. Setting Your Preferences</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="help.html" title="GnuCash Help Manual"><link rel="up" href="custom-gnucash.html" title="Chapter 9. Customizing GnuCash"><link rel="previous" href="account-options.html" title="9.1. Account Display Options"><link rel="next" href="change-style.html" title="9.3. Changing Style Sheets"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">9.2. Setting Your Preferences</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="account-options.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 9. Customizing GnuCash</th><td width="20%" align="right"> <a accesskey="n" href="change-style.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="set-prefs"></a>9.2. Setting Your Preferences</h2></div></div><p>Pausing the cursor for a couple of seconds, over options in these windows
-       will display in-depth information on the choice.</p><p>The GnuCash Preferences window contains the following
-      options;</p><div class="itemizedlist"><ul><li><p><b>Accounting Period</b> - <a href="set-prefs.html#prefs-accounting-period" title="9.2.1. Accounting Period">Accounting Period</a></p></li><li><p><b>Account</b> - <a href="set-prefs.html#prefs-accounts" title="9.2.2. Accounts">Accounts</a></p></li><li><p><b>Business</b> - <a href="set-prefs.html#prefs-biz" title="9.2.3. Business">Business</a></p></li><li><p><b>Date/Time</b> - <a href="set-prefs.html#prefs-date-time" title="9.2.4. Date/Time">Date/Time</a></p></li><li><p><b>General</b> - <a href="set-prefs.html#prefs-general" title="9.2.5. General">General</a></p></li><li><p><b>On-line Banking</b> - <a href="set-prefs.html#prefs-online" title="9.2.6. On-line Banking">On-line Banking</a>
-          </p></li><li><p><b>Register</b> - <a href="set-prefs.html#prefs-reg" title="9.2.7. Register">Register</a></p></li><li><p><b>Register Default</b> - <a href="set-prefs.html#prefs-reg-def" title="9.2.8. Register Defaults">Register Defaults</a></p></li><li><p><b>Reports</b> - <a href="set-prefs.html#prefs-reports" title="9.2.9. Reports ">Reports </a></p></li><li><p><b>Scheduled Transactions</b> - <a href="set-prefs.html#prefs-sched" title="9.2.10. Scheduled Transactions ">Scheduled Transactions </a></p></li><li><p><b>Windows</b> - <a href="set-prefs.html#prefs-window" title="9.2.11. Windows">Windows</a></p></li></ul></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-accounting-period"></a>9.2.1. Accounting Period</h3></div></div><div class="figure"><p><b>Figure 9.1. The "Accounting Period Preferences" Window.</b></p><div class="screenshot"><div class="mediaobject"><img src="figures/Help_Pref_AccntPeriod.png" alt="Accounting Period Preferences screen"><div class="caption"><p>This is an screen image of the "Accounting Period Preferences"
-           windows.</p></div></div></div></div><p>This section defines the following preferences;</p><div class="itemizedlist"><ul><li style="list-style-type: space"><p><b>Summary Bar Content</b> - check-boxes to
-             include/exclude; Grand Totals, and Non-Currency totals.</p><div class="itemizedlist"><ul><li style="list-style-type: space"><p>Grand Totals: If checked, show a grand total of all accounts converted to
-                the default report currency.</p></li><li style="list-style-type: space"><p>Non-Currency: If checked, non-currency commodities will be shown in the
-                summary bar.  If clear, only currencies will be shown.</p></li></ul></div></li><li style="list-style-type: space"><p><b>Start Date</b> - specify the beginning of the
-             accounting period.</p><div class="itemizedlist"><ul><li style="list-style-type: space"><p>Relative: Use the specified relative starting date for profit/loss
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>9.2. Setting Preferences</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="help.html" title="GnuCash Help Manual"><link rel="up" href="custom-gnucash.html" title="Chapter 9. Customizing GnuCash"><link rel="previous" href="account-options.html" title="9.1. Account Display Options"><link rel="next" href="change-style.html" title="9.3. Changing Style Sheets"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">9.2. Setting Preferences</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="account-options.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 9. Customizing GnuCash</th><td width="20%" align="right"> <a accesskey="n" href="change-style.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="set-prefs"></a>9.2. Setting Preferences</h2></div></div><p>The <b>GnuCash Preferences</b> window allows you to customize your <b><tt>GnuCash</tt></b> 
+    session by setting several options. From the <b><tt>GnuCash</tt></b> menu
+    select <b>Edit</b>-&gt;<b>Preferences</b>. 
+    The <b>GnuCash Preferences</b> window will open. 
+    Using the tabs on the left make your desired changes.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Tip</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Pausing the cursor for a couple of seconds over options in these windows
+      will display a tooltip with in-depth information on the choice.</p></td></tr></table></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">The changes you made will be applied directly.</p></td></tr></table></div><p>To close the <b>GnuCash Preferences</b> window press the
+    Close button.</p><p>Each tab in the <b>GnuCash Preferences</b> window is
+    discussed in its own section below. For a listing of the tabs, see
+    <a href="custom-gnucash.html" title="Chapter 9. Customizing GnuCash">Chapter 9</a>.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-accounting-period"></a>9.2.1. Accounting Period</h3></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/Help_Pref_AccntPeriod.png" alt="The Accounting Period tab"><div class="caption"><p>The <b>Accounting Period</b> tab</p></div></div></div><div class="itemizedlist"><ul><li><p><b>Start Date</b> — This item sets the accounting period’s start date.</p><div class="itemizedlist"><ul><li><p><b>Relative</b> — Use the specified relative starting date for profit/loss
                 calculations.  Also use this date for net assets calculations.  Relative defines
-                start by; today or start of current/previous year, quarter, month.</p></li><li style="list-style-type: space"><p>Absolute - Use the specified absolute starting date for profit/loss
-                calculations.  Also use this date for net assets calculations.</p></li></ul></div></li><li style="list-style-type: space"><p><b>End Date</b> - specify the ending of the
-             accounting period.</p><div class="itemizedlist"><ul><li style="list-style-type: space"><p>Relative: Use the specified relative ending date for profit/loss
-                calculations.  Also use this date for net assets calculations.</p></li><li style="list-style-type: space"><p>Absolute - Use the specified absolute ending date for profit/loss
-                calculations.  Also use this date for net assets calculations.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-accounts"></a>9.2.2. Accounts</h3></div></div><div class="figure"><p><b>Figure 9.2. The "Account Preferences" Window.</b></p><div class="screenshot"><div class="mediaobject"><img src="figures/Help_Pref_Accnts.png" alt="Account Preferences screen"><div class="caption"><p>This is an screen image of the "Account Preferences" windows.</p></div></div></div></div><p>This section contains the following preferences;</p><div class="itemizedlist"><ul><li><p><b>Separator Character:</b> This option is used to
-             pick a different separator in the register between parent and child accounts.
-             IE. The character that will be used between components of an account name.</p><p>A legal value is any single character except letters and numbers, or any of
-             the following strings: "colon", "slash", "backslash", "dash" and "period".</p></li><li><p><b>Reversed Balanced Accounts:</b> This option is
-             used to choose what type of account have their balances reversed. If the balance
-             is normally negative, as in a loan or a credit card then this will make the
-             balance positive.</p><div class="itemizedlist"><ul><li><p>Income &amp; Expense - Sign reverse balances on income and expense
-                accounts.</p></li><li><p>Credit - Sign reverse balances on the following: Credit Card, Payable,
-                Liability, Equity, and Income.</p></li><li><p>None - Don't sign reverse any accounts.</p></li></ul></div></li><li><p><b>Labels:</b> This option is used to turn on
-             accounting labels (debit and credit) instead of using terms such as withdrawal
-             and deposit.  Use only 'debit' and 'credit' instead of informal synonyms.</p></li><li><p><b>Default Currency:</b> This option is used select
-            either the locale currency as the default or to select the default from the
-            pull-down list.</p><div class="itemizedlist"><ul><li><p>Locale - Use the system locale currency for all newly created accounts.
-               </p></li><li><p>Choose - Use the specified currency for all newly created accounts.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-biz"></a>9.2.3. Business</h3></div></div><div class="figure"><p><b>Figure 9.3. The "Business Preferences" Window.</b></p><div class="screenshot"><div class="mediaobject"><img src="figures/Help_Pref_Business.png" alt="Business Preferences screen"><div class="caption"><p>This is an screen image of the "Business  Preferences"
-             windows.</p></div></div></div></div><p>This section contains the following preferences;</p><div class="itemizedlist"><ul><li><p><b>Invoices</b></p><div class="itemizedlist"><ul><li><p>Open in new window: Check-box to open
-              Invoice in a new window.  If checked, each invoice will be opened in its own top
-              level window.  If clear, the invoice will be opened in the current window.</p></li><li><p>Accumulate splits on post: Whether multiple entries in an invoice which
-              transfer to the same account should be accumulated into a single split by
-              default. This setting can be changed in the Post dialog.</p></li><li><p>Number of Rows: This option is used to set the default number of register
-              rows to display in invoices.</p></li><li><p>Tax Included?: Whether tax is included by default in entries on Invoices.
-              This setting is inherited by new customers and vendors.</p></li></ul></div></li><li><p><b>Bills</b></p><div class="itemizedlist"><ul><li><p>Notify when due?:  Whether to display the list of Bills Due at start-up.
-              </p></li></ul></div><div class="itemizedlist"><ul><li><p>Days in advance: How many days in the future to warn about Bills coming
-               due.</p></li></ul></div><div class="itemizedlist"><ul><li><p>Tax Included?:  Whether tax is included by default in entries on
-               Bills. This setting is inherited by new customers and vendors.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-date-time"></a>9.2.4. Date/Time</h3></div></div><div class="figure"><p><b>Figure 9.4. The "Date/Time Preferences" Window.</b></p><div class="screenshot"><div class="mediaobject"><img src="figures/Help_Pref_date-time.png" alt="Date/Time Preferences screen"><div class="caption"><p>This is an screen image of the "Date/Time Preferences"
-           windows.</p></div></div></div></div><p>This section contains the following preferences;</p><div class="itemizedlist"><ul><li><p><b>Time Format:</b> Check-box to use a 24 hour
-            (instead of a 12 hour) time format.</p></li><li><p><b>Date</b> - Radio Button list to select one of the
-            following;</p><div class="itemizedlist"><ul><li><p>Locale: Use the date format specified by the system locale.</p></li><li><p>US: Use the date format common in the United States.</p></li><li><p>UK: Use the date format common in the United Kingdom.</p></li><li><p>Europe: Use the date format common in continental Europe.</p></li><li><p>ISO: Use the date format specified by the ISO-8601 standard.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-general"></a>9.2.5. General</h3></div></div><p>This section contains the following preferences;</p><div class="itemizedlist"><ul><li><p><b>General</b></p><div class="itemizedlist"><ul><li><p>Display "Tip of the Day" dialog: Display hints for using GnuCash at start-up.
-            </p></li><li><p>Preform Account list setup on new file: Present the new account list dialog
-             when you choose "New File" from the "File" menu</p></li><li><p>Show close button on Notebook tab: Show a close button on each notebook tab.
-             These function identically to the 'Close' menu item.</p></li><li><p>Enable euro support: Enables support for the European Union EURO currency.
-            </p></li></ul></div></li><li><p><b>Numbers:</b> </p><div class="itemizedlist"><ul><li><p>Display negative amounts in red: </p></li><li><p>Automatic Decimal Point: Automatically insert a decimal point into values
-             that are entered without one.</p></li><li><p>Auto Decimal Places: Select the number of decimal places that will be
-             inserted automatically.</p></li></ul></div></li><li><p><b>Files:</b> </p><div class="itemizedlist"><ul><li><p>Compress files: Checkbox to compress the data file with gzip when saving it
-              to disk.</p></li><li><p>Retain log files: Select the number of days to save log/backup files.
-              Delete old log/backup files after this many days (0 = never).</p></li></ul></div></li><li><p><b>Search Dialog:</b> </p><div class="itemizedlist"><ul><li><p>New search limit: Default to 'new search' if fewer than this number of
-              items is returned.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-online"></a>9.2.6. On-line Banking</h3></div></div><p>This section contains the following preferences;</p><div class="itemizedlist"><ul><li><p><b>QIF Import:</b> </p><div class="itemizedlist"><ul><li><p>Show documentation:  Show some documentation-only pages in QIF Import
-              druid.</p></li></ul></div></li><li><p><b>Generic Importer</b></p><div class="itemizedlist"><ul><li><p>Checkbox to enable/disable the use Bayesian algorithms to match new
-              transactions with existing accounts.</p></li><li><p>Match display threshold:  The minimum score a potential match must have
-              to be displayed in the match list.</p></li><li><p>Auto-add threshold:   A transaction whose best match's score is in the red
-              zone (above the display threshold but below or equal to the Auto-ADD threshold)
-              will be ADDed by default.</p></li><li><p>Auto-clear threshold:  A transaction whose best match's score is in the
-              green zone (above or equal to the Auto-CLEAR threshold) will be CLEARed by
-              default.</p></li><li><p>Commercial ATM fees threshold:  In some places commercial ATMs (not
+                start by today or start of current/previous year, quarter, month.</p></li><li><p><b>Absolute</b> — Use the specified absolute starting date for profit/loss
+                calculations.  Also use this date for net assets calculations.</p></li></ul></div></li><li><p><b>End Date</b> — This item sets the accounting period’s end date.</p><div class="itemizedlist"><ul><li><p><b>Relative</b> — Use the specified relative ending date for profit/loss
+                calculations.  Also use this date for net assets calculations.</p></li><li><p><b>Absolute</b> — Use the specified absolute ending date for profit/loss
+                calculations.  Also use this date for net assets calculations.</p></li></ul></div></li><li><p><b>Summarybar content</b></p><div class="itemizedlist"><ul><li><p><b>Include grand total</b> — If checked, show in the Summarybar a grand total of all
+              accounts converted to the default currency.</p></li><li><p><b>Include non-currency totals</b> — if this
+              option is selected, <b><tt>GnuCash</tt></b> will include in the Summarybar a total 
+              for non-currency items (for instance number of shares).</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-accounts"></a>9.2.2. Accounts</h3></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/Help_Pref_Accnts.png" alt="The Accounts tab"><div class="caption"><p>The <b>Accounts</b> tab</p></div></div></div><div class="itemizedlist"><ul><li><p><b>Separator Character</b> — The account
+          separator is the character that separates a parent account from its
+          sub-account, for example Utilities:Electric. The default is a
+          <b>:</b> (Colon), but you can also select
+          <b>/</b> (Slash),
+          <b>\</b> (Backslash), <b>—</b> (Dash)
+          or <b>.</b> (Period), or any Unicode character 
+          that isn’t a letter or a number.</p></li><li><p><b>Reverse Balanced accounts</b> — This option
+          lets you determine whether account balances will display as positive
+          or negative numbers: 
+            <div class="itemizedlist"><ul><li><p><b>Income &amp; Expense</b> assigns a
+                positive credit balance to income account balances and a
+                negative debit balance to expense account balances. See
+                <a href="acct-types.html" title="5.1. Types of GnuCash Accounts">Types of GnuCash Accounts</a> for more information 
+                on these account types.</p></li><li><p><b>Credit accounts</b> (default) displays
+                a positive balance for account types that would normally carry
+                a credit balance (income, credit, liability, equity). See
+                <a href="acct-types.html" title="5.1. Types of GnuCash Accounts">Types of GnuCash Accounts</a> for more information on 
+                these account types.</p></li><li><p><b>None</b> shows all credit balances as
+                negative and all debit balances as positive.</p></li></ul></div></p></li><li><p><b>Labels</b> — Select this option if you want
+          column headings in the register to refer to <b>debits</b> and 
+          <b>credits</b> instead of the default informal headings such
+          as <b>withdrawal</b>
+          and <b>deposit</b>.</p></li><li><p><b>Default Currency</b> — This item determines
+          which currency will be selected by default when creating new
+          accounts.</p><div class="itemizedlist"><ul><li><p><b>Locale</b> — Use the system locale currency for 
+              all newly created accounts.</p></li><li><p><b>Choose</b> — specify the
+              currency to use, independent of your system
+              settings.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-biz"></a>9.2.3. Business</h3></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/Help_Pref_Business.png" alt="The Business tab"><div class="caption"><p>The <b>Business</b> tab</p></div></div></div><div class="itemizedlist"><ul><li><p><b>General</b></p><div class="itemizedlist"><ul><li><p><b>Open in new window</b> — If checked, each
+              invoice will be opened in its own top level window. If clear, the
+              invoice will be opened in the current window.</p></li><li><p><b>Accumulate splits on post</b> — Whether
+              multiple entries in an invoice which transfer to the same account
+              should be accumulated into a single split by default.</p></li></ul></div></li><li><p><b>Invoices</b></p><div class="itemizedlist"><ul><li><p><b>Tax Included</b> — Whether tax are
+              included by default in entries on invoices. This setting is
+              inherited by new customers and vendors.</p></li></ul></div></li><li><p><b>Bills</b></p><div class="itemizedlist"><ul><li><p><b>Notify when due</b> — Lets you set whether
+              you want to be notified at <b><tt>GnuCash</tt></b> startup 
+              of when a bill is soon to be due.</p></li><li><p><b>Days in advance</b> — How many days before 
+              the due date to warn about bills coming due.</p></li><li><p><b>Tax Included</b> — Whether tax are
+              included by default in entries on bills. This setting is inherited
+              by new customers and vendors.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-date-time"></a>9.2.4. Date/Time</h3></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/Help_Pref_DateTime.png" alt="The Date/Time tab"><div class="caption"><p>The <b>Date/Time</b> tab</p></div></div></div><div class="itemizedlist"><ul><li><p><b>Time Format</b></p><div class="itemizedlist"><ul><li><p><b>Use 24-hour clock</b> — Lets you specify if you
+              want to use 24 or 12 hours time format. That is if 11 o’clock at 
+              night should be represented as 11PM or 23:00.</p></li></ul></div></li><li><p><b>Date Format</b> — This option controls the
+          appearance of the date (you could see a preview of the date beside any of the choices).
+          The available choices are:</p><div class="itemizedlist"><ul><li><p><b>Locale</b> — Use the date format specified by the system locale.</p></li><li><p><b>US</b> — Use the date format common in the United States.</p></li><li><p><b>UK</b> — Use the date format common in the United Kingdom.</p></li><li><p><b>Europe</b> — Use the date format common in continental Europe.</p></li><li><p><b>ISO</b> — Use the date format specified by the ISO-8601 standard.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-general"></a>9.2.5. General</h3></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/Help_Pref_General.png" alt="The General tab"><div class="caption"><p>The <b>General</b> tab</p></div></div></div><div class="itemizedlist"><ul><li><p><b>General</b></p><div class="itemizedlist"><ul><li><p><b>Display "Tip of the Day" dialog</b> — This option displays or hides the 
+              <b>Tip of the Day</b> screen when <b><tt>GnuCash</tt></b> is started.</p></li><li><p><b>Perform account list setup on new file</b> —
+              This option turns off the display of the <b>New Account
+              Hierarchy Setup</b> assistant when the entry <b>File</b>-&gt;<b>New File</b> is selected from the 
+              <b><tt>GnuCash</tt></b> menu.</p></li></ul></div></li><li><p><b>Numbers</b></p><div class="itemizedlist"><ul><li><p><b>Display negative amounts in red</b> — If you
+                turn off this option, <b><tt>GnuCash</tt></b> will display negative numbers in
+                black.</p></li><li><p><b>Automatic Decimal Point</b> — This option
+                will automatically insert a decimal point into numbers you type
+                in.</p></li><li><p><b>Decimal Places</b> — This field allows you
+                to set the number of decimal places to be used.</p></li></ul></div></li><li><p><b>Files</b></p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">The following options are only relevant for files saved in xml format.</p></td></tr></table></div><div class="itemizedlist"><ul><li><p><b>Compress files</b> — This option determines
+              whether the <b><tt>GnuCash</tt></b> data file will be compressed or not.</p></li><li><p><b>Show auto-save confirmation question</b> —
+              If this option is enabled, <b><tt>GnuCash</tt></b> will show you a confirmation screen
+              each time the auto-save process is started.</p></li><li><p><b>Auto-save time interval</b> —
+              This field sets the number of minutes between each automatic saving of the file.
+              Set to 0 to disable the auto-save feature.</p></li><li><p><b>Retain log files</b> — In this section you could set
+              your preferences about the log files using the provided radio buttons.</p><div class="itemizedlist"><ul><li><p><b>Never</b> — Disable the creation of log files.</p></li><li><p><b>For:</b> — Enter a specific number of days for which keep the files.</p></li><li><p><b>Forever</b> — Disable the auto deletion of log files; retains the log files forever.</p></li></ul></div></li></ul></div></li><li><p><b>Search Dialog</b></p><div class="itemizedlist"><ul><li><p><b>New search limit:</b> — Defaults to "new
+              search" if fewer than this number of items is returned.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-online"></a>9.2.6. Online Banking</h3></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/Help_Pref_OnlineBanking.png" alt="The Online Banking tab"><div class="caption"><p>The <b>Online Banking</b> tab</p></div></div></div><div class="itemizedlist"><ul><li><p><b>QIF Import</b></p><div class="itemizedlist"><ul><li><p><b>Show documentation</b> — The first time you
+              use the QIF importer you may
+              notice that the importer has detailed instructions on how to import
+              a file. Once you have become familiar with using the importer, you
+              might want to turn off this option. Turning off the option gives you
+              less detail in the importer screens.</p></li></ul></div></li><li><p><b>Generic Importer</b></p><div class="itemizedlist"><ul><li><p><b>Use Bayesian matching</b> — Use Bayesian
+               algorithms to match new transactions with existing accounts.</p></li><li><p><b>Match display threshold</b> — The minimal
+              score a potential match must have to be displayed in the match
+              list.</p></li><li><p><b>Auto-add threshold</b> — A transaction whose
+              best match’s score is in the red zone (above display threshold, but
+              below or equal to Auto-add threshold) will be added by
+              default.</p></li><li><p><b>Auto-clear threshold</b> — A transaction
+              whose best match’s score is in the green zone (above or equal to
+              Auto-clear threshold) will be cleared by default.</p></li><li><p><b>Commercial ATM fees threshold</b> —
+              In some places commercial ATMs (not
               belonging to a financial institution) are installed in places like convenience
               store.  These ATM add its fee directly to the amount instead of showing up as a
               separate transaction or in your monthly banking fees.  For example, you withdraw
               $100, and you are charged $101.50 plus Interac fees.  If you manually entered
-              that $100, the amounts won't match.  You should set this to whatever is the
+              that $100, the amounts won’t match.  You should set this to whatever is the
               maximum such fee in your area (in units of your local currency), so the
-              transaction will be recognized as a match.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-reg"></a>9.2.7. Register</h3></div></div><p>This section contains the following preferences;</p><div class="itemizedlist"><ul><li><p><b>Actions:</b></p><div class="itemizedlist"><ul><li><p>'Enter' moves to blank transaction: If checked, pressing the 'Enter' key
-               will move to the blank transaction at the bottom of the register.  If clear,
-               pressing the 'Enter' key will move down one row.</p></li><li><p>Auto-raise lists: Automatically raise the list of accounts or actions
-               during input.</p></li></ul></div></li><li><p><b>Reconciling:</b> </p><div class="itemizedlist"><ul><li><p>Check cleared transactions: Pre-check cleared transactions when creating
-               a reconcile dialog.</p></li><li><p>Automatic interest transfer: Prior to reconciling an account which charges
-               or pays interest, prompt the user to enter a transaction for the interest
-               charge or payment. Currently only enabled for Bank, Credit, Mutual, Asset,
-               Receivable, Payable, and Liability accounts.</p></li><li><p>Automatic credit card payment: After reconciling a credit card statement,
-               prompt the user to enter a credit card payment.</p></li></ul></div></li><li><p><b>Graphics:</b> </p><div class="itemizedlist"><ul><li><p>Use system theme colors: If checked, the system color theme will be
-              applied to register windows.  If clear, the original GnuCash register colors
-              will be used.</p></li><li><p>Double mode colors alternate with transactions: Alternate the primary and
-              secondary colors by transaction instead of by alternating by row.</p></li><li><p>Draw horizontal lines between rows: Show horizontal borders on the cells.
-             </p></li><li><p>Draw vertical lines between columns: Show vertical borders on the cells.
-             </p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-reg-def"></a>9.2.8. Register Defaults</h3></div></div><p>This section contains the following preferences;</p><div class="itemizedlist"><ul><li><p><b>Default Style:</b></p><div class="itemizedlist"><ul><li><p>Basic ledger:  Show all transactions on one line. (Two in double line
-               mode.)</p></li><li><p>Auto-split ledger:  Automatically expand the current transaction to show
+              transaction will be recognized as a match by 
+              <b><tt>GnuCash</tt></b>.</p></li></ul></div></li><li><p><b>Online Banking</b></p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">This section is showed only if <b><tt>GnuCash</tt></b> is compiled with
+          Aqbanking and HBCI support.</p></td></tr></table></div><div class="itemizedlist"><ul><li><p><b>Remember PIN</b> — Enable this option if you
+              want <b><tt>GnuCash</tt></b> to remember the PIN you
+              enter for online banking authentication.</p></li><li><p><b>Verbose debug messages</b> — Enable this option if you
+              want <b><tt>GnuCash</tt></b> to show more information about the online
+              banking operations.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-reg"></a>9.2.7. Register</h3></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/Help_Pref_Register.png" alt="The Register tab"><div class="caption"><p>The <b>Register</b> tab</p></div></div></div><div class="itemizedlist"><ul><li><p><b>Actions</b></p><div class="itemizedlist"><ul><li><p><b>'Enter' moves to blank transaction</b> — If
+              selected, move the cursor to the blank transaction at the end of the register
+              after the user presses the <b>Enter</b> key. Otherwise the cursor will be moved
+              down one row.</p></li><li><p><b>Auto-raise lists</b> — If selected, all lists
+              will automatically be expanded when input focus is in the list
+              field.</p></li><li><p><b>Tab order includes Transfer on Memorised Transaction</b> — 
+              If selected, when the transaction is auto filled, pressing the 
+              <b>Tab</b> key in the register the cursor’s jump 
+              will include the <b>Transfer</b> field.</p></li></ul></div></li><li><p><b>Reconciling</b></p><div class="itemizedlist"><ul><li><p><b>Check cleared transactions</b> — If selected,
+              automatically check off cleared transactions when
+              reconciling.</p></li><li><p><b>Automatic interest transfer</b> — If
+              selected, prior to reconciling an account which charges or pays
+              interest, prompt the user to enter a transaction for the interest
+              charge or payment. Currently only enabled for Bank, Credit, Mutual,
+              Asset, Receivable, Payable, and Liability accounts.</p></li><li><p><b>Automatic credit card payment</b> — If
+              selected, after reconciling a credit card statement, prompt the user
+              to enter a credit card payment.</p></li><li><p><b>Always reconcile to today</b> — If
+              selected, always open the reconcile screen with today’s date for
+              statement date, regardless of previous reconciliation.</p></li></ul></div></li><li><p><b>Graphics</b></p><div class="itemizedlist"><ul><li><p><b>Use system theme colors</b> — If selected, 
+              the system color theme will be applied to register windows. Otherwise
+              the original <b><tt>GnuCash</tt></b> register color will be used.</p></li><li><p><b>Double mode colors alternate with
+              transactions</b> — If selected, configures the register
+              window to alternate between the primary and secondary colors with
+              each transaction, instead of each row.</p></li><li><p><b>Draw horizontal lines between rows</b> — If
+              selected, <b><tt>GnuCash</tt></b> will draw a horizontal line between each
+              row.</p></li><li><p><b>Draw vertical lines between columns</b> — If
+              selected, <b><tt>GnuCash</tt></b> will draw a vertical line between the cells in
+              each row.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-reg-def"></a>9.2.8. Register Defaults</h3></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/Help_Pref_RegisterDefaults.png" alt="The Register Defaults tab"><div class="caption"><p>The <b>Register Defaults</b> tab
+            preferences affect the behavior of the transaction register
+            windows.</p></div></div></div><div class="itemizedlist"><ul><li><p><b>Default Style</b></p><p>Here you can choose from 3
+          different styles for register windows:
+            <div class="itemizedlist"><ul><li><p><b>Basic ledger</b> — Show all transactions on one line. (Two in double line
+               mode.)</p></li><li><p><b>Auto-split ledger</b> — Automatically expand the current transaction to show
                all splits.  All other transactions are shown on one line. (Two in double line
-               mode.)</p></li><li><p>Transaction journal:  All transactions are expanded to show all splits.
-              </p></li></ul></div></li><li><p><b>Other Defaults</b></p><div class="itemizedlist"><ul><li><p>Register opens in a new window: If checked, each register will be opened
-               in its own top level window.  If clear, the register will be opened in the
-               current window.</p></li><li><p>Double line mode: Show two lines of information for each transaction
-               instead of one.  Does not affect expanded transactions</p></li><li><p>Number of transactions: Show this many transactions in a register. A
-               value of zero means show all transactions.</p></li><li><p>Number of Rows: Display this many rows when a register is created.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-reports"></a>9.2.9. Reports </h3></div></div><p>This section contains the following preferences;</p><div class="itemizedlist"><ul><li><p><b>Default Report Currency</b> </p><div class="itemizedlist"><ul><li><p>Locale: Use the system locale currency for all newly created reports.
-             </p></li><li><p>Choose: Use the specified currency for all newly created reports.</p></li></ul></div></li><li><p><b>Location</b> </p><div class="itemizedlist"><ul><li><p>Report opens in a new window: If checked, each report will be opened in
-             its own top level window.  If clear, the report will be opened in the current
-             window.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-sched"></a>9.2.10. Scheduled Transactions </h3></div></div><p>This section contains the following preferences;</p><div class="itemizedlist"><ul><li><p><b>Since Last Run Run on GnuCash start</b> </p><div class="itemizedlist"><ul><li><p>Run when data file opened: Show the "since last run" window when a file is
-              opened.</p></li></ul></div></li><li><p><b>Transaction Editor Defaults</b> </p><div class="itemizedlist"><ul><li><p>Auto-create new transactions: Set the 'auto-create' flag on newly created
-              scheduled transactions.</p></li><li><p>Notify before transactions are created: Set the 'notify' flag on newly
-              created scheduled transactions.</p></li><li><p>Create in advance, days:  Create the transaction this many days before its
-              effective date.</p></li><li><p>Remind in advance, days:  Begin notifications this many days before the
-              transaction is created.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-window"></a>9.2.11. Windows</h3></div></div><p>This section contains the following preferences;</p><div class="itemizedlist"><ul><li><p>Window Geometry </p><div class="itemizedlist"><ul><li><p>Save window size and position.</p></li></ul></div></li><li><p>Toolbar Style</p><div class="itemizedlist"><ul><li><p>Use system default: Use the system setting for displaying toolbar items.
-             </p></li><li><p>Text below icons: Display toolbar items with the text label below the icon.
-              Labels are show for all items.</p></li><li><p>Priority text beside icons:  Display toolbar items with the text label
-              beside the icon.  Labels are only shown for the most important items.</p></li><li><p>Icons only:  Display toolbar items as icons only.</p></li><li><p>Text only:  Display toolbar items as text only.</p></li></ul></div></li></ul></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="account-options.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="help.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="change-style.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">9.1. Account Display Options </td><td width="20%" align="center"><a accesskey="u" href="custom-gnucash.html">Up</a></td><td width="40%" align="right"> 9.3. Changing Style Sheets</td></tr></table></div></body></html>
+               mode.)</p></li><li><p><b>Transaction journal</b> — All transactions are expanded to show all splits.
+              </p></li></ul></div>
+            </p></li><li><p><b>Other Defaults</b></p><div class="itemizedlist"><ul><li><p><b>Register opens in a new window</b> — If
+              selected, register will be in a separate window instead of in a
+              tab.</p></li><li><p><b>Double line mode</b> — If selected, show two
+              lines of information for each transaction instead of one.</p></li><li><p><b>Only display leaf account names</b> — If selected, only the name of the leaf
+              accounts will be displayed in the <b>Account</b> selection popup.
+              The default behavoir is to display the full account name including the path in the account tree.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="warning" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/warning.png"></img></td><th align="left" valign="top">Warning</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">
+                Enabling this option implies that you use unique leaf account names.
+                </p></td></tr></table></div></li><li><p><b>Number of transactions</b> — How many
+              transactions to show in a register. Set to 0 to show all transactions.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-reports"></a>9.2.9. Reports</h3></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/Help_Pref_Reports.png" alt="The Reports tab"><div class="caption"><p>The <b>Reports</b> tab preferences affect
+            the behavior of <b><tt>GnuCash</tt></b>
+            reports.</p></div></div></div><div class="itemizedlist"><ul><li><p><b>Default Report Currency</b> — This item
+          determines which currency will be used by default when creating
+          reports. You can choose:</p><div class="itemizedlist"><ul><li><p><b>Locale</b> — Use the system locale currency for all 
+             newly created reports.</p></li><li><p><b>Choose</b> — Use the specified currency for all 
+             newly created reports.</p></li></ul></div></li><li><p><b>Location</b></p><div class="itemizedlist"><ul><li><p><b>Report opens in a new window</b> — if you select this option, the
+               reports will open up in a new window, instead of in a tab.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-sched"></a>9.2.10. Scheduled Transactions</h3></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/Help_Pref_Sched.png" alt="The Scheduled Transactions tab"><div class="caption"><p>The <b>Scheduled Transactions</b> tab
+            preferences affect the behavior of
+            <b><tt>GnuCash</tt></b> for scheduling transactions.
+            More information about scheduled transactions can be found in
+            <a href="trans-sched.html" title="6.11. Scheduling Transactions">Scheduling Transactions</a>.</p></div></div></div><div class="itemizedlist"><ul><li><p><b>Since Last Run Dialog</b></p><div class="itemizedlist"><ul><li><p><b>Run when data file opened</b> — If selected,
+              the <b>Since Last Run</b> screen will appear on <b><tt>GnuCash</tt></b> start-up (or
+              rather when <b><tt>GnuCash</tt></b> opens the file).
+              </p></li></ul></div></li><li><p><b>Transaction Editor Defaults</b></p><div class="itemizedlist"><ul><li><p><b>Auto-Create new transactions</b> — If
+              selected, new scheduled transactions will automatically be entered
+              into the register. If the auto-create option is enabled, you could also check
+              <b>Notify before transactions are created</b> so that you will be
+              able to confirm creating the transactions.</p></li><li><p><b>Create in advance, days</b> — The default
+              number of days in advance to create the registered scheduled
+              transactions.</p></li><li><p><b>Remind in advance, days</b> — The default
+              number of days in advance to remind on new scheduled
+              transactions.</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="prefs-window"></a>9.2.11. Windows</h3></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/Help_Pref_Windows.png" alt="The Windows tab"><div class="caption"><p>The <b>Windows</b> tab</p></div></div></div><div class="itemizedlist"><ul><li><p><b>Window Geometry</b></p><div class="itemizedlist"><ul><li><p><b>Save window size and position</b> — If
+              selected, next time <b><tt>GnuCash</tt></b> starts will re-use the windows size
+              and position configured in the last run.</p></li></ul></div></li><li><p><b>Toolbar style</b></p><p>You can choose from five different styles for the toolbar:</p><div class="itemizedlist"><ul><li><p><b>Use system default</b> (default) — Use the system setting 
+             for displaying toolbar items.
+             </p></li><li><p><b>Text below icons</b> — Display toolbar items with the text label below the icon.
+              Labels are shown for all items.</p></li><li><p><b>Priority text beside icons</b> — Display toolbar items with the text label
+              beside the icon.  Labels are only shown for the most important items.</p></li><li><p><b>Icons only</b> — Display toolbar items as icons only.</p></li><li><p><b>Text only</b> — Display toolbar items as text only.</p></li></ul></div></li></ul></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="account-options.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="help.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="change-style.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">9.1. Account Display Options </td><td width="20%" align="center"><a accesskey="u" href="custom-gnucash.html">Up</a></td><td width="40%" align="right"> 9.3. Changing Style Sheets</td></tr></table></div></body></html>

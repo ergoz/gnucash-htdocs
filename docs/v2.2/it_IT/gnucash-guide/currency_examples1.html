@@ -1,6 +1,6 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>10.9. In pratica</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_currency.html" title="Capitolo 10. Valute multiple"><link rel="previous" href="currency_reconcile1.html" title="10.8. Riconciliare gli estratti conto in valuta estera (come fare)"><link rel="next" href="chapter_dep.html" title="Capitolo 11. Deprezzamento"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">10.9. In pratica</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="currency_reconcile1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 10. Valute multiple</th><td width="20%" align="right"> <a accesskey="n" href="chapter_dep.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="currency_examples1"></a>10.9. In pratica</h2></div></div><p>In questa sezione verrà mostrato un esempio in cui saranno utilizzate le nozioni
     descritte fino a questo punto, con un livello di complessità maggiore dovuto 
-    all'utilizzo di valute multiple.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2721872"></a>10.9.1. Scenario di base</h3></div></div><p>Di seguito sono riportate le ipotesi assunte per l'esempio. Si supponga quindi di:</p><div class="itemizedlist"><ul><li><p>vivere in Italia e di utilizzare l'Euro (EUR)
+    all'utilizzo di valute multiple.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2601195"></a>10.9.1. Scenario di base</h3></div></div><p>Di seguito sono riportate le ipotesi assunte per l'esempio. Si supponga quindi di:</p><div class="itemizedlist"><ul><li><p>vivere in Italia e di utilizzare l'Euro (EUR)
           come valuta predefinita;</p></li><li><p>aver vinto la lotteria e di aver ereditato del denaro;</p></li><li><p>dover pagare il mutuo per la propria casa;</p></li><li><p>acquistare alcune azioni in Svezia (Ericsson
           B-Fria) utilizzando il SEK;</p></li><li><p>acquistare alcune azioni ad Hong Kong (Beijing
           Airport) utilizzando l'HKD;</p></li><li><p>acquistare altre azioni negli Stati Uniti (Amazon) utilizzando l'USD;</p></li><li><p>prestare una certa somma in Dollari Australiani (AUD) a un amico (Jack);</p></li><li><p>chiedere del denaro in prestito da una banca Giapponese;</p></li><li><p>acquistare una casa in Nuova Zelanda;</p></li><li><p>utilizzare una carta di credito in Italia;</p></li><li><p>voler raggiungere il massimo controllo possibile delle uscite.</p></li></ul></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Questi esempi non sono da prendere come dei consigli per degli investimenti vantaggiosi.
@@ -8,13 +8,13 @@
         da utilizzare in GnuCash e quindi non sono dei consigli finanziari.
         Si consiglia di rivolgersi al proprio consulente finanziario per 
         ricevere maggiori informazioni sugli investimenti e sui prestiti
-        internazionali.</p></td></tr></table></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2721999"></a>10.9.2. Configurare i conti</h3></div></div><p>Questa volta si utilizzerà un nuovo file dei dati di GnuCash; scegliere quindi
+        internazionali.</p></td></tr></table></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2601302"></a>10.9.2. Configurare i conti</h3></div></div><p>Questa volta si utilizzerà un nuovo file dei dati di GnuCash; scegliere quindi
       <b>File</b> -&gt; <b>Nuovo</b> e modificare le preferenze
       (<b>Modifica</b> -&gt; <b>Preferenze</b>) 
       impostando l'EUR come valuta predefinita. Avendo deciso di registrare in dettaglio entrate
       e uscite, si consiglia di utilizzare la struttura dei conti seguente:</p><div class="literallayout"><p><br>
 Attività:Attività correnti:Conto risparmio         (EUR)<br>
-      </p></div><p></p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2722056"></a>10.9.3. Bilancio di apertura</h3></div></div><p>Un bel giorno, aprendo la posta, si scopre con grande sorpresa di essere
+      </p></div><p></p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2601362"></a>10.9.3. Bilancio di apertura</h3></div></div><p>Un bel giorno, aprendo la posta, si scopre con grande sorpresa di essere
       l'ultimo parente ancora in vita di un parente lontano che era molto ricco; per la
       precisione ricco di 500.000 EUR (!). Un'altra lettera dichiara anche che
       si è i fortunati vincitori della lotteria per una somma di 250.000 EUR. </p><p>Per registrare queste transazioni, sono necessari i seguenti conti:</p><div class="literallayout"><p><br>
@@ -23,7 +23,7 @@ Capitali:Eredità          (EUR)      <br>
       </p></div><p>Le transazioni da inserire nel proprio conto <b>Attività:Attività correnti:Conto
       risparmio</b> dovrebbero essere come queste:</p><div class="table"><p><b>Tabella 10.3. Ricevere del denaro extra</b></p><table summary="Ricevere del denaro extra" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td>Conto</td><td>Aumento</td><td>Diminuzione</td></tr><tr><td>Capitalie:Lotteria</td><td>€250,000</td><td> </td></tr><tr><td>Capitali:Eredità</td><td>€500,000</td><td> </td></tr></tbody></table></div><p>E la struttura dei conti dovrebbe assomigliare a questa dopo l'inserimento delle transazioni descritte più sopra.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_PutTogether_AfterMoney.png" alt="Struttura dei conti"><div class="caption"><p>
             Struttura dei conti dopo aver ricevuto alcuni soldi
-          </p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2722217"></a>10.9.4. Acquistare una casa</h3></div></div><p>Finalmente ci si può permettere di rimborsare il mutuo per la casa acceso qualche anno fa 
+          </p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2601508"></a>10.9.4. Acquistare una casa</h3></div></div><p>Finalmente ci si può permettere di rimborsare il mutuo per la casa acceso qualche anno fa 
       (con un deposito di €50.000).</p><div class="literallayout"><p><br>
 Attività:Beni immobili:Casa                  (EUR) €300.000<br>
 Passività:Prestiti:Mutuo                     (EUR) €250.000<br>
@@ -36,7 +36,7 @@ Capitali:Bilanci d'apertura                  (EUR) €50.000
       <b>Passività:Prestiti:Mutuo</b> si presenta così
       dopo l'inserimento delle transazioni:</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_PutTogether_AussieHouse.png" alt="Mutuo per la casa"><div class="caption"><p>
             Libro mastro della transazione per il mutuo sulla casa
-          </p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2722399"></a>10.9.5. Acquistare le azioni</h3></div></div><p>Avendo ricevuto improvvisamente una bella somma di denaro sul proprio conto
+          </p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2601674"></a>10.9.5. Acquistare le azioni</h3></div></div><p>Avendo ricevuto improvvisamente una bella somma di denaro sul proprio conto
       bancario, si decide di interpellare un consulente finanziario e, dopo alcune 
       raccomandazioni (si ricorda che l'esempio è immaginario; non si tratta di consigli
       finanziari reali!), si decide di acquistare le azioni della compagnia di telecomunicazioni Ericsson 
@@ -70,9 +70,9 @@ Uscite:Investimenti:Trasferimento di valuta               (EUR)
             Alcuni dei conti nella struttura dei conti dopo l'acquisto delle azioni
           </p></div></div></div><p>La prossima sezione si occuperà dell'impostazione dei vari tassi di cambio necessari
         per permettere a GnuCash di visualizzare il valore totale nella valuta locale (EUR in 
-        questo caso)</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2722770"></a>10.9.6. Ricevere le quotazioni online</h3></div></div><p>Per ricevere i tassi di cambio e le quotazioni azionarie attuali, andare in
+        questo caso)</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2602012"></a>10.9.6. Ricevere le quotazioni online</h3></div></div><p>Per ricevere i tassi di cambio e le quotazioni azionarie attuali, andare in
       <b>Strumenti</b> -&gt; <b>Editor prezzi</b> e premere poi
-      il pulsante Ricevi quotazioni.</p><p></p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2722805"></a>10.9.7. Prestare denaro a un amico</h3></div></div><p>Jack sta attraversando un periodo difficile oltreoceano. Dato che è un caro amico,
+      il pulsante Ricevi quotazioni.</p><p></p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2602044"></a>10.9.7. Prestare denaro a un amico</h3></div></div><p>Jack sta attraversando un periodo difficile oltreoceano. Dato che è un caro amico,
       si decide di aiutarlo con un prestito personale di 40.000 AUD.</p><p>
         <div class="literallayout"><p><br>
 Attività:Denaro prestato:Mario                 (AUD)<br>
@@ -81,7 +81,7 @@ Uscite:Spese bancarie                          (EUR)<
         </p></div>
       </p><p>Si tratta di una semplice transazione dal proprio conto dei risparmi
       (EUR), al conto Attività:Denaro prestato:AUD:Mario (AUD). Sia il tasso di
-      cambio pari a 0,606161 e la spesa per il servizio di 35 EUR.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2722851"></a>10.9.8. Comprare una proprietà in Nuova Zelanda con un prestito in Giappone</h3></div></div><p>Un amico Giapponese di vecchia data, offre il prestito di una casa
+      cambio pari a 0,606161 e la spesa per il servizio di 35 EUR.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2602086"></a>10.9.8. Comprare una proprietà in Nuova Zelanda con un prestito in Giappone</h3></div></div><p>Un amico Giapponese di vecchia data, offre il prestito di una casa
       Giapponese se si acquista una proprietà all'estero, con soli EUR 50.000 
       di deposito. Dopo averne discusso con il proprio consulente finanziario in Italia
       e aver valutato i vari rischi e benefici derivanti dall'offerta, si decide di
@@ -103,6 +103,6 @@ Uscite:Interessi:Prestito Giapponese            (JPY)<br>
 Uscite:Costi mutuo:Prestito Giapponese          (JPY)<br>
 Attività:Attività correnti:Banca Giapponese     (JPY)<br>
 Attività:Beni immobili:Casa NZ                   (NZ)<br>
-</p></div><div class="table"><p><b>Tabella 10.7. Transazione suddivisa per l'acquisto di una casa in NZ</b></p><table summary="Transazione suddivisa per l'acquisto di una casa in NZ" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td>Conto</td><td>Aumento</td><td>Diminuzione</td></tr><tr><td>Attività:Beni immobili:Casa in NZ</td><td>300.000 (NZD)</td><td> </td></tr><tr><td>Attività:Attività correnti:Conto risparmio</td><td> </td><td>50.000 (EUR) (1,18926)</td></tr><tr><td>Passività:Prestiti:Prestito Giapponese</td><td> </td><td>28.000.000 (JPY) (0,0137609)</td></tr><tr><td>Uscite:Costi mutuo:Prestito Giapponese</td><td>300.000 (JPY) (0,0137609)</td><td> </td></tr></tbody></table></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2723038"></a>10.9.9. Come procedere?</h3></div></div><p>Come è stato mostrato nell'esempio precedente, sono stati completati esclusivamente
+</p></div><div class="table"><p><b>Tabella 10.7. Transazione suddivisa per l'acquisto di una casa in NZ</b></p><table summary="Transazione suddivisa per l'acquisto di una casa in NZ" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td>Conto</td><td>Aumento</td><td>Diminuzione</td></tr><tr><td>Attività:Beni immobili:Casa in NZ</td><td>300.000 (NZD)</td><td> </td></tr><tr><td>Attività:Attività correnti:Conto risparmio</td><td> </td><td>50.000 (EUR) (1,18926)</td></tr><tr><td>Passività:Prestiti:Prestito Giapponese</td><td> </td><td>28.000.000 (JPY) (0,0137609)</td></tr><tr><td>Uscite:Costi mutuo:Prestito Giapponese</td><td>300.000 (JPY) (0,0137609)</td><td> </td></tr></tbody></table></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2602261"></a>10.9.9. Come procedere?</h3></div></div><p>Come è stato mostrato nell'esempio precedente, sono stati completati esclusivamente
       gli acquisti iniziali. Il resto, che comprende le vendite e la registrazione dei vari guadagni
       non realizzati, è lasciato alla considerazione dell'utente.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="currency_reconcile1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="chapter_dep.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">10.8. Riconciliare gli estratti conto in valuta estera (come fare) </td><td width="20%" align="center"><a accesskey="u" href="chapter_currency.html">Risali</a></td><td width="40%" align="right"> Capitolo 11. Deprezzamento</td></tr></table></div></body></html>

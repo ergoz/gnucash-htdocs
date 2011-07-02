@@ -1,15 +1,15 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>4.2. The Account Register</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_txns.html" title="Chapter 4. Transactions"><link rel="previous" href="txns-concepts1.html" title="4.1. Basic Concepts"><link rel="next" href="txns-regstyle1.html" title="4.3. Choosing a Register Style"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">4.2. The Account Register</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="txns-concepts1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 4. Transactions</th><td width="20%" align="right"> <a accesskey="n" href="txns-regstyle1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="txns-registers1"></a>4.2. The Account Register</h2></div></div><p>The <b>account register</b> is the GnuCash window
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>4.2. The Account Register</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_txns.html" title="Chapter 4. Transactions"><link rel="previous" href="txns-concepts1.html" title="4.1. Basic Concepts"><link rel="next" href="txns-regstyle1.html" title="4.3. Choosing a Register Style"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">4.2. The Account Register</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="txns-concepts1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 4. Transactions</th><td width="20%" align="right"> <a accesskey="n" href="txns-regstyle1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="txns-registers1"></a>4.2. The Account Register</h2></div></div><p>The <b>account register</b> is the <b><tt>GnuCash</tt></b> window
     which allows you to view or edit preexisting transactions, or add new
     transactions for a particular account. To enter the account register,
     simply highlight the account name in the account tree window and
     double-click to open it. You can also click the
     Open button in the tool bar or use the right mouse
-    button menu to open the account. GnuCash will display the account register
+    button menu to open the account. <b><tt>GnuCash</tt></b> will display the account register
     window.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="txns-registers-twoaccount2"></a>4.2.1. Simple Transaction</h3></div></div><p>For example, starting with the chart of accounts we created in the
       previous chapter <tt>gcashdata_3</tt>, double click on the
       <b>checking</b> asset account. Let's add a simple
       transaction to the checking account. When you first create your accounts
-      in GnuCash, it is common to start them off with an initial
+      in <b><tt>GnuCash</tt></b>, it is common to start them off with an initial
       balance.</p><p>In the first transaction row, enter a date (eg: March, 1, 2006), a
       description (eg: "Opening Balance"), click on the Transfer pop-up menu
       and select <b>Equity:Opening Balances</b>, add a deposit
@@ -26,7 +26,7 @@
       <b>Expenses:Groceries</b>. The account register should now
       appear:</p><div class="screenshot"><div class="mediaobject"><img src="figures/txns_register_2account2.png" alt="The Checking Account - Register"><div class="caption"><p>This image shows <b>Assets:Checking -
           Register</b> after adding a transaction for
-          groceries.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="txns-registers-multiaccount2"></a>4.2.2. Split Transaction</h3></div></div><p>The need for 3 or more account transactions occurs when you need
+          groceries.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="txns-registers-multiaccount2"></a>4.2.2. Split Transaction</h3></div></div><p>The need for 3 or more splits in a transaction occurs when you need
       to split either the "from" or the "to" account in a transaction into
       multiple accounts. The classic example of this is when you receive a
       paycheck. Your take home pay from a paycheck will typically be less than
@@ -34,23 +34,27 @@
       payments, and/or other items. Thus, the single transaction of you
       receiving a paycheck involves other accounts besides simply
       <b>Assets:Checking</b> and
-      <b>Income:Salary</b>.</p><p>To add a paycheck transaction from the
-      <b>Assets:Checking</b> account register window, click on a
-      new transaction line, and click on <b>Split</b>. First
-      enter the description of this transaction on the first line (eg:
-      "Employers R Us"). In the "split" line below this, enter the deposit
-      into <b>Assets:Checking</b> (eg:$670) (This is due to a
-      current bug, that demands the first line in a split is the actual
-      account). Follow this with the various tax deposits
-      (<b>Assets:Checking</b> (eg: $670),
-      <b>Expenses:Taxes:Federal</b> (eg: $180),
-      <b>Expenses:Taxes:Medicare</b> (eg: $90), and
-      <b>Expenses:Taxes:Social Security</b> (eg: $60)) and
-      lastly the gross total of your paycheck (eg: $1000) as a withdrawal
-      transfer from <b>Income:Salary</b>. The final split should
-      look like this:</p><div class="screenshot"><div class="mediaobject"><img src="figures/txns_register_multiaccount.png" alt="Account Register - Split Transaction"><div class="caption"><p>This image shows <b>Assets:Checking -
-          Register</b> after adding a split transaction for
-          salary.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="txns-registers-features2"></a>4.2.3. Features of the Account Register</h3></div></div><p>The title bar of the account register displays the account name,
+      <b>Income:Salary</b>.</p><p>To add the paycheck split transaction from the
+      <b>Assets:Checking</b> account register window, click
+      on a new transaction line and click <b>Split</b>. Enter
+      the description of this transaction on the first line (e.g.
+      “Employers R Us”). In the split line below this, enter
+      the various splits that make up this transaction, one by one. To
+      enter the splits, first choose the account, then enter the amount by
+      which to change the account. Then click the next split line and
+      repeat the process.</p><p>In this example, choose the deposit account
+      (<b>Assets:Checking</b>) and then enter the amount that
+      is being deposited into it (e.g. $670). Follow this by entering the
+      amounts for the various taxes:
+      <b>Expenses:Taxes:Federal</b>, $180;
+      <b>Expenses:Taxes:Medicare</b>, $90; and
+      <b>Expenses:Taxes:Social Security</b>, $60. Finally,
+      enter the gross total of your paycheck ($1,000 in this example) as a
+      withdrawal transfer from <b>Income:Salary</b>.</p><p>The final split should look like <a href="txns-registers1.html#txns-register-multiaccount" title="Figure 4.1. Entering a split transaction">Figure 4.1</a>. Remember to press <b>Enter</b> after finishing the entry. But you
+      should also know that when you press <b>Enter</b>, the split view will be
+      “folded” back into a simplified transaction view. The
+      splits are still there; you just have to click
+      <b>Split</b> to view them. See <a href="txns-registers1.html#txns-registers-features2" title="4.2.3. Features of the Account Register">Features of the Account Register</a> for details.</p><div class="figure"><p><a name="txns-register-multiaccount"></a><b>Figure 4.1. Entering a split transaction</b></p><div class="mediaobject"><img src="figures/txns_register_multiaccount.png" alt="Account Register - Split Transaction"></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="txns-registers-features2"></a>4.2.3. Features of the Account Register</h3></div></div><p>The title bar of the account register displays the account name,
       which in this case is <b>Assets:Checking</b>. Below the
       title bar, the menu bar displays the menu items available within the
       account register, and the tool bar contains handy buttons that help you
@@ -58,7 +62,7 @@
       the basic register is a summary of the splits affecting the current
       account. In the Transfer column, you can see the other account from
       which money is <b>transferred</b> into or out of this
-      account. If the transaction affects more than two accounts, GnuCash
+      account. If the transaction affects more than two accounts, <b><tt>GnuCash</tt></b>
       displays <b>-- Split Transaction --</b> to show it is a
       multiple-split transaction. You can see the individual splits of each
       transaction by clicking the <b>Split</b> button in the
@@ -97,13 +101,13 @@
       shows the effect on that particular account. You can see this by
       highlighting another split line and clicking the
       <b>Jump</b> button on the tool bar.</p><p>In this example, if you jump to the
-      <b>Income:Salary</b> account, GnuCash brings up the same
+      <b>Income:Salary</b> account, <b><tt>GnuCash</tt></b> brings up the same
       transaction in the <b>Income:Salary - Register</b>:</p><div class="screenshot"><div class="mediaobject"><img src="figures/txns_registersplit3.png" alt="A jump to the Income:Salary account"><div class="caption"><p>This image shows a jump to the
           <b>Income:Salary</b> account.</p></div></div></div><p>Note that the transaction line total now summarizes the effect on
       the <b>Income:Salary</b> account instead of the
       <b>Checking Account</b>, because you are looking at the
       <b>Income:Salary</b> account register. The splits are
       exactly the same, but the transaction line now reflects the credit to
-      the <b>Income:Salary</b> account.</p><p>At the bottom left of the register window, GnuCash displays
+      the <b>Income:Salary</b> account.</p><p>At the bottom left of the register window, <b><tt>GnuCash</tt></b> displays
       helpful messages as you move about the register. To the right, you can
       see the current account balance and the total of cleared splits.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="txns-concepts1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="txns-regstyle1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">4.1. Basic Concepts </td><td width="20%" align="center"><a accesskey="u" href="chapter_txns.html">Up</a></td><td width="40%" align="right"> 4.3. Choosing a Register Style</td></tr></table></div></body></html>

@@ -1,28 +1,28 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>3.2. GnuCash Accounts</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_accts.html" title="Chapter 3. Accounts"><link rel="previous" href="accts-concepts1.html" title="3.1. Basic Accounting Concepts"><link rel="next" href="accts-examples1.html" title="3.3. Putting It All Together"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.2. GnuCash Accounts</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="accts-concepts1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 3. Accounts</th><td width="20%" align="right"> <a accesskey="n" href="accts-examples1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="accts-types1"></a>3.2. GnuCash Accounts</h2></div></div><p>This section will show how the GnuCash definition of an account fits
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>3.2. GnuCash Accounts</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_accts.html" title="Chapter 3. Accounts"><link rel="previous" href="accts-concepts1.html" title="3.1. Basic Accounting Concepts"><link rel="next" href="accts-examples1.html" title="3.3. Putting It All Together"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.2. <b xmlns=""><tt>GnuCash</tt></b> Accounts</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="accts-concepts1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 3. Accounts</th><td width="20%" align="right"> <a accesskey="n" href="accts-examples1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="accts-types1"></a>3.2. <b><tt>GnuCash</tt></b> Accounts</h2></div></div><p>This section will show how the <b><tt>GnuCash</tt></b> definition of an account fits
     into the view of the 5 basic accounting types.</p><p>But first, let's begin with a definition of an
-    <b>account</b> in GnuCash. A GnuCash
+    <b>account</b> in <b><tt>GnuCash</tt></b>. A <b><tt>GnuCash</tt></b>
     <b>account</b> is an entity which contains other
     sub-accounts, or that contains <b>transactions</b>. Since an
     account can contain other accounts, you often see <b>account
-    trees</b> in GnuCash, in which logically associated accounts reside
-    within a common parent account.</p><p>A GnuCash account must have a unique name (that you assign) and one
-    of the predefined GnuCash "account types". There are a total of 12 account
-    types in GnuCash. These 12 account types are based on the 5 basic
-    accounting types; the reason there are more GnuCash account types than
-    basic accounting types is that this allows GnuCash to perform specialized
+    trees</b> in <b><tt>GnuCash</tt></b>, in which logically associated accounts reside
+    within a common parent account.</p><p>A <b><tt>GnuCash</tt></b> account must have a unique name (that you assign) and one
+    of the predefined <b><tt>GnuCash</tt></b> "account types". There are a total of 12 account
+    types in <b><tt>GnuCash</tt></b>. These 12 account types are based on the 5 basic
+    accounting types; the reason there are more <b><tt>GnuCash</tt></b> account types than
+    basic accounting types is that this allows <b><tt>GnuCash</tt></b> to perform specialized
     tracking and handling of certain accounts. There are 6 asset accounts
     (<b>Cash</b>, <b>Bank</b>,
     <b>Stock</b>, <b>Mutual Fund</b>,
-    <b>Accounts Receivable</b>, and <b>Asset</b>
-    ), 3 liability accounts (<b>Credit Card</b>,
-    <b>Accounts Payable</b>, and <b>Liability</b>,
-    ), 1 equity account (<b>Equity</b>), 1 income account
+    <b>Accounts Receivable</b>, and <b>Other Assets</b>),
+    3 liability accounts (<b>Credit Card</b>,
+    <b>Accounts Payable</b>, and <b>Liability</b>),
+    1 equity account (<b>Equity</b>), 1 income account
     (<b>Income</b>), and 1 expense account
-    (<b>Expense</b>).</p><p>These GnuCash account types are presented in more detail
+    (<b>Expense</b>).</p><p>These <b><tt>GnuCash</tt></b> account types are presented in more detail
     below.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="accts-gc-bsa2"></a>3.2.1. Balance Sheet Accounts</h3></div></div><p>The first balance sheet account we will examine is
       <b>Assets</b>, which, as you remember from the previous
       section, refers to things you own.</p><p>To help you organize your asset accounts and to simplify
-      transaction entry, GnuCash supports several types of asset
+      transaction entry, <b><tt>GnuCash</tt></b> supports several types of asset
       accounts:</p><div class="orderedlist"><ol type="1"><li><p><b>Cash</b> Use this account to track the money
           you have on hand, in your wallet, in your piggy bank, under your
           mattress, or wherever you choose to keep it handy. This is the most
@@ -45,19 +45,24 @@
           value.</p></li><li><p><b>Accounts Receivable</b> (A/Receivable) This
           is typically a business use only account in which you place
           outstanding debts owed to you. It is considered an asset because you
-          should be able to count on these funds arriving.</p></li><li><p><b>Asset</b> For personal finances, use this
-          type of account to track "big-ticket" item purchases that
-          significantly impact your net worth. Generally, you can think of
-          these as things you insure, such as a house, vehicles, jewelry, and
-          other expensive belongings.</p></li></ol></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Tip</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">For all GnuCash asset accounts, a <b>debit</b>
-        (left-column value entry) increases the account balance and a
-        <b>credit</b> (right-column value entry) decreases the
-        balance. (See note later in this chapter.)</p></td></tr></table></div><p>The second balance sheet account is
+          should be able to count on these funds arriving.</p></li><li><p><b>Other Assets</b> No matter how diverse they
+          are, <b><tt>GnuCash</tt></b> handles many other situations easily. The group
+          category, “Other Assets”, covers all assets not listed above.</p><p>Accounts are repositories of information used to track or record
+          the kinds of actions that occur related to the purpose for which the
+          account is established.</p><p>For businesses, activities being tracked and reported are
+          frequently subdivided more finely than what has been considered thus
+          far. For a more developed treatment of the possibilities, please read
+          the descriptions presented in
+          <a href="chapter_other_assets.html" title="Chapter 16. Other Assets">Chapter 16</a> of this Guide.</p><p>For personal finances a person can follow the business groupings
+          or not, as they seem useful to the activities the person is tracking
+          and to the kind of reporting that person needs to have to manage his
+          financial assets. For additional information, consult
+          <a href="chapter_other_assets.html" title="Chapter 16. Other Assets">Chapter 16</a> of this Guide.</p></li></ol></div><p>The second balance sheet account is
       <b>Liabilities</b>, which as you recall, refers to what
       you owe, money you have borrowed and are obligated to pay back some day.
       These represent the rights of your lenders to obtain repayment from you.
       Tracking the liability balances lets you know how much debt you have at
-      a given point in time.</p><p>GnuCash offers three liability account types:</p><div class="orderedlist"><ol type="1"><li><p><b>Credit Card</b> Use this to track your credit
+      a given point in time.</p><p><b><tt>GnuCash</tt></b> offers three liability account types:</p><div class="orderedlist"><ol type="1"><li><p><b>Credit Card</b> Use this to track your credit
           card receipts and reconcile your credit card statements. Credit
           cards represent a short-term loan that you are obligated to repay to
           the credit card company. This type of account can also be used for
@@ -75,16 +80,16 @@
       which is synonymous with "net worth". It represents what is left over
       after you subtract your liabilities from your assets, so it is the
       portion of your assets that you own outright, without any debt. In
-      GnuCash, use this type of account as the source of your opening bank
+      <b><tt>GnuCash</tt></b>, use this type of account as the source of your opening bank
       balances, because these balances represent your beginning net
-      worth.</p><p>There is only a single GnuCash equity account, called naturally
+      worth.</p><p>There is only a single <b><tt>GnuCash</tt></b> equity account, called naturally
       enough, <b>Equity</b>.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Tip</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">In equity accounts, credits increase account balances and debits
         decrease them. (See note later in this chapter)</p></td></tr></table></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">The accounting equation that links balance-sheet accounts is
         Assets = Liabilities + Equity or rearranged Assets - Liabilities =
         Equity. So, in common terms, the <b>things you own</b>
         minus the <b>things you owe</b> equals your
         <b>net worth</b>.</p></td></tr></table></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="accts-gc-ie2"></a>3.2.2. Income and Expense Accounts</h3></div></div><p><b>Income</b> is the payment you receive for your
-      time, services you provide, or the use of your money. In GnuCash, use an
+      time, services you provide, or the use of your money. In <b><tt>GnuCash</tt></b>, use an
       <b>Income</b> type account to track these.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Tip</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Credits increase income account balances and debits decrease
         them. As described in <a href="basics-accounting1.html" title="2.1. Accounting Concepts">Accounting Concepts</a>, 
         credits represent money transferred
@@ -95,14 +100,14 @@
         a paycheck and record the transaction as a transfer from an income
         account to a bank account, the balances of both accounts
         increase.</p></td></tr></table></div><p><b>Expenses</b> refer to money you spend to purchase
-      goods or services provided by someone else. In GnuCash, use an
+      goods or services provided by someone else. In <b><tt>GnuCash</tt></b>, use an
       <b>Expense</b> type account to track your expenses.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Tip</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Debits increase expense account balances and credits decrease
         them. (See note later in this chapter.)</p></td></tr></table></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">When you subtract total expenses from total income for a time
         period, you get net income. This net income is then added to the
         balance sheet as retained earnings, which is a type of
         <b>Equity</b> account.</p></td></tr></table></div><p>Below are the standard <b>Income</b> and
       <b>Expense</b> accounts after selecting <b>Common
-      Accounts</b> in the Druid for creating a new Account Hierarchy
+      Accounts</b> in the assistant for creating a new Account Hierarchy
       (<b>File -&gt; New -&gt; New Account Hierarchy</b>).</p><div class="screenshot"><div class="mediaobject"><img src="figures/accts_DefaultIncomeAccounts.png" alt="Default income accounts"><div class="caption"><p>This image shows the standard <b>income</b>
               accounts</p></div></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/accts_DefaultExpenseAccounts.png" alt="Some default expense accounts"><div class="caption"><p>This image shows some standard <b>expense</b>
               accounts</p></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">More on Debits and Credits</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Remember the terms debit and credit discussed in 
