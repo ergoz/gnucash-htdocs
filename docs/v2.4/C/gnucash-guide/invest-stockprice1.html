@@ -1,13 +1,13 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>8.6. Setting Share Price</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_invest.html" title="Chapter 8. Investments"><link rel="prev" href="invest-buy-stock1.html" title="8.5. Buying Shares"><link rel="next" href="invest-sell1.html" title="8.7. Selling Shares"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.6. Setting Share Price</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="invest-buy-stock1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 8. Investments</th><td width="20%" align="right"> <a accesskey="n" href="invest-sell1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="8.6. Setting Share Price"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="invest-stockprice1"></a>8.6. Setting Share Price</h2></div></div></div><p>The value of a commodity, such as a stock, must be explicitly set.
     The stock accounts track the quantity of stocks you own, but the value of
     the stock is stored in the <span class="emphasis"><strong>Price Editor</strong></span>. The values
-    set in the Price Editor can be updated manually or automatically.</p><div class="sect2" title="8.6.1. Initial Price Editor Setup"><div class="titlepage"><div><div><h3 class="title"><a name="invest-stockprice-initial2"></a>8.6.1. Initial Price Editor Setup</h3></div></div></div><p>To use the Price Editor to track a stock value, you must initially
+    set in the <span class="guilabel"><strong>Price Editor</strong></span> can be updated manually or automatically.</p><div class="sect2" title="8.6.1. Initial Price Editor Setup"><div class="titlepage"><div><div><h3 class="title"><a name="invest-stockprice-initial2"></a>8.6.1. Initial Price Editor Setup</h3></div></div></div><p>To use the <span class="guilabel"><strong>Price Editor</strong></span> to track a stock value, you must initially
       insert the stock. To do so, open the <span class="guilabel"><strong>Price Editor</strong></span>
       (<span class="guimenu"><strong>Tools</strong></span> → <span class="guimenuitem"><strong>Price Editor</strong></span>) and
       click on <span class="guibutton">Add</span> button. The first time a
       Commodity/Stock is entered this window will be blank except for the
       control buttons on the bottom. Select the appropriate Commodity you want
-      to insert into the Price Editor. At this point, you can input the price
+      to insert into the <span class="guilabel"><strong>Price Editor</strong></span>. At this point, you can input the price
       of the commodity manually. There are 5 fields in the New Commodity
       window:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="guilabel"><strong>Commodity</strong></span> - the name of the commodity,
           must be chosen from the <span class="guibutton">Select...</span> list</p></li><li class="listitem"><p><span class="guilabel"><strong>Currency</strong></span> - the currency in which the
@@ -24,7 +24,7 @@
           commodity.</p></li></ul></div><p>As an example of adding the AMZN commodity to the price editor,
       with an initial value of $40.50 per share.</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_peditor.png" alt="Price Editor"><div class="caption"><p>Adding the AMZN commodity to the price editor, with
           an initial value of $40.50 per share.</p></div></div></div><p>Click <span class="guibutton">OK</span> when finished. Once you have
-      performed this initial placement of the commodity into the Price Editor,
+      performed this initial placement of the commodity into the <span class="guilabel"><strong>Price Editor</strong></span>,
       you will not have to do it again, even if you use the same commodity in
       another account.</p></div><div class="sect2" title="8.6.2. Setting Stock Price Manually"><div class="titlepage"><div><div><h3 class="title"><a name="invest-stockprice-manual2"></a>8.6.2. Setting Stock Price Manually</h3></div></div></div><p>If the value of the commodity (stock) changes, you can adjust the
       value by entering the <span class="guilabel"><strong>Price Editor</strong></span>, selecting the commodity, clicking on
@@ -35,15 +35,15 @@
       the Internet. This is accomplished through the <strong class="application"><code>Perl</code></strong> module
       <strong class="application"><code>Finance::Quote</code></strong>, which must be installed in order to activate this
       feature.</p><p>To determine if the <strong class="application"><code>Perl</code></strong> module <strong class="application"><code>Finance::Quote</code></strong> is already
-      installed on your system, type <span class="quote">“<span class="quote">perldoc <strong class="application"><code>Finance::Quote</code></strong></span>”</span> in
+      installed on your system, type <span class="command"><strong>perldoc Finance::Quote</strong></span> in
       a terminal window and check to see if there is any documentation
       available. If you see the documentation, then the module is installed,
       if you do not see the documentation, then it has not been
       installed.</p><div class="sect3" title="8.6.3.1. Installing Finance::Quote"><div class="titlepage"><div><div><h4 class="title"><a name="invest-stockprice-auto-install3"></a>8.6.3.1. Installing <strong class="application"><code>Finance::Quote</code></strong></h4></div></div></div><p><span class="emphasis"><strong>Microsoft Windows:</strong></span>
 	</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Close <strong class="application"><code>GnuCash</code></strong>.</p></li><li class="listitem"><p>You need to have installed <a class="ulink" href="http://www.activestate.com/store/activeperl" target="_top">ActivePerl</a>
             </p></li><li class="listitem"><p>Run <span class="emphasis"><strong>Install Online Price
-	    Retrieval</strong></span>In the <strong class="application"><code>GnuCash</code></strong>
-	    <span class="quote">“<span class="quote">Start</span>”</span> menu.</p></li></ul></div><p>
+	    Retrieval</strong></span> in the <strong class="application"><code>GnuCash</code></strong>
+	    <span class="quote">“<span class="quote">Start</span>”</span> menu entry.</p></li></ul></div><p>
         </p><p><span class="emphasis"><strong>Mac OS X:</strong></span> You need to
 	have XCode installed. XCode is an optional item from your OS X
 	distribution DVD. Run the <span class="emphasis"><strong>Update
@@ -58,7 +58,7 @@
             is installed by searching for <strong class="application"><code>gnc-fq-update</code></strong></p></li><li class="listitem"><p>Change to that directory, open a root shell</p></li><li class="listitem"><p>Run the command <span class="command"><strong>gnc-fq-update</strong></span></p></li></ul></div><p>
 
 	This will launch a <strong class="application"><code>Perl</code></strong> CPAN update session that will go out
-	onto the Internet and install the <strong class="application"><code>Finance::Quote</code></strong> module on
+	onto the internet and install the <strong class="application"><code>Finance::Quote</code></strong> module on
 	your system. The gnc-fq-update program is interactive,
 	however, with most systems you should be able to answer
 	<span class="quote">“<span class="quote">no</span>”</span> to the first question: <span class="quote">“<span class="quote">Are you ready
@@ -77,10 +77,10 @@
         now be able to modify the radio buttons for <span class="guilabel"><strong>Type of quote source</strong></span>, the pull-down menus 
         to specify the specific source(s) and <span class="guilabel"><strong>The timezone for these
         quotes</strong></span>. When finished editing, <span class="guilabel"><strong>Close</strong></span> the Security Editor to return to
-        the Price Editor and click on the <span class="guibutton">Get Quotes</span>
-        button to update your stock prices on the Internet.</p><p>The command <span class="quote">“<span class="quote">gnucash --add-price-quotes $HOME/gnucash-filename</span>”</span>
+        the <span class="guilabel"><strong>Price Editor</strong></span> and click on the <span class="guibutton">Get Quotes</span>
+        button to update your stock prices on the Internet.</p><p>The command <span class="command"><strong>gnucash --add-price-quotes $HOME/gnucash-filename</strong></span>
         can be used to fetch the current prices of your stocks.  The file specified
-        <span class="quote">“<span class="quote">$HOME/gnucash-filename</span>”</span> will depend on the name and location of your
+        <code class="filename">$HOME/gnucash-filename</code> will depend on the name and location of your
         data file.
         This can be determined by the name displayed in the top frame of the <strong class="application"><code>GnuCash</code></strong> window,
         before the <span class="quote">“<span class="quote">-</span>”</span>.  The file name can also be found under <span class="guimenu"><strong>File</strong></span>
@@ -107,7 +107,7 @@
           window using the Total in Report Currency option.</p></div></div></div></div><div class="sect2" title="8.6.5. Selecting “Price Source” in Stock Value Reports"><div class="titlepage"><div><div><h3 class="title"><a name="invest-stockprice-report"></a>8.6.5. Selecting <span class="quote">“<span class="quote">Price Source</span>”</span> in Stock Value Reports</h3></div></div></div><p>Most <strong class="application"><code>GnuCash</code></strong> Asset reports have options to set/modify a number of parameters for the report.  The
        Options windows is displayed by selecting the report tab then clicking on either the <span class="guibutton">Options</span>
        icon in the <span class="emphasis"><strong>Menubar</strong></span> or selecting <span class="guimenu"><strong>Edit</strong></span> → <span class="guimenuitem"><strong>Report Options</strong></span>.  
-       The tab <span class="quote">“<span class="quote">General</span>”</span> in the
+       The <span class="guilabel"><strong>General</strong></span> tab in the
        resulting window contains various parameters for the report.  One of these is <span class="quote">“<span class="quote">Price Source</span>”</span> which of offers
        three alternatives to determine stock prices in reports:</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">In the example below, the report is a customization of
          the <span class="emphasis"><strong>Average Balance</strong></span> report

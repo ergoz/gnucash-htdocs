@@ -2,7 +2,7 @@
     ways to setup depreciation accounts. We will present here a general method
     which should be flexible enough to handle most situations. The first
     account you will need is an <span class="emphasis"><strong>Asset Cost</strong></span> account
-    (<strong class="application"><code>GnuCash</code></strong> account type <span class="quote">“<span class="quote">asset</span>”</span>), which is simply a place where you record
+    (<strong class="application"><code>GnuCash</code></strong> account type <span class="guilabel"><strong>Asset</strong></span>), which is simply a place where you record
     the original purchase of the asset. Usually this purchase is accomplished
     by a transaction from your bank account.</p><p>In order to keep track of the depreciation of the asset, you will
     need two depreciation accounts. The first is an <span class="emphasis"><strong>Accumulated
@@ -13,9 +13,9 @@
     in which all periodic depreciation expenses
     are recorded. In <strong class="application"><code>GnuCash</code></strong>, this is an account type
     <span class="emphasis"><strong>expense</strong></span>.</p><p>Below is a generic account hierarchy for tracking the depreciation
-    of 2 assets, <span class="emphasis"><strong>ITEM1</strong></span> and <span class="emphasis"><strong>ITEM2</strong></span>. The <span class="quote">“<span class="quote">Asset Cost</span>”</span> accounts are balanced by
-    the <span class="quote">“<span class="quote">Bank</span>”</span> account, the Accumulated Depreciation account is balanced by
-    the Depreciation Expense account.</p><div class="literallayout"><p><br>
+    of 2 assets, <span class="emphasis"><strong>ITEM1</strong></span> and <span class="emphasis"><strong>ITEM2</strong></span>. The <span class="emphasis"><strong>Asset Cost</strong></span> accounts are balanced by
+    the <span class="emphasis"><strong>Bank</strong></span> account, the <span class="emphasis"><strong>Accumulated Depreciation</strong></span> account is balanced by
+    the <span class="emphasis"><strong>Expenses:Depreciation</strong></span> account.</p><div class="literallayout"><p><br>
 -Assets<br>
    -Fixed Assets<br>
       -ITEM1 <br>
@@ -26,7 +26,7 @@
          -Depreciation     (Accumulated Depreciation account)<br>
    -Current Assets<br>
       -Bank<br>
--Expenses<br>
+-Expense<br>
    -Depreciation        (Depreciation Expense account)<br>
   </p></div><p>One of the features of the account hierarchy shown above is that you
     can readily see some important summary values about your depreciating
