@@ -1,0 +1,438 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>O Registo de Contas</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="A Janela de Reconciliação"
+HREF="t4154.html"><LINK
+REL="NEXT"
+TITLE="Atalhos de Teclado do Registo"
+HREF="t4306.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t4154.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t4306.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="XACC-REGWIN">O Registo de Contas</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t4213.html#AEN4215"
+>Introdução</A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN4215">Introdução</H1
+><P
+>    O Registo de Contas é provavelmente a janela que verá com mais frequência
+    no GnuCash. É utilizada para introduzir as suas transacções financeiras no  
+    GnuCash e também imprimir relatórios, cheques e facturas. O registo de Contas 
+    tem três modos de introduzir transacções e é flexível ao nível da sua configuração 
+    pelo que pode visualizar as transacções da forma que mais lhe agradar. Nesta 
+    secção iremos descrever as suas funcionalidades, configuração e como introduzir 
+    transacções.
+   </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="BASICLEDGER">Transacções de registo Simples</H2
+><P
+>    Modo de registo Simples é o defeito quando você abre a janela de Registo 
+    de Contas ou selecciona <B
+CLASS="GUIMENU"
+>Registo</B
+>-&gt;<B
+CLASS="GUIMENUITEM"
+>    Estilo</B
+>-&gt;<B
+CLASS="GUIMENUITEM"
+>Registo Simples</B
+>.
+   </P
+><DIV
+CLASS="FIGURE"
+><A
+NAME="AEN4225"><DIV
+CLASS="MEDIAOBJECT"
+><P
+><IMG
+SRC="image/basicledger.png"></P
+></DIV
+><P
+><B
+>Figure 1. O Registo de Contas - Registo Simples</B
+></P
+></DIV
+><P
+>  Quando você abre a janela de Registo de Contas o cursor estará 
+  no campo de data pronto a que você introduza uma transacção. 
+  Tudo o que tem a fazer é primir tab para ir para o campo seguinte 
+  e introduzir os detalhes da transacção. Se tiver um número, tal 
+  como um número de cheque, introduza-o no campo seguinte e depois 
+  prima novamente tab para introduzir a descrição da transacção. O campo 
+  Transferência é onde a natureza de dupla-entrada do GnuCash entra em 
+  acção visto aqui você ir assignar a segunda parte da transacção a 
+  outra conta. Se clicar no extremo direito do campo Transferência uma 
+  caixa de selecção surgirá e você poderá seleccionar a conta à qual
+  assignar a transacção. Tal como no exemplo abaixo, seleccione a conta 
+  à qual assignar a transacção e depois preencha o montante. Quando 
+  primir a tecla enter ou clicar no icon de entrada, a transacção 
+  será adicionada ao registo e o compo de netrada passará automaticamente 
+  para a próxima transacção.
+   </P
+><DIV
+CLASS="FIGURE"
+><A
+NAME="AEN4233"><DIV
+CLASS="MEDIAOBJECT"
+><P
+><IMG
+SRC="image/basicledger-transfer.png"></P
+></DIV
+><P
+><B
+>Figure 2. Registo Simples - Transferência</B
+></P
+></DIV
+><P
+>    Existem campos adicionais nas transacções que são acedidos seleccionando 
+    <B
+CLASS="GUIMENU"
+>Registo</B
+>-&gt;<B
+CLASS="GUIMENUITEM"
+>Estilo</B
+>-&gt;<B
+CLASS="GUIMENUITEM"
+>Dupla Linha</B
+>. Estes campos 
+    permitem-lhe adicionar notas às suas transacções e seleccionar o tipo 
+    de transacção que está a introduzir. Todos estes campos são editáveis 
+    após introduzida a transacção. A outra metade da transacção é 
+    automaticamente actualizada com a informação modificada.
+   </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AUTOSPLIT">Transacções de Registo com Parcelas Automáticas</H2
+><P
+>    O modo de Registo com Parcelas Automáticas é seleccionado em <B
+CLASS="GUIMENU"
+>Registo</B
+>-&gt;<B
+CLASS="GUIMENUITEM"
+>Estilo</B
+>-&gt;<B
+CLASS="GUIMENUITEM"
+>    Registo Parcelas Automáticas</B
+>. Este modo permite-lhe 
+    ver ambos os lados da transacção que está a introduzir bem como parcelar qualquer 
+    parte da transacção em várias contas. Abaixo verá que nós parcelamos a transacção 
+    anterior em duas para reflectir com precisão em que é que o diheiro foi utilizado. 
+    As componentes das parcelas desaparecem automaticamente quando você passar para 
+    a transacção seguinte e verá apenas <B
+CLASS="GUIBUTTON"
+>-- Transacção Parcelada --
+    </B
+>
+   </P
+><DIV
+CLASS="FIGURE"
+><A
+NAME="AEN4253"><DIV
+CLASS="MEDIAOBJECT"
+><P
+><IMG
+SRC="image/autosplitledger.png"></P
+></DIV
+><P
+><B
+>Figure 3. Registo de Contas - Registo com Parcelas Automáticas</B
+></P
+></DIV
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="TRANSJRNL">Diário de Transacções</H2
+><P
+>    O modo de Diário de Transacções é seleccionado em <B
+CLASS="GUIMENU"
+>Registo
+    </B
+>-&gt;<B
+CLASS="GUIMENUITEM"
+>Estilo</B
+>-&gt;<B
+CLASS="GUIMENUITEM"
+>Diário de Transacções 
+    </B
+>. Este modo permite-lhe ver ambos os lados de todas 
+    as transações que introduziu e as parcelas dessas transacções. Quando introduz 
+    transacções neste modo as transacções anteriores não escondem as suas componentes.
+   </P
+><DIV
+CLASS="FIGURE"
+><A
+NAME="AEN4267"><DIV
+CLASS="MEDIAOBJECT"
+><P
+><IMG
+SRC="image/transactionjrnl.png"></P
+></DIV
+><P
+><B
+>Figure 4. O Registo de Contas - Diário de Transacções</B
+></P
+></DIV
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="XACC-REGISTER-SORTORDER">Ordenamento</H2
+><P
+>    A forma de Ordenamento das suas transacções é seleccionada em <B
+CLASS="GUIMENU"
+>    Registo</B
+>-&gt;<B
+CLASS="GUIMENUITEM"
+>Ordem de Ordenação</B
+>. 
+    A forma de ordenação por defeito é a ordenação por Data. Outras opções de ordenação 
+    são: data de entrada, data do documento, Nº, montante, nota e descrição.
+   </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="XACC-DATERANGE">Intrevalo de Datas</H2
+><P
+>    O GnuCash tem a funcionalidade de mostrar uma selecção de transacções com 
+    um Intrevalo de Datas. Isto pode ser acedido em <B
+CLASS="GUIMENU"
+>Registo
+    </B
+>-&gt;<B
+CLASS="GUIMENUITEM"
+>Intrevalo de Datas</B
+>-&gt;<B
+CLASS="GUIMENUITEM"
+>Definir 
+    Intrevalo...</B
+>. Seleccione o intrevalo que deseja 
+    visualizar seleccionando a <B
+CLASS="GUIBUTTON"
+>Data de início:</B
+> e a <B
+CLASS="GUIBUTTON"
+>    Data de fim:</B
+> e depois clique <B
+CLASS="GUIBUTTON"
+>Definir Intrevalo Datas</B
+> 
+    para aplicar o intrevalo. Quando necessitar de repôr a visualização de novo para 
+    todas as transacções clique em <B
+CLASS="GUIMENU"
+>Registo</B
+>-&gt;<B
+CLASS="GUIMENUITEM"
+>    Intrevalo Datas</B
+>-&gt;<B
+CLASS="GUIMENUITEM"
+>Mostrar Todas</B
+>.
+   </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="XACC-GENERAL-LEDGER">O Plano de Contas</H2
+><P
+>    O plano de contas é um registo especial que contém entradas 
+    para mais do que uma conta.  Você pode obter um plano de contas para 
+    uma conta e as suas subcontas utilizando o item de menu <B
+CLASS="GUIMENU"
+>Abrir 
+    subcontas</B
+> numa janela de contas, ou um plano de contas para 
+    <I
+CLASS="EMPHASIS"
+>todas</I
+> as contas seleccionando <B
+CLASS="GUIMENU"
+>Plano de Contas</B
+>
+    no item de menu principal <B
+CLASS="GUIMENU"
+>Ferramentas</B
+>.
+    </P
+><DIV
+CLASS="MEDIAOBJECT"
+><P
+><IMG
+SRC="image/general-ledger.png"></P
+></DIV
+><P
+>    Planos de contas mostram as entradas em todas as contas em que 
+    uma transacção surge, que você pode editar directamente.  Note
+    que a ganela de plano de contas é mais complicada e dificil de 
+    utilizar relativamente aos registos individuais de contas. A 
+    janela de plano de contas permite uma visão geral mais completa 
+    de todas as contas num espaço mais pequeno e rápido de navegar 
+    (para utilizadores experientes que sabem exactamente o que estão 
+    a fazer). Devido à sua maior complexidade, a sua utilização é 
+    recomendada apenas a contabilistas experientes.</P
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t4154.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t4306.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>A Janela de Reconciliação</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Atalhos de Teclado do Registo</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

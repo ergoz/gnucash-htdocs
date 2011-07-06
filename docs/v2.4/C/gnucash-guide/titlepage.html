@@ -1,0 +1,91 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>GnuCash Tutorial and Concepts Guide</title></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center"><strong xmlns="" class="application"><code>GnuCash</code></strong> Tutorial and Concepts Guide</th></tr><tr><td width="20%" align="left"> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="index.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="titlepage"><div><h1 class="title"><a name="index"></a><strong class="application"><code>GnuCash</code></strong> Tutorial and Concepts Guide</h1></div><div><h2 xmlns="http://www.w3.org/TR/xhtml1/transitional">Authors</h2><dl xmlns="http://www.w3.org/TR/xhtml1/transitional"><dt><span xmlns="" class="surname">Amin</span>, <span xmlns="" class="firstname">Yawar</span></dt><dd><strong>Affiliation: </strong><span xmlns="" class="orgname">GnuCash Documentation Team</span></dd><dd><strong>Email: </strong><code xmlns="" class="email">&lt;<a class="email" href="mailto:yawar.amin@gmail.com">yawar.amin@gmail.com</a>&gt;</code></dd></dl><dl xmlns="http://www.w3.org/TR/xhtml1/transitional"><dt><span xmlns="" class="surname">Bullock</span>, <span xmlns="" class="firstname">Tom</span></dt><dd><strong>Email: </strong><code xmlns="" class="email">&lt;<a class="email" href="mailto:tbullock@nd.edu">tbullock@nd.edu</a>&gt;</code></dd></dl><dl xmlns="http://www.w3.org/TR/xhtml1/transitional"><dt><span xmlns="" class="surname">Champagne</span>, <span xmlns="" class="firstname">Carol</span></dt><dd><strong>Email: </strong><code xmlns="" class="email">&lt;<a class="email" href="mailto:carol@io.com">carol@io.com</a>&gt;</code></dd></dl><dl xmlns="http://www.w3.org/TR/xhtml1/transitional"><dt><span xmlns="" class="surname">Evans</span>, <span xmlns="" class="firstname">Mike</span></dt><dd><strong>Email: </strong><code xmlns="" class="email">&lt;<a class="email" href="mailto:mikee@saxicola.idps.co.uk">mikee@saxicola.idps.co.uk</a>&gt;</code></dd></dl><dl xmlns="http://www.w3.org/TR/xhtml1/transitional"><dt><span xmlns="" class="surname">Herman</span>, <span xmlns="" class="firstname">Dave</span></dt><dd><strong>Affiliation: </strong><span xmlns="" class="orgname">GnuCash Documentation Team</span></dd><dd><strong>Email: </strong><code xmlns="" class="email">&lt;<a class="email" href="mailto:dvherman@bigfoot.com">dvherman@bigfoot.com</a>&gt;</code></dd></dl><dl xmlns="http://www.w3.org/TR/xhtml1/transitional"><dt><span xmlns="" class="surname">Janssens</span>, <span xmlns="" class="firstname">Geert</span></dt><dd><strong>Affiliation: </strong><span xmlns="" class="orgname">GnuCash Development Team</span></dd><dd><strong>Email: </strong><code xmlns="" class="email">&lt;<a class="email" href="mailto:geert@kobaltwit.be">geert@kobaltwit.be</a>&gt;</code></dd></dl><dl xmlns="http://www.w3.org/TR/xhtml1/transitional"><dt><span xmlns="" class="surname">Lapham</span>, <span xmlns="" class="firstname">Jon</span></dt><dd><strong>Affiliation: </strong><span xmlns="" class="orgname">GnuCash Documentation Team</span></dd><dd><strong>Email: </strong><code xmlns="" class="email">&lt;<a class="email" href="mailto:lapham@extracta.com.br">lapham@extracta.com.br</a>&gt;</code></dd></dl><dl xmlns="http://www.w3.org/TR/xhtml1/transitional"><dt><span xmlns="" class="surname">Lyttle</span>, <span xmlns="" class="firstname">Chris</span></dt><dd><strong>Affiliation: </strong><span xmlns="" class="orgname">GnuCash Documentation Team</span></dd><dd><strong>Email: </strong><code xmlns="" class="email">&lt;<a class="email" href="mailto:chris@wilddev.net">chris@wilddev.net</a>&gt;</code></dd></dl><dl xmlns="http://www.w3.org/TR/xhtml1/transitional"><dt><span xmlns="" class="surname">Marchi</span>, <span xmlns="" class="firstname">Cristian</span></dt><dd><strong>Affiliation: </strong><span xmlns="" class="orgname">GnuCash Documentation Team</span></dd><dd><strong>Email: </strong><code xmlns="" class="email">&lt;<a class="email" href="mailto:cri79@libero.it">cri79@libero.it</a>&gt;</code></dd></dl><dl xmlns="http://www.w3.org/TR/xhtml1/transitional"><dt><span xmlns="" class="surname">Thuree</span>, <span xmlns="" class="firstname">Bengt</span></dt><dd><strong>Affiliation: </strong><span xmlns="" class="orgname">GnuCash Documentation Team</span></dd><dd><strong>Email: </strong><code xmlns="" class="email">&lt;<a class="email" href="mailto:bengt@thuree.com">bengt@thuree.com</a>&gt;</code></dd></dl></div><div><p xmlns="http://www.w3.org/TR/xhtml1/transitional" class="releaseinfo"><i>
+   This Guide contains a tutorial for using GnuCash and describes the concepts
+   behind GnuCash.
+  </i></p></div><div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="copyright"><h2>Copyright</h2><p class="copyright">Copyright © 2010-2011 Yawar Amin</p></div></div><div><p class="copyright">Copyright © 2010 Tom Bullock</p></div><div><p class="copyright">Copyright © 2010-2011 Cristian Marchi</p></div><div><p class="copyright">Copyright © 2009-2011 Geert Janssens</p></div><div><p class="copyright">Copyright © 2006 Chris Lyttle</p></div><div><p class="copyright">Copyright © 2003-2004 Jon Lapham</p></div><div><p class="copyright">Copyright © 2002 Chris Lyttle</p></div><div><p class="copyright">Copyright © 2001 Carol Champagne and Chris Lyttle</p></div><div>
+<h2 xmlns="http://www.w3.org/TR/xhtml1/transitional">Legal Notice</h2><p>
+	  Permission is granted to copy, distribute and/or modify this
+	  document under the terms of the GNU Free Documentation
+	  License (GFDL), Version 1.1 or any later version published
+	  by the Free Software Foundation with no Invariant Sections,
+	  no Front-Cover Texts, and no Back-Cover Texts.  You can find
+	  a copy of the GFDL at this <a class="ulink" href="ghelp:fdl" target="_top">link</a> or in the file COPYING-DOCS
+	  distributed with this manual.
+         </p><p> This manual is part of a collection of GNOME manuals
+          distributed under the GFDL.  If you want to distribute this
+          manual separately from the collection, you can do so by
+          adding a copy of the license to the manual, as described in
+          section 6 of the license.
+	</p><p>
+	  Many of the names used by companies to distinguish their
+	  products and services are claimed as trademarks. Where those
+	  names appear in any GNOME documentation, and the members of
+	  the GNOME Documentation Project are made aware of those
+	  trademarks, then the names are in capital letters or initial
+	  capital letters.
+	</p><p>
+	  DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED
+	  UNDER  THE TERMS OF THE GNU FREE DOCUMENTATION LICENSE
+	  WITH THE FURTHER UNDERSTANDING THAT:
+
+	  </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>DOCUMENT IS PROVIDED ON AN <span class="quote">“<span class="quote">AS IS</span>”</span> BASIS,
+                    WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+                    IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES
+                    THAT THE DOCUMENT OR MODIFIED VERSION OF THE
+                    DOCUMENT IS FREE OF DEFECTS MERCHANTABLE, FIT FOR
+                    A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE
+                    RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE
+                    OF THE DOCUMENT OR MODIFIED VERSION OF THE
+                    DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR
+                    MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT,
+                    YOU (NOT THE INITIAL WRITER, AUTHOR OR ANY
+                    CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY
+                    SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER
+                    OF WARRANTY CONSTITUTES AN ESSENTIAL PART OF THIS
+                    LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED
+                    VERSION OF THE DOCUMENT IS AUTHORIZED HEREUNDER
+                    EXCEPT UNDER THIS DISCLAIMER; AND
+		  </p></li><li class="listitem"><p>UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL
+                       THEORY, WHETHER IN TORT (INCLUDING NEGLIGENCE),
+                       CONTRACT, OR OTHERWISE, SHALL THE AUTHOR,
+                       INITIAL WRITER, ANY CONTRIBUTOR, OR ANY
+                       DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION
+                       OF THE DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH
+                       PARTIES, BE LIABLE TO ANY PERSON FOR ANY
+                       DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR
+                       CONSEQUENTIAL DAMAGES OF ANY CHARACTER
+                       INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS
+                       OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR
+                       MALFUNCTION, OR ANY AND ALL OTHER DAMAGES OR
+                       LOSSES ARISING OUT OF OR RELATING TO USE OF THE
+                       DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT,
+                       EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF
+                       THE POSSIBILITY OF SUCH DAMAGES.
+		  </p></li></ol></div><p>
+	</p></div><div><div class="legalnotice" title="Feedback"><a name="id3111401"></a><h2 xmlns="http://www.w3.org/TR/xhtml1/transitional">Feedback</h2><p>To report a bug or make a suggestion regarding this package or
+        this manual, follow the directions at the
+        <a class="ulink" href="http://bugzilla.gnome.org" target="_top">GNOME Bug Tracking System</a>.
+      </p></div></div><div><div class="revhistory"><h2>History</h2><table border="1" width="100%" summary="Revision history"><tr><th align="left" valign="top" colspan="1"><b>Title</b></th><th align="left" valign="top" colspan="1"><b>Date</b></th><th align="left" valign="top" colspan="1"><b>Author</b></th><th align="left" valign="top" colspan="1"><b>Publisher</b></th></tr><tr><td align="left"><p>GnuCash Tutorial and Concepts Guide V2.4.1</p></td><td align="left"><p>1 July 2011</p></td><td align="left"><p class="author">Multiple authors</p></td><td align="left"><p class="publisher"><strong class="application"><code>GnuCash</code></strong> Documentation Team</p></td></tr><tr><td align="left"><p>GnuCash Tutorial and Concepts Guide V2.3.16</p></td><td align="left"><p>November 7, 2010</p></td><td align="left"><p class="author">Jon Lapham
+            <code class="email">&lt;<a class="email" href="mailto:lapham@extracta.com.br">lapham@extracta.com.br</a>&gt;</code>
+          </p><p class="author">Bengt Thuree
+            <code class="email">&lt;<a class="email" href="mailto:bengt@thuree.com">bengt@thuree.com</a>&gt;</code>
+          </p><p class="author">Dave Herman
+            <code class="email">&lt;<a class="email" href="mailto:dvherman@bigfoot.com">dvherman@bigfoot.com</a>&gt;</code>
+          </p></td><td align="left"><p class="publisher"><strong class="application"><code>GnuCash</code></strong> Documentation Team</p></td></tr><tr><td align="left"><p>GnuCash Tutorial and Concepts Guide V2.0.0</p></td><td align="left"><p>July 2006</p></td><td align="left"><p class="author">Jon Lapham
+            <code class="email">&lt;<a class="email" href="mailto:lapham@extracta.com.br">lapham@extracta.com.br</a>&gt;</code>
+          </p><p class="author">Bengt Thuree
+            <code class="email">&lt;<a class="email" href="mailto:bengt@thuree.com">bengt@thuree.com</a>&gt;</code>
+          </p><p class="author">Dave Herman
+            <code class="email">&lt;<a class="email" href="mailto:dvherman@bigfoot.com">dvherman@bigfoot.com</a>&gt;</code>
+          </p></td><td align="left"><p class="publisher"><strong class="application"><code>GnuCash</code></strong> Documentation Team</p></td></tr><tr><td align="left"><p>GnuCash Tutorial and Concepts Guide V1.8.3</p></td><td align="left"><p>Aug 2003</p></td><td align="left"><p class="author">Jon Lapham
+            <code class="email">&lt;<a class="email" href="mailto:lapham@extracta.com.br">lapham@extracta.com.br</a>&gt;</code>
+          </p></td><td align="left"><p class="publisher"><strong class="application"><code>GnuCash</code></strong> Documentation Team</p></td></tr><tr><td align="left"><p>GnuCash Tutorial and Concepts Guide V1.8.2</p></td><td align="left"><p>Aug 2003</p></td><td align="left"><p class="author">Jon Lapham
+            <code class="email">&lt;<a class="email" href="mailto:lapham@extracta.com.br">lapham@extracta.com.br</a>&gt;</code>
+          </p></td><td align="left"><p class="publisher"><strong class="application"><code>GnuCash</code></strong> Documentation Team</p></td></tr><tr><td align="left"><p>GnuCash Tutorial and Concepts Guide V1.8.1</p></td><td align="left"><p>May 2003</p></td><td align="left"><p class="author">Chris Lyttle
+            <code class="email">&lt;<a class="email" href="mailto:chris@wilddev.net">chris@wilddev.net</a>&gt;</code>
+          </p></td><td align="left"><p class="publisher"><strong class="application"><code>GnuCash</code></strong> Documentation Team</p></td></tr><tr><td align="left"><p>GnuCash Tutorial and Concepts Guide V1.8.0</p></td><td align="left"><p>Jan 2003</p></td><td align="left"><p class="author">Chris Lyttle
+            <code class="email">&lt;<a class="email" href="mailto:chris@wilddev.net">chris@wilddev.net</a>&gt;</code>
+          </p></td><td align="left"><p class="publisher"><strong class="application"><code>GnuCash</code></strong> Documentation Team</p></td></tr><tr><td align="left"><p>GnuCash User Guide V1.6.5</p></td><td align="left"><p>June 2002</p></td><td align="left"><p class="author">Chris Lyttle
+            <code class="email">&lt;<a class="email" href="mailto:chris@wilddev.net">chris@wilddev.net</a>&gt;</code>
+          </p></td><td align="left"><p class="publisher"><strong class="application"><code>GnuCash</code></strong> Documentation Team</p></td></tr><tr><td align="left"><p>GnuCash User Guide V1.6.0</p></td><td align="left"><p>October 2001</p></td><td align="left"><p class="author">Carol Champagne
+            <code class="email">&lt;<a class="email" href="mailto:carol@io.com">carol@io.com</a>&gt;</code>
+          </p></td><td align="left"><p class="publisher"><strong class="application"><code>GnuCash</code></strong> Documentation Team</p></td></tr></table></div></div><hr></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="index.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left"> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <strong xmlns="" class="application"><code>GnuCash</code></strong> Tutorial and Concepts Guide</td></tr></table></div></body></html>

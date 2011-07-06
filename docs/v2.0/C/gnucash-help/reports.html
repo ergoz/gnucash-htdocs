@@ -1,0 +1,75 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>5.4. Using Reports And Charts</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="help.html" title="GnuCash Help Manual"><link rel="up" href="usage.html" title="Chapter 5. Common Operations, Tools and Reports"><link rel="previous" href="transactions.html" title="5.3. Using The Register To Record Transactions"><link rel="next" href="custom-gnucash.html" title="Chapter 6. Customizing GnuCash"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.4. Using Reports And Charts</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="transactions.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 5. Common Operations, Tools and Reports</th><td width="20%" align="right"> <a accesskey="n" href="custom-gnucash.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="reports"></a>5.4. Using Reports And Charts</h2></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">This section is a "work in process" all of the material has not been reviewed for V2.0.
+While it may not be strictly accurate, it is at least a "guide".</p></td></tr></table></div><p></p><p>Reports and Charts give GnuCash the ability to present an overview of financial
+       data in various ways. This can range from a simple summary of account totals to an
+       advanced portfolio view. This section will present an explanation of the main GnuCash
+       reports and how to adjust them.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="report-types"></a>5.4.1. Types of Reports and Graphs</h3></div></div><p>GnuCash has classified the main types of reports into four major classes. These
+         are all available under the Reports menu. Note that barcharts can be moved by clicking
+         on them and dragging the mouse, and piecharts can be "exploded" into individual
+         segments.</p><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="report-general"></a>5.4.1.1. General Reports</h4></div></div><p>The General Reports includes the Tax Report and TXF Export, the Account
+           Summary and the Transaction Reports and also the reports in the Sample &amp;
+           Custom menu.</p><div class="itemizedlist"><ul><li><p>Account Summary:</p></li><li><p>Tax Report and TXF Export: The tax report is used to export all tax
+               related Income and Expenses to a TXF (Tax eXchange Format) file. This is in
+               addition to the HTML format that all reports allow. The TXF file can be imported
+               into tax filing programs such as TaxCut or TurboTax.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">For this to work, the user has to segregate taxable and non taxable
+           income to different accounts, as well as deductible and non deductible expenses.
+           The Tax Information dialog is used for this. To access the Tax Information dialog
+           go to Edit -&gt; Tax Options. The user also must set the TXF category of each tax
+           related account. The Tax Information dialog is described in the Setting Tax Options
+           section.</p></td></tr></table></div></li><li><p>Transaction Report:</p></li><li><p>Welcome Sample Report:</p></li><li><p>Custom Multicolumn Report: This report is used to place multiple reports
+               into a single report window to examine a set of financial information at a
+               glance.</p></li><li><p>Sample Graphs</p></li><li><p>Sample Report with Examples:</p></li></ul></div></div><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="report-assets"></a>5.4.1.2. Assets &amp; Liabilities</h4></div></div><p>The Assets &amp; Liabilities reports includes the Balance Sheet report,
+           Investment reports and the Net Worth report.</p><div class="itemizedlist"><ul><li><p>Advanced Portfolio:</p></li><li><p>Asset Barchart:</p></li><li><p>Asset Piechart:</p></li><li><p>Average Balance:</p></li><li><p>Balance Sheet: This report summarizes assets, liabilities, and equity.
+               When properly maintained, assets should equal the sum of liabilities and equity.
+               If that is not the case, there is some kind of internal imbalance in the
+               accounts.</p></li><li><p>General Journal:</p></li><li><p>General Ledger:</p></li><li><p>Investment Portfolio: This report summarizes the value of the stocks in
+               the current portfolio.</p></li><li><p>Liability Barchart:</p></li><li><p>Liability Piechart:</p></li><li><p>Net Worth Barchart: Net worth is the difference between the value of assets
+               or liabilities.</p></li><li><p>Price Scatterplot:</p></li></ul></div></div><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="report-income"></a>5.4.1.3. Income &amp; Expense</h4></div></div><p>The Income &amp; Expense reports includes the Cash Flow and Income Statement
+           reports.</p><div class="itemizedlist"><ul><li><p>Budget Report:</p></li><li><p>Cash Flow:</p></li><li><p>Equity Statement:</p></li><li><p>Expense Barchart:</p></li><li><p>Expense Piechart:</p></li><li><p>Expense vs Day of Week:</p></li><li><p>Income Barchart:</p></li><li><p>Income &amp; Expense Chart:</p></li><li><p>Income Statement: This report summarizes sources of income and expenditure.
+              (This report was called Profit &amp; Loss in gnucash-1.8.)</p></li><li><p>Income Statement:</p></li><li><p>Income vs Day of Week:</p></li><li><p>Trial Balance: This report summarizes sources of income and
+               expenditure.</p></li></ul></div></div><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="report-biz"></a>5.4.1.4. Business Reports</h4></div></div><p>The Business Reports includes Customer and Vendor Reports and Printable
+           Invoices as well as Aging reports.</p><div class="itemizedlist"><ul><li><p>Customer Report:</p></li><li><p>Easy Invoice:</p></li><li><p>Employee Report:</p></li><li><p>Fancy Invoice:</p></li><li><p>Payable Aging:</p></li><li><p>Printable Invoice:</p></li><li><p>Receivable Aging:</p></li><li><p>Vendor Report:</p></li></ul></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="report-create"></a>5.4.2. To Create Reports and Graphs</h3></div></div><p>It is possible to write reports if the current ones are not suitable. To do this
+         you will need to know Scheme (a LISP-like programming language), and it is an
+         excellent idea to have a copy of the GnuCash source code available. </p><p>The reporting interface is documented in the source code file
+         src/report/report-system/doc/report-html.txt. The file src/scm/report/hello-world.scm
+         in the GnuCash source distribution provides a good example of how reports are
+         developed.</p><p>It is also necessary to access data from the engine to get information for your
+         report. This is performed by a set of Scheme wrapper functions that are documented in
+         the file src/g-wrap/gnc.html. Examine some of the other reports in src/scm/report for
+         an indication of how they are used.</p><p>At present, reports are produced by calling a HTML-generation API, which outputs
+         a dialect of HTML and rendering this with a HTML widget. This has limitations,
+         particularly when trying to align objects precisely, as might be necessary for
+         printing onto pre-printed invoices for example.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="report-custom"></a>5.4.3. To Customize Reports and Graphs</h3></div></div><p>GnuCash reports have many options for customization. To access report options
+         choose the Options button on the toolbar.</p><p>Many reports share similar sorts of options. Some common ones include:</p><div class="itemizedlist"><ul><li><p>Report Name: Set the title of the report. This is also used to print the
+             report for later viewing.</p></li><li><p>Date Options: Reports typically specify either a single date, or a date
+             range, for the report. Dates can be specified in two ways, either directly
+             (using the date selector), or by selecting a relative date from the menu.
+             Relative dates allow you to specify dates like "Beginning of this year" or
+             "Today".</p></li><li><p>Step Size: This option is used on bar charts to determine the interval which
+             each bar represents. Typical values are daily, weekly, monthly, and yearly.</p></li><li><p>Accounts: Select the appropriate accounts for the report. Note that in some
+             reports only certain types of accounts can be selected. For example, an expense
+             piechart only allows expense accounts to be selected. </p></li><li><p>Show Long Account Names: This option allows displaying either short account
+             names (for example, Power) or long account names (for example, Utilities:Power).
+            </p></li><li><p>Include Subaccounts?: Summary reports typically have an include all
+             subaccounts option, which if selected ensures that all subaccounts are included
+             if the parent account is.</p></li><li><p>Depth: This option allows the selection of how many levels the report
+             displays subaccounts. If the subaccounts go deeper than selected, an overall value
+             for all the subaccounts is calculated and included in a total. To make sure every
+             account selected is individually displayed, select All.</p></li><li><p>Style Sheet: Select a Style Sheet. Style sheets control how reports are
+             displayed. At the moment, there are two style sheets, "default" and "technicolor".
+             You can customize each of these from the Edit -&gt; Style Sheets... menu item.
+             This is described in the Changing Style Sheets section.</p></li><li><p>Plot Dimensions: There are width and height options for most graphs, which
+             specify the displayed dimensions (in pixels).</p></li><li><p>Report Currency: Select the report currency. Generally, values will be
+             converted to this currency for display.</p></li><li><p>Price Source: Select how stock and currency prices are calculated in this
+             report. Choose between a weighted average of prices over all transactions, prices
+             at current values, or prices at the time of the report date.</p></li><li><p>Totals: Charts display totals in the chart legend if this option is selected.
+            </p></li><li><p>Maximum Slices: Controls the maximum number of slices displayed in a
+             piechart - other accounts will be placed in a slice marked Other. </p></li><li><p>Maximum Bars: Controls the maximum number of bars displayed in a barchart.
+            </p></li><li><p>Display Columns: Choose columns to show from the register.</p></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="report-print"></a>5.4.4. To Print or Export Reports and Graphs</h3></div></div><p>GnuCash is able to print reports and to export the reports to web pages. The
+         Print GnuCash Document dialog is accessed from the Print button on the toolbar or
+         go to File -&gt; Print in the menu. To Export a report to a web page (HTML) select
+         the Export button on the toolbar and type in a file name.</p><p>The Print GnuCash Document dialog is used to select which Printer to send the
+         print job to or to print to a File. It also contains a Preview button to view the
+         document before printing. Press Print to send the job to the selected printer or
+         Cancel to dismiss the Print dialog.</p><p>Printing from an open register prints the Account Report, which is also called
+         the Register Report. This lists transactions in the account with a total. Other
+         reports print as viewed in the Report screen.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="transactions.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="help.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="custom-gnucash.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">5.3. Using The Register To Record Transactions </td><td width="20%" align="center"><a accesskey="u" href="usage.html">Up</a></td><td width="40%" align="right"> Chapter 6. Customizing GnuCash</td></tr></table></div></body></html>

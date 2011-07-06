@@ -1,0 +1,338 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Setting up a search</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash User Manual"
+HREF="index.html"><LINK
+REL="UP"
+TITLE='Locating transactions with the "Find Transactions" dialog'
+HREF="t3054.html"><LINK
+REL="PREVIOUS"
+TITLE="How to use the Find Transactions dialog"
+HREF="x3083.html"><LINK
+REL="NEXT"
+TITLE="Modifying your search"
+HREF="x3156.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash User Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x3083.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Locating transactions with the "Find Transactions" dialog</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x3156.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN3099">Setting up a search</H1
+><P
+>    </P
+><P
+>You can find transactions by any or all of the following 
+criteria.  Each one has a tab in the dialog where you may enter 
+the match value(s) and comparison method. 
+    <P
+></P
+><UL
+><LI
+><P
+> Accounts affected by the transaction
+      </P
+></LI
+><LI
+><P
+> Date the transaction took place
+      </P
+></LI
+><LI
+><P
+> The string in the Description field
+      </P
+></LI
+><LI
+><P
+> The string in the Number field
+      </P
+></LI
+><LI
+><P
+> Amount of the transaction's splits
+      </P
+></LI
+><LI
+><P
+> The string in the Memo field
+      </P
+></LI
+><LI
+><P
+> Number of shares in a stock transaction
+      </P
+></LI
+><LI
+><P
+> Share price in a stock transaction
+      </P
+></LI
+><LI
+><P
+> The string in the Action field
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>If you specify multiple criteria in the search, all of the 
+criteria must be true for the transaction to be displayed.
+
+    <A
+NAME="ACCOUNTSEARCH"
+></A
+></P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN3124">Account searches</H2
+><P
+>In the Account tab, select any accounts of interest and then
+choose whether transactions affecting Any, All, or None of these
+accounts is to be displayed.
+      
+    </P
+><P
+>If you select "All" accounts from the picker at the top of the
+tab, the only transactions that will be show are those which affect
+all the selected accounts.  </P
+><P
+> For example, if you select <I
+CLASS="EMPHASIS"
+>My
+Checking Account</I
+> and <I
+CLASS="EMPHASIS"
+> My VISA Account</I
+> and then choose <I
+CLASS="EMPHASIS"
+>All</I
+>, only transfers from Checking to Visa will be shown.
+
+    </P
+><P
+>If you select "Any" from the picker, transactions affecting any
+selected amount will be shown.  For example, if you select "My
+Checking Account" and "My VISA Account" and then choose "Any", your
+entire checking account and your entire Visa account will be shown
+together in the Search Results window.
+      
+    </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="DATE">Date searches</H2
+><P
+>In the Date tab, you can specify a date range for the
+transactions you wish to find.  The year, month, and day fields are in
+the order you specify in <B
+CLASS="GUIMENU"
+> Preferences:International:Date Format</B
+>.
+
+    </P
+><P
+>If you want to locate any transaction before a certain date,
+specify your date in the second date entry and put a distant date in
+the past in the first date entry.  The default date is January 1,
+1900, which should be distant enough for most peoples' purposes.  </P
+><P
+>Similarly, if you want to find any transaction after a certain date,
+put the date in the first date entry and put a date after your last
+transaction in the second entry.
+
+      <A
+NAME="AMOUNT"
+></A
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN3140">Amount searches</H2
+><P
+>The searches in the Amount, Shares, and Price tabs allow you to
+search for particular quantities in various transaction fields.  You
+need to enter both the amount (in the entry box) and the type of
+comparison (with the option menu to the left of the entry box).  The
+amount in the entry box is always positive.
+
+    </P
+><P
+>For the Amount tab, you need to indicate whether you are
+interested in debits, credits, or both.
+
+      <A
+NAME="STRING"
+></A
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN3145">String searches</H2
+><P
+>In the Description, Number, Memo, and Action tabs, you can
+specify a string which is matched against the respective fields of
+splits and transactions.  <P
+></P
+><UL
+><LI
+><P
+> By default, the match used is a
+case-insensitive substring match. </P
+></LI
+><LI
+><P
+> If you select the "Case sensitive"
+toggle button, the search is a case-sensitive substring match.  </P
+></LI
+><LI
+><P
+>If the
+"Regular expression" button is selected, the match interprets the
+string you enter as a POSIX extended regular expression; case
+sensitivity is still determined by the "Case sensitive" button.</P
+></LI
+></UL
+>
+      
+    <A
+NAME="MODIFY"
+></A
+></P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x3083.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x3156.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>How to use the Find Transactions dialog</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t3054.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Modifying your search</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

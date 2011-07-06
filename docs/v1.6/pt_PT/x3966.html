@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>As Pastas de "Contas" e "Categorias"</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Importar Dados do Quicken Para o GnuCash"
+HREF="t3867.html"><LINK
+REL="PREVIOUS"
+TITLE='A Pasta "Ficheiros"'
+HREF="x3959.html"><LINK
+REL="NEXT"
+TITLE="O Selector de Contas"
+HREF="x3982.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x3959.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Importar Dados do Quicken Para o GnuCash</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x3982.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="DIALOG-CATEGORIES">As Pastas de "Contas" e "Categorias"</H1
+><P
+>    </P
+><P
+>Cada linha na apresentação da pasta de Contas representa um mapeamento 
+de uma conta Quicken para uma conta GnuCash. Da mesma forma, a pasta da 
+apresentação de Categorias mostra mapeamentos de categorias Quicken para contas 
+GnuCash. Apenas contas QIF referenciadas por um ou mais registos de transacções 
+são apresentados. O nome da conta GnuCash é mostrado no formato de "nome 
+completo", incluindo o nome de todas as contas pai separadas pelo seu caracter 
+separador de defeito (geralmente ":").
+
+    </P
+><P
+>A primeira coisa a verificar é a coluna de nomes de contas Quicken. 
+Certifique-se de que não ha duplicados com nomes ligeiramente diferentes. 
+Se uma transacção QIF fizer uma transferência para [Conta Ordem], e você 
+importou um ficheiro chamado conta-ordem.qif, poderá ter uma entrada para 
+"conta ordem" e outra para "Conta Ordem". Se estas entradas se referirem à 
+mesma conta, terá de regressar à pasta Ficheiros e reler o conta-ordem.qif 
+com o nome de conta Quicken correcto, Conta Ordem.
+
+    </P
+><P
+>Assim que tiver todas as contas Quicken a fazer sentido, verifique a coluna 
+de contas GnuCash. A conta GnuCash de defeito para cada conta Quicken é determinada 
+por um procedimento em passos que faz a melhor inferição possível baseada nos dados 
+disponíveis. As possibilidades tentadas são as seguintes (em ordem de preferência):
+
+    <P
+></P
+><UL
+><LI
+><P
+>Mapeamentos gravados de sessões de importação anteriores. De cada vez que 
+você prime "OK" na janela de importação, os mapeamentos que seleccionou são 
+gravados para servirem na próxima vez que importar ficheiros. Até agora, o 
+ficheiro chama-se sempre ~/.gnucash/qif-accounts-map. Se obtiver mapeamentos 
+de defeito estranhos (por exemplo, se modificar o nome de uma conta e o importador 
+desejar continuar a criar uma conta nova com o nome antigo) apague este ficheiro. 
+Está na minha lista de desejos fazer isto trabalhar com menos problemas.
+
+      </P
+></LI
+><LI
+><P
+>Contas semelhantes da sua árvore de contas existente no GnuCash. "Semelhantes" 
+significa que os tipos de contas são compatíveis e pode-se assumir com elevado grau 
+de certeza de que os nomes se referem à mesma coisa. Semelhanças exactas de caminho 
+completo são as preferidas, seguidas de semelhanças insensíveis à capitalização, 
+seguidas de semelhanças com contas pai adicionadas (por ex.  a conta QIF Visa é 
+semelhante à conta GnuCash Cartões Crédito:Visa), seguida de várias semelhanças por 
+comparação de partes dos nomes. Se você conhecer uma boa heurística para isto, por 
+favor diga-me. 
+
+      </P
+></LI
+><LI
+><P
+>Conta nova. O nome da conta nova é actualmente apenas o mesmo nome que o da 
+conta Quicken; novamente, se conhecer uma boa heurística para melhorar isto, diga-me. 
+Já pensei em o fazer procurar sub-árvores onde inserir a conta (se todas as contas 
+de cartões de crédito existentes são filhas de uma conta, fazer a conta nova como 
+filha dessa conta, etc). Isto está na minha lista de desejos a implementar. 
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>Verifique tanto o nome de cada conta GnuCash para cada conta QIF como també o 
+tipe. Se não gostar de algum deles, clique na seta na visualisação que contiver o 
+mapeamento que não lhe agrada. Verá a janela de <A
+HREF="x3966.html#DIALOG-PICKER"
+>Selecção 
+de Contas</A
+> que lhe permitirá modificar a conta.
+
+<A
+NAME="DIALOG-PICKER"
+></A
+></P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x3959.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x3982.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>A Pasta "Ficheiros"</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t3867.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>O Selector de Contas</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

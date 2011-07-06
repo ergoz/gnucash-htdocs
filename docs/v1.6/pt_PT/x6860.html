@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Guile Scheme</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="UP"
+TITLE=" GnuCash e Scheme "
+HREF="t6809.html"><LINK
+REL="PREVIOUS"
+TITLE="Documentação Scheme"
+HREF="x6833.html"><LINK
+REL="NEXT"
+TITLE="Relatório de Cotações de Acções"
+HREF="t6892.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x6833.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>GnuCash e Scheme</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t6892.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-GUILE">Guile Scheme</H1
+><P
+> <A
+HREF="http://www.guile.org/"
+TARGET="_top"
+> Guile </A
+>
+é uma implementação de <A
+HREF="t6809.html#SCHEME"
+> Scheme </A
+> utilizado 
+em muitos projectos FSF.  Está particularmente destinado a ser prontamente 
+embebido em aplicações escritas em C.
+
+<P
+></P
+><UL
+><LI
+><P
+> <A
+HREF="ftp://ftp.red-bean.com/pub/guile/"
+TARGET="_top"
+>Directório de /pub/guile no red-bean.com</A
+> </P
+><P
+> Esta é a localização ``oficial'' onde o código fonte experimental 
+do Guile se encontra.  </P
+></LI
+><LI
+><P
+><A
+HREF="http://www.gnu.org/software/goops/goops.html"
+TARGET="_top"
+> GOOPS</A
+> - CLOS para Guile </P
+></LI
+><LI
+><A
+NAME="GWRAP"><P
+> <A
+HREF="http://www.cs.cmu.edu/~chrislee/Software/g-wrap/"
+TARGET="_top"
+> g-wrap</A
+> </P
+><P
+> G-Wrap é uma ferramenta portável para facilmente importar tipos,
+funções, e constantes do C para interpretadores <A
+HREF="t6809.html#SCHEME"
+> 
+Scheme </A
+>.  G-Wrap suporta <A
+HREF="x6860.html#GUILE"
+> Guile</A
+> e RScheme.</P
+><P
+> <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+> utiliza o G-Wrap para conectar 
+o Guile e o motor do <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+>.</P
+></LI
+><LI
+><P
+><A
+HREF="http://srfi.schemers.org/"
+TARGET="_top"
+>SRFI - Proposta de Implementação Scheme (Scheme Requests For Implementation) </A
+></P
+><P
+> Uma das deficiências mais antigas do Scheme tem sido que a definição 
+da linguagem é deliberadamente espartana, faltando-lhe funcionalidades. 
+Compare a parca definição do Scheme, <A
+HREF="x6833.html#R5RS"
+> R5RS </A
+> com a do <A
+HREF="http://www.cons.org/"
+TARGET="_top"
+>Common Lisp, </A
+> que tem uma muito maior, mais funcional
+<A
+HREF="http://www.harlequin.com/education/books/HyperSpec/"
+TARGET="_top"
+>especificação HyperSpec. </A
+> (Nota: O HyperSpec é discutivelmente 
+um dos melhores e mais sofisticados conjuntos de documentação jamais 
+construidos utilizando HTML.)</P
+><P
+> O processo SRFI procura essencialmente adicionar conjuntos de 
+funções em bibliotecas para disponibilizar funcionalidades expandidas 
+que possam ser portáveis através das implementações Scheme.  Isto tem 
+incluido bibliotecas para manipular conjuntos, caracteres, texto (strings), 
+"pacotes", registos, datas, objectos.</P
+><P
+> <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+> utiliza o SRFI 1 (Listas),
+8 (ligações de múltiplos valores; utilizado pelo SRFI 1), e 19 (Datas). </P
+></LI
+></UL
+></P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x6833.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t6892.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Documentação Scheme</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t6809.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Relatório de Cotações de Acções</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

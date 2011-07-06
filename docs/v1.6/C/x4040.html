@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>The "Files" Tab</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash User Manual"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Importing Quicken Data Into GnuCash"
+HREF="t3948.html"><LINK
+REL="PREVIOUS"
+TITLE="How to use the QIF Import dialog"
+HREF="x4023.html"><LINK
+REL="NEXT"
+TITLE='The "Accounts" and "Categories" Tabs'
+HREF="x4047.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash User Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x4023.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Importing Quicken Data Into GnuCash</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x4047.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN4040">The "Files" Tab</H1
+><P
+>    
+    </P
+><P
+>The first thing to do is load all your files.  Click "Select
+File", pick your file, then set the account, currency, radix, and date
+fields, then click "Load File".  The Currency field defaults to the
+GnuCash default currency (set in the International tab of the
+Preferences dialog).  Try autodetecting radix, date format, and
+account name first.  The radix and date formats will stay on
+"Autodetect" if the autodetector is not 100 percent sure of the right
+answer; in that case, you will have to make a manual selection.  You
+probably know what the correct radix format is; if you're in the US or
+the UK, it's definitely "decimal".  Almost every QIF file I have seen
+in the US is m/d/y for the date format, so try that if auto-detect
+doesn't work.
+
+    </P
+><P
+>To go back to a file that you have previously loaded, select
+its name in the file list on the left.  If you change settings for a
+previously-loaded file, click "Load File" again to reload it with new
+settings.  Don't forget to turn off "Auto" on the QIF Account entry if
+you manually enter it.
+
+    </P
+><P
+>If there's no Opening Balance record in the file, the account
+name is guessed from the file name: any .qif extension is removed, and
+all dashes and underscores are changed to spaces.  If you want to save
+yourself manually re-entering the name, save the file with a name that
+will get guessed correctly (i.e. save the account "My Bank Account" as
+My-Bank-Account.qif or My_Bank_Account.qif).
+
+<A
+NAME="DIALOG-ACCOUNTS"
+></A
+></P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x4023.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x4047.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>How to use the QIF Import dialog</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t3948.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>The "Accounts" and "Categories" Tabs</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

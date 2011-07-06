@@ -1,0 +1,465 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>      Was ist neu
+    </TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash Online-Handbuch"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="	  Starting to use GnuCash (englisch)
+	"
+HREF="x722.html"><LINK
+REL="NEXT"
+TITLE="Änderungen im deutschen Wortschatz"
+HREF="x799.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash Online-Handbuch</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x722.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x799.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN731">Was ist neu</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t730.html#AEN733"
+>Was ist neu in GnuCash 1.6?</A
+></DT
+><DT
+><A
+HREF="x799.html"
+>Änderungen im deutschen Wortschatz</A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN733">Was ist neu in GnuCash 1.6?</H1
+><P
+>      Wir, das GnuCash Entwickler-Team, heißen alle bisherigen GnuCash
+      Benutzer herzlichen willkommen. Seit der Version 1.4 hat sich
+      eine Menge verändert, und wir glauben, daß die neue Version für
+      alle Anwender eine eindeutige Verbesserung darstellt. Praktisch
+      jeder Teil des Programms hat sich verändert und eine ganze Reihe
+      von neuen Funktionen sind hinzugekommen.
+    </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN736">Komplett überarbeitete deutsche Übersetzung</H2
+><P
+>Die deutsche Übersetzung des Programms wurde komplett
+überarbeitet. Viele Worte wurden den Standards des Rechnungswesens
+angepasst. Eine Übersicht der geänderten Worte finden Sie in der
+Tabelle <A
+HREF="x799.html"
+>Änderungen im deutschen
+Wortschatz</A
+>.</P
+><P
+>Leider ist die deutsche Übersetzung erst teilweise vollendet --
+das Programm selber wurde sorgfältig dem deutschen Sprachraum
+angepasst, aber das Benutzerhandbuch liegt bisher nur in Englisch
+vor. Bis das Handbuch von weiteren Freiwilligen übersetzt wurde,
+können die weiteren Seiten leider nur auf Englisch geboten
+werden.</P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN741">Neues Dateiformat</H2
+><P
+>	Wir sind zu einem XML-konformen textbasierten Dateiformat
+	gewechselt. GnuCash wird Ihre bestehenden 1.4 Dateien
+	problemlos lesen. Wenn Sie Ihre Daten speichern, wird die
+	Version 1.6 allerdings immer das neue Format verwenden.</P
+><P
+>Das neue Format ist um Größenordnungen flexibler als das
+	alte Format und das war eine notwendige Bedingung, um neue
+	Funktionen hinzufügen zu können. Ebenso können auch erst auf
+	diese Weise in Zukunft immer neue Funktionen
+	dazukommen. Zusätzlich können die Dateien jetzt, da sie aus
+	XML bestehen, viel einfacher von externen Hilfsprogrammen
+	bearbeitet werden.
+      </P
+><P
+>	Wir haben das neue Format ausgiebig getestet. Trotzdem ist es
+	-- wie immer -- sinnvoll, eine Sicherheitskopie Ihrer alten
+	Daten aufzuheben. Nur für den Fall der Fälle.
+      </P
+><P
+>	Beispielhaft für die Verbesserungen, die durch das neue
+	Dateiformat ermöglicht wurde, sei hier das interne
+	Zahlenformat genannt. Bisher benutzte GnuCash 1.4 nur
+	Gleitkommazahlen (floating-point) wie das auch ein
+	Taschenrechner machen würde. Leider führt das früher oder
+	später zu Rundungsfehlern, die z.B. beim Währungsumtausch
+	sichtbar wurden. In der neuen Version ist das Zahlenformat zu
+	Fixkommazahlen (fixed-point) geändert, so daß alle Beträge
+	jetzt exakt mit der jeweils benötigten Genauigkeit gespeichert
+	werden. Diese existenziell wichtige Funktion ist teilweise
+	nicht einmal in horrend teurer "Enterprise-level" Software für
+	Unternehmen zu finden.
+       </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN747">Neue Benutzeroberfläche (englisch)</H2
+><P
+>The interface has been massively revamped to make it 
+	faster and easier to use.</P
+><P
+></P
+><UL
+><LI
+><P
+>The register has been totally
+	    revamped.  The confusing auto-balancing has been
+	    reworked, the multi-line modes are much improved -
+	    making it much easier to handle split transactions,
+	    and you can now display a report of the transactions
+	    in a register, making it easy to export or print them.
+	  </P
+></LI
+><LI
+><P
+>The QIF importer's interface is now much
+	    simpler to use</P
+></LI
+><LI
+><P
+>The main window has been totally revamped.
+	    You now have the choice of displaying the account window
+	    and one or more reports in a tabbed-notebook style view,
+	    as multiple top-level windows, or all in the one
+	    window.</P
+></LI
+><LI
+><P
+>	    The help window is now fully indexed and searchable.
+	  </P
+></LI
+><LI
+><P
+>	    The financial calculator, available from the "Tools"
+	    menu, lets you calculate loan repayments and compound
+	    interest easily.
+	  </P
+></LI
+></UL
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN761">Neue Berichte (englisch)</H2
+><P
+>The reporting architecture has changed radically for
+	this release - and so reports are now more informative,
+	flexible, and attractive than ever before.  Some of the
+	improvements and new features include:
+      </P
+><P
+></P
+><UL
+><LI
+><P
+>	    The new gtkhtml "widget" is used for report display.
+	    The new display engine is faster, and produces 
+	    better-looking output.
+	  </P
+></LI
+><LI
+><P
+>	    Reports are now saved from session to session.  
+	    To make this more useful, "rolling reports" with
+	    date ranges specified using symbolic dates such 
+	    as "today" or "beginning of this year" are now
+	    available.
+	  </P
+></LI
+><LI
+><P
+>	    <I
+CLASS="EMPHASIS"
+>Stylesheets</I
+> control report
+	    formatting, allowing you to customize the look
+	    of your report.
+	  </P
+></LI
+><LI
+><P
+>	    Reports now display useful information when 
+	    multiple currencies are involved.
+	  </P
+></LI
+><LI
+><P
+>	    Virtually every individual report has been 
+	    radically improved, with nicer layout, 
+	    closer correspondence with standard accounting
+	    procedures, and radically improved flexibility
+	    and configurability.
+	  </P
+></LI
+><LI
+><P
+>	    Multiple reports can be packed together
+	    into the one window for convenient display
+	    of all the financial information you want,
+	    using the multicolumn view, a special 
+	    "container" report.
+	  </P
+></LI
+><LI
+><P
+>	      Last, but certainly not least, reports can now
+	    be printed.  Yay!
+	    </P
+></LI
+></UL
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN780">Diagramme (englisch)</H2
+><P
+>	One of our most long-awaited features, GnuCash can now
+	display your financial data in attractive bar, pie, and
+	scatter plots.  This feature is provided through the
+	use of the GUPPI plotting tool.
+      </P
+><P
+>	We could talk about the graphs all day, but it's probably
+	more interesting to show you just how good they look:
+      </P
+><P
+><I
+CLASS="EMPHASIS"
+>PICTURES NEEDED!</I
+></P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN786">Online-Abruf (englisch)</H2
+><P
+>GnuCash can get price quotes online, with the 
+	aid of Paul Fenwick's Finance::Quote module.  
+	Finance::Quote continues to add more price sources, 
+	allowing more international users to have more 
+	convenient access to stock prices online.</P
+><P
+>A major improvement of the new version is the
+	ability to get price quotes from within the program 
+	itself, without having to run a helper application.
+	The ability to update price quotes from the command
+	line remains, however.
+      </P
+><P
+>	Mozilla not stable enough for you yet?  Don't like
+	Galeon?  Don't have the libraries installed for 
+	Konqueror?  Well, then, wait until you try GnuCash,
+	the only web browser that also tracks your finances.
+	Seriously, GnuCash can be used to display simple
+	web pages using the "Frame URL" report - 
+	handy for displaying web-based financial
+	information, and particularly in combination with
+	the multicolumn view.
+      </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN791">Wie es weitergeht  (englisch)</H2
+><P
+>GnuCash now supports using Postgres as a backend
+	data store.  While perhaps not so important in a personal
+	finance package, as GnuCash is extended to support 
+	business accounting features database support will 
+	be needed to handle massive datasets.</P
+><P
+>Similarly, an RPC backend exists, which allows you
+	to seperate the engine and interface and have them 
+	running on totally seperate machines.  Developments
+	using this facility to build independent, specific-function
+	clients have already commenced.
+      </P
+><P
+>Budgeting and scheduled transactions are perhaps 
+	GnuCash's most requested features.  Unfortunately,
+	they didn't make it this time around, but developers
+	are already working hard towards adding this support,
+	to go into the main development verison soon after the
+	1.6 release, for inclusion in the next stable version
+	(which will probably be 2.0).
+      </P
+><P
+>Similarly, more sophisticated automatic handling 
+	of dividend and brokerages for stock tracking began,
+	but didn't make the feature cut this time around.
+	Expect this to be sorted out in the next major release.
+      </P
+><P
+>This is just a taste of what's coming in the future.
+	However, with GnuCash, <I
+CLASS="EMPHASIS"
+>you</I
+> are in 
+	a position to get what you want.  The GnuCash developers
+	are easy to contact (see the webpage for more details),
+	and love to hear how GnuCash can be improved.  If you are
+	a programmer, consider contributing to GnuCash development
+	and helping to turn GnuCash into the program that you want
+	it to be.
+      </P
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x722.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x799.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Starting to use GnuCash (englisch)</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Änderungen im deutschen Wortschatz</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

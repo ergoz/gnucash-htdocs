@@ -1,0 +1,32 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>9.3. Account Setup</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_capgain.html" title="Chapter 9. Capital Gains"><link rel="previous" href="capgain_value1.html" title="9.2. Estimating Valuation"><link rel="next" href="capgain_example1.html" title="9.4. Example"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">9.3. Account Setup</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="capgain_value1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 9. Capital Gains</th><td width="20%" align="right"> <a accesskey="n" href="capgain_example1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="capgain_accounts1"></a>9.3. Account Setup</h2></div></div><p>As with most accounting practices, there are a number of different
+    ways to setup capital gains accounts. We will present here a general
+    method which should be flexible enough to handle most situations. The
+    first account you will need is an <b>Asset Cost</b> account
+    (<b><tt>GnuCash</tt></b> account type "asset"), which is simply a place where you record
+    the original purchase of the asset. Usually this purchase is accomplished
+    by a transaction from your bank account.</p><p>In order to keep track of the appreciation of the asset, you will
+    need three accounts. The first is an <b>Unrealized Gains</b>
+    asset account in which to collect the sum of all of the appreciation
+    amounts. The Unrealized Gains asset account is balanced by a
+    <b>Unrealized Gains</b> income account, in which all
+    periodic appreciation income is recorded. Finally, another income account
+    is necessary, called a <b>Realized Gains</b> in which you
+    record the actual capital gains upon selling the asset.</p><p>Below is a generic account hierarchy for tracking the appreciation
+    of 2 assets, ITEM1 and ITEM2. The "Assets:Fixed Assets:ITEM1:Cost" accounts are
+    balanced by the "Assets:Current Assets:Savings Account" account, 
+    the "Assets:Fixed Assets:ITEM1:Unrealized Gains"
+    accounts are balanced by the "Income:Unrealized Gains" account (similar for ITEM2).</p><div class="literallayout"><p><br>
+-Assets<br>
+    -Current Assets<br>
+        -Savings Account<br>
+    -Fixed Assets<br>
+        -ITEM1 <br>
+            -Cost<br>
+            -Unrealized Gain<br>
+        -ITEM2<br>
+            -Cost<br>
+            -Unrealized Gain<br>
+-Income<br>
+    -Realized Gains<br>
+    -Unrealized Gains<br>
+  </p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="capgain_value1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="capgain_example1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">9.2. Estimating Valuation </td><td width="20%" align="center"><a accesskey="u" href="chapter_capgain.html">Up</a></td><td width="40%" align="right"> 9.4. Example</td></tr></table></div></body></html>

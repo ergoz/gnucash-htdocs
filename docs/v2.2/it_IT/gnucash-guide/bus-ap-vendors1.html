@@ -1,0 +1,44 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>13.4. Venditore</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_bus_ap.html" title="Capitolo 13. Debiti correnti"><link rel="previous" href="bus-ap-components1.html" title="13.3. Componenti del sistema"><link rel="next" href="bus-ap-bills1.html" title="13.5. Ricevuta"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">13.4. Venditore</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bus-ap-components1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 13. Debiti correnti</th><td width="20%" align="right"> <a accesskey="n" href="bus-ap-bills1.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="bus-ap-vendors1"></a>13.4. Venditore</h2></div></div><p>Un venditore è un singolo o una società dalla quale si acquista uno o più beni o servizi.
+ I venditori devono essere inseriti nel sistema dei debiti correnti.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="bus-ap-vendornew2"></a>13.4.1. Creare un nuovo venditore</h3></div></div><p>Per registrare un nuovo venditore, selezionare la voce di menu <b>Impresa</b> -&gt; 
+ <b>Venditore</b> -&gt; <b>Nuovo venditore</b>.  Si completino
+ le informazioni generali relative al venditore quali il nome della società l'indirizzo, il numero di 
+ telefono e di fax ecc... Di seguito è riportata una lista delle altre voci disponibili: </p><div class="itemizedlist"><ul><li><p><b>Identificazione - Numero venditore</b> - può essere un numero qualsiasi utile 
+ per riferirsi a questo preciso venditore. Il campo può essere lasciato vuoto, nel qual caso un numero verrà assegnato
+ automaticamente.</p></li><li><p><b>Identificazione - Attivo</b> - differenzia i venditori attivi da quelli inattivi. 
+ E' utile quando si hanno molti venditori da cui non ci si rifornisce più e si desidera visualizzare
+ solamente quelli attivi.</p></li><li><p><b>Indirizzo di pagamento - Nome</b> - è il nome della persona che deve
+ ricevere il pagamento.</p></li><li><p><b>Note</b> - permette di inserire qualsiasi nota aggiuntiva relativa al
+ venditore. Utile per per registrare, per esempio, i nomi dei contatti all'interno della società
+ di fornitura.</p></li><li><p><b>Informazioni sul pagamento - Valuta</b> - specifica la valuta predefinita
+ per il pagamento.</p></li><li><p><b>Informazioni sul pagamento - Termini</b> - specifica i termini di pagamento predefiniti
+ per questo venditore. I termini di pagamento devono essere impostati preventivamente utilizzando la funzione
+disponibile in <b>Impresa</b> -&gt; <b>Termini di pagamento</b>.</p></li><li><p><b>Informazioni sul pagamento - Imposte incluse</b> - permette di definire se le
+ tasse sono incluse nelle ricevute che si ricevono dal venditore. E' possibile scegliere fra: 
+          <div class="itemizedlist"><ul><li><p><b>sì</b> significa che le tasse sono già
+                incluse negli importi della ricevuta.</p></li><li><p><b>no</b> significa che le tasse non sono incluse.</p></li><li><p><b>usa globale</b> utilizza le impostazioni globali
+                configurate nelle preferenze globali accessibili dal menu
+                <b>Modifica</b> -&gt;
+                <b>Preferenze</b>.</p></li></ul></div></p></li><li><p><b>Informazioni sul pagamento - Tabella imposte</b> - permette di scegliere una 
+ tabella delle imposte predefinita da applicare alle ricevute di questo venditore. La tabella delle imposte
+ deve prima essere creata utilizzando la voce del menu <b>Impresa</b> -&gt; 
+ <b>Tabella imposte</b>.</p></li></ul></div><p>La finestra di registrazione di un nuovo venditore assomiglia a questa:</p><div class="screenshot"><div class="mediaobject"><img src="figures/bus_ap_vendornew.png" alt="Finestra di registrazione di un nuovo venditore"><div class="caption"><p>Finestra di registrazione di un nuovo venditore
+	       </p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="bus-ap-vendorfind2"></a>13.4.2. Cercare e modificare un venditore</h3></div></div><p>Per cercare un venditore esistente utilizzare la finestra <b>Impresa</b> 
+ -&gt; <b>Venditore</b> -&gt; <b>Trova venditore</b>. E' poi sufficiente 
+ selezionare un venditore dalla lista delle voci trovate per Visualizzarlo 
+ o Modificarlo. Questa finestra viene anche visualizzata per selezionare un venditore
+ quando si crea una ricevuta e si procede al pagamento.</p><div class="screenshot"><div class="mediaobject"><img src="figures/bus_ap_vendorfind.png" alt="Finestra di ricerca del venditore"><div class="caption"><p>Finestra di ricerca del venditore
+	       </p></div></div></div><p>Se dalla ricerca vengono restituiti molti elementi corrispondenti,
+      è possibile filtrare i risultati eseguendo una ulteriore ricerca tra questi
+      ultimi. Il gruppo dei risultati attuali viene analizzato quando è selezionata
+      l'opzione <b>Perfeziona la ricerca attiva</b>. GnuCash rende
+      disponibile questa opzione solamente dopo che è stata eseguita con successo la
+      ricerca iniziale.</p><p>Se il venditore che si sta cercando non è stato trovato con il criterio di
+      ricerca inserito, è possibile cambiare il criterio di ricerca  e selezionando l'opzione
+      <b>Nuova ricerca</b> seguita dal pulsante Trova.
+      Il passo più importante è la selezione dell'opzione <b>Nuova ricerca</b>.
+      Se il venditore non è tra i risultati della ricerca originale e si effettua una ricerca 
+      tra i risultati ottenuti, il venditore non verrà trovato anche se il criterio di 
+      ricerca è stato cambiato.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Per visualizzare una lista dei venditori attivi, si imposti il criterio di ricerca
+ a "corrisponde all'espressione regolare" e si inserisca un singolo punto "." nel campo del testo
+ da ricercare. Assicurarsi che non sia selezionata l'opzione <b>Cerca solo tra i dati selezionati</b>,
+ poi premere Trova. L'espressione regolare "." significa trovare tutto.</p></td></tr></table></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bus-ap-components1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="bus-ap-bills1.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">13.3. Componenti del sistema </td><td width="20%" align="center"><a accesskey="u" href="chapter_bus_ap.html">Risali</a></td><td width="40%" align="right"> 13.5. Ricevuta</td></tr></table></div></body></html>

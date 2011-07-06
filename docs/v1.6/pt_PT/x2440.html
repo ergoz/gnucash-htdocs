@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+> A regra da Contabilidade de Dupla Entrada</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Compreender a Contabilidade de Dupla Entrada"
+HREF="t2417.html"><LINK
+REL="PREVIOUS"
+TITLE="Porque Utilizar a Contabilidade de Dupla Entrada?"
+HREF="x2435.html"><LINK
+REL="NEXT"
+TITLE="Utilizar a Dupla Entrada no GnuCash"
+HREF="x2462.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x2435.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Compreender a Contabilidade de Dupla Entrada</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x2462.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-DOUBLEENTRYRULE">A regra da Contabilidade de Dupla Entrada</H1
+><P
+>Numa transacção de dupla entrada, uma quantia igual de dinheiro é
+    sempre transferida de uma conta (ou grupo de contas) para outra
+    conta (ou grupo de contas). Os contabilistas utilizam os termos
+    <I
+CLASS="EMPHASIS"
+>débito</I
+> e <I
+CLASS="EMPHASIS"
+> crédito</I
+> para
+    descrever se o dinheiro está a ser transferido <I
+CLASS="EMPHASIS"
+>    para</I
+> ou <I
+CLASS="EMPHASIS"
+>de</I
+> uma conta. </P
+><P
+> O montante é registado na coluna do débito, que é a coluna da
+    esquerda, quando está a ser transferido <I
+CLASS="EMPHASIS"
+>para</I
+>
+    uma conta. O montante é registado na coluna do crédito, que é a
+    coluna da direita, quando está a ser transferido <I
+CLASS="EMPHASIS"
+>de
+    </I
+> uma conta. Para qualquer transacção, o total dos
+    débitos (entradas na coluna da esquerda) tem de ser igual ao
+    total dos créditos (entradas na coluna da direita).
+
+    </P
+><P
+> Você não tem de utilizar os termos "débito" e "crédito" para
+    utilizar o GnuCash. Os registos do GnuCash usam por defeito títulos
+    de colunas "comuns" tais como "depósito" e "levantamento"; se estiver
+    mais à vontade com esses cabeçalhos, utilize-os. Se preferir os cabeçalhos
+    de débito e crédito, pode modificar os cabeçalhos das colunas para
+    "utilizar nomes contabilísticos" na opção de menu
+    <B
+CLASS="GUIMENUITEM"
+>Definições|Preferências...Geral</B
+>.</P
+><P
+>O conceito principal a reter, independentemente da terminologia, 
+    é que todas as transacções involvem a transferência de um montante de 
+    dinheiro de uma origem para um destino. Por exemplo, se passar um cheque 
+    de 15000$ para supermercado, você regista-o como uma transferência de 
+    15000$ da conta à ordem para a conta de despesas alimentares. Em termos 
+    contabilisticos, isto é um crédito da conta à ordem e um débito das 
+    despesas alimentares:</P
+><P
+CLASS="LITERALLAYOUT"
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Débito&nbsp;&nbsp;Alimentação&nbsp;&nbsp;&nbsp;&nbsp;15000<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crédito&nbsp;Conta&nbsp;Ordem&nbsp;&nbsp;&nbsp;&nbsp;15000</P
+><P
+>Então e o cheque do ordenado? Você pode verificar que o dinheiro entrou 
+      na conta bancária, mas de onde veio? Na dupla entrada, o dinheiro tem de 
+      ter uma origem, e a origem do seu cheque do ordenado é uma conta de 
+      receitas. Assim, para introduzir o depósito de um cheque de ordenado de 
+      250.000$ na sua conta à ordem, você regista uma transferência de 250.000$ 
+      de uma conta de receitas para a conta à ordem. Em termos contabilísticos, 
+      isto é um crédito às receitas e um débito à conta bancária:</P
+><P
+CLASS="LITERALLAYOUT"
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Débito&nbsp;&nbsp;Conta&nbsp;Ordem&nbsp;&nbsp;250.000<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crédito&nbsp;Receita&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;250.000</P
+><TABLE
+CLASS="SIDEBAR"
+BORDER="1"
+CELLPADDING="5"
+><TR
+><TD
+><DIV
+CLASS="SIDEBAR"
+><A
+NAME="AEN2456"><P
+><B
+>Conhecimento de causa:</B
+></P
+><P
+>        Os extractos bancários são muitas vezes escritos na prespectiva 
+        do banco, que é exactamente <I
+CLASS="EMPHASIS"
+>oposta</I
+> à nossa. 
+        Quando você deposita aquele cheque de ordenado no banco, você 
+        está a dar dinheiro ao banco, prometendo este devolver-lho um 
+        dia. Assim, para o banco, o deu depósito é um empréstimo; é 
+        dinheiro que lhe devem. Visto esse dinheiro ser uma 
+        <I
+CLASS="EMPHASIS"
+>origem</I
+> de fundos para o banco, eles mostram 
+        um <I
+CLASS="EMPHASIS"
+>crédito</I
+> na sua conta bancária quando você 
+        realiza um depósito.</P
+></DIV
+></TD
+></TR
+></TABLE
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x2435.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x2462.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Porque Utilizar a Contabilidade de Dupla Entrada?</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t2417.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Utilizar a Dupla Entrada no GnuCash</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

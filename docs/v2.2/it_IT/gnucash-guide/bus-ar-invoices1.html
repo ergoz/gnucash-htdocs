@@ -1,0 +1,135 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>12.6. Fattura</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_bus_ar.html" title="Capitolo 12. Crediti correnti"><link rel="previous" href="bus-ar-customers1.html" title="12.5. Cliente"><link rel="next" href="bus-ar-jobs1.html" title="12.7. Lavori per un cliente"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">12.6. Fattura</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bus-ar-customers1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 12. Crediti correnti</th><td width="20%" align="right"> <a accesskey="n" href="bus-ar-jobs1.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="bus-ar-invoices1"></a>12.6. Fattura</h2></div></div><p>Una fattura è il documento cartaceo che si invia a un cliente per
+    richiedere il pagamento di prodotti o servizi prestati. GnuCash è in grado di
+    creare e di registrare le fatture.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="bus-ar-invoicenew2"></a>12.6.1. Creare una nuova fattura</h3></div></div><p>Per inviare una fattura a un cliente occorre prima crearla. Per
+      farlo, utilizzare la voce del menu <b>Impresa</b> -&gt;
+      <b>Cliente</b> -&gt; <b>Nuova fattura</b>. La
+      finestra per la nuova fattura deve essere debitamente compilata:</p><div class="itemizedlist"><ul><li><p><b>Informazioni fattura - ID fattura</b> - il
+          numero identificativo di questa fattura. Rappresenta il numero
+          interno della fattura. Il campo può essere lasciato vuoto, 
+          nel qual caso un numero verrà assegnato 
+          automaticamente.</p></li><li><p><b>Informazioni fattura - Data di emissione</b> - la
+          data in cui la fattura è stata creata.</p></li><li><p><b>Informazioni di pagamento - Cliente</b> - il
+          cliente destinato a ricevere la fattura. Utilizzare il pulsante
+          <b>Seleziona</b> per accedere alla finestra di <b>Trova
+          cliente</b> descritta nelle sezioni precedenti. When
+          you have looked up the customer to be invoiced, click the
+          <b>Select</b> in the search window to select the
+          customer.</p></li><li><p><b>Informazioni di pagamento - Lavoro</b> (opzionale) -
+          associa la fattura al lavoro relativo a un cliente. I lavori relativi ai clienti
+          sono descritti nella sezione successiva.</p></li><li><p><b>Informazioni di pagamento - ID pagamento</b> - questo è
+          il codice d'ordine d'acquisto del cliente o qualsiasi altro "numero di riferimento
+          del cliente". Questo numero dovrebbe essere utilizzato per identificare le
+          fatture emesse per questo cliente (e lavoro, se ne è stato impostato uno).</p></li><li><p><b>Informazioni di pagamento - Termini</b> - l'accordo
+          sul pagamento di questa fattura. Viene visualizzato un elenco di elementi
+          registrati nella lista a comparsa. Se è stato specificato un valore 
+          predefinito per il cliente selezionato, il campo sarà impostato
+          automaticamente con questo.</p></li></ul></div><div class="screenshot"><div class="mediaobject"><img src="figures/bus_ar_invoicenew.png" alt="Creazione di una nuova fattura"><div class="caption"><p>Creazione di una nuova fattura </p></div></div></div><p>Quando si preme il pulsante <b>OK</b>, verrà aperta
+       la finestra di <b>Modifica fattura</b>.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="bus-ar-invoiceedit2"></a>12.6.2. Modificare una fattura</h3></div></div><p>Dalla finestra di modifica della fattura è possibile inserire un elenco
+      dettagliato di oggetti venduti con questa fattura, in maniera simile a come
+      vengono inserite le informazioni di una transazione nel registro del conto.</p><div class="screenshot"><div class="mediaobject"><img src="figures/bus_ar_invoiceedit.png" alt="Finestra di modifica della fattura"><div class="caption"><p>Finestra di modifica della fattura </p></div></div></div><p>Sono presenti 15 colonne nell'area delle <b>Voci della 
+      fattura</b>:</p><div class="itemizedlist"><ul><li><p><b>Data</b> - La data in cui l'oggetto è stato
+          venduto.</p></li><li><p><b>Fatturato?</b> - <b>X</b> significa
+            che l'oggetto è riportato in questo fattura, mentre un riquadro vuoto indica che l'oggetto
+            non è riportato nella fattura. Procedendo alla riga successiva l'opzione verrà abilitata 
+            automaticamente.</p></li><li><p><b>Descrizione</b> (opzionale) - il nome dell'oggetto
+          o servizio.</p></li><li><p><b>Operazione</b> (opzionale) - è un campo definibile 
+          dall'utente. Si possono inserire qui le informazioni sul centro di costo o 
+          utilizzare una delle tre operazioni predefinite: "Ore", "Materiale" o 
+          "Progetto".</p></li><li><p><b>Conto delle entrate</b> - selezionare il conto
+          delle entrate che verrà accreditato.</p></li><li><p><b>Quantità</b> - il numero di oggetti identici 
+          venduti.</p></li><li><p><b>Prezzo unitario</b> - è il prezzo per unità del 
+          singolo oggetto.</p></li><li><p><b>Tipo di sconto</b> - permette di impostare la tipologia
+          di sconto:</p><div class="itemizedlist"><ul><li><p><b>€</b> significa <b>Sconto</b>
+              in valore monetario</p></li><li><p><b>%</b> significa <b>Sconto</b>
+              in percentuale.</p></li></ul></div><p>Premendo sul campo è possibile cambiare l'impostazione tra i tipi
+          disponibili.</p></li><li><p><b>Come scontare</b> - lo sconto può essere calcolato come
+          segue::</p><div class="itemizedlist"><ul><li><p><b>&gt;</b> significa che lo sconto verrà applicato
+              dopo le imposte.</p></li><li><p><b>&lt;</b> significa che lo sconto verrà applicato
+              prima delle tasse.</p></li><li><p><b>=</b> significa che sia lo sconto che le tasse
+              saranno applicate al valore precedente alla tassazione.</p></li></ul></div><p>Cliccando sul campo è possibile cambiare l'impostazione.</p></li><li><p><b>Sconto</b> (opzionale) - è lo sconto totale,
+          in unità monetarie o in percentuale in funzione del <b>Tipo 
+          di sconto</b>. Se lasciato vuoto non verrà applicato alcun
+          tipo di sconto. Se è stato specificato un tipo di sconto predefinito
+          per il cliente, questo campo verrà completato automaticamente per ogni
+          nuovo oggetto.</p></li><li><p><b>Tassabile?</b> - l'oggetto è tassabile?
+          <b>X</b> significa sì, mentre il campo vuoto significa no.
+          Cliccando nel campo, è possibile cambiare l'impostazione del valore tra
+          quelle disponibili.</p></li><li><p><b>Tasse Incluse?</b> - le tasse sono già state incluse
+           nel prezzo unitario? <b>X</b> significa sì, mentre un campo vuoto
+           significa no. Per esempio, se c'è 1 oggetto del valore di €100 con un imposta del
+           5%, allora:</p><div class="itemizedlist"><ul><li><p>Se il campo è vuoto, allora il subtotale = €100 e le imposte =
+              €5.</p></li><li><p>Se il campo contiene la <b>X</b>, allora
+              subtotale = €95,23 e tasse = €4,77.  La formula è: 
+              Subtotale = Totale / (1+aliquota) e Tasse = Totale - Subtotale
+              = Totale - (Totale / (1+aliquota)).
+              </p></li></ul></div></li><li><p><b>Tabella imposte</b> (opzionale) - permette di selezionare 
+          una tabella delle imposte fra quelle disponibili. Se l'oggetto è indicato come
+          tassabile, allora questa tabella è utilizzata per calcolare l'importo della tassa.
+          La tabella imposte specifica la percentuale applicata e i conti addebitati per
+          il pagamento delle tasse.</p></li><li><p><b>Subtotale</b> (non modificabile) - subtotale 
+          calcolato per questo oggetto (meno le tasse).</p></li><li><p><b>Imposte</b> (non modificabile) - è l'importo
+          delle imposte calcolate sull'oggetto.</p></li></ul></div><p>Quando sono state inserite tutte le voci, si può
+      <b>Emettere</b> e stampare la fattura.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="bus-ar-invoicepost2"></a>12.6.3. Emettere una fattura</h3></div></div><p>Quando è terminata la fase di modifica di una fattura e si è pronti a stamparla, 
+      è necessario <b>Emettere</b> la fattura. Non è necessario emettere la fattura 
+      immediatamente; in fatti, la fattura deve essere emessa solamente quando si è pronti a 
+      stamparla. L'emissione di una fattura prevede l'inserimento automatico delle transazioni
+      necessarie nel conto dei crediti correnti.</p><p>Viene visualizzata la finestra di emissione della fattura e viene
+      richiesto di inserire le seguenti informazioni:</p><div class="screenshot"><div class="mediaobject"><img src="figures/bus_ar_invoicepost.png" alt="Finestra di emissione della fattura"><div class="caption"><p>Finestra di emissione della fattura </p></div></div></div><div class="itemizedlist"><ul><li><p><b>Data di emissione</b> - specifica la data con cui
+          verranno inserite le transazioni nel conto per i crediti correnti.</p></li><li><p><b>Data di scadenza</b> - è la data in cui si è convenuto
+          di ricevere il pagamento.</p><div class="itemizedlist"><ul><li><p>Se sono stati specificati dei termini di pagamento alla creazione della
+              fattura, la data è calcolata in accordo ai termini selezionati e il campo
+              non è modificabile.</p></li><li><p>Se non è stata impostata alcuna data di scadenza, si inserisca
+              ora in questo campo.</p></li></ul></div></li><li><p><b>Descrizione</b> - è un campo opzionale.
+            Quando le transazioni relative alle fatture verranno inserite nel 
+            registro del conto per i crediti correnti, il testo scritto in questa
+            casella verrà visualizzato nel campo del promemoria delle
+            transazioni.</p></li><li><p><b>Conto di emissione</b> - selezionare il conto
+        dei crediti correnti in cui verranno inserite le transazioni. Il conto
+        può essere selezionata da un elenco dei conti esistenti per i crediti 
+        correnti.</p></li><li><p><b>Accumulare le suddivisioni</b> - determina se gli 
+          elementi di una fattura che trasferiscono verso lo stesso conto devono essere
+          combinati in una singola suddivisione per quel conto o inseriti individualmente.
+          Per una semplice fattura relativa alla vendita di chiodi e martello, l'impostazione
+          opera nel seguente modo:</p><div class="itemizedlist"><ul><li><p>Attivata (le suddivisioni verranno accumulate) - verrà registrato un
+              singolo movimento di €575,00 dal conto Entrate:Vendite.</p></li><li><p>Non attivata - la transazione creata nel conto dei crediti correnti,
+              mostre due distinti trasferimenti dal conto Entrate:Vendite di €100,00 e
+              €475,00. I campi del promemoria nelle suddivisioni indicheranno rispettivamente
+              chiodi e martello (cioè la descrizione dell'oggetto inserita nella 
+              fattura).</p></li></ul></div></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="bus-ar-invoicefind2"></a>12.6.4. Trovare una fattura</h3></div></div><p>Per trovare una fattura esistente, utilizzare l'applicazione raggiungibile in
+      <b>Impresa</b> -&gt; <b>Cliente</b> -&gt; 
+      <b>Trova fattura</b>. Dai risultati della ricerca è possibile
+      selezionare un fattura da modificare o da visualizzare.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Prima di poter modificare una fattura emessa, sarà necessario
+        <b>Annullarla</b>.</p></td></tr></table></div><p>Uno degli obiettivi di progetto del sistema di gestione dei crediti correnti
+      presente in GnuCash, era quello di fornire diverse strade per raggiungere una stessa 
+      posizione a seconda del metodo con cui si idealizza il problema :</p><div class="itemizedlist"><ul><li><p>si può cercare prima il cliente, e poi visualizzare le fatture
+          a esso associate;</p></li><li><p>si può cercare una fattura per numero o per nome della società;</p></li><li><p>si possono visualizzare le fatture associate con un "lavoro cliente".</p></li></ul></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="bus-ar-invoiceprint2"></a>12.6.5. Stampare una fattura</h3></div></div><p>Dopo aver emesso una fattura, può essere utile stamparla e
+      inviarla al cliente. Per stampare una fattura, utilizzare la voce
+      del menu principale <b>File</b> -&gt;
+      <b>Stampa fattura</b>.</p><p>Un esempio del risultato di stampa della fattura predefinita
+      in GnuCash è mostrato di seguito.</p><div class="screenshot"><div class="mediaobject"><img src="figures/bus_ar_invoiceprint.png" alt="Risultato di stampa della fattura"><div class="caption"><p>Risultato di stampa della fattura </p></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">E' possibile modificare l'aspetto della fattura inserendo,
+        per esempio, il logo della società ecc... Per le istruzioni
+        su come farlo, vedere la <a href="bus-ar-invoicechange.html" title="12.9. Cambiare l'aspetto della fattura">Sezione 12.9</a>.</p></td></tr></table></div><p>Le fatture possono essere anche stampate dalla finestra principale 
+      selezionando la voce del menu <b>Resoconti</b> -&gt; 
+      <b>Resoconto impresa</b> -&gt; <b>Fattura stampabile</b>. 
+      La finestra del resoconto avviserà che non è stata selezionata una
+      fattura valida per la stampa. Per selezionarla procedere come segue:</p><div class="orderedlist"><ol type="1"><li><p>Utilizzare il pulsante <b>Opzioni</b> della barra 
+          degli strumenti o selezionare <b>Modifica</b> -&gt; 
+          <b>Opzioni resoconto</b> dal menu principale.</p></li><li><p>Selezionare la linguetta <b>Generale</b> della
+          finestra delle opzioni del resoconto.</p></li><li><p>Premere il pulsante <b>Seleziona</b> a fianco del
+          campo del <b>Numero fattura</b>.</p></li><li><p>Cercare la fattura come al solito.</p></li></ol></div><p>E' inoltre possibile stampare le fatture direttamente dalla finestra
+      della procedura di pagamento. Consultare la <a href="bus-ar-payment1.html" title="12.8. Procedere al pagamento">Sezione 12.8</a> 
+      per le istruzioni su come procedere.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="bus-ar-invoicestarting2"></a>12.6.6. Assegnare un numero iniziale alla fattura</h3></div></div><p>Non c'è un modo semplice per assegnare automaticamente un numero
+      iniziale a una fattura. GnuCash parte con il numero 1 e ne incrementa poi 
+      il valore. E' possibile inserire manualmente un numero di fattura nella
+      casella di testo ogni volta che viene creata un nuova fattura, ma questa
+      operazione può essere ripetitiva e prima o poi si arriverà a inserire dei 
+      numeri duplicati.</p><p>Se si ritiene necessario, è possibile cambiare il numero iniziale 
+      della fattura; non è attualmente fornita un'interfaccia grafica per 
+      questa operazione, si deve infatti modificare il file dei dati XML. 
+      La relativa voce si trova nella sezione "counters" nella parte iniziale
+      del file. Il file modificato deve poi essere riaperto in GnuCash.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">GnuCash permette di abilitare la compressione dei file. Disabilitare
+        questa opzione e salvare il file prima di modificarlo. Per abilitare o
+        disabilitare la compressione andare in <b>Modifica</b> 
+        -&gt; <b>Preferenze</b>, aprire la linguetta
+        <b>Generali</b> e selezionare o deselezionare l'opzione
+        <b>Comprimi file</b>.</p></td></tr></table></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bus-ar-customers1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="bus-ar-jobs1.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">12.5. Cliente </td><td width="20%" align="center"><a accesskey="u" href="chapter_bus_ar.html">Risali</a></td><td width="40%" align="right"> 12.7. Lavori per un cliente</td></tr></table></div></body></html>

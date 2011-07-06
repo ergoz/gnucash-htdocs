@@ -1,0 +1,295 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Utilizar a Dupla Entrada no GnuCash</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Compreender a Contabilidade de Dupla Entrada"
+HREF="t2417.html"><LINK
+REL="PREVIOUS"
+TITLE=" A regra da Contabilidade de Dupla Entrada"
+HREF="x2440.html"><LINK
+REL="NEXT"
+TITLE="GnuCash e o EURO"
+HREF="t2497.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x2440.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Compreender a Contabilidade de Dupla Entrada</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t2497.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-DOUBLEUSE">Utilizar a Dupla Entrada no GnuCash</H1
+><P
+>Vamos analisar um exemplo que aplica a contabilidade de dupla entrada à utilização 
+        do GnuCash. Vamos registar o depósito de um cheque de ordenado de 250.000$. </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN2465">Criar Contas</H2
+><P
+>          Para registar o depósito do ordenado, tem primeiro de criar 
+          duas contas. A primeira conta é o depósito à ordem. Clique 
+          no botão <B
+CLASS="GUIBUTTON"
+>Nova</B
+> na barra de ferramentas 
+          da janela principal para criar a nova conta, depois introduza 
+          os seguintes detalhes de conta na janela que surge:
+
+<P
+CLASS="LITERALLAYOUT"
+>&nbsp;Nome&nbsp;Conta:&nbsp;&nbsp;"À&nbsp;Ordem"<br>
+&nbsp;Tipo&nbsp;Conta:&nbsp;&nbsp;Seleccione&nbsp;"Bancária"<br>
+&nbsp;Conta&nbsp;Pai&nbsp;:&nbsp;&nbsp;Seleccione&nbsp;"Nova&nbsp;conta&nbsp;de&nbsp;topo"</P
+>
+  </P
+><P
+> Clique "OK" para terminar a definição, depois crie uma segunda conta de 
+        receitas. Clique novamente no botão <B
+CLASS="GUIBUTTON"
+>Nova</B
+> e introduza 
+        os seguintes detalhes na janela:
+
+<P
+CLASS="LITERALLAYOUT"
+>&nbsp;Nome&nbsp;Conta:&nbsp;&nbsp;"Salário"<br>
+&nbsp;Tipo&nbsp;Conta:&nbsp;&nbsp;Seleccione&nbsp;"Receita"<br>
+&nbsp;Conta&nbsp;Pai&nbsp;:&nbsp;&nbsp;Seleccione&nbsp;"Nova&nbsp;conta&nbsp;de&nbsp;topo"</P
+></P
+><TABLE
+CLASS="SIDEBAR"
+BORDER="1"
+CELLPADDING="5"
+><TR
+><TD
+><DIV
+CLASS="SIDEBAR"
+><A
+NAME="AEN2473"><P
+><B
+>Insider knowledge:</B
+></P
+><P
+>    O GnuCash disponibiliza vários tipos de contas, debatidos na secção 
+    <A
+HREF="t860.html"
+>Tipos de Contas</A
+>. Os débitos 
+    aumentam as suas contas de activos e de despesas, enquanto os créditos 
+    aumentam as suas receitas, dívidas e contas de saldos iniciais. As 
+    contas de receitas e despesas são também discutidas em mais detalhe 
+    na secção <A
+HREF="t2813.html"
+>Receitas/Despesas</A
+>.</P
+></DIV
+></TD
+></TR
+></TABLE
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN2478">Criar Transacções</H2
+><P
+>Para criar uma transacção de dupla entrada para o depósito do ordenado:
+
+<P
+></P
+><OL
+TYPE="1"
+><LI
+><P
+> Abra o registo da Conta à Ordem que acabou de criar, clicando duas vezes 
+                no nome da conta na janela principal.
+      </P
+></LI
+><LI
+><P
+>Prima Tab até chegar ao campo Descrição e introduza "Depósito de Ordenado".
+
+    </P
+></LI
+><LI
+><P
+>Prima Tab até ao campo de Transferir e seleccione a conta de Salário no menu 
+                de lista de selecção.
+
+    </P
+></LI
+><LI
+><P
+> Prima Tab até à coluna de Depósito e introduza "250000", depois prima "Enter" 
+                para registar a transacção. Agora a sua conta à ordem mostra uma 
+                entrada a débito de 250.000$.
+    </P
+></LI
+><LI
+><P
+>Seleccione a transacção novamente e clique no botão "Saltar" na 
+                barra de ferramentas pata ver o efeito da transacção 
+                na conta de Salário. Note que na conta de Salário, tem 
+                agora uma entrada a crédito coincidente no valor de 250.000$ 
+                que o GnuCash introduziu automaticamente por si.
+    </P
+></LI
+></OL
+>
+    </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN2492">Modificar Transacções</H2
+><P
+>        E se desejasse modificar esta transacção para aumentar o depósito 
+        do ordenado para 300.000$? Para <I
+CLASS="EMPHASIS"
+>modificar</I
+> uma 
+        transacção de dupla entrada, basta seleccionar a transacção em 
+        qualquer registo em que apareça, realizar as suas modificações e 
+        gravar a transacção. Neste caso, pode ou editar a transacção no 
+        registo da Conta à Ordem ou no registo da conta de Salário. Qualquer 
+        modificação efectuada será automaticamente reflectida em ambas as 
+        contas e em todas as janelas que mostrem a transacção.
+    </P
+><P
+>        Para modificar a conta de transferência, simplesmente seleccione 
+        uma nova conta da lista de selecção. Quando gravar a transacção, 
+        esta alteração de conta será reflectida em todas as contas afectadas. 
+        Da mesma forma, quando uma transacção de dupla entrada é apagada, as 
+        entradas são apagadas de todas as contas afectadas e os saldos são 
+        automaticamente recalculados para essas mesmas contas.
+
+      </P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x2440.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t2497.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>A regra da Contabilidade de Dupla Entrada</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t2417.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>GnuCash e o EURO</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,433 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Gráfico de Cuentas y Cuentas Numeradas</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual de usuario de Gnucash, contabilidad doméstica Gnu"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Configuración"
+HREF="t2530.html"><LINK
+REL="NEXT"
+TITLE=" Ejemplo de Gráfico de Cuentas"
+HREF="x2604.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual de usuario de Gnucash, contabilidad doméstica Gnu</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t2530.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x2604.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN2553">Gráfico de Cuentas y Cuentas Numeradas</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Tabla de contenidos</B
+></DT
+><DT
+><A
+HREF="t2552.html#AEN2555"
+>Gráfico de Cuentas</A
+></DT
+><DT
+><A
+HREF="x2604.html"
+>Ejemplo de Gráfico de Cuentas</A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN2555">Gráfico de Cuentas</H1
+><P
+>    </P
+><P
+>Normalmente las cuentas se agrupan como un árbol, en formato
+    jerárquico.
+
+    </P
+><P
+>La rama principal representa la categoría o grupo, mientras
+    que las ramas secundarias del árbol expresan las cuentas
+    bancarias individuales o categorías de gastos.
+
+    </P
+><P
+>Cuando un sumario (en forma de listado) se requiere, normalmente
+    sólo la rama principal se muestra en el listado, en lugar de las
+    cuentas individuales. Por ejemplo, un gráfico de cuentas podría
+    ser como el siguiente:
+<TT
+CLASS="LITERAL"
+><P
+CLASS="LITERALLAYOUT"
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gastos<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+--310&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gastos&nbsp;de&nbsp;la&nbsp;Vivienda<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;+--311&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cerveza<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;+--312&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cable<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+--320&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gastos&nbsp;del&nbsp;Negocio<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;+--321&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Disquetes&nbsp;de&nbsp;8&nbsp;pulgadas<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;:</P
+></TT
+>
+
+    </P
+><P
+>Observe que las cuentas no solamente tienen nombres; tiene también
+    <I
+CLASS="EMPHASIS"
+>    códigos,</I
+> para proporcionar una <I
+CLASS="EMPHASIS"
+>ordenación.</I
+>
+    Cuando se generar un listado, la <A
+NAME="SORTORDER"
+></A
+>ordenación
+    se determina por la numeración.
+
+    </P
+><P
+>Una jerarquía acurada generalmente tiene las cuentas "detalle"
+    con número que no acaban con cero, cuando los nodos padres
+    incrementan los ceros al final. Por ejemplo, las cuentas de
+    "caja" se pueden ordenar de forma lógica como:
+
+    <P
+></P
+><UL
+><LI
+><P
+>        Asientos: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>100</PRE
+></TD
+></TR
+></TABLE
+> 
+
+        <P
+></P
+><UL
+><LI
+><P
+>            Caja: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>110</PRE
+></TD
+></TR
+></TABLE
+> 
+
+            <P
+></P
+><UL
+><LI
+><P
+>Caja en cheques: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>111</PRE
+></TD
+></TR
+></TABLE
+>
+
+              </P
+></LI
+><LI
+><P
+>Caja en caja fuerte: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>112</PRE
+></TD
+></TR
+></TABLE
+>
+
+              </P
+></LI
+><LI
+><P
+>Caja en el dormitorio: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>113</PRE
+></TD
+></TR
+></TABLE
+>
+
+              </P
+></LI
+><LI
+><P
+>Caja de gastos pequeños: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>114</PRE
+></TD
+></TR
+></TABLE
+>
+            </P
+></LI
+></UL
+>
+          
+
+          </P
+></LI
+><LI
+><P
+>            Asientos de Cuentas Bancarias <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>120</PRE
+></TD
+></TR
+></TABLE
+> 
+
+            <P
+></P
+><UL
+><LI
+><P
+>Cuenta Corriente <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>121</PRE
+></TD
+></TR
+></TABLE
+>
+
+              </P
+></LI
+><LI
+><P
+>Cuenta Fija <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>122</PRE
+></TD
+></TR
+></TABLE
+>
+            </P
+></LI
+></UL
+>
+          
+        </P
+></LI
+></UL
+>
+        </P
+></LI
+></UL
+>
+
+        </P
+><P
+>Cuando <A
+HREF="t876.html"
+>crea una nueva cuenta</A
+>,
+        GnuCash le ofrece lo que supone un valor apropiado del
+        número de cuenta; que puede cambiar libremente. GnuCash
+        no comprueba la duplicación de los números de cuentas, de
+        todas formas le sugerimos que no la duplique. Los códigos
+        de cuentas son tratados con números de base 36 (números + letras),
+        por lo que si no le bastan los números, puede utilizar letras,
+        de <SPAN
+CLASS="KEYSYM"
+>a</SPAN
+> a <SPAN
+CLASS="KEYSYM"
+>z</SPAN
+>.</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t2530.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Inicio</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x2604.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Configuración</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Ejemplo de Gráfico de Cuentas</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

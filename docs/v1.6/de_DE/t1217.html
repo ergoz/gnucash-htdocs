@@ -1,0 +1,1039 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Depreciation and Capital Gains</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash Online-Handbuch"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE=" Prepaid Expenses"
+HREF="x1186.html"><LINK
+REL="NEXT"
+TITLE="Depreciation of Assets"
+HREF="x1445.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash Online-Handbuch</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x1186.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x1445.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN1218">Depreciation and Capital Gains</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t1217.html#XACC-CAPITALGAINS"
+>Capital Gains - Asset Appreciation</A
+></DT
+><DT
+><A
+HREF="x1445.html"
+>Depreciation of Assets</A
+></DT
+></DL
+></DIV
+><P
+>If you hold assets for business purposes, thier decline in value over
+time can be treated as a deduction for tax purposes, called
+Depreciation.  On the other hand, if you own assets such as real estate,
+collectibles (like paintings), and investments (like shares in
+companies), you may see them appreciate in value over time.  In this
+case, you must recognize -- for tax purposes -- what are called 
+<I
+CLASS="EMPHASIS"
+>Captial Gains</I
+></P
+><P
+>This section discusses the handling of
+    depreciation and appreciation of assets in GnuCash.
+    It also provides a brief introduction to the related tax
+    issues.
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Warning:</I
+> <I
+CLASS="EMPHASIS"
+>Be aware that different countries can
+    have <I
+CLASS="EMPHASIS"
+>substantially</I
+> different tax policies for handling
+    these things; all that this document can really provide is some
+    of the underlying ideas to help you apply your "favorite"
+    tax/depreciation policies.</I
+>
+
+    </P
+><P
+>Appreciation and depreciation of assets are
+    treated somewhat differently:
+
+    <P
+></P
+><UL
+><LI
+><P
+><A
+HREF="t1217.html"
+>Depreciation</A
+> 
+        is <I
+CLASS="EMPHASIS"
+>usually</I
+>
+        recognized (the technical term is <I
+CLASS="EMPHASIS"
+>accrued</I
+>) as an
+        ongoing expense, gradually reducing the value
+        of an asset toward zero. 
+        Depreciation is usually only calculated on assets 
+        used for professional or business purposes, because
+        governments don't generally allow you to claim depreciation
+        deductions on personal assets, and it's pointless to bother
+        with the procedure if it's not deductible.
+      </P
+></LI
+><LI
+><P
+> <A
+HREF="t1217.html#APPR"
+>Capital Gains,</A
+> which could
+        be called <I
+CLASS="EMPHASIS"
+>asset value appreciation,</I
+> are typically
+        <I
+CLASS="EMPHASIS"
+>not</I
+> recognized until 
+        the asset is sold, and at that <I
+CLASS="EMPHASIS"
+>instant,</I
+> the entire
+        gain becomes income. 
+        Governments tend to be <I
+CLASS="EMPHASIS"
+>quite
+        interested</I
+> in taxing capital gains in one manner or
+        another.
+        (As always, there are exceptions. If you hold a bond
+        that pays all of its interest at maturity, tax authorities
+        often require that you recognize interest each year,
+        and refuse this to be treated as a capital gain. The
+        phrases <I
+CLASS="EMPHASIS"
+>accrued interest,</I
+> or <I
+CLASS="EMPHASIS"
+>imputed
+        interest</I
+> are often used to scare those who are
+        sensitive to such things...)
+      
+    </P
+></LI
+></UL
+>
+
+    </P
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-CAPITALGAINS">Capital Gains - Asset Appreciation</H1
+><P
+>    <A
+NAME="APPR"
+></A
+> 
+    </P
+><P
+>Appreciation of assets is generally a tricky
+    matter because, for some sorts of
+    assets, it is difficult to correctly estimate an increase in
+    value <I
+CLASS="EMPHASIS"
+>until you actually sell the asset.</I
+>
+
+    If you invest in securities
+    traded daily on open markets such as stock
+    exchanges, prices are often quite exact, and selling the asset at
+    market prices may be as simple as calling a broker and issuing
+    a <I
+CLASS="EMPHASIS"
+>Market Order.</I
+>
+    On the other hand, homes in your neighborhood are sold
+    somewhat less often.  Such sales tend to involve expending
+    considerable effort, and involve negotiations, which means that
+    estimates are likely to be less precise. Similarly, selling a
+    used automobile involves a negotiation process that makes
+    pricing a bit less predictable.
+
+    </P
+><P
+>Values of collectible objects such as
+    jewelry, works of art, baseball cards, and "Beanie Babies" 
+    are harder to estimate.
+    The
+    markets for such objects are somewhat less open than the
+    securities markets.
+    Worse still are one-of-a-kind assets. Factories often
+    contain presses and dies customized to build a very specific
+    product that cost tens or hundreds of thousands of dollars;
+    this equipment may be <I
+CLASS="EMPHASIS"
+>worthless</I
+> outside of that very
+    specific context. In such cases, several conflicting
+    values might be attached to the asset, <I
+CLASS="EMPHASIS"
+>none</I
+> of them
+    unambiguously correct.
+
+    </P
+><P
+>Let's suppose you buy an asset expected to increase in
+    value, say a Degas painting, and want to track this. (The
+    insurance company will care about this, even if nobody else
+    does.)
+    Properly tracking the continually increasing value of the
+    Degas will require at least three, quite possibly the following
+    four accounts (plus a bank or cash account where the money for
+    the purchase comes from):
+
+    <P
+></P
+><UL
+><LI
+><P
+>An <I
+CLASS="EMPHASIS"
+>Asset Cost</I
+> asset account to track the
+      original cost of the painting.
+
+      </P
+></LI
+><LI
+><P
+>An <I
+CLASS="EMPHASIS"
+>Accrued Unrealized Gains on Asset</I
+> asset
+      account to keep track of increases in value.
+      </P
+></LI
+><LI
+><P
+>An <I
+CLASS="EMPHASIS"
+>Accrued Gain On Asset Income</I
+> income account
+      in which to record the income side of the annual gains in
+      your riches.
+      </P
+></LI
+><LI
+><P
+>A <I
+CLASS="EMPHASIS"
+>Realized Gain On Asset Income</I
+> income account
+      in which to record the realized income when you sell the
+      asset.
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>The <I
+CLASS="EMPHASIS"
+>accrued gains</I
+> likely won't affect your taxable
+    income for <I
+CLASS="EMPHASIS"
+>income</I
+> tax purposes, although it could have
+    some effect on <I
+CLASS="EMPHASIS"
+>property</I
+> taxes.
+
+    </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1271">The Handling of Capital Gains in GnuCash</H2
+><P
+>    </P
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1274">The Acquisition</H3
+><P
+>First, create the <I
+CLASS="EMPHASIS"
+>asset
+    cost account</I
+>. To record the purchase, transfer the sum 
+    you paid for this
+    painting from your bank account to this asset account.
+
+    </P
+><P
+>A month later, you have reason to suspect that the value of
+    your painting has increased by $1200. In order to record this
+    you transfer $1200 from your <I
+CLASS="EMPHASIS"
+>accrued gains on asset</I
+>
+    income account to your asset account.
+    Your main window will resemble this:
+    <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/appr-main1.png"></SPAN
+> 
+
+    </P
+><P
+>and your asset account will resemble this:
+    <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/appr-asset1.png"></SPAN
+> 
+
+    </P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1291">While You Hold the Asset</H3
+><P
+>Asset appreciation is a sort of income but it is 
+      <I
+CLASS="EMPHASIS"
+>not</I
+> cash in hand.
+    The people that got "rich" in 1999 from IPOs of
+    Linux-related companies like Red Hat Software and VA Linux
+    Systems could verify this. They held options or stock that were
+    <I
+CLASS="EMPHASIS"
+>theoretically</I
+> valued at millions of dollars USD.
+    They weren't actually millionaires; the
+    principal participants had to hold their stock for at least
+    six months before selling <I
+CLASS="EMPHASIS"
+>any</I
+> of it. The fact that
+    they <I
+CLASS="EMPHASIS"
+>can't</I
+> sell it means that while it may in theory
+    be worth millions of dollars on paper, there is
+    no way for them to legally <I
+CLASS="EMPHASIS"
+>get</I
+> those
+    millions.  As history showed, those paper fortunes have gotten
+    considerably smaller.
+
+    </P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1299">Selling the Asset</H3
+><P
+>Let's suppose another month later prices for Degas
+    paintings have gone up some more, in your case about $2500, you
+    estimate. You duly record the $2500 as an income like above,
+    then decide to sell the painting.
+
+    </P
+><P
+>Three possibilities arise:
+
+    <P
+></P
+><UL
+><LI
+><P
+>Your optimistic estimate of the painting's value was correct. 
+       The income account is left alone (or perhaps gets
+       transferred from an <I
+CLASS="EMPHASIS"
+>Accrued Gain</I
+> income 
+       to a <I
+CLASS="EMPHASIS"
+>Realized Gain</I
+> income account), and 
+       the recording would appear as follows:
+        <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1308"><P
+><B
+>Table 3. Turning an Accrued Gain into a Realized Gain</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Account</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Amount</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Cash</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$16055</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Painting</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$11000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Realized Gain Income</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$5055</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+        </P
+><P
+>If any amounts had been accrued as <I
+CLASS="EMPHASIS"
+>Accrued
+        Gains,</I
+> the asset amount should be closed out, offset
+        by a <I
+CLASS="EMPHASIS"
+>negative</I
+> value for <I
+CLASS="EMPHASIS"
+>Accrued Gain</I
+>
+        income. If the total that had been accrued was $5000, then
+        the transaction might look like the following:
+
+        <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1329"><P
+><B
+>Table 4. Accrued Gain becomes Realized Loss</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Account</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Amount</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Cash</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$16055</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Painting</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$11000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Accrued Gain Asset</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$5000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Realized Gain Income</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$5055</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Accrued Gain Income</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$5000</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+        </P
+><P
+>Note that the two income accounts offset one another so
+        that the <I
+CLASS="EMPHASIS"
+>current</I
+> income resulting from the
+        transaction is only $55. The remaining $5000 had previously
+        been recognized as <I
+CLASS="EMPHASIS"
+>Accrued Gain Income.</I
+>
+      </P
+></LI
+><LI
+><P
+>You were over-optimistic about the value of the painting. 
+      Instead of the $16055 you thought the painting was worth
+        are only offered $15000. But you still decide to sell,
+        because you value $15000 more than you value the
+        painting.
+        The numbers change a little bit, but not too
+        dramatically.
+
+        <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1357"><P
+><B
+>Table 5. Accrued Gain becomes Realized Gain</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Account</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Amount</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Cash</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$15000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Painting</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$11000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Accrued Gain Asset</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$5000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Realized Gain Income</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$4000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Accrued Gain Income</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$5000</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+        </P
+><P
+>Note that the two income accounts offset one another so
+        that the <I
+CLASS="EMPHASIS"
+>current</I
+> income resulting from the
+        transaction turns out to be a <I
+CLASS="EMPHASIS"
+>loss</I
+> of $1000.
+        That's fine, as you had previously recognized $5000 in
+        income.
+      </P
+></LI
+><LI
+><P
+>You manage to sell your painting for more than you thought
+      in your wildest dreams. 
+      The extra value is, again, recorded as a gain, 
+      <I
+CLASS="EMPHASIS"
+>i.e.</I
+> an income.
+
+        <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1386"><P
+><B
+>Table 6. Accrued Gain Becomes Handsome Realized Gain</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Account</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Amount</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Cash</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$50000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Painting</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$11000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Accrued Gain Asset</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$5000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Realized Gain Income</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-$39000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Accrued Gain Income</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$5000</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+      
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>In practice, it is very important to keep the <I
+CLASS="EMPHASIS"
+>Accrued
+    Gain Income</I
+> separate from the <I
+CLASS="EMPHASIS"
+>Realized Gain
+    Income,</I
+> as the former is likely to be ignored by your tax
+    authorities, who will only care to charge you on the 
+    <I
+CLASS="EMPHASIS"
+>Realized Gain.</I
+>
+
+    </P
+><P
+>Below, we show the second case discussed.
+    <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/appr-main2.png"></SPAN
+>
+     <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/appr-asset2.png"></SPAN
+> 
+
+    </P
+></DIV
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1424">Caution about Valuation</H2
+><P
+>As we see in this example, for non-financial assets, it may
+    be difficult to correctly estimate the ``true'' value of an
+    asset.
+    It is quite easy to count yourself rich based on
+    questionable estimates that do not reflect "money in the
+    bank."
+    </P
+><P
+>When dealing with appreciation of assets,
+
+    <P
+></P
+><UL
+><LI
+><P
+>Be careful with your estimation of values. 
+      Do not indulge in wishful thinking.
+      </P
+></LI
+><LI
+><P
+>Never, ever, count on money you do not have in your bank or
+      as cash. 
+      Until you have actually sold your asset and got the
+      money, any numbers on paper (or magnetic patterns on your
+      hard disk) are merely that.
+      If you could realistically convince a banker to lend you
+      money, using the assets as collateral, that is a pretty
+      reasonable evidence that the assets have value, as lenders
+      are professionally suspicious of dubious overestimations of
+      value.
+      Be aware: all too many companies that appear
+      "profitable" on paper go out of business as a result of
+      running out of <I
+CLASS="EMPHASIS"
+>cash,</I
+> precisely because "valuable
+      assets" were not the same thing as cash.
+      
+    </P
+></LI
+></UL
+>
+
+    </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1434">Taxation of Capital Gains</H2
+><P
+>    </P
+><P
+>Taxation policies vary considerably between countries, so it
+    is virtually impossible to say anything that will be
+    universally useful.
+    However, it is <I
+CLASS="EMPHASIS"
+>common</I
+> for income generated by
+    capital gains to not be subject to taxation until the date that
+    the asset is actually sold, and sometimes not even then.
+
+    North American home owners <I
+CLASS="EMPHASIS"
+>usually</I
+> find that when
+    they sell personal residences, capital gains that occur are
+    exempt from taxation. It appears that other countries treat
+    sale of homes differently, taxing people on such gains. German
+    authorities, for example, tax those gains only if you owned the
+    property for less than ten years.
+
+    </P
+><P
+><A
+HREF="mailto:cbbrowne@hex.net"
+TARGET="_top"
+>I have</A
+> one story
+from my professional tax preparation days where a family sold a farm,
+and expected a <I
+CLASS="EMPHASIS"
+>considerable</I
+> tax bill that turned
+out to be virtually nil due to having owned the property before 1971
+(wherein lies a critical "Valuation Day" date in Canada) and due to it
+being a <I
+CLASS="EMPHASIS"
+>dairy</I
+> farm, with some <I
+CLASS="EMPHASIS"
+>really
+peculiar</I
+> resulting deductions.  
+The point of this story is that while the presentation here is
+fairly simple, taxation often gets terribly complicated...  </P
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x1186.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x1445.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Prepaid Expenses</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Depreciation of Assets</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

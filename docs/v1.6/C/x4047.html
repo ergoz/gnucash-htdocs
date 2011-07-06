@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>The "Accounts" and "Categories" Tabs</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash User Manual"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Importing Quicken Data Into GnuCash"
+HREF="t3948.html"><LINK
+REL="PREVIOUS"
+TITLE='The "Files" Tab'
+HREF="x4040.html"><LINK
+REL="NEXT"
+TITLE="The Account Picker"
+HREF="x4063.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash User Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x4040.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Importing Quicken Data Into GnuCash</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x4063.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="DIALOG-CATEGORIES">The "Accounts" and "Categories" Tabs</H1
+><P
+>    </P
+><P
+>Each line in the Accounts tab display represents a mapping from
+a Quicken account to a GnuCash account.  Similarly, the Categories tab
+display shows mappings from Quicken categories to GnuCash
+accounts. Only QIF accounts referenced by one or more transaction
+records are displayed.  The name of the GnuCash account is displayed
+in "full name" format, including the names of all parent accounts
+separated by your default separator character (generally ":").
+
+    </P
+><P
+>The first thing to check is the column of Quicken account
+names.  Make sure there are no duplicates with slightly-different
+names.  If a QIF transaction makes a transfer to [My Checking], and
+you imported a file called my-checking.qif, you might have one account
+entry for "my checking" and one for "My Checking".  If these are the
+same account, you need to go back to the Files tab and reload
+my-checking.qif with the correct Quicken account name, My Checking.
+
+    </P
+><P
+>Once you have all the Quicken accounts making sense, check the
+GnuCash account column.  The default GnuCash account for a given
+Quicken account is determined by a fallback procedure which makes the
+best guess it can given the available information.  The guesses that
+are tried are (in order of preference):
+
+    <P
+></P
+><UL
+><LI
+><P
+>Saved mappings from previous import sessions.  Each time you
+click "OK" in the import dialog, the mappings that you have selected
+are saved for the next time you import files.  At the moment, the file
+is always called ~/.gnucash/qif-accounts-map.  If you get some weird
+default mappings (for instance, if you change an account name and the
+importer wants to keep creating a new account with the old name) just
+delete this file.  It's on my wishlist to make this work a little
+more smoothly.
+
+      </P
+></LI
+><LI
+><P
+>Similar accounts from your existing GnuCash account tree. 
+"Similar" means that the account types are compatible and the names 
+could reasonably be assumed to refer to the same thing.  Full-path
+exact name matches are preferred most, followed by case-insensitive 
+matches, followed by matches with prepended account parents (i.e. 
+QIF account Visa matches GnuCash account Credit Cards:Visa), followed
+by various substring matches.  If you think of a good heuristic
+for this, let me know. 
+
+      </P
+></LI
+><LI
+><P
+>New account.  The name of the new account is currently just
+the same as the name of the Quicken account; again, if you think of a
+good heuristic to make this better let me know.  I've thought about
+making it look for subtrees to insert into (if all existing credit
+card accounts are children of an account, make the new account a child
+of that account, etc).  On the wishlist.
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>Check both the name of the GnuCash account for each QIF account
+and the type.  If you are unhappy with either, click on the row in the
+display containing the offensive mapping.  You will see the 
+<A
+HREF="x4047.html#DIALOG-PICKER"
+>Account Picker </A
+>dialog which will allow you
+to change it.
+
+<A
+NAME="DIALOG-PICKER"
+></A
+></P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x4040.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x4063.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>The "Files" Tab</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t3948.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>The Account Picker</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

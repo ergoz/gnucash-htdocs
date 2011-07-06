@@ -1,0 +1,238 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Como utilizar a janela de Importação QIF</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Importar Dados do Quicken Para o GnuCash"
+HREF="t3867.html"><LINK
+REL="PREVIOUS"
+TITLE="Introdução ao ficheiro QIF"
+HREF="x3905.html"><LINK
+REL="NEXT"
+TITLE='A Pasta "Ficheiros"'
+HREF="x3959.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x3905.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Importar Dados do Quicken Para o GnuCash</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x3959.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN3942">Como utilizar a janela de Importação QIF</H1
+><P
+>    </P
+><P
+>O guia de "Início Rápido": Para carregar os seus ficheiros, prima 
+o botão "Seleccionar ..." na pasta Ficheiros para encontrar o ficheiro, 
+depois prima o botão "Carregar iIcheiro" no fundo da pasta para o carregar.&#13;</P
+><P
+>Repita isto até que todos os seus ficheiros estejam carregados (leia 
+a explicação abaixo para saber porque deverá carregar todos os ficheiros 
+simultaneamente). Verifique as janelas de Contas e Categorias e efectue 
+correcções, se necessário. Depois prima o grande botão OK.
+
+
+    </P
+><P
+>Porque precisa de carregar todos os ficheiros simultaneamente: 
+      
+    </P
+><P
+>Existem dois tipos diferentes de ficheiros QIF: aqueles que descrevem 
+uma conta e os que descrevem várias contas. Ambos os tipos tentam estar 
+"completos" ao representar todas as transacções que envolvem cada conta que 
+representam. O que isto significa é que se você tiver várias contas no 
+Quicken, com transferências entre elas, as transacções vão surgir em várias 
+contas. Isto significa que se você não conseguir apanhar todas as transacções 
+duplicadas irá acabar por ficar com saldos errados no GnuCash. Isso será 
+um problema.&#13;</P
+><P
+>No sentido de conseguir a melhor replicação possível da sua árvore de 
+contas do Quicken, exporte tudo o conseguir do Quicken e depois importe tudo 
+numa única sessão, quer seja num único ficheiro QIF representando todas as 
+contas em conjunto ou com um ficheiro por conta. A <A
+HREF="x3942.html#DIALOG-FILES"
+>Pasta de FIcheiros</A
+> do importador irá permitir-lhe carregar tantos 
+ficheiros QIF quantos desejar, e certificar-se de que a moeda, nome de conta 
+Quicken, etc. estão correctos para cada uma. O importador consegue fazer um bom 
+trabalho a apanhar referências cruzadas e marca-las.&#13;</P
+><P
+>O importador é programado primariamente em Guile, e pode ser um pouco lento 
+com ficheiros QIF grandes. Carregar Ficheiro demora na minha máquina 5-6 segundos 
+para um ficheiro QIF com cerca de 1000 transacções.
+
+    </P
+><P
+>Uma vez você tendo carregado todos os ficheiros no importador, vá até à 
+<A
+HREF="x3959.html#DIALOG-ACCOUNTS"
+>Pasta de Contas</A
+>, e depois à <A
+HREF="x3966.html"
+>Pasta de Categorias</A
+>, e verifique que 
+o importador irá colocar as suas transacções Quicken no local correcto. Você 
+pode clicar para surgir uma janela e modificar o nome/tipo da conta de destino 
+do GnuCash para qualquer conta QIF. Não tenha medo de modificar estas contas de 
+destino; elas são apenas inferições feitas pelo importador baseadas no nome e 
+tipo da conta QIF. O mapeamento de contas Quicken para contas GnuCash é escrito 
+para um ficheiro de preferências quando primir "OK", pelo que se importar outros 
+ficheiros Quicken que descrevam as mesmas contas não terá de estar novamente a 
+corrigir o importador.
+
+    </P
+><P
+>Certifique-se (especialmente na pasta de Contas) de que os nomes de 
+contas QIF e número de transacções fazem sentido. Se verificar que uma conta 
+QIF é mencionada por dois nomes distintos, certifique-se de que a "Conta QIF" 
+para cada ficheiro na pasta de Ficheiros é o que está à espera. Se a Conta 
+QIF para um ficheiro estiver errada, o importador não será capaz de comparar 
+transferências correctamente e os seus saldos ficarão errados. Se a Conta QIF 
+de um ficheiro estiver errada, seleccione o ficheiro na Pasta de Ficheiros, 
+tire o visto da caixa "Auto", e edite a caixa de texto para conter o nome 
+correcto, depois prima novamente "Carregar Ficheiro". Ser-lhe-á pedido para 
+confirmar a nova leitura do ficheiro e depois estará feito. Volte para a pasta 
+de Contas, veja se isso corrigiu o problema, repetindo se necessário.
+
+    </P
+><P
+>Quanto estiver contente com o mapeamento de contas (verifique-as duas vezes, 
+e não se esqueça de gravar a sua sessão GnuCash primeiro para jogar pelo seguro), 
+então e apenas então prima OK. Se carregar no Cancelar a qualquer momento, as suas 
+contas não serão tocadas.
+
+    </P
+><P
+>Novamente, o importador foi programado principalmente em Guile, e poderá 
+ser um pouco lento com ficheiros QIF grandes. Demora 3-4 segundos a meter 1000 
+transacções no GnuCash num Celeron 433, proporcionalmente mais em processadores 
+mais lentos. Felizmente, você apenas tem de fazer uma importação assim tão 
+grande esporadicamente, pelo que não estou muito preocupado.
+
+      <A
+NAME="DIALOG-FILES"
+></A
+></P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x3905.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x3959.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Introdução ao ficheiro QIF</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t3867.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>A Pasta "Ficheiros"</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

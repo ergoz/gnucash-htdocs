@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>How to use the QIF Import dialog</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash User Manual"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Importing Quicken Data Into GnuCash"
+HREF="t3948.html"><LINK
+REL="PREVIOUS"
+TITLE="Introduction to the QIF file"
+HREF="x3986.html"><LINK
+REL="NEXT"
+TITLE='The "Files" Tab'
+HREF="x4040.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash User Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x3986.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Importing Quicken Data Into GnuCash</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x4040.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN4023">How to use the QIF Import dialog</H1
+><P
+>    </P
+><P
+>The "Quick Start" guide: To load your files, click the "Select ..."
+button in the Files tab to find the file, then click the "Load File"
+button at the bottom of the Files tab to actually load it.&#13;</P
+><P
+>Repeat this until all your files are loaded (read the explanation
+below to see why you should load all your files at the same time).
+Check the Accounts and Categories dialogs and make corrections if
+necessary.  Then click the big OK button.
+
+
+    </P
+><P
+>Why you need to load all your files at the same time: 
+      
+    </P
+><P
+>There are two different types of QIF files: those that describe
+single accounts and those that describe multiple accounts.  Both kinds
+to try to be "complete" in representing all the transactions involving
+each account that they represent.  What this means is that if you have
+multiple Quicken accounts, with transfers between them, transactions
+will show up in multiple accounts.  This means that if you aren't
+smart about catching duplicate transactions you will end up with wrong
+balances in GnuCash.  Definitely a bad thing.&#13;</P
+><P
+>In order to get the best possible replication of your Quicken
+account tree, export everything you can from Quicken and then import
+it all in one session, either as a single QIF file representing all
+your accounts together or as a single file for each account.  The
+importer's <A
+HREF="x4023.html#DIALOG-FILES"
+>Files tab</A
+> will allow you to
+load as many QIF files as you want, and to make sure that the
+currency, Quicken account name, and so on are right for each one.  The
+importer can do a really good job of catching cross-references (which
+and marking them.&#13;</P
+><P
+>The importer is written mostly in Guile, and it can be a little
+slow on large QIF files.  Load File takes 5-6 seconds for a QIF file
+with 1000 or so transactions on my machine.
+
+    </P
+><P
+>Once you have loaded all the files into the importer, go to the
+<A
+HREF="x4040.html#DIALOG-ACCOUNTS"
+>Accounts tab</A
+>, and then to the <A
+HREF="x4047.html"
+>Categories tab</A
+>, and check that the
+importer is going to put your Quicken transactions in the right place.
+You can click to pop up a dialog and change the GnuCash destination
+account name/type for any QIF account.  Don't be afraid to change
+these destination accounts; they are merely guesses by the importer
+based on the name and type of the QIF account.  Mappings of Quicken
+account to GnuCash account are written to a preferences file when you
+click "OK", so if you import other Quicken files describing these same
+accounts you won't have to correct the importer again.
+
+    </P
+><P
+>Make sure (especially in the Accounts tab) that the QIF account
+names and transaction counts make sense to you.  If you see that one
+QIF account is mentioned by two different names, make sure that the
+"QIF Account" for every file in the Files tab is what you meant it to
+be.  If the QIF Account for a file is wrong, the importer won't be
+able to match up transfers correctly and your balances will be wrong.
+If a QIF Account for a file is wrong, select the file in the Files tab,
+unmark the "Auto" checkbox, and edit the text box to contain the right
+name, then click "Load File" again.  You will be asked to confirm a
+reload of the file and then it will be done.  Flip back to the
+Accounts tab, see if that fixed the problem, repeat as necessary.
+
+    </P
+><P
+>When you are happy with the account mappings (double check
+them, and make sure to save your GnuCash session first just to be
+sure), then and only then click OK.  If you click Cancel at any time,
+your accounts will not be touched.
+
+    </P
+><P
+>Again, the importer is written mostly in Guile, and it can be a
+little slow on large QIF files.  It takes 3-4 seconds to stuff 1000
+transactions into GnuCash on a Celeron 433, proportionately longer on
+slower CPUs.  You only have to do a large import like that a few
+times, fortunately, so I'm not too worried about it.
+
+      <A
+NAME="DIALOG-FILES"
+></A
+></P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x3986.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x4040.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Introduction to the QIF file</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t3948.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>The "Files" Tab</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

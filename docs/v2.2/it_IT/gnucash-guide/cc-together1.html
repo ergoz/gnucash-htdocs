@@ -1,0 +1,73 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>6.5. In pratica</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_cc.html" title="Capitolo 6. Carte di credito"><link rel="previous" href="cc-enterpay1.html" title="6.4. Immettere gli addebiti"><link rel="next" href="chapter_loans.html" title="Capitolo 7. Prestiti"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">6.5. In pratica</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="cc-enterpay1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 6. Carte di credito</th><td width="20%" align="right"> <a accesskey="n" href="chapter_loans.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="cc-together1"></a>6.5. In pratica</h2></div></div><p>Ora che sono stati affrontati i concetti di base che stanno dietro le
+    varie transazioni che si devono effettuare per tracciare correttamente la propria
+    carta di credito in GnuCash, si procederà alla illustrazione di un esempio: si
+    effettueranno degli acquisti con la carta di credito, si rimborseranno due di 
+    essi, si pagheranno gli interessi sull'importo non pagato, si riconcilierà
+    il conto della carta e, infine, si effettuerà un pagamento parziale
+    della carta di credito.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="cc-puttoget-openfile"></a>6.5.1. Aprire il file di GnuCash</h3></div></div><p>Si inizi aprendo il file dei dati salvato in precedenza,
+      <tt>gcashdata_5</tt> e lo si salvi come
+      <tt>gcashdata_6</tt> da subito. La finestra principale dovrebbe
+      assomigliare a questa:</p><div class="screenshot"><div class="mediaobject"><img src="figures/cc_accounts.png" alt="Struttura dei conti iniziale"><div class="caption"><p>Struttura dei conti iniziale per il tracciamento di una carta di credito
+          nell'esempio pratico.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="cc-together-purchases2"></a>6.5.2. Acquisti</h3></div></div><p>SI supponga di effettuare degli acquisti con la carta Visa. Si inizi
+      acquistando €25 di cibo dal Greasy Spoon Cafe, €100 di capi di vestiario da
+      Faux Pas Fashions, €25 di carburante da Premium Gasoline, €125 di generi
+      alimentari e casalinghi da Groceries R Us (suddivisi in €85 di alimentari
+      ed €40 in oggetti per la casa) e infine, €60 di articoli per la casa da
+      CheapMart.</p><p>Si ripeta anche l'esercizio del capitolo precedente, acquistando un paio
+      di Jeans per €74.99 il 3 Aprile, e si restituiscano due giorni dopo.</p><p>La finestra del registro per le passività della carta di credito
+      dovrebbe assomigliare a questa:</p><div class="screenshot"><div class="mediaobject"><img src="figures/cc_purchases.png" alt="Acquisti iniziali con la carta di credito"><div class="caption"><p>Acquisti iniziali con la carta di credito.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="cc-together-refund2"></a>6.5.3. Rimborso</h3></div></div><p>Si supponga ora che il 15 Aprile siano stati restituiti i vestiti
+      acquistati l'11 Aprile da Faux Pas Fashions e che essi abbiano restituito 
+      il debito sulla carta di credito. Inserire una transazione per il rimborso
+      della carta di credito per l'intero importo di €100. Si ricordi di utilizzare 
+      lo stesso conto di trasferimento utilizzato per l'acquisto, e inserire
+      l'importo nella colonna del pagamento. GnuCash automaticamente completerà
+      il nome e il conto di trasferimento, ma immetterà anche automaticamente
+      i €100 nella colonna dell'addebito. Sarà necessario reinserire l'importo nella
+      colonna dei pagamenti. La transazione sarà come questa:</p><div class="screenshot"><div class="mediaobject"><img src="figures/cc_refund.png" alt="Transazione per la restituzione dell'oggetto"><div class="caption"><p>Restituzione dei vestiti a Faux Pas Fashions, rimborso sulla
+            carta di credito.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="cc-together-interest2"></a>6.5.4. Interessi</h3></div></div><p>Dopo il mese di acquisti, sfortunatamente, arriva per posta la ricevuta
+       della carta di credito oppure si accede a essa tramite internet. Si scopre che sono
+       stati addebitati €20 di interessi nell'ultimo giorno di Aprile a causa del saldo
+       del mese precedente. Questo viene immesso come una spesa nel conto della
+       carta di credito.</p><div class="screenshot"><div class="mediaobject"><img src="figures/cc_interest.png" alt="Interessi"><div class="caption"><p>Interessi.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="cc-together-reconcile2"></a>6.5.5. Riconciliazione</h3></div></div><p>All'arrivo della ricevuta della carta di credito, si dovrebbe riconciliare
+      il conto della carta di credito con questo documento. Questo avviene utilizzando
+      l'applicazione di riconciliazione fornita da GnuCash. Selezionare il conto della 
+      carta di credito e selezionare <b>Operazioni</b> -&gt;
+      <b>Riconcilia...</b>. Questa procedura di riconciliazione è descritta
+      in dettaglio nella <a href="txns-reconcile1.html" title="4.5. Riconciliazione">Sezione 4.5</a>, ma comunque ne verrà descritto 
+      il processo anche qui. Per questo esempio, si assuma che l'estratto conto della carta
+      di credito sia datato 1 Maggio, con un saldo finale di €455. Si inseriscano questi 
+      valori nella finestra iniziale di riconciliazione come mostrato qui.</p><div class="screenshot"><div class="mediaobject"><img src="figures/cc_reconcile_init.png" alt="Finestra iniziale di riconciliazione"><div class="caption"><p>Finestra iniziale di riconciliazione del conto.</p></div></div></div><p>Durante il processo di riconciliazione, si devono marcare tutte le 
+      transazioni nel conto quando si è certi che esse compaiono sia nel conto
+      di GnuCash, sia nell'estratto conto della carta. In questo esempio, come
+      mostrato nella figura più sotto, c'è una differenza di €300 tra i conti
+      di GnuCash e il documento della carta di credito.</p><div class="screenshot"><div class="mediaobject"><img src="figures/cc_reconcile.png" alt="Finestra principale di riconciliazione"><div class="caption"><p>Finetsra principale di riconciliazione del conto, dove è visualizzata
+            una differenza di €300.</p></div></div></div><p>Dopo alcune analisi, si è scoperto di aver dimenticato di registrare un pagamento
+      effettuato il 5 Marzo in favore della compagnia della carta di credito per un importo di 
+      €300; questo pagamento deve essere inserito con una transazione dal conto corrente bancario
+      al conto della carta di credito. A questo punto il documento della carta di credito e il
+      conto di GnuCash possono essere riconciliati, con un saldo di €455.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="cc-together-payment2"></a>6.5.6. Pagamento</h3></div></div><p>Nell'ipotesi che sia stata completata la riconciliazione del conto
+      della carta di credito, è necessario effettuare un pagamento alla compagnia
+      della carta di credito. In questo esempio, si è in debito di €455 ma si restituiranno
+      solamente €300 ancora per questo mese. Per fare questo, inserire una transazione dal proprio
+      conto bancario al conto della carta di credito, per una somma di €300, che dovrebbe
+      diminuire il saldo della carta di credito portandolo a €155. Il registro del conto
+      della carta di credito dovrebbe ora assomigliare a questo:</p><div class="screenshot"><div class="mediaobject"><img src="figures/cc_payment.png" alt="Riconciliazione e pagamento"><div class="caption"><p>Registro del conto dopo la riconciliazione e il pagamento.</p></div></div></div><p>Tornare alla finestra principale e salvare il file
+      (<tt>gcashdata_6</tt>). La struttura dei conti sta continuamente crescendo 
+      e dovrebbe assomigliare a questa:</p><div class="screenshot"><div class="mediaobject"><img src="figures/cc_final.png" alt="Finestra principale di GnuCash"><div class="caption"><p>Struttura dei conti di GnuCash dopo la riconciliazione e il pagamento.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="cc-puttoget-save"></a>6.5.7. Salvare il file</h3></div></div><p>In ultimo, salvare il file dei dati di GnuCash (<tt>gcashdata_6</tt>).</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="cc-puttoget-reports"></a>6.5.8. Resoconti</h3></div></div><p>Come è stato fatto nel precedente capitolo, si darà uno sguardo ai resoconti per il 
+        <b>Flusso di liquidi</b>, e per le <b>Transazioni</b>.
+      </p><div class="orderedlist"><ol type="1"><li><p>Dapprima si analizzi il resoconto del <b>Flusso di liquidi</b> 
+          per il conto <b>Visa</b> delle passività per il mese di Marzo.</p><p>Select the Flusso di liquidi report from <b>Resoconti</b> -&gt; 
+            <b>Entrate &amp; uscite</b> -&gt; 
+            <b>Flusso di liquidi</b>
+          </p><div class="screenshot"><div class="mediaobject"><img src="figures/cc_CashFlow.png" alt="Resoconto del flusso di liquidi per il mese di Marzo"><div class="caption"><p>Questa immagine mostra il resoconto del flusso di liquidi dopo il
+                <a href="chapter_cc.html" title="Capitolo 6. Carte di credito">Capitolo 6. Carte di credito</a>.</p></div></div></div></li><li><p>Si controlli ora il corrispondente resoconto delle transazioni per il conto
+          Visa.
+          </p><p>Selezionare il resoconto delle transazioni da <b>Resoconti</b> -&gt; 
+            <b>Resoconto delle transazioni</b>
+          </p><div class="screenshot"><div class="mediaobject"><img src="figures/cc_TransactionRptVisa.png" alt="Resoconto delle transazioni per il conto Visa nei mesi di Marzo e Aprile"><div class="caption"><p>Questa immagine mostra il resoconto delle transazioni per il conto Visa nei mesi
+		 di Marzo e Aprile.
+                </p></div></div></div></li><li><p>Si cambi ora il resoconto delle transazioni per mostrare solamente i vari conti
+		delle uscite.
+          </p><div class="screenshot"><div class="mediaobject"><img src="figures/cc_TransactionRptExpenses.png" alt="Resoconto delle transazioni per i conti delle uscite nel mese di Aprile"><div class="caption"><p>Questa immagine mostra il resoconto delle transazioni per i vari conti delle
+			uscite nel mese di Aprile.
+                </p></div></div></div></li></ol></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="cc-enterpay1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="chapter_loans.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">6.4. Immettere gli addebiti </td><td width="20%" align="center"><a accesskey="u" href="chapter_cc.html">Risali</a></td><td width="40%" align="right"> Capitolo 7. Prestiti</td></tr></table></div></body></html>

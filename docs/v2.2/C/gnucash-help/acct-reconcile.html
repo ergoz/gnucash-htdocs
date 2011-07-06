@@ -1,0 +1,43 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>5.8. Reconciling an Account to a Statement</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="help.html" title="GnuCash Help Manual"><link rel="up" href="setup-accounts.html" title="Chapter 5. Setting Up, Editing &amp; Working with Accounts"><link rel="previous" href="acct-delete.html" title="5.7. Deleting an Account"><link rel="next" href="ch_Common_Trans_Ops.html" title="Chapter 6. Common Transaction Operations"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.8. Reconciling an Account to a Statement</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="acct-delete.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 5. Setting Up, Editing &amp; Working with Accounts</th><td width="20%" align="right"> <a accesskey="n" href="ch_Common_Trans_Ops.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="acct-reconcile"></a>5.8. Reconciling an Account to a Statement</h2></div></div><p>Reconciliation of Accounts in GnuCash with statements from a bank or other
+         institution is a way of double checking the accuracy of your (and your banks) transactions and the balance
+         of your accounts. It also is useful to track uncleared checks and other outstanding transactions. </p><p>The Summary Bar at the bottom of the Account Register Window indicates the amounts
+         of Present (Balance), Future (Balance), Cleared (Transactions), Reconciled (Transactions) and
+         Projected Minimum. On-line account information can be used to
+         mark which transactions the bank has processed by changing the R (reconciliation status)
+         column in the register from n (new) to c (cleared). The bank statement is then used
+         with the Reconcile Window to reconcile the account which changes the R field to y
+         (reconciled).</p><p>The Reconciling Windows are accessed in the Account Tree Window or the Account Register Window by
+         going to  <b>Actions -&gt; Reconcile...</b> (menu shortcut Alt-A, R).</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="tool-reconcile"></a>5.8.1. Reconciling Information Window</h3></div></div><p>The Reconcile Information dialog is used to indicate the closing statement date
+           and the starting (fixed from last reconciliation) and ending balance from the statement. The <b>Include
+           Sub-accounts</b> check-box is used if two or more accounts are used to track a single
+           bank account. The <b>Enter Interest Payment</b> button is used to add a transfer to the
+           accounts for an interest payment. If selected a dialog will be displayed to add the interest
+           payment to the account.</p><p>There are three panes in the Interest Payment dialog. At the bottom is a
+           button called No Auto Interest Payments for this Account which will cancel the
+           dialog. The top pane contains the Payment Information.</p><div class="itemizedlist"><ul><li><p><b>Amount:</b> Enter the amount of the interest payment.</p></li><li><p><b>Date:</b> Select the date for the interest payment.</p></li><li><p><b>Num:</b> Enter a number for the transaction (optional).</p></li><li><p><b>Description:</b> Enter an informational description for the transaction.</p></li><li><p><b>Memo:</b> Enter a note about the transaction (optional).</p></li></ul></div><p>The next window contains a list of accounts for the “Payment From” account. If the
+           payment is for a credit or loan account then usually this would be from an Expense
+           account. If the payment is for a checking or savings account then usually this would
+           be from an Income account. The Show Income/Expense check-box shows or hides the
+           Income and Expense accounts.</p><p>Select OK to enter the interest transaction and return to the initial
+           reconciliation screen.</p><p></p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="rec-win"></a>5.8.2. Reconcile Window</h3></div></div><p></p><p>The set of unreconciled transactions in the Funds In and Funds Out panes can
+           be changed by using the menus and toolbar to access the account and transaction
+           information. If you wish to postpone the reconciliation until later use the
+           <b>Reconcile -&gt; Postpone</b> menu item (menu shortcut Ctrl-P) or pressing the
+           Postpone icon.   If you wish to cancel the reconciliation use the
+           <b>Reconcile -&gt; Cancel</b> menu item or press the
+           Cancel icon.</p><p>Select each unreconciled transaction matching a transaction on the statement so a
+           green tick appears in the R column. The Balance pane changes to reflect each
+           selected transaction until the Ending Balance equals the Reconciled Balance and the
+           Difference is zero. Once this is done select the Finish button or
+           <b>Reconcile -&gt; Finish</b> (menu shortcut Ctrl-F) to finish the reconcile process.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="rec-main"></a>5.8.3. Reconciling Window</h3></div></div><p>The "Funds In" pane shows all unreconciled deposits to the
+          account.</p><div class="itemizedlist"><ul><li><p>Date: The date of the unreconciled transaction.</p></li><li><p>Num: The number of the unreconciled transaction.</p></li><li><p>Description: The Description of the unreconciled
+              transaction.</p></li><li><p>Amount: The Amount of the unreconciled transaction.</p></li><li><p>R: Shows a green tick if the transaction will be
+              reconciled when done.</p></li></ul></div><p>The "Funds Out" pane shows all unreconciled expenses from the
+          account.</p><div class="itemizedlist"><ul><li><p>Date: The date of the unreconciled transaction.</p></li><li><p>Num: The number of the unreconciled transaction.</p></li><li><p>Description: The Description of the unreconciled
+              transaction.</p></li><li><p>Amount: The Amount of the unreconciled transaction.</p></li><li><p>R: Shows a green tick if the transaction will be
+              reconciled when done.</p></li></ul></div><p>The Balance pane shows the balances used in
+          reconciliation.</p><div class="itemizedlist"><ul><li><p>Starting Balance: The balance at the end of the last
+              reconciliation.</p></li><li><p>Ending Balance: The balance entered from the
+              statement.</p></li><li><p>Reconciled Balance: The balance of selected
+              transactions.</p></li><li><p>Difference: The difference between the Reconciled and
+              Ending Balances.</p></li></ul></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="acct-delete.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="help.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="ch_Common_Trans_Ops.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">5.7. Deleting an Account </td><td width="20%" align="center"><a accesskey="u" href="setup-accounts.html">Up</a></td><td width="40%" align="right"> Chapter 6. Common Transaction Operations</td></tr></table></div></body></html>

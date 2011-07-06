@@ -1,0 +1,46 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>8.3. Conti che maturano interessi</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_invest.html" title="Capitolo 8. Investimenti"><link rel="previous" href="invest_accounts1.html" title="8.2. Impostare i conti"><link rel="next" href="invest-setup1.html" title="8.4. Impostare il portafoglio dell'investimento"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.3. Conti che maturano interessi</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="invest_accounts1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 8. Investimenti</th><td width="20%" align="right"> <a accesskey="n" href="invest-setup1.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="invest_int1"></a>8.3. Conti che maturano interessi</h2></div></div><p>Gli investimenti che presentano un tasso di interesse fisso o variabile,
+    rappresentano una delle più semplici e diffuse forme di investimenti disponibili.
+    Gli investimenti che fruttano interessi comprendono il conto in banca, i certificati
+    di deposito o qualsiasi altra forma di investimento in cui si riceve un interesse 
+    sulla somma capitale. Questa sezione descriverà come trattare questi tipi di
+    investimenti in GnuCash.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest_intacct2"></a>8.3.1. Impostare i conti</h3></div></div><p>Quando si acquista un investimento fruttifero, è necessario creare
+      un conto delle attività per registrare l'acquisto dell'investimento stesso,
+      un conto delle entrate per registrare il guadagno derivante dall'interesse
+      e un conto delle uscite per immettere le spese bancarie. Più sotto è riportato
+      un esempio di struttura in cui si ha un conto di risparmio che matura interessi
+      e un certificato di deposito (CD) in banca.</p><div class="literallayout"><p><br>
+Attività<br>
+   Banca ABC<br>
+      CD<br>
+      Risparmio<br>
+Uscite<br>
+   Banca ABC<br>
+      Spese<br>
+Entrate<br>
+   Banca ABC<br>
+      Interessi<br>
+  </p></div><p>Come prima, questa struttura dei conti rappresenta solo un esempio;
+      ognuno dovrebbe creare i conti nella forma che rispecchia al meglio la
+      propria situazione attuale.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest-intex2"></a>8.3.2. Esempio</h3></div></div><p>Con questo esempio si intende utilizzare dei numeri reali per rendere
+      più reale quello descritto finora. Si assuma di partire con €10.000 sul proprio
+      conto bancario che fornisce l'1% di interessi; si acquisti poi un certificato di
+      deposito di €5.000 con una durata di 6 mesi e un rendimento del 2%. Chiaramente è
+      molto meglio tenere il proprio denaro sul certificato di deposito che non nel conto 
+      di risparmio. Dopo l'acquisto iniziale, i conti dovrebbero assomigliare a questi:</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_int1.png" alt="Impostazione dell'investimento fruttifero"><div class="caption"><p>Questa immagine mostra il registro del conto dopo la creazione
+          e l'investimento di denaro in un certificato di deposito.</p></div></div></div><p>Durante i sei mesi successivi, si riceverà un estratto conto della 
+      banca che descriverà l'attività sul conto. Nell'esempio considerato,
+      non viene eseguita nessuna operazione in questa banca e quindi le uniche attività
+      saranno le entrate dovute agli interessi e le spese bancarie; queste ultime
+      ammontano a €2. Trascorsi i 6 mesi, la finestra del registro per il certificato di 
+      deposito (CD) dovrebbe presentarsi così:</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_int2.png" alt="Impostazione dell'investimento fruttifero"><div class="caption"><p>Questa immagine mostra il registro del conto per il
+          certificato di deposito, trascorsi i 6 mesi. </p></div></div></div><p>E questa è la finestra principale di GnuCash:</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_int3.png" alt="Impostazione dell'investimento fruttifero"><div class="caption"><p>Questa immagine mostra i conti dopo 6 mesi.
+          </p></div></div></div><p>Nell'immagine della finestra principale di GnuCash, è presente
+      un interessante sommario di ciò che è successo agli investimenti nell'arco
+      dei sei mesi. Mentre il rendimento del certificato di deposito è doppio rispetto 
+      a quello del conto dei risparmi, il guadagno con il certificato di deposito è 
+      stato di €50,21 contro i €13,03 del conto dei risparmi: in pratica il 
+      quadruplo. Questo è dovuto alla fastidiosa commissione bancaria di €2
+      che interessa il conto di risparmio (in 6 mesi la commissione ammonta a €12).</p><p>Dopo il periodo di 6 mesi, il certificato di deposito è maturato; questo
+      significa che è possibile venderlo senza dover pagare alcuna penale. per farlo,
+      è sufficiente trasferire i €5.050,21 dal conto del certificato al conto dei 
+      risparmi.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="invest_accounts1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="invest-setup1.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">8.2. Impostare i conti </td><td width="20%" align="center"><a accesskey="u" href="chapter_invest.html">Risali</a></td><td width="40%" align="right"> 8.4. Impostare il portafoglio dell'investimento</td></tr></table></div></body></html>

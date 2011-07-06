@@ -1,0 +1,762 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Comprobantes de Acciones</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual de usuario de Gnucash, contabilidad doméstica Gnu"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Tax Report / TXF Export"
+HREF="t3542.html"><LINK
+REL="NEXT"
+TITLE="Listado de Transacciones"
+HREF="t3753.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual de usuario de Gnucash, contabilidad doméstica Gnu</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t3542.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t3753.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN3580">Comprobantes de Acciones</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Tabla de contenidos</B
+></DT
+><DT
+><A
+HREF="t3579.html#XACC-STOCKTICKER"
+>Precios de las acciones y Símbolos de Comprobantes</A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-STOCKTICKER">Precios de las acciones y Símbolos de Comprobantes</H1
+><P
+>GnuCash proporciona un sistema rudimentario de cargar el valor
+de las acciones de forma automática.</P
+><P
+>Si una <A
+HREF="t749.html#STOCKACCT"
+>cuenta de acciones</A
+>
+de GnuCash está debidamente configurada, y el ordenador está conectado
+a Internet, el programa <TT
+CLASS="APPLICATION"
+>gnc-prices</TT
+> se puede
+utilizar para cargar el valor de los precios de las acciones y de los
+bonos desde diversos sitios WEB directamente en GnuCash.</P
+><P
+>Para hacer uso de esta facultad, se debe hacer lo siguiente:
+
+<P
+></P
+><UL
+><LI
+><P
+>Crear una cuenta y marcarla como del tipo "Fondos Mutuales"
+      (bonos) o "Acciones".
+    </P
+></LI
+><LI
+><P
+>Introduzca un símbolo de comprobante válido en la caja
+      llamada "Seguridad:"
+     </P
+></LI
+><LI
+><P
+>Seleccione un lugar de consulta de precios en el menú
+    desplegable. Actualmente los lugares de consulta soportados son
+    <I
+CLASS="EMPHASIS"
+>Yahoo</I
+>, <I
+CLASS="EMPHASIS"
+>Yahoo Europe</I
+>, <I
+CLASS="EMPHASIS"
+>Fidelity Investments</I
+>,
+    <I
+CLASS="EMPHASIS"
+>T. Rowe Price</I
+>, la <I
+CLASS="EMPHASIS"
+>Vanguard Group</I
+>,
+    la <I
+CLASS="EMPHASIS"
+>Australian Stock Exchange</I
+> (ASX) y la
+    <I
+CLASS="EMPHASIS"
+>TIAA-CREF</I
+>. Observe que Yahoo proporciona valores
+    de precios para muchos fondos mutuales <I
+CLASS="EMPHASIS"
+>incluyendo</I
+>
+    Fidelity, T.Rowe Price y Vanguard, y esos precios de Yahoo
+    <I
+CLASS="EMPHASIS"
+>deben</I
+> ser idénticos a aquellos que se
+    pueden encontrar en otras fuentes (de otra forma, alguien está
+    suministrando información errónea!). Si selecciona Yahoo Europe,
+    debe añadir el código de mercado para seguridad, como PA para París,
+    BE para Berlín, etc. Ejemplo: 12150.PA (la seguridad Peugeot en
+    el mercado de París).
+    </P
+></LI
+><LI
+><P
+>Asegúrese que la cantidad se expresa en la moneda que
+    corresponda con el lugar de consulta de precios de la acción que
+    ha seleccionado. Esto significa:
+
+        <P
+></P
+><UL
+><LI
+><P
+>Las participaciones de la fuente <I
+CLASS="EMPHASIS"
+>Australian Stock
+          Exchange</I
+> (ASX) se calculan en dólares australianos (AUD).
+
+          </P
+></LI
+><LI
+><P
+>Las participaciones de la fuente <I
+CLASS="EMPHASIS"
+>Yahoo Europe</I
+>
+          se calculan en euros (ECU).
+
+          </P
+></LI
+><LI
+><P
+>Las participaciones de <I
+CLASS="EMPHASIS"
+>Yahoo</I
+>, <I
+CLASS="EMPHASIS"
+> Fidelity
+          Investments</I
+>, <I
+CLASS="EMPHASIS"
+>T. Rowe Price</I
+> y de <I
+CLASS="EMPHASIS"
+>Vanguard
+          Group</I
+> se calculan en dólares americanos (USD).
+        </P
+></LI
+></UL
+>
+      
+    </P
+></LI
+></UL
+>
+
+    <DIV
+CLASS="TABLE"
+><A
+NAME="AEN3620"><P
+><B
+>Tabla 14.         Lista de códigos de los mercados europeos
+      </B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Código</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Mercado</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>PA</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Paris</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>BC</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Barcelona</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>BE</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Berlín</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>BI</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Bilbao</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>BR</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Brême</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CO</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Copenagen</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>D</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Dusseldorf</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>F</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Frankfurt</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>H</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Hamburgo</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>HA</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Hanover</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>L</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>London</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>MA</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Madrid</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>MC</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Madrid (M.C.)</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>MI</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Milán</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>MU</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Munich</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>O</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Oslo</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>ST</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Estocolmo</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>SG</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Stuttgart</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>VA</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Valencia</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>FX</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Xetra</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    <DIV
+CLASS="TABLE"
+><A
+NAME="AEN3688"><P
+><B
+>Tabla 15.         Seudo-símbolos que pueden se utilizados para las
+         partipaciones de TIAA-CREF.
+      </B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Nombre</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Seudo-símbolo</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Acción</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CREFstok</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Mercado de Dinero</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CREFmony</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Índice de Equidad</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CREFequi</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Bonos de Interés garantizado</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CREFinfb</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Mercado de Bonos</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CREFbond</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Bonos del Gobierno (TIAA)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>TIAAreal</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Opciones Sociales</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CREFsoci</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Índice de Acciones de PA</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>TIAAsndx</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Equidades Globales</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CREFglob</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Acciones seleccionadas de PA</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>TIAAsele</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Crecimiento</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>CREFgrow</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    </P
+><P
+>Una imagen de ejemplo se muestra a continuación:
+     <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/ticker-a.png"></SPAN
+>
+
+    </P
+><P
+>Para actualizar los precios almacenados en los archivos de cuentas
+    de GnuCash, ejecute la orden <TT
+CLASS="APPLICATION"
+>gnc-price</TT
+>,
+    desde la línea de comandos, especificando el nombre del archivo;
+    por ejemplo:
+<B
+CLASS="COMMAND"
+>    gnc-prices myaccts.xac</B
+>
+
+    </P
+><P
+>Cuando se ejecuta este programa se muestran varios mensajes
+    de diagnóstico en la pantalla durante la carga de los datos.
+    Este programa solamente funcionará si su ordenador está conectado
+    a Internet. Puede funcionar en conjunción con cortafuegos
+    ("firewalls") del tipo enmascaramiento y con servidores "proxy".
+
+    </P
+><P
+>El programa puede ser ejecutado varias veces el mismo día;
+    de todos modos, se actualizará las cuentas con los datos más
+    recientes.
+
+    </P
+><P
+>Por lo que, si <TT
+CLASS="APPLICATION"
+>gnc-prices</TT
+> se ejecuta
+    en viernes, sábado, domingo y lunes, solamente se harán dos
+    actualizaciones de precios: uno conteniendo los datos del viernes,
+    y otro conteniendo los datos del lunes, ya que el sábado y domingo
+    devolverán los precios de la sesión del viernes.
+
+    </P
+><P
+>Para evitar que <TT
+CLASS="APPLICATION"
+>gnc-prices</TT
+> actualice una
+    cuenta, mientras le permite que actualice otra cuenta, simplemente
+    marque el lugar de consulta para la cuenta como <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>(none)</PRE
+></TD
+></TR
+></TABLE
+>.
+    Puede hacer esto desde la ventana <B
+CLASS="GUIMENU"
+>Editar Cuenta</B
+>.
+
+    </P
+><P
+>Después de ejecutar <TT
+CLASS="APPLICATION"
+>gnc-prices</TT
+> durante
+    unos días, sus cuentas empezarán a parecer a lo siguiente:
+     <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/ticker-b.png"></SPAN
+>
+&#13;</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t3542.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Inicio</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t3753.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Tax Report / <A
+HREF="t5916.html"
+>TXF Export</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Listado de Transacciones</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

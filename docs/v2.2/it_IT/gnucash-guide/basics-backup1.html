@@ -1,0 +1,70 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2.8. Creare copie di sicurezza e recuperare i dati</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_basics.html" title="Capitolo 2. Le basi"><link rel="previous" href="basics-import1.html" title="2.7. Importare file QIF"><link rel="next" href="basics-together1.html" title="2.9. In pratica"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">2.8. Creare copie di sicurezza e recuperare i dati</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="basics-import1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 2. Le basi</th><td width="20%" align="right"> <a accesskey="n" href="basics-together1.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="basics-backup1"></a>2.8. Creare copie di sicurezza e recuperare i dati</h2></div></div><p>GnuCash crea diversi tipi di file per assicurarsi che i
+    dati non vadano persi. Si possono trovare file con le seguenti estensioni:
+    xac,log, LCK, LNK tutti nella stessa cartella del file dei dati. 
+    La descrizione delle caratteristiche fornite da ogni formato è riportata
+    di seguito.</p><pre class="programlisting">
+      $ ls 
+      gcashdata
+      gcashdata.20060414185747.xac
+      gcashdata.20060414223248.log
+      gcashdata.20060415114340.xac
+      gcashdata.20060415154508.log
+      gcashdata.20060415173322.xac
+      gcashdata.20060415194251.log
+      gcashdata.7f0982.12093.LNK
+      gcashdata.LCK
+    </pre><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-backupxac2"></a>2.8.1. File di backup (.xac)</h3></div></div><p>Ogni volta che si salva un file dei dati, viene creata anche una copia
+      di sicurezza di formato xac. Questo file è una copia completa del file dei
+      dati precedente e il suo nome fa riferimento al nome del file dei 
+      dati, all'anno, al mese, al giorno e all'ora del backup. Per esempio,
+      il file di nome <tt>gcashdata.20060414185747.xac</tt> indica
+      che si tratta di una copia di sicurezza del file gcashdata salvata nell'anno
+      2006, il 14 Aprile alle 18:57:47.</p><p>Per recuperare un vecchio file di backup, basta aprire il file .xac
+      con la data che si desidera ripristinare. Assicurarsi di salvare il
+      file con un nome differente senza utilizzare l'estensione xac.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-backuplog2"></a>2.8.2. Log file (.log)</h3></div></div><p>Ogni volta che viene aperto un file in GnuCash, viene creato un
+      file .log con lo stesso nome del file di backup di estensione .xac.
+      Nel momento in cui si effettuano delle modifiche al file dati aperto, il file
+      di log registra solamente queste modifiche. I file di log non sono dei file
+      di backup completi - registrano semplicemente i cambiamenti fatti al file
+      dei dati nella sessione corrente di GnuCash.</p><p>Nel caso GnuCash terminasse inaspettatamente, per esempio esempio a causa
+      di un blackout elettrico o di un blocco del sistema, sarà possibile
+      recuperare la maggior parte del lavoro effettuato dall'ultima volta 
+      che il file di GnuCash è stato salvato, utilizzando il file di log.
+      Questa è la procedura da seguire:</p><div class="itemizedlist"><ul><li><p>Aprire l'ultimo salvataggio del file GnuCash.</p></li><li><p>Andare in "File" -&gt; "Importa" -&gt; "Ripeti file .log di GnuCash"
+          e selezionare un file di estensione .log con la stessa data del file
+          salvato aperto precedentemente. Assicurarsi di aver selezionato il file 
+          di log esatto per scongiurare il verificarsi di gravi problemi nella 
+          struttura e nei valori dei conti.</p></li></ul></div><p>La ripetizione del file di log permette di recuperare ogni 
+      transazione che ha variato il saldo immesso dall'ultimo salvataggio,
+      incluse quelle create dalle transazioni pianificate e dalle funzioni
+      per l'impresa (fatture, ricevute, ecc...).</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Attenzione: le modifiche alle transazioni pianificate, alle fatture
+        per le ricevute NON verranno recuperate, e le loro transazioni che sono state 
+        recuperate potrebbero non essere correttamente associate con esse; andrebbero 
+        quindi ricontrollate. In particolar modo per le transazioni di impresa, potrebbe
+        essere necessario cancellarne alcune e ricrearne di altre. Senza questa operazione,
+        anche se il saldo potrebbe sembrare corretto, alcuni resoconti potrebbero 
+        non esserlo.</p></td></tr></table></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-backuplock2"></a>2.8.3. File di blocco (.LNK e .LCK)</h3></div></div><p>Occasionalmente possono comparire dei file .LNK e .LCK. Questi 
+      non contengono alcun dato, ma sono creati solamente per impedire
+      che due o più utenti possano aprire lo stesso file contemporaneamente.
+      Questi file sono creati automaticamente all'apertura di un file per 
+      bloccarlo in modo che nessun altro possa accedervi. Quando si chiude
+      GnuCash o si apre un altro file, GnuCash sblocca il primo file dei dati cancellando
+      i file LNK e LCK.</p><p>Se GnuCash si arresta improvvisamente quando è aperto
+      un file di dati, i file LCK e LNK non vengono cancellati.
+      La prossima volta che che GnuCash verrà aperto, sarà presentato
+      un avviso in cui si dice che il file è bloccato. Questo messaggio
+      appare poiché i file LNK e LCK sono ancora nella directory.
+      Si può premere tranquillamente sì per aprire il file, ma si dovrebbero 
+      cancellare i file .LNK e .LCK (usando il terminale o il file manager).
+      Una volta cancellati questi file, non verrà più presentato alcun avviso
+      a meno che GnuCash non venga interrotto di nuovo in modo improvviso.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="basics-backupmanage2"></a>2.8.4. Gestire i file</h3></div></div><p>Allora quali file si dovrebbero mantenere sul disco? i file
+      dei dati: questi non hanno una estensione di file automatica.
+      E' consigliato anche mantenere alcuni dei file di estensione .xac più 
+      recenti, mentre è possibile cancellare tranquillamente i file di log dato che 
+      non costituiscono una copia completa del file dei dati. Si dovrebbero anche 
+      cancellare tutti i file di estensione .LCK e .LNK che sono ancora
+      presenti dopo la chiusura di GnuCash. Se si decide di fare una copia di 
+      sicurezza dei file su un altro disco, è sufficiente copiare i file dei
+      dati; non i file di estensione .xac.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">GnuCash cancellerà automaticamente tutti i file .xac, .log
+        che sono più vecchi di 30 giorni. Questa impostazione può essere cambiata
+        dalle preferenze di GnuCash.</p></td></tr></table></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="basics-import1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="basics-together1.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">2.7. Importare file QIF </td><td width="20%" align="center"><a accesskey="u" href="chapter_basics.html">Risali</a></td><td width="40%" align="right"> 2.9. In pratica</td></tr></table></div></body></html>

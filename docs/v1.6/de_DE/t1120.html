@@ -1,0 +1,380 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Accounts Payable/Accounts Receivable</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash Online-Handbuch"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="New Account Window"
+HREF="t1092.html"><LINK
+REL="NEXT"
+TITLE=" Accounts Payable"
+HREF="x1176.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash Online-Handbuch</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t1092.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x1176.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN1121">Accounts Payable/Accounts Receivable</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t1120.html#XACC-ARDEF"
+>Accounts Receivable</A
+></DT
+><DT
+><A
+HREF="x1176.html"
+>Accounts Payable</A
+></DT
+><DT
+><A
+HREF="x1186.html"
+>Prepaid Expenses</A
+></DT
+></DL
+></DIV
+><P
+>A/R (Accounts Receivable) and A/P (Accounts Payable) are used by
+businesses to record sales for which they are not immediately paid, or
+to record bills that they have received, but might not pay until
+later.  These types of accounts are used primarily when you've got a
+lot of bills and receipts flowing in and out, and don't want to lose
+track of them just because you don't pay/get paid right away.  </P
+><P
+> For most home users, A/R and A/P will add so much complexity
+that they are not worth the effort.  </P
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-ARDEF">Accounts Receivable</H1
+><P
+>Let's assume that instead of requiring customers to pay
+<I
+CLASS="EMPHASIS"
+>instantly,</I
+> in cash, you issue them an invoice,
+and give them 30 days to pay the bills. (After 30 days, we start
+charging interest and sending out harassing letters :-)).  When we
+make a sale, the two accounts affected are <I
+CLASS="EMPHASIS"
+>Sales</I
+>
+(an income account) and <I
+CLASS="EMPHASIS"
+>Accounts Receivable.</I
+>
+Accounts Receivable is an asset, but it's not "liquid," as you can't
+readily sell it, and it's certainly not cash.  When the customer pays
+the bill, you transfer the amount from A/R to Cash.  This is done in
+two steps because you have decided to do your accounting on an accrual
+basis and not on a cash basis.  This is because most of your
+transactions are not solely based on cash changing hands, but rather
+based on <I
+CLASS="EMPHASIS"
+>establishing obligations.</I
+> </P
+><P
+>In more sophisticated operations, there may be a much more
+complex sequence of documents generated and tracked:
+
+    <P
+></P
+><UL
+><LI
+><P
+>A customer sends in a <I
+CLASS="EMPHASIS"
+>Purchase
+Order</I
+>, which authorizes a purchase.  </P
+></LI
+><LI
+><P
+>A <I
+CLASS="EMPHASIS"
+>Work Order</I
+> to schedule production of
+      whatever the customer is buying.
+      </P
+></LI
+><LI
+><P
+>A <I
+CLASS="EMPHASIS"
+>Shipping Notice</I
+> is issued, to
+ship to goods to the customer.  </P
+></LI
+><LI
+><P
+>Once shipped, an <I
+CLASS="EMPHASIS"
+>Invoice</I
+> is issued,
+representing the <I
+CLASS="EMPHASIS"
+>request to pay</I
+>.
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>Sales are reported as soon as they occur.  Unfortunately, you
+may wind up selling some product to no-good shady operators that you
+didn't know were shady, and thus may get stuck with some "bad debts."
+In order to determine which parts of Accounts Receivable appear to be
+most at risk, it is typical to arrange A/R based on the "ages" of the
+debts, commonly segmenting it into several aging periods, of payments
+outstanding 0-30 days, those that outstanding 31-60 days, 61-90 days,
+and then those that are <I
+CLASS="EMPHASIS"
+>way overdue.</I
+> At some
+point, it may become clear that a customer is never going to pay what
+they owe, and we have to write it off as a <I
+CLASS="EMPHASIS"
+>Bad
+Debt.</I
+> At that point, it is typical to record an entry thus:
+
+<DIV
+CLASS="TABLE"
+><A
+NAME="AEN1150"><P
+><B
+>Table 2. Bad Debt Expense Example</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Account</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>DR</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>CR</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Bad Debt Expense</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$10,000</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+><TD
+>&nbsp;</TD
+><TD
+>&nbsp;</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Accounts Receivable</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>$10,000</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    </P
+><P
+>You could have reduced <I
+CLASS="EMPHASIS"
+>Sales Income</I
+>
+instead, but companies tend to prefer to specifically track the amount
+that they're losing to bad customers.  </P
+><P
+><I
+CLASS="EMPHASIS"
+>Warning: <I
+CLASS="EMPHASIS"
+>Advanced Accounting
+Concept.</I
+> Bad Debt is an example of a "contra-account." That
+doesn't refer to <I
+CLASS="EMPHASIS"
+>amounts paid to Nicaraguan
+rebels,</I
+> but rather the notion that the account is an income
+account that is expected to hold a balance opposite to what is
+normally expected, to be counteract the balance in another income
+account.  <A
+HREF="t1217.html"
+>Accumulated
+Depreciation,</A
+> used to diminish the value of an asset over time,
+is another example of a contra-account.</I
+> </P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t1092.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x1176.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>New Account Window</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Accounts Payable</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

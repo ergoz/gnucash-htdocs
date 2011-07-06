@@ -1,0 +1,424 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Chart of Accounts and Account Numbering</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash User Manual"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Preferences"
+HREF="t3164.html"><LINK
+REL="NEXT"
+TITLE=" A Sample Chart of Accounts"
+HREF="x3277.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash User Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t3164.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x3277.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN3230">Chart of Accounts and Account Numbering</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t3229.html#AEN3232"
+>Chart of Accounts</A
+></DT
+><DT
+><A
+HREF="x3277.html"
+>A Sample Chart of Accounts</A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN3232">Chart of Accounts</H1
+><P
+>    The Chart of Accounts is like a table of contents for your 
+    financial organization.  The best way to conceptualize a
+    chart of accounts is as a tree.
+    The main branches represent entire categories or groups,
+    while the leaves of the tree denote individual bank accounts or
+    expense categories.
+    When a summary report is requested, typically only the main
+    branches are shown in the report, rather than the individual
+    accounts. For example, a chart of accounts might look like the
+    following:
+<TT
+CLASS="LITERAL"
+><P
+CLASS="LITERALLAYOUT"
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expenses<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+--310&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Living&nbsp;Expenses<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;+--311&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Beer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;+--312&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cable<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+--320&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Business&nbsp;Expenses<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;+--321&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8-inch&nbsp;Floppies<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;:</P
+></TT
+>
+
+    </P
+><P
+>Note that accounts not only have names; they have 
+    <I
+CLASS="EMPHASIS"
+>codes,</I
+> in order to provide 
+    <I
+CLASS="EMPHASIS"
+>order.</I
+> When a report is
+    generated, the <A
+NAME="SORTORDER"
+></A
+>sort order is determined by
+    the numbering.
+    It's customary to have the "leaf" accounts
+    end in non-zero digits, while parent nodes have increasing
+    numbers of zeros. For instance, "cash" accounts might logically
+    be arranged thus:
+
+    <P
+></P
+><UL
+><LI
+><P
+>        Overall Assets: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>100</PRE
+></TD
+></TR
+></TABLE
+> 
+
+        <P
+></P
+><UL
+><LI
+><P
+>            Overall Cash: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>110</PRE
+></TD
+></TR
+></TABLE
+> 
+
+            <P
+></P
+><UL
+><LI
+><P
+>Cash in Wallet: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>111</PRE
+></TD
+></TR
+></TABLE
+>
+
+              </P
+></LI
+><LI
+><P
+>Cash in Sock in Closet: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>112</PRE
+></TD
+></TR
+></TABLE
+>
+
+              </P
+></LI
+><LI
+><P
+>Cash in Mattress: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>113</PRE
+></TD
+></TR
+></TABLE
+>
+
+              </P
+></LI
+><LI
+><P
+>Petty Cash Box: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>114</PRE
+></TD
+></TR
+></TABLE
+>
+            </P
+></LI
+></UL
+>
+          
+
+          </P
+></LI
+><LI
+><P
+>            Overall Banking Assets <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>120</PRE
+></TD
+></TR
+></TABLE
+> 
+
+            <P
+></P
+><UL
+><LI
+><P
+>Checking Account <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>121</PRE
+></TD
+></TR
+></TABLE
+>
+
+              </P
+></LI
+><LI
+><P
+>Savings Account <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>122</PRE
+></TD
+></TR
+></TABLE
+>
+            </P
+></LI
+></UL
+>
+          
+        </P
+></LI
+></UL
+>
+        </P
+></LI
+></UL
+>
+
+        </P
+><P
+>When you <A
+HREF="t1154.html"
+>create a new
+        account</A
+>, GnuCash suggests an appropriate
+        account code; you are free to change this. GnuCash
+        does not prevent duplicate numbering, although we would
+        encourage you to avoid this. Account codes are treated as
+        numbers in base-36, thus, if you run out of numbers, you
+        can use the letters, <SPAN
+CLASS="KEYSYM"
+>a</SPAN
+> through 
+        <SPAN
+CLASS="KEYSYM"
+>z</SPAN
+>.</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t3164.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x3277.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Preferences</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>A Sample Chart of Accounts</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

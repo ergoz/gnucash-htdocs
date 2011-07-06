@@ -1,0 +1,1019 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Depreciação e Ganhos de Capital</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE=" Despesas Pré-Pagas"
+HREF="x1163.html"><LINK
+REL="NEXT"
+TITLE="Depreciação de Activos"
+HREF="x1423.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x1163.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x1423.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN1196">Depreciação e Ganhos de Capital</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t1195.html#XACC-CAPITALGAINS"
+>Ganhos de Capital - Apreciação de Activos</A
+></DT
+><DT
+><A
+HREF="x1423.html"
+>Depreciação de Activos</A
+></DT
+></DL
+></DIV
+><P
+>Caso detenha bens para fins empresariais, a sua desvalorização com o passar 
+do tempo pode ser tratada como uma dedução para fins fiscais, denominada 
+Depreciação. Por outro lado, caso detenha bens como propriedades, itens de 
+colecção (tais como obras de arte), e investimentos (tais como acções em 
+empresas), poderá ve-los aumentar o seu valor ao longo do tempo. Neste caso, 
+terá de reconhecer -- para fins fiscais -- o que se chama de 
+<I
+CLASS="EMPHASIS"
+>Ganhos de Capital</I
+></P
+><P
+>Esta secção discute a gestão de depreciações e valorizações 
+    de bens no GnuCash. Também proporciona uma breve introdução 
+    a questões relacionadas com o fisco.
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Atenção:</I
+> <I
+CLASS="EMPHASIS"
+>tenha em atenção que cada país poderá 
+    ter políticas fiscais <I
+CLASS="EMPHASIS"
+>substancialmente</I
+> diferentes para a 
+    gestão destes aspectos; tudo o que este documento pode realmente oferecer são 
+    algumas ideias subjacentes para o ajudar a aplicar as suas políticas "favoritas" 
+    fiscais/de depreciação.</I
+>
+
+    </P
+><P
+>A valorização e depreciação de bens é de certo modo tratada de 
+    forma diferente:
+
+    <P
+></P
+><UL
+><LI
+><P
+><A
+HREF="t1195.html"
+>Depreciação</A
+> 
+        é <I
+CLASS="EMPHASIS"
+>normalmente</I
+> reconhecida (o termo 
+        técnico é <I
+CLASS="EMPHASIS"
+>incorrida</I
+>) como uma despesa 
+        constante, que gradualmente reduz o valor de um activo 
+        no sentido do valor zero. 
+        A depreciação é normalmente apenas calculada sobre activos 
+        utilizados para fins profissionais ou por empresas, visto 
+        geralmente os governos não permitirem a reclamação de deduções 
+        por depreciações sobre activos pessoais, e é irrelevante alguém 
+        se preocupar com todo o trabalho se não puder realizar deduções.
+      </P
+></LI
+><LI
+><P
+> <A
+HREF="t1195.html#APPR"
+>Ganhos de Capital,</A
+> que poderiam ser chamados 
+        de <I
+CLASS="EMPHASIS"
+>apreciações no valor de bens,</I
+> normalmente <I
+CLASS="EMPHASIS"
+>        não</I
+> são reconhecidos até que o bem seja vendido, e nesse 
+        <I
+CLASS="EMPHASIS"
+>instante,</I
+> a totalidade do ganho torna-se um 
+        recebimento. 
+        Os governos tendem a se mostrar <I
+CLASS="EMPHASIS"
+>muito interessados</I
+> 
+        em tributar ganhos de capital de uma forma ou de outra.
+        (Como sempre, existem excepções. Se você detiver uma obrigação que paga 
+        a totalidade dos seus juros na maturidade, muitas vezes o fisco requer 
+        que você reconheça o juro anualmente, recusando que isto seja tratado 
+        como um ganho de capital. As frases <I
+CLASS="EMPHASIS"
+>juro reconhecido,</I
+> 
+        ou <I
+CLASS="EMPHASIS"
+>juro imputado</I
+> são muitas vezes utilizadas para 
+        afujentar aqueles que são sensíveis a tais coisas...)
+      
+    </P
+></LI
+></UL
+>
+
+    </P
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-CAPITALGAINS">Ganhos de Capital - Apreciação de Activos</H1
+><P
+>    <A
+NAME="APPR"
+></A
+> 
+    </P
+><P
+>A apreciação de activos é normalmente um assunto difícil pois, 
+    para alguns tipos de activos, é difícil de estimar correctamente 
+    um aumento de valor <I
+CLASS="EMPHASIS"
+>até que o activo seja realmente vendido.</I
+>
+
+    Se você investir em títulos 
+    transaccionados diariamente em mercados abertos tais como bolsas 
+    de valores, os preços são normalmente bastante exactos, e vender 
+    o activo a preços de mercado pode ser tão simples como telefonar 
+    ao corrector e emitir uma <I
+CLASS="EMPHASIS"
+>Ordem de Mercado.</I
+>
+    Por outro lado, apartamentos o seu bairro são vendidos com menos 
+    frequência. Tais vendas tendem a involver um considerável esforço 
+    financeiro, e envolvem negociações, o que significa que estimativas 
+    têm tendência a ser menos precisas. Da mesma forma, vender um 
+    automóvel usado involve um processo de negociação que torna o preço 
+    final um pouco menos previsível.
+
+    </P
+><P
+>O valor de objectos de colecção tais como joias, obras de arte, 
+    cromos de baseball, e "Bonecas Barbie" são mais difíceis de estimar.
+    O mercado para tais objectos é de certa forma menos aberto que o 
+    mercado de títulos.
+    Pior ainda são activos únicos. Muitas vezes as fábricas possuem prensas 
+    e tintas personalizadas para construir um produto muito específico que 
+    custa centenas ou milhares de contos; este equipamento pode <I
+CLASS="EMPHASIS"
+>    não ter qualquer valor</I
+> fora desse contexto muito específico. 
+    Em tais casos, vários valores discordantes poderão ser associados ao 
+    activo, <I
+CLASS="EMPHASIS"
+>nenhum</I
+> deles distintamente correcto.
+
+    </P
+><P
+>Vamos supor que você compra um bem que se espera venha a 
+    valorizar, digamos uma pintura de Degas, e deseja acompanha-la. 
+    (A empresa de seguros irá preocupar-se com isto, mesmo que mais 
+    ninguém o faça.)
+    Acompanhar devidamente a valorização contínua do Degas irá requerer 
+    pelo menos três, muito possivelmente as seguintes quatro contas 
+    (mais uma conta bancária ou de dinheiro onde o dinheiro da compra 
+    sairá):
+
+    <P
+></P
+><UL
+><LI
+><P
+>Uma conta de <I
+CLASS="EMPHASIS"
+>Custo do Activo</I
+> para acompanhar o 
+      custo original da pintura.
+
+      </P
+></LI
+><LI
+><P
+>Uma conta de <I
+CLASS="EMPHASIS"
+>Ganhos Reconhecidos Não Realizados em Activos
+      </I
+> para acompanhar aumentos de valor.
+      </P
+></LI
+><LI
+><P
+>Uma conta de <I
+CLASS="EMPHASIS"
+>Receitas Reconhecidas de Ganhos em Activos</I
+> 
+      onde registar a parte de receita dos ganhos anuais nas suas riquezas.
+      </P
+></LI
+><LI
+><P
+>Uma conta de <I
+CLASS="EMPHASIS"
+>Receitas de Ganhos Realizados em Activos</I
+> 
+      onde registar as receitas realizadas quando vender o activo.
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>Os <I
+CLASS="EMPHASIS"
+>ganhos reconhecidos</I
+> provavelmente não irão afectar 
+    o seu rendimento tributável para fins de imposto de <I
+CLASS="EMPHASIS"
+>rendimentos</I
+>, 
+    apesar de poder ter algum efeito sobre os impostos de <I
+CLASS="EMPHASIS"
+>propriedade</I
+>.
+
+    </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1249">A Gestão de Ganhos de Capital Gains no GnuCash</H2
+><P
+>    </P
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1252">A Aquisição</H3
+><P
+>Primeiro, crie a <I
+CLASS="EMPHASIS"
+>conta de custo do activo</I
+>. 
+    Para registar a aquisição, transfira o montante que pagou por 
+    esta pintura da sua conta bancária para esta conta de activo.
+
+    </P
+><P
+>Um mês mais tarde, você tem razão para suspeitar de que o valor do 
+    seu quadro aumentou em 250cts. Por forma a registar esta transferência 
+    você transfere 250cts da sua conta de receitas <I
+CLASS="EMPHASIS"
+>reconhecidas 
+    em ganhos de activos</I
+> para a sua conta de activos.
+    A sua janela principal assemelhar-se-á à seguinte:
+    <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/appr-main1.png"></SPAN
+> 
+
+    </P
+><P
+>e a sua conta de activos irá assemelhar-se a:
+    <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/appr-asset1.png"></SPAN
+> 
+
+    </P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1269">Enquanto Detém o Activo</H3
+><P
+>A valorização do activo é uma espécie de receita mas <I
+CLASS="EMPHASIS"
+>não 
+    </I
+> é dinheiro na mão. As pessoas que ficaram "ricas" em 1999 
+    com as OPAs de empresas relacionadas com o Linux tais como a Red Hat
+    Software e a VA Linux Systems podem certificar isto. Eles detêm opções 
+    ou acções que estão <I
+CLASS="EMPHASIS"
+>teoricamente</I
+> avaliadas em 
+    milhões de dólares USD. Na verdade não são milionários; os principais 
+    participantes têm de se manter com as acções por pelo menos seis meses 
+    antes de vender <I
+CLASS="EMPHASIS"
+>qualquer</I
+> tranche. O facto de que 
+    eles <I
+CLASS="EMPHASIS"
+>não podem</I
+> vender significa que apesar de 
+    teoricamente poderem valer milhões de dólares no papel, eles não 
+    possuem qualquer forma legal de <I
+CLASS="EMPHASIS"
+>receberem</I
+> esses 
+    milhões. Tal como a história o mostrou, essas fortunas de papel tornaram-se 
+    consideravelmente mais reduzidas.
+
+    </P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1277">Vender o Activo</H3
+><P
+>Vamos supor que decorrido mais um mês os preços para pinturas 
+    de Degas subiram mais um pouco, no seu caso cerca de 500cts, você 
+    estima. Você normalmente regista os 500cts como uma receita tal como 
+    fez acima, decidindo depois vender a pintura.
+
+    </P
+><P
+>Surgem três possibilidades:
+
+    <P
+></P
+><UL
+><LI
+><P
+>A sua estimativa optimista do valor da pintura estava correcta. 
+       A conta de receitas é deixada inalterada (ou talvez seja transferido 
+       o saldo de uma receita de <I
+CLASS="EMPHASIS"
+>Ganho Reconhecido</I
+> para 
+       uma conta de receita de <I
+CLASS="EMPHASIS"
+>Ganho Realizado</I
+>), e o 
+       registo surgiria como se segue:
+        <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1286"><P
+><B
+>Table 3. Converter um Ganho Reconhecido num Ganho Realizado</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Conta</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Montante</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Dinheiro</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>3.350.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Pintura</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-2.200.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Receita de Ganhos Realizados</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-1.150.000$</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+        </P
+><P
+>Se quaisquer montantes tivessem sido reconhecidos como <I
+CLASS="EMPHASIS"
+>Ganhos 
+        Reconhecidos</I
+>, o montante do activo deveria ser saldado, anulado 
+        por um valor <I
+CLASS="EMPHASIS"
+>negativo</I
+> pelas receitas em <I
+CLASS="EMPHASIS"
+>Ganhos 
+        Reconhecidos</I
+>. Se o total que tinha sido reconhecido fosse 1.000cts, 
+        então a transacção poderia assemelhar-se à seguinte:
+
+        <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1307"><P
+><B
+>Table 4. Ganho Reconhecido Torna-se Prejuizo Realizado</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Conta</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Montante</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Dinheiro</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>3.350.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Pintura</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-2.200.000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Ganho Reconhecido em Activo</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-1.000.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Receita de Ganhos Realizados</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-1.150.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Receita de Ganhos Reconhecidos</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1.000.000$</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+        </P
+><P
+>Note que as duas contas de receitas se saldam uma à outra por forma a 
+        que a receita <I
+CLASS="EMPHASIS"
+>actual</I
+> resultante da transacção 
+        seja apenas 150cts. Os restantes 1.000cts tinham sido previamente 
+        reconhecidos como <I
+CLASS="EMPHASIS"
+>Receitas de Ganhos Reconhecidos</I
+>.
+      </P
+></LI
+><LI
+><P
+>Você estava excessivamente optimista quanto ao valor da pintura. Em vez 
+      dos 3.350cts que você pensava a pintura valer, apenas lhe oferecem 
+        2.900cts. Mas ainda assim você decide vender, pois você dá mais valor 
+        aos 2.900cts do que à pintura. Os números mudam ligeiramente, mas 
+        não de forma dramática.
+
+        <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1335"><P
+><B
+>Table 5. Ganhos Reconhecidos Tornam-se Ganhos Realizados</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Conta</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Montante</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Dinheiro</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>2.900.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Pintura</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-2.200.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Ganho Reconhecido em Activo</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-1.000.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Receita de Ganhos Realizados</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-700.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Receita de Ganhos Reconhecidos</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1.000.000$</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+        </P
+><P
+>Note que as duas contas de receitas se saldam uma à outra por forma 
+        a que a receita <I
+CLASS="EMPHASIS"
+>actual</I
+> resultante da 
+        transacção se torna num <I
+CLASS="EMPHASIS"
+>prejuízo</I
+> de 300cts.
+        Isso está correcto, visto você ter previamente reconhecido 
+        1.000cts de receitas.
+      </P
+></LI
+><LI
+><P
+>Você consegue vender a sua pintura por mais do que alguma vez julgou 
+      concebível. O valor adicional é, novamente, registado como um ganho, 
+      <I
+CLASS="EMPHASIS"
+>por ex.</I
+> uma receita.
+
+        <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1364"><P
+><B
+>Table 6. Ganho Reconhecido Torna-se num Óptimo Ganho Realizado</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Conta</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Montante</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Dinheiro</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>10.000.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Pintura</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-2.200.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Ganho Reconhecido em Activo</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-1.000.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Receita de Ganhos Realizados</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-7.800.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Receita de Ganhos Reconhecidos</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1.000.000$</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+      
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>Na prática, é muito importante manter o <I
+CLASS="EMPHASIS"
+>Ganho Reconhecido 
+    em Activo</I
+> separado da <I
+CLASS="EMPHASIS"
+>Receita de Ganhos Realizados
+    </I
+>, visto a primeira ser muito provavelmente ignorada pelas 
+    autoridades fiscais, que apenas se preocuparão em o tributar pelos 
+    <I
+CLASS="EMPHASIS"
+>Ganhos Realizados</I
+>.
+
+    </P
+><P
+>Abaixo, mostraos o segundo caso abordado.
+    <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/appr-main2.png"></SPAN
+>
+     <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/appr-asset2.png"></SPAN
+> 
+
+    </P
+></DIV
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1402">Cuidado com a Avaliação</H2
+><P
+>Como vimos neste exemplo, para activos não financeiros, poderá 
+    ser difícil estimar correctamente o ``verdadeiro'' valor de um 
+    activo.
+    É muito fácil imaginar-se rico baseado em estimativas questionáveis 
+    que não refletem "dinheiro no banco".
+    </P
+><P
+>Quando estiver a gerir a valorização de activos,
+
+    <P
+></P
+><UL
+><LI
+><P
+>Seja cuidadoso com as suas estimativas de valor. 
+      Não se agracie com pensamentos positivos.
+      </P
+></LI
+><LI
+><P
+>Nunca, nunca, conte com os montantes que não tiver no banco ou em 
+      dinheiro. Até ter realmente vendido o seu activo e recebido o 
+      dinheiro, quaisquer valores no papel (ou padrões magnéticos no seu 
+      disco rígido) não são mais do que exactamente isso.
+      Se pudesse realisticamente convencer um banqueiro a lhe emprestar 
+      dinheiro, utilizando os activos como penhor, isso é uma prova 
+      razoavelmente credível de que os activos têm valor, pois os credores 
+      são profissionais desconfiados de sobre-estimatívas de valor dúbias.
+      Esteja atento: demasiadas empresas que parecem ser "lucrativas" no 
+      papel abrem falência por ficarem sem <I
+CLASS="EMPHASIS"
+>dinheiro</I
+>, 
+      precisamente porque "activos valiosos" não eram a mesma coisa que dinheiro.
+      
+    </P
+></LI
+></UL
+>
+
+    </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1412">Tributação de Ganhos de Capital</H2
+><P
+>    </P
+><P
+>As políticas de tributação variam consideravelmente de país para 
+    país, pelo que é virtualmente impossível dizer algo que seja 
+    universavelmente útil.
+    No entanto, é <I
+CLASS="EMPHASIS"
+>habitual</I
+> que receitas geradas por 
+    ganhos de capital não estejam sujeitas a tributação até à data em que 
+    o activo é realmente vendido, e por vezes nem sequer nessa altura.
+
+    Detentores de imóveis na América do Norte <I
+CLASS="EMPHASIS"
+>normalmente</I
+> 
+    descobrem que quando vendem residências pessoais, os ganhos de capital que 
+    possam advir estão isentos. Parece que outros países tratam a venda de 
+    imóveis de forma distinta, tributando as pessoas em tais ganhos. As 
+    autoridades Alemãs, por exemplo, tributam tais ganhos apenas se detivesse 
+    esse imóvel à menos de dez anos.
+
+    </P
+><P
+><A
+HREF="mailto:cbbrowne@hex.net"
+TARGET="_top"
+>Eu tenho</A
+> uma história 
+dos tempos em que preparava declarações de impostos em que uma família vendeu 
+uma quinta, e experava uma <I
+CLASS="EMPHASIS"
+>considerável</I
+> entrega ao fisco 
+que acabou por se mostrar virtualmente nula pois eles detinham a propriedade 
+desde antes de 1971 (aqui se mostra um "Dia de Avaliação" crítico no Canadá) e 
+devido à quinta ser uma <I
+CLASS="EMPHASIS"
+>leitaria</I
+>, com algumas deduções 
+resultantes <I
+CLASS="EMPHASIS"
+>verdadeiramente peculiares</I
+>.  
+O objectivo desta história é de que enquanto que a apresentação aqui ser 
+verdadeiramente simples, a tributação por vezes é terrivelmente complicada...  </P
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x1163.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x1423.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Despesas Pré-Pagas</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Depreciação de Activos</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

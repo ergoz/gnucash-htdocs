@@ -1,0 +1,49 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>15.2. Creating a Budget</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_budgets.html" title="Chapter 15. Budgets"><link rel="prev" href="budget_concepts1.html" title="15.1. Basic Concepts"><link rel="next" href="budget_reporting1.html" title="15.3. Budget Reporting"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">15.2. Creating a Budget</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="budget_concepts1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 15. Budgets</th><td width="20%" align="right"> <a accesskey="n" href="budget_reporting1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="15.2. Creating a Budget"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="budget_creation1"></a>15.2. Creating a Budget</h2></div></div></div><p>Even before you begin to make a budget, it’s important to
+   have given some thought to your account hierarchy.  For example, if
+   you want to budget a certain amount for your electric bill and a
+   certain amount for your water bill, you can’t have only an
+   <span class="emphasis"><strong>Expenses:Utilities</strong></span> account.  Your accounts must be at least as
+   specific as your budget.  </p><div class="sect2" title="15.2.1. Choose Which Accounts To Budget For"><div class="titlepage"><div><div><h3 class="title"><a name="budget_creation2"></a>15.2.1. Choose Which Accounts To Budget For</h3></div></div></div><p>The first step in creating a budget is to decide what it is
+     you want to plan for.  This decision will affect which accounts
+     you include in your budget.  For example, if you are only
+     interested in tracking your expenses, you may create an expense
+     budget by only entering amounts for expense accounts.  On the
+     other hand, if you want to track all of your cash flow, you may
+     create a cash flow budget by entering amounts for asset,
+     liability, income and expense accounts.</p><p>Before you begin to create your budget, you need to make
+     two decisions: What accounts do I want to budget for?  and When
+     do I want my budget to be for?  You can always change your mind
+     later, after you’ve created a budget, but you need to start with
+     something.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Tip</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">As a rule of thumb, if you mostly care about
+     <span class="emphasis"><strong>what</strong></span> you spend your money on, you may want
+     to make an expense report.  If you’re also concerned about having
+     enough money in the right places at the right times, you may want
+     to use a cash-flow budget.</p></td></tr></table></div></div><div class="sect2" title="15.2.2. Choosing a Budget Period"><div class="titlepage"><div><div><h3 class="title"><a name="id3186010"></a>15.2.2. Choosing a Budget Period</h3></div></div></div><p>Before creating a budget you must also decide what period of
+    time you want to plan for.  The most common budget periods are
+    monthly and annual.  If you want your budget to plan for changes
+    in financial patterns over time, then you should include multiple
+    budget periods in your budget.  For example, if you want to plan
+    on having higher utility expenses in the winter than in the
+    summer, then you might break your annual budget into 4 quarters or
+    even 12 months, and budget a higher value for the winter periods
+    than for the summer periods.</p></div><div class="sect2" title="15.2.3. Getting Started"><div class="titlepage"><div><div><h3 class="title"><a name="id3186029"></a>15.2.3. Getting Started</h3></div></div></div><p>To create your first budget click on <span class="guimenu"><strong>Actions</strong></span> → <span class="guisubmenu"><strong>Budget</strong></span> → <span class="guimenuitem"><strong>New Budget</strong></span>.  You will
+    immediately see a new budget with the default settings and no entries.
+    Then click on the <span class="guibutton">Options</span> button.  The most important options are
+    the budget period and the number of periods.  For the budget period,
+    choose the beginning date and the smallest period of time that you
+    want to plan for.  Then, for the number of periods, choose how many
+    periods you want to plan for.</p><p>The budget page now shows a list of accounts with a column
+    for each budget period.  The date shown in the title of each
+    column is the beginning of that budget period.</p></div><div class="sect2" title="15.2.4. Entering Budget Values"><div class="titlepage"><div><div><h3 class="title"><a name="id3186077"></a>15.2.4. Entering Budget Values</h3></div></div></div><p>Now, you must enter the budget values - the amounts that you
+    expect the account balances to change during the budget period.
+    There are two ways to enter budget values.  The first way is to
+    simply click on the cell and enter an amount.</p><p>If you have past transactions recorded in <strong class="application"><code>GnuCash</code></strong>, the
+    second way is to let <strong class="application"><code>GnuCash</code></strong> estimate the budget values by looking
+    at those transactions.  First, select the accounts you want
+    <strong class="application"><code>GnuCash</code></strong> to estimate.  Then click on the <span class="guibutton">Estimate</span> <span class="emphasis"><strong>Toolbar</strong></span> button.
+    In the <span class="guilabel"><strong>Estimate Budget Values</strong></span> dialog, select the date past which
+    <strong class="application"><code>GnuCash</code></strong> should look for past transactions.  <strong class="application"><code>GnuCash</code></strong> will start at
+    that date and look forward for the duration of your budget.  For
+    example, if you are making an annual budget, and you select
+    Jan. 1, 2005, <strong class="application"><code>GnuCash</code></strong> will look at all the transactions in that
+    account from Jan. 1, 2005 through Dec. 31, 2005.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="budget_concepts1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="budget_reporting1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">15.1. Basic Concepts </td><td width="20%" align="center"><a accesskey="u" href="chapter_budgets.html">Up</a></td><td width="40%" align="right"> 15.3. Budget Reporting</td></tr></table></div></body></html>

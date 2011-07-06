@@ -1,0 +1,102 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>10.6. Recording Purchases in a Foreign Currency (How-To)</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_currency.html" title="Chapter 10. Multiple Currencies"><link rel="previous" href="currency_howto1.html" title="10.5. Recording/Updating Currency Exchange (How-To)"><link rel="next" href="currency_invest1.html" title="10.7. Tracking Currency Investments (How-To)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">10.6. Recording Purchases in a Foreign Currency (How-To)</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="currency_howto1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 10. Multiple Currencies</th><td width="20%" align="right"> <a accesskey="n" href="currency_invest1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="currency_purchase1"></a>10.6. Recording Purchases in a Foreign Currency (How-To)</h2></div></div><p>You can do it in two different ways.</p><p>1) Use <b><tt>GnuCash</tt></b> build in currency exchange between accounts when you
+    do your transactions. This is mainly used for one time transactions, and
+    nothing which happens regurarly.</p><p>2) Use separate accounts for this Purchase, where all involved
+    accounts use the same currency. This is the recommended method, since it
+    allows much better tracking and follow up. In this way, you do one
+    currency exchange transaction, and after that you do normal
+    transactions.</p><p>The rest of this section will explain more based upon option
+    2)</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="currency_purchase2"></a>10.6.1. Purchase of an asset with foreign currency</h3></div></div><p>Your normal place of residence is in Florida, therefore you are
+      using USD as your default currency. But, you do like to travel to
+      Bahamas and go fishing. You like it so much so you decided to purchase a
+      boat there. To do this, you opened a bank account in Jamaica, moved some
+      money from US, and then purchased your dream boat (smallest
+      version)</p><p>To record this in <b><tt>GnuCash</tt></b> we use the following basic account
+      structure</p><div class="literallayout"><p><br>
+-Assets                          (USD)<br>
+   -Current Assets           (USD)<br>
+      -US Bank                 (USD)<br>
+      -Jamaican Bank       (JMD)<br>
+   -Fixed Assets           (USD)<br>
+      -Boat                (JMD)<br>
+-Equity                          (USD)<br>
+   -Opening Balances<br>
+      -USD            (USD)<br>
+<br>
+Note: the currency of each account is shown in parenthesis.<br>
+ </p></div><p>First you need to transfere some money ($10,000) to Jamaica, and
+      you use your normal US bank account (whith balance of $100,000) for
+      that. The bank give you an exchange rate of USD 1 = JMD 64, but charges
+      you USD 150 to do transfer the money.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_MoveMoney.png" alt="Currency transfer"><div class="caption"><p>Transfer money to Jamaica</p></div></div></div><p>Select the Jamaica transaction line ($9,850.00), right click and
+      select <b>Edit Exchange Rate</b></p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_SetExchangeRate.png" alt="Edit Exchange rate"><div class="caption"><p>A dialog window where the exchange rate in a currency
+          transaction is specified</p></div></div></div><p>As Exchange Rate you enter 1 USD = 64 JMD, since this is the rate
+      your bank gave. Press ok in the Transfer Funds (Edit Exchange Rate)
+      window, and then save this split transaction. Below is how it now looks
+      in the main Chart of Accounts.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_BeforeBoat.png" alt="Chart of Accounts before purchasing the boat"><div class="caption"><p>Chart of Accounts before purchasing the
+          boat</p></div></div></div><p>You find the boat, and since it's a bargain at JMD 509,000 you
+      decide to buy it. To record this transaction in <b><tt>GnuCash</tt></b>, you will need
+      to enter a simple transaction in Assets:Current Assets:Jamaican Bank
+      withdrawing 509,000 and transfering it to Assets:Fixed
+      Assets:Boat</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_AfterBoat.png" alt="Chart of Accounts after purchasing the boat"><div class="caption"><p>Chart of Accounts after purchasing the
+          boat</p></div></div></div><p>The Chart of Accounts now reflects that your bank account has been 
+      reduced with the value of the boat (JMD 509,000), and that your Fixed Assets
+      boat account has been increased with the same amount. If you also have turned
+      on the CoA (Column Choice) "Total (USD)" you will see the corresponding
+      value in USD. The USD value will always reflect the latest currency exchange
+      rate you have either automatically or manually updated <b><tt>GnuCash</tt></b> with.
+      </p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="currency_purchase3"></a>10.6.2. Purchasing foreign stocks</h3></div></div><p>This example will show how to purchase stocks that are priced in a
+      different currency than your normal currency.</p><p>Assume that you live in New York and therefore you have set the
+      default currency to USD. You decide to purchase a stock traded in Hong
+      Kong that is priced in HKD. You would also like to be able to track the
+      various income and expenses per stock and broker.</p><p>You decide to purchase stock in the Beijing Airport (Hong Kong).
+      (After all, the 2008 Olympics in Beijing have finished and the price has
+      returned to Earth.)</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">
+         The above stock (Beijing Airport) has been chosen only as an example,
+         and should not be taken as any kind of stock purchase advice.
+      </p></td></tr></table></div><p>You need to find out what the stock ticker is for this 
+      stock. To do this, you do a bit of investigation on the Internet, and
+      in particular on <a href="http://finance.yahoo.com/lookup" target="_top"><i>Yahoo! Finance - Ticker
+      Symbol Lookup</i></a> (http://finance.yahoo.com/lookup).
+      This gives you the following:</p><div class="itemizedlist"><ul><li><p><b>Beijing Airport</b> has the Stock Symbol
+          0694.HK at Yahoo</p></li></ul></div><p>Since we wanted to be able to track all various incomes and expenses,
+      we come up with the following Account structure:</p><div class="literallayout"><p><br>
+Assets:Investments:Brokerage Accounts:Boom:0694.HK     (Beijing Airport)<br>
+Assets:Investments:Brokerage Accounts:Boom:Bank        (HKD)<br>
+Equity:Opening Balances:HKD                            (HKD)<br>
+Expenses:Commissions:Boom.0694.HK                      (HKD)<br>
+Income:Investments:Dividend:Boom:0694.HK               (HKD)<br>
+      </p></div><p>The Chart of Accounts looks like this after creating all the
+      needed accounts:</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_BeforeStocks.png" alt="Chart of Accounts for international stocks"><div class="caption"><p>Chart of Accounts for international
+          stocks</p></div></div></div><p>The stock definition can be seen in the Security Editor.
+      (<b>Tools</b> -&gt; <b>Security Editor</b>)
+      </p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_Commodities.png" alt="International securities"><div class="caption"><p>International securities</p></div></div></div><p>If you have not moved some money (HKD 50,000) into the brokerage's
+      cash account (Assets:Investments:Brokerage Account:Boom:Bank), do so
+      now, either using the Equity (HKD) account, or an existing bank account
+      (Currency Transfer).</p><p>Let's assume that stock price is HKD 3 per share. To record the
+      purchase, open the brokerage's HKD cash account
+      (Assets:Investments:Brokerage Account:Boom:Bank), and enter
+      the following:</p><div class="literallayout"><p><br>
+Buy Stocks<br>
+	Assets:Investments:Brokerage Account:Boom:Bank  Withdrawal 50,000<br>
+	Expenses:Investments:Commission:Boom_HKD	Deposit 500<br>
+	Assets:Investments:Brokerage Account:Boom:0694  Deposit 49,500 (16,500 shares)<br>
+</p></div><p>If the exchange rate dialog box does not appear automatically,
+      right-click on the stock row, and select <b>Edit
+      Exchange Rate</b>. Enter the number of shares (16,500) as the
+      <b>To Amount</b>.
+      </p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_ToAmount.png" alt="Transfer Funds"><div class="caption"><p>Setting the number of shares in the Transfer Funds dialog</p></div></div></div><p>If you return to the Chart of Accounts, you will see the
+      purchased shares reflected in the stock account's total.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_AfterStocks.png" alt="Purchased international stocks"><div class="caption"><p>
+            Chart of Accounts with some international stocks
+          </p></div></div></div><p>However, as you can see, the USD totals may be zero if
+      <b><tt>GnuCash</tt></b> doesn't have an exchange rate between USD and HKD.
+      To fix this, go to
+      <b>Tools</b> -&gt; <b>Price Editor</b>
+      and click the Get Quotes button to
+      automatically retrieve the exchange rates you need.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">This example shows how stock can be purchased in any currency
+         by entering the transaction in the register of the cash account used
+         to make payment. It is also possible to enter the purchase
+         in the stock account's register, but proceed with caution!
+         When doing it that way, the stock is assumed to be priced
+         in the currency of the stock account's parent.</p><p xmlns="">In this example, the stock account's parent
+         (Assets:Investments:Brokerage Account:Boom) is denominated in HKD.
+         Since this is same currency as the stock price, the purchase
+         can be safely entered in the stock account's register.</p></td></tr></table></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="currency_howto1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="currency_invest1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">10.5. Recording/Updating Currency Exchange (How-To) </td><td width="20%" align="center"><a accesskey="u" href="chapter_currency.html">Up</a></td><td width="40%" align="right"> 10.7. Tracking Currency Investments (How-To)</td></tr></table></div></body></html>

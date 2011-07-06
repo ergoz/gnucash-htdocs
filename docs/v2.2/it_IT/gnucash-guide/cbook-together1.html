@@ -1,0 +1,76 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>5.5. In pratica</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_cbook.html" title="Capitolo 5. Libretto degli assegni"><link rel="previous" href="cbook-reconacct1.html" title="5.4. Riconciliare i conti"><link rel="next" href="chapter_cc.html" title="Capitolo 6. Carte di credito"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.5. In pratica</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="cbook-reconacct1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 5. Libretto degli assegni</th><td width="20%" align="right"> <a accesskey="n" href="chapter_cc.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="cbook-together1"></a>5.5. In pratica</h2></div></div><p>Nel <a href="chapter_txns.html" title="Capitolo 4. Transazioni">Capitolo 4. Transazioni</a>, sono state inserite alcune
+    transazioni nel conto corrente. In questo capitolo, verranno aggiunte altre
+    transazioni e poi si procederà alla loro riconciliazione.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="cbook-puttoget-open2"></a>5.5.1. Bilanci di apertura</h3></div></div><p>Si cominci aprendo il file gcashdata salvato nell'ultimo
+      capitolo (<tt>gcashdata_4</tt>). La struttura dei conti
+      dovrebbe assomigliare a questa:</p><div class="screenshot"><div class="mediaobject"><img src="figures/cbook_gcashdata4.png" alt="La struttura dei conti"><div class="caption"><p>Questa immagine mostra la struttura dei conti.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="cbook-puttoget-transactions"></a>5.5.2. Aggiungere alcune transazioni</h3></div></div><div class="orderedlist"><ol type="1"><li><p>Si apra ora il conto corrente dalla finestra principale. Nel precedente 
+          capitolo, sono state inserite alcune transazioni per lo stipendio come depositi
+          nel conto corrente. Ora si immetterà un altro tipo di depositi: un trasferimento
+          di denaro dai risparmi al conto corrente. In una riga vuota, immettere una 
+          transazione per trasferire €500 da l conto dei risparmi al conto corrente (in 
+          questo caso, la data dell'ultima transazione era il 28 Marzo, ma questa transazione 
+          di trasferimento è avvenuta il 24). Il conto di trasferimento sarà
+          quello dei risparmi dato che ci si trova nel conto corrente. Quest'ultimo dovrebbe
+          ora assomigliare a questo:</p><div class="screenshot"><div class="mediaobject"><img src="figures/cbook_transferin.png" alt="Il registro del conto corrente"><div class="caption"><p>Questa immagine mostra il registro del conto corrente.</p></div></div></div></li><li><p>Si proceda quindi all'inserimento di alcuni assegni in questo conto. 
+          Dapprima si inserisca un assegno a favore di HomeTown alimentari per €75 
+          (5 di Marzo). Il conto di trasferimento è alimentari, dato che tutto il denaro 
+          è stato impiegato per acquistare dei generi alimentari. Poi si inserisca
+          un assegno di €100 per ABC Hardware (6 di Marzo) e si suddivida questo 
+          importo in due uscite: €50 casalinghi e €50 attrezzi. Sarà necessario creare
+          un conto di tipo uscite per ognuna di esse e in seguito inserire la 
+          suddivisione. Il conto corrente dovrebbe ora assomigliare a questo:</p><div class="screenshot"><div class="mediaobject"><img src="figures/cbook_checkexamp.png" alt="Il registro del conto corrente"><div class="caption"><p>Questa immagine mostra il registro del conto corrente dopo
+                l'inserimento di altri assegni.</p></div></div></div></li><li><p>Si supponga ora di dover prelevare del denaro. Nella struttura dei 
+          conti, non è ancora presente un conto per i liquidi così sarà necessario
+          crearne uno. Si crei quindi il conto come <b>Liquidi</b>   
+          nella categoria di livello principale <b>Patrimonio</b>. 
+          Da registro del conto corrente, immettere un prelievo da ATM per trasferire
+          €100 dal conto corrente al conto liquidi in data 25 Marzo.</p><div class="screenshot"><div class="mediaobject"><img src="figures/cbook_atm.png" alt="Il registro del conto corrente"><div class="caption"><p>Questa immagine mostra il registro del conto corrente con
+                un prelievo da ATM.</p></div></div></div></li></ol></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="cbook-puttoget-reconcile"></a>5.5.3. Bilanci di apertura</h3></div></div><p>A questo punto è possibile procedere alla riconciliazione del conto
+      corrente, utilizzando questo semplice estratto conto:</p><div class="screenshot"><div class="mediaobject"><img src="figures/cbook_bankstmt.png" alt="Un semplice estratto conto"><div class="caption"><p>Questa immagine mostra un semplice estratto conto.</p></div></div></div><div class="orderedlist"><ol type="1"><li><p>Selezionare <b>Operazioni</b><b> -&gt;
+            </b><b>Riconcilia</b> dal menu e inserire
+            il bilancio di chiusura di €1.451,79. Premere OK per iniziare la riconciliazione
+            del conto. Marcare le voci come appaiono nell'estratto conto. Quando tutte le
+            voci sono state marcate, la finestra di riconciliazione dovrebbe assomigliare a 
+            questa:
+          </p><div class="screenshot"><div class="mediaobject"><img src="figures/cbook_reconexamp.png" alt="La finestra di riconciliazione"><div class="caption"><p>Questa immagine mostra la finestra di riconciliazione con una
+                differenza di €5,00.</p></div></div></div><p>Si noti che il saldo riconciliato differisce dal saldo finale di €5,00.
+            Se si osserva l'estratto conto della banca, si noterà la presenza di un costo
+            di servizio di €5,00 che non è stato aggiunto nel conto corrente.
+          </p></li><li><p>Si deve quindi inserire nel registro del conto corrente un costo di servizio
+          di €5,00. In una riga vuota del registro del conto corrente, inserire
+          una transazione che trasferisca €5,00 dal conto corrente a un conto
+          per i costi di servizio (sarà necessario creare questo conto nella categoria
+          delle uscite). Utilizzare la data di emissione dell'estratto conto come data
+          per la transazione. Il conto corrente dovrebbe ora assomigliare a questo:</p><div class="screenshot"><div class="mediaobject"><img src="figures/cbook_servch.png" alt="Il registro del conto corrente"><div class="caption"><p>Questa immagine mostra il registro del conto corrente con
+                l'aggiunta del costo di servizio.</p></div></div></div></li><li><p>Tornando alla finestra di riconciliazione, dovrebbe ora essere
+          visualizzata la tassa di servizio sotto la voce fondi in uscita. Cliccare 
+          su di essa per marcarla come riconciliata e si noti come l'importo della
+          differenza sia ora pari a 0,00. Premere il pulsante Termina nella barra degli
+          strumenti per completare la riconciliazione. La colonna di riconciliazione "R"
+          nel registro del conto corrente, dovrebbe ora mostrare una <b>s</b>
+          per ogni transazione appena riconciliata. Si osservi anche che la riga delle
+          informazioni nel basso della finestra riporta "Riconciliato: EUR 1.451,79"</p><div class="screenshot"><div class="mediaobject"><img src="figures/cbook_reconciledCheckAct.png" alt="Il registro del conto corrente"><div class="caption"><p>Questa immagine mostra il registro del conto corrente
+                riconciliato.</p></div></div></div></li></ol></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="cbook-puttoget-save"></a>5.5.4. Salvare il file</h3></div></div><p>Si ritorni ora alla finestra principale del programma e si salvi 
+      il file con il nuovo nome <tt>gcashdata_5</tt>. La struttura dei 
+      conti sta costantemente crescendo e dovrebbe essere simile a questa:</p><div class="screenshot"><div class="mediaobject"><img src="figures/cbook_chartaccts5.png" alt="La struttura dei conti"><div class="caption"><p>Questa immagine mostra la struttura dei conti.</p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="cbook-puttoget-reports"></a>5.5.5. Resoconti</h3></div></div><p>Come è stato fatto nel precedente capitolo, si dia uno sguardo ai resoconti 
+        <b>Flusso di liquidi</b> e <b>Resoconto delle transazioni</b>.
+      </p><div class="orderedlist"><ol type="1"><li><p>Si analizzi per primo il resoconto sul <b>Flusso di liquidi</b> per il
+          mese di Marzo.</p><p>Selezionare quindi il resoconto da <b>Resoconti</b> -&gt; 
+            <b>Entrate &amp; uscite</b> -&gt; 
+            <b>Flusso di liquidi</b>
+          </p><div class="screenshot"><div class="mediaobject"><img src="figures/cbook_CashFlow.png" alt="Resoconto del flusso di liquidi per il mese di Marzo"><div class="caption"><p>Questa immagine mostra il resoconto del flusso di liquidi dopo il
+                <a href="chapter_cbook.html" title="Capitolo 5. Libretto degli assegni">Capitolo 5. Libretto degli assegni</a>.</p></div></div></div></li><li><p>Si controlli ora il corrispondente resoconto delle transazioni per i conti del 
+          patrimonio.
+          </p><p>Selezionare il resoconto della transazione da <b>Resoconti</b> -&gt; 
+            <b>Resoconto delle transazioni</b>
+          </p><div class="screenshot"><div class="mediaobject"><img src="figures/cbook_TransactionRptAssets.png" alt="Resoconto delle transazioni per i conti del patrimonio nel mese di marzo"><div class="caption"><p>Questa immagine mostra il resoconto delle transazioni per i conti del patrimonio
+                nel mese di Marzo.
+                </p></div></div></div></li><li><p>Si modifichi ora il resoconto delle transazioni per mostrare solamente i vari conti delle
+          uscite.
+          </p><div class="screenshot"><div class="mediaobject"><img src="figures/cbook_TransactionRptExpenses.png" alt="Resoconto delle transazioni per i conti delle uscite nel mese di marzo"><div class="caption"><p>Questa immagine mostra il resoconto delle transazioni per i conti delle uscite
+                nel mese di Marzo.
+                </p></div></div></div></li></ol></div><p>Un solo conto, presente nella struttura dei conti realizzata finora, non è ancora stato utilizzato:
+        quello della <b>Carta di credito</b>. Ora che si è in grado di tenere traccia del conto bancario
+        e dei contanti in GnuCash, si potrebbe voler iniziare a tenere traccia anche della propria carta
+        di credito. GnuCash fornisce un particolare tipo di conto per le carte di credito che sarà discusso
+        nel prossimo capitolo.
+      </p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="cbook-reconacct1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="chapter_cc.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">5.4. Riconciliare i conti </td><td width="20%" align="center"><a accesskey="u" href="chapter_cbook.html">Risali</a></td><td width="40%" align="right"> Capitolo 6. Carte di credito</td></tr></table></div></body></html>

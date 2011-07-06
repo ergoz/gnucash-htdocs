@@ -1,0 +1,422 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Plano de Contas e Numeração de Contas</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Preferências"
+HREF="t3081.html"><LINK
+REL="NEXT"
+TITLE=" Um Plano de COntas Exemplificativo"
+HREF="x3194.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t3081.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x3194.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN3147">Plano de Contas e Numeração de Contas</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t3146.html#AEN3149"
+>Plano de Contas</A
+></DT
+><DT
+><A
+HREF="x3194.html"
+>Um Plano de COntas Exemplificativo</A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN3149">Plano de Contas</H1
+><P
+>    O Plano de Contas é como um índice de um livro para uma organização 
+    financeira. A melhor forma de conceptualizar um plano de contas é 
+    num formato de árvore.
+    Os ramos principais representam categorias ou grupos inteiros, 
+    enquanto que as folhas das árvores denotam contas bancárias ou 
+    categorias de despesas.
+    Quando um relatório de resumo é pedido, tipicamente apenas os ramos 
+    principais são mostrados no relatório, em vez das contas individuais. 
+    Por exemplo, um plano de contas pode assemlhar-se ao seguinte:
+<TT
+CLASS="LITERAL"
+><P
+CLASS="LITERALLAYOUT"
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Despesas<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+--310&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Despesas&nbsp;Pessoais<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;+--311&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tabaco<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;+--312&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Internet&nbsp;po&nbsp;Cabo<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+--320&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Despesas&nbsp;Profissionais<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;+--321&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deslocações<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;:</P
+></TT
+>
+
+    </P
+><P
+>Note que as contas não têm apenas nomes; elas têm também 
+    <I
+CLASS="EMPHASIS"
+>códigos</I
+>, por forma a permitir 
+    <I
+CLASS="EMPHASIS"
+>ordem</I
+>. Quando um relatório é gerado, 
+    a <A
+NAME="SORTORDER"
+></A
+>ordem de ordenamento é determinada 
+    pela numeração.
+    É normal ter as contas "folhas" a terminar em dígitos diferentes 
+    de zero, ao passo que as contas pais têm um número crescente de 
+    zeros. Por exemplo, contas de "dinheiro" poderiam ser organizadas 
+    da seguinte forma:
+
+    <P
+></P
+><UL
+><LI
+><P
+>        Activos Totais: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>100</PRE
+></TD
+></TR
+></TABLE
+> 
+
+        <P
+></P
+><UL
+><LI
+><P
+>            Dinheiro Total: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>110</PRE
+></TD
+></TR
+></TABLE
+> 
+
+            <P
+></P
+><UL
+><LI
+><P
+>Dinheiro na Carteira: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>111</PRE
+></TD
+></TR
+></TABLE
+>
+
+              </P
+></LI
+><LI
+><P
+>Dinheiro na Meia na Gaveta: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>112</PRE
+></TD
+></TR
+></TABLE
+>
+
+              </P
+></LI
+><LI
+><P
+>Dinheiro Debaixo Colchão: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>113</PRE
+></TD
+></TR
+></TABLE
+>
+
+              </P
+></LI
+><LI
+><P
+>Dinheiro no Mealheiro: <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>114</PRE
+></TD
+></TR
+></TABLE
+>
+            </P
+></LI
+></UL
+>
+          
+
+          </P
+></LI
+><LI
+><P
+>            Activos Bancários Totais <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>120</PRE
+></TD
+></TR
+></TABLE
+> 
+
+            <P
+></P
+><UL
+><LI
+><P
+>Conta à Ordem <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>121</PRE
+></TD
+></TR
+></TABLE
+>
+
+              </P
+></LI
+><LI
+><P
+>Conta a Prazo <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+>122</PRE
+></TD
+></TR
+></TABLE
+>
+            </P
+></LI
+></UL
+>
+          
+        </P
+></LI
+></UL
+>
+        </P
+></LI
+></UL
+>
+
+        </P
+><P
+>Quando você <A
+HREF="t1069.html"
+>cria uma conta 
+        nova</A
+>, o GnuCash sugere-lhe um código de conta 
+        apropriado; você é livre de o alterar. O GnuCash não impede 
+        a duplicação da numeração, apesar de que o encorajamos a 
+        evitar esta situação. Os códigos das contas são tratados como 
+        números na base-36, pelo que, se esgotar todos os números, 
+        pode utilizar as letras de <SPAN
+CLASS="KEYSYM"
+>a</SPAN
+> até <SPAN
+CLASS="KEYSYM"
+>z</SPAN
+>.</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t3081.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x3194.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Preferências</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Um Plano de COntas Exemplificativo</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

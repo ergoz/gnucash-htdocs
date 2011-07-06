@@ -1,0 +1,329 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Importar Dados do Quicken Para o GnuCash</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Imprimir"
+HREF="t3857.html"><LINK
+REL="NEXT"
+TITLE="Introdução ao ficheiro QIF"
+HREF="x3905.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t3857.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x3905.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN3868">Importar Dados do Quicken Para o GnuCash</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t3867.html#OVERVIEW"
+>Introdução</A
+></DT
+><DT
+><A
+HREF="x3905.html"
+>Introdução ao ficheiro QIF</A
+></DT
+><DT
+><A
+HREF="x3942.html"
+>Como utilizar a janela de Importação QIF</A
+></DT
+><DT
+><A
+HREF="x3959.html"
+>A Pasta "Ficheiros"</A
+></DT
+><DT
+><A
+HREF="x3966.html"
+>As Pastas de "Contas" e "Categorias"</A
+></DT
+><DT
+><A
+HREF="x3982.html"
+>O Selector de Contas</A
+></DT
+><DT
+><A
+HREF="x3987.html"
+>O Botão "OK"</A
+></DT
+><DT
+><A
+HREF="x4001.html"
+>Mais dicas</A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="OVERVIEW">Introdução</H1
+><P
+>    </P
+><P
+>O Quicken é uma das aplicações mais vendidas da história do 
+Universo. Praticamente quase toda a gente que já possuiu um PC ou Mac 
+desde o final dos 80's já teve uma cópia algures, e muitas pessoas 
+utilizam-no realmente para manter um registo das suas finanças. Porquê? 
+Porque funciona bastante bem e a Intuit tem (um reconhecimento) feito um 
+bom trabalho actualizando a aplicação para fazer o que as pessoas desejam.
+
+    </P
+><P
+>Eles fizeram um trabalho tão bom que, na verdade, muitos utilizadores 
+de Linux mantêm uma partição Windows nas suas máquinas só para poderem utilizar 
+o Quicken e os mais recentes jogos. Por isso lhe queremos dar uma forma de passar 
+todos os seus dados do Quicken para o GnuCash e remover mais uma barreira que 
+o impeça de colocar um belo sistema de ficheiros <TT
+CLASS="FUNCTION"
+> ext2 </TT
+> 
+naquela partição Windows.
+
+    </P
+><P
+>O problema é que o GnuCash é um verdadeiro sistema contabilístico de 
+dupla-entrada e o Quicken tem uma visão muito simplista sobre o que é uma conta, 
+o que é uma transacção, e, mais crítico, tem uma grave falha no seu modelo de 
+dados, isto é, <I
+CLASS="EMPHASIS"
+> o que grava nos ficheiros de dados</I
+>. &#13;</P
+><P
+> Simplificando, os ficheiros QIF não contêm informação suficiente para 
+reconstruir completa e precisamente a sua hierarquia de contas Quicken no 
+sistema de dupla-entrada do GnuCash sem que se utilizem alguns pressupostos 
+no código de importação bem como algum apoio, dado por sí.
+<P
+></P
+><UL
+><LI
+><P
+> Os ficheiros QIF omitem pequenas coisas que podem ser inferidas com 
+bastante precisão ao se examinarem os dados.&#13;</P
+><P
+> Por exemplo, estão os valores no formato de ponto decimal [1,000.00 ==
+1000] ou no formato Europeu de vírgula decimal [1.000,00 == 1000]?  </P
+><P
+> Ou são as datas <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+> m/d/y </PRE
+></TD
+></TR
+></TABLE
+> ou <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="SCREEN"
+> y/m/d</PRE
+></TD
+></TR
+></TABLE
+>?&#13;</P
+></LI
+><LI
+><P
+> Mais problemático são coisas vitais onde existem poucas possibilidades 
+de adivinhar.&#13;</P
+><P
+> Por exemplo, determinar a moeda em que o ficheiro está denominado.&#13;</P
+><P
+> Ou que <I
+CLASS="EMPHASIS"
+> conta </I
+> o ficheiro descreve.&#13;</P
+></LI
+></UL
+></P
+><P
+> O importador QIF do GnuCash faz um excelente trabalho a inferir o que pode, 
+mas você <I
+CLASS="EMPHASIS"
+> tem </I
+> de estar com atenção. Felizmente, o sistema 
+está desenhado por forma a que você possa corrigir quaisquer problemas <I
+CLASS="EMPHASIS"
+>antes</I
+> das suas modificações serem inseridas nas contas do GnuCash. Nada é 
+feito às suas contas do GnuCash até que você prima o botão "OK" final.
+    </P
+><P
+>Na próxima secção, darei uma visão geral do ficheiro QIF e das suas 
+"funcionalidades". Isto poderá parecer desnecessariamente técnico, mas se 
+você pelo menos fizer uma leitura rápida será muito mais facilmente capaz 
+de compreender o que se está a passar se tiver de "saltar nos buracos da 
+estrada" para fazer um ficheiro problemático funcionar, e como poderá seguir 
+correctamente na edição de ficheiros QIF em problemas mesmo difíceis.
+
+    </P
+><P
+>Existem dois "caminhos" principais para utilizar o importador QIF do GnuCash.
+<P
+></P
+><UL
+><LI
+><P
+> Um deles é "Eu sou um utilizador do Quicken e estou a migrar para o GnuCash".&#13;</P
+></LI
+><LI
+><P
+> O outro é "Eu estou a descarregar umas actualizações do meu banco em 
+ficheiros QIF".&#13;</P
+></LI
+></UL
+>&#13;</P
+><P
+> Este documento foca-se principalmente no primeiro caso, visto ser mais 
+provável os utilizadores iniciados necessitarem de ajuda e na verdade você 
+não pode começar a utilizar o GnuCash enquanto não importar os dados antigos. 
+Felizmente, uma vez aprendendo o primeiro caminho, o segundo será facílimo.
+      &#13;</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t3857.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x3905.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Imprimir</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Introdução ao ficheiro QIF</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

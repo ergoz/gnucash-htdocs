@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Exportação TXF - Problemas Conhecidos e Limitações</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Detailed TXF Category Descriptions"
+HREF="t4595.html"><LINK
+REL="NEXT"
+TITLE="Exportação TXF de dados de impostos"
+HREF="t6698.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t4595.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t6698.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN6643">Exportação TXF - Problemas Conhecidos e Limitações</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t6642.html#AEN6645"
+></A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN6645"></H1
+><P
+><I
+CLASS="EMPHASIS"
+>TaxCut 1999</I
+> </P
+><P
+>    <P
+></P
+><UL
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>Código: N488 "^ Sched B \ Div. income, cap
+        gain distrib."</I
+></P
+><P
+><I
+CLASS="EMPHASIS"
+>Código: N286 "^ Sched B \ Dividend
+        income"</I
+></P
+><P
+>Estes dois códigos, do mesmo pagador, não são co-relacionados.
+        O utilizador terá de ajustar esta situação após a importação.
+        </P
+></LI
+></UL
+></P
+><P
+><I
+CLASS="EMPHASIS"
+>TaxCut 1999, 2000</I
+> </P
+><P
+>    <P
+></P
+><UL
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>Código: N521 "  F1040 \ Federal estimated
+        tax, qrtrly"</I
+></P
+><P
+>Não aceita o campo de data e não importa os montantes 
+        individuais de pagamento, apenas o total. A data e montantes 
+        individuais de pagamento apenas interessam se tiver de calcular 
+        a penalização. (isto poderá ser um melhoramento do TurboTax)
+        </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>Código: N460 "  W-2 \ Salário ou Honorários,
+        próprio"</I
+></P
+><P
+><I
+CLASS="EMPHASIS"
+>Código: N506 "  W-2 \ Salário ou Honorários, conjuge"
+  </I
+></P
+><P
+>e outros códigos relacionados.</P
+><P
+>Apenas informação de um emprego pode ser importada.
+         </P
+></LI
+></UL
+></P
+><P
+><I
+CLASS="EMPHASIS"
+>TurboTax 1999, 2000</I
+> </P
+><P
+>    <P
+></P
+><UL
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>Código: N521 "  F1040 \ Federal estimated
+        tax, qrtrly"</I
+></P
+><P
+>Não aceita as datas fora do ano fiscal. Isto é um problema 
+        para o último pagamento que é devido a 15 de Jan. O GnuCash altera 
+        a data do último pagamento para 31 Dez. O utilizador terá de ajustar 
+        esta questão após a importação. A data apenas interessa caso tenha 
+        de calcular a penalização.
+        </P
+></LI
+></UL
+></P
+><P
+><I
+CLASS="EMPHASIS"
+>Formato de Exportação de Impostos TXF</I
+> </P
+><P
+>    <P
+></P
+><UL
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>Códigos Duplicados</I
+></P
+><P
+>Muitos dos códigos não deveriam surgir mais que uma vez.
+        GnuCash emite uma mensagem de erro se detectar isto, mas continuará
+        a exportar os dados. Estes dados duplicados não são geridos da mesma 
+        forma pelo TaxCut e pelo TurboTax.</P
+><P
+></P
+><UL
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>TurboTax</I
+></P
+><P
+>Soma os códigos duplicados. por ex., emprego um e emprego dois 
+          são somados como se fossem um só.</P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>TaxCut</I
+></P
+><P
+>Mantém apenas o <I
+CLASS="EMPHASIS"
+>ÚLTIMO</I
+> dos códigos duplicados. 
+          Por ex., o emprego um é ignorado e o emprego dois é mantido.
+          </P
+></LI
+></UL
+></LI
+></UL
+></P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t4595.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t6698.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Detailed TXF Category Descriptions</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Exportação TXF de dados de impostos</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

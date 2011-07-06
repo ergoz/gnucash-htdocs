@@ -1,0 +1,692 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Depreciação de Activos</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Depreciação e Ganhos de Capital"
+HREF="t1195.html"><LINK
+REL="PREVIOUS"
+TITLE="Depreciação e Ganhos de Capital"
+HREF="t1195.html"><LINK
+REL="NEXT"
+TITLE="Relatório de Controlo de Saldos"
+HREF="t1573.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t1195.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Depreciação e Ganhos de Capital</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t1573.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-DEPR">Depreciação de Activos</H1
+><P
+>Comparado com as estimativas muitas vezes incertas que têm de 
+    ser feitas no que toca a valorizações de activos, estamos em solo 
+    bastante mais firme neste ponto.
+
+    <P
+></P
+><UL
+><LI
+><P
+>Os governos tendem a definir regras precisas sobre como é esperado 
+      que você calcule as depreciações para fins fiscais.
+      </P
+></LI
+><LI
+><P
+>É fácil procurar em referências tais como o "Diário da República" 
+      (tabelas de amortização) estimativas sobre quanto um automóvel 
+      deverá valer ao fim de 3 anos de utilização.
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>Visto a depreciação de activos ser muitas vezes guiada por 
+    políticas fiscais, a discussão sobre depreciação irá focar-se 
+    nessa direcção, nalguns dos mais comuns esquemas de cálculo de 
+    depreciações.
+
+    </P
+><P
+>Apesar de existirem algumas discussões sobre como conseguir 
+    automatizar o cálculo e a criação de transacções para gerir coisas 
+    como a depreciação, não existe ainda qualquer código que funcione, 
+    pelo que por hora, terá de realizar os cálculos manualmente.
+
+    </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1433">Esquemas de Depreciação</H2
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1435">Depreciação Linear</H3
+><P
+>Depreciação linear (amortização a quotas constantes) reduz o valor de 
+    um activo num valor fixo por cada período até que o valor líquido seja zero. 
+    Este é o cálculo <I
+CLASS="EMPHASIS"
+>mais simples</I
+>, já que você estima um 
+    tempo de vida útil, e simplesmente divide o custo de forma equitativa ao 
+    longo desse tempo de vida.
+
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Exemplo:</I
+> Você comprou um computador por 
+    300cts e deseja desvaloriza-lo ao longo de um período de 5 anos. 
+    A cada ano o montante de desvalorização é de 60cts, levando aos 
+    seguintes cálculos:
+    
+
+    <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1441"><P
+><B
+>Table 7. Exemplo 1</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Ano</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Desvalorização</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Valor Remanescente</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>60.000$</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>240.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>2</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>60.000$</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>180.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>3</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>60.000$</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>120.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>4</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>60.000$</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>60.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>5</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>60.000$</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>0$</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    </P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1470">Depreciação Geométrica</H3
+><P
+>A cada período o activo é depreciado por uma percentagem fixa 
+    do seu valor no preíodo anterior. Neste esquema o valor remanescente 
+    de um activi decresce exponencialmente deixando um valor no final que 
+    é maior do que zero ( <I
+CLASS="EMPHASIS"
+>por ex.</I
+> - um valor de 
+    revenda ou resídual).
+
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Atenção: As autoridades fiscais podem requerer (ou permitir) 
+    uma percentagem maior no primeiro período.</I
+> Por outro lado, no 
+    Canadá, isto é ao contrário, já que eles apenas permitem uma <I
+CLASS="EMPHASIS"
+>    metade</I
+> de "Amortização do Custo do Capital" no primeiro ano.
+    O resultado desta aproximação é a de que o valor do activo se deprecia 
+    mais rapidamente no início do que no final o que é <I
+CLASS="EMPHASIS"
+>provavelmente</I
+> mais reaçista para a maioria dos activos do que um esquema 
+    linear. Isto é definitivamente verdade para automóveis.
+
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Exemplo:</I
+> Aproveitamos o exemplo anterior,
+    com uma depreciação anual de 30%.
+
+    <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1480"><P
+><B
+>Table 8. Exemplo 2</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Ano</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Desvalorização</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Valor Remanescente</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>90.000$</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>210.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>2</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>63.000$</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>147.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>3</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>44.100$</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>102.900$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>4</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>30.870$</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>72.030$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>5</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>21.609$</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>50.421$</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    </P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1509">Soma de dígitos</H3
+><P
+>Um terceiro método utilizado principalmente em países Anglo/Saxónicos 
+    é o método de "soma de dígitos". Aqui está um exemplo:
+
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Exemplo:</I
+> Primeiro divida o valor do activo pelo 
+    somatório dos anos de utilização, <I
+CLASS="EMPHASIS"
+>por ex.</I
+> para o nosso 
+    exemplo anterior com um valor de activo de 300cts que é utilizado por um período 
+    de cinco anos obterá 300.000$/(1+2+3+4+5)=20.000$. A depreciação e valor do 
+    activo são então calculados como se segue:
+
+    <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1515"><P
+><B
+>Table 9. Exemplo 3</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Ano</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Desvalorização</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Valor Remanescente</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>20.000*5=100.000$</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>200.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>2</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>20.000*4=80.000$</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>120.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>3</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>20.000*3=60.000$</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>60.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>4</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>20.000*2=40.000$</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>20.000$</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>5</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>20.000*1=20.000$</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>0$</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    </P
+></DIV
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1544">A Gestão da Depreciação no GnuCash</H2
+><P
+>No sentido de manter registo da depreciação de um activo, você 
+    necessita de (Note: Em Portugal, o P.O.C. refere as contas como sendo 
+    de Amortizações Acumuladas e Amortizações do Execício) : 
+    <P
+></P
+><UL
+><LI
+><P
+>Uma conta de <I
+CLASS="EMPHASIS"
+>Custo do Activo</I
+> para manter um registo 
+      do valor original;
+
+      </P
+></LI
+><LI
+><P
+>Uma conta de <I
+CLASS="EMPHASIS"
+>Depreciação Acumulada</I
+> onde 
+      depositar a soma dos montantes de todas as depreciações anuais;
+
+      </P
+></LI
+><LI
+><P
+>Uma conta de despesas de <I
+CLASS="EMPHASIS"
+>Custos de Depreciação</I
+> onde 
+      registar as despesas períodicas de desvalorização.
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>O primeiro passo consiste em registar a aquisição do seu activo 
+    transferindo o dinheiro da sua conta de banco para a conta de 
+    <I
+CLASS="EMPHASIS"
+>custo do activo</I
+>. De seguida, em cada período 
+    contabilístico você regista a desvalorização como uma despesa na 
+    conta apropriada.
+    As duas janelas abaixo mostram a sua conta de activo e a janela principal 
+    após o terceiro ano de desvalorização utilizando o método da "soma de 
+    dígitos" para o exemplo anterior.
+    <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/depr-asset.png"></SPAN
+>
+     <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/depr-main.png"></SPAN
+>
+    
+
+    </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1569">Uma Chamada de Atenção</H2
+><P
+>Visto a desvalorização (amortizações) e os impostos serem intimamente 
+    relacionadas, você poderá não ter sempre a possibilidade de escolha quanto 
+    ao seu método de preferência. Corrigir cálculos errados irá custar muito 
+    mais tempo e trabalho do que realizar os cálculos certos à primeira, pelo 
+    que se planeia depreciar (amortizar) activos, será aconselhável certificar-se 
+    de que métodos a lei lhe permite <I
+CLASS="EMPHASIS"
+>ou obriga</I
+> a utilizar.&#13;</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t1195.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t1573.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Depreciação e Ganhos de Capital</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t1195.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Relatório de Controlo de Saldos</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

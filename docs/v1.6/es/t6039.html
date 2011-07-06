@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Guía Y2K de GnuCash</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual de usuario de Gnucash, contabilidad doméstica Gnu"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="El Conjunto de Documentación GnuCash"
+HREF="x6007.html"><LINK
+REL="NEXT"
+TITLE="GNU General Public License"
+HREF="t6054.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual de usuario de Gnucash, contabilidad doméstica Gnu</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x6007.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t6054.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN6040">Guía Y2K de GnuCash</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><P
+>Las versiones 1.1.25 o posteriores de GnuCash almacenan todas
+las fechas como segundos y nanosegundos, donde los segundos se
+almacenan como enteros con signo de 64 bits. Esto es suficiente para
+almacenar fechas tanto del pasado distante como del futuro distante,
+tan lejos que permite almacenar hasta dos millones de años. </P
+><P
+>El formato de archivo para la versión 1.1.25 y posteriores
+almacenan las fechas en el forma descrita.  </P
+><P
+>Algunas rutinas internas utilizan el tipo <TT
+CLASS="FUNCTION"
+>time_t</TT
+>
+para expresar segundos. Observe que en la mayoría de sistemas operativos,
+este valor es una cantidad de 32 bits, y está limitado a valores de UNIX,
+desde Diciembre de 1901 a Enero de 2038. Es razonable esperar que 
+<TT
+CLASS="FUNCTION"
+>time_t</TT
+> pasará a utilizar valores de 64 bits con
+el tiempo.  </P
+><P
+>Los archivos de "backup" y de "log" son marcados con fechas
+utilizando la función estándar de Unix <TT
+CLASS="FUNCTION"
+>ctime()</TT
+> que
+tiene un parámetro <TT
+CLASS="FUNCTION"
+>time_t</TT
+>. Por lo que,
+este mecanismo puede presentar problemas en el 2038, asumiendo que
+el sistema UNIX actual continuará en servicio entonces sin ninguna
+modificación.</P
+><P
+>Observe que GnuCash también reconoce correctamente el 29 de
+Febrero del 2000 por ser año bisiesto, otro de los "problemas críticos
+con fechas" Y2K.  </P
+><P
+>Todo esto sugiere que GnuCash puede pasar razonablemente
+bien por la transición al nuevo milenio, tanto si considera
+que tiene lugar en el 2000 o en el 2001...  </P
+><P
+>Las característica Y2K se describen con mayor detalle en
+ <A
+HREF="http://www.ntlug.org/~cbbrowne/linuxy2k.html"
+TARGET="_top"
+>Linux y el Año 2000.</A
+> </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x6007.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Inicio</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t6054.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>El Conjunto de Documentación GnuCash</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>GNU General Public License</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

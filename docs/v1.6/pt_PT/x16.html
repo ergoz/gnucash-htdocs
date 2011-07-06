@@ -1,0 +1,366 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Programadores Principais</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Sobre o GnuCash"
+HREF="t3.html"><LINK
+REL="PREVIOUS"
+TITLE="Versões"
+HREF="x11.html"><LINK
+REL="NEXT"
+TITLE="Outros Colaboradores"
+HREF="x78.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x11.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Sobre o GnuCash</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x78.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-DEVELOPERS">Programadores Principais</H1
+><P
+>    <DIV
+CLASS="GLOSSLIST"
+><DL
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:rclark@hmc.edu"
+>rclark@hmc.edu</A
+>&#62;</TT
+> Robin Clark</B
+></DT
+><DD
+><P
+>programou o original <TT
+CLASS="APPLICATION"
+>X-Accountant</TT
+> em
+    Motif como projecto escolar, levando-o até à versão 0.9 em Outubro
+    de 1997.  Apesar de cada linha do seu código ter já sido re-escrita, 
+    o seu nome surge como crédito em quase todos os ficheiros.
+    Tal é a magia dos direitos de autor.</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:linas@linas.org"
+>linas@linas.org</A
+>&#62;</TT
+> Linas Vepstas</B
+></DT
+><DD
+><P
+>gostou do que viu: o aspecto visual era bonito, o código estava 
+      documentado e bem estruturado, e era todo GPL. E assim ele 
+      re-escreveu-o: adicionou widgets de célula ao XbaeMatrix, para 
+      que caixas de lista e setas ficassem mais bonitas, re-escreveu 
+      o processador do <TT
+CLASS="APPLICATION"
+>X-Accountant</TT
+> para adicionar 
+      a dupla-entrada, uma hierarquia de contas, um motor para transacções 
+      com parcelas, adicionou suporte para acções, e melhorou os menus de 
+      ajuda. Essa foi a versão 1.0 em Janeiro de 1998. Para as versões 
+      1.1 &#38; 1.2, o motor interno foi aumentado e refinado, e a janela 
+      de registo completamente redesenhada e tornada quase que 
+      independente do Motif (e aspecto gráfico). 
+    Linas está agora envolvido na Gnumatic Incorporated, uma empresa formada 
+    para melhorar e suportar o GnuCash para todos, desde os utilizadores 
+    caseiros até às empresas e contabilistas profissionais.</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:jcollins@gnucash.org"
+>jcollins@gnucash.org</A
+>&#62;</TT
+> Jeremy
+      Collins</B
+></DT
+><DD
+><P
+>criou e divulgou largamente o projecto <TT
+CLASS="APPLICATION"
+>GnoMoney</TT
+>, 
+      e depois mudou o seu nome para <TT
+CLASS="APPLICATION"
+>GnuCash</TT
+>. 
+      (Na verdade, colocou o nome a votação.  A democracia não é uma boa 
+      forma de escolher nomes.) Jeremy registou o nome de domínio, criou 
+      e manteve o sitio de internet gnucash.org durante vários anos, além
+      de que conseguiu fazer funcionar o código GTK/gnome inicial. O desenho 
+      do novo sitio de internet do GnuCash é também da autoria do Jeremy.
+      </P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:rlb@cs.utexas.edu"
+>rlb@cs.utexas.edu</A
+>&#62;</TT
+> Rob Browning</B
+></DT
+><DD
+><P
+>abusou de toda a gente por não utilizarem Perl, e depois de 
+termos adicionado suporte para Perl, desistiu do Perl a favor do 
+suporte <A
+HREF="x6860.html#GUILE"
+>Guile</A
+>/<A
+HREF="t6809.html#SCHEME"
+>Scheme</A
+>. 
+Rob construiu a infraestrutura de compilação, modificou o código gtk, e está a 
+alterar o formato do ficheiro. Ainda re-escreveu os relatórios e o descarregar 
+de extractos em <A
+HREF="t6809.html#SCHEME"
+>Scheme</A
+>, o wrapper <A
+HREF="x6860.html#GWRAP"
+> 
+g-wrap</A
+> para guile, e as preferências de utilizador.</P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:dave@krondo.com"
+>dave@krondo.com</A
+>&#62;</TT
+> Dave Peticolas</B
+></DT
+><DD
+><P
+>programa obsessivamente no GnuCash. Mas ele consegue parar assim que 
+      queira. A sério.
+      (Ele é agora o guardião da árvore de código CVS do GnuCash, pelo que 
+      sejam simpáticos ou ele pode desistir de programar a meio do vosso patch).
+      </P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:grib@billgribble.com"
+>grib@billgribble.com</A
+>&#62;</TT
+> Bill
+      Gribble</B
+></DT
+><DD
+><P
+>    não é tímido, ou de falinhas mansas.  Assim não sejam tímidos se encontrarem
+    um erro no seu código: Importação QIF, API de pesquisa e procura de transacções, 
+    impressão de cheques, suporte para bens e moedas, integração gtkhtml e impressão 
+    de relatórios.
+    </P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:rgmerk@mira.net"
+>rgmerk@mira.net</A
+>&#62;</TT
+> Robert Graham
+    Merkel</B
+></DT
+><DD
+><P
+>   trabalho extensivo nos relatórios e infraestrutura de relatórios,
+   trabalho no interface gráfico gnome, e preferências do utilizador.
+   </P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:dres@debian.org"
+>dres@debian.org</A
+>&#62;</TT
+> James LewisMoss</B
+></DT
+><DD
+><P
+>   modificações ao desenho dos documentos, re-estruturação do XML, 
+   conjunto de testes automatizados, nova hierarquia de importação de ficheiros.
+   </P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:stimming@tuhh.de"
+>stimming@tuhh.de</A
+>&#62;</TT
+> Christian
+   Stimming</B
+></DT
+><DD
+><P
+>   é um monstro na geração de relatórios. Ele é um dos principais 
+   contribuintes para a infraestrutura de relatórios actual, tendo 
+   criado muitos dos relatórios importantes.
+   </P
+></DD
+><DT
+><B
+><TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:jsled@asynchronous.org"
+>jsled@asynchronous.org</A
+>&#62;</TT
+> Joshua Sled</B
+></DT
+><DD
+><P
+>  trabalhos nas transacções agendadas e orçamentação.
+   </P
+></DD
+></DL
+></DIV
+>
+
+ </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x11.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x78.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Versões</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t3.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Outros Colaboradores</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

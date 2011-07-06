@@ -1,0 +1,1512 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>GnuCash User Manual</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="NEXT"
+TITLE="About GnuCash"
+HREF="t3.html"></HEAD
+><BODY
+CLASS="BOOK"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="BOOK"
+><A
+NAME="INDEX"><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="INDEX">GnuCash User Manual</H1
+><HR></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t3.html"
+>About GnuCash</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t3.html#AEN6"
+>Introduction</A
+></DT
+><DT
+><A
+HREF="x11.html"
+>Versioning</A
+></DT
+><DT
+><A
+HREF="x16.html"
+>Lead Developers</A
+></DT
+><DT
+><A
+HREF="x78.html"
+>Other Contributors</A
+></DT
+><DT
+><A
+HREF="x743.html"
+>Supported Operating Systems</A
+></DT
+><DT
+><A
+HREF="x768.html"
+>History</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t929.html"
+>Editing an Account</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t929.html#AEN932"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t945.html"
+>Account Types</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t945.html#AEN948"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t1037.html"
+>Account Hierarchy Creator</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t1037.html#AEN1044"
+>First Explanatory Frame</A
+></DT
+><DT
+><A
+HREF="x1051.html"
+>Currency Choosing</A
+></DT
+><DT
+><A
+HREF="x1058.html"
+>Account Type Choosing</A
+></DT
+><DT
+><A
+HREF="x1067.html"
+>Setting Starting Values</A
+></DT
+><DT
+><A
+HREF="x1075.html"
+>Final Frame</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t1083.html"
+>Asset and Liability Barcharts</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t1083.html#AEN1086"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t1127.html"
+>Asset and Liability Piecharts</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t1127.html#AEN1130"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t1154.html"
+>New Account Window</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t1154.html#AEN1157"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t1182.html"
+>Accounts Payable/Accounts Receivable</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t1182.html#XACC-ARDEF"
+>Accounts Receivable</A
+></DT
+><DT
+><A
+HREF="x1238.html"
+>Accounts Payable</A
+></DT
+><DT
+><A
+HREF="x1248.html"
+>Prepaid Expenses</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t1279.html"
+>Depreciation and Capital Gains</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t1279.html#XACC-CAPITALGAINS"
+>Capital Gains - Asset Appreciation</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t1279.html#AEN1333"
+>The Handling of Capital Gains in GnuCash</A
+></DT
+><DT
+><A
+HREF="t1279.html#AEN1486"
+>Caution about Valuation</A
+></DT
+><DT
+><A
+HREF="t1279.html#AEN1496"
+>Taxation of Capital Gains</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x1507.html"
+>Depreciation of Assets</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x1507.html#AEN1517"
+>Depreciation schemes</A
+></DT
+><DT
+><A
+HREF="x1507.html#AEN1628"
+>The Handling of Depreciation in GnuCash</A
+></DT
+><DT
+><A
+HREF="x1507.html#AEN1653"
+>A Word of Caution</A
+></DT
+></DL
+></DD
+></DL
+></DD
+><DT
+><A
+HREF="t1657.html"
+>Balance Tracking Report</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t1657.html#AEN1660"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t1684.html"
+>Balance Sheet</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t1684.html#AEN1687"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t1725.html"
+>Loan and Interest Calculations</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t1725.html#AEN1728"
+>Using the Financial Calculator</A
+></DT
+><DT
+><A
+HREF="x1742.html"
+>Explaining Compound Interest</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x1742.html#AEN1744"
+>Introduction</A
+></DT
+><DT
+><A
+HREF="x1742.html#AEN1747"
+>How Interest Works</A
+></DT
+></DL
+></DD
+></DL
+></DD
+><DT
+><A
+HREF="t1784.html"
+>Creating a "commodity"</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t1784.html#AEN1787"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t1800.html"
+>Common Report Options</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t1800.html#AEN1803"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t1872.html"
+>Currency Handling and Double Entry Bookkeeping</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t1872.html#AEN1907"
+>How to set up a foreign-currency account</A
+></DT
+><DT
+><A
+HREF="x1930.html"
+>ISO Currency Codes</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t2504.html"
+>Understanding Double-Entry Accounting</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t2504.html#XACC-DOUBLEDEF"
+>What is Double-Entry Accounting?</A
+></DT
+><DT
+><A
+HREF="x2522.html"
+>Why Use Double-Entry Accounting?</A
+></DT
+><DT
+><A
+HREF="x2527.html"
+>The Rule of Double-Entry Accounting</A
+></DT
+><DT
+><A
+HREF="x2549.html"
+>Using Double-Entry in GnuCash</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x2549.html#AEN2552"
+>Creating Accounts</A
+></DT
+><DT
+><A
+HREF="x2549.html#AEN2565"
+>Creating Transactions</A
+></DT
+><DT
+><A
+HREF="x2549.html#AEN2579"
+>Changing Transactions</A
+></DT
+></DL
+></DD
+></DL
+></DD
+><DT
+><A
+HREF="t2584.html"
+>GnuCash and the EURO</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t2584.html#AEN2587"
+>Introduction</A
+></DT
+><DT
+><A
+HREF="x2591.html"
+>EMU Member Countries and Exchange Rates</A
+></DT
+><DT
+><A
+HREF="x2662.html"
+>EURO support in GnuCash</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t2668.html"
+>Date Accelerator Keys</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t2668.html#AEN2671"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t2704.html"
+>Features</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t2704.html#AEN2707"
+>Basic features</A
+></DT
+><DT
+><A
+HREF="x2755.html"
+>Advanced Features</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t2780.html"
+>File Operations</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t2780.html#AEN2783"
+>GnuCash Data Files</A
+></DT
+><DT
+><A
+HREF="x2791.html"
+>The File Menu</A
+></DT
+><DT
+><A
+HREF="x2834.html"
+>Exporting Your account Hierachy</A
+></DT
+><DT
+><A
+HREF="x2838.html"
+>Using PostGres to store your data</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t2844.html"
+>The Gnome MDI</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t2844.html#XACC-NOTEBOOK-VIEW"
+>Notebook View</A
+></DT
+><DT
+><A
+HREF="x2857.html"
+>Multiple Windows</A
+></DT
+><DT
+><A
+HREF="x2864.html"
+>Single Window</A
+></DT
+><DT
+><A
+HREF="x2871.html"
+>Selecting MDI Modes</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t2876.html"
+>GnuCash as a Web Browser?</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t2876.html#AEN2879"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t2900.html"
+>Using Expense/Income Accounts</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t2900.html#AEN2903"
+>What are Incomes and Expenses?</A
+></DT
+><DT
+><A
+HREF="x2908.html"
+>Recording Income and Expenses</A
+></DT
+><DT
+><A
+HREF="x2984.html"
+>Using Income/Expense Accounts</A
+></DT
+><DT
+><A
+HREF="x2989.html"
+>Use of Terminology In Other Software</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t2994.html"
+>Income &#38; Expense Barcharts</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t2994.html#AEN2997"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t3046.html"
+>Income &#38; Expense Piecharts</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t3046.html#AEN3049"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t3054.html"
+>Locating transactions with the "Find Transactions" dialog</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t3054.html#AEN3059"
+>Overview</A
+></DT
+><DT
+><A
+HREF="x3083.html"
+>How to use the Find Transactions dialog</A
+></DT
+><DT
+><A
+HREF="x3099.html"
+>Setting up a search</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x3099.html#AEN3124"
+>Account searches</A
+></DT
+><DT
+><A
+HREF="x3099.html#DATE"
+>Date searches</A
+></DT
+><DT
+><A
+HREF="x3099.html#AEN3140"
+>Amount searches</A
+></DT
+><DT
+><A
+HREF="x3099.html#AEN3145"
+>String searches</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x3156.html"
+>Modifying your search</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t3164.html"
+>Preferences</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t3164.html#AEN3167"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t3229.html"
+>Chart of Accounts and Account Numbering</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t3229.html#AEN3232"
+>Chart of Accounts</A
+></DT
+><DT
+><A
+HREF="x3277.html"
+>A Sample Chart of Accounts</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t3483.html"
+>GnuCash Help Main Window</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t3483.html#AEN3486"
+>User Documentation Overview</A
+></DT
+><DT
+><A
+HREF="x3557.html"
+>Extended Help/System Documentation</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t3571.html"
+>Account Window</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t3571.html#AEN3574"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t3592.html"
+>Multicolumn Views</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t3592.html#AEN3595"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t3602.html"
+>Net Worth Barchart</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t3602.html#AEN3605"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t3631.html"
+>Profit And Loss Statement</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t3631.html#AEN3634"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t3642.html"
+>Stock Portfolio Report</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t3642.html#AEN3645"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t3678.html"
+>Updating Share Prices and Currency Values</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t3678.html#AEN3681"
+>Introduction</A
+></DT
+><DT
+><A
+HREF="x3685.html"
+>The Price Editor</A
+></DT
+><DT
+><A
+HREF="x3729.html"
+>Updating prices manually</A
+></DT
+><DT
+><A
+HREF="x3733.html"
+>Getting quotes online</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t3742.html"
+>Stock Ticker</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t3742.html#AEN3745"
+>Price Sources for Automatic Price Updates</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t3895.html"
+>Printing Checks</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t3895.html#AEN3902"
+>Check format</A
+></DT
+><DT
+><A
+HREF="x3907.html"
+>Custom Check Format</A
+></DT
+><DT
+><A
+HREF="x3916.html"
+>Check position</A
+></DT
+><DT
+><A
+HREF="x3922.html"
+>Custom check position</A
+></DT
+><DT
+><A
+HREF="x3927.html"
+>Date format</A
+></DT
+><DT
+><A
+HREF="x3932.html"
+>Custom date format</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t3938.html"
+>Printing</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t3938.html#AEN3941"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t3948.html"
+>Importing Quicken Data Into GnuCash</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t3948.html#OVERVIEW"
+>Overview</A
+></DT
+><DT
+><A
+HREF="x3986.html"
+>Introduction to the QIF file</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x3986.html#AEN4018"
+>Multi-account Quicken exports</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="x4023.html"
+>How to use the QIF Import dialog</A
+></DT
+><DT
+><A
+HREF="x4040.html"
+>The "Files" Tab</A
+></DT
+><DT
+><A
+HREF="x4047.html"
+>The "Accounts" and "Categories" Tabs</A
+></DT
+><DT
+><A
+HREF="x4063.html"
+>The Account Picker</A
+></DT
+><DT
+><A
+HREF="x4068.html"
+>The "OK" Button</A
+></DT
+><DT
+><A
+HREF="x4082.html"
+>More hints</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x4082.html#AEN4086"
+>Opening Balance</A
+></DT
+><DT
+><A
+HREF="x4082.html#AEN4090"
+>Empty category</A
+></DT
+><DT
+><A
+HREF="x4082.html#AEN4094"
+>Dividend category</A
+></DT
+><DT
+><A
+HREF="x4082.html#AEN4098"
+>Fund families</A
+></DT
+><DT
+><A
+HREF="x4082.html#AEN4102"
+>Brokerage accounts</A
+></DT
+></DL
+></DD
+></DL
+></DD
+><DT
+><A
+HREF="t4105.html"
+>A Guide for Former Users of Quicken</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t4105.html#XACC-QUICKENGUIDE"
+>Quicken (TM) User's Guide</A
+></DT
+><DT
+><A
+HREF="x4112.html"
+>Quicken Categories</A
+></DT
+><DT
+><A
+HREF="x4117.html"
+>Quicken QIF File Import</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="x4117.html#AEN4125"
+>Creating QIF Files</A
+></DT
+><DT
+><A
+HREF="x4117.html#AEN4152"
+>Loading QIF files into GnuCash</A
+></DT
+><DT
+><A
+HREF="x4117.html#AEN4162"
+>Things To Note About QIF Import</A
+></DT
+></DL
+></DD
+></DL
+></DD
+><DT
+><A
+HREF="t4192.html"
+>Getting Started</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t4192.html#AEN4195"
+>Welcome</A
+></DT
+><DT
+><A
+HREF="x4200.html"
+>Remedial Accounting 101</A
+></DT
+><DT
+><A
+HREF="x4209.html"
+>Setting up accounts from scratch</A
+></DT
+><DT
+><A
+HREF="x4216.html"
+>Importing data from other personal finance programs</A
+></DT
+><DT
+><A
+HREF="x4227.html"
+>Starting to use GnuCash</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t4235.html"
+>The Reconciliation Window</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t4235.html#AEN4247"
+>Reconciling</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t4294.html"
+>The Account Register</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t4294.html#AEN4296"
+>Introduction</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t4294.html#BASICLEDGER"
+>Basic Ledger Transactions</A
+></DT
+><DT
+><A
+HREF="t4294.html#AUTOSPLIT"
+>Auto-Split Ledger Transactions</A
+></DT
+><DT
+><A
+HREF="t4294.html#TRANSJRNL"
+>Transaction Journal</A
+></DT
+><DT
+><A
+HREF="t4294.html#XACC-REGISTER-SORTORDER"
+>Sort Order</A
+></DT
+><DT
+><A
+HREF="t4294.html#XACC-DATERANGE"
+>Date Range</A
+></DT
+><DT
+><A
+HREF="t4294.html#XACC-GENERAL-LEDGER"
+>The General Ledger</A
+></DT
+></DL
+></DD
+></DL
+></DD
+><DT
+><A
+HREF="t4387.html"
+>Register Keyboard Shortcuts</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t4387.html#AEN4390"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t4428.html"
+>Reports</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t4428.html#XACC-REPORTWINDOW"
+>The Report Window</A
+></DT
+><DT
+><A
+HREF="x4489.html"
+>Multiple Reports In A Window</A
+></DT
+><DT
+><A
+HREF="x4493.html"
+>Web Pages as reports</A
+></DT
+><DT
+><A
+HREF="x4497.html"
+>Style Sheets</A
+></DT
+><DT
+><A
+HREF="x4501.html"
+>Constructing custom reports</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t4515.html"
+>Tax Report / <A
+HREF="t6777.html"
+>TXF Export</A
+></A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t4515.html#AEN4519"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t4554.html"
+>Top-level Menus</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t4554.html#AEN4557"
+>The Main Menu</A
+></DT
+><DT
+><A
+HREF="x4601.html"
+>The Toolbar and the Summary Bar</A
+></DT
+><DT
+><A
+HREF="x4605.html"
+>Docking, Moving, and Tearing Off</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t4608.html"
+>Transaction Report</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t4608.html#AEN4611"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t4676.html"
+>Detailed TXF Category Descriptions</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t4676.html#AEN4679"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t6721.html"
+>TXF Export - Known Anomalies and Limitations</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t6721.html#AEN6724"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t6777.html"
+>TXF Export of tax data</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t6777.html#AEN6780"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t6803.html"
+>Hacking GnuCash Documentation</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t6803.html#XACC-DOCBOOK"
+>About DocBook</A
+></DT
+><DT
+><A
+HREF="x6856.html"
+>The GnuCash Documentation Set</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t6888.html"
+>GnuCash and Scheme</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t6888.html#SCHEME"
+>Scheme</A
+></DT
+><DT
+><A
+HREF="x6912.html"
+>Scheme Documentation</A
+></DT
+><DT
+><A
+HREF="x6939.html"
+>Guile Scheme</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t6971.html"
+>Stock Price Report</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t6971.html#AEN6974"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t6978.html"
+>Report Development</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t6978.html#XACC-REPORTDEV"
+>Report Development</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t6978.html#AEN7040"
+>Report Overview</A
+></DT
+><DT
+><A
+HREF="t6978.html#OPTIONS-GENERATOR"
+>The options-generator
+function</A
+></DT
+><DT
+><A
+HREF="t6978.html#ACCESSING-DATA"
+>Accessing GnuCash Data</A
+></DT
+><DT
+><A
+HREF="t6978.html#HTML-GENERATION"
+>HTML Generation functions</A
+></DT
+><DT
+><A
+HREF="t6978.html#RENDERER"
+>The rendition function</A
+></DT
+><DT
+><A
+HREF="t6978.html#AEN7200"
+>For More Information</A
+></DT
+></DL
+></DD
+></DL
+></DD
+><DT
+><A
+HREF="t7204.html"
+>What's New?</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t7204.html#AEN7207"
+>What's new in GnuCash 1.6?</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t7204.html#AEN7210"
+>New File Format</A
+></DT
+><DT
+><A
+HREF="t7204.html#AEN7216"
+>New Interface</A
+></DT
+><DT
+><A
+HREF="t7204.html#AEN7230"
+>Reports</A
+></DT
+><DT
+><A
+HREF="t7204.html#AEN7249"
+>Graphs</A
+></DT
+><DT
+><A
+HREF="t7204.html#AEN7257"
+>The Online World</A
+></DT
+><DT
+><A
+HREF="t7204.html#AEN7262"
+>A taste of the Future</A
+></DT
+></DL
+></DD
+></DL
+></DD
+><DT
+><A
+HREF="t7271.html"
+>GnuCash Y2K Readiness</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t7271.html#AEN7274"
+></A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t7289.html"
+>GNU General Public License</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t7289.html#SEC001"
+>Preamble</A
+></DT
+><DT
+><A
+HREF="x7305.html"
+>GNU GENERAL PUBLIC LICENSE TERMS AND
+    CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION</A
+></DT
+><DT
+><A
+HREF="x7334.html"
+>NO WARRANTY</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="t7339.html"
+>Importing MYM Files</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="t7339.html#AEN7342"
+>Managing Your Money to GnuCash Conversion</A
+></DT
+><DT
+><A
+HREF="x7349.html"
+>Duplicate Transactions</A
+></DT
+></DL
+></DD
+></DL
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t3.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>About GnuCash</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

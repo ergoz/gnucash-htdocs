@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>TXF Export - Known Anomalies and Limitations</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash User Manual"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Detailed TXF Category Descriptions"
+HREF="t4676.html"><LINK
+REL="NEXT"
+TITLE="TXF Export of tax data"
+HREF="t6777.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash User Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t4676.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t6777.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN6722">TXF Export - Known Anomalies and Limitations</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t6721.html#AEN6724"
+></A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN6724"></H1
+><P
+><I
+CLASS="EMPHASIS"
+>TaxCut 1999</I
+> </P
+><P
+>    <P
+></P
+><UL
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>Code: N488 "^ Sched B \ Div. income, cap
+        gain distrib."</I
+></P
+><P
+><I
+CLASS="EMPHASIS"
+>Code: N286 "^ Sched B \ Dividend
+        income"</I
+></P
+><P
+>These two codes, from the same payer, are not
+        correlated. The user will have to adjust for this after import.
+        </P
+></LI
+></UL
+></P
+><P
+><I
+CLASS="EMPHASIS"
+>TaxCut 1999, 2000</I
+> </P
+><P
+>    <P
+></P
+><UL
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>Code: N521 "  F1040 \ Federal estimated
+        tax, qrtrly"</I
+></P
+><P
+>Does not accept the date field and does not import the
+        individual payment amounts, only the total. The date and
+        individual payment amounts, only matter if you have to compute
+        the penalty. (this may be a TurboTax enhancement)
+        </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>Code: N460 "  W-2 \ Salary or wages,
+        self"</I
+></P
+><P
+><I
+CLASS="EMPHASIS"
+>Code: N506 "  W-2 \ Salary or wages, spouse"
+	</I
+></P
+><P
+>and other related codes.</P
+><P
+>Information from only one job may be imported.
+        </P
+></LI
+></UL
+></P
+><P
+><I
+CLASS="EMPHASIS"
+>TurboTax 1999, 2000</I
+> </P
+><P
+>    <P
+></P
+><UL
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>Code: N521 "  F1040 \ Federal estimated
+        tax, qrtrly"</I
+></P
+><P
+>Does not accept the dates outside of the tax year. This is
+        a problem for the last payment that is due Jan 15.  GnuCash
+        changes the the date of the last payment to Dec 31. The user
+        will have to adjust for this after import. The date only matters
+        if you have to compute the penalty.
+        </P
+></LI
+></UL
+></P
+><P
+><I
+CLASS="EMPHASIS"
+>TXF Tax eXport Format</I
+> </P
+><P
+>    <P
+></P
+><UL
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>Duplicate Codes</I
+></P
+><P
+>Most codes are not supposed to appear more than once.
+        GnuCash issues an error message if it detects this, but will
+        still export the data.  These are not handled the same by TaxCut
+        and TurboTax.</P
+><P
+></P
+><UL
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>TurboTax</I
+></P
+><P
+>Sums the duplicate codes. i.e., job one and job two are
+          added together.</P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>TaxCut</I
+></P
+><P
+>Keeps only the <I
+CLASS="EMPHASIS"
+>LAST</I
+> of the
+          duplicate codes. i.e., job one is ignored and job two is kept.
+          </P
+></LI
+></UL
+></LI
+></UL
+></P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t4676.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t6777.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Detailed TXF Category Descriptions</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>TXF Export of tax data</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

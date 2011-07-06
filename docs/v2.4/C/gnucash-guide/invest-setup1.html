@@ -1,0 +1,105 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>8.4. Setup Investment Portfolio</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_invest.html" title="Chapter 8. Investments"><link rel="prev" href="invest_int1.html" title="8.3. Interest Bearing Accounts"><link rel="next" href="invest-buy-stock1.html" title="8.5. Buying Shares"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.4. Setup Investment Portfolio</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="invest_int1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 8. Investments</th><td width="20%" align="right"> <a accesskey="n" href="invest-buy-stock1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="8.4. Setup Investment Portfolio"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="invest-setup1"></a>8.4. Setup Investment Portfolio</h2></div></div></div><p>Now that you have built an account hierarchy in the previous
+    section, this section will show you how to create and populate the accounts with your
+    investment portfolio. After this initial setup of your portfolio, you may have
+    shares of stock purchased from before you started using <strong class="application"><code>GnuCash</code></strong>. For these stocks,
+    follow the instructions in the <a class="link" href="invest-buy-stock1.html#invest-buy-stock2" title="8.5.1. Entering Preexisting Shares"><span class="emphasis"><strong>Entering
+    Preexisting Shares</strong></span></a> section below. If your have just purchased your stocks,
+    then use the <a class="link" href="invest-buy-stock1.html#invest-buy-new2" title="8.5.2. Buying New Shares"><span class="emphasis"><strong>Buying New Shares</strong></span>
+    </a> section.</p><div class="sect2" title="8.4.1. Setup Accounts for Stocks and Mutual Funds"><div class="titlepage"><div><div><h3 class="title"><a name="invest-setup-stockaccounts2"></a>8.4.1. Setup Accounts for Stocks and Mutual Funds</h3></div></div></div><p>This section will show you how to add stocks and mutual fund
+      accounts to <strong class="application"><code>GnuCash</code></strong>. In this section, we will assume you are using the
+      basic account setup introduced in the previous section, but
+      the principles can be applied to any account hierarchy.</p><p>You should have within the top level <span class="guilabel"><strong>Asset</strong></span>
+      account, a few levels down, an account entitled
+      <span class="guilabel"><strong>Stock</strong></span>. Open the account tree to this level by
+      clicking on the <span class="quote">“<span class="quote">right facing triangle marker</span>”</span> signs next
+      to the account names until the tree is opened to the depth of the new
+      account. You will need to create a sub-account (of type
+      <span class="emphasis"><strong>stock</strong></span>) under the Stock account for every stock you
+      own. Every stock is a separate account. The naming of these stock
+      accounts is usually done using the stock ticker abbreviation, though account
+      names may be anything that is clear to you and other users. So, for
+      example, you could name your accounts <span class="emphasis"><strong>AMZN</strong></span>,
+      <span class="emphasis"><strong>IBM</strong></span> and <span class="emphasis"><strong>NST</strong></span> for your Amazon,
+      IBM and NSTAR stocks respectively. Below is a schematic model of the
+      layout (only showing the Assets sub-accounts).</p><div class="literallayout"><p><br>
+ Assets<br>
+    Investments<br>
+       Brokerage Accounts<br>
+          Bond<br>
+          Mutual Funds<br>
+          Market Index<br>
+          Stock<br>
+             AMZN<br>
+             IBM<br>
+             NST<br>
+ </p></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">If you want to track income (dividends/interest/capital gains)
+        on a per-stock or fund basis, you will need to create an
+        <span class="emphasis"><strong>Income:Dividends:STOCKSYMBOL</strong></span>,
+        <span class="emphasis"><strong>Income:Cap Gain (Long):STOCKSYMBOL</strong></span>,
+        <span class="emphasis"><strong>Income:Cap Gain (Short):STOCKSYMBOL</strong></span>
+        and <span class="emphasis"><strong>Income:Interest:STOCKSYMBOL</strong></span>
+        account for each stock you own that pays dividends or interest.</p></td></tr></table></div></div><div class="sect2" title="8.4.2. Example Stock Account"><div class="titlepage"><div><div><h3 class="title"><a name="invest-setup-example2"></a>8.4.2. Example Stock Account</h3></div></div></div><p>As an example, let’s assume that you currently own 100 shares of
+      Amazon stock. First, create the stock account AMZN by selecting the
+      <span class="guilabel"><strong>Stock</strong></span> account and click on the menu <span class="guimenu"><strong>Actions</strong></span>+<span class="guimenu"><strong>New Account...</strong></span>. The New
+      Account dialog will appear, follow the steps, in the sequence below to
+      setup your new stock account.</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_newaccount.png" alt="New Account Window"><div class="caption"><p>New Account Window </p></div></div></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p><span class="emphasis"><strong>Account Name</strong></span> - Usually, use the stock
+          ticker abbreviation, IE: <span class="quote">“<span class="quote">AMZN</span>”</span></p></li><li class="listitem"><p><span class="emphasis"><strong>Account Code</strong></span> - Optional field, use CUSIP,
+          the newspaper listing symbol, mutual fund family ID or code of your
+          own choosing.</p></li><li class="listitem"><p><span class="emphasis"><strong>Description</strong></span> - Optional field for detailed
+          description of the commodity/stock. Note this field by default is
+          displayed in the <span class="guilabel"><strong>Account</strong></span> tab tree.</p></li><li class="listitem"><p><span class="emphasis"><strong>Account Type</strong></span> - Select the type of account
+          you are creating from the lower left-hand list.</p></li><li class="listitem"><p><span class="emphasis"><strong>Parent Account</strong></span> - Select the parent
+          account for the new account from the right hand listing. Expand list
+          of accounts if necessary.</p></li><li class="listitem"><p><span class="emphasis"><strong>Create the New Security</strong></span> - To use a new
+          stock, you must create the stock as a new commodity</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><strong>Select Security/Currency</strong></span> - Click on
+              the <span class="guibutton">Select ...</span> button next to the
+              <span class="guilabel"><strong>security/currency</strong></span> line. We must change the
+              security from the default (your default currency) to this
+              specific stock. This will bring up the 
+              <span class="guilabel"><strong>Select Security</strong></span> dialog.</p></li><li class="listitem"><p><span class="emphasis"><strong>Type</strong></span> - Change the
+              <span class="guilabel"><strong>type</strong></span> from current to the exchange where the
+              security/commodity is traded (in this example NASDAQ).</p><p>Select the <span class="guibutton">New</span> button to open the
+              <span class="guilabel"><strong>New Security</strong></span> window.</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_selectsecurity.png" alt="Select Security Window"><div class="caption"><p>Select Security Window </p></div></div></div></li><li class="listitem"><p><span class="emphasis"><strong>Create the Security</strong></span> - Click on the
+              <span class="guibutton">New...</span> button and enter the appropriate
+              information for this stock on the new form <span class="guilabel"><strong>New Security</strong></span>.</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p>The <span class="guilabel"><strong>Full name:</strong></span> is
+                  <span class="quote">“<span class="quote">Amazon.com Inc</span>”</span>.</p></li><li class="listitem"><p>The <span class="guilabel"><strong>Symbol/abbreviation:</strong></span> is
+                  <span class="quote">“<span class="quote">AMZN</span>”</span>.  The symbol is the stock ticket used in your
+                  quote source several lines down on the form.  Note that different
+                  symbols will be utilized on different price sources for the same stock,
+                  an example is Ericsson on the Stockholm Exchange is ERIC-B while
+                  on Yahoo it is ERRICB.ST</p></li><li class="listitem"><p>The <span class="guilabel"><strong>Type:</strong></span> should already be
+                  <span class="quote">“<span class="quote">NASDAQ</span>”</span>.</p></li><li class="listitem"><p>The <span class="guilabel"><strong>CUSIP or other code</strong></span> is where
+                  you can enter some other coding number or text (leave it
+                  blank in this example).</p></li><li class="listitem"><p>The <span class="guilabel"><strong>Fraction traded</strong></span> should be
+                  adjusted to the smallest fraction of this security which can
+                  be traded, usually 1/100 or 1/10000.</p></li><li class="listitem"><p>The box <span class="quote">“<span class="quote">Get On-line Quotes</span>”</span> and the
+                  quote source and the timezone should be selected to define
+                  the sources for updating prices on-line. See Also
+                  <a class="link" href="invest-stockprice1.html#invest-stockprice-auto2" title="8.6.3. Configuring for Automatic Retrieval of Quotes">
+                    <span class="quote">“<span class="quote">Setting Stock Price Automatically</span>”</span></a>.</p><p> If the <span class="guibutton">Get On-Line Quotes</span> button is not highlighted, and it
+                  is not tickable, then the <strong class="application"><code>Finance::Quote</code></strong> package is not installed.
+                  See the section on
+                   <a class="link" href="invest-stockprice1.html#invest-stockprice-auto-install3" title="8.6.3.1. Installing Finance::Quote">
+                    <span class="quote">“<span class="quote">Installing <strong class="application"><code>Finance::Quote</code></strong></span>”</span></a>.</p><p>Below is what this window should look like when
+                  finished: </p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_newsecurity.png" alt="New Security Window"><div class="caption"><p>New Security Window </p></div></div></div></li><li class="listitem"><p><span class="emphasis"><strong>Save Security</strong></span> - Click on the
+                  <span class="guibutton">OK</span> button to save this new security,
+                  this will close the <span class="guilabel"><strong>New Security</strong></span> window and
+                  return to the <span class="guilabel"><strong>New Account</strong></span> window.</p></li></ul></div></li></ul></div></li><li class="listitem"><p><span class="emphasis"><strong>Select the Security</strong></span> - you should now see
+          the newly created security available in the pull down menu for
+          <span class="guilabel"><strong>Security/Currency</strong></span>. Select it (it is probably
+          already selected) and click on <span class="guibutton">OK</span>.</p></li><li class="listitem"><p><span class="emphasis"><strong>Smallest Fraction</strong></span> - Specify the smallest
+          fraction of the security/commodity that is traded.</p></li><li class="listitem"><p><span class="emphasis"><strong>Notes</strong></span> - Enter any notes or messages
+          related to this security/commodity.</p></li><li class="listitem"><p><span class="emphasis"><strong>Tax Related</strong></span> - Go to <span class="guimenu"><strong>Edit</strong></span> → <span class="guimenuitem"><strong>Tax Report Options</strong></span> to check this box if this 
+          account’s transactions will relate to Income Taxes.</p></li><li class="listitem"><p><span class="emphasis"><strong>Placeholder</strong></span> - Check box if this account
+          is a <span class="quote">“<span class="quote">Placeholder</span>”</span>, that is it will contain no
+          transactions.</p></li><li class="listitem"><p><span class="emphasis"><strong>Finished</strong></span> - You should now have been
+          automatically returned to the New Account dialog, with the
+          <span class="guilabel"><strong>symbol/abbreviation:</strong></span> line set to <span class="quote">“<span class="quote">AMZN
+          (Amazon.com Inc)</span>”</span>. Click on <span class="guibutton">OK</span> to save
+          this new stock account.</p></li></ol></div><p>You have now created the Amazon stock account, your main account
+      should look something like this (notice that there are a few extra
+      accounts here, a bank account, and an equity account):</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_setup_current.png" alt="Setup Current Portfolio"><div class="caption"><p>This image is after the creation of the first stock
+          account (AMZN)</p></div></div></div><p>Open the account register window for this AMZN stock account
+      (double click on it). Here you see the <span class="emphasis"><strong>Commodity</strong></span> view. This gives you an overview of
+      the transactions in this commodity including the number of units (shares for a stock or mutual fund) bought or sold, the net price per unit, and the total amount.
+      Obviously, we have not bought or sold any shares of AMZN yet, so the register should not contain any transactions.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="invest_int1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="invest-buy-stock1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">8.3. Interest Bearing Accounts </td><td width="20%" align="center"><a accesskey="u" href="chapter_invest.html">Up</a></td><td width="40%" align="right"> 8.5. Buying Shares</td></tr></table></div></body></html>

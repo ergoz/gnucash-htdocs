@@ -1,0 +1,278 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>  O Editor de Preços
+      </TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Actualizar Cotações de Acções e Câmbios Monetários"
+HREF="t3595.html"><LINK
+REL="PREVIOUS"
+TITLE="Actualizar Cotações de Acções e Câmbios Monetários"
+HREF="t3595.html"><LINK
+REL="NEXT"
+TITLE="  Actualizar Cotações Manualmente
+      "
+HREF="x3646.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t3595.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Actualizar Cotações de Acções e Câmbios Monetários</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x3646.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN3602">O Editor de Preços</H1
+><P
+>O editor de preços encontra-se disponível no menu "Ferramentas". 
+  Ao selecciona-lo surge o editor:</P
+><DIV
+CLASS="MEDIAOBJECT"
+><P
+><IMG
+SRC="image/pricedb.png"></P
+></DIV
+><P
+>Cada entrada no editor mostra o registo de um preço:</P
+><P
+></P
+><UL
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>Activo</I
+>: Ao que se refere o preço.
+    </P
+></LI
+><LI
+><P
+>      <I
+CLASS="EMPHASIS"
+>Moeda</I
+>: em que moeda o preço está registado.
+      Como um exemplo simples, O Activo das acções da EDP S.A. é EDP, 
+      e a moeda seria EUR, já que as cotações são quase sempre indicadas 
+      em Euros.
+    </P
+></LI
+><LI
+><P
+>      <I
+CLASS="EMPHASIS"
+>Data</I
+>: a que a cotação se destina.
+    </P
+></LI
+><LI
+><P
+>      <I
+CLASS="EMPHASIS"
+>Fonte</I
+>: de onde veio a cotação. Tipicamente, 
+      isto será ou "user:price-editor" (indicando que você o introduziu 
+      directamente) ou "Finance::Quote", indicando que foi obtido de 
+      uma fonte online através do módulo Finance::Quote que o GnuCash 
+      utiliza para esta tarefa.
+    </P
+></LI
+><LI
+><P
+>      <I
+CLASS="EMPHASIS"
+>Tipo</I
+>: Existem vários tipos diferentes de 
+      cotações de acções, e explicar os aspectos técnicos requer 
+      algum conhecimento do mercado financeiro.  A maioria das acções, 
+      na maior parte dos mercados, têm correctores especializados que 
+      estão quase sempre dispostos a comprar e vender essa acção, e 
+      ter algum lucro pelo caminho ao comprar e vender a preços 
+      ligeiramente diferentes.
+      </P
+><P
+></P
+><UL
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>Compra</I
+> - as cotações indicam quanto 
+        um corrector especializado está disposto a pagar por uma acção.
+        </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>Venda</I
+> - as cotações indicam por quanto 
+        os correctores estão dispostos a vender as acções - naturalmente, 
+        este é ligeiramente superior à cotação de compra.
+        </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>Última</I
+> - as cotações indicam a cotação 
+        a que ocorreu a última transacção para essa acção/título. Esta é 
+        a cotação mais normalmente citada nos meios de informação.
+        </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>Valor Líquido do Activo</I
+> - cotações 
+    tipicamente utilizadas para fundos de investimento. São calculadas 
+    utilizando o valor líquido dos activos do fundo.
+        </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>Desconhecida</I
+> - tal como o nome sugere, 
+    utilize esta se o tipo de cotação for desconhecida.
+        </P
+></LI
+></UL
+></LI
+><LI
+><P
+>      <I
+CLASS="EMPHASIS"
+>Cotação</I
+>: a cotação actual.
+    </P
+></LI
+></UL
+><P
+>  Você pode seleccionar como deseja ordenar a lista de cotações 
+  clicando no botão de selecção "Ordenar por . . ." apropriado 
+  directamente abaixo da lista de cotações.
+      </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t3595.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x3646.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Actualizar Cotações de Acções e Câmbios Monetários</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t3595.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Actualizar Cotações Manualmente</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

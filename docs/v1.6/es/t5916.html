@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>TXF Export of tax data</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual de usuario de Gnucash, contabilidad doméstica Gnu"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="TXF Export - Known Anomalies and Limitations"
+HREF="t5862.html"><LINK
+REL="NEXT"
+TITLE=" Tratando la Documentación de GnuCash "
+HREF="t5939.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual de usuario de Gnucash, contabilidad doméstica Gnu</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t5862.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t5939.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN5917">TXF Export of tax data</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><P
+>The tax report allows you to export all tax related Income and Expenses
+      to a TXF (Tax eXchange Format) file in addition to the html format
+      that all reports allow. The TXF file can be imported into tax
+      filing programs such as TaxCut or TurboTax.</P
+><P
+><I
+CLASS="EMPHASIS"
+>NOTE:</I
+> For this to work, the user has to
+      segregate taxable and not taxable income to different accounts, as
+      well as deductible and non deductible expenses. The user also must
+      Set the TXF category of each tax related account.  The "Tax
+      Information" dialog on the "Accounts" menu is used for this.  It
+      is best to set this up before actually exporting, otherwise, you
+      will just get an empty file.  There is a taxreport.xac file in the
+      examples directory, which shows one way this can be set up.</P
+><P
+>    <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/tax-info-dialog.png"></SPAN
+> </P
+><P
+><I
+CLASS="EMPHASIS"
+>IMPORTANT:</I
+> Most TXF codes should only appear
+      on a single account!  The exceptions are codes for which the
+      "Payer Name Source" is not grayed, each of which can appear many
+      times. Of course, each duplicate should have a unique payer
+      name. These are typically interest accounts or stocks or mutual
+      funds that pay dividends.</P
+><P
+>    <P
+></P
+><UL
+><LI
+><P
+>Accounts: for which to set a TXF category.
+        If no account is selected nothing is changed.  If multiple
+        accounts are selected, all of the Income accounts will be set to
+        the selected item. </P
+></LI
+><LI
+><P
+>TXF categories: Select the desired one. A <A
+HREF="t3819.html"
+>detailed description</A
+>
+        appears just below.</P
+></LI
+><LI
+><P
+>Payer Name Source: A text description that is
+        exported along with the value of the account.  This is usually
+        the name of a bank, stock, or mutual fund that pays dividends or
+        interest.  Occasionally, it is a description of a
+        deduction.</P
+><P
+>In the Accounts list box above, "Money Market Fund One" is
+        an example of where the name of the current account is exported.
+        This is typically used when the fund pays only one type of
+        income, such as interest.  For "Mutual Fund Four" and "Mutual
+        Fund Five", the categories "Long Term Cap Gain" and "Dividend
+        Income" both will export the name of the parent account.  This
+        is typically used when the fund pays several different types of
+        distributions.  As shown in this example, these funds have three
+        types of distributions, but the "Income" and "Short Term Cap
+        Gain" categories are totaled and exported together as "Dividend
+        Income", as they are taxed the same.</P
+></LI
+></UL
+>
+
+    <A
+HREF="t5862.html"
+>Known anomalies and
+      limitations.</A
+></P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t5862.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Inicio</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t5939.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>TXF Export - Known Anomalies and Limitations</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Tratando la Documentación de GnuCash</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

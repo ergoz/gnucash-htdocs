@@ -1,0 +1,816 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>História</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Sobre o GnuCash"
+HREF="t3.html"><LINK
+REL="PREVIOUS"
+TITLE="Sistemas Operativos Suportados"
+HREF="x658.html"><LINK
+REL="NEXT"
+TITLE="Editar uma Conta"
+HREF="t844.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x658.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Sobre o GnuCash</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t844.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-HISTORY">História</H1
+><P
+> A tabela abaixo mostra algumas métricas históricas de linhas-de-código 
+e número-de-ficheiros para o projecto de desenvolvimento do 
+<TT
+CLASS="APPLICATION"
+>GnuCash</TT
+>.  Note que nem todo o código foi contabilizado: 
+por exemplo, as Makefiles, configure.in e autogen.sh não são contabilizadas. 
+Também, ficheiros que são gerados automaticamente são ignorados, tais como 
+ficheiros que vieram 'emprestados' de outros projectos. Também não contabilizados 
+são ficheiros experimentais, scripts em perl variados, várias traduções, 
+extras e utilitários.</P
+><P
+>Note também que KLOCs não são uma boa métrica de produtividade da programação, 
+nem sequer o <TT
+CLASS="APPLICATION"
+>wc</TT
+> é uma boa forma de contabilizar os 
+KLOCs.  Muito melhores medidas são métricas de complexidade que, por 
+exemplo, contam o número e tamanho dos blocos if-then-else, ou o número e 
+tamanho de todos os blocos, ou o número de operações matemáticas por cada
+linha.  Talvez um dia utilizemos uma dessas ferramentas neste código. 
+Por agora, é isto o que temos.</P
+><P
+><DIV
+CLASS="TABLE"
+><A
+NAME="AEN690"><P
+><B
+>Table 1.  Histórico do Estado de Desenvolvimento </B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Versão</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>motor</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>registo</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>contas</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>motif</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>gnome</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>scheme</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>docs</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>txt</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Total</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Idiomas</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>xacc-0.9
+         Set 97</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>34 ficheiros
+         (7.5+0.9)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>5 ficheiros
+         (0.4)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1 file
+         (0.1)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>40 ficheiros
+         (8.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>xacc-0.9w
+         Dez 97</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>51 ficheiros
+         (13.8+1.5)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>9 ficheiros
+         (0.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1 file
+         (0.1)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>61 ficheiros
+         (16.2)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>xacc-1.0.17
+         Fev 98</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>52 ficheiros
+         (14.8+1.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>12 ficheiros
+         (1.4)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>4 ficheiros
+         (0.3)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>68 ficheiros
+         (18.3)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>gnucash-1.1.15
+         Ago 98</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>24 ficheiros
+         (6.2+1.5)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>31 ficheiros
+         (6.1+1.7)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>5 ficheiros
+         (1.4+0.4)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>30 ficheiros
+         (7.4+0.7)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>17 ficheiros
+         (3.4+0.5)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>3 ficheiros
+         (0.3)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>16 ficheiros
+         (1.9)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>17 ficheiros
+         (1.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>159 ficheiros
+         (34.7)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1 (0.17)</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>gnucash-1.2.2
+         Ago 99</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>41 ficheiros
+         (10.2+3.6)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>28 ficheiros
+         (5.5+1.7)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>14 ficheiros
+         (2.4+0.6)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>26 ficheiros
+         (8.7+0.5)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>14 ficheiros
+         (1.4)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>30 ficheiros
+         (2.6)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>15 ficheiros
+         (1.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>168 ficheiros
+         (39.0)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>3 (0.54)</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>gnucash-1.3.6
+         Abril 2000</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>41 ficheiros
+         (12.9+4.0)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>32 ficheiros
+         (6.8+2.1)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>19 ficheiros
+         (4.0+0.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>78 ficheiros
+         (32.2+3.0)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>74 ficheiros
+         (4.0+0.7+12.3)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>33 ficheiros
+         (7.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>25 ficheiros
+         (4.5)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>302 ficheiros
+         (95.1)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>5 (4.3) </TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>gnucash-1.4.6
+         Set 2000</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>43 ficheiros
+         (13.0+3.6)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>27 ficheiros
+         (5.9+2.0)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>24 ficheiros
+         (5.4+1.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>82 ficheiros
+         (33.8+3.0)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>68 ficheiros
+         (4.0+0.7+15.5)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>36 ficheiros
+         (9.3)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>36 ficheiros
+         (4.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>316 ficheiros
+         (101.9)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>7 (6.0)</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>gnucash-1.5.2
+         Set 2000</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>46 ficheiros
+         (14.9+3.7)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>29 ficheiros
+         (6.3+2.0)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>25 ficheiros
+         (5.7+1.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>83 ficheiros
+         (35.8+2.9)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>73 ficheiros
+         (4.6+0.8+16.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>37 ficheiros
+         (10.7)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>48 ficheiros
+         (8.2)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>341 ficheiros
+         (114.2)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>8 (7.8)</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>gnucash-1.6.0
+         Junho 2001</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>139 ficheiros
+         (42.8+8.3)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>28 ficheiros
+         (5.7+2.0)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>23 ficheiros
+         (10.1+1.5)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>132 ficheiros
+         (60.0+4.2)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>102 ficheiros
+         (6.2+0.8+27.3)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>64 ficheiros
+         (12.1)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>69 ficheiros
+         (12.9)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>455 ficheiros
+         (193.9)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>11 (18.7)</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+ </P
+><P
+>Cada célula mostra o seguinte:
+    
+     número de ficheiros *c e *.h 
+     (KLOCS em *.c + KLOCS em *.h)
+     (ou KLOCS de *.txt ou KLOCS de *.scm onde apropriado)
+
+ </P
+><P
+>onde KLOC == kilo-lines-of-code (mil-linhas-de-código), como relatado pela 
+   <TT
+CLASS="APPLICATION"
+>wc</TT
+>.
+
+    <P
+></P
+><UL
+><LI
+><P
+>motor -- conteúdo dos directórios src/engine e include
+
+ </P
+></LI
+><LI
+><P
+>registo -- conteúdo do directório register 
+
+ </P
+></LI
+><LI
+><P
+>contas -- ficheiros *.c, *.h apenas no directório src 
+
+ </P
+></LI
+><LI
+><P
+>motif -- conteúdo do directório src/motif 
+
+ </P
+></LI
+><LI
+><P
+>gnome -- src/gnome e src/register/gnome
+
+ </P
+></LI
+><LI
+><P
+>scheme -- código scheme e guile -- <TT
+CLASS="FILENAME"
+>src/scm</TT
+> e
+ <TT
+CLASS="FILENAME"
+>src/guile</TT
+> -- em parentesis é <TT
+CLASS="FILENAME"
+>*.c + *.h + *.scm</TT
+>
+ </P
+></LI
+><LI
+><P
+>docs -- documentação de utilizador em inglês 
+              (html or sgml)
+ </P
+></LI
+><LI
+><P
+>Idiomas -- o número de idiomas para os quais as mensagens da 
+      aplicação foram traduzidas.  Em parentesis, o número de mensagens 
+      no ficheiro de mensagens <B
+CLASS="COMMAND"
+>grep msgstr *.po |wc</B
+>, 
+      em milhares.
+ </P
+></LI
+><LI
+><P
+>txt -- <TT
+CLASS="FILENAME"
+>README</TT
+> interno,
+ficheiros de documentação <TT
+CLASS="FILENAME"
+>*.txt</TT
+> e 
+<TT
+CLASS="FILENAME"
+>*.texinfo</TT
+> em todos os sub-directórios. </P
+></LI
+></UL
+>&#13;</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x658.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t844.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Sistemas Operativos Suportados</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t3.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Editar uma Conta</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

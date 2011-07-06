@@ -1,0 +1,333 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>	Explaining Compound Interest
+      </TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash User Manual"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Loan and Interest Calculations"
+HREF="t1725.html"><LINK
+REL="PREVIOUS"
+TITLE="Loan and Interest Calculations"
+HREF="t1725.html"><LINK
+REL="NEXT"
+TITLE='Creating a "commodity"'
+HREF="t1784.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash User Manual</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t1725.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Loan and Interest Calculations</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t1784.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-COMPOUND-INTEREST">Explaining Compound Interest</H1
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1744">Introduction</H2
+><P
+>	  GnuCash offers the facility to do simple interest calculations
+	  for loans and interest-bearing deposits, giving you the ability
+	  to answer questions like "How long will it take me to pay off
+	  this loan?", "Which of these two term deposits generate better
+	  returns?", and "What loan payments do I need to make to pay
+	  off this loan in, say, five years?"  GnuCash's financial
+	  calculator gives you that information, and more.
+      </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1747">How Interest Works</H2
+><P
+>	  There's two angles for talking about interest - 
+	  interest-bearing accounts such as savings accounts
+	  and term deposits, when financial institutions pay
+	  you for the use of your money.  Alternatively, 
+	  we can discuss interest in the context of loans, where
+	  you pay your financial institution for using their money.
+	  To make things simple, we'll talk about loans first.
+	</P
+><P
+>	  Firstly, let's consider the simplest possible loan
+	  where with a simple interest rate and we pay it
+	  back at the conclusion  of the term.  For example, 
+	  let's say we borrow $10,000 (in financial terms, 
+	  the <I
+CLASS="EMPHASIS"
+>Present Value</I
+> is $10,000)
+	  for one year at an interest rate of 10% per annum
+	  that doesn't compound.  How much do we owe at the end
+	  of it?
+          In this case, calculating the <I
+CLASS="EMPHASIS"
+>Future Value</I
+> 
+	  that we owe is easy: it's just
+	</P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>	  Future Value = Present Value + (10 % * Present Value)
+	               = 10,000 + (10% * 10,000)
+	               = 11,000
+	</PRE
+></TD
+></TR
+></TABLE
+><P
+>	  Now, let's make things a bit more interesting.
+	  Let's make the interest <I
+CLASS="EMPHASIS"
+>compound</I
+> 
+	  monthly.  After the first month, then, you'll owe
+	</P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>	  Future Value = 10,000 + (10% * 1/12)
+	               ~= 10,083.33
+	</PRE
+></TD
+></TR
+></TABLE
+><P
+>Now, for the second month, you'll pay interest
+	  on the 10,083.83, so the value after the second month 
+	  is:
+	  </P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>	  Future Value = 10,083.83 + (10% * 1/12)
+	              ~= 10167.36
+	</PRE
+></TD
+></TR
+></TABLE
+><P
+>	  Eventually, after 12 months, you'll owe $11,047.13, rather
+	  than the $11,000 you would have paid with simple interest.
+	</P
+><P
+>	  Next, we'll make things more complex again - let's say
+	  we'll make a <I
+CLASS="EMPHASIS"
+>periodic payment</I
+> of 
+	  $200 at the end of every month?  Well, let's see.  After
+	  one month, you'd owe:
+	</P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>	  Future Value  = Present Value + Interest - Periodic Payment
+          after month 1 = 10,000 + (10% * 1/12) - 200 
+	                = 9,883.33
+	</PRE
+></TD
+></TR
+></TABLE
+><P
+>	  After one year, if you do the calculations, you'll still
+	  owe $8534.02 (if I've done my maths right . . .)
+	</P
+><P
+>	  For our final example, consider <I
+CLASS="EMPHASIS"
+>continuous compounding</I
+>,
+	  where interest is charged continuously.  Explaining this calculation in
+	  detail requires a little bit of university-level maths, but, roughly,
+	  imagine that the payment periods are, really, really, really small!  
+	  I can't easily show you the calculations for this, but that doesn't
+	  matter.  GnuCash's financial calculator can do them!
+	</P
+><P
+>	  So, to summarize, the following bits of information are used in interest
+	  calculations:
+	</P
+><P
+></P
+><UL
+><LI
+><P
+>Present Value</P
+></LI
+><LI
+><P
+>Future Value</P
+></LI
+><LI
+><P
+>Interest Rate</P
+></LI
+><LI
+><P
+>Number of Payment Periods</P
+></LI
+><LI
+><P
+>Periodic Payment</P
+></LI
+><LI
+><P
+>Compounding Type (discrete or continuous)</P
+></LI
+><LI
+><P
+>Compounding Interval (if discrete)</P
+></LI
+><LI
+><P
+>Payment Time (beginning or end of period)</P
+></LI
+></UL
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t1725.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t1784.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Loan and Interest Calculations</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t1725.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Creating a "commodity"</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

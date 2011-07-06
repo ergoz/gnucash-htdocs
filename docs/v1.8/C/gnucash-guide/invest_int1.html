@@ -1,0 +1,31 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>8.3. Interest Bearing Accounts</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter8.html" title="Chapter 8. Investments"><link rel="previous" href="invest_accounts1.html" title="8.2. Setting Up Accounts"><link rel="next" href="invest_setup1.html" title="8.4. Setup Stock Portfolio"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.3. Interest Bearing Accounts</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="invest_accounts1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 8. Investments</th><td width="20%" align="right"> <a accesskey="n" href="invest_setup1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="invest_int1"></a>8.3. Interest Bearing Accounts</h2></div></div><p>
+Investments which have a fixed or variable rate of interest are one of the simplest and most common form of investments available.  Interest bearing investments include your bank account, a certificate of deposit, or any other kind of investment in which you receive interest from the principal.  This section will describe how to handle these kinds of investments in GnuCash.
+ </p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest_intacct2"></a>8.3.1. Account Setup</h3></div></div><p>
+When you purchase the interest bearing investment, you must create an asset account to record the purchase of the investment, an income account to record earnings from interest, and an expense account to record bank charges.  Below is an account layout example, in which you have an interest bearing savings account and a certificate of deposit at your bank.
+ </p><div class="literallayout"><p><br>
+-Asset<br>
+   -Bank<br>
+      -CD<br>
+      -Savings<br>
+-Expenses<br>
+   -Bank<br>
+      -Charges<br>
+-Income<br>
+   -Bank<br>
+      -Interest<br>
+  </p></div><p>
+As usual, this account hierarchy is simply presented as an example, you should create your accounts in a form which best matches your actual situation.
+  </p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="invest_intex2"></a>8.3.2. Example</h3></div></div><p>
+Now let's populate these accounts with real numbers.  Let's assume that you start with $10000 in your bank account, which pays 1% interest and you buy a $5000 certificate of deposit with a 1 year maturity date and a 2% yield.  Clearly, it is much better to keep your money in the CD than in the savings account.  After the initial purchase, your accounts should look something like this:
+ </p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_int1.png" alt="Setup Interest Investment"><div class="caption"><p>This image the creation of the interest investment account
+	       </p></div></div></div><p>
+Now, during the course of the next year, you receive monthly bank statements which describe the activity of your account.  In our fictional example, we do nothing with the money at this bank, so the only activity is income from interest and bank charges.  The monthly bank charges are $2.  After 12 months, the register window for the CD should look like this:
+  </p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_int2.png" alt="Setup Interest Investment"><div class="caption"><p>This image the creation of the interest investment account
+	       </p></div></div></div><p>
+And this is the main GnuCash window:
+  </p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_int3.png" alt="Setup Interest Investment"><div class="caption"><p>This image the creation of the interest investment account
+	       </p></div></div></div><p>
+From the above image of the main GnuCash account window you see a nice summary of what happened to these investments over the 6 months.  While the yield on the CD is double that of the savings account, the return on the CD was $50.21 versus $13.03 for the savings account, or almost 4 times more.  Why?  Because of the pesky $2 bank charges that hit the savings account (which counted for $12 over 6 months).
+  </p><p>
+After this 6 month period, the CD has reached maturity which means you may sell it with no early withdrawal penalty.  To do so, simply transfer the $5050.21 from the CD account into the savings account.
+  </p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="invest_accounts1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="invest_setup1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">8.2. Setting Up Accounts </td><td width="20%" align="center"><a accesskey="u" href="chapter8.html">Up</a></td><td width="40%" align="right"> 8.4. Setup Stock Portfolio</td></tr></table></div></body></html>

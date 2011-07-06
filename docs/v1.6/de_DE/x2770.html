@@ -1,0 +1,461 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+> Recording Income and Expenses</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash Online-Handbuch"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Using Expense/Income Accounts"
+HREF="t2762.html"><LINK
+REL="PREVIOUS"
+TITLE="Using Expense/Income Accounts"
+HREF="t2762.html"><LINK
+REL="NEXT"
+TITLE=" Using Income/Expense Accounts"
+HREF="x2846.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash Online-Handbuch</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t2762.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Using Expense/Income Accounts</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x2846.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-RECORDING-INCOMEEXPENSE">Recording Income and Expenses</H1
+><P
+>In a double entry system, two kinds of accounts must be
+    created: some of type "Income" and others of type "Expense."
+    (There tend to be a lot more different kinds of expenses than
+    there are of incomes.)
+    Income such as salary, wages, bank interest and stock
+    dividends are then recorded as transfers from an income account
+    to a bank (or, in general, some asset) account. Similarly,
+    expenses are recorded as transfers from a credit card account
+    (or, in general, a liability account).
+
+    </P
+><P
+>Another way of describing the requirement for "double entry"
+    is that when you receive an income, two things happen:
+
+    <P
+></P
+><UL
+><LI
+><P
+>You receive a sum of <I
+CLASS="EMPHASIS"
+>money,</I
+> and must record that
+      effect on your bank account.
+
+      </P
+></LI
+><LI
+><P
+>You have received an income, and must record that effect
+      on an income account.
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>When, for instance, salary is deposited in a bank account,
+    the bank account is debited, and the income account is
+    credited, thus:
+
+    <DIV
+CLASS="TABLE"
+><A
+NAME="AEN2781"><P
+><B
+>Table 12. Accounting for Salary</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Account</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Debit</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Credit</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Chequing Account</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1,600.00</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Salary</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1,600.00</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    </P
+><P
+>This may be readily extended to a greater number of "split"
+    items thus:
+
+    <DIV
+CLASS="TABLE"
+><A
+NAME="AEN2799"><P
+><B
+>Table 13. A More Complex Paycheque</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Account</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Debit</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Credit</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Chequing Account</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1,300.00</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Income Taxes</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>200.00</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Health Plan</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>100.00</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Salary</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1,600.00</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    </P
+><P
+>There may be a whole lot more than two entries in the
+    transaction, but the total sum of the Debits, $1,600.00, still
+    equals the total sum of the credits, $1,600.00.
+
+    </P
+><P
+>If, as with <I
+CLASS="EMPHASIS"
+>GnuCash,</I
+> everything is forced
+onto one column, so that <I
+CLASS="EMPHASIS"
+>debits</I
+> are represented
+by positive values, and <I
+CLASS="EMPHASIS"
+>credits</I
+> are represented
+by negative values, the income/expense accounts do a slightly
+non-intuitive thing and you see incomes as
+<I
+CLASS="EMPHASIS"
+>negative</I
+> values. That <I
+CLASS="EMPHASIS"
+>appears</I
+> contrary to intuition, but is nonetheless necessary
+in order for the <A
+HREF="x2465.html"
+>double-entry accounting
+rule to hold true.</A
+>
+
+    </P
+><P
+>Income and expense accounts are also special, in
+    that their account totals do not directly appear on a
+    balance sheet. A balance sheet shows "Net Worth": the sum of
+    all assets minus all liabilities.
+    Income and expenses are neither assets nor liabilities, and
+    so do not appear on the balance sheet. What appears on the
+    balance sheet is their effects on <I
+CLASS="EMPHASIS"
+>equity.</I
+>
+
+    </P
+><P
+>Another report, the "Profit and Loss" (P&#38;L)
+    report, analyzes income and expense. The total profit (or
+    loss) is calculated as total income less total expenses. In a
+    nicely symmetrical fashion, since assets and liabilities are
+    neither income or expenses, <I
+CLASS="EMPHASIS"
+>they</I
+> correspondingly do
+    not appear on a P&#38;L statement.
+
+    </P
+><P
+>While these accounts may be somewhat "special", you do
+    not need to do anything particularly special to use income and
+    expense accounts. GnuCash handles the values automatically, so
+    that if you record properly the effects of the transactions on
+    your bank account or credit card, the income/expense side of
+    the transaction should also be correctly handled.</P
+><P
+>    Things only get "peculiar" when amounts are transferred
+    between income and expense accounts.   If you feel you need
+    to make such a transfer, then you will need to learn the 
+    more sophisticated concepts behind "accounts payable"
+    and "accounts receivable".  Such transfers typically 
+    occur in businesses, when income and expenses may occur at a
+    moment that is different from the moment when cash actually moved 
+    into or out of the business's bank accounts.
+
+    </P
+><P
+>For instance, companies usually recognize income
+    <I
+CLASS="EMPHASIS"
+>when the sale occurs.</I
+>
+    That might mean that you recognize a $10,000 sale 
+    <I
+CLASS="EMPHASIS"
+>at the moment you and the customer
+    shake hands on the deal.</I
+>
+    Since the money hasn't actually come in, the sale has to be posted
+    in another way.  You must <I
+CLASS="EMPHASIS"
+>accrue</I
+> a sale
+    at the time of the handshake.  To make the transaction balance, 
+    you add the $10,000 sale to <I
+CLASS="EMPHASIS"
+>Accounts
+    Receivable</I
+>, rather than adding something in to cash.
+    </P
+><P
+>    <I
+CLASS="EMPHASIS"
+>Insider Knowledge:</I
+> When a sale is recognized
+    and how its recorded is governed not only by accepted accounting
+    principles, but also by local and national laws.  In the United
+    States, accepted accounting practices are determined by FASB,
+    the Federal Accounting Standards Board.</P
+><P
+>(The documentiation should state  that 
+for more info, click to the a/r and a/p page).</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t2762.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x2846.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Using Expense/Income Accounts</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t2762.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Using Income/Expense Accounts</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

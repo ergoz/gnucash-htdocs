@@ -1,0 +1,261 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>5.2. Creating a Chart of Accounts</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="help.html" title="GnuCash Help Manual"><link rel="up" href="setup-accounts.html" title="Chapter 5. Setting Up, Editing &amp; Working with Accounts"><link rel="previous" href="acct-types.html" title="5.1. Types of GnuCash Accounts"><link rel="next" href="chart-edit.html" title="5.3. Editing a Chart of Accounts"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.2. Creating a Chart of Accounts</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="acct-types.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 5. Setting Up, Editing &amp; Working with Accounts</th><td width="20%" align="right"> <a accesskey="n" href="chart-edit.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="chart-create"></a>5.2. Creating a Chart of Accounts</h2></div></div><p>The Chart of Accounts is like a table of contents for your finances. The best
+         way to conceptualize a chart of accounts is as a tree. The main branches represent
+         entire categories or groups, while the leaves of the tree denote individual bank
+         accounts or expense categories. When a summary report is requested, typically only
+         the main branches are shown in the report, rather than the individual accounts. For
+         example, a chart of accounts might look like the following:
+
+	<div class="literallayout"><p><br>
+<tt>        300             Expenses<br>
+         |<br>
+         +--310         Living Expenses<br>
+         |   |<br>
+         |   +--311     Beer<br>
+         |   |<br>
+         |   +--312     Cable<br>
+         |<br>
+         +--320         Business Expenses<br>
+         |   |<br>
+         |   +--321     8-inch Floppies<br>
+         |   |<br>
+         |   +--322     Blue Ray RW DVDs<br>
+         |   |<br>
+         :   :</tt><br>
+</p></div>
+
+
+	</p><p>Note that accounts not only have names; they may have codes, to order the accounts.
+         When a report is generated, the sort order is determined by the numbering. It's
+         customary to have the leaf accounts end in non-zero digits, while parent nodes have
+         increasing numbers of zeros. </p><p>GnuCash does not prevent duplicate numbering, although we would encourage you
+         to avoid this. Account codes are treated as numbers in base-36, thus, if you run out
+         of numbers, you can use the letters, a through z.</p><p>A sample chart of accounts is shown below. Each account is of a given account
+         type. This example is a combination of some typical business and personal accounts.
+
+	        <div class="itemizedlist"><ul><li><p>            Assets 
+
+            <div class="itemizedlist"><ul><li><p>                Cash On Hand 
+
+                <div class="itemizedlist"><ul><li><p>Checking account
+
+                  </p></li><li><p>Money Market Account
+
+                  </p></li><li><p>Certificate of Deposit
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Fixed Assets 
+
+                <div class="itemizedlist"><ul><li><p>Furniture
+
+                  </p></li><li><p>Computers
+
+                  </p></li><li><p>Jewelry, Collectibles
+
+                  </p></li><li><p>Tools, Machinery
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Investments 
+
+                <div class="itemizedlist"><ul><li><p>Stocks
+
+                  </p></li><li><p>Bonds
+
+                  </p></li><li><p>Mutual Funds
+
+                  </p></li><li><p>Real Estate
+                </p></li></ul></div>
+              
+            </p></li></ul></div>
+          
+
+          </p></li><li><p>            Liabilities 
+
+            <div class="itemizedlist"><ul><li><p>                Taxes 
+
+                <div class="itemizedlist"><ul><li><p>Federal Income Tax
+
+                  </p></li><li><p>Social Security
+
+                  </p></li><li><p>Medicare
+
+                  </p></li><li><p>FUTA
+
+                  </p></li><li><p>State Income Tax
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Accounts Payable 
+
+                <div class="itemizedlist"><ul><li><p>MasterCard
+
+                  </p></li><li><p>Visa
+
+                  </p></li><li><p>American Express
+
+                  </p></li><li><p>Diner's Club
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Loans 
+
+                <div class="itemizedlist"><ul><li><p>Debentures
+
+                  </p></li><li><p>School Loan
+
+                  </p></li><li><p>Uncle Harry's Tide-me-over
+                </p></li></ul></div>
+              
+            </p></li></ul></div>
+          
+
+          </p></li><li><p>            Equity 
+
+            <div class="itemizedlist"><ul><li><p>Retained Earnings
+
+              </p></li><li><p>Current Year Earnings
+
+              </p></li><li><p>Historical Adjustments
+            </p></li></ul></div>
+          
+
+          </p></li><li><p>            Income 
+
+            <div class="itemizedlist"><ul><li><p>                Interest Income 
+
+                <div class="itemizedlist"><ul><li><p>Bank Account Interest
+
+                  </p></li><li><p>Certificate of Deposit
+
+                  </p></li><li><p>Bond Interest
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Dividends 
+
+                <div class="itemizedlist"><ul><li><p>Stock
+
+                  </p></li><li><p>Mutual Fund
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Consulting 
+
+                <div class="itemizedlist"><ul><li><p>ABC Design
+
+                  </p></li><li><p>PQR Infomatics
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Salary 
+
+                <div class="itemizedlist"><ul><li><p>My Day Job
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Commissions 
+
+                <div class="itemizedlist"><ul><li><p>Royalties
+                </p></li></ul></div>
+              
+            </p></li></ul></div>
+          
+
+          </p></li><li><p>            Expenses 
+
+            <div class="itemizedlist"><ul><li><p>                Rent and Utilities 
+
+                <div class="itemizedlist"><ul><li><p>Rent
+
+                  </p></li><li><p>Rent Late Fees
+
+                  </p></li><li><p>Electricity
+
+                  </p></li><li><p>Gas
+
+                  </p></li><li><p>Phone
+
+                  </p></li><li><p>Internet
+
+                  </p></li><li><p>Cable TV
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Office Expenses 
+
+                <div class="itemizedlist"><ul><li><p>Accounting
+
+                  </p></li><li><p>Legal
+
+                  </p></li><li><p>Software
+
+                  </p></li><li><p>Postage
+
+                  </p></li><li><p>Bank Charges
+
+                  </p></li><li><p>Credit Card Charges
+
+                  </p></li><li><p>Toner, Paper, Paper Clips
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Auto Expenses 
+
+                <div class="itemizedlist"><ul><li><p>Gas
+
+                  </p></li><li><p>Insurance
+
+                  </p></li><li><p>Repair
+
+                  </p></li><li><p>Rental
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Taxes 
+
+                <div class="itemizedlist"><ul><li><p>Social Security
+
+                  </p></li><li><p>Unemployment
+
+                  </p></li><li><p>IRS penalties
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Wages and Salaries 
+
+                <div class="itemizedlist"><ul><li><p>Consulting
+
+                  </p></li><li><p>Wages
+
+                  </p></li><li><p>Health Insurance
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Travel 
+
+                <div class="itemizedlist"><ul><li><p>Air
+
+                  </p></li><li><p>Hotel
+
+                  </p></li><li><p>Meals
+
+                  </p></li><li><p>Auto
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Marketing 
+
+                <div class="itemizedlist"><ul><li><p>Advertising
+
+                  </p></li><li><p>Trade Shows
+
+                  </p></li><li><p>Give Aways
+                </p></li></ul></div>
+              
+            </p></li></ul></div>
+          
+        </p></li></ul></div>
+
+
+	</p></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="acct-types.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="help.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="chart-edit.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">5.1. Types of GnuCash Accounts </td><td width="20%" align="center"><a accesskey="u" href="setup-accounts.html">Up</a></td><td width="40%" align="right"> 5.3. Editing a Chart of Accounts</td></tr></table></div></body></html>

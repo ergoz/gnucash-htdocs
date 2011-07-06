@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Currency Handling and Double Entry Bookkeeping</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GnuCash Online-Handbuch"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Common Report Options"
+HREF="t1738.html"><LINK
+REL="NEXT"
+TITLE=" ISO Currency Codes"
+HREF="x1868.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>GnuCash Online-Handbuch</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t1738.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x1868.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN1811">Currency Handling and Double Entry Bookkeeping</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t1810.html#AEN1845"
+>How to set up a foreign-currency account</A
+></DT
+><DT
+><A
+HREF="x1868.html"
+>ISO Currency Codes</A
+></DT
+></DL
+></DIV
+><P
+>A <A
+HREF="t2442.html"
+>Double Entry
+    bookkeeping system</A
+> stores both values, and requires
+    that all transactions balance, as described in the <A
+HREF="x2465.html"
+>Rule of Double Entry Accounting.</A
+>
+
+    </P
+><P
+>When we introduce the notion of having multiple currencies,
+    or stocks that may vary in price, the identities get a little
+    more complicated, and we introduce the following formulae:
+
+    <P
+></P
+><UL
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>value=exch-rate*amount</I
+> (for currency
+      accounts)
+
+      </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>value=price*num-shares</I
+> (for
+      stocks/mutual-funds)
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>Thus, buying a widget in Japan (JPY) and using US Dollars
+    (USD) to pay for it would appear thus:
+
+    <P
+></P
+><UL
+><LI
+><P
+>        <I
+CLASS="EMPHASIS"
+><I
+CLASS="EMPHASIS"
+>SpendAcct:</I
+> (an ordinary bank/cash acct valued in
+        USD)</I
+> 
+<TT
+CLASS="LITERAL"
+><P
+CLASS="LITERALLAYOUT"
+><I
+CLASS="EMPHASIS"
+>Date      xfer from       memo                cost
+1/5/99    [JPYAcct]       Buy widget          $1.00</I
+></P
+></TT
+>
+      
+
+      </P
+></LI
+><LI
+><P
+>        <I
+CLASS="EMPHASIS"
+><I
+CLASS="EMPHASIS"
+>JPYAcct</I
+>: (a currency trading account valued in
+        yen)</I
+> 
+<TT
+CLASS="LITERAL"
+><P
+CLASS="LITERALLAYOUT"
+><I
+CLASS="EMPHASIS"
+>Date      xfer from       memo                purchase   rate
+1/5/99    [SpendAcct]     Buy widget          Y150       0.00667</I
+></P
+></TT
+>
+      
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>The engine links together all three of these values <TT
+CLASS="ENVAR"
+>(1.0, 150, 0.00667)</TT
+> permanently and makes it impossible to
+change one without changing another, so that the grand total is always
+zero, thereby guaranteeing satisfaction of the <A
+HREF="x2465.html"
+>rule of double entry accounting.</A
+>
+
+    </P
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN1845">How to set up a foreign-currency account</H1
+><P
+>All of the above may sound straightforward, but you may get
+    stumped when you first try to represent some foreign money.  Let's
+    demonstrate how you'd go about setting up an account to represent,
+    say, French Francs.</P
+><P
+>Let's say you have an account that holds cash in US dollars,
+    and it has $1,000 in it.  You want to buy about $100 worth of
+    Francs, and naturally you'd like to represent those Francs in
+    their own account.  Here's what you need to do:</P
+><P
+></P
+><UL
+><LI
+><P
+>	Create a new account (name it "Francs") of type Cash, with a
+	currency of FRF (that's the ISO code for French Francs; see
+	<A
+HREF="x1868.html"
+>ISO Currency Codes</A
+>, below).
+	</P
+></LI
+><LI
+><P
+>      Create <I
+CLASS="EMPHASIS"
+>another</I
+> account (name it "Trading"), of type
+      Currency, with a currency of USD, and a <I
+CLASS="EMPHASIS"
+>security</I
+> of
+      FRF.  This account will represent <I
+CLASS="EMPHASIS"
+>trades</I
+> between the
+      two currencies, or to be more precise, purchases of Francs
+      with dollars.
+	</P
+></LI
+><LI
+><P
+>      Now open the "Trading" account, and enter a transaction that
+      transfers from your cash account.  Put 555 in the "Debit"
+      column, and 0.18 in the Price column.  (GnuCash will offer to
+      calculate the Value for you; let it do so.) You've now bought
+      555 Francs for $0.18 apiece.
+	</P
+></LI
+><LI
+><P
+>      Transfer the 555 Francs that are now in your trading account
+      into the "Francs" account (by putting "555" in the "Debit"
+      column).  Note that you could not have transferred anything
+      directly from cash to Francs (try it); those two accounts do not
+      have a currency in common.
+	</P
+></LI
+><LI
+><P
+>	Note that your "Trading" account now is a bit screwed up --
+	the last transaction, transferring 555 francs to your "Francs"
+	account, didn't record the price of those francs.  You can
+	change the price from 1 to 0.18 to make the balance in the
+	"Trading" account come out to zero.
+	</P
+></LI
+></UL
+><P
+>    Here's what it all looks like once you're done:
+    <DIV
+CLASS="MEDIAOBJECT"
+><P
+><IMG
+SRC="image/foreign-currency.png"></P
+></DIV
+>
+
+    </P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t1738.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x1868.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Common Report Options</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>ISO Currency Codes</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

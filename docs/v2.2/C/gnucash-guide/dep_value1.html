@@ -1,0 +1,55 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>11.2. Estimating Valuation</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_dep.html" title="Chapter 11. Depreciation"><link rel="previous" href="dep_concepts1.html" title="11.1. Basic Concepts"><link rel="next" href="dep_accounts1.html" title="11.3. Account Setup"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">11.2. Estimating Valuation</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="dep_concepts1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 11. Depreciation</th><td width="20%" align="right"> <a accesskey="n" href="dep_accounts1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="dep_value1"></a>11.2. Estimating Valuation</h2></div></div><p>A central issue with depreciation is to determine how you will
+    estimate the future value of the asset. Compared to the often uncertain
+    estimates one has to do where appreciation of assets is concerned, we are
+    on somewhat firmer ground here. Using sources listed below should make it
+    fairly straight forward to estimate the future value of your depreciating
+    assets.</p><div class="itemizedlist"><ul><li><p><b>Tax Codes:</b> For businesses that want to use
+        depreciation for tax purposes, governments tend to set up precise
+        rules as to how you are required to calculate depreciation. Consult
+        your local tax codes, which should explicitly state how to estimate
+        depreciation.</p></li><li><p><b>Car Blue Book:</b> For automobiles, it is easy
+        to look up in references such as "Blue Books" estimates of what an
+        automobile should be worth after some period of time in the future.
+        From this you will be able to develop a model of the
+        depreciation.</p></li></ul></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="dep_valueschemes2"></a>11.2.1. Depreciation Schemes</h3></div></div><p>A <b>depreciation scheme</b> is a mathematical model
+      of how an asset will be expensed over time. For every asset which
+      undergoes depreciation, you will need to decide on a depreciation
+      scheme. An important point to keep in mind is that, for tax purposes,
+      you will need to depreciate your assets at a certain rate. This is
+      called tax depreciation. For financial statement purposes you are free
+      to choose whatever method you want. This is book depreciation. Most
+      small businesses use the same rate for tax and book depreciation. This
+      way there is less of a difference between your net income on the
+      financial statements and your taxable income.</p><p>This section will present 3 of the more popular depreciation
+      schemes: <b>linear</b>, <b>geometric</b>,
+      and <b>sum of digits</b>. To simplify the examples, we
+      will assume the salvage value of the asset being depreciated is zero. If
+      you choose to use a salvage value, you would stop depreciating the asset
+      once the net book value equals the salvage value.</p><div class="orderedlist"><ol type="1"><li><p><b>Linear depreciation</b> diminishes the value
+          of an asset by a fixed amount each period until the net value is
+          zero. This is the simplest calculation, as you estimate a useful
+          lifetime, and simply divide the cost equally across that
+          lifetime.</p><p>Example: You have bought a computer for $1500 and wish to
+          depreciate it over a period of 5 years. Each year the amount of
+          depreciation is $300, leading to the following calculations:</p><p><div class="table"><p><b>Table 11.1. Linear Depreciation Scheme Example</b></p><table summary="Linear Depreciation Scheme Example" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td><b>Year</b></td><td><b>Depreciation</b></td><td><b>Remaining Value</b></td></tr><tr><td>0</td><td>-</td><td>1500</td></tr><tr><td>1</td><td>300</td><td>1200</td></tr><tr><td>2</td><td>300</td><td>900</td></tr><tr><td>3</td><td>300</td><td>600</td></tr><tr><td>4</td><td>300</td><td>300</td></tr><tr><td>5</td><td>300</td><td>0</td></tr></tbody></table></div></p></li><li><p><b>Geometric depreciation</b> is depreciated by
+          a fixed percentage of the asset value in the previous period. This
+          is a front-weighted depreciation scheme, more depreciation being
+          applied early in the period. In this scheme the value of an asset
+          decreases exponentially leaving a value at the end that is larger
+          than zero (i.e.: a resale value).</p><p>Example: We take the same example as above, with an annual
+          depreciation of 30%.</p><p><div class="table"><p><b>Table 11.2. Geometric Depreciation Scheme Example</b></p><table summary="Geometric Depreciation Scheme Example" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td><b>Year</b></td><td><b>Depreciation</b></td><td><b>Remaining Value</b></td></tr><tr><td>0</td><td>-</td><td>1500</td></tr><tr><td>1</td><td>450</td><td>1050</td></tr><tr><td>2</td><td>315</td><td>735</td></tr><tr><td>3</td><td>220.50</td><td>514.50</td></tr><tr><td>4</td><td>154.35</td><td>360.15</td></tr><tr><td>5</td><td>108.05</td><td>252.10</td></tr></tbody></table></div></p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Beware: Tax authorities may require (or allow) a larger
+            percentage in the first period. On the other hand, in Canada, this
+            is reversed, as they permit only a half share of "Capital Cost
+            Allowance" in the first year. The result of this approach is that
+            asset value decreases more rapidly at the beginning than at the
+            end which is probably more realistic for most assets than a linear
+            scheme. This is certainly true for automobiles.</p></td></tr></table></div></li><li><p><b>Sum of digits</b> is a front-weighted
+          depreciation scheme similar to the geometric depreciation, except
+          that the value of the asset reaches zero at the end of the period.
+          This is a front-weighted depreciation scheme, more depreciation
+          being applied early in the period. This method is most often
+          employed in Anglo/Saxon countries. Here is an illustration:</p><p>Example: First you divide the asset value by the sum of the
+          years of use, e.g. for our example from above with an asset worth
+          $1500 that is used over a period of five years you get
+          1500/(1+2+3+4+5)=100. Depreciation and asset value are then
+          calculated as follows:</p><p><div class="table"><p><b>Table 11.3. Sum of Digits Depreciation Scheme Example</b></p><table summary="Sum of Digits Depreciation Scheme Example" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td><b>Year</b></td><td><b>Depreciation</b></td><td><b>Remaining Value</b></td></tr><tr><td>0</td><td>-</td><td>1500</td></tr><tr><td>1</td><td>100*5=500</td><td>1000</td></tr><tr><td>2</td><td>100*4=400</td><td>600</td></tr><tr><td>3</td><td>100*3=300</td><td>300</td></tr><tr><td>4</td><td>100*2=200</td><td>100</td></tr><tr><td>5</td><td>100*1=100</td><td>0</td></tr></tbody></table></div></p></li></ol></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="dep_concepts1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="dep_accounts1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">11.1. Basic Concepts </td><td width="20%" align="center"><a accesskey="u" href="chapter_dep.html">Up</a></td><td width="40%" align="right"> 11.3. Account Setup</td></tr></table></div></body></html>

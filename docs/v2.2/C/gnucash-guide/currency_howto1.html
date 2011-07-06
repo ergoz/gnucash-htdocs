@@ -1,0 +1,47 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>10.5. Recording/Updating Currency Exchange (How-To)</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_currency.html" title="Chapter 10. Multiple Currencies"><link rel="previous" href="currency_prefs1.html" title="10.4. Setting International Preferences"><link rel="next" href="currency_purchase1.html" title="10.6. Recording Purchases in a Foreign Currency (How-To)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">10.5. Recording/Updating Currency Exchange (How-To)</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="currency_prefs1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 10. Multiple Currencies</th><td width="20%" align="right"> <a accesskey="n" href="currency_purchase1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="currency_howto1"></a>10.5. Recording/Updating Currency Exchange (How-To)</h2></div></div><p><b><tt>GnuCash</tt></b> allows you to update the Currency Exchange Rates in two
+    different ways, manual and automatic. In the following two sections we
+    will work through both ways.</p><p>Before we start, let's have a quick look at the Chart of
+    Accounts</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_main1.png" alt="Initial multi currency Account Bank Setup"><div class="caption"><p>Initial setup of 3 bank accounts with different
+        currencies. </p></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="currency_howto_Manual"></a>10.5.1. Manually Updating Exchange Rates</h3></div></div><p>Open the Price Editor by going to <b>Tools</b> -&gt;
+      <b>Price Editor</b>.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_BeforeGetOnlineQuotes.png" alt="Price Editor window"><div class="caption"><p>Price Editor Window. </p></div></div></div><p>Click on the Add button to add a new
+      currency exchange. A window will appear to allow you to select the
+      commodity you wish to define the exchange rate for. Click on
+      Select and set the <b>Type</b> to
+      Currency and the <b>Currency/security</b> to EUR (Euro).
+      This window should appear like this:</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_selectcurr.png" alt="Select Euro Commodity"><div class="caption"><p>Price Editor Select Commodity Window</p></div></div></div><p>Click Ok and in the Select Commodity
+      window, set the exchange rate between the selected commodity and the
+      selected currency. In this example, you will set the exchange rate to 1
+      EUR to 1 USD.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_selectcomm.png" alt="Select Commodity"><div class="caption"><p>Price Editor Select Commodity Window</p></div></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/currency_peditor.png" alt="Price Editor Window"><div class="caption"><p>The Price Editor window after setting the exchange
+          rate between Euros and US Dollars</p></div></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/currency_main2.png" alt="Chart of Accounts"><div class="caption"><p>Chart of Accounts after setting the exchange rate
+          between Euros and US Dollars.</p></div></div></div><p>Observe that since you have no exchange rate for HKD, <b><tt>GnuCash</tt></b>
+      doesn't convert the HKD accounts to USD. This will be added in the next
+      section.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="currency_howto_Auto"></a>10.5.2. Automatic Updating Exchange Rates (How-To)</h3></div></div><p>In the previous section you saw how you could manually define a
+      new currency exchange rate, but there must be an easier way to do it.
+      And there is.</p><p>Open the Price Editor by going to <b>Tools</b> -&gt;
+      <b>Price Editor</b>.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_peditor.png" alt="Price Editor window"><div class="caption"><p>Price Editor Window before you obtain online quotes.
+          </p></div></div></div><p>Click on the Get Quotes button to
+      automatically load the various exchange rates you need.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">
+         If the Get Quotes button is disabled, 
+         that means that the perl module Finance::Quote is not installed. 
+         For information on how to install it, please see 
+         <a href="invest-stockprice1.html#invest-stockprice-auto2" title="8.6.3. Configuring for Automatic Retrieval of Quotes">Configuring for Automatic Retrieval of Quotes</a>
+      </p></td></tr></table></div><p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_AfterGetOnlineQuotes.png" alt="Price Editor window"><div class="caption"><p>Price Editor Window after we obtained online
+            quotes. </p></div></div></div></p><p>You can observe that <b><tt>GnuCash</tt></b> will download exchange rates for all
+      currencies you are using in your various accounts. This will happen
+      every time you click on Get Quotes or have <b><tt>GnuCash</tt></b>
+      downloading quotes/exchange rates automatically as per <a href="invest-stockprice1.html#invest-stockprice-auto2" title="8.6.3. Configuring for Automatic Retrieval of Quotes">Configuring for Automatic Retrieval of Quotes</a></p><p>And if you check the main Chart of Accounts you will see that
+      <b><tt>GnuCash</tt></b> has automatically converted the HKD amount to USD amount on the
+      parent accounts that are in USD, as well as on the Total (USD) column.
+      Also the Euro accounts have been been updated with the latest exchange
+      rate.</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_main3.png" alt="Price Editor window"><div class="caption"><p> Chart of Accounts after we obtain online quotes.
+          </p></div></div></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="currency_howto_disable"></a>10.5.3. Disabling Exchange Rate Retrieval</h3></div></div><p>Whenever you create an account that uses a non-default currency,
+      exchange rate retrieval will be automatically enabled for that currency.
+      However, if you later delete that account, <b><tt>GnuCash</tt></b> will not automatically
+      disable exchange rate retrieval for that currency.</p><p>If you have deleted the last account for a particular currency, and
+      you do not wish to retrieve exchange rates for that currency anymore, do
+      the following:</p><div class="itemizedlist"><ul><li><p>Open the Securities window by selecting
+          <b>Tools</b> -&gt; <b>Security
+          Editor</b>.</p></li><li><p>Make sure the <b>Show National Currencies</b> box
+          is selected.</p></li><li><p>Expand the CURRENCY row.</p></li><li><p>Double click on the currency for which you want to disable
+          exchange rate retrieval.</p></li><li><p>Deselect the <b>Get Online Quotes</b>box and
+          click OK.</p></li></ul></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="currency_prefs1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="currency_purchase1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">10.4. Setting International Preferences </td><td width="20%" align="center"><a accesskey="u" href="chapter_currency.html">Up</a></td><td width="40%" align="right"> 10.6. Recording Purchases in a Foreign Currency (How-To)</td></tr></table></div></body></html>

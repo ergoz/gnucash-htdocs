@@ -1,0 +1,135 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>12.6. Invoices</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_bus_ar.html" title="Chapter 12. Accounts Receivable"><link rel="prev" href="bus-ar-customers1.html" title="12.5. Customers"><link rel="next" href="bus-ar-jobs1.html" title="12.7. Customer Jobs"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">12.6. Invoices</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bus-ar-customers1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 12. Accounts Receivable</th><td width="20%" align="right"> <a accesskey="n" href="bus-ar-jobs1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="12.6. Invoices"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="bus-ar-invoices1"></a>12.6. Invoices</h2></div></div></div><p>An invoice is the paperwork you send to a customer to request
+    payment for products or services rendered. <strong class="application"><code>GnuCash</code></strong> can generate and track
+    invoices.</p><div class="sect2" title="12.6.1. New"><div class="titlepage"><div><div><h3 class="title"><a name="bus-ar-invoicenew2"></a>12.6.1. New</h3></div></div></div><p>To send an invoice to a customer you must first create a new
+      invoice. To create an invoice use <span class="guimenu"><strong>Business</strong></span> → <span class="guisubmenu"><strong>Customer</strong></span> → <span class="guimenuitem"><strong>New Invoice</strong></span>. The
+      New Invoice window must be filled in appropriately:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="guilabel"><strong>Invoice Information - Invoice ID</strong></span> - the
+          identification number of this invoice. This is your internal number
+          for this invoice. If you leave it blank, an invoice number will be
+          generated automatically.</p></li><li class="listitem"><p><span class="guilabel"><strong>Invoice Information - Date Opened</strong></span> - the
+          date this invoice was created.</p></li><li class="listitem"><p><span class="guilabel"><strong>Billing Information - Customer</strong></span> - the
+          customer who is to receive this invoice. If you remember the <span class="emphasis"><strong>company name</strong></span>
+          you entered in the <span class="guilabel"><strong>New Customer</strong></span> window for this customer,
+          start to type it in this field and <strong class="application"><code>GnuCash</code></strong> will try auto complete 
+          it for you. Else, press the <span class="guibutton">Select...</span> button to access the <span class="guilabel"><strong>Find
+          Customer</strong></span> window described in <a class="xref" href="bus-ar-customers1.html#bus-ar-custfind2" title="12.5.2. Find and Edit">Section 12.5.2, “Find and Edit”</a>. Highlight the customer 
+          you are looking for with a click in the search results, then press the 
+          <span class="guibutton">Select</span> button.</p></li><li class="listitem"><p><span class="guilabel"><strong>Billing Information - Job</strong></span> (optional) -
+          associates the new invoice with a customer job (see <a class="xref" href="bus-ar-jobs1.html" title="12.7. Customer Jobs">Section 12.7, “Customer Jobs”</a>). 
+          If you remember the <span class="emphasis"><strong>job name</strong></span>
+          you entered in the <span class="guilabel"><strong>New Job</strong></span> window for this job, 
+          start to type it in this field and <strong class="application"><code>GnuCash</code></strong> will try auto complete 
+          it for you. Else, press the <span class="guibutton">Select...</span> button to access the <span class="guilabel"><strong>Find
+          Job</strong></span> window. This window is the same to the one described in 
+          <a class="xref" href="bus-ar-customers1.html#bus-ar-custfind2" title="12.5.2. Find and Edit">Section 12.5.2, “Find and Edit”</a>. Highlight the job 
+          you are looking for with a click in the search results, then press the 
+          <span class="guibutton">Select</span> button.</p></li><li class="listitem"><p><span class="guilabel"><strong>Billing Information - Billing ID</strong></span> - this
+          is the customer’s PO Number or other <span class="quote">“<span class="quote">customer reference number</span>”</span>.
+          You should use it to identify your invoices to this customer (and
+          job, if you have one).</p></li><li class="listitem"><p><span class="guilabel"><strong>Billing Information - Terms</strong></span> - the payback
+          terms agreement for this invoice. A list of registered terms is
+          available within the pop up menu. If you specified a default value
+          for the selected customer, this field is initialized with the
+          default.</p></li></ul></div><div class="screenshot"><div class="mediaobject"><img src="figures/bus_ar_invoicenew.png" alt="Creating a New Invoice"><div class="caption"><p>Creating a New Invoice </p></div></div></div><p>When you click the <span class="guibutton">OK</span> button, the
+      <span class="guilabel"><strong>Edit Invoice</strong></span> window opens.</p></div><div class="sect2" title="12.6.2. Edit"><div class="titlepage"><div><div><h3 class="title"><a name="bus-ar-invoiceedit2"></a>12.6.2. Edit</h3></div></div></div><p>From the Edit Invoice window you can enter an itemized list of
+      things you sold on this invoice, in a manner similar to how the account
+      register works.</p><div class="screenshot"><div class="mediaobject"><img src="figures/bus_ar_invoiceedit.png" alt="Edit Invoice Window"><div class="caption"><p>Edit Invoice Window </p></div></div></div><p>There are 15 columns in the <span class="guilabel"><strong>Invoice Entries</strong></span>
+      area:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="guilabel"><strong>Date</strong></span> - The date this item was
+          sold.</p></li><li class="listitem"><p><span class="guilabel"><strong>Invoiced?</strong></span> - <span class="guilabel"><strong>X</strong></span> means
+          the item is attached to this invoice, an empty box means the item is
+          not attached to this invoice. The item is attached for you when you
+          proceed to the next line item.</p></li><li class="listitem"><p><span class="guilabel"><strong>Description</strong></span> (optional) - is what the item
+          or service is called.</p></li><li class="listitem"><p><span class="guilabel"><strong>Action</strong></span> (optional) - is a user defined
+          field. You can place Cost Center information here, or use one of the
+          3 predefined actions, Hours, Material, or Project.</p></li><li class="listitem"><p><span class="guilabel"><strong>Income Account</strong></span> - selects which income
+          account is credited with this income.</p></li><li class="listitem"><p><span class="guilabel"><strong>Quantity</strong></span> - tracks how many of the items
+          you sold.</p></li><li class="listitem"><p><span class="guilabel"><strong>Unit Price</strong></span> - is the unit price of the
+          item.</p></li><li class="listitem"><p><span class="guilabel"><strong>Discount Type</strong></span> - is the type of
+          discount:</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p><span class="guilabel"><strong>$</strong></span> means <span class="guilabel"><strong>Discount</strong></span>
+              is a monetary value</p></li><li class="listitem"><p><span class="guilabel"><strong>%</strong></span> means <span class="guilabel"><strong>Discount</strong></span>
+              is a percentage.</p></li></ul></div><p>You can click the field to toggle between the discount
+          types.</p></li><li class="listitem"><p><span class="guilabel"><strong>Discount How</strong></span> - the discount can be
+          computed as follows:</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p><span class="guilabel"><strong>&gt;</strong></span> means the discount applies after
+              tax.</p></li><li class="listitem"><p><span class="guilabel"><strong>&lt;</strong></span> means the discount applies
+              before tax.</p></li><li class="listitem"><p><span class="guilabel"><strong>=</strong></span> means both discount and tax are
+              applied to the pretax value.</p></li></ul></div><p>You can click the field to change the setting.</p></li><li class="listitem"><p><span class="guilabel"><strong>Discount</strong></span> (optional) - is the total
+          discount, in monetary units or percentage, depending on
+          <span class="guilabel"><strong>Discount Type</strong></span>. You can leave it blank for no
+          discount. Any default discount you specified for the customer will
+          be automatically entered for each new item.</p></li><li class="listitem"><p><span class="guilabel"><strong>Taxable?</strong></span> - is this item taxable?
+          <span class="guilabel"><strong>X</strong></span> means yes, a blank field means no. You can
+          click the field to toggle the setting.</p></li><li class="listitem"><p><span class="guilabel"><strong>Tax Included?</strong></span> - has the tax already been
+          included in the unit price? <span class="guilabel"><strong>X</strong></span> means yes, a
+          blank field means no. For example, if there is 1 item of $100 with a
+          tax of 5% then:</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p>If Tax Included is empty, then subtotal = $100 and tax =
+              $5.</p></li><li class="listitem"><p>If Tax included is set (<span class="guilabel"><strong>X</strong></span>), then
+              subtotal = $95.23 and tax = $4.77.  The computation is: 
+              Subtotal = Total / (1+taxrate) and Tax = Total - Subtotal
+              = Total - (Total / (1+taxrate)).
+              </p></li></ul></div></li><li class="listitem"><p><span class="guilabel"><strong>Tax Table</strong></span> (optional) - this is a pop up
+          menu of all the available tax tables. If you make the item taxable,
+          then this table is used to compute the amount of tax. The tax table
+          determines tax percentages and the accounts to which tax is
+          charged.</p></li><li class="listitem"><p><span class="guilabel"><strong>Subtotal</strong></span> (uneditable) - is the computed
+          subtotal for this item (less tax).</p></li><li class="listitem"><p><span class="guilabel"><strong>Tax</strong></span> (uneditable) - is the computed tax
+          for this item.</p></li></ul></div><p>When you have finished entering all the items, you can
+      <span class="guilabel"><strong>Post</strong></span> and print the invoice.</p></div><div class="sect2" title="12.6.3. Post"><div class="titlepage"><div><div><h3 class="title"><a name="bus-ar-invoicepost2"></a>12.6.3. Post</h3></div></div></div><p>When you finish editing an invoice and are ready to print, you
+      must <span class="guilabel"><strong>Post</strong></span> the invoice. The invoice does not have to
+      be posted immediately. In fact, you should only post an invoice when you
+      are ready to print it. Posting an invoice places the transactions in an
+      accounts receivable account.</p><p>The Post Invoice window appears and asks you to enter
+      information:</p><div class="screenshot"><div class="mediaobject"><img src="figures/bus_ar_invoicepost.png" alt="Post Invoice Window"><div class="caption"><p>Post Invoice Window </p></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="guilabel"><strong>Post Date</strong></span> - specifies the date for the
+          transactions entered into the accounts receivable account.
+          By default this is the invoice’s <span class="guilabel"><strong>Date
+          Opened</strong></span> (see <a class="xref" href="bus-ar-invoices1.html#bus-ar-invoicenew2" title="12.6.1. New">Section 12.6.1, “New”</a> for
+          information about that date).</p></li><li class="listitem"><p><span class="guilabel"><strong>Due Date</strong></span> - is the date on which payment
+          for the invoice is expected.</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p>If you specified payment terms when you created the
+              invoice, the date is calculated according to selected terms, and
+              the entry field is insensitive.</p></li><li class="listitem"><p>If you did not specify payment terms, enter the expected
+              payment due date here.</p></li></ul></div></li><li class="listitem"><p><span class="guilabel"><strong>Description</strong></span> - is an arbitrary
+          description. When invoice transactions are placed in the accounts
+          receivable account, this description is entered in the memo field of
+          those transactions.</p></li><li class="listitem"><p><span class="guilabel"><strong>Post To Account</strong></span> - selects the accounts
+          receivable account in which invoice transactions are posted. You can
+          select the account from a list of existing A/Receivable
+          accounts.</p></li><li class="listitem"><p><span class="guilabel"><strong>Accumulate Splits</strong></span> - determines if invoice
+          items which transfer to the same account are combined into a single
+          split for that account or entered individually. For the sample
+          invoice which sold Nails and a Hammer, the setting affects post
+          results as follows:</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p>Checked (splits are accumulated) - a single transfer of
+              $575.00 from the <span class="emphasis"><strong>Income:Sales</strong></span> account is recorded.</p></li><li class="listitem"><p>Not checked - the transaction created in the A/Receivable
+              account, shows two transfers from <span class="emphasis"><strong>Income:Sales</strong></span> account $100.00
+              and $475.00. The memo fields in the splits indicate the sale of
+              Nails and the Hammer (the item descriptions entered on the
+              invoice) respectively.</p></li></ul></div></li></ul></div></div><div class="sect2" title="12.6.4. Find"><div class="titlepage"><div><div><h3 class="title"><a name="bus-ar-invoicefind2"></a>12.6.4. Find</h3></div></div></div><p>To find an existing invoice, use the <span class="guimenu"><strong>Business</strong></span> → <span class="guisubmenu"><strong>Customer</strong></span> → <span class="guimenuitem"><strong>Find Invoice</strong></span>
+      application. From the results of the search, you can select an invoice
+      to edit or view.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Before you can edit a posted invoice, you will need to
+        <span class="guilabel"><strong>Unpost</strong></span> it.</p></td></tr></table></div><p>One of the design goals in <strong class="application"><code>GnuCash</code></strong>’s Account Receivable system was
+      to allow different processes to get to the same state, so you can reach
+      an invoice from different directions based on the way you think about
+      the problem:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>You can search for the customer first, then list their
+          invoices.</p></li><li class="listitem"><p>You can search for invoices by number or by company
+          name.</p></li><li class="listitem"><p>You can list invoices associated with a customer job.</p></li></ul></div></div><div class="sect2" title="12.6.5. Print"><div class="titlepage"><div><div><h3 class="title"><a name="bus-ar-invoiceprint2"></a>12.6.5. Print</h3></div></div></div><p>After you post an invoice, you should print it and send it to your
+      customer. To print an invoice use <span class="guimenu"><strong>File</strong></span> → <span class="guimenuitem"><strong>Print Invoice</strong></span> menu item.</p><p>An example of the default <strong class="application"><code>GnuCash</code></strong> invoice print output is shown
+      below.</p><div class="screenshot"><div class="mediaobject"><img src="figures/bus_ar_invoiceprint.png" alt="Invoice Print Output"><div class="caption"><p>Invoice Print Output </p></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">You can modify the appearance of the invoice, IE: add a company
+        logo, etc. To do so, see the <a class="xref" href="bus-ar-invoicechange.html" title="12.9. Changing the Invoice Appearance">Section 12.9, “Changing the Invoice Appearance”</a>.</p></td></tr></table></div><p>Invoices can also be printed from the main window by selecting
+      <span class="guimenu"><strong>Reports</strong></span> → <span class="guisubmenu"><strong>Business Reports</strong></span> → <span class="guimenuitem"><strong>Printable Invoice</strong></span> from the main menu. The
+      resulting report window states that no valid invoice is selected. To
+      select the invoice to print:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Use the <span class="guibutton">Options</span> <span class="emphasis"><strong>Toolbar</strong></span> button or select
+          <span class="guimenu"><strong>Edit</strong></span> → <span class="guimenuitem"><strong>Report Options</strong></span> from
+          the main menu.</p></li><li class="listitem"><p>Select the <span class="guilabel"><strong>General</strong></span> tab of the report
+          options dialog.</p></li><li class="listitem"><p>Click the <span class="guibutton">Select</span> button next to the
+          <span class="guilabel"><strong>Invoice Number</strong></span> field.</p></li><li class="listitem"><p>Search for the invoice as usual.</p></li></ol></div><p>You can also print invoices from within the Process Payment
+      dialog. See the <a class="xref" href="bus-ar-payment1.html" title="12.8. Process Payment">Section 12.8, “Process Payment”</a> for instructions on
+      how to do so.</p></div><div class="sect2" title="12.6.6. Assign Starting Invoice Number"><div class="titlepage"><div><div><h3 class="title"><a name="bus-ar-invoicestarting2"></a>12.6.6. Assign Starting Invoice Number</h3></div></div></div><p>There is no easy way to assign an automatic starting invoice
+      number. <strong class="application"><code>GnuCash</code></strong> starts with number 1 and increments from there. You can
+      manually type an invoice number into the text box each time you create
+      an invoice, but this gets tiring and sooner or later leads to duplicate
+      numbers.</p><p>You can change the starting invoice number if it is important you.
+      There is no user interface to change the number at this time. You have
+      to hand edit your <acronym class="acronym">XML</acronym> data file. The relevant entry is in the "counters"
+      section near the beginning of the file. The file must be re-opened after
+      editing.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns=""><strong class="application"><code>GnuCash</code></strong> optionally compresses files. Disable compression and
+        save before editing the file. To enable or disable compression use <span class="guimenu"><strong>Edit</strong></span> → <span class="guimenuitem"><strong>Preferences</strong></span>
+        (<span class="guimenu"><strong>Gnucash</strong></span> → <span class="guimenuitem"><strong>Preferences</strong></span> on Mac OS X), access
+        the <span class="guilabel"><strong>General</strong></span> tab, and select or deselect the
+        <span class="guilabel"><strong>Compress Files</strong></span> check box.</p></td></tr></table></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bus-ar-customers1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="bus-ar-jobs1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">12.5. Customers </td><td width="20%" align="center"><a accesskey="u" href="chapter_bus_ar.html">Up</a></td><td width="40%" align="right"> 12.7. Customer Jobs</td></tr></table></div></body></html>

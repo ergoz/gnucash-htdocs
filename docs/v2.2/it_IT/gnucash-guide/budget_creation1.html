@@ -1,0 +1,53 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>15.2. Creare un bilancio</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter15.html" title="Capitolo 15. Bilanci"><link rel="previous" href="budget_concepts1.html" title="15.1. Concetti di base"><link rel="next" href="budget_reporting1.html" title="15.3. Resoconti del bilancio"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">15.2. Creare un bilancio</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="budget_concepts1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 15. Bilanci</th><td width="20%" align="right"> <a accesskey="n" href="budget_reporting1.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="budget_creation1"></a>15.2. Creare un bilancio</h2></div></div><p>Ancora prima di iniziare la creazione di un bilancio, è importante
+   impiegare un po' di tempo pensando alla struttura dei conti. Per esempio,
+   se si desidera ottenere un bilancio per le proprie spese di elettricità
+   e acqua, non è possibile avere solamente un conto Uscite:Servizi. I conti 
+   devono essere dettagliati almeno quanto il bilancio che si vuole ottenere.
+   </p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="budget_creation2"></a>15.2.1. Scegliere i conti per i quali creare il bilancio</h3></div></div><p>Il primo passo da compiere nella creazione di un bilancio, 
+     consiste nello scegliere che cosa di desidera pianificare. Questa
+     decisione influisce sulla scelta dei conti da includere nel bilancio. 
+     Ad esempio, se si è interessati solamente al tracciamento delle proprie 
+     spese, si può creare un bilancio delle uscite inserendo solamente
+     gli importi dei conti delle uscite. D'altra parte, se si desidera 
+     tracciare tutti i propri movimenti di liquidi, si può creare un bilancio
+     dei flussi di liquidi immettendo gli importi dei conti di attività, 
+     passività, entrate e uscite.</p><p>Prima di procedere alla creazione del bilancio occorre prendere 
+     due decisioni: per quali conti si desidera ottenere un bilancio? e, per 
+     quando si desidera che venga calcolato il bilancio? E' sempre possibile 
+     cambiare idea in seguito dopo la creazione del bilancio, ma è necessario
+     iniziare con qualcosa.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Suggerimento</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Come regola generale, spesso interessa conoscere
+     in <b>cosa</b> si spende il proprio denaro e quindi si 
+     potrebbe voler realizzare un resoconto delle uscite. Se si è anche 
+     preoccupati di avere abbastanza denaro al posto giusto nel momento 
+     giusto, si potrebbe voler realizzare un bilancio dei flussi di 
+     liquidi.</p></td></tr></table></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2619804"></a>15.2.2. Scegliere il periodo di bilancio</h3></div></div><p>Prima di creare un bilancio occorre anche decidere per quale
+    periodo di tempo si desidera pianificare. I periodi di bilancio più
+    comuni sono mensilmente e annualmente. Se si desidera realizzare un bilancio 
+    il cui percorso finanziario nel tempo sia variabile, allora sarebbe necessario 
+    includere diversi periodi nel bilancio. Ad esempio, se si desidera pianificare
+    delle spese maggiori per i servizi nel periodo invernale piuttosto che 
+    in quello estivo, allora si potrebbe voler suddividere il bilancio annuale 
+    in 4 trimestri o anche in 12 mesi, e mettere nel bilancio un valore 
+    superiore per il periodo invernale e uno inferiore per quello estivo.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2619829"></a>15.2.3. Come iniziare</h3></div></div><p>Per creare il primo bilancio cliccare su <b>File</b> -&gt;
+    <b>Nuovo</b> -&gt; <b>Nuovo bilancio preventivo</b>.  
+    Verrà immediatamente visualizzato un nuovo bilancio con le impostazioni
+    predefinite e nessuna immissione. Premere quindi il pulsante "Opzioni".
+    Le opzioni più importanti sono il periodo di bilancio e il numero di periodi.
+    Per il primo si inserisca la data di inizio e il periodo minimo per cui si vuole stimare
+    il bilancio; per il secondo scegliere il numero di periodi per i quali si
+    vuole calcolare il bilancio.</p><p>La pagina del bilancio mostra ora una lista di conti con una colonna per
+    ogni periodo di bilancio. La data visualizzata nel titolo di ogni colonna
+    rappresenta l'inizio di quel periodo di bilancio.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="id2619875"></a>15.2.4. Inserire i valori di bilancio</h3></div></div><p>Ora si devono inserire i valori di bilancio cioè gli importi
+    che ci si aspetta che i saldi dei conti assumano durante il periodo 
+    di bilancio. I valori di bilancio possono essere inseriti in due modi:
+    il primo consiste nel cliccare direttamente nella cella di interesse 
+    e inserire un importo.</p><p>Se si hanno a disposizione delle transazioni inserite in GnuCash, 
+    il secondo metodo consiste nel far stimare a GnuCash i valori di bilancio
+    sulla base di queste transazioni. Prima, selezionare il conto che si
+    desidera far stimare a GnuCash; poi, premere il tasto "stima" sulla
+    barra degli strumenti. Nella finestra di stima dei valori di bilancio,
+    selezionare la data dopo la quale GnuCash dovrà controllare le transazioni.
+    GnuCash inizierà da questa data e controllerà nel seguito per il periodo di 
+    durata del bilancio. Ad esempio, se si sta facendo un bilancio annuale e si sceglie
+    come data il 1° Gennaio 2005, GnuCash controllerà tutte le transazioni in quel conto
+    dal 1° Gennaio 2005 al 31 Dicembre 2005.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="budget_concepts1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="budget_reporting1.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">15.1. Concetti di base </td><td width="20%" align="center"><a accesskey="u" href="chapter15.html">Risali</a></td><td width="40%" align="right"> 15.3. Resoconti del bilancio</td></tr></table></div></body></html>

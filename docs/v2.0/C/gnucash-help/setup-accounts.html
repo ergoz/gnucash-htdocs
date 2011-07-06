@@ -1,0 +1,459 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>5.2. Setting Up And Editing Accounts</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="help.html" title="GnuCash Help Manual"><link rel="up" href="usage.html" title="Chapter 5. Common Operations, Tools and Reports"><link rel="previous" href="ch05s01.html" title="5.1. Tools"><link rel="next" href="transactions.html" title="5.3. Using The Register To Record Transactions"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.2. Setting Up And Editing Accounts</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch05s01.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 5. Common Operations, Tools and Reports</th><td width="20%" align="right"> <a accesskey="n" href="transactions.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="setup-accounts"></a>5.2. Setting Up And Editing Accounts</h2></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">This section is a "work in process" all of the material has not been reviewed for V2.0.
+While it may not be strictly accurate, it is at least a "guide".</p></td></tr></table></div><p></p><p>This section describes the process of setting up GnuCash Accounts. In GnuCash an
+        Account is used as the basic tool to organize the recording of where money comes from
+        and goes to. GnuCash also extends the concept of real world accounts such as a bank
+        account or loan account to grouping income and expense accounts. This allows to to
+        quickly see where you spent your money and what your major income and expenses are.
+        GnuCash sets Account Types (as described in the next section) to help in organizing
+        and grouping accounts. Account Types can be used to create a Chart of Accounts.
+      </p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="acct-types"></a>5.2.1. Types of GnuCash Accounts</h3></div></div><p></p><p>GnuCash supports a number of different account types. It is recommended to
+         choose an appropriate account type based on the list of account types described
+         below.</p><div class="table"><p><a name="TypeAccounts"></a><b>Table 5.8. Types of GnuCash Accounts.</b></p><table summary="Types of GnuCash Accounts." border="1"><colgroup><col><col></colgroup><thead><tr><th><p>Account Type</p></th><th><p>Description</p></th></tr></thead><tbody><tr><td><p>Accounts Payable</p></td><td><p>Accounts Payable are used by businesses to record amounts that
+                 must be paid. Example: The business has bought something, but the business
+                 has not paid the bill until later.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Previous versions of this help defined A/P and A/R the other way
+                   round.</p></td></tr></table></div></td></tr><tr><td><p>Accounts Receivable</p></td><td><p>Accounts Receivable records amounts for which money
+                 has not yet been received. Example: A business has sold something and
+                 issued a bill, but the client has not payed until later.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Previous versions of this help defined A/P and A/R the other way
+                   round.</p></td></tr></table></div></td></tr><tr><td><p>Asset</p></td><td><p>Asset accounts are used for tracking things that are of
+		 value and can be used or sold to pay debts. (Normally a placeholder account)
+                 </p></td></tr><tr><td><p>Bank</p></td><td><p>The Bank account type denotes savings or checking accounts
+                 held at a bank or other financial institution. Some of these accounts may
+                 bear interest. This is also the appropriate account type for check (debit)
+                 cards, which directly withdraw payments from a checking account. </p></td></tr><tr><td><p>Cash</p></td><td><p>The Cash account type is used to denote the cash that you store
+                 in your wallet, shoe box, piggyback, or mattress.</p></td></tr><tr><td><p>Credit Card</p></td><td><p>The Credit Card account type is used to denote credit card
+                 accounts, both for cards that allow floating lines of credit (e.g. VISA,
+                 MasterCard, or Discover) and with cards that do not permit continuing
+                 balances (e.g. American Express) </p></td></tr><tr><td><p>Currency</p></td><td><p>Currency Accounts are used for trading currencies.</p></td></tr><tr><td><p>Equity</p></td><td><p>Equity accounts are used to store the opening balances when you
+                 first start using GnuCash or start a new accounting period.</p></td></tr><tr><td><p>Expense</p></td><td><p>Any expense such as food, clothing, taxes, etc. This type is
+                 called a category in Quicken.</p></td></tr><tr><td><p>Income</p></td><td><p>Any income received from sources such as salary, interest,
+                 dividends, etc. This type is called a category in Quicken.</p></td></tr><tr><td><p>Liability</p></td><td><p>Liability accounts are used for tracking debts or financial
+                 obligations. (Normally a placeholder account)</p></td></tr><tr><td><p>Mutual Fund</p></td><td><p>A professionally managed portfolio of stocks and bonds or other
+                 investments divided up into shares.</p></td></tr><tr><td><p>Stock</p></td><td><p>A share of ownership in a corporation, which entitles its owner
+                 to all the risks and rewards that go with it.</p></td></tr></tbody></table></div><p></p><p>The New Account Hierarchy Setup druid described in the first section of this
+         help is a convenient way of setting up a set of accounts to use as a framework of
+         account types.</p><p></p><p>When new accounts are created the available choices of account types are grayed
+         out according to what type the parent account is. The following list contains the
+         possible choices.</p><p></p><div class="itemizedlist"><ul><li><p>Accounts Payable: All accounts except Equity, Expense and Income can be
+             child accounts.</p></li><li><p>Accounts Receivable: All accounts except Equity, Expense and Income can be
+             child accounts.</p></li><li><p>Asset: All accounts except Equity, Expense and Income can be child accounts.
+            </p></li><li><p>Bank: All accounts except Equity, Expense and Income can be child accounts.
+            </p></li><li><p>Cash: All accounts except Equity, Expense and Income can be child accounts.
+            </p></li><li><p>Credit Card: All accounts except Equity, Expense and Income can be child
+             accounts.</p></li><li><p>Currency: All accounts except Equity, Expense and Income can be child
+             accounts.</p></li><li><p>Equity: Only Equity accounts can be child accounts.</p></li><li><p>Expense: Only Expense or Income accounts can be child accounts.</p></li><li><p>Income: Only Expense or Income accounts can be child accounts.</p></li><li><p>Liability: All accounts except Equity, Expense and Income can be child
+             accounts.</p></li><li><p>Mutual Fund: All accounts except Equity, Expense and Income can be child
+             accounts.</p></li><li><p>Stock: All accounts except Equity, Expense and Income can be child accounts.
+            </p></li></ul></div><p></p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="chart-create"></a>5.2.2. To Create a Chart of Accounts</h3></div></div><p></p><p>The Chart of Accounts is like a table of contents for your finances. The best
+         way to conceptualize a chart of accounts is as a tree. The main branches represent
+         entire categories or groups, while the leaves of the tree denote individual bank
+         accounts or expense categories. When a summary report is requested, typically only
+         the main branches are shown in the report, rather than the individual accounts. For
+         example, a chart of accounts might look like the following:
+
+	<div class="literallayout"><p><br>
+<tt>        300             Expenses<br>
+         |<br>
+         +--310         Living Expenses<br>
+         |   |<br>
+         |   +--311     Beer<br>
+         |   |<br>
+         |   +--312     Cable<br>
+         |<br>
+         +--320         Business Expenses<br>
+         |   |<br>
+         |   +--321     8-inch Floppies<br>
+         |   |<br>
+         :   :</tt><br>
+</p></div>
+
+
+	</p><p></p><p>Note that accounts not only have names; they have codes, to order the accounts.
+         When a report is generated, the sort order is determined by the numbering. It's
+         customary to have the leaf accounts end in non-zero digits, while parent nodes have
+         increasing numbers of zeros. </p><p></p><p>GnuCash does not prevent duplicate numbering, although we would encourage you
+         to avoid this. Account codes are treated as numbers in base-36, thus, if you run out
+         of numbers, you can use the letters, a through z.</p><p></p><p>A sample chart of accounts is shown below. Each account is of a given account
+         type. This example is a combination of some typical business and personal accounts.
+
+	        <div class="itemizedlist"><ul><li><p>            Assets 
+
+            <div class="itemizedlist"><ul><li><p>                Cash On Hand 
+
+                <div class="itemizedlist"><ul><li><p>Checking account
+
+                  </p></li><li><p>Money Market Account
+
+                  </p></li><li><p>Certificate of Deposit
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Fixed Assets 
+
+                <div class="itemizedlist"><ul><li><p>Furniture
+
+                  </p></li><li><p>Computers
+
+                  </p></li><li><p>Jewelry, Collectibles
+
+                  </p></li><li><p>Tools, Machinery
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Investments 
+
+                <div class="itemizedlist"><ul><li><p>Stocks
+
+                  </p></li><li><p>Bonds
+
+                  </p></li><li><p>Mutual Funds
+
+                  </p></li><li><p>Real Estate
+                </p></li></ul></div>
+              
+            </p></li></ul></div>
+          
+
+          </p></li><li><p>            Liabilities 
+
+            <div class="itemizedlist"><ul><li><p>                Taxes 
+
+                <div class="itemizedlist"><ul><li><p>Federal Income Tax
+
+                  </p></li><li><p>Social Security
+
+                  </p></li><li><p>Medicare
+
+                  </p></li><li><p>FUTA
+
+                  </p></li><li><p>State Income Tax
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Accounts Payable 
+
+                <div class="itemizedlist"><ul><li><p>MasterCard
+
+                  </p></li><li><p>Visa
+
+                  </p></li><li><p>American Express
+
+                  </p></li><li><p>Diner's Club
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Loans 
+
+                <div class="itemizedlist"><ul><li><p>Debentures
+
+                  </p></li><li><p>School Loan
+
+                  </p></li><li><p>Uncle Harry's Tide-me-over
+                </p></li></ul></div>
+              
+            </p></li></ul></div>
+          
+
+          </p></li><li><p>            Equity 
+
+            <div class="itemizedlist"><ul><li><p>Retained Earnings
+
+              </p></li><li><p>Current Year Earnings
+
+              </p></li><li><p>Historical Adjustments
+            </p></li></ul></div>
+          
+
+          </p></li><li><p>            Income 
+
+            <div class="itemizedlist"><ul><li><p>                Interest Income 
+
+                <div class="itemizedlist"><ul><li><p>Bank Account Interest
+
+                  </p></li><li><p>Certificate of Deposit
+
+                  </p></li><li><p>Bond Interest
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Dividends 
+
+                <div class="itemizedlist"><ul><li><p>Stock
+
+                  </p></li><li><p>Mutual Fund
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Consulting 
+
+                <div class="itemizedlist"><ul><li><p>ABC Design
+
+                  </p></li><li><p>PQR Infomatics
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Salary 
+
+                <div class="itemizedlist"><ul><li><p>My Day Job
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Commissions 
+
+                <div class="itemizedlist"><ul><li><p>Royalties
+                </p></li></ul></div>
+              
+            </p></li></ul></div>
+          
+
+          </p></li><li><p>            Expenses 
+
+            <div class="itemizedlist"><ul><li><p>                Rent and Utilities 
+
+                <div class="itemizedlist"><ul><li><p>Rent
+
+                  </p></li><li><p>Rent Late Fees
+
+                  </p></li><li><p>Electricity
+
+                  </p></li><li><p>Gas
+
+                  </p></li><li><p>Phone
+
+                  </p></li><li><p>Internet
+
+                  </p></li><li><p>Cable TV
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Office Expenses 
+
+                <div class="itemizedlist"><ul><li><p>Accounting
+
+                  </p></li><li><p>Legal
+
+                  </p></li><li><p>Software
+
+                  </p></li><li><p>Postage
+
+                  </p></li><li><p>Bank Charges
+
+                  </p></li><li><p>Credit Card Charges
+
+                  </p></li><li><p>Toner, Paper, Paper Clips
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Auto Expenses 
+
+                <div class="itemizedlist"><ul><li><p>Gas
+
+                  </p></li><li><p>Insurance
+
+                  </p></li><li><p>Repair
+
+                  </p></li><li><p>Rental
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Taxes 
+
+                <div class="itemizedlist"><ul><li><p>Social Security
+
+                  </p></li><li><p>Unemployment
+
+                  </p></li><li><p>IRS penalties
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Wages and Salaries 
+
+                <div class="itemizedlist"><ul><li><p>Consulting
+
+                  </p></li><li><p>Wages
+
+                  </p></li><li><p>Health Insurance
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Travel 
+
+                <div class="itemizedlist"><ul><li><p>Air
+
+                  </p></li><li><p>Hotel
+
+                  </p></li><li><p>Meals
+
+                  </p></li><li><p>Auto
+                </p></li></ul></div>
+              
+
+              </p></li><li><p>                Marketing 
+
+                <div class="itemizedlist"><ul><li><p>Advertising
+
+                  </p></li><li><p>Trade Shows
+
+                  </p></li><li><p>Give Aways
+                </p></li></ul></div>
+              
+            </p></li></ul></div>
+          
+        </p></li></ul></div>
+
+
+	</p><p></p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="acct-create"></a>5.2.3. To Create a New Account</h3></div></div><p></p><p>The New Account properties dialog consists of two tabs, the General Information
+         tab and the Opening Balance tab. This dialog can be accessed by going to File -&gt;
+         New Account... or by clicking the New toolbar icon in the Account Tree Window.
+        </p><p></p><p>Creating a New Account involves planning in advance several details that are
+         used in the New Account dialog. </p><p></p><div class="itemizedlist"><ul><li><p>What type of account is needed .</p></li><li><p>Where it fits in the structure of the Chart of Accounts.</p></li><li><p>If there is an Opening Balance.</p></li><li><p>If there is a Commodity needed for the account.</p></li><li><p>If on-line updating of the commodity price is needed.</p></li></ul></div><p></p><p>These details are described below.</p><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="gen-info"></a>5.2.3.1. General Information</h4></div></div><p>The General Information tab is used to access the basic information about the
+           account. It provides a way of connecting the account to stock information if it is
+           one of the currency, mutual fund or stock account types. It can also be flagged as
+           a Tax Related or Placeholder account.</p><p>There are five panes in this tab. Below the panes are check-boxes to mark the
+           account as Tax Related and a Placeholder account. The Tax Related check-box means
+           that this account has been flagged to be included in Tax Exports. This flag should
+           only be set for Income and Expense type accounts. The Placeholder check-box means
+           this account is not used for transaction data. This check-box is used to enable a
+           hierarchy or chart of accounts to be setup.</p><p>The top pane contains the Account Information.</p><div class="itemizedlist"><ul><li><p>Account Information: Enter a name for the account such as First Bank
+               Checking.</p></li><li><p>Description: This is an optional description for the account.</p></li><li><p>Commodity: For most accounts this should be the default, USD (US Dollar)
+               or your local currency symbol. If this account is for a foreign currency then
+               use the Select... button to choose a different currency in the Select
+               currency/security dialog. Use the Select... button to choose a security if this
+               is a mutual fund or stock account.</p></li><li><p>Select currency/security: To select a different currency click the
+               Currency/security: drop down list and choose the currency symbol you need. To
+               create a security for mutual fund and stock accounts select the New... button to
+               bring up the New Currency/Security dialog. After the security is created select
+               the Type:(usually the exchange the security is traded on) and the name in the
+               Currency/security: drop down list.</p></li><li><p>New Currency/Security: The options here are described in detail in the
+               Security Editor section. Fill in a name, symbol and type.</p></li><li><p>Account Code: Enter an optional number code as described in the To Create
+               a Chart of Accounts section.</p></li></ul></div><p>The next pane contains a list of Account Types. Select a type from the
+           descriptions in the Types of GnuCash Accounts section.</p><p>The next pane contains an account tree to choose a Parent Account. To create a
+           new account tree select New top level account. If the parent account is a certain
+           type, then several of the choices in Account Type become  out. For example if the
+           Parent Account is Assets then Equity, Expense and Income become  This is to help
+           maintain a proper account structure for the Chart of Accounts.</p><p>The next pane is the Price Quote Source pane. </p><div class="itemizedlist"><ul><li><p>Get On-line Quotes: This check-box is only enabled when currency, mutual
+               fund or stock account types are selected. It is used to enable this account to
+               have quotes downloaded from an on-line source.</p></li><li><p>The source for price quotes: Select a quote source from the pull-down menu.
+               Currently supported quote sources include Yahoo, Yahoo Europe, Fidelity
+               Investments, T. Rowe Price, the Vanguard Group, the Australian Stock Exchange
+               (ASX) and TIAA-CREF. Note that Yahoo will provide price quotes for many mutual
+               funds including Fidelity, T.Rowe Price and Vanguard, and that the quoted prices
+               at Yahoo should be identical to those that may be found at the source sites. If
+               you choose Yahoo Europe, you should append the market code for the security,
+               such as PA for Paris, BE for Berlin, etc. Example: 12150.PA (a Peugeot security
+               in the Paris market).  <a href="setup-accounts.html#Code4EurMrks" title="Table 5.9. Code List for European Markets">Table 5.9</a> and
+               <a href="setup-accounts.html#PsSymbs-TIAA-CREF" title="Table 5.10. Pseudo-symbols that can be used for TIAA-CREF quotes">Table 5.10</a> below list codes for various markets.
+              </p></li><li><p>Timezone for these quotes: Select the timezone for the source of the
+               on-line quotes you are receiving. For example, Yahoo normally quotes Eastern
+               timezone, so choose America/New York if you use that quote source.</p></li></ul></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">The set of steps needed to properly enable on-line quote updating with
+           the Price Editor are;</p><div xmlns="" class="itemizedlist"><ul><li><p>Create the mutual fund or stock with either the Security Editor or the
+               New Currency/Security dialog described above.</p></li><li><p>Create the Account for the mutual fund or stock with it listed in the
+               Commodity field.</p></li><li><p>Select On-line Quotes, the source for price quotes and Timezone.</p></li><li><p>To determine if the Perl module Finance::Quote is already installed on
+              your system, type “perldoc Finance::Quote” in a terminal window
+              and check to see if there is any documentation available. If you see the
+              documentation, then the module is installed, if you do not see the
+              documentation, then it has not been installed.</p><p>To install Finance::Quote;</p><div class="orderedlist"><ol type="1"><li><p>Close any GnuCash applications you have running.</p></li><li><p>Locate the folder where GnuCash is installed by searching for 
+		“gnc-fq-update” (without the quotes).</p></li><li><p>Change to that directory, open a root shell and run the command
+              “gnc-fq-update” (without the quotation marks). This will
+              launch a Perl CPAN update session that will go out onto the Internet and
+              install the Finance::Quote module on your system.</p><p>The gnc-fq-update program is interactive, however, with most systems 
+		you should be able to answer “no” to the first question: 			“Are you ready for manual configuration? [yes]” and the 			update will continue automatically from that point.</p></li></ol></div><p>After installation is complete, you should run the “gnc-fq-dump”
+              test program, in the same directory, distributed with GnuCash to test
+              if Finance::Quote is installed and working properly.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">If you feel uncomfortable about performing any of these steps,
+               please either email the GnuCash-user mailing list 
+               (<tt>&lt;<a href="mailto:gnucash-user@gnucash.org">gnucash-user@gnucash.org</a>&gt;</tt>) for help or come to the GnuCash IRC
+               channel on irc.gnome.org. You can also leave out this step and manually update
+               your stock prices.</p></td></tr></table></div></li><li><p>Add a commodity to the Price Editor as described in the Price Editor
+               section of Tool Windows.</p></li><li><p>Select Get Quotes in the Price Editor.</p></li></ul></div></td></tr></table></div><p>If you wish to update price quotes from the command line, you can do so by
+           the following command;</p><p><b><tt>gnucash --add-price-quotes &lt;gnucash-file-name&gt;</tt></b>
+          </p><p>Code List for European Markets</p><div class="table"><p><a name="Code4EurMrks"></a><b>Table 5.9. Code List for European Markets</b></p><table summary="Code List for European Markets" border="1"><colgroup><col><col></colgroup><thead><tr><th><p>Code</p></th><th><p>Market</p></th></tr></thead><tbody><tr><td><p>BC</p></td><td><p>Barcelona</p></td></tr><tr><td><p>BE</p></td><td><p>Berlin</p></td></tr><tr><td><p>BI</p></td><td><p>Bilbao</p></td></tr><tr><td><p>BR</p></td><td><p>Brême</p></td></tr><tr><td><p>CO</p></td><td><p>Copenhagen</p></td></tr><tr><td><p>D</p></td><td><p>Dusseldorf</p></td></tr><tr><td><p>F</p></td><td><p>Frankfurt</p></td></tr><tr><td><p>FX</p></td><td><p>Xetra</p></td></tr><tr><td><p>H</p></td><td><p>Hamburg</p></td></tr><tr><td><p>HA</p></td><td><p>Hanover</p></td></tr><tr><td><p>L</p></td><td><p>London</p></td></tr><tr><td><p>MA</p></td><td><p>Madrid</p></td></tr><tr><td><p>MC</p></td><td><p>Madrid (M.C.)</p></td></tr><tr><td><p>MI</p></td><td><p>Milan</p></td></tr><tr><td><p>MU</p></td><td><p>Munich</p></td></tr><tr><td><p>O</p></td><td><p>Oslo</p></td></tr><tr><td><p>PA</p></td><td><p>Paris</p></td></tr><tr><td><p>ST</p></td><td><p>Stockholm</p></td></tr><tr><td><p>SG</p></td><td><p>Stuttgart</p></td></tr><tr><td><p>VA</p></td><td><p>Valence</p></td></tr></tbody></table></div><div class="table"><p><a name="PsSymbs-TIAA-CREF"></a><b>Table 5.10. Pseudo-symbols that can be used for TIAA-CREF quotes</b></p><table summary="Pseudo-symbols that can be used for TIAA-CREF quotes" border="1"><colgroup><col><col></colgroup><thead><tr><th><p>Name</p></th><th><p>Pseudo-symbol</p></th></tr></thead><tbody><tr><td><p>Bond Market</p></td><td><p>CREFbond</p></td></tr><tr><td><p>Equity Index</p></td><td><p>CREFequi</p></td></tr><tr><td><p>Global Equities</p></td><td><p>CREFglob</p></td></tr><tr><td><p>Growth</p></td><td><p>CREFgrow</p></td></tr><tr><td><p>Inflation-Linked Bond</p></td><td><p>CREFinfb</p></td></tr><tr><td><p>Money Market</p></td><td><p>CREFmony</p></td></tr><tr><td><p>Social Choice</p></td><td><p>CREFsoci</p></td></tr><tr><td><p>Stock</p></td><td><p>CREFstok</p></td></tr><tr><td><p>Teachers PA Select Stock</p></td><td><p>TIAAsele</p></td></tr><tr><td><p>Teachers PA Stock Index</p></td><td><p>TIAAsndx</p></td></tr><tr><td><p>TIAA Real Estate</p></td><td><p>TIAAreal</p></td></tr></tbody></table></div><p>The last pane is the Notes pane. This is used for any additional notes about
+           the account.</p></div><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="open-balance"></a>5.2.3.2. Opening Balance</h4></div></div><p>The Opening Balance tab is visible only when creating a new account. It is
+           used to record the beginning balance for an account. This allows it to be used for
+           two different scenarios. If using GnuCash for the first time to record transactions,
+           it can be used as a beginning balance. If the accounts in use are closed at the end
+           of a period and new accounts are created, it is used to close and carry balances
+           forward.</p><p>There are three panes in this tab. The top pane contains the Balance
+           Information.</p><div class="itemizedlist"><ul><li><p>Balance: Enter here the balance to start the account with.</p></li><li><p>Date: Choose here the date the opening balance should be recorded.</p></li></ul></div><p>The next pane is the Transfer Type pane.</p><div class="itemizedlist"><ul><li><p>Use Opening Balances Equity account: This transfers the opening balance
+               for the account from a standard Equity account called Opening Balances.</p></li><li><p>Select Transfer Account: This enables the pane below so a different
+               account can be used to transfer the opening balance.</p></li></ul></div><p>The last pane is the Transfer Account pane. Select the account to use for
+           opening balances from the list of accounts in this pane.</p></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="acct-edit"></a>5.2.4. To Edit an Account</h3></div></div><p></p><p>The Edit Account dialog consists of just the General Information tab. This tab
+         has the same information that was described in To Create a New Account. To access the
+         Edit Account dialog go to Edit -&gt; Edit Account (menu shortcut Ctrl-E) or click the
+         Edit toolbar icon in the Account Tree Window.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="chart-edit"></a>5.2.5. To Edit a Chart of Accounts</h3></div></div><p></p><p>Editing the Chart of Accounts is done within the Parent Account pane of the Edit
+         Account dialog. It is possible to move an account to any part of the Chart of Account.
+         It is recommended to keep accounts generally under the related types of accounts as
+         described in the Types of GnuCash Accounts section. This helps to preserve the Chart
+         of Accounts structure.</p><p></p><p>To move the selected account to a different parent account just select the
+         account in the Parent Account pane. If New top level account is selected then the
+         account will be move to the top level.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="chart-renumber"></a>5.2.6. To Renumber Subaccounts</h3></div></div><p>Use "Renumber Subaccounts" to rewrite the account codes for all children of the
+           current account.  For example, you have the following account structure:</p><div class="table"><p><a name="table-renumber1"></a><b>Table 5.11. Starting account numbers.</b></p><table summary="Starting account numbers." border="1"><colgroup><col><col></colgroup><thead><tr><th><p>Code</p></th><th><p>Name</p></th></tr></thead><tbody><tr><td><p>10</p></td><td><p>Colors</p></td></tr><tr><td><p>10-1</p></td><td><p>Red</p></td></tr><tr><td><p>10-2</p></td><td><p>Orange</p></td></tr><tr><td><p>10-3</p></td><td><p>Yellow.</p></td></tr><tr><td><p>10-4</p></td><td><p>Blue</p></td></tr><tr><td><p>10-5</p></td><td><p>Violet</p></td></tr></tbody></table></div><p>You now need to add the "Green" account, but you want it to sort between
+          the Yellow and Blue accounts.  Instead of having to manually renumber all the
+          accounts starting with Blue, you can use the "renumber subaccount" command on the
+          Colors account.  In the pop-up dialog the prefix value should default to "10", the
+          account code for the colors account.  If you set an interval value of 5 and click
+          "Renumber" you will end up with the following account structure:</p><div class="table"><p><a name="table-renumber2"></a><b>Table 5.12. Renumbered account numbers</b></p><table summary="Renumbered account numbers" border="1"><colgroup><col><col></colgroup><thead><tr><th><p>Code</p></th><th><p>Name</p></th></tr></thead><tbody><tr><td><p>10</p></td><td><p>Colors</p></td></tr><tr><td><p>10-05</p></td><td><p>Red</p></td></tr><tr><td><p>10-10</p></td><td><p>Orange</p></td></tr><tr><td><p>10-15</p></td><td><p>Yellow.</p></td></tr><tr><td><p>10-20</p></td><td><p>Blue</p></td></tr><tr><td><p>10-25</p></td><td><p>Violet</p></td></tr></tbody></table></div><p>Now you have room in the account code numbering space to add the Green account
+         with an account code to force the proper ordering.</p><div class="table"><p><a name="table-renumber3"></a><b>Table 5.13. Final account numbers.</b></p><table summary="Final account numbers." border="1"><colgroup><col><col></colgroup><thead><tr><th><p>Code</p></th><th><p>Name</p></th></tr></thead><tbody><tr><td><p>10</p></td><td><p>Colors</p></td></tr><tr><td><p>10-05</p></td><td><p>Red</p></td></tr><tr><td><p>10-10</p></td><td><p>Orange</p></td></tr><tr><td><p>10-15</p></td><td><p>Yellow.</p></td></tr><tr><td><p>10-18</p></td><td><p>Green</p></td></tr><tr><td><p>10-20</p></td><td><p>Blue</p></td></tr><tr><td><p>10-25</p></td><td><p>Violet</p></td></tr></tbody></table></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="acct-delete"></a>5.2.7. To Delete an Account</h3></div></div><p></p><p>Deleting an Account means removing all transaction information and information
+         about this account from the file. This cannot be undone. You will be prompted to that
+         you wish to remove the account. If the account still contains transaction information
+         you will be warned that this account contains transactions.</p><p></p><p>A side effect of removing an account that contains transactions is that you will
+         end up with unbalanced accounts. This will be indicated in the account by a gray
+         check-box next to the debit and credit amounts. You can repair automatically these
+         unbalanced accounts by using the Actions -&gt; Check &amp; Repair menu. This will
+         automatically assign the unbalanced amounts to a new account named Imbalance.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="acct-jump"></a>5.2.8. To Jump to another Account</h3></div></div><p></p><p>When using the Account Register Window it is frequently useful to be able to
+         view an account and also the transfer account at the same time. GnuCash allows you to
+         do this quickly by using 'Jump'. This is available on the toolbar and in the Actions
+         menu in the Account Register Window. </p><p>Select the transaction in the Account Register Window and click jump to open the
+         transfer Account Register Window. If the transaction is split between more than one
+         transfer account then you will need to show all the split transfer accounts first and
+         select the transfer account to jump to.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="acct-reconcile"></a>5.2.9. To Reconcile an Account to a Statement</h3></div></div><p>Reconciliation of Accounts in GnuCash with statements from a bank or other
+         institution is a way of double checking the balance of your accounts. It also is
+         useful to track uncleared checks and other outstanding transactions. </p><p>The Summary Bar at the top of the Account Register Window indicates the amounts
+         of Cleared and Reconciled transactions. On-line account information can be used to
+         mark which transaction the bank has processed by changing the R (reconciliation)
+         column in the register from n (new) to c (cleared). The bank statement is then used
+         with the Reconcile Window to reconcile the account which changes the R field to y
+         (reconciled).</p><p>The Reconcile Window is accessed in the Account Tree Window by going to
+         Actions -&gt; Reconcile... (menu shortcut Ctrl-R). In the Account Register Window
+         it is accessed by going to Actions -&gt; Reconcile...</p><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="rec-info"></a>5.2.9.1. Reconcile Information</h4></div></div><p>The Reconcile Information dialog is used to indicate the date the statement
+           ends on and what the starting and ending balance of the statement is. The Include
+           Sub-accounts check-box is used if two or more accounts are used to track a single
+           bank account. The Enter Interest Payment button is used to add a transfer to the
+           accounts for an interest payment. If selected a dialog will be displayed to add the
+           payment to the account.</p><p>There are three panes in the Interest Payment dialog. At the bottom is a
+           button called No Auto Interest Payments for this Account which will cancel the
+           dialog. The top pane contains the Payment Information.</p><div class="itemizedlist"><ul><li><p>Amount: Enter the amount of the interest payment.</p></li><li><p>Date: Select the date for the interest payment.</p></li><li><p>Num: Enter a number for the transaction (optional).</p></li><li><p>Description: Enter an informational description for the transaction.</p></li><li><p>Memo: Enter a note about the transaction (optional).</p></li></ul></div><p>The next pane contains a list of accounts for the Payment From account. If the
+           payment is for a credit or loan account then usually this would be from an Expense
+           account. If the payment is for a checking or savings account then usually this would
+           be from an Income account. The Show Income/Expense check-box shows or hides the
+           Income and Expense accounts.</p><p>The next pane contains the Reconcile Account. This shows the account that the
+           interest payment will be transferred to or from.</p></div><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="rec-win"></a>5.2.9.2. Reconcile Window</h4></div></div><p>The parts of the Reconcile Window are described in the Tool Windows section of
+           GnuCash Windows. This window is used to open the account and to add transaction
+           information to the account in order to reconcile the account to the bank statement.
+          </p><p>The set of unreconciled transactions in the Funds In and Funds Out panes can
+           be changed by using the menus and toolbar to access the account and transaction
+           information. If you wish to postpone the reconciliation until later use the
+           Reconcile -&gt; Postpone menu item (menu shortcut Ctrl-P).</p><p>Select each unreconciled transaction matching a statement transaction so a
+           green tick appears in the R column. The Balance pane changes to reflect each
+           selected transaction until the Ending Balance equals the Reconciled Balance and the
+           Difference is zero. Once this is done select the Finish button or Finish on the
+           Reconcile menu (menu shortcut Ctrl-F) to finish the reconcile process.</p></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="stock-split"></a>5.2.10. To Perform a Stock Split</h3></div></div><p>Stock splits commonly occur when a company decides its stock price is to
+         expensive for individual investors to buy the stock. Splits have the effect of
+         lowering the price of a single share while keeping the value of shares owned by
+         investors who have already purchased shares.</p><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="stock-split-druid"></a>5.2.10.1. Stock Split Druid</h4></div></div><p>GnuCash uses the Stock Split druid to record stock splits. This provides a
+           way of entering the details of the stock split and also any change in stock price
+           or cash disbursement as a result of the stock split.</p><p>The Stock Split druid is accessed by going to Actions -&gt; Stock Split...
+          </p><p>The Stock Split druid opens with a screen that briefly describes what this
+           druid does. The three buttons at the very bottom of the screen will not change
+           while using the druid.</p><div class="itemizedlist"><ul><li><p>The Cancel button is used to exit the druid and cancel entering the stock
+               split information. Any selections you have made in this druid up to this point
+               will be lost.</p></li><li><p>The Back button will bring up the previous screen so you can change a
+               selection made on that screen.</p></li><li><p>The Forward button will bring up the next screen so you can continue
+               though the druid.</p></li></ul></div><p>The next screen allows you to select a Stock Account. Select an account from
+           the list to record a stock split or merger.</p><div class="itemizedlist"><ul><li><p>Account: Lists the GnuCash account name for the stock.</p></li><li><p>Symbol: The stock symbol for the stock associated with this account.</p></li><li><p>Shares: The amount of shares that have been purchased in the account.</p></li></ul></div><p>The next screen lets you set the Stock Split Details. The top part of the
+           screen contains details used in creating the stock split transaction. </p><div class="itemizedlist"><ul><li><p>Date: Choose the date of the stock split.</p></li><li><p>Share Distribution: Enter the amount of shares gained from the stock split.
+               For a stock merger enter a negative number.</p></li><li><p>Description: Enter a description or leave as the default.</p></li></ul></div><p>The bottom part of the screen contains details used to record a price for the
+           split (optional).</p><div class="itemizedlist"><ul><li><p>New Price: Enter the price of the shares on the day of the stock split.
+              </p></li><li><p>Currency: Choose the currency of the shares.</p></li></ul></div><p>The next screen lets you enter a transaction for a cash disbursement (Cash In
+           Lieu) as a result of the stock split (optional).</p><div class="itemizedlist"><ul><li><p>Cash Amount: Enter the amount of the Cash disbursement.</p></li><li><p>Memo: Enter a memo or leave as the default.</p></li><li><p>Income Account: Choose an Income Account for the disbursement.</p></li><li><p>Asset Account: Choose an Asset Account for the disbursement.</p></li></ul></div><p>The last screen gives you a list of three choices to finish the druid.</p><div class="itemizedlist"><ul><li><p>The Cancel button is used to exit the druid and cancel creating the
+               Stock Split transactions.. Any selections you have made in this druid up to
+               this point will be lost.</p></li><li><p>The Back button will bring up the previous screen so you can change a
+               selection made on that screen.</p></li><li><p>The Finish button creates the transactions for the Stock Split.</p></li></ul></div><p>You should now have successfully entered the Stock Split or Merger.</p></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch05s01.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="help.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="transactions.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">5.1. Tools </td><td width="20%" align="center"><a accesskey="u" href="usage.html">Up</a></td><td width="40%" align="right"> 5.3. Using The Register To Record Transactions</td></tr></table></div></body></html>

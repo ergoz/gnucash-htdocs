@@ -1,0 +1,472 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+> Registar Receitas e Despesas</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Utilização de Contas de Receitas/Despesas"
+HREF="t2813.html"><LINK
+REL="PREVIOUS"
+TITLE="Utilização de Contas de Receitas/Despesas"
+HREF="t2813.html"><LINK
+REL="NEXT"
+TITLE=" Utilizar Contas de Receitas/Despesas"
+HREF="x2901.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t2813.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Utilização de Contas de Receitas/Despesas</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x2901.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-RECORDING-INCOMEEXPENSE">Registar Receitas e Despesas</H1
+><P
+>Num sistema de dupla entrada, dois tipos de contas têm de ser 
+    criadas: algumas do tipo "Receita" e outras do tipo "Despesa". 
+    (Há a tendência para existirem muito mais tipos de despesas do 
+    que de receitas.)
+    Receitas tais como o ordenado, honorários, juros bancários e 
+    mais-valias de acções são assim registadas como transferências 
+    de uma conta de receita para uma conta de banco (ou, em geral, 
+    algum activo). Da mesma forma, despesas são registadas como 
+    transferências de uma conta de cartão de crédito (ou, em geral, 
+    uma conta de passivo) para uma de despesas. 
+
+    </P
+><P
+>Outra forma de descrever os requisitos da "dupla entrada" 
+    é o de que quando você tem uma receita, acontecem duas coisas:
+
+    <P
+></P
+><UL
+><LI
+><P
+>Você recebe uma quantia em <I
+CLASS="EMPHASIS"
+>dinheiro,</I
+> e tem 
+      de registar essa ocorrência na sua conta bancária.
+
+      </P
+></LI
+><LI
+><P
+>Você teve uma receita, e tem de registar esse acontecimento numa
+      conta de receita.
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>Quando, por exemplo, o ordenado é depositado na conta bancária,
+    esta é debitada, e a conta de receita é creditada, pelo que:
+
+    <DIV
+CLASS="TABLE"
+><A
+NAME="AEN2832"><P
+><B
+>Table 12. Contabilizar o Ordenado</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Conta</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Débito</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Crédito</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Conta BCP</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>300,000.00</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Ordenado</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>300,000.00</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    </P
+><P
+>Isto pode ser facilmente extendido para um maior número de 
+    itens em "parcelas" pelo que:
+
+    <DIV
+CLASS="TABLE"
+><A
+NAME="AEN2850"><P
+><B
+>Table 13. Um ordenado mais complexo</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Conta</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Débito</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Crédito</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Conta BCP</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>210,000.00</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>IRS</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>56,000.00</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Seg. Social</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>33,000.00</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Seg. Saúde</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>3,500.00</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>Ordenado</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>&nbsp;</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>300,000.00</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    </P
+><P
+>Podem existir muito mais do que apenas duas entradas numa 
+    transacção, mas a soma total dos Débitos, 300,000$00, tem de 
+    ser igual à soma total dos Créditos, 300,000$00.
+
+    </P
+><P
+>Se, como no <I
+CLASS="EMPHASIS"
+>GnuCash</I
+>, tudo for forçado a 
+usar apenas uma coluna, em que <I
+CLASS="EMPHASIS"
+>débitos</I
+> são 
+representados por valores positivos, e <I
+CLASS="EMPHASIS"
+>créditos</I
+> 
+por valores negativos, as contas de receita/despesa fazem uma coisa 
+pouco intuitiva e verá as receitas como valores <I
+CLASS="EMPHASIS"
+>negativos</I
+>. 
+Isso <I
+CLASS="EMPHASIS"
+>parece</I
+> contrário ao intuitivo, mas é de todo 
+necessário por forma a que a <A
+HREF="x2440.html"
+>regra 
+da contabilidade de dupla entrada se mantenha verdadeira</A
+>.
+
+    </P
+><P
+>As contas de receitas e despesas são também especiais pois 
+    os seus totais de conta não não aparecem directamente na folha 
+    de saldos (ou balanço). A folha de saldos mostra "Resultado 
+    Líquido": a soma de todas as receitas menos todas as despesas.
+    Receitas e Despesas não são nem activos nem passivos e assim 
+    não surgem na folha de saldos. O que surge na folha de balanço 
+    é o seu efeito nos <I
+CLASS="EMPHASIS"
+>saldos</I
+>.
+
+    </P
+><P
+>Outro relatório, o de "Lucros e Prejuizos" (L&#38;P), 
+    analiza receitas e despesas. O lucro total (ou prejuizo) é 
+    calculado como total das receitas menos o total das despesas. 
+    Numa boa forma simétrica, visto activos e passivos não serem 
+    nem receitas nem despesas, <I
+CLASS="EMPHASIS"
+>eles</I
+> obviamente 
+    não surgem num relatório de L&#38;P.
+
+    </P
+><P
+>Apesar de estas contas serem de certa forma "especiais", você 
+    não tem fazer nada de especial para utilizar as contas de receitas 
+    e despesas. O GnuCash gere os valores automaticamente, pelo que se 
+    registar correctamente os efeitos de uma transacção na sua conta 
+    bancária ou cartão de crédito, o lado da receita/despesa da transacção 
+    deverá ser também correctamente gerada.</P
+><P
+>    As coisas apenas são "peculiares" quando montantes são transferidos 
+    entre contas de receitas e despesas.   Se achar que tem de fazer 
+    uma transferência assim, então terá de aprender os conceitos mais 
+    avançados por detrás das "contas a pagar" e "contas a receber". 
+    Tais transferências tipicamente ocorrem em empresas, quando receitas e 
+    despesas podem ocorrer em momentos que são diferentes daqueles em que 
+    o dinheiro dá realmente entrada ou saida das contas bancárias da empresa.
+
+    </P
+><P
+>Por exemplo, normalmente as empresas reconhecem a receita
+    <I
+CLASS="EMPHASIS"
+>quando a venda é feita</I
+>. Isso pode significar 
+    que você reconhece uma venda de 200.000$ no <I
+CLASS="EMPHASIS"
+>momento 
+    em que você e o seu cliente apertarem a mão pelo negócio</I
+>.
+    Visto que o dinheiro ainda não entrou, a venda tem de ser registada 
+    de outra forma. Tem de <I
+CLASS="EMPHASIS"
+>reconhecer</I
+> a venda no 
+    momento do acordo. Para fazer com que as transacções saldem, você 
+    adiciona a venda de 200.000$ às <I
+CLASS="EMPHASIS"
+>Contas a receber</I
+>, 
+    em vez de as adicionar a algo como dinheiro.
+    </P
+><P
+>    <I
+CLASS="EMPHASIS"
+>Conhecimento de Causa:</I
+> Quando uma venda é 
+    reconhecida e como é registada é decidido não só baseado em 
+    princípios contabilísticos aceites mas também com base em 
+    legislação nacional ou internacional.</P
+><P
+>(A documentação deveria indicar que para mais informações, deveria 
+seguir o link para a página de Contas a Pagar e Contas a Receber).</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t2813.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x2901.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Utilização de Contas de Receitas/Despesas</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t2813.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Utilizar Contas de Receitas/Despesas</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,123 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>7.3. Calcoli</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_loans.html" title="Capitolo 7. Prestiti"><link rel="previous" href="loans_accounts1.html" title="7.2. Impostare i conti"><link rel="next" href="loans_mortgage1.html" title="7.4. Mutuo per la casa (come fare)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.3. Calcoli</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="loans_accounts1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 7. Prestiti</th><td width="20%" align="right"> <a accesskey="n" href="loans_mortgage1.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="loans_calcs1"></a>7.3. Calcoli</h2></div></div><p>Determinare i piani di ammortamento per un prestito, gli importi
+    delle rate, il valore totale o i tassi di interesse può risultare a volte complesso.
+    Per assistere l'utente in questi tipi di calcoli, GnuCash incorpora una
+    calcolatrice Finanziaria. Per accedervi, andare in <b>Strumenti</b>-&gt;<b>Calcolatrice finanziaria</b>.</p><div class="screenshot"><div class="mediaobject"><img src="figures/loans_fcalc.png" alt="Calcolatrice finanziaria"><div class="caption"><p>La calcolatrice finanziaria di GnuCash.</p></div></div></div><p>La calcolatrice finanziaria può essere utilizzata per calcolare ognuno
+    di questi parametri: <b>Numero di rate</b>, <b>Tasso
+    di interesse</b>, <b>Valore attuale</b>, <b>Rata
+    </b>, o <b>Valore futuro</b>, ammesso che gli altri
+    quattro siano stati definiti. Sarà inoltre necessario specificare l'interesse 
+    composto e il metodo di pagamento.</p><div class="itemizedlist"><ul><li><p><b>Numero di rate</b> - il numero di rate in cui è
+        suddiviso il prestito.</p></li><li><p><b>Tasso di interesse</b> - il tasso di interesse nominale 
+        del prestito, per esempio il tasso annuo di interesse.</p></li><li><p><b>Valore attuale</b> - il valore a oggi del prestito,
+        per esempio l'importo ancora da versare per estinguere il prestito.</p></li><li><p><b>Rata</b> - l'importo da pagare come rata.</p></li><li><p><b>Valore futuro</b> - il valore futuro del prestito,
+        per esempio l'importo ancora da versare alla scadenza del prestito.</p></li><li><p><b>Interesse composto</b> - esistono due metodi per calcolare 
+        l'interesse composto, discreto o continuo. Per l'interesse composto discreto,
+        selezionare la frequenza dal menu a tendina con un intervallo variabile da annuale 
+        a quotidiano.</p></li><li><p><b>Rata</b> - il menu a tendina permette la scelta 
+        della frequenza di pagamento con un intervallo che va dall'anno al giorno.
+        Si può anche scegliere se il pagamento avviene all'inizio od alla fine 
+        del periodo. Ai pagamenti all'inizio del periodo viene applicato il tasso
+        di interesse  
+        can also select whether your payments occur at the beginning or end of
+        the period. Payments made at the beginning of the payment period have
+        interest applied to the payment as well as any previous money paid or
+        money still owed.</p></li></ul></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="loans_calcsexample1_2"></a>7.3.1. Esempio: rate mensili</h3></div></div><p>Quale sarebbe la rata mensile per un prestito di €100.000 da restituire
+      in 30 anni a un tasso costante del 4% composto mensilmente?</p><p>Questa situazione è mostrata nell'immagine d'esempio più in alto. Per
+      eseguire questo calcolo, si deve impostare il numero di rate a 360 (12 mesi
+      per 30 anni), il tasso di interesse a 4, il valore attuale a 100.000, lasciare 
+      vuoto il capo della rata e impostare il valore futuro a 0 (si desidera estinguere
+      completamente il prestito e non avere altro da pagare alla fine del mutuo).
+      L'interesse composto va impostato a mensilmente, le rate sono anch'esse mensili
+      assumendo il pagamento alla fine del periodo e l'interesse composto discreto.
+      Premere quindi il pulsante Calcola. Il risultato dovrebbe
+      essere €-477.42.</p><p>Risposta: la rata mensile ammonterebbe a €477.42.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="loans_calcsexample2_2"></a>7.3.2. Esempio: durata del prestito</h3></div></div><p>Per quanto tempo si dovrebbe pagare un prestito di €20.000 al tasso fisso del
+      10% composto mensilmente e pagando una rata mensile di €500?</p><p>Per eseguire questo calcolo, si lasci vuoto il campo del numero di rate,
+      si imposti il tasso di interesse a 10, il valore attuale a 20.000, l'importo della 
+      rata a -500 e il valore futuro a 0 (si desidera estinguere
+      completamente il prestito e non avere altro da pagare alla fine dello stesso).
+      L'interesse composto va impostato a mensilmente, le rate sono anch'esse mensili
+      assumendo il pagamento alla fine del periodo e l'interesse composto discreto.
+      Premere quindi il pulsante Calcola. Il risultato dovrebbe
+      essere 48.</p><p>Risposta: si dovrà pagare il prestito per 4 anni (48 mesi).</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="loans_calcsdetails2"></a>7.3.3. Avanzato: dettagli sui calcoli</h3></div></div><p>Per poter discutere le formule matematiche utilizzate dalla
+      calcolatrice finanziaria, è necessario definire prima di tutto alcune
+      variabili.
+<div class="literallayout"><p><br>
+ n  == numero di rate<br>
+ %i  == tasso di interesse nominale applicato TAN<br>
+ PV  == valore attuale<br>
+ PMT == rata<br>
+ FV  == valore futuro<br>
+ CF == frequenza di composizione per anno<br>
+ PF == frequenza di pagamento per anno<br>
+<br>
+Valori comuni per CF e PF sono:<br>
+   1   == annuale<br>
+   2   == semestrale<br>
+   3   == quadrimestrale<br>
+   4   == trimestrale<br>
+   6   == bimestrale<br>
+   12  == mensile<br>
+   24  == quindicinale<br>
+   26  == bisettimanale<br>
+   52  == settimanale<br>
+   360 == giornaliero<br>
+   365 == giornaliero<br>
+</p></div>
+      </p><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="loans_calcsdetails_i2"></a>7.3.3.1. Conversione fra tasso di interesse nominale e effettivo</h4></div></div><p>Quando si ha bisogno della soluzione per n, PV, PMT o FV, Il tasso
+        di interesse nominale "i" deve prima essere convertito in quello effettivo
+        (ieff). Questo tasso, "ieff", è poi utilizzato per calcolare la variabile 
+        selezionata. Quando si vuole invece conoscere il valore di "i" , il calcolo
+        fornisce il tasso di interesse efficace (ieff). Quindi, occorre conoscere
+        la relazione che lega i valori di "i" e di "ieff".</p><div class="literallayout"><p><br>
+Per calcolare "i" noto "ieff", vengono utilizzate le seguenti espressioni:<br>
+Interesse discreto:     <b>ieff = (1 + i/CF)^(CF/PF) - 1</b><br>
+Interesse continuo: <b>ieff = e^(i/PF) - 1 = exp(i/PF) - 1</b><br>
+<br>
+Per calcolare "ieff" noto "i", vengono utilizzate le seguenti espressioni:<br>
+Interesse discreto:      <b>i = CF*[(1+ieff)^(PF/CF) - 1]</b><br>
+Interesse continuo: <b>i = ln[(1+ieff)^PF]</b><br>
+</p></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">NOTA: nelle equazioni seguenti per le transazioni finanziarie,
+          tutti i tassi di interesse indicati sono effettivi cioè "ieff". Per
+          maggiore brevità si utilizzerà comunque il simbolo "i" come abbreviazione 
+          di "ieff"..</p></td></tr></table></div></div><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="loans_calcsdetails_basic2"></a>7.3.3.2. L'equazione fondamentale della finanza</h4></div></div><p>Una sola equazione lega tutte e 5 le variabili. Questa formula
+        è nota come l'equazione fondamentale della finanza:</p><div class="literallayout"><p><br>
+<b>PV*(1 + i)^n + PMT*(1 + iX)*[(1+i)^n - 1]/i + FV = 0</b><br>
+<br>
+  Dove: X = 0 per i pagamenti alla fine del periodo, e<br>
+        X = 1 per i pagamenti all'inizio del periodo<br>
+</p></div><p>Partendo da questa equazione, possono essere ricavate le relazioni 
+        che esplicitano ogni variabile. Per una spiegazione più dettagliata su come 
+        vengono ricavate queste equazioni, si consulti il file src/calculation/fin.c
+        nel codice sorgente di GnuCash. Le variabili A, B, e C sono definite per prime,
+        allo scopo di semplificare la lettura delle equazioni ricavate:</p><div class="literallayout"><p><br>
+<b>A = (1 + i)^n - 1</b><br>
+<b>B = (1 + iX)/i</b><br>
+<b>C = PMT*B</b><br>
+<br>
+<b>n = ln[(C - FV)/(C + PV)]/ln((1 + i)</b><br>
+<b>PV = -[FV + A*C]/(A + 1)</b><br>
+<b>PMT = -[FV + PV*(A + 1)]/[A*B]</b><br>
+<b>FV = -[PV + A*(PV + C)] </b><br>
+<br>
+La soluzione per l'interesse è suddivisa in due casi.  <br>
+Il caso semplice in cui PMT == 0 fornisce la soluzione:<br>
+<b>i = [FV/PV]^(1/n) - 1</b><br>
+<br>
+</p></div><p>Il caso in cui PMT != 0 è piuttosto complesso e non verrà 
+        discusso in questa sede. Invece di prevedere una funzione esplicita,
+        la determinazione del tasso di interesse quando PMT !=0, prevede un 
+        metodo iterativo. Consultare il file sorgente src/calculation/fin.c per 
+        una spiegazione dettagliata.</p></div><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="loans_calcsdetails_ex2"></a>7.3.3.3. Esempio: rate mensili</h4></div></div><p>Si ricalcoli <a href="loans_calcs1.html#loans_calcsexample1_2" title="7.3.1. Esempio: rate mensili">Sezione 7.3.1</a>, 
+        usando però le formule matematiche anziché la calcolatrice finanziaria.
+        Quale sarebbe la rata mensile per un prestito di €100.000 da restituire
+        in 30 anni a un tasso costante del 4% composto mensilmente?</p><p>Si definiscano per prime le variabili: n = (30*12) = 360, PV =
+        100000, PMT = incognita, FV = 0, i = 4%=4/100=0.04, CF = PV = 12, X = 0
+        (pagamento alla fine del periodo).</p><p>Il secondo passo consiste nel convertire il tasso di interesse
+        nominale "i" in quello effettivo "ieff". Dato che l'interesse è composto
+        mensilmente ed è discreto si utilizza la formula: ieff = (1 +
+        i/CF)^(CF/PF) - 1, che fornisce ieff = (1 + 0.04/12)^(12/12) - 1, quindi
+        ieff = 1/300 = 0.0033333.</p><p>E' ora possibile calcolare A e B. A = (1 + i)^n - 1 = (1 +
+        1/300)^360 - 1 = 2.313498. B = (1 + iX)/i = (1 + (1/300)*0)/(1/300) =
+        300.</p><p>Noti A e B, si può calcolare PMT. PMT = -[FV + PV*(A +
+        1)]/[A*B] = -[0 + 100000*(2.313498 + 1)] / [2.313498 * 300] =
+        -331349.8 / 694.0494 = -477.415296 = -477.42.</p><p>Risposta: la rata mensile ammonterebbe a €477.42.</p></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="loans_accounts1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="loans_mortgage1.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">7.2. Impostare i conti </td><td width="20%" align="center"><a accesskey="u" href="chapter_loans.html">Risali</a></td><td width="40%" align="right"> 7.4. Mutuo per la casa (come fare)</td></tr></table></div></body></html>

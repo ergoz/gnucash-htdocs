@@ -1,0 +1,363 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+>Gestão Cambial e Contabilidade de Dupla Entrada</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual do Utilizador GnuCash"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Opções Comuns de Relatórios"
+HREF="t1716.html"><LINK
+REL="NEXT"
+TITLE=" Códigos de Moeda ISO"
+HREF="x1846.html"></HEAD
+><BODY
+CLASS="ARTICLE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual do Utilizador GnuCash</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="t1716.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="x1846.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="ARTICLE"
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN1789">Gestão Cambial e Contabilidade de Dupla Entrada</H1
+><HR
+WIDTH="75%"
+ALIGN="CENTER"
+COLOR="#000000"
+SIZE="1"></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="t1788.html#AEN1823"
+>Como configurar uma conta de moeda estrangeira</A
+></DT
+><DT
+><A
+HREF="x1846.html"
+>Códigos de Moeda ISO</A
+></DT
+></DL
+></DIV
+><P
+>Um <A
+HREF="t2417.html"
+>sistema contabilístico 
+    de dupla entrada</A
+> guarda ambos os valores e requer que todas 
+    as transacções fiquem saldadas, tal como descrito nas <A
+HREF="x2440.html"
+>Regras da Contabilidade de Dupla Entrada</A
+>.
+
+    </P
+><P
+>Quando introduzimos a noção de possuir várias moedas ou 
+    acções que podem variar no seu valor, as identidades tornam-se 
+    um pouco mais complicadas, e introduzimos a seguinte fórmula:
+
+    <P
+></P
+><UL
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>valor=câmbio*montante</I
+> (para contas de 
+      moedas)
+
+      </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>valor=preço*nº acções</I
+> (para acções/
+      outros títulos)
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>Assim, comprar um aparelho electrónico no Japão (JPY) e utilizar Escudos 
+    (PTE) para o pagar seria mais ou menos assim:
+
+    <P
+></P
+><UL
+><LI
+><P
+>        <I
+CLASS="EMPHASIS"
+><I
+CLASS="EMPHASIS"
+>Conta Gastos:</I
+> (uma qualquer conta à ordem/de dinheiro 
+        valorizada em PTE)</I
+> 
+<TT
+CLASS="LITERAL"
+><P
+CLASS="LITERALLAYOUT"
+><I
+CLASS="EMPHASIS"
+>Data      Transf. de       Nota                custo
+1/5/99    [ContaJPY]       Compra PALM          18.000$</I
+></P
+></TT
+>
+      
+
+      </P
+></LI
+><LI
+><P
+>        <I
+CLASS="EMPHASIS"
+><I
+CLASS="EMPHASIS"
+>ContaJPY</I
+>: (uma conta de câmbio de moeda valorizada 
+        em ienes)</I
+> 
+<TT
+CLASS="LITERAL"
+><P
+CLASS="LITERALLAYOUT"
+><I
+CLASS="EMPHASIS"
+>Data      Transf. de       Nota                Compra   Câmbio
+1/5/99    [Conta Gastos]     Compra PALM          Y12850       1$4007</I
+></P
+></TT
+>
+      
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>O processador junta todos estes três valores <TT
+CLASS="ENVAR"
+>(18.000, 12850, 1,4007)</TT
+> permanentemente e torna impossível 
+modificar um sem modificar o outro, pelo que o somatório total é 
+sempre zero, garantindo assim a satisfação da <A
+HREF="x2440.html"
+>regra da contabilidade de dupla entrada</A
+>.
+
+    </P
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="AEN1823">Como configurar uma conta de moeda estrangeira</H1
+><P
+>Tudo o que foi dito acima pode parecer óbvio, mas você pode ter 
+    dificuldades quando tentar pela primeira vez representar moeda estrangeira. 
+    Vamos observar como faria para criar uma conta para representar,
+    por exemplo, Francos Franceses.</P
+><P
+>Digamos que você tem uma conta que contém dinheiro em Escudos Portugueses, 
+    e estão lá depositados 1.000 cts.  Você deseja comprar creca de 100 cts de 
+    Francos, e naturalmente deseja representar esses Francos na sua própria conta. 
+    Segue-se o que necessita de fazer:</P
+><P
+></P
+><UL
+><LI
+><P
+>  Crie uma conta nova (chame-lhe "Francos") do tipo Dinheiro, com um câmbio 
+  de FRF (este é o código ISO para Francos Franceses; veja 
+  <A
+HREF="x1846.html"
+>Códigos de Moedas ISO</A
+>, abaixo).
+  </P
+></LI
+><LI
+><P
+>      Crie <I
+CLASS="EMPHASIS"
+>outra</I
+> conta (denomine-a "Conversão"), do tipo 
+      Moeda, com a moeda PTE, e um <I
+CLASS="EMPHASIS"
+>activo</I
+> de FRF. Esta 
+      conta irá representar <I
+CLASS="EMPHASIS"
+>conversões</I
+> entre as duas 
+      moedas, ou para ser mais preciso, a compra de Francos com Escudos.
+  </P
+></LI
+><LI
+><P
+>      Agora abra a conta de "Conversão" e introduza uma transacção 
+      que transfira da sua conta de dinheiro. Coloque 555 na coluna 
+      do "Débito", e 30$53 na coluna do Preço. (O GnuCash oferecer-se-á 
+      para calcular-lhe o Valor; permita-o faze-lo.) Você acabou de 
+      adquirir 555 Francos por 30$53 cada um.
+  </P
+></LI
+><LI
+><P
+>      Transfira os 555 Francos que se encontram agora na sua conta de 
+      conversão para a conta de "Francos" (colocando "555" na coluna do 
+      "Débito").  Note que não teria conseguido fazer qualquer transferência 
+      directamente de dinheiro para Francos (tente-o); essas duas contas não 
+      partilham a moeda.
+  </P
+></LI
+><LI
+><P
+>  Note que a sua conta de "Conversão" está agora algo baralhada --
+  a última transacção, de transferência de 555 francos para a sua 
+  conta de "Francos", não registou o preço desses francos. Você pode 
+  modificar o preço de 1 para 30$53 para fazer com que o saldo na 
+  conta de "Conversão" passe a ser zero.
+  </P
+></LI
+></UL
+><P
+>    Aqui está como tudo irá ficar uma vez você tendo terminado:
+    <DIV
+CLASS="MEDIAOBJECT"
+><P
+><IMG
+SRC="image/foreign-currency.png"></P
+></DIV
+>
+
+    </P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="t1716.html"
+ACCESSKEY="P"
+>&#60;&#60;&#60; Previous</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="x1846.html"
+ACCESSKEY="N"
+>Next &#62;&#62;&#62;</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Opções Comuns de Relatórios</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Códigos de Moeda ISO</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,711 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<HTML
+><HEAD
+><TITLE
+> Depreciación de objetos</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="Manual de usuario de Gnucash, contabilidad doméstica Gnu"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="Pérdida y Ganancia de Capital"
+HREF="t1031.html"><LINK
+REL="PREVIOUS"
+TITLE=" Ganancias de capital - Apreciación de acciones"
+HREF="x1062.html"><LINK
+REL="NEXT"
+TITLE="Listado de Registros de Balance"
+HREF="t1440.html"></HEAD
+><BODY
+CLASS="SECT1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Manual de usuario de Gnucash, contabilidad doméstica Gnu</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="x1062.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Pérdida y Ganancia de Capital</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="t1440.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="XACC-DEPR">Depreciación de objetos</H1
+><P
+>Comparado con el a menudo incierta estimación que uno tiene
+    que hacer sobre la apreciación de objetos, aquí estamos en
+    un terreno más firme.
+
+    <P
+></P
+><UL
+><LI
+><P
+>Los gobiernos tienden a establecer normas precisas de cómo
+      se debe calcular la depreciación para fines fiscales.
+
+      </P
+></LI
+><LI
+><P
+>Es fácil buscar en referencias como las estimaciones de
+      los "libros azules" sobre el valor de tendrá un automóvil
+      después de 3 años de uso.
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>Como la depreciación de objetos a menudo es conducido
+    por las políticas de impuestos, la explicación de la depreciación
+    se centrará en esa dirección, en algunos de los más comunes
+    situaciones de cálculo de la depreciación.
+
+    </P
+><P
+>Mientras ha habido bastante debate sobre como acometer la
+    calculación automática y la creación de transacciones para
+    tratar cosas como la depreciación, no hay aún nada empezado,
+    por lo que por el momento, tendrá que hacer los cálculos
+    manualmente.
+
+    </P
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1295">Situaciones de Depreciación</H2
+><P
+>    </P
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1298">Depreciación Linear</H3
+><P
+>La depreciación linear disminuye el valor de un objeto en una
+    cantidad fija cada cierto tiempo hasta el valor neto de cero. Esta
+    es la calculación <I
+CLASS="EMPHASIS"
+>más simple</I
+>, estimando la
+    vida útil del objeto, y simplemente dividir el coste entre la
+    vida útil.
+
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Ejemplo:</I
+> Ha comprado un ordenador por 1500
+    dólares y desea depreciarlo en un periodo de 5 años. Cada año
+    la cantidad de la depreciación es de 300 dólares, dando los
+    cálculos siguientes:
+
+
+    <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1304"><P
+><B
+>Tabla 7. Ejemplo 1</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Año</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Depreciación</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Valor Restante</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>300</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1200</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>2</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>300</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>900</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>3</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>300</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>600</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>4</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>300</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>300</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>5</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>300</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>0</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    </P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1333">Depreciación Geométrica</H3
+><P
+>Cada periodo de tiempo el objeto es depreciado por un porcentaje
+    fijo de su valor en el periodo previo. En esta situación el 
+    valor restante del objeto decrece exponencialmente dejando un valor
+    final mayor de cero ( <I
+CLASS="EMPHASIS"
+>p.e.</I
+> - un valor remanente).
+
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Cuidado: Los impuestos de las autoridades pueden requerir
+    (o exigir) un porcentaje mayor en el primer periodo.</I
+>
+    Por otro lado, en Canada, esto es al revés, ya que permiten utilizar
+    la <I
+CLASS="EMPHASIS"
+>mitad</I
+> del "Coste de capital exigido" en el
+    primer año.
+
+    </P
+><P
+>El resultado de esta situación es que el valor del objeto
+    decrece más rápidamente al principio que al final que es
+    <I
+CLASS="EMPHASIS"
+>probablemente</I
+> la más real para la mayoría de
+    objetos que una situación linear. Esto es ciertamente verdad
+    para los automóviles. 
+
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Ejemplo:</I
+> Tomamos el mismo ejemplo anterior,
+    con una depreciación anual del 30%.
+
+    <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1344"><P
+><B
+>Tabla 8. Ejemplo 2</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Año</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Depreciación</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Valor Restante</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>450</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1050</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>2</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>315</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>735</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>3</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>220.50</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>514.50</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>4</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>154.35</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>360.15</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>5</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>108.05</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>252.10</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    </P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AEN1373">Suma de dígitos</H3
+><P
+>El tercer métodos más utilizado en países anglosajones es el
+    método de "suma de dígitos". Lo explicaremos con una ilustración: 
+
+    </P
+><P
+><I
+CLASS="EMPHASIS"
+>Ejemplo:</I
+> Primero divida el valor del objeto por una
+    suma de los años de uso, <I
+CLASS="EMPHASIS"
+>p.e.</I
+> para nuestro ejemplo
+    donde tenemos un objeto valorado en 1500 dólares que es utilizado
+    por un periodo de cinco años tiene 1500/(1+2+3+4+5)=100. Entonces
+    la depreciación y el valor del objeto se calculan como sigue:
+
+    <DIV
+CLASS="TABLE"
+><A
+NAME="AEN1379"><P
+><B
+>Tabla 9. Ejemplo 3</B
+></P
+><TABLE
+BORDER="1"
+BGCOLOR="#E0E0E0"
+CELLSPACING="0"
+CELLPADDING="4"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Año</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Depreciación</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Valor Restante</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>100*5=500</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1000</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>2</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>100*4=400</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>600</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>3</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>100*3=300</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>300</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>4</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>100*2=200</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>100</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>5</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>100*1=100</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>0</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+    </P
+></DIV
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1408">El tratamiento de la depreciación en GnuCash</H2
+><P
+>    </P
+><P
+>Para registrar la depreciación de un objeto, necesita:
+
+    <P
+></P
+><UL
+><LI
+><P
+>Una cuenta de <I
+CLASS="EMPHASIS"
+>Coste del objeto</I
+> para registrar el
+      valor original;
+
+      </P
+></LI
+><LI
+><P
+>Una cuenta de <I
+CLASS="EMPHASIS"
+>Depreciación Acumulada</I
+> en la que
+      recogerá la suma de todas las cantidades de las depreciaciones
+      de todos los años;
+
+      </P
+></LI
+><LI
+><P
+>Una cuenta de <I
+CLASS="EMPHASIS"
+>Gastos de Depreciación</I
+> en la que registrar
+      periódicamente los gastos de depreciación.
+    </P
+></LI
+></UL
+>
+
+    </P
+><P
+>El primer paso, de nuevo, es registrar la compra de su objeto
+    transfiriendo el dinero de la cuenta de banco a la cuenta
+    <I
+CLASS="EMPHASIS"
+>Coste del objeto</I
+>. Después de lo cual, en cada
+    periodo contable registrará la depreciación como un gasto en la
+    cuenta apropiada.
+
+    </P
+><P
+>Las dos ventanas que se muestran a continuación le muestran una
+    cuenta de objeto y la ventana principal después del tercer año
+    de depreciación utilizando el método de "suma de dígitos" para
+    el ejemplo anterior.
+    <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/depr-asset.png"></SPAN
+>
+     <SPAN
+CLASS="INLINEMEDIAOBJECT"
+><IMG
+SRC="image/depr-main.png"></SPAN
+>
+    
+
+    </P
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="AEN1435">Aviso</H2
+><P
+>    </P
+><P
+>Como la depreciación y las normativas de impuestos están
+    íntimamente relacionados, no es siempre libre para seleccionar
+    su método preferido. Arreglar cálculos erróneos le costará
+    mucho más tiempo y problemas que hacer los cálculos correctos
+    la primera vez, por lo que si planea hacer la depreciación de
+    los objetos, es recomendable que se aseguré de los métodos
+    permitidos <I
+CLASS="EMPHASIS"
+>o requeridos</I
+> a utilizar.&#13;</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="x1062.html"
+ACCESSKEY="P"
+>Anterior</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="H"
+>Inicio</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="t1440.html"
+ACCESSKEY="N"
+>Siguiente</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Ganancias de capital - Apreciación de acciones</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="t1031.html"
+ACCESSKEY="U"
+>Subir</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Listado de Registros de Balance</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

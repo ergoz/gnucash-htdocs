@@ -1,0 +1,143 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>3.2. Conti in GnuCash</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Guida ai concetti e manuale"><link rel="up" href="chapter_accts.html" title="Capitolo 3. Conti"><link rel="previous" href="accts-concepts1.html" title="3.1. Concetti basilari di contabilità"><link rel="next" href="accts-examples1.html" title="3.3. In pratica"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.2. Conti in GnuCash</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="accts-concepts1.html">&lt;&lt;&lt; Indietro</a> </td><th width="60%" align="center">Capitolo 3. Conti</th><td width="20%" align="right"> <a accesskey="n" href="accts-examples1.html">Avanti &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="accts-types1"></a>3.2. Conti in GnuCash</h2></div></div><p>Questa sezione ha l'intento di mostrare come le definizioni di conti
+    che GnuCash propone, rientrino nei 5 tipi fondamentali.</p><p>Prima di tutto, occorre definire cosa si intende per <b>conto</b>
+    in GnuCash. Un <b>conto</b> in GnuCash è un'entità che 
+    contiene altri suttoconti o delle <b>transazioni</b>.
+    Dato che un conto può contenerne altri, è facile in GnuCash ritrovarsi 
+    con conti aventi strutture ad <b>albero</b>.</p><p>Un conto in GnuCash deve avere un nome unico (che è possibile assegnare)
+    e una tipologie a scelta fra quelle che il programma prevede. Sono presenti, in totale,
+    12 tipi di conti in GnuCash basati sui 5 tipi fondamentali descritti in precedenza.
+    La ragione per cui esistono in GnuCash più conti dei 5 di base, è da ricercare
+    nel fatto che GnuCash è in grado di gestire operazioni speciali su certi conti.
+    Sei conti sono per i patrimoni (<b>liquidi</b>, <b>banca</b>,
+    <b>azioni</b>, <b>fondi comuni</b>,
+    <b>crediti correnti</b> e <b>beni</b>),
+    tre conti sono per le passività (<b>carta di credito</b>,
+    <b>debiti correnti</b> e <b>passività</b>),
+    un solo conto è per il capitale (<b>capitali</b>), un unico conto per le entrate
+    (<b>entrata</b>) e un altro conto per le uscite
+    (<b>uscita</b>).</p><p>Questi conti sono descritti in dettaglio nel seguito.</p><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="accts-gc-bsa2"></a>3.2.1. Conti di bilancio</h3></div></div><p>Il primo conto a essere esaminato è quello dello
+      <b>attività</b> che, come ricordato nelle sezioni
+      precedenti si riferisce a ciò che si possiede.</p><p>Per aiutare l'utente a organizzare il proprio patrimonio
+      e per semplificare l'inserimento delle transazioni, GnuCash supporta
+      diversi tipi di conti per le attività:</p><div class="orderedlist"><ol type="1"><li><p><b>liquidi</b>: usare questo conto per registrare
+          il denaro contante che si ha, per esempio, nel portafoglio, nel
+          salvadanaio, sotto al materasso o dovunque si decida di tenerlo.
+          Questo denaro è quello che viene utilizzato più facilmente;</p></li><li><p><b>banca</b>: questo conto serve a tenere traccia
+          del denaro depositato presso delle istituzioni quali
+          le banche, le unioni di credito, le società di risparmio o di mediazione:  
+          dovunque qualcun altro si occupa del denaro. Questo conto è secondo
+          solamente ai liquidi come facilità di utilizzo del denaro perché può essere
+          facilmente convertito in contanti;</p></li><li><p><b>azioni</b>: registrare le azioni e le 
+          obbligazioni utilizzando questo tipo di conto. Il registro per le azioni
+          fornisce delle colonne aggiuntive per immettere le quote e il prezzo degli
+          investimenti. Questo tipo di beni non si presta a essere facilmente convertito 
+          in liquidi dato che prima è necessario trovare un acquirente e inoltre non 
+          viene garantito il riottenimento per intero del capitale
+          investito;</p></li><li><p><b>fondi comuni</b>: questo tipo di conto è simile
+          al precedente, tranne per il fatto che deve essere utilizzato per
+          registrare i fondi. Il registro di immissione dati prevede due colonne
+          per l'inserimento delle quote e dei prezzi. I fondi rappresentano
+          delle proprietà comuni di investimenti e, come le azioni, non garantiscono
+          un valore minimo del capitale;</p></li><li><p><b>crediti correnti</b>: questo conto è dedicato tipicamente
+          alla gestione dell'impresa e in esso vengono registrati i crediti. E' considerato come
+          un capitale dato che si dovrebbe poter contare sull'arrivo di questo denaro;</p></li><li><p><b>beni</b>: nella gestione delle finanze personali,
+          si utilizza questo conto per registrare gli acquisti caratterizzati
+          da un valore elevato. Generalmente possono appartenere a questa
+          categoria i beni assicurati quali la casa, i veicoli, i gioielli
+          e altri costosi effetti personali.</p></li></ol></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Suggerimento</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Per tutti i conti appartenenti alla categoria delle attività
+        in GnuCash, un <b>addebito (=dare)</b> (valore inserito nella colonna
+        di sinistra) aumenta il saldo del conto mentre un <b>accredito (avere)</b>
+        diminuisce il saldo (consultare la nota più avanti in questo capitolo).</p></td></tr></table></div><p>Il secondo tipo di conto di bilancio è quello delle
+      <b>passività</b> che, come si ricorderà, si riferisce a ciò
+      che si deve, al denaro che si è preso in prestito e si è obbligati a restituire
+      prima o poi dato che colui che ha prestato il denaro ha il diritto di essere
+      ripagato. Tenere traccia del bilancio delle passività permette di conoscere
+      in qualsiasi momento quale sia l'ammontare del proprio debito.</p><p>GnuCash permette di scegliere fra tre conti per le passività:</p><div class="orderedlist"><ol type="1"><li><p><b>carta di credito</b>: utilizzare questo conto
+          per registrare le ricevute e per riconciliare l'estratto conto della 
+          carta di credito. Le carte di credito rappresentano un prestito di
+          breve durata che si è obbligati a pagare alla compagnia a cui appartiene
+          la carta di credito. Questo conto può anche essere utilizzato per
+          altri prestiti a breve durata;</p></li><li><p><b>debiti correnti</b>: questo è un conto utilizzato
+          tipicamente per la gestione dell'impresa dove vengono registrati i debiti
+          che devono ancora esser saldati;</p></li><li><p><b>passività</b>: utilizzare questo conto per tutti
+          gli altri prestiti, generalmente di entità maggiore e di durata superiore
+          come un mutuo o le rate dell'auto. Questo conto aiuta anche a conoscere
+          quanto denaro si deve ancora e quanto è stato già restituito.</p></li></ol></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Suggerimento</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Le passività in contabilità agiscono in modo opposto alle attività (o patrimonio netto):
+        gli <b>accrediti (avere)</b> (valori immessi nella colonna di destra)
+        aumentano il saldo del conto mentre gli <b>addebiti (dare)</b> (valori
+        immessi nella colonna di sinistra) lo diminuiscono (consultare la nota più avanti
+        in questo capitolo).</p></td></tr></table></div><p>Il conto finale del bilancio patrimoniale è quello del
+      <b>capitale</b>, che è sinonimo di valore netto o capitale netto.
+      Rappresenta ciò che rimane dopo aver sottratto le passività dalle attività,
+      ed è quindi la porzione di patrimonio che si possiede e sulla quale non grava alcun debito.
+      In GnuCash si consiglia di utilizzare questa tipologia di conto come
+      fonte per i bilanci di apertura dei conti bancari, dato che questo
+      saldo rappresenta il valore netto iniziale.</p><p>In GnuCash è presente un solo conto per il capitale chiamato, 
+      naturalmente, <b>capitale</b>.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Suggerimento</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Nel capitale netto, gli accrediti aumentano il saldo del conto e i debiti
+        lo diminuiscono (consultare la nota più avanti in questo capitolo).</p></td></tr></table></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">L'equazione della contabilità che lega i conti di bilancio è
+        attività = passività + capitale o anche attività - passività = capitale.
+        Di conseguenza, semplicemente parlando, <b>ciò che si possiede</b> 
+        meno <b>ciò che si deve</b> è uguale al <b>valore netto</b>.</p></td></tr></table></div></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="accts-gc-ie2"></a>3.2.2. Conti per entrate e uscite</h3></div></div><p><b>Entrate</b>: è il denaro che si riceve per l'impiego del
+      proprio tempo, per i servizi che si forniscono o per l'uso del proprio denaro. In GnuCash
+      un conto di tipo <b>entrate</b> è utilizzato per registrare questi guadagni.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Suggerimento</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Gli accrediti aumentano il saldo del conto entrate mentre
+        i debiti lo diminuiscono. Come descritto nella <a href="basics-accounting1.html" title="2.1. Concetti di contabilità">Sezione 2.1</a>,
+        gli accrediti rappresentano un trasferimento di denaro
+        <b>da</b> un conto; così in questi conti speciali per le entrate,
+        quando si trasferisce denaro <b>dal</b> conto entrate a un altro conto
+        (accredito o avere), il saldo del conto entrate <b>aumenta</b>.
+        Per esempio, quando si deposita un assegno e si registra la transazione 
+        come un trasferimento di denaro dal conto entrate al conto bancario, il saldo
+        di entrambi aumenta.</p></td></tr></table></div><p><b>Uscite</b>: si riferisce al denaro che viene utilizzato
+      per acquistare beni o servizi forniti da terzi. In GnuCash si utilizza un
+      conto <b>uscite</b> per registrare le proprie uscite.
+      </p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Suggerimento</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Gli addebiti aumentano il valore delle passività mentre
+        gli accrediti lo diminuiscono. (consulta la nota più avanti
+        in questo capitolo).</p></td></tr></table></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Nota</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Quando si sottraggono alle entrate totali le uscite totali
+        in un certo periodo di tempo, si ottengono le entrate nette.
+        Questa grandezza viene indicata nello stato patrimoniale con la
+        dicitura "utili non distribuiti", che è un tipo di conto del
+        <b>capitale</b>.</p></td></tr></table></div><p>Qui sotto vengono mostrati i conti standard per le <b>entrate</b>
+      e per le <b>uscite</b> così come vengono creati scegliendo l'opzione <b>
+      conti comuni</b> nel druido per la creazione di una nuova struttura dei conti
+      (<b>File -&gt; Nuovo -&gt; Nuova struttura conti</b>).</p><div class="screenshot"><div class="mediaobject"><img src="figures/accts_DefaultIncomeAccounts.png" alt="Conti standard per le entrate"><div class="caption"><p>Questa immagine mostra i conti standard per le 
+              <b>entrate</b></p></div></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/accts_DefaultExpenseAccounts.png" alt="Alcuni conti standard per le uscite"><div class="caption"><p>Questa immagine mostra alcuni conti standard per le 
+              <b>uscite</b></p></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Approfondimento di addebiti e accrediti</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Si ricordano ancora i termini debito e credito discussi nella 
+        <a href="basics-accounting1.html" title="2.1. Concetti di contabilità">Sezione 2.1</a>?
+        Contrariamente a quanto si possa credere e alle definizioni sui
+        dizionari, debiti e crediti non significano aumento o riduzione.
+        L'unica definizione costante di debiti e crediti è che i debiti
+        sono inseriti nella colonna di sinistra (chiamata anche dare) mentre 
+        i crediti in quella di destra (chiamata anche avere). Infatti entrambi
+        possono far aumentare certi tipi di conti e farne diminuire altri. Nei 
+        conti delle attività e delle uscite, i debiti ne aumentano il saldo 
+        mentre i crediti lo diminuiscono. Nei conti delle passività, del 
+        capitale e delle entrate, i crediti ne aumentano il saldo
+        mentre i debiti lo diminuiscono.</p><p xmlns="">Per esempio, i debiti <b>aumentano</b> il saldo
+        del conto bancario e i crediti lo <b>diminuiscono</b>.
+        Fermi un attimo, si potrebbe pensare, un <b>debito</b>
+        fa <b>diminuire</b> il saldo sul conto corrente perché 
+        si preleva denaro. E quando la banca restituisce del denaro, viene 
+        <b>accreditato</b> sul conto. Sorge quindi spontaneo chiedersi
+        per quale motivo i termini hanno un significato inverso in contabilità.</p><p xmlns="">E' presto detto: le banche riportano le transazioni dal <b>loro</b> 
+        punto di vista che è esattamente il contrario di quella 
+        del cliente. Per il cliente la banca rappresenta una attività, qualcosa 
+        che si possiede; per la banca invece, il conto rappresenta un prestito, o 
+        una passività dato che essa deve del denaro al cliente.
+        Come illustrato in questo capitolo, i conti delle attività e quelli delle
+        passività, si comportano in modo opposto. In un conto delle passività,
+        i debiti fanno <b>diminuire</b> il saldo e i crediti lo
+        fanno <b>aumentare</b>.</p><p xmlns="">Quando si preleva denaro dal proprio conto bancario, il saldo del
+        proprio conto diminuisce. Questo rappresenta una diminuzione del proprio
+        capitale, dato che si <b>accredita</b> il proprio conto.
+        Per la banca, questa operazione rappresenta una diminuzione delle passività,
+        dato che <b>addebita</b> il conto bancario del cliente</p><p xmlns="">La seguente tabella riassume le convenzioni utilizzate nella contabilità 
+        per quanto concerne l'effetto sul saldo di una determinata tipologia di conto, 
+        in funzione dell'immissione di un valore in una specifica colonna del registro 
+        di quel conto. Il segno <b>+</b> in una casella significa che inserendo 
+        un valore in quella colonna nel registro del conto associato, si produrrà un
+        aumento del saldo del conto stesso. Il segno <b>-</b> indica invece
+        un valore che produrrà una diminuzione del saldo del conto.</p><p xmlns=""><div class="table"><p><b>Tabella 3.1. Tabella riassuntiva delle convenzioni utilizzate nel registro.</b></p><table summary="Tabella riassuntiva delle convenzioni utilizzate nel registro." border="1"><colgroup><col><col><col></colgroup><tbody><tr><td><b>Tipologia del conto</b></td><td><b>DARE</b></td><td><b>AVERE</b></td></tr><tr><td>Attività</td><td><b>+</b></td><td><b>-</b></td></tr><tr><td>Passività</td><td><b>-</b></td><td><b>+</b></td></tr><tr><td>Capitali</td><td><b>-</b></td><td><b>+</b></td></tr><tr><td>Entrate</td><td><b>-</b></td><td><b>+</b></td></tr><tr><td>Uscite</td><td><b>+</b></td><td><b>-</b></td></tr></tbody></table></div>
+        </p><p xmlns="">L'effetto descritto nella tabella è visualizzabile direttamente in GnuCash
+        selezionando, nella finestra delle preferenze dei conti alla voce <b>conti
+        con saldo invertito</b>, l'opzione <b>Nessuno</b>. In questo modo
+        verrà visualizzato l'effettivo segno del saldo per ogni tipologia di conto.</p></td></tr></table></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="accts-concepts1.html">&lt;&lt;&lt; Indietro</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right"> <a accesskey="n" href="accts-examples1.html">Avanti &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">3.1. Concetti basilari di contabilità </td><td width="20%" align="center"><a accesskey="u" href="chapter_accts.html">Risali</a></td><td width="40%" align="right"> 3.3. In pratica</td></tr></table></div></body></html>

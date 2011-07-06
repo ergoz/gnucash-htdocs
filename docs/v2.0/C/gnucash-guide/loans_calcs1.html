@@ -1,0 +1,120 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>7.3. Calculations</title><meta name="generator" content="DocBook XSL Stylesheets V1.45"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_loans.html" title="Chapter 7. Loans"><link rel="previous" href="loans_accounts1.html" title="7.2. Setting Up Accounts"><link rel="next" href="loans_mortgage1.html" title="7.4. House Mortgage (How-To)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.3. Calculations</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="loans_accounts1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 7. Loans</th><td width="20%" align="right"> <a accesskey="n" href="loans_mortgage1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1"><div class="titlepage"><div><h2 class="title" style="clear: both"><a name="loans_calcs1"></a>7.3. Calculations</h2></div></div><p>Determining loan amortization schedules, periodic payment amounts,
+    total payment value, or interest rates can be somewhat complex. To help
+    facilitate these kinds of calculations, GnuCash has a built-in Financial
+    Calculator. To access the calculator, go to <b>Tools</b>-&gt;<b>Financial Calculator</b>.</p><div class="screenshot"><div class="mediaobject"><img src="figures/loans_fcalc.png" alt="Financial Calculator"><div class="caption"><p>The GnuCash Financial Calculator.</p></div></div></div><p>The Financial Calculator can be used to calculate any one of the
+    parameters: <b>Payment Periods</b>, <b>Interest
+    Rate</b>, <b>Present Value</b>, <b>Periodic
+    Payment</b>, or <b>Future Value</b> given that the
+    other 4 have been defined. You will also need to specify the compounding
+    and payment methods.</p><div class="itemizedlist"><ul><li><p><b>Payment Periods</b> - the number of payment
+        periods.</p></li><li><p><b>Interest Rate</b> - the nominal interest rate
+        of the loan, ie: the yearly interest rate.</p></li><li><p><b>Present Value</b> - the present value of the
+        loan, ie: current amount owed on the loan.</p></li><li><p><b>Periodic Payment</b> - the amount to pay per
+        period.</p></li><li><p><b>Future Value</b> - the future value of the
+        loan, ie: the amount owed after all payment periods are over.</p></li><li><p><b>Compounding</b> - two interest compounding
+        methods exist, discrete or continuous. For discrete compounding select
+        the compounding frequency from the popup menu with a range from yearly
+        to daily.</p></li><li><p><b>Payments</b> - the popup menu allows you to
+        select the payment frequency with a range from yearly to daily. You
+        can also select whether your payments occur at the beginning or end of
+        the period. Payments made at the beginning of the payment period have
+        interest applied to the payment as well as any previous money paid or
+        money still owed.</p></li></ul></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="loans_calcsexample1_2"></a>7.3.1. Example: Monthly Payments</h3></div></div><p>What is your monthly payment on a $100000 30 year loan at a fixed
+      rate of 4% compounded monthly?</p><p>This scenario is shown in the example image above. To perform this
+      calculation, set Payment Periods to 360 (12 months x 30 years), Interest
+      Rate to 4, Present Value to 100000, leave Periodic Payment empty and set
+      Future Value to 0 (you do not want to owe anything at the end of the
+      loan). Compounding is Monthly, Payments are Monthly, assume End of
+      Period Payments, and Discrete Compounding. Now, click on the
+      Calculate button next to the Periodic Payment
+      area. You should see $-477.42.</p><p>Answer: You must make monthly payments of 477.42.</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="loans_calcsexample2_2"></a>7.3.2. Example: Length of Loan</h3></div></div><p>How long will you be paying back a $20000 loan at 10% fixed rate
+      interest compounded monthly if you pay $500 per month?</p><p>To perform this calculation, leave Payment Periods empty, set
+      Interest Rate to 10, Present Value to 20000, Periodic Payment is -500,
+      and set Future Value is 0 (you do not want to owe anything at the end of
+      the loan). Compounding is Monthly, Payments are Monthly, assume End of
+      Period Payments, and Discrete Compounding. Now, click on the
+      Calculate button next to the Payment Periods
+      area. You should see 48.</p><p>Answer: You will pay off the loan in 4 years (48 months).</p></div><div class="sect2"><div class="titlepage"><div><h3 class="title"><a name="loans_calcsdetails2"></a>7.3.3. Advanced: Calculation Details</h3></div></div><p>In order to discuss the mathematical formulas used by the
+      Financial Calculator, we first must define some
+      variables.
+<div class="literallayout"><p><br>
+ n  == number of payment periods<br>
+ %i  == nominal interest rate, NAR, charged<br>
+ PV  == Present Value<br>
+ PMT == Periodic Payment<br>
+ FV  == Future Value<br>
+ CF == Compounding Frequency per year<br>
+ PF == Payment Frequency per year<br>
+<br>
+Normal values for CF and PF are:<br>
+   1   == annual<br>
+   2   == semi-annual<br>
+   3   == tri-annual<br>
+   4   == quaterly<br>
+   6   == bi-monthly<br>
+   12  == monthly<br>
+   24  == semi-monthly<br>
+   26  == bi-weekly<br>
+   52  == weekly<br>
+   360 == daily<br>
+   365 == daily<br>
+</p></div>
+      </p><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="loans_calcsdetails_i2"></a>7.3.3.1. Converting between nominal and effective interest rate</h4></div></div><p>When a solution for n, PV, PMT or FV is required, the nominal
+        interest rate (i) must first be converted to the effective
+        interest rate per payment period (ieff). This rate,
+        ieff, is then used to compute the selected variable. When a solution
+        for i is required, the computation produces the effective interest
+        rate (ieff). Thus, we need functions which convert from i to ieff, and
+        from ieff to i.</p><div class="literallayout"><p><br>
+To convert from i to ieff, the following expressions are used:<br>
+Discrete Interest:     <b>ieff = (1 + i/CF)^(CF/PF) - 1</b><br>
+Continuous Interest: <b>ieff = e^(i/PF) - 1 = exp(i/PF) - 1</b><br>
+<br>
+To convert from ieff to i, the following expressions are used:<br>
+Discrete Interst:      <b>i = CF*[(1+ieff)^(PF/CF) - 1]</b><br>
+Continuous Interest: <b>i = ln[(1+ieff)^PF]</b><br>
+</p></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">NOTE: in the equations below for the financial transaction,
+          all interest rates are the effective interest rate, ieff. For the
+          sake of brevity, the symbol will be shortened to just 'i'.</p></td></tr></table></div></div><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="loans_calcsdetails_basic2"></a>7.3.3.2. The basic financial equation</h4></div></div><p>One equation fundamentally links all the 5 variables. This is
+        known as the fundamental financial equation:</p><div class="literallayout"><p><br>
+<b>PV*(1 + i)^n + PMT*(1 + iX)*[(1+i)^n - 1]/i + FV = 0</b><br>
+<br>
+  Where: X = 0 for end of period payments, and<br>
+         X = 1 for beginning of period payments<br>
+</p></div><p>From this equation, functions which solve for the individual
+        variables can be derived. For a detailed explanation of the derivation
+        of this equation, see the comments in the file src/calculation/fin.c
+        from the GnuCash source code. The A, B, and C variables are defined
+        first, to make the later equations simpler to read.</p><div class="literallayout"><p><br>
+<b>A = (1 + i)^n - 1</b><br>
+<b>B = (1 + iX)/i</b><br>
+<b>C = PMT*B</b><br>
+<br>
+<b>n = ln[(C - FV)/(C + PV)]/ln((1 + i)</b><br>
+<b>PV = -[FV + A*C]/(A + 1)</b><br>
+<b>PMT = -[FV + PV*(A + 1)]/[A*B]</b><br>
+<b>FV = -[PV + A*(PV + C)] </b><br>
+<br>
+The solution for interest is broken into two cases.  <br>
+The simple case for when  PMT == 0 gives the solution:<br>
+<b>i = [FV/PV]^(1/n) - 1</b><br>
+<br>
+</p></div><p>The case where PMT != 0 is fairly complex and will not be
+        presented here. Rather than involving an exactly solvable function,
+        determining the interest rate when PMT !=0 involves an iterative
+        process. Please see the src/calculation/fin.c source file for a
+        detailed explanation.</p></div><div class="sect3"><div class="titlepage"><div><h4 class="title"><a name="loans_calcsdetails_ex2"></a>7.3.3.3. Example: Monthly Payments</h4></div></div><p>Let's recalculate <a href="loans_calcs1.html#loans_calcsexample1_2" title="7.3.1. Example: Monthly Payments">Example: Monthly Payments</a>, 
+        this time using the
+        mathematical formulas rather than the Financial Calculator. What is
+        your monthly payment on a $100000 30 year loan at a fixed rate of 4%
+        compounded monthly?</p><p>First, let's define the variables: n = (30*12) = 360, PV =
+        100000, PMT = unknown, FV = 0, i = 4%=4/100=0.04, CF = PV = 12, X = 0
+        (end of payment periods).</p><p>The second step is to convert the nominal interest rate (i) to
+        the effective interest rate (ieff). Since the interest rate is
+        compounded monthly, it is discrete, and we use: ieff = (1 +
+        i/CF)^(CF/PF) - 1, which gives ieff = (1 + 0.04/12)^(12/12) - 1, thus
+        ieff = 1/300 = 0.0033333.</p><p>Now we can calculate A and B. A = (1 + i)^n - 1 = (1 +
+        1/300)^360 - 1 = 2.313498. B = (1 + iX)/i = (1 + (1/300)*0)/(1/300) =
+        300.</p><p>With A and B, we can calculate PMT. PMT = -[FV + PV*(A +
+        1)]/[A*B] = -[0 + 100000*(2.313498 + 1)] / [2.313498 * 300] =
+        -331349.8 / 694.0494 = -477.415296 = -477.42.</p><p>Answer: You must make monthly payments of 477.42.</p></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="loans_accounts1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="loans_mortgage1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">7.2. Setting Up Accounts </td><td width="20%" align="center"><a accesskey="u" href="chapter_loans.html">Up</a></td><td width="40%" align="right"> 7.4. House Mortgage (How-To)</td></tr></table></div></body></html>
