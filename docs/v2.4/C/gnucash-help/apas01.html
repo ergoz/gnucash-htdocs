@@ -1,1 +1,326 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>A.1. Exchange Codes for European Markets</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="help.html" title="GnuCash Help Manual"><link rel="up" href="tips.html" title="Appendix A. GnuCash Tips and tidbits"><link rel="prev" href="tips.html" title="Appendix A. GnuCash Tips and tidbits"><link rel="next" href="apas02.html" title="A.2. Pseudo-symbols that can be used for TIAA-CREF quotes"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">A.1. Exchange Codes for European Markets</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="tips.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Appendix A. <strong xmlns="" class="application"><code>GnuCash</code></strong> Tips and tidbits</th><td width="20%" align="right"> <a accesskey="n" href="apas02.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="A.1. Exchange Codes for European Markets"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2674287"></a>A.1. Exchange Codes for European Markets</h2></div></div></div><p>Exchange Code List for European Markets</p><div class="table"><a name="Code4EurMrks"></a><p class="title"><b>Table A.1. Exchange Codes List for European Markets</b></p><div class="table-contents"><table summary="Exchange Codes List for European Markets" border="1"><colgroup><col><col></colgroup><thead><tr><th><p>Code</p></th><th><p>Market</p></th></tr></thead><tbody><tr><td><p>BC</p></td><td><p>Barcelona</p></td></tr><tr><td><p>BE</p></td><td><p>Berlin</p></td></tr><tr><td><p>BI</p></td><td><p>Bilbao</p></td></tr><tr><td><p>BR</p></td><td><p>Brême</p></td></tr><tr><td><p>CO</p></td><td><p>Copenhagen</p></td></tr><tr><td><p>D</p></td><td><p>Dusseldorf</p></td></tr><tr><td><p>F</p></td><td><p>Frankfurt</p></td></tr><tr><td><p>DE</p></td><td><p>Xetra (was FX)</p></td></tr><tr><td><p>H</p></td><td><p>Hamburg</p></td></tr><tr><td><p>HA</p></td><td><p>Hanover</p></td></tr><tr><td><p>L</p></td><td><p>London</p></td></tr><tr><td><p>MA</p></td><td><p>Madrid</p></td></tr><tr><td><p>MC</p></td><td><p>Madrid (M.C.)</p></td></tr><tr><td><p>MI</p></td><td><p>Milan</p></td></tr><tr><td><p>MU</p></td><td><p>Munich</p></td></tr><tr><td><p>O</p></td><td><p>Oslo</p></td></tr><tr><td><p>PA</p></td><td><p>Paris</p></td></tr><tr><td><p>ST</p></td><td><p>Stockholm</p></td></tr><tr><td><p>SG</p></td><td><p>Stuttgart</p></td></tr><tr><td><p>VA</p></td><td><p>Valence</p></td></tr><tr><td><p>VI</p></td><td><p>Vienna</p></td></tr></tbody></table></div></div><br class="table-break"></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="tips.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="help.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="apas02.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">Appendix A. <strong xmlns="" class="application"><code>GnuCash</code></strong> Tips and tidbits </td><td width="20%" align="center"><a accesskey="u" href="tips.html">Up</a></td><td width="40%" align="right"> A.2. Pseudo-symbols that can be used for TIAA-CREF quotes</td></tr></table></div></body></html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>A.1. Finance::Quote Sources</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="help.html" title="GnuCash Help Manual"><link rel="up" href="tips.html" title="Appendix A.  GnuCash Tips and tidbits"><link rel="prev" href="tips.html" title="Appendix A.  GnuCash Tips and tidbits"><link rel="next" href="apas02.html" title="A.2. Yahoo Specifics"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">A.1. Finance::Quote Sources</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="tips.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Appendix A. 
+		<strong xmlns="" class="application"><code>GnuCash
+		</code></strong>
+		Tips and tidbits
+	</th><td width="20%" align="right"> <a accesskey="n" href="apas02.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="A.1. Finance::Quote Sources"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp9231984"></a>A.1. Finance::Quote Sources</h2></div></div></div><p>There are 3 types of sources of which the first, currency is
+			hardcoded and resposible to fetch ISO currencies.
+			The other two can be
+			selected in the security editor.
+		</p><div class="sect2" title="A.1.1. Finance::Quote Sources - Currency source"><div class="titlepage"><div><div><h3 class="title"><a name="idp9274968"></a>A.1.1. Finance::Quote Sources - Currency source</h3></div></div></div><div class="table"><a name="gnc-tbl-fq-currency-source"></a><p class="title"><b>Table A.1. Currency source for Finance::Quote</b></p><div class="table-contents"><table summary="Currency source for Finance::Quote" border="1"><colgroup><col><col><col></colgroup><thead><tr><th>
+								<p>GnuCash
+									Name
+								</p>
+							</th><th>
+								<p>Finance::Quote Name</p>
+							</th><th>
+								<p>Notes</p>
+							</th></tr></thead><tbody><tr><td>
+								<p>Currency</p>
+							</td><td>
+								<p>currency</p>
+							</td><td>
+								<p>Outdated, update:
+									https://bugzilla.gnome.org/attachment.cgi?id=207969
+								</p>
+							</td></tr></tbody></table></div></div><br class="table-break"></div><div class="sect2" title="A.1.2. Quote Sources - Individual sources"><div class="titlepage"><div><div><h3 class="title"><a name="idp9280184"></a>A.1.2. Quote Sources - Individual sources</h3></div></div></div><div class="table"><a name="gnc-tbl-fq-individual-source"></a><p class="title"><b>Table A.2. Individual sources for quotes</b></p><div class="table-contents"><table summary="Individual sources for quotes" border="1"><colgroup><col><col><col></colgroup><thead><tr><th>
+								<p>GnuCash
+									Name
+								</p>
+							</th><th>
+								<p>Finance::Quote Name</p>
+							</th><th>
+								<p>Notes</p>
+							</th></tr></thead><tbody><tr><td>
+								<p>Amsterdam Euronext eXchange, NL</p>
+							</td><td>
+								<p>aex</p>
+							</td><td>
+								<p>includes Futures and Options</p>
+							</td></tr><tr><td>
+								<p>American International Assurance, HK</p>
+							</td><td>
+								<p>aiahk</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Association of Mutual Funds in India</p>
+							</td><td>
+								<p>amfiindia</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Athens Stock Exchange, GR</p>
+							</td><td>
+								<p>asegr</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Australian Stock Exchange, AU</p>
+							</td><td>
+								<p>asx</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>BMO NesbittBurns, CA</p>
+							</td><td>
+								<p>bmonesbittburns</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>BUX/Magyar Tökepiac, HU</p>
+							</td><td>
+								<p>bux</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Cominvest, ex-Adig, DE</p>
+							</td><td>
+								<p>cominvest</p>
+							</td><td>
+								<p>Obsolet, update: http://eggert.org/software/Comdirect.pm
+								</p>
+							</td></tr><tr><td>
+								<p>Deka Investments, DE</p>
+							</td><td>
+								<p>deka</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>DWS, DE</p>
+							</td><td>
+								<p>dwsfunds</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Fidelity Direct</p>
+							</td><td>
+								<p>fidelity_direct</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Finance Canada</p>
+							</td><td>
+								<p>financecanada</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Finanzpartner, DE</p>
+							</td><td>
+								<p>finanzpartner</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>First Trust Portfolios, US</p>
+							</td><td>
+								<p>ftportfolios_direct</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Fund Library, CA</p>
+							</td><td>
+								<p>fundlibrary</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>GoldMoney spot rates, JE</p>
+							</td><td>
+								<p>goldmoney</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>HElsinki stock eXchange, FI</p>
+							</td><td>
+								<p>hex</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Man Investments, AU</p>
+							</td><td>
+								<p>maninv</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Morningstar, SE</p>
+							</td><td>
+								<p>morningstar</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Motley Fool, US</p>
+							</td><td>
+								<p>fool</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>New Zealand stock eXchange, NZ</p>
+							</td><td>
+								<p>nzx</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Paris Stock Exchange/Boursorama, FR</p>
+							</td><td>
+								<p>bourso</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Paris Stock Exchange/LeRevenu, FR</p>
+							</td><td>
+								<p>lerevenu</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Platinum Asset Management, AU</p>
+							</td><td>
+								<p>platinum</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Skandinaviska Enskilda Banken, SE</p>
+							</td><td>
+								<p>seb_funds</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Sharenet, ZA</p>
+							</td><td>
+								<p>za</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>StockHouse Canada</p>
+							</td><td>
+								<p>stockhousecanada_fund</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>TD Waterhouse Canada</p>
+							</td><td>
+								<p>tdwaterhouse</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>TD Efunds, CA</p>
+							</td><td>
+								<p>tdefunds</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>TIAA-CREF, US</p>
+							</td><td>
+								<p>tiaacref</p>
+							</td><td>
+								<p>Outdated, get the latest pm from
+									https://rt.cpan.org/Public/Bug/Display.html?id=62104#txn-1121440
+								</p>
+							</td></tr><tr><td>
+								<p>Toronto Stock eXchange, CA</p>
+							</td><td>
+								<p>tsx</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>T. Rowe Price, US</p>
+							</td><td>
+								<p>troweprice_direct</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Trustnet, GB</p>
+							</td><td>
+								<p>trustnet</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Union Investment, DE</p>
+							</td><td>
+								<p>unionfunds</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>US Treasury Bonds</p>
+							</td><td>
+								<p>usfedbonds</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>US Govt. Thrift Savings Plan</p>
+							</td><td>
+								<p>tsp</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Vanguard</p>
+							</td><td>
+								<p>vanguard</p>
+							</td><td>
+								<p>part of yahoo_us module</p>
+							</td></tr><tr><td>
+								<p>VWD, DE (unmaintained)</p>
+							</td><td>
+								<p>vwd</p>
+							</td><td>
+								<p>
+									<code class="uri">https://lists.gnucash.org/pipermail/gnucash-user/2008-February/023686.html
+									</code>
+								</p>
+							</td></tr><tr><td>
+								<p>Yahoo USA</p>
+							</td><td>
+								<p>yahoo</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Yahoo Asia</p>
+							</td><td>
+								<p>yahoo_asia</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Yahoo Australia</p>
+							</td><td>
+								<p>yahoo_australia</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Yahoo Brasil</p>
+							</td><td>
+								<p>yahoo_brasil</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Yahoo Europe</p>
+							</td><td>
+								<p>yahoo_europe</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Yahoo New Zealand</p>
+							</td><td>
+								<p>yahoo_nz</p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p></p>
+							</td><td>
+								<p></p>
+							</td><td>
+								<p></p>
+							</td></tr><tr><td>
+								<p>Zuerich Investments (outdated)</p>
+							</td><td>
+								<p>zifunds</p>
+							</td><td>
+								<p></p>
+							</td></tr></tbody></table></div></div><br class="table-break"></div><div class="sect2" title="A.1.3. Finance::Quote Sources - Multiple sources"><div class="titlepage"><div><div><h3 class="title"><a name="idp9345792"></a>A.1.3. Finance::Quote Sources - Multiple sources</h3></div></div></div><div class="table"><a name="gnc-tbl-fq-multiple-source"></a><p class="title"><b>Table A.3. Multiple sources for quotes</b></p><div class="table-contents"><table summary="Multiple sources for quotes" border="1"><colgroup><col></colgroup><thead><tr><th>
+								<p>Name</p>
+							</th></tr></thead><tbody><tr><td>Asia (Yahoo, ...)</td></tr><tr><td>Australia (ASX, Yahoo, ...)</td></tr><tr><td>Brasil (Yahoo, ...)</td></tr><tr><td>Canada (Yahoo, ...)</td></tr><tr><td>Canada Mutual (Fund Library, ...)</td></tr><tr><td>Dutch (AEX, ...)</td></tr><tr><td>Europe (Yahoo, ...)</td></tr><tr><td>Greece (ASE, ...)</td></tr><tr><td>India Mutual (AMFI, ...)</td></tr><tr><td>Fidelity (Fidelity, ...)</td></tr><tr><td>Finland (HEX, ...)</td></tr><tr><td>First Trust (First Trust, ...)</td></tr><tr><td>France (Boursorama, ...)</td></tr><tr><td>Nasdaq (Yahoo, ...)</td></tr><tr><td>New Zealand (Yahoo, ...)</td></tr><tr><td>NYSE (Yahoo, ...)</td></tr><tr><td>T. Rowe Price</td></tr><tr><td>U.K. Unit Trusts</td></tr><tr><td>USA (Yahoo, Fool ...)</td></tr></tbody></table></div></div><br class="table-break"><p>Sources:
+				src/engine/gnc-commodity.c:gnc_quote_source r22290 which was
+				adjusted for 1.17.
+      GnuCash-Wiki,
+				bugzilla, mailing list archive.
+			</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="tips.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="help.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="apas02.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">Appendix A. 
+		<strong xmlns="" class="application"><code>GnuCash
+		</code></strong>
+		Tips and tidbits
+	 </td><td width="20%" align="center"><a accesskey="u" href="tips.html">Up</a></td><td width="40%" align="right"> A.2. Yahoo Specifics</td></tr></table></div></body></html>
