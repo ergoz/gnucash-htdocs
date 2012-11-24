@@ -1,17 +1,24 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>14.2. 勘定科目のセットアップ</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash チュートリアル・コンセプト ガイド"><link rel="up" href="chapter_bus_pay.html" title="第14章 給与支払"><link rel="prev" href="bus-pay-concepts1.html" title="14.1. 基本概念"><link rel="next" href="bus-pay-protocol1.html" title="14.3. プロトコル"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">14.2. 勘定科目のセットアップ</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bus-pay-concepts1.html">&lt;&lt;&lt; 前のページ</a> </td><th width="60%" align="center">第14章 給与支払</th><td width="20%" align="right"> <a accesskey="n" href="bus-pay-protocol1.html">次のページ &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="14.2. 勘定科目のセットアップ"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="bus-pay-acct1"></a>14.2. 勘定科目のセットアップ</h2></div></div></div><p>勘定科目をセットアップするときは、現地税法を考えなければなりません。給与税は世界中で多くの異なった方法で扱われているので、本項で説明するのは非常に簡単な構造です。ここからは、あなた特定の賃金控除設定に合わせなければなりません。</p><p>2つの税金を支払わなければならないと仮定します。Tax1とTax2はそれぞれ、従業員負担と企業負担の要素です。</p><p>従業員給与およびこれらの2つの税金が費用勘定科目です。租税債務は負債勘定科目です。租税債務勘定科目は、すべての従業員が預けている税金を累積するところです。後で適切な政府系機関に税金を支払います。</p><p>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>14.2. 勘定科目のセットアップ</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCashチュートリアル・コンセプトガイド"><link rel="up" href="chapter_bus_pay.html" title="第14章 給与支払い"><link rel="prev" href="bus-pay-concepts1.html" title="14.1. 基本概念"><link rel="next" href="bus-pay-protocol1.html" title="14.3. プロトコル"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">14.2. 勘定科目のセットアップ</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bus-pay-concepts1.html">&lt;&lt;&lt; 前のページ</a> </td><th width="60%" align="center">第14章 給与支払い</th><td width="20%" align="right"> <a accesskey="n" href="bus-pay-protocol1.html">次のページ &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="14.2. 勘定科目のセットアップ"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="bus-pay-acct1"></a>14.2. 勘定科目のセットアップ</h2></div></div></div><p>勘定科目をセットアップする時は、現地の税法を考慮に入れなければいけません。
+給与税は世界中で多くの異なった方法で扱われているので、本節で説明するのは非常に単純な構造です。
+ここからは、自身の特定の給与控除設定に合わせなければいけません。</p><p>2種類の税金を支払わなければいけないと仮定します。Tax1とTax2はそれぞれ、従業員負担と企業負担の要素です。</p><p>従業員の給与およびこれら2種類の税金が費用勘定科目になります。
+租税債務は負債勘定科目になります。
+租税債務勘定科目は、すべての従業員が預けている税金を累積するところです。
+後で適切な政府系機関に税金を支払います。</p><p>
   </p><div class="literallayout"><p><br>
-簡単な給与支払い配置 :<br>
+単純な給与支払い配置<br>
 <br>
 -資産<br>
    -当座預金<br>
 -負債<br>
-   -Tax1  (短期「保存」勘定科目)<br>
-   -Tax2  (短期「保存」勘定科目)<br>
+   -Tax1  (短期<span class="quote">「<span class="quote">保存</span>」</span>勘定科目)<br>
+   -Tax2  (短期<span class="quote">「<span class="quote">保存</span>」</span>勘定科目)<br>
 -費用<br>
    -給与<br>
    -Tax1<br>
    -Tax2<br>
-  </p></div><p>
-
-  <div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">注記</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">一人一人の給料を追跡するために従業員ごとに子勘定科目を作成する誘惑に抵抗してください。各従業員のために子勘定科目を作成すると、管理できないほど大きな勘定科目リストになります。従業員が出入りした数年後の勘定科目構造を想像してください。ただ一つの勘定科目 (例えば、費用:給与) の中に従業員の給与をすべて記録して、従業員情報単位で参照する帳票を使用する方がはるかに簡単です。</p></td></tr></table></div>
+</p></div><p> <div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">注記</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">一人一人の給与を追跡するために従業員ごとに子勘定科目を作成する誘惑に抵抗してください。
+各従業員のために子勘定科目を作成すると、管理できないほど大きな勘定科目リストになります。
+従業員が出入りした数年後の勘定科目構造を想像してください。
+ただ一つの勘定科目 (例えば、<span class="emphasis"><strong>費用:給与</strong></span>勘定科目)
+の中に従業員の給与をすべて記録して、従業員情報単位で参照する帳票を使用する方がはるかに簡単です。</p></td></tr></table></div>
   </p></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bus-pay-concepts1.html">&lt;&lt;&lt; 前のページ</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">ホーム</a></td><td width="40%" align="right"> <a accesskey="n" href="bus-pay-protocol1.html">次のページ &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">14.1. 基本概念 </td><td width="20%" align="center"><a accesskey="u" href="chapter_bus_pay.html">上に戻る</a></td><td width="40%" align="right"> 14.3. プロトコル</td></tr></table></div></body></html>

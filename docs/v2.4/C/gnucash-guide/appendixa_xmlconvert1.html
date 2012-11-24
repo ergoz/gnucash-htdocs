@@ -5,11 +5,9 @@ through an <acronym class="acronym">XSLT</acronym> parser with an associated sty
 to transform the file to just about any format that can be designed,
 given a properly written stylesheet.</p><p>A few steps need to be followed.  The writing of a stylesheet is a task
 for a different time, but if you can get one written, here’s what you
-need to do:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Copy the <strong class="application"><code>GnuCash</code></strong> to a working file.  Modify the working file’s
-&lt;gnc-v2&gt; tag to read something like what’s below.  Note that you can
-pretty much put anything you want in the <span class="quote">“<span class="quote">="..."</span>”</span> part; I used the <acronym class="acronym">URL</acronym>
-because it’s traditional (if such can be said about such a young
-technology!).</p><div class="literallayout"><p><br>
+need to do:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Copy the <strong class="application"><code>GnuCash</code></strong> <acronym class="acronym">XML</acronym> data file to a working file.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">If the file was last modified by a version of <strong class="application"><code>GnuCash</code></strong> older than 2.0, then
+before to continue to the next step you will need to modify the working file’s &lt;gnc-v2&gt;
+tag to read something like this:</p><div xmlns="" class="literallayout"><p><br>
 &lt;gnc-v2 xmlns:cd="http://www.gnucash.org/XML/cd"<br>
         xmlns:book="http://www.gnucash.org/XML/book"<br>
         xmlns:gnc="http://www.gnucash.org/XML/gnc"<br>
@@ -31,7 +29,8 @@ technology!).</p><div class="literallayout"><p><br>
         xmlns:sx="http://www.gnucash.org/XML/sx"<br>
         xmlns:fs="http://www.gnucash.org/XML/fs"<br>
         xmlns:addr="http://www.gnucash.org/XML/custaddr"&gt;<br>
- </p></div></li><li class="listitem"><p>Create an <acronym class="acronym">XSLT</acronym> stylesheet containing the transformation your desire,
+    </p></div><p xmlns="">You can put pretty much anything you want behind the equal signs, but a <acronym class="acronym">URL</acronym>
+is what is typically used.</p></td></tr></table></div></li><li class="listitem"><p>Create an <acronym class="acronym">XSLT</acronym> stylesheet containing the transformation your desire,
 or obtain one that’s already written (AFAIK, there aren’t any, but I’m
 working on a <acronym class="acronym">CSV</acronym> one).</p></li><li class="listitem"><p>Install an <acronym class="acronym">XSLT</acronym> processor such as Saxon
 (http://saxon.sourceforge.net/) or Xalan-J  (http://xml.apache.org/). 
@@ -44,5 +43,5 @@ less work.</p></li></ol></div><p>Benefits are that you don’t need to write a S
 routine to do this transformation.  Anyone who knows or can learn <acronym class="acronym">XML</acronym>
 and <acronym class="acronym">XSLT</acronym> can perform this task.  Not much harder, really, than writing a
 Web page....</p><p>Anyhow, I just wanted this tidbit to be captured somewhere permanently. 
-The process works on 2.4.7 datafiles, and ought to
+The process works on 2.4.11 datafiles, and ought to
 work on earlier versions, too.</p></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="appendixa_enterpay1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="appendixb.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">A.4. Checking <acronym xmlns="" class="acronym">QIF</acronym> Data (Discussion) </td><td width="20%" align="center"><a accesskey="u" href="appendixa.html">Up</a></td><td width="40%" align="right"> Appendix B. Frequently Asked Questions</td></tr></table></div></body></html>
