@@ -1,0 +1,1223 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>A.3. TIAA-CREF-Besonderheiten</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="help.html" title="GnuCash Hilfe"><link rel="up" href="tips.html" title="Anhang A. GnuCash Tips und Tricks"><link rel="prev" href="apas02.html" title="A.2. Yahoo-Besonderheiten"><link rel="next" href="fdl.html" title="Anhang B. GNU Free Documentation License"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">A.3. TIAA-CREF-Besonderheiten</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="apas02.html">&lt;&lt;&lt; Zurück</a> </td><th width="60%" align="center">Anhang A. 
+		<strong xmlns="" class="application"><code>GnuCash</code></strong> Tips und Tricks
+	</th><td width="20%" align="right"> <a accesskey="n" href="fdl.html">Weiter &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="A.3. TIAA-CREF-Besonderheiten"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp59848896"></a>A.3. TIAA-CREF-Besonderheiten</h2></div></div></div><div class="abstract" title="Zusammenfassung"><p class="title"><b>Zusammenfassung</b></p><p>
+				TIAA-CREF Annuities (Renten) werden im Gegensatz zu ihren Fonds an keiner Börse gelistet.
+				TIAA-CREF bietet die Kurse mittels einer CGI-Shnittstelle auf ihrer
+				Website, welche eine CSV-Datei im folgenden Format zurückliefert:
+				
+				</p><div class="literallayout"><p><br>
+					<code class="computeroutput"><br>
+bogus_symbol1,price1,date1<br>
+bogus_symbol2,price2,date2<br>
+..etc.<br>
+					</code><br>
+				</p></div><p>
+				Dabei hat bogus_symbol einen der folgenden Werte für die verschiedenen
+				Annuitäten:
+			</p></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Anmerkung</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Bei den Symbolen ist die Groß- und Kleinschreibung wichtig, welche sich 2012 änderte.
+			</p></td></tr></table></div><div class="table"><a name="PsSymbs-TIAA-CREF"></a><p class="title"><b>Tabelle A.5. Pseudo-Symbole, welche für TIAA-CREF Kursabfragen verwendet werden können</b></p><div class="table-contents"><table summary="Pseudo-Symbole, welche für TIAA-CREF Kursabfragen verwendet werden können" border="1"><colgroup><col><col><col></colgroup><thead><tr><th>
+							<p>Name</p>
+						</th><th>
+							<p>Symbol</p>
+						</th><th>
+							<p>bogus</p>
+						</th></tr></thead><tbody><tr><td>
+							<p>CREF Bond Market Account</p>
+						</td><td>
+							<p>CREFbond</p>
+						</td><td>
+							<p>41081991</p>
+						</td></tr><tr><td>
+							<p>CREF Equity Index Account</p>
+						</td><td>
+							<p>CREFequi</p>
+						</td><td>
+							<p>41082540</p>
+						</td></tr><tr><td>
+							<p>CREF Global Equities Account</p>
+						</td><td>
+							<p>CREFglob</p>
+						</td><td>
+							<p>41081992</p>
+						</td></tr><tr><td>
+							<p>CREF Growth Account</p>
+						</td><td>
+							<p>CREFgrow</p>
+						</td><td>
+							<p>41082544</p>
+						</td></tr><tr><td>
+							<p>CREF Inflation-Linked Bond Account</p>
+						</td><td>
+							<p>CREFinfb</p>
+						</td><td>
+							<p>41088773</p>
+						</td></tr><tr><td>
+							<p>CREF Money Market Account</p>
+						</td><td>
+							<p>CREFmony</p>
+						</td><td>
+							<p>41081993</p>
+						</td></tr><tr><td>
+							<p>CREF Social Choice Account</p>
+						</td><td>
+							<p>CREFsoci</p>
+						</td><td>
+							<p>41081994</p>
+						</td></tr><tr><td>
+							<p>CREF Stock Account</p>
+						</td><td>
+							<p>CREFstok</p>
+						</td><td>
+							<p>41081995</p>
+						</td></tr><tr><td>
+							<p>TIAA Real Estate Account</p>
+						</td><td>
+							<p>TIAAreal</p>
+						</td><td>
+							<p>41091375</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Bond Fund (Retirement)</p>
+						</td><td>
+							<p>TIDRX</p>
+						</td><td>
+							<p>4530828</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Bond Index Fund (Retirement)</p>
+						</td><td>
+							<p>TBIRX</p>
+						</td><td>
+							<p>20739662</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Bond Plus Fund (Retirement)</p>
+						</td><td>
+							<p>TCBRX</p>
+						</td><td>
+							<p>4530816</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Emerging Markets Equity Fund (Retirement)</p>
+						</td><td>
+							<p>TEMSX</p>
+						</td><td>
+							<p>26176543</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Emerging Markets Equity Index Fund (Retirement)
+							</p>
+						</td><td>
+							<p>TEQSX</p>
+						</td><td>
+							<p>26176547</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Equity Index Fund (Retirement)</p>
+						</td><td>
+							<p>TIQRX</p>
+						</td><td>
+							<p>4530786</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Global Natural Resources Fund (Retirement)</p>
+						</td><td>
+							<p>TNRRX</p>
+						</td><td>
+							<p>39444919</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Growth &amp; Income Fund (Retirement)</p>
+						</td><td>
+							<p>TRGIX</p>
+						</td><td>
+							<p>312536</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF High Yield Fund (Retirement)</p>
+						</td><td>
+							<p>TIHRX</p>
+						</td><td>
+							<p>4530821</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Inflation-Linked Bond Fund (Retirement)</p>
+						</td><td>
+							<p>TIKRX</p>
+						</td><td>
+							<p>4530829</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF International Equity Fund (Retirement)</p>
+						</td><td>
+							<p>TRERX</p>
+						</td><td>
+							<p>302323</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF International Equity Index Fund (Retirement)
+							</p>
+						</td><td>
+							<p>TRIEX</p>
+						</td><td>
+							<p>300269</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Large-Cap Growth Fund (Retirement)</p>
+						</td><td>
+							<p>TILRX</p>
+						</td><td>
+							<p>4530785</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Large-Cap Growth Index Fund (Retirement)</p>
+						</td><td>
+							<p>TRIRX</p>
+						</td><td>
+							<p>299525</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Large-Cap Value Fund (Retirement)</p>
+						</td><td>
+							<p>TRLCX</p>
+						</td><td>
+							<p>301332</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Large-Cap Value Index Fund (Retirement)</p>
+						</td><td>
+							<p>TRCVX</p>
+						</td><td>
+							<p>304333</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2010 Fund (Retirement)</p>
+						</td><td>
+							<p>TCLEX</p>
+						</td><td>
+							<p>302817</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2015 Fund (Retirement)</p>
+						</td><td>
+							<p>TCLIX</p>
+						</td><td>
+							<p>302393</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2020 Fund (Retirement)</p>
+						</td><td>
+							<p>TCLTX</p>
+						</td><td>
+							<p>307774</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2025 Fund (Retirement)</p>
+						</td><td>
+							<p>TCLFX</p>
+						</td><td>
+							<p>313994</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2030 Fund (Retirement)</p>
+						</td><td>
+							<p>TCLNX</p>
+						</td><td>
+							<p>307240</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2035 Fund (Retirement)</p>
+						</td><td>
+							<p>TCLRX</p>
+						</td><td>
+							<p>309003</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2040 Fund (Retirement)</p>
+						</td><td>
+							<p>TCLOX</p>
+						</td><td>
+							<p>300959</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2045 Fund (Retirement)</p>
+						</td><td>
+							<p>TTFRX</p>
+						</td><td>
+							<p>9467597</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2050 Fund (Retirement)</p>
+						</td><td>
+							<p>TLFRX</p>
+						</td><td>
+							<p>9467596</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2055 Fund (Retirement)</p>
+						</td><td>
+							<p>TTRLX</p>
+						</td><td>
+							<p>34211330</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2010 Fund (Retirement)</p>
+						</td><td>
+							<p>TLTRX</p>
+						</td><td>
+							<p>21066482</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2015 Fund (Retirement)</p>
+						</td><td>
+							<p>TLGRX</p>
+						</td><td>
+							<p>21066496</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2020 Fund (Retirement)</p>
+						</td><td>
+							<p>TLWRX</p>
+						</td><td>
+							<p>21066479</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2025 Fund (Retirement)</p>
+						</td><td>
+							<p>TLQRX</p>
+						</td><td>
+							<p>21066485</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2030 Fund (Retirement)</p>
+						</td><td>
+							<p>TLHRX</p>
+						</td><td>
+							<p>21066435</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2035 Fund (Retirement)</p>
+						</td><td>
+							<p>TLYRX</p>
+						</td><td>
+							<p>21066475</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2040 Fund (Retirement)</p>
+						</td><td>
+							<p>TLZRX</p>
+						</td><td>
+							<p>21066473</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2045 Fund (Retirement)</p>
+						</td><td>
+							<p>TLMRX</p>
+						</td><td>
+							<p>21066488</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2050 Fund (Retirement)</p>
+						</td><td>
+							<p>TLLRX</p>
+						</td><td>
+							<p>21066490</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2055 Fund (Retirement)</p>
+						</td><td>
+							<p>TTIRX</p>
+						</td><td>
+							<p>34211328</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index Retirement Income Fund
+								(Retirement)
+							</p>
+						</td><td>
+							<p>TRCIX</p>
+						</td><td>
+							<p>21066468</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Retirement Income Fund (Retirement)
+							</p>
+						</td><td>
+							<p>TLIRX</p>
+						</td><td>
+							<p>9467594</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Aggressive Growth Fund (Retirement)
+							</p>
+						</td><td>
+							<p>TSARX</p>
+						</td><td>
+							<p>40508431</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Conservative Fund (Retirement)</p>
+						</td><td>
+							<p>TSCTX</p>
+						</td><td>
+							<p>40508433</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Growth Fund (Retirement)</p>
+						</td><td>
+							<p>TSGRX</p>
+						</td><td>
+							<p>40508437</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Income Fund (Retirement)</p>
+						</td><td>
+							<p>TLSRX</p>
+						</td><td>
+							<p>40508427</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Moderate Fund (Retirement)</p>
+						</td><td>
+							<p>TSMTX</p>
+						</td><td>
+							<p>40508460</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Managed Allocation Fund (Retirement)</p>
+						</td><td>
+							<p>TITRX</p>
+						</td><td>
+							<p>4530825</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Mid-Cap Growth Fund (Retirement)</p>
+						</td><td>
+							<p>TRGMX</p>
+						</td><td>
+							<p>305499</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Mid-Cap Value Fund (Retirement)</p>
+						</td><td>
+							<p>TRVRX</p>
+						</td><td>
+							<p>315272</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Money Market Fund (Retirement)</p>
+						</td><td>
+							<p>TIEXX</p>
+						</td><td>
+							<p>4530771</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Real Estate Securities Fund (Retirement)</p>
+						</td><td>
+							<p>TRRSX</p>
+						</td><td>
+							<p>300081</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF S&amp;P 500 Index Fund (Retirement)</p>
+						</td><td>
+							<p>TRSPX</p>
+						</td><td>
+							<p>306105</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Short-Term Bond Fund (Retirement)</p>
+						</td><td>
+							<p>TISRX</p>
+						</td><td>
+							<p>4530818</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Small-Cap Blend Index Fund (Retirement)</p>
+						</td><td>
+							<p>TRBIX</p>
+						</td><td>
+							<p>314644</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Small-Cap Equity Fund (Retirement)</p>
+						</td><td>
+							<p>TRSEX</p>
+						</td><td>
+							<p>299968</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Social Choice Equity Fund (Retirement)</p>
+						</td><td>
+							<p>TRSCX</p>
+						</td><td>
+							<p>300078</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Bond Fund (Institutional)</p>
+						</td><td>
+							<p>TIBDX</p>
+						</td><td>
+							<p>307276</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Bond Index Fund (Institutional)</p>
+						</td><td>
+							<p>TBIIX</p>
+						</td><td>
+							<p>20739664</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Bond Plus Fund (Institutional)</p>
+						</td><td>
+							<p>TIBFX</p>
+						</td><td>
+							<p>4530820</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Emerging Markets Equity Fund (Institutional)
+							</p>
+						</td><td>
+							<p>TEMLX</p>
+						</td><td>
+							<p>26176540</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Emerging Markets Equity Index Fund
+								(Institutional)
+							</p>
+						</td><td>
+							<p>TEQLX</p>
+						</td><td>
+							<p>26176544</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Enhanced International Equity Index Fund
+								(Institutional)
+							</p>
+						</td><td>
+							<p>TFIIX</p>
+						</td><td>
+							<p>9467603</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Enhanced Large-Cap Growth Index Fund
+								(Institutional)
+							</p>
+						</td><td>
+							<p>TLIIX</p>
+						</td><td>
+							<p>9467602</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Enhanced Large-Cap Value Index Fund
+								(Institutional)
+							</p>
+						</td><td>
+							<p>TEVIX</p>
+						</td><td>
+							<p>9467606</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Equity Index Fund (Institutional)</p>
+						</td><td>
+							<p>TIEIX</p>
+						</td><td>
+							<p>301718</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Global Natural Resources Fund (Institutional)
+							</p>
+						</td><td>
+							<p>TNRIX</p>
+						</td><td>
+							<p>39444916</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Growth &amp; Income Fund (Institutional)</p>
+						</td><td>
+							<p>TIGRX</p>
+						</td><td>
+							<p>314719</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF High Yield Fund (Institutional)</p>
+						</td><td>
+							<p>TIHYX</p>
+						</td><td>
+							<p>4530798</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Inflation-Linked Bond Fund (Institutional)</p>
+						</td><td>
+							<p>TIILX</p>
+						</td><td>
+							<p>316693</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF International Equity Fund (Institutional)</p>
+						</td><td>
+							<p>TIIEX</p>
+						</td><td>
+							<p>305980</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF International Equity Index Fund (Institutional)
+							</p>
+						</td><td>
+							<p>TCIEX</p>
+						</td><td>
+							<p>303673</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Large-Cap Growth Fund (Institutional)</p>
+						</td><td>
+							<p>TILGX</p>
+						</td><td>
+							<p>4530800</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Large-Cap Growth Index Fund (Institutional)
+							</p>
+						</td><td>
+							<p>TILIX</p>
+						</td><td>
+							<p>297809</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Large-Cap Value Fund (Institutional)</p>
+						</td><td>
+							<p>TRLIX</p>
+						</td><td>
+							<p>300692</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Large-Cap Value Index Fund (Institutional)</p>
+						</td><td>
+							<p>TILVX</p>
+						</td><td>
+							<p>302308</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2010 Fund (Institutional)</p>
+						</td><td>
+							<p>TCTIX</p>
+						</td><td>
+							<p>4912376</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2015 Fund (Institutional)</p>
+						</td><td>
+							<p>TCNIX</p>
+						</td><td>
+							<p>4912355</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2020 Fund (Institutional)</p>
+						</td><td>
+							<p>TCWIX</p>
+						</td><td>
+							<p>4912377</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2025 Fund (Institutional)</p>
+						</td><td>
+							<p>TCYIX</p>
+						</td><td>
+							<p>4912384</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2030 Fund (Institutional)</p>
+						</td><td>
+							<p>TCRIX</p>
+						</td><td>
+							<p>4912364</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2035 Fund (Institutional)</p>
+						</td><td>
+							<p>TCIIX</p>
+						</td><td>
+							<p>4912375</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2040 Fund (Institutional)</p>
+						</td><td>
+							<p>TCOIX</p>
+						</td><td>
+							<p>4912387</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2045 Fund (Institutional)</p>
+						</td><td>
+							<p>TTFIX</p>
+						</td><td>
+							<p>9467607</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2050 Fund (Institutional)</p>
+						</td><td>
+							<p>TFTIX</p>
+						</td><td>
+							<p>9467601</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2055 Fund (Institutional)</p>
+						</td><td>
+							<p>TTRIX</p>
+						</td><td>
+							<p>34211329</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2010 Fund (Institutional)</p>
+						</td><td>
+							<p>TLTIX</p>
+						</td><td>
+							<p>21066484</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2015 Fund (Institutional)</p>
+						</td><td>
+							<p>TLFIX</p>
+						</td><td>
+							<p>21066498</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2020 Fund (Institutional)</p>
+						</td><td>
+							<p>TLWIX</p>
+						</td><td>
+							<p>21066480</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2025 Fund (Institutional)</p>
+						</td><td>
+							<p>TLQIX</p>
+						</td><td>
+							<p>21066486</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2030 Fund (Institutional)</p>
+						</td><td>
+							<p>TLHIX</p>
+						</td><td>
+							<p>21066495</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2035 Fund (Institutional)</p>
+						</td><td>
+							<p>TLYIX</p>
+						</td><td>
+							<p>21066477</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2040 Fund (Institutional)</p>
+						</td><td>
+							<p>TLZIX</p>
+						</td><td>
+							<p>21066474</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2045 Fund (Institutional)</p>
+						</td><td>
+							<p>TLXIX</p>
+						</td><td>
+							<p>21066478</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2050 Fund (Institutional)</p>
+						</td><td>
+							<p>TLLIX</p>
+						</td><td>
+							<p>21066492</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2055 Fund (Institutional)</p>
+						</td><td>
+							<p>TTIIX</p>
+						</td><td>
+							<p>34211326</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index Retirement Income Fund
+								(Institutional)
+							</p>
+						</td><td>
+							<p>TRILX</p>
+						</td><td>
+							<p>21066463</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Retirement Income Fund (Institutional)
+							</p>
+						</td><td>
+							<p>TLRIX</p>
+						</td><td>
+							<p>9467595</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Aggressive Growth Fund (Institutional)
+							</p>
+						</td><td>
+							<p>TSAIX</p>
+						</td><td>
+							<p>40508428</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Conservative Fund (Institutional)
+							</p>
+						</td><td>
+							<p>TCSIX</p>
+						</td><td>
+							<p>40508425</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Growth Fund (Institutional)</p>
+						</td><td>
+							<p>TSGGX</p>
+						</td><td>
+							<p>40508434</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Income Fund (Institutional)</p>
+						</td><td>
+							<p>TSITX</p>
+						</td><td>
+							<p>40508450</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Moderate Fund (Institutional)</p>
+						</td><td>
+							<p>TSIMX</p>
+						</td><td>
+							<p>40508443</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Managed Allocation Fund (Institutional)</p>
+						</td><td>
+							<p>TIMIX</p>
+						</td><td>
+							<p>4530787</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Mid-Cap Growth Fund (Institutional)</p>
+						</td><td>
+							<p>TRPWX</p>
+						</td><td>
+							<p>297210</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Mid-Cap Value Fund (Institutional)</p>
+						</td><td>
+							<p>TIMVX</p>
+						</td><td>
+							<p>316178</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Money Market Fund (Institutional)</p>
+						</td><td>
+							<p>TCIXX</p>
+						</td><td>
+							<p>313650</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Real Estate Securities Fund (Institutional)
+							</p>
+						</td><td>
+							<p>TIREX</p>
+						</td><td>
+							<p>303475</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF S&amp;P 500 Index Fund (Institutional)</p>
+						</td><td>
+							<p>TISPX</p>
+						</td><td>
+							<p>306658</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Short-Term Bond Fund (Institutional)</p>
+						</td><td>
+							<p>TISIX</p>
+						</td><td>
+							<p>4530784</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Small-Cap Blend Index Fund (Institutional)</p>
+						</td><td>
+							<p>TISBX</p>
+						</td><td>
+							<p>309018</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Small-Cap Equity Fund (Institutional)</p>
+						</td><td>
+							<p>TISEX</p>
+						</td><td>
+							<p>301622</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Social Choice Equity Fund (Institutional)</p>
+						</td><td>
+							<p>TISCX</p>
+						</td><td>
+							<p>301897</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Tax-Exempt Bond Fund (Institutional)</p>
+						</td><td>
+							<p>TITIX</p>
+						</td><td>
+							<p>4530819</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Bond Fund (Retail)</p>
+						</td><td>
+							<p>TIORX</p>
+						</td><td>
+							<p>4530794</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Bond Index Fund (Retail)</p>
+						</td><td>
+							<p>TBILX</p>
+						</td><td>
+							<p>20739663</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Bond Plus Fund (Retail)</p>
+						</td><td>
+							<p>TCBPX</p>
+						</td><td>
+							<p>4530788</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Emerging Markets Equity Fund (Retail)</p>
+						</td><td>
+							<p>TEMRX</p>
+						</td><td>
+							<p>26176542</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Emerging Markets Equity Index Fund (Retail)
+							</p>
+						</td><td>
+							<p>TEQKX</p>
+						</td><td>
+							<p>26176545</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Equity Index Fund (Retail)</p>
+						</td><td>
+							<p>TINRX</p>
+						</td><td>
+							<p>4530797</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Global Natural Resources Fund (Retail)</p>
+						</td><td>
+							<p>TNRLX</p>
+						</td><td>
+							<p>39444917</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Growth &amp; Income Fund (Retail)</p>
+						</td><td>
+							<p>TIIRX</p>
+						</td><td>
+							<p>4530790</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF High Yield Fund (Retail)</p>
+						</td><td>
+							<p>TIYRX</p>
+						</td><td>
+							<p>4530830</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Inflation-Linked Bond Fund (Retail)</p>
+						</td><td>
+							<p>TCILX</p>
+						</td><td>
+							<p>313727</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF International Equity Fund (Retail)</p>
+						</td><td>
+							<p>TIERX</p>
+						</td><td>
+							<p>4530827</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Large-Cap Growth Fund (Retail)</p>
+						</td><td>
+							<p>TIRTX</p>
+						</td><td>
+							<p>4530791</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Large-Cap Value Fund (Retail)</p>
+						</td><td>
+							<p>TCLCX</p>
+						</td><td>
+							<p>302696</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Retirement Income Fund (Retail)</p>
+						</td><td>
+							<p>TLRRX</p>
+						</td><td>
+							<p>9467600</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Aggressive Growth Fund (Retail)</p>
+						</td><td>
+							<p>TSALX</p>
+						</td><td>
+							<p>40508429</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Conservative Fund (Retail)</p>
+						</td><td>
+							<p>TSCLX</p>
+						</td><td>
+							<p>40508432</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Growth Fund (Retail)</p>
+						</td><td>
+							<p>TSGLX</p>
+						</td><td>
+							<p>40508435</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Income Fund (Retail)</p>
+						</td><td>
+							<p>TSILX</p>
+						</td><td>
+							<p>40508438</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Moderate Fund (Retail)</p>
+						</td><td>
+							<p>TSMLX</p>
+						</td><td>
+							<p>40508453</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Managed Allocation Fund (Retail)</p>
+						</td><td>
+							<p>TIMRX</p>
+						</td><td>
+							<p>4530817</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Mid-Cap Growth Fund (Retail)</p>
+						</td><td>
+							<p>TCMGX</p>
+						</td><td>
+							<p>305208</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Mid-Cap Value Fund (Retail)</p>
+						</td><td>
+							<p>TCMVX</p>
+						</td><td>
+							<p>313995</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Money Market Fund (Retail)</p>
+						</td><td>
+							<p>TIRXX</p>
+						</td><td>
+							<p>4530775</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Real Estate Securities Fund (Retail)</p>
+						</td><td>
+							<p>TCREX</p>
+						</td><td>
+							<p>309567</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Short-Term Bond Fund (Retail)</p>
+						</td><td>
+							<p>TCTRX</p>
+						</td><td>
+							<p>4530822</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Small-Cap Equity Fund (Retail)</p>
+						</td><td>
+							<p>TCSEX</p>
+						</td><td>
+							<p>297477</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Social Choice Equity Fund (Retail)</p>
+						</td><td>
+							<p>TICRX</p>
+						</td><td>
+							<p>4530792</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Tax-Exempt Bond Fund (Retail)</p>
+						</td><td>
+							<p>TIXRX</p>
+						</td><td>
+							<p>4530793</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Bond Fund (Premier)</p>
+						</td><td>
+							<p>TIDPX</p>
+						</td><td>
+							<p>21066506</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Bond Index Fund (Premier)</p>
+						</td><td>
+							<p>TBIPX</p>
+						</td><td>
+							<p>21066534</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Bond Plus Fund (Premier)</p>
+						</td><td>
+							<p>TBPPX</p>
+						</td><td>
+							<p>21066533</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Emerging Markets Equity Fund (Premier)</p>
+						</td><td>
+							<p>TEMPX</p>
+						</td><td>
+							<p>26176541</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Emerging Markets Equity Index Fund (Premier)
+							</p>
+						</td><td>
+							<p>TEQPX</p>
+						</td><td>
+							<p>26176546</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Equity Index Fund (Premier)</p>
+						</td><td>
+							<p>TCEPX</p>
+						</td><td>
+							<p>21066530</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Global Natural Resources Fund (Premier)</p>
+						</td><td>
+							<p>TNRPX</p>
+						</td><td>
+							<p>39444918</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Growth &amp; Income Fund (Premier)</p>
+						</td><td>
+							<p>TRPGX</p>
+						</td><td>
+							<p>21066461</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF High Yield Fund (Premier)</p>
+						</td><td>
+							<p>TIHPX</p>
+						</td><td>
+							<p>21066501</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Inflation-Linked Bond Fund (Premier)</p>
+						</td><td>
+							<p>TIKPX</p>
+						</td><td>
+							<p>21066500</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF International Equity Fund (Premier)</p>
+						</td><td>
+							<p>TREPX</p>
+						</td><td>
+							<p>21066466</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF International Equity Index Fund (Premier)</p>
+						</td><td>
+							<p>TRIPX</p>
+						</td><td>
+							<p>21066462</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Large-Cap Growth Fund (Premier)</p>
+						</td><td>
+							<p>TILPX</p>
+						</td><td>
+							<p>21066499</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Large-Cap Value Fund (Premier)</p>
+						</td><td>
+							<p>TRCPX</p>
+						</td><td>
+							<p>21066467</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2010 Fund (Premier)</p>
+						</td><td>
+							<p>TCTPX</p>
+						</td><td>
+							<p>21066521</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2015 Fund (Premier)</p>
+						</td><td>
+							<p>TCFPX</p>
+						</td><td>
+							<p>21066528</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2020 Fund (Premier)</p>
+						</td><td>
+							<p>TCWPX</p>
+						</td><td>
+							<p>21066518</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2025 Fund (Premier)</p>
+						</td><td>
+							<p>TCQPX</p>
+						</td><td>
+							<p>21066522</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2030 Fund (Premier)</p>
+						</td><td>
+							<p>TCHPX</p>
+						</td><td>
+							<p>21066527</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2035 Fund (Premier)</p>
+						</td><td>
+							<p>TCYPX</p>
+						</td><td>
+							<p>21066517</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2040 Fund (Premier)</p>
+						</td><td>
+							<p>TCZPX</p>
+						</td><td>
+							<p>21066516</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2045 Fund (Premier)</p>
+						</td><td>
+							<p>TTFPX</p>
+						</td><td>
+							<p>21066444</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2050 Fund (Premier)</p>
+						</td><td>
+							<p>TCLPX</p>
+						</td><td>
+							<p>21066526</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle 2055 Fund (Premier)</p>
+						</td><td>
+							<p>TTRPX</p>
+						</td><td>
+							<p>34211331</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2010 Fund (Premier)</p>
+						</td><td>
+							<p>TLTPX</p>
+						</td><td>
+							<p>21066483</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2015 Fund (Premier)</p>
+						</td><td>
+							<p>TLFPX</p>
+						</td><td>
+							<p>21066497</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2020 Fund (Premier)</p>
+						</td><td>
+							<p>TLWPX</p>
+						</td><td>
+							<p>21066434</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2025 Fund (Premier)</p>
+						</td><td>
+							<p>TLVPX</p>
+						</td><td>
+							<p>21066481</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2030 Fund (Premier)</p>
+						</td><td>
+							<p>TLHPX</p>
+						</td><td>
+							<p>21066494</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2035 Fund (Premier)</p>
+						</td><td>
+							<p>TLYPX</p>
+						</td><td>
+							<p>21066476</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2040 Fund (Premier)</p>
+						</td><td>
+							<p>TLPRX</p>
+						</td><td>
+							<p>21066487</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2045 Fund (Premier)</p>
+						</td><td>
+							<p>TLMPX</p>
+						</td><td>
+							<p>21066489</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2050 Fund (Premier)</p>
+						</td><td>
+							<p>TLLPX</p>
+						</td><td>
+							<p>21066491</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index 2055 Fund (Premier)</p>
+						</td><td>
+							<p>TTIPX</p>
+						</td><td>
+							<p>34211327</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Index Retirement Income Fund (Premier)
+							</p>
+						</td><td>
+							<p>TLIPX</p>
+						</td><td>
+							<p>21066493</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifecycle Retirement Income Fund (Premier)</p>
+						</td><td>
+							<p>TPILX</p>
+						</td><td>
+							<p>21066470</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Aggressive Growth Fund (Premier)</p>
+						</td><td>
+							<p>TSAPX</p>
+						</td><td>
+							<p>40508430</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Conservative Fund (Premier)</p>
+						</td><td>
+							<p>TLSPX</p>
+						</td><td>
+							<p>40508426</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Growth Fund (Premier)</p>
+						</td><td>
+							<p>TSGPX</p>
+						</td><td>
+							<p>40508436</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Income Fund (Premier)</p>
+						</td><td>
+							<p>TSIPX</p>
+						</td><td>
+							<p>40508451</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Lifestyle Moderate Fund (Premier)</p>
+						</td><td>
+							<p>TSMPX</p>
+						</td><td>
+							<p>40508456</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Mid-Cap Growth Fund (Premier)</p>
+						</td><td>
+							<p>TRGPX</p>
+						</td><td>
+							<p>21066464</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Mid-Cap Value Fund (Premier)</p>
+						</td><td>
+							<p>TRVPX</p>
+						</td><td>
+							<p>21066455</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Money Market Fund (Premier)</p>
+						</td><td>
+							<p>TPPXX</p>
+						</td><td>
+							<p>21066469</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Real Estate Securities Fund (Premier)</p>
+						</td><td>
+							<p>TRRPX</p>
+						</td><td>
+							<p>21066459</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Short-Term Bond Fund (Premier)</p>
+						</td><td>
+							<p>TSTPX</p>
+						</td><td>
+							<p>21066445</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Small-Cap Equity Fund (Premier)</p>
+						</td><td>
+							<p>TSRPX</p>
+						</td><td>
+							<p>21066446</p>
+						</td></tr><tr><td>
+							<p>TIAA-CREF Social Choice Equity Fund (Premier)</p>
+						</td><td>
+							<p>TRPSX</p>
+						</td><td>
+							<p>21066460</p>
+						</td></tr></tbody></table></div></div><br class="table-break"><p>Quelle: Kommentare in
+			<a class="ulink" href="https://rt.cpan.org/Ticket/Attachment/1121440/589997/Tiaacref.pm.zip" target="_top">https://rt.cpan.org/Ticket/Attachment/1121440/589997/Tiaacref.pm.zip</a>
+		</p></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="apas02.html">&lt;&lt;&lt; Zurück</a> </td><td width="20%" align="center"><a accesskey="h" href="help.html">Zum Anfang</a></td><td width="40%" align="right"> <a accesskey="n" href="fdl.html">Weiter &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">A.2. Yahoo-Besonderheiten </td><td width="20%" align="center"><a accesskey="u" href="tips.html">Nach oben</a></td><td width="40%" align="right"> Anhang B. GNU Free Documentation License</td></tr></table></div></body></html>

@@ -8,20 +8,21 @@
       Commodity/Stock is entered this window will be blank except for the
       control buttons on the bottom. Select the appropriate Commodity you want
       to insert into the <span class="guilabel"><strong>Price Editor</strong></span>. At this point, you can input the price
-      of the commodity manually. There are 5 fields in the New Commodity
-      window:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="guilabel"><strong>Commodity</strong></span> - the name of the commodity,
-          must be chosen from the <span class="guibutton">Select...</span> list</p></li><li class="listitem"><p><span class="guilabel"><strong>Currency</strong></span> - the currency in which the
-          Price is expressed.</p></li><li class="listitem"><p><span class="guilabel"><strong>Date</strong></span> - date that the price is
-          valid</p></li><li class="listitem"><p><span class="guilabel"><strong>Type</strong></span> - one of: <span class="guilabel"><strong>Bid</strong></span>
-          (the market buying price), <span class="guilabel"><strong>Ask</strong></span> (the market
-          selling price), <span class="guilabel"><strong>Last</strong></span> (the last transaction
-          price), <span class="guilabel"><strong>Net Asset Value</strong></span> (mutual fund price per
-          share), or <span class="guilabel"><strong>Unknown</strong></span>. Stocks and currencies will
-          usually give their quotes as one of bid, ask or last. Mutual funds
-          are often given as net asset value. For other commodities, simply
-          choose <span class="guilabel"><strong>Unknown</strong></span>. This option is for informational purposes only, it
-          is not used by <strong class="application"><code>GnuCash</code></strong>.</p></li><li class="listitem"><p><span class="guilabel"><strong>Price</strong></span> - the price of one unit of this
-          commodity.</p></li></ul></div><p>As an example of adding the AMZN commodity to the price editor,
+      of the commodity manually. There are 6 fields in the New Commodity
+      window:</p><div class="variablelist"><dl><dt><span class="term"><strong><span class="guilabel"><strong>Namespace</strong></span></strong></span></dt><dd><p>The exchange market where the security/commodity
+              is traded (in this example NASDAQ)</p></dd><dt><span class="term"><strong><span class="guilabel"><strong>Security</strong></span></strong></span></dt><dd><p>The name of the commodity,
+              must be chosen from the <span class="guibutton">Select...</span> list</p></dd><dt><span class="term"><strong><span class="guilabel"><strong>Currency</strong></span></strong></span></dt><dd><p>The currency in which the
+              Price is expressed.</p></dd><dt><span class="term"><strong><span class="guilabel"><strong>Date</strong></span></strong></span></dt><dd><p>Date that the price is
+              valid</p></dd><dt><span class="term"><strong><span class="guilabel"><strong>Type</strong></span></strong></span></dt><dd><p>One of: <span class="guilabel"><strong>Bid</strong></span>
+              (the market buying price), <span class="guilabel"><strong>Ask</strong></span> (the market
+              selling price), <span class="guilabel"><strong>Last</strong></span> (the last transaction
+              price), <span class="guilabel"><strong>Net Asset Value</strong></span> (mutual fund price per
+              share), or <span class="guilabel"><strong>Unknown</strong></span>. Stocks and currencies will
+              usually give their quotes as one of bid, ask or last. Mutual funds
+              are often given as net asset value. For other commodities, simply
+              choose <span class="guilabel"><strong>Unknown</strong></span>. This option is for informational purposes only, it
+              is not used by <strong class="application"><code>GnuCash</code></strong>.</p></dd><dt><span class="term"><strong><span class="guilabel"><strong>Price</strong></span></strong></span></dt><dd><p>The price of one unit of this
+              commodity.</p></dd></dl></div><p>As an example of adding the AMZN commodity to the price editor,
       with an initial value of $40.50 per share.</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_peditor.png" alt="Price Editor"><div class="caption"><p>Adding the AMZN commodity to the price editor, with
           an initial value of $40.50 per share.</p></div></div></div><p>Click <span class="guibutton">OK</span> when finished. Once you have
       performed this initial placement of the commodity into the <span class="guilabel"><strong>Price Editor</strong></span>,
@@ -34,7 +35,7 @@
         <span class="guibutton">Get Quotes</span>, and the new security will be
         inserted into the price list with the retrieved price.</p></td></tr></table></div></div><div class="sect2" title="8.6.2. Setting Stock Price Manually"><div class="titlepage"><div><div><h3 class="title"><a name="invest-stockprice-manual2"></a>8.6.2. Setting Stock Price Manually</h3></div></div></div><p>If the value of the commodity (stock) changes, you can adjust the
       value by entering the <span class="guilabel"><strong>Price Editor</strong></span>, selecting the commodity, clicking on
-      <span class="guibutton">edit</span> and entering the new price.</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_peditor2.png" alt="Price Editor"><div class="caption"><p>The main price editor window, showing the list of all
+      <span class="guibutton">Edit</span> and entering the new price.</p><div class="screenshot"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="510"><tr><td><img src="figures/invest_peditor2.png" width="510" alt="Price Editor"></td></tr></table><div class="caption"><p>The main price editor window, showing the list of all
           known commodities.</p></div></div></div></div><div class="sect2" title="8.6.3. Configuring for Automatic Retrieval of Quotes"><div class="titlepage"><div><div><h3 class="title"><a name="invest-stockprice-auto2"></a>8.6.3. Configuring for Automatic Retrieval of Quotes</h3></div></div></div><p>If you have more than a couple of commodities, you will tire of
       having to update their prices constantly. <strong class="application"><code>GnuCash</code></strong> has the ability to
       automatically download the most recent price for your commodities using
@@ -109,7 +110,7 @@
       selecting the option to display the account total field <span class="quote">“<span class="quote">Total
       (USD)</span>”</span>. You will see a new column in the main window entitled
       <span class="guilabel"><strong>Total (USD)</strong></span> that will express the value of all
-      commodities in the report currency.</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_stockvalue.png" alt="Viewing Stock Value"><div class="caption"><p>Viewing the value of a stock commodity in the main
+      commodities in the report currency.</p><div class="screenshot"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="510"><tr><td><img src="figures/invest_stockvalue.png" width="510" alt="Viewing Stock Value"></td></tr></table><div class="caption"><p>Viewing the value of a stock commodity in the main
           window using the Total in Report Currency option.</p></div></div></div></div><div class="sect2" title="8.6.5. Selecting “Price Source” in Stock Value Reports"><div class="titlepage"><div><div><h3 class="title"><a name="invest-stockprice-report"></a>8.6.5. Selecting <span class="quote">“<span class="quote">Price Source</span>”</span> in Stock Value Reports</h3></div></div></div><p>Most <strong class="application"><code>GnuCash</code></strong> Asset reports have options to set/modify a number of parameters for the report.  The
        Options windows is displayed by selecting the report tab then clicking on either the <span class="guibutton">Options</span>
        icon in the <span class="emphasis"><strong>Menubar</strong></span> or selecting <span class="guimenu"><strong>Edit</strong></span> → <span class="guimenuitem"><strong>Report Options</strong></span>.  

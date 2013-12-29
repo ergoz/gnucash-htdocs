@@ -4,9 +4,18 @@
       often used when entering or manipulating transactions. These are described in the
       <a class="xref" href="ch04s03.html#account-register" title="4.3.1. Account Register &amp; General Ledger Window">Section 4.3.1, “Account Register &amp; General Ledger Window”</a> section of this document.</p><div class="sect2" title="6.3.1. Entering Directly in the Register Window"><div class="titlepage"><div><div><h3 class="title"><a name="trans-reg-enter"></a>6.3.1. Entering Directly in the Register Window</h3></div></div></div><p>The register window will look slightly different depending on the style options you have chosen.
        The following describes entering simple transactions in the basic ledger style. The cursor is placed
-       in the date field by default when the register window is opened.</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Selecting the small icon on the right of the date field drops down a date selection calender.
+       in the <span class="guilabel"><strong>date</strong></span> field by default when the register window is opened.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">When working on transactions in <strong class="application"><code>GnuCash</code></strong>, be aware that the 
+        <span class="keycap"><strong>Enter</strong></span> key and the <span class="keycap"><strong>Tab</strong></span> key behave
+        differently, and perform different actions.</p><p xmlns="">The <span class="keycap"><strong>Enter</strong></span> key moves to the first field of the next split,
+        regardless of which field you are in. If there is no next split, proceeds to the next transaction.
+        In any case, <span class="keycap"><strong>Enter</strong></span> finishes the transaction edit, and any 
+        imbalance is posted to <span class="emphasis"><strong>Imbalance-CUR</strong></span>, where <span class="emphasis"><strong>CUR</strong></span> is the
+        currency of the transaction.</p><p xmlns="">The <span class="keycap"><strong>Tab</strong></span> key moves to the next field in the current split. 
+        If it's the last field, moves to the next split, creating a new one if there isn't one. If the
+        split is blank, the <span class="keycap"><strong>Tab</strong></span> key finishes the transaction and posts any
+        imbalance to <span class="emphasis"><strong>Imbalance-CUR</strong></span>, as above.</p></td></tr></table></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Selecting the small icon on the right of the date field drops down a date selection calendar.
             Use the arrows to select the correct month and year for the transaction then select the date.
-            Selecting the icon once more will close the date selection calender. It is also possible to
+            Selecting the icon once more will close the date selection calendar. It is also possible to
             type in the date or part of the date and let <strong class="application"><code>GnuCash</code></strong> fill the rest.</p></li><li class="listitem"><p>Press <span class="keycap"><strong>Tab</strong></span> to move to or select the <span class="guilabel"><strong>Num</strong></span> field. Here you can enter a check or
             transaction number.  Pressing <span class="keycap"><strong>+</strong></span> (plus) will automatically advance the number by one from
             the last transaction to have a number.</p></li><li class="listitem"><p>Press <span class="keycap"><strong>Tab</strong></span> to move or select the <span class="guilabel"><strong>Description</strong></span> field. This field is used to enter
