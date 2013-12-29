@@ -1,0 +1,33 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>5.1. Grundlagen</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Kurs und Konzepte"><link rel="up" href="chapter_loans.html" title="Kapitel 5. Darlehen"><link rel="prev" href="chapter_loans.html" title="Kapitel 5. Darlehen"><link rel="next" href="loans_accounts1.html" title="5.2. Einrichtung der Konten"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.1. Grundlagen</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="chapter_loans.html">&lt;&lt;&lt; Zurück</a> </td><th width="60%" align="center">Kapitel 5. Darlehen</th><td width="20%" align="right"> <a accesskey="n" href="loans_accounts1.html">Weiter &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="5.1. Grundlagen"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="loans_concepts1"></a>5.1. Grundlagen</h2></div></div></div><p>Ein Darlehen ist eine finanzielle Transaktion, bei der jemand für die Nutzung fremden 
+			Geldes bezahlt. Es gibt viele bekannte Beispiele für Darlehen: Kreditkarte, Auto-Darlehen, 
+			Hypotheken-Darlehen oder Geschäfts-Darlehen.</p><div class="sect2" title="5.1.1. Begriffsbestimmung"><div class="titlepage"><div><div><h3 class="title"><a name="loans_conceptsterms2"></a>5.1.1. Begriffsbestimmung</h3></div></div></div><p>Es ist hilfreich, eine Begriffsbestimmung vorzunehmen, bevor im Detail erläutert wird, 
+				 wie Darlehen in <strong class="application"><code>GnuCash</code></strong> im einzelnen Verwaltet werden. Die unten 
+				 aufgeführten Begriffe stehen für einige der grundlegenden Ideen betreffend Darlehen. 
+				 Es ist eine gute Idee sich mit diesem Vokabular vertraut zu machen, oder zumindest auf diese 
+				 Liste zurückzugreifen, wenn sie in einem späteren Abschnitt einen unbekannten Fachausdruck 
+				 finden.</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>
+                  <span class="emphasis"><strong>Amortisierung</strong></span> - der Rückzahlungsplan, der sicherstellen soll, 
+									dass das Darlehen irgendwann zurückgezahlt wird. Die Rückzahlungsplan sieht normalerweise 
+									monatliche Zahlungen vor, die	in Zinseszahlung und Tilgung aufgeteilt sind, wobei 
+									sich die Tilgung im Verlauf des Rückzahlungszeitraums	erhöht (und die Zinszahlungen 
+									vermindert).</p></li><li class="listitem"><p>
+                  <span class="emphasis"><strong>Darlehensnehmer</strong></span> - die Person oder Firma, die die Darlehenssumme 
+									bekommt.</p></li><li class="listitem"><p>
+                  <span class="emphasis"><strong>Zahlungsausfall (Default)</strong></span> - tritt auf, wenn der Darlehensnehmer unfähig ist 
+									das Darlehen gemäß den mit dem Darlehensgeber vereinbarten Konditionen zurückzuzahlen.</p></li><li class="listitem"><p>
+                  <span class="emphasis"><strong>Stundung (Deferment)</strong></span> - ist eine zeitliche Verzögerung bei der Rückzahlung eines Darlehens</p></li><li class="listitem"><p>
+                  <span class="emphasis"><strong>Säumniszuschlag</strong></span> - ist die vereinbarte Bedingung, für verspätete Rückzahlung.</p></li><li class="listitem"><p>
+                  <span class="emphasis"><strong>Auszahlung</strong></span> - ist der Betrag, der an den Darlehensnehmer ausgezahlt wird. 
+									Bei einigen Darlehen erfolgt die Auszahlung in mehreren Portionen, das bedeutet, dass der Darlehensnehmer
+									die Darlehenssumme nicht in einer Zahlung erhält.</p></li><li class="listitem"><p>
+                  <span class="emphasis"><strong>Zinsen</strong></span> - die Kosten, die der Darlehensgeber vom Darlehensnehmer für die Nutzung des 
+									geliehenen Geldes verlangt. Diese werden normalerweise als jährlicher Prozentbetrag des Darlehensbetrages 
+									ausgedrückt, auch bekannt als <span class="emphasis"><strong>Jahreszins</strong></span>.</p></li><li class="listitem"><p>
+                  <span class="emphasis"><strong>Darlehensgeber</strong></span> – Die Firma oder Privatpersonen, die das Geld verleiht.</p></li><li class="listitem"><p>
+                  <span class="emphasis"><strong>Darlehensgebühr</strong></span> - eine Bearbeitungsgebühr, die normalerweise bei Abschluss eines Darlehensvertrags
+									vor der Darlehenssumme einbehalten wird.</p></li><li class="listitem"><p>
+                  <span class="emphasis"><strong>Darlehensbetrag</strong></span> – Der ursprüngliche Darlehensbetrag, oder der Anteil des Darlehens, der noch geschuldet wird. 
+									Wenn Sie monatliche Raten für das Darlehen bezahlen, ist ein Teil davon für die Zahlung des Zinses, und ein Teil ist Rückzahlung 
+									des Darlehensbetrags.</p></li><li class="listitem"><p>
+                  <span class="emphasis"><strong>Schuldschein (Promissory Note)</strong></span> - die rechtliche, das Darlehen betreffende 
+									Vereinbarung zwischen dem Darlehensgeber und dem Darlehensnehmer.</p></li></ul></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="chapter_loans.html">&lt;&lt;&lt; Zurück</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right"> <a accesskey="n" href="loans_accounts1.html">Weiter &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">Kapitel 5. Darlehen </td><td width="20%" align="center"><a accesskey="u" href="chapter_loans.html">Nach oben</a></td><td width="40%" align="right"> 5.2. Einrichtung der Konten</td></tr></table></div></body></html>

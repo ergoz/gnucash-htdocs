@@ -1,0 +1,94 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>3.3. Alles zusammensetzen</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Kurs und Konzepte"><link rel="up" href="chapter_accts.html" title="Kapitel 3. Konten"><link rel="prev" href="accts-types1.html" title="3.2. GnuCash-Konten"><link rel="next" href="chapter_txns.html" title="Kapitel 4. Buchungen"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.3. Alles zusammensetzen</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="accts-types1.html">&lt;&lt;&lt; Zurück</a> </td><th width="60%" align="center">Kapitel 3. Konten</th><td width="20%" align="right"> <a accesskey="n" href="chapter_txns.html">Weiter &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="3.3. Alles zusammensetzen"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="accts-examples1"></a>3.3. Alles zusammensetzen</h2></div></div></div><p>Wir wollen jetzt, mithilfe des in diesem Kapitel Gelernten, einen 
+    allgemeinen persönlichen <span class="emphasis"><strong>Kontenplan</strong></span> aufbauen. Ein 
+    Kontenplan ist einfach eine neue <strong class="application"><code>GnuCash</code></strong>-Datei,
+    in der Sie Ihre Konten angelegt haben, um Ihre Finanzen zu verfolgen. 
+    Beim Aufbau dieses Kontenplans ist die erste Aufgabe, die zu verfolgendenenden 
+    Posten den grundlegenden Kontentypen zuzuordnen. Das ist ziemlich einfach,
+    wie wir in folgendem Beispiel sehen können.</p><div class="sect2" title="3.3.1. Einfaches Beispiel"><div class="titlepage"><div><div><h3 class="title"><a name="accts-examples-situation2"></a>3.3.1. Einfaches Beispiel</h3></div></div></div><p>Wir wollen annehmen, dass Sie ein Girokonto und ein Sparkonto 
+        bei der Bank haben, dass Sie angestellt sind und deshalb Gehaltszahlungen
+        empfangen. Sie haben eine Kreditkarte (Visa), und zahlen monatlich
+        Miete, Telefon und Strom. Natürlich brauchen Sie auch Bargeld
+        für den Einkauf von Lebensmitteln. Vorerst kümmern wir uns noch nicht darum, 
+        wie viel Geld Sie auf Ihren Bankkonten haben, oder wie viele offene Rechnungen
+        Ihre Kreditkarte aufweist usw. wir wollen nur das Grundgerüst für diesen 
+        Kontenplan erzeugen.</p><p>Ihre <span class="guilabel"><strong>Aktiva</strong></span> sind das Sparkonto und das Girokonto.
+      Ihr <span class="guilabel"><strong>Fremdkapital</strong></span> ist die Kreditkarte und Ihr 
+      <span class="guilabel"><strong>Eigenkapital</strong></span> sind die Anfangskontostände Ihrer Bankkonten
+      und der Kreditkarte (auch wenn wir diese noch nicht kennen, so wissen wir doch,
+      dass es sie gibt). Sie haben <span class="guilabel"><strong>Erträge</strong></span> in Form Ihres Arbeitslohns
+      und <span class="guilabel"><strong>Aufwendungen</strong></span> in Form der Lebensmitteleinkäufe, der Miete,
+      der Strom- und Telefonrechnung, und Steuern und Sozialabgaben auf Ihr Einkommen.</p></div><div class="sect2" title="3.3.2. Grundlegende Konten der obersten Ebene"><div class="titlepage"><div><div><h3 class="title"><a name="accts-examples-toplevel2"></a>3.3.2. Grundlegende Konten der obersten Ebene</h3></div></div></div><p>Jetzt müssen Sie sich entscheiden wie Sie Ihre Konten gruppieren wollen. 
+      höchstwahrscheinlich wollen Sie jeweils Ihre <span class="emphasis"><strong>Aktiva</strong></span>, 
+      Ihr <span class="emphasis"><strong>Fremdkapital</strong></span>, Ihr <span class="emphasis"><strong>Eigenkapital</strong></span>,
+      Ihre <span class="emphasis"><strong>Erträge</strong></span>, und Ihre <span class="emphasis"><strong>Aufwendungen</strong></span> 
+      zusammenfassen. Das ist die normale Art und Weise, einen <strong class="application"><code>GnuCash</code></strong>-
+      Kontenplan aufzubauen, und es wird im hohen Maße empfohlen, dass Sie immer auf 
+      diese Art und Weise anfangen.</p><p>Durch Betätigen von 
+      <span class="guimenu"><strong>Datei</strong></span> → <span class="guimenuitem"><strong>Neue Datei</strong></span>
+      fangen Sie mit einer leeren <strong class="application"><code>GnuCash</code></strong>-Datei an. Den 
+      Assistenten zum Aufbau eines Kontenplans verlassen Sie bitte durch Druck
+      auf die Taste <span class="guibutton">Abbrechen</span>, da wir diesmal nicht einen der 
+      vorgefertigten Kontenrahmen benutzen wollen. Stattdessen werden wir
+      ganz von vorne anfangen, und die grundlegenden Kontenstrukturen selber aufbauen.
+      Im leeren <strong class="application"><code>GnuCash</code></strong>-Fenster wählen Sie bitte 
+      <span class="guimenu"><strong>Ansicht</strong></span> → <span class="guimenuitem"><strong>Neue Kontenhierarchie</strong></span>
+      aus dem Menü: 
+      Die <span class="guilabel"><strong>Konten</strong></span>-Seite öffnet sich. Zuletzt wählen Sie 
+      <span class="guimenu"><strong>Aktionen</strong></span> → <span class="guimenuitem"><strong>Neues Konto...</strong></span>.
+      </p><p>Jetzt sind Sie bereit, den grundlegenden Kontenplan aufzubauen.</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Aktiva</strong></span> (Kontoart
+            <span class="guilabel"><strong>Aktiva</strong></span>, Hauptkonto <span class="guilabel"><strong>Neues Konto der 
+          obersten Ebene</strong></span>)</p><div class="screenshot"><div class="mediaobject"><img src="figures/accts_CreateAssetsAccount.png" alt="Erstellung eines Aktivakontos"><div class="caption"><p>Dieses Bild zeigt den Dialog bei der Erstellung eines 
+                  Aktivakontos.</p></div></div></div></li><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Fremdkapital</strong></span> (Kontoart
+            <span class="guilabel"><strong>Fremdkapital</strong></span>, Hauptkonto <span class="guilabel"><strong>Neues Konto der 
+            obersten Ebene</strong></span>)</p></li><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Eigenkapital</strong></span> (Kontoart
+            <span class="guilabel"><strong>Eigenkapital</strong></span>, Hauptkonto <span class="guilabel"><strong>Neues Konto der 
+            obersten Ebene</strong></span>)</p></li><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Ertrag</strong></span> (Kontoart
+            <span class="guilabel"><strong>Ertrag</strong></span>, Hauptkonto <span class="guilabel"><strong>Neues Konto der 
+            obersten Ebene</strong></span>)</p></li><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Aufwand</strong></span> (Kontoart
+            <span class="guilabel"><strong>Aufwand</strong></span>, Hauptkonto <span class="guilabel"><strong>Neues Konto der
+              obersten Ebene
+            </strong></span>)</p></li></ol></div><p>Nachdem Sie die Konten der obersten Ebene angelegt haben, sollte die Konto-Seite
+      in <strong class="application"><code>GnuCash</code></strong> folgendermaßen aussehen:</p><div class="screenshot"><div class="mediaobject"><img src="figures/accts_toplevel.png" alt="Die grundlegenden Konten der obersten Ebene"><div class="caption"><p>Dieses Bild zeigt die grundlegenden Konten der obersten Ebene</p></div></div></div></div><div class="sect2" title="3.3.3. Unterkonten anlegen"><div class="titlepage"><div><div><h3 class="title"><a name="accts-examples-organization2"></a>3.3.3. Unterkonten anlegen</h3></div></div></div><p>Den Konten der obersten Ebene können Sie jetzt Unterkonten hinzufügen,
+      die für die tatsächlichen Buchungen gedacht sind. Beachten Sie, dass die
+      Abgabenkonten unterhalb eines Unterkontos mit Namen <span class="emphasis"><strong>Steuern</strong></span> 
+      angelegt werden. Sie können Unterkonten innerhalb von Unterkonten anlegen. 
+      Dies wird normalerweise für eine Gruppe zusammenhängender Konten getan, den 
+      Abgabenkonten in unserem Beispiel.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Tipp</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Statt 
+        <span class="guimenu"><strong>Aktionen</strong></span> → <span class="guimenuitem"><strong>Neues Konto...</strong></span>
+        aus dem Menü zu wählen, können Sie alternativ ein Unterkonto durch einen rechts-
+        Klick auf den Namen des übergeordneten Kontos und anschließende Auswahl das 
+        Eintrags <span class="guilabel"><strong>Neues Konto...</strong></span> erzeugen.
+        Es wird ein Dialog ähnlich dem unter <a class="xref" href="accts-examples1.html#accts-examples-toplevel2" title="3.3.2. Grundlegende Konten der obersten Ebene">Abschnitt 3.3.2, „Grundlegende Konten der obersten Ebene“</a>
+        dargestellten Dialog geöffnet, mit dem Unterschied, dass in diesem Dialog
+        das übergeordnete Konto bereits als Hauptkonto des neuen Kontos eingetragen ist.</p></td></tr></table></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Girokonto</strong></span> (Kontoart
+            <span class="guilabel"><strong>Bank</strong></span>, Hauptkonto
+            <span class="emphasis"><strong>Aktiva</strong></span>)</p></li><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Sparkonto</strong></span> (Kontoart
+            <span class="guilabel"><strong>Bank</strong></span>, Hauptkonto
+            <span class="emphasis"><strong>Aktiva</strong></span>)</p></li><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Visa</strong></span> (Kontoart
+            <span class="guilabel"><strong>Kreditkarte</strong></span>, Hauptkonto
+            <span class="emphasis"><strong>Fremdkapital</strong></span>)</p></li><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Gehalt</strong></span> (Kontoart
+            <span class="guilabel"><strong>Ertrag</strong></span>, Hauptkonto
+            <span class="emphasis"><strong>Ertrag</strong></span>)</p></li><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Telefon</strong></span> (Kontoart
+            <span class="guilabel"><strong>Aufwand</strong></span>, Hauptkonto
+            <span class="emphasis"><strong>Aufwand</strong></span>)</p></li><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Strom</strong></span> (Kontoart
+            <span class="guilabel"><strong>Aufwand</strong></span>, Hauptkonto
+            <span class="emphasis"><strong>Aufwand</strong></span>)</p></li><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Miete</strong></span> (Kontoart
+            <span class="guilabel"><strong>Aufwand</strong></span>, Hauptkonto
+            <span class="emphasis"><strong>Aufwand</strong></span>)</p></li><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Lebensmittel</strong></span> (Kontoart
+            <span class="guilabel"><strong>Aufwand</strong></span>, Hauptkonto
+            <span class="emphasis"><strong>Aufwand</strong></span>)</p></li><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Steuern</strong></span> (Kontoart
+            <span class="guilabel"><strong>Aufwand</strong></span>, Hauptkonto
+            <span class="emphasis"><strong>Aufwand</strong></span>)</p></li><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Einkommenssteuer</strong></span> (Kontoart
+            <span class="guilabel"><strong>Aufwand</strong></span>, Hauptkonto
+            <span class="emphasis"><strong>Aufwand:Steuer</strong></span>)</p></li><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Rentenversicherung</strong></span> (Kontoart
+            <span class="guilabel"><strong>Aufwand</strong></span>, Hauptkonto
+            <span class="emphasis"><strong>Aufwand:Steuer</strong></span>)</p></li><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Krankenversicherung</strong></span> (Kontoart
+            <span class="guilabel"><strong>Aufwand</strong></span>, Hauptkonto
+            <span class="emphasis"><strong>Aufwand:Steuer</strong></span>)</p></li><li class="listitem"><p>Kontobezeichnung <span class="guilabel"><strong>Anfangsbestand</strong></span> (Kontoart
+            <span class="guilabel"><strong>Eigenkapital</strong></span>, Hauptkonto
+            <span class="emphasis"><strong>Eigenkapital</strong></span>)</p></li></ol></div><p>Nachdem Sie diese zusätzlichen Unterkonten erzeugt haben, sollte das 
+      Resultat folgendermaßen aussehen:</p><div class="screenshot"><div class="mediaobject"><img src="figures/accts_tree.png" alt="Der grundlegende Kontenplan"><div class="caption"><p>Dieses Beispiel zeigt einen einfachen Kontenplan.</p></div></div></div><p>Speichern Sie diesen Kontenplan unter dem Namen
+      <code class="filename">gcashdata_3</code>, und auch unter <code class="filename">gcashdata_3emptyAccts</code>,
+      da wir ihn in späteren Kapiteln weiterbenutzt werden.</p><p>Sie haben jetzt einen Kontenplan erzeugt, um ein einfaches Haushalts-Budget zu verfolgen.
+      Mit diesem Grundgerüst an Konten können wir nun anfangen, die Konten mit Buchungen zu füllen.
+      Dieses Thema wird im nächsten Kapitel detailliert beschrieben.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="accts-types1.html">&lt;&lt;&lt; Zurück</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right"> <a accesskey="n" href="chapter_txns.html">Weiter &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">3.2. <strong xmlns="" class="application"><code>GnuCash</code></strong>-Konten </td><td width="20%" align="center"><a accesskey="u" href="chapter_accts.html">Nach oben</a></td><td width="40%" align="right"> Kapitel 4. Buchungen</td></tr></table></div></body></html>

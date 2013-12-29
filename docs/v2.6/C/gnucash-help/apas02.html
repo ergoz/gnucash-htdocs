@@ -1,0 +1,512 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>A.2. Yahoo Specifics</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="help.html" title="GnuCash Help Manual"><link rel="up" href="tips.html" title="Appendix A.  GnuCash Tips and tidbits"><link rel="prev" href="apas01.html" title="A.1. Finance::Quote Sources"><link rel="next" href="apas03.html" title="A.3. TIAA-CREF Specifics"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">A.2. Yahoo Specifics</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="apas01.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Appendix A. 
+		<strong xmlns="" class="application"><code>GnuCash</code></strong> Tips and tidbits
+	</th><td width="20%" align="right"> <a accesskey="n" href="apas03.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="A.2. Yahoo Specifics"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp67895872"></a>A.2. Yahoo Specifics</h2></div></div></div><div class="abstract" title="Abstract"><p class="title"><b>Abstract</b></p><p>Yahoo offers quotes from many exchanges and markets. If you are
+				not asking for US markets, you has to specify where to look. A
+				typical Yahoo symbol has the form &lt;ISIN&gt;&lt;markets suffix&gt;.
+			</p></div><div class="table"><a name="gnc-tbl-fq-yahoo-exchange-codes"></a><p class="title"><b>Table A.4. Yahoo Codes for Exchanges and Markets</b></p><div class="table-contents"><table summary="Yahoo Codes for Exchanges and Markets" border="1"><colgroup><col><col><col><col></colgroup><thead><tr><th>
+							<p>Country </p>
+						</th><th>
+							<p>Exchange </p>
+						</th><th>
+							<p>Suffix </p>
+						</th><th>
+							<p>Delay </p>
+						</th></tr></thead><tbody><tr><td>
+							<p>Argentina </p>
+						</td><td>
+							<p>Buenos Aires Stock Exchange </p>
+						</td><td>
+							<p>.BA </p>
+						</td><td>
+							<p>30 min </p>
+						</td></tr><tr><td>
+							<p>Australia </p>
+						</td><td>
+							<p>Australian Stock Exchange </p>
+						</td><td>
+							<p>.AX </p>
+						</td><td>
+							<p>20 min </p>
+						</td></tr><tr><td>
+							<p>Austria </p>
+						</td><td>
+							<p>Vienna Stock Exchange </p>
+						</td><td>
+							<p>.VI </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Brazil </p>
+						</td><td>
+							<p>BOVESPA - Sao Paolo Stock Exchange </p>
+						</td><td>
+							<p>.SA </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Canada </p>
+						</td><td>
+							<p>Toronto Stock Exchange </p>
+						</td><td>
+							<p>.TO </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Canada </p>
+						</td><td>
+							<p>TSX Venture Exchange </p>
+						</td><td>
+							<p>.V </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Chile </p>
+						</td><td>
+							<p>Santiago Stock Exchange </p>
+						</td><td>
+							<p>.SN </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>China </p>
+						</td><td>
+							<p>Shanghai Stock Exchange </p>
+						</td><td>
+							<p>.SS </p>
+						</td><td>
+							<p>30 min </p>
+						</td></tr><tr><td>
+							<p>China </p>
+						</td><td>
+							<p>Shenzhen Stock Exchange </p>
+						</td><td>
+							<p>.SZ </p>
+						</td><td>
+							<p>30 min </p>
+						</td></tr><tr><td>
+							<p>Denmark </p>
+						</td><td>
+							<p>Copenhagen Stock Exchange </p>
+						</td><td>
+							<p>.CO </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>France </p>
+						</td><td>
+							<p>Euronext </p>
+						</td><td>
+							<p>.NX </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>France </p>
+						</td><td>
+							<p>Paris Stock Exchange </p>
+						</td><td>
+							<p>.PA </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Germany </p>
+						</td><td>
+							<p>Berlin Stock Exchange </p>
+						</td><td>
+							<p>.BE </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Germany </p>
+						</td><td>
+							<p>Bremen Stock Exchange </p>
+						</td><td>
+							<p>.BM </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Germany </p>
+						</td><td>
+							<p>Dusseldorf Stock Exchange </p>
+						</td><td>
+							<p>.DU </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Germany </p>
+						</td><td>
+							<p>Frankfurt Stock Exchange </p>
+						</td><td>
+							<p>.F </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Germany </p>
+						</td><td>
+							<p>Hamburg Stock Exchange </p>
+						</td><td>
+							<p>.HM </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Germany </p>
+						</td><td>
+							<p>Hanover Stock Exchange </p>
+						</td><td>
+							<p>.HA </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Germany </p>
+						</td><td>
+							<p>Munich Stock Exchange </p>
+						</td><td>
+							<p>.MU </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Germany </p>
+						</td><td>
+							<p>Stuttgart Stock Exchange </p>
+						</td><td>
+							<p>.SG </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Germany </p>
+						</td><td>
+							<p>XETRA Stock Exchange </p>
+						</td><td>
+							<p>.DE </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Greece </p>
+						</td><td>
+							<p>Athens Stock Exchange </p>
+						</td><td>
+							<p>.AT </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Hong Kong </p>
+						</td><td>
+							<p>Hong Kong Stock Exchange </p>
+						</td><td>
+							<p>.HK </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>India </p>
+						</td><td>
+							<p>Bombay Stock Exchange </p>
+						</td><td>
+							<p>.BO </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>India </p>
+						</td><td>
+							<p>National Stock Exchange of India </p>
+						</td><td>
+							<p>.NS </p>
+						</td><td>
+							<p>Real-time** </p>
+						</td></tr><tr><td>
+							<p>Indonesia </p>
+						</td><td>
+							<p>Jakarta Stock Exchange </p>
+						</td><td>
+							<p>.JK </p>
+						</td><td>
+							<p>10 min </p>
+						</td></tr><tr><td>
+							<p>Israel </p>
+						</td><td>
+							<p>Tel Aviv Stock Exchange </p>
+						</td><td>
+							<p>.TA </p>
+						</td><td>
+							<p>20 min </p>
+						</td></tr><tr><td>
+							<p>Italy </p>
+						</td><td>
+							<p>Milan Stock Exchange </p>
+						</td><td>
+							<p>.MI </p>
+						</td><td>
+							<p>20 min </p>
+						</td></tr><tr><td>
+							<p>Japan </p>
+						</td><td>
+							<p>Nikkei Indices </p>
+						</td><td>
+							<p>N/A </p>
+						</td><td>
+							<p>30 min </p>
+						</td></tr><tr><td>
+							<p>Mexico </p>
+						</td><td>
+							<p>Mexico Stock Exchange </p>
+						</td><td>
+							<p>.MX </p>
+						</td><td>
+							<p>20 min </p>
+						</td></tr><tr><td>
+							<p>Netherlands </p>
+						</td><td>
+							<p>Amsterdam Stock Exchange </p>
+						</td><td>
+							<p>.AS </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>New Zealand </p>
+						</td><td>
+							<p>New Zealand Stock Exchange </p>
+						</td><td>
+							<p>.NZ </p>
+						</td><td>
+							<p>20 min </p>
+						</td></tr><tr><td>
+							<p>Norway </p>
+						</td><td>
+							<p>Oslo Stock Exchange </p>
+						</td><td>
+							<p>.OL </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Russia </p>
+						</td><td>
+							<p>Moscow Interbank Currency Exchange (MICEX) </p>
+						</td><td>
+							<p>.ME </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Singapore </p>
+						</td><td>
+							<p>Singapore Stock Exchange </p>
+						</td><td>
+							<p>.SI </p>
+						</td><td>
+							<p>20 min </p>
+						</td></tr><tr><td>
+							<p>South Korea </p>
+						</td><td>
+							<p>Korea Stock Exchange </p>
+						</td><td>
+							<p>.KS </p>
+						</td><td>
+							<p>20 min </p>
+						</td></tr><tr><td>
+							<p>South Korea </p>
+						</td><td>
+							<p>KOSDAQ </p>
+						</td><td>
+							<p>.KQ </p>
+						</td><td>
+							<p>20 min </p>
+						</td></tr><tr><td>
+							<p>Spain </p>
+						</td><td>
+							<p>Barcelona Stock Exchange </p>
+						</td><td>
+							<p>.BC </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Spain </p>
+						</td><td>
+							<p>Bilbao Stock Exchange </p>
+						</td><td>
+							<p>.BI </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Spain </p>
+						</td><td>
+							<p>Madrid Fixed Income Market </p>
+						</td><td>
+							<p>.MF </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Spain </p>
+						</td><td>
+							<p>Madrid SE C.A.T.S. </p>
+						</td><td>
+							<p>.MC </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Spain </p>
+						</td><td>
+							<p>Madrid Stock Exchange </p>
+						</td><td>
+							<p>.MA </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Sweden </p>
+						</td><td>
+							<p>Stockholm Stock Exchange </p>
+						</td><td>
+							<p>.ST </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>Switzerland </p>
+						</td><td>
+							<p>Swiss Exchange </p>
+						</td><td>
+							<p>.SW </p>
+						</td><td>
+							<p>30 min </p>
+						</td></tr><tr><td>
+							<p>Taiwan </p>
+						</td><td>
+							<p>Taiwan OTC Exchange </p>
+						</td><td>
+							<p>.TWO </p>
+						</td><td>
+							<p>20 min </p>
+						</td></tr><tr><td>
+							<p>Taiwan </p>
+						</td><td>
+							<p>Taiwan Stock Exchange </p>
+						</td><td>
+							<p>.TW </p>
+						</td><td>
+							<p>20 min </p>
+						</td></tr><tr><td>
+							<p>United Kingdom </p>
+						</td><td>
+							<p>FTSE Indices </p>
+						</td><td>
+							<p>N/A </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>United Kingdom </p>
+						</td><td>
+							<p>London Stock Exchange </p>
+						</td><td>
+							<p>.L </p>
+						</td><td>
+							<p>20 min </p>
+						</td></tr><tr><td>
+							<p>United Kingdom </p>
+						</td><td>
+							<p>London Stock Exchange </p>
+						</td><td>
+							<p>.IL </p>
+						</td><td>
+							<p>20 min </p>
+						</td></tr><tr><td>
+							<p>United States of America </p>
+						</td><td>
+							<p>BATS Exchange </p>
+						</td><td>
+							<p>N/A </p>
+						</td><td>
+							<p>Real-time </p>
+						</td></tr><tr><td>
+							<p>United States of America </p>
+						</td><td>
+							<p>Chicago Board of Trade </p>
+						</td><td>
+							<p>.CBT </p>
+						</td><td>
+							<p>10 min </p>
+						</td></tr><tr><td>
+							<p>United States of America </p>
+						</td><td>
+							<p>Chicago Mercantile Exchange </p>
+						</td><td>
+							<p>.CME </p>
+						</td><td>
+							<p>10 min </p>
+						</td></tr><tr><td>
+							<p>United States of America </p>
+						</td><td>
+							<p>Dow Jones Indexes </p>
+						</td><td>
+							<p>N/A </p>
+						</td><td>
+							<p>Real-time </p>
+						</td></tr><tr><td>
+							<p>United States of America </p>
+						</td><td>
+							<p>NASDAQ Stock Exchange </p>
+						</td><td>
+							<p>N/A </p>
+						</td><td>
+							<p>Real-time* </p>
+						</td></tr><tr><td>
+							<p>United States of America </p>
+						</td><td>
+							<p>New York Board of Trade </p>
+						</td><td>
+							<p>.NYB </p>
+						</td><td>
+							<p>30 min </p>
+						</td></tr><tr><td>
+							<p>United States of America </p>
+						</td><td>
+							<p>New York Commodities Exchange </p>
+						</td><td>
+							<p>.CMX </p>
+						</td><td>
+							<p>30 min </p>
+						</td></tr><tr><td>
+							<p>United States of America </p>
+						</td><td>
+							<p>New York Mercantile Exchange </p>
+						</td><td>
+							<p>.NYM </p>
+						</td><td>
+							<p>30 min </p>
+						</td></tr><tr><td>
+							<p>United States of America </p>
+						</td><td>
+							<p>New York Stock Exchange </p>
+						</td><td>
+							<p>N/A </p>
+						</td><td>
+							<p>Real-time* </p>
+						</td></tr><tr><td>
+							<p>United States of America </p>
+						</td><td>
+							<p>NYSE Mkt </p>
+						</td><td>
+							<p>N/A </p>
+						</td><td>
+							<p>Real-time* </p>
+						</td></tr><tr><td>
+							<p>United States of America </p>
+						</td><td>
+							<p>OTC Bulletin Board Market </p>
+						</td><td>
+							<p>N/A </p>
+						</td><td>
+							<p>Real-time* </p>
+						</td></tr><tr><td>
+							<p>United States of America </p>
+						</td><td>
+							<p>OTC Markets Group </p>
+						</td><td>
+							<p>N/A </p>
+						</td><td>
+							<p>15 min </p>
+						</td></tr><tr><td>
+							<p>United States of America </p>
+						</td><td>
+							<p>S &amp; P Indices </p>
+						</td><td>
+							<p>N/A </p>
+						</td><td>
+							<p>Real-time </p>
+						</td></tr></tbody></table></div></div><br class="table-break"><p>Source:
+			http://help.yahoo.com/l/us/yahoo/finance/quotes/fitadelay.html
+			queried at 2012-09-22.</p></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="apas01.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="help.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="apas03.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">A.1. Finance::Quote Sources </td><td width="20%" align="center"><a accesskey="u" href="tips.html">Up</a></td><td width="40%" align="right"> A.3. TIAA-CREF Specifics</td></tr></table></div></body></html>

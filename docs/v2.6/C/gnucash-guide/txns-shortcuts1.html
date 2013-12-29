@@ -1,0 +1,60 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>4.4. Using Entry Shortcuts</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_txns.html" title="Chapter 4. Transactions"><link rel="prev" href="txns-regstyle1.html" title="4.3. Choosing a Register Style"><link rel="next" href="txns-reconcile1.html" title="4.5. Reconciliation"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">4.4. Using Entry Shortcuts</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="txns-regstyle1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 4. Transactions</th><td width="20%" align="right"> <a accesskey="n" href="txns-reconcile1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="4.4. Using Entry Shortcuts"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="txns-shortcuts1"></a>4.4. Using Entry Shortcuts</h2></div></div></div><p><strong class="application"><code>GnuCash</code></strong> provides several time-saving shortcuts for entering your
+    data. When you type the first few characters of a description that you
+    have used before, the QuickFill feature automatically fills in the rest of
+    the transaction as you last entered it. When you type in the first
+    characters of an account name in either the <span class="guilabel"><strong>Transfer</strong></span>
+    field of the transaction line or the <span class="guilabel"><strong>Account</strong></span> field of
+    the split line, QuickFill will automatically complete the name from your
+    account list. It also helps you with entering sub-accounts in these
+    fields: simply type the first characters of the parent account name
+    followed by a colon and the first characters of the sub-account name. For
+    example, to enter <span class="emphasis"><strong>Assets:Checking</strong></span>, you might type
+    <strong class="userinput"><code>A:C</code></strong> and let <strong class="application"><code>GnuCash</code></strong> fill in the rest.</p><p>Register keyboard shortcuts also save you time, and <strong class="application"><code>GnuCash</code></strong> provides
+    several of them. In the date field, you can type:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="keycap"><strong>+</strong></span> or <span class="keycap"><strong>=</strong></span> to increment the date
+        and <span class="keycap"><strong>-</strong></span> or <span class="keycap"><strong>_</strong></span> to decrement the
+        date</p></li><li class="listitem"><p><span class="keycap"><strong>]</strong></span> or <span class="keycap"><strong>}</strong></span> to increment the month
+        and <span class="keycap"><strong>[</strong></span> or <span class="keycap"><strong>{</strong></span> to decrement the
+        month</p></li><li class="listitem"><p><span class="keycap"><strong>M</strong></span> or <span class="keycap"><strong>m</strong></span> to enter the first date
+        of the month</p></li><li class="listitem"><p><span class="keycap"><strong>H</strong></span> or <span class="keycap"><strong>h</strong></span> to enter the last date
+        of the month</p></li><li class="listitem"><p><span class="keycap"><strong>Y</strong></span> or <span class="keycap"><strong>y</strong></span> to enter the first date
+        of the year</p></li><li class="listitem"><p><span class="keycap"><strong>R</strong></span> or <span class="keycap"><strong>r</strong></span> to enter the last date
+        of the year</p></li><li class="listitem"><p><span class="keycap"><strong>T</strong></span> or <span class="keycap"><strong>t</strong></span> to enter today’s
+        date</p></li></ul></div><p>In the <span class="guilabel"><strong>Num</strong></span> field of the transaction line, you
+    can type <span class="keycap"><strong>+</strong></span> to increment the transaction number from the
+    last one you typed in. Typing <span class="keycap"><strong>-</strong></span> will decrement the
+    number. This will also work in the <span class="guilabel"><strong>Action</strong></span> field of
+    the split line, if you choose to enter split numbers there. The
+    <span class="guilabel"><strong>Action</strong></span> field also supports QuickFill - if you type
+    the first characters of a common action (such as
+    <span class="guilabel"><strong>Deposit</strong></span>), <strong class="application"><code>GnuCash</code></strong> will fill in the rest.</p><p>The <span class="guilabel"><strong>Transfer</strong></span> field supports QuickFill
+    of account names.  You can start typing an account name and
+    <strong class="application"><code>GnuCash</code></strong> will fill in the remaining part of the name.  Typing the
+    separator character at any time will complete the current level of
+    the account name, leaving the cursor positioned to start the next
+    level of account name.  For example, typing <span class="keycap"><strong>A:C</strong></span> the
+    standard set of account names will complete to the
+    <span class="emphasis"><strong>Assets:Checking</strong></span> account.  You can also type the
+    <span class="keycap"><strong>Menu</strong></span> or Ctrl+Down keys in this
+    field to pop up a list of all account names.</p><p>In any of the amount fields, you can use a built-in calculator.
+    Simply type in the first value, followed by <span class="keycap"><strong>+</strong></span>,
+    <span class="keycap"><strong>-</strong></span>, <span class="keycap"><strong>*</strong></span>, or <span class="keycap"><strong>/</strong></span>, then type
+    in the second value. <strong class="application"><code>GnuCash</code></strong> will perform the calculation and return the
+    resulting value to the amount field when you press the
+    <span class="keycap"><strong>Tab</strong></span> key.</p><p>All of the menu items have access keys defined, and these are marked
+    by underlined characters in the menu names. Press <span class="keycap"><strong>Alt</strong></span> +
+    [underlined character] to bring up the menu, then select an item by typing
+    its underlined character. For example, typing Alt+A brings up the Actions menu, then typing
+    <span class="keycap"><strong>P</strong></span> will split the transaction. A few of the menu items
+    also have shortcut keys that immediately invoke the command (typically
+    using the <span class="keycap"><strong>Ctrl</strong></span> key).  These shortcuts are listed next
+    to the item.</p><p>To move around the register, use these keys to save time:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="keycap"><strong>Tab</strong></span> to move to the next field, Shift+Tab to move to the previous field</p></li><li class="listitem"><p><span class="keycap"><strong>Home</strong></span> to move to the beginning of the field,
+        <span class="keycap"><strong>End</strong></span> to move to the end of the field</p></li><li class="listitem"><p><span class="keycap"><strong>Enter</strong></span> or <span class="keycap"><strong>↓</strong></span> to move to the next
+        transaction, <span class="keycap"><strong>↑</strong></span> to move to the previous
+        transaction</p></li><li class="listitem"><p><span class="keycap"><strong>Page Up</strong></span> to move up one screen, <span class="keycap"><strong>Page
+        Down</strong></span> to move down one screen</p></li><li class="listitem"><p>Shift+Page Up to go to the first transaction, Shift+Page Down to go to the last transaction</p></li></ul></div><p>In the <span class="guilabel"><strong>Reconcile</strong></span> window you can use these
+    keyboard shortcuts:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="keycap"><strong>Tab</strong></span> moves to the next box and
+        Shift+Tab
+        moves to the previous
+        box</p></li><li class="listitem"><p>Space bar toggles the status between reconciled and not
+        reconciled</p></li><li class="listitem"><p><span class="keycap"><strong>↑</strong></span> and <span class="keycap"><strong>↓</strong></span> navigate through the
+        entries within the current box</p></li></ul></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="txns-regstyle1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="txns-reconcile1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">4.3. Choosing a Register Style </td><td width="20%" align="center"><a accesskey="u" href="chapter_txns.html">Up</a></td><td width="40%" align="right"> 4.5. Reconciliation</td></tr></table></div></body></html>

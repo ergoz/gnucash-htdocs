@@ -1,0 +1,151 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>1.5. Installation</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Kurs und Konzepte"><link rel="up" href="chapter_oview.html" title="Kapitel 1. Übersicht"><link rel="prev" href="oview-reasons1.html" title="1.4. 10 Gründe GnuCash zu benutzen"><link rel="next" href="chapter_basics.html" title="Kapitel 2. Die Grundlagen"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">1.5. Installation</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="oview-reasons1.html">&lt;&lt;&lt; Zurück</a> </td><th width="60%" align="center">Kapitel 1. Übersicht</th><td width="20%" align="right"> <a accesskey="n" href="chapter_basics.html">Weiter &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="1.5. Installation"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="oview-install1"></a>1.5. Installation</h2></div></div></div><a class="indexterm" name="idp55535376"></a><p>
+      Die Installation von GnuCash ist normalerweise sehr einfach, denn die
+      meisten modernen Linuxdistributionen stellen GnuCash vorkompiliert
+      und gebrauchsfertig bereit. Es ist sogar wahrscheinlich, dass
+      GnuCash bereits installiert ist. Sollte dies nicht der Fall sein,
+      ist es am einfachsten, es von der Installations-CD ihrer
+      Distribution zu installieren.
+    </p><div class="sect2" title="1.5.1. GnuCash"><div class="titlepage"><div><div><h3 class="title"><a name="oview-install-gnc"></a>1.5.1. GnuCash</h3></div></div></div><a class="indexterm" name="idp55538016"></a><p>
+        Für den Fall, dass ihre aktuelle Linux Distribution GnuCash nicht
+        enthält, oder falls Sie eine andere Version installieren wollen,
+        bietet die <a class="ulink" href="http://www.gnucash.org/" target="_top">GnuCash
+          Homepage
+        </a>
+        detaillierte Informationen zur Installation von
+        GnuCash.  Sie können sich dazu auch die README Datei im Quellcode
+        ansehen.  Build Anweisungen finden Sie
+        bei: <a class="ulink" href="http://wiki.gnucash.org/wiki/Building" target="_top">wiki/Building</a>.
+      </p><p>
+        Seit Version 2.4.0 kann GnuCash zusätzlich zu XML, auch SQLite,
+        MySQL oder PostgreSQL Datenbanken benutzen, um die Daten zu
+        speichern.  Ähnlich wie GnuCash muss auch das gewünschte
+        SQL-backend installiert werden.
+      </p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="warning" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/warning.png"></img></td><th align="left" valign="top">Warnung</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns=""> GnuCash lädt beim Öffnen einer Datei/Datenbank
+          weiterhin alle Daten vollständig in den Arbeitsspeicher. Daher
+          ist GnuCash auch mit SQL-backend nicht mehrplatzfähig!  Bei
+          Verwendung der SQL-backends erhalten Sie keine Warnung, wenn die
+          Datei von einer anderen GnuCash Instanz geöffnet und verändert
+          wird!
+        </p></td></tr></table></div><p>
+        Um festzustellen, mit welchen Datenbank Optionen GnuCash
+        kompiliert wurde, gehen Sie auf
+        <span class="guimenu"><strong>Datei</strong></span> → <span class="guimenuitem"><strong>Speichern
+            unter…
+          </strong></span>
+         und klappen die
+        Liste <span class="guilabel"><strong>Dateiformat</strong></span> auf:
+        
+        </p><div class="screenshot"><div class="mediaobject"><img src="figures/oview_backends.png" alt="Verfügbare Dateiformate"><div class="caption"><p>Die Abbildung zeigt die verfügbaren
+                Dateiformate.
+              </p></div></div></div><p>
+      </p><p>
+        Die Liste zeigt neben XML die von GnuCash unterstützten
+        SQL-backends und zwar auch dann, wenn diese noch nicht
+        installiert oder für GnuCash eingerichtet sind.  Wird als
+        Dateiformat nur XML angezeigt, müssen Sie eine andere GnuCash
+        Version installieren oder selbst kompilieren, um das SQL-backend
+        nutzen zu können.  Genauere Informationen dazu finden Sie auf
+        der GnuCash Homepage.
+      </p><p>
+        Unterstützt GnuCash das gewünschte SQL-backend, muss dieses auf
+        Ihrem System installiert und, im Falle von MySQL oder
+        PostgreSQL, für die Benutzung mit GnuCash eingerichtet werden.
+      </p><p>
+        MySQL und PostgreSQL basieren auf dem Client-Server-Modell, was
+        die Einrichtung des jeweiligen Servers erforderlich macht.  In
+        den nachfolgenden Beispielen wird jeweils die Einrichtung der
+        folgenden Datenbankverbindung beschrieben:
+      </p><div class="screenshot"><div class="mediaobject"><img src="figures/oview_backends_config.png" alt="Einstellungen einer Datenbankverbindung"><div class="caption"><p>Die Abbildung zeigt die Einstellungen einer
+              Datenbankverbindung.
+            </p></div></div></div></div><div class="sect2" title="1.5.2. Installation von SQLite"><div class="titlepage"><div><div><h3 class="title"><a name="oview-install-sqlite"></a>1.5.2. Installation von SQLite</h3></div></div></div><a class="indexterm" name="idp55757888"></a><p>Sofort nach der Installation des SQLite3 Quellpakets steht SQLite als backend zur Verfügung.
+        Weitere Einstellungen sind nicht erforderlich. 
+        Wählen Sie im Dialog <span class="guilabel"><strong>Speichern als…</strong></span> <span class="quote">„<span class="quote">sqlite</span>“</span>, wird
+        eine entsprechende Datenbank in einer einzigen Datei mit dem von Ihnen gewählten Namen 
+        in dem von Ihnen gewählten Verzeichnis angelegt.
+      </p><p>Von der Kommandozeile können Sie die Datenbank öffnen mit:
+</p><pre class="programlisting">
+sqlite3 meinedatei.gnucash
+</pre><p>
+      </p><p>
+        und die Liste der erstellten Tabellen anzeigen lassen mit:
+</p><pre class="programlisting">
+.tables
+</pre><p>
+      </p></div><div class="sect2" title="1.5.3. Installation und Konfiguration von MySQL"><div class="titlepage"><div><div><h3 class="title"><a name="oview-install-mysql"></a>1.5.3. Installation und Konfiguration von MySQL</h3></div></div></div><a class="indexterm" name="idp55764400"></a><p>Laden Sie MySQL aus den Quellen Ihrer Distribution oder laden Sie es von
+        <a class="ulink" href="http://www.mysql.de" target="_top">
+          <em class="citetitle">www.mysql.de</em>
+        </a>
+        herunter
+        und installieren Sie es mit den Default Einstellungen.  
+        In Ubuntu 10.04 LTS erledigen Sie das mit
+</p><pre class="programlisting">
+sudo apt-get install mysql-server
+</pre><p>
+         
+      </p><p>Bei der Installation werden Sie aufgefordert, das Passwort für das MySQL Administratorkonto 
+        <span class="emphasis"><strong>root</strong></span> einzugeben (nicht zu verwechseln mit dem Ubuntu Administrator).
+        Anschließend läuft der Server.
+      </p><p>
+        Von der Kommandozeile melden Sie sich als MySQL-Administrator <span class="emphasis"><strong>root</strong></span> bei dem MySQL-Client an:
+</p><pre class="programlisting">
+mysql -u root -p
+</pre><p>
+      </p><p>
+        Legen Sie dann einen neuen Benutzer <span class="emphasis"><strong>gncuser</strong></span> mit dem password 'gncpw' an:
+</p><pre class="programlisting">
+CREATE USER 'gncuser'@'localhost' IDENTIFIED BY 'gncpw';
+GRANT ALL PRIVILEGES ON *.* TO 'gncuser'@'localhost';
+</pre><p>
+      </p><p>
+        Wählen Sie nun in GnuCash als Dateiformat <span class="quote">„<span class="quote">mysql</span>“</span> und geben die
+        oben gezeigten Parametern für die Datenbankverbindung ein.  
+        Nachdem Sie die Rückfrage, ob eine neue Datenbank angelegt werden soll bestätigt haben, 
+        wird diese in MySQL erstellt.
+      </p><p>
+        Von der Kommandozeile können Sie sich nun die erstellten Tabellen ansehen mit:
+</p><pre class="programlisting">
+SHOW DATABASES;
+USE gnucash;
+SHOW tables;
+</pre><p>
+      </p></div><div class="sect2" title="1.5.4. Installation und Konfiguration von PostgreSQL"><div class="titlepage"><div><div><h3 class="title"><a name="oview-install-postgres"></a>1.5.4. Installation und Konfiguration von PostgreSQL</h3></div></div></div><a class="indexterm" name="idp55775168"></a><p>Laden Sie PostgreSQL aus den Quellen Ihrer Distribution oder laden Sie es von
+        <a class="ulink" href="http://www.postgresql.org" target="_top">
+          <em class="citetitle">www.postgresql.org</em>
+        </a>
+        herunter. 
+        Sie benötigen mindestens Version 8.4 (zur Zeit die neueste stabile Version). 
+        Installieren Sie es mit den Default Einstellungen.  In Ubuntu 10.04 LTS erledigen Sie das mit
+</p><pre class="programlisting">
+sudo apt-get install postgresql
+</pre><p>
+         
+      </p><p>
+        Anschließend läuft der Server und das Postgres Administrator Konto <span class="emphasis"><strong>postgres</strong></span> ist eingerichtet.
+      </p><p>
+        Legen Sie nun das Postgres Benutzerkonto <span class="emphasis"><strong>gncuser</strong></span> an:
+</p><pre class="programlisting">
+sudo -u postgres createuser -dRSP gncuser
+</pre><p>
+         
+      </p><p>
+        Die Optionen dRSP bewirken, dass <span class="emphasis"><strong>gncuser</strong></span> Datenbanken anlegen kann (d), 
+        keine neuen Benutzer anlegen kann (R), nicht Administrator ist (S) und
+        sich durch ein Passwort ausweisen muss (P), welches Sie an dieser Stelle
+        eingeben müssen.
+      </p><p>
+        Wählen Sie nun in GnuCash als Dateiformat <span class="quote">„<span class="quote">postgres</span>“</span> und geben die
+        oben gezeigten Parametern für die Datenbankverbindung ein.  
+        Nachdem Sie die Rückfrage, ob eine neue Datenbank angelegt werden soll bestätigt haben, 
+        wird diese in Postgres erstellt.
+      </p><p>
+        Von der Kommandozeile können Sie sich nun in den Postgres Client <span class="guilabel"><strong>psql</strong></span> als
+        Postgres Administrator einloggen:
+</p><pre class="programlisting">
+sudo -u postgres postgres psql -dgnucash
+</pre><p>
+      </p><p>
+        und die Liste der erstellten Tabellen anzeigen lassen mit:
+</p><pre class="programlisting">
+gnucash=# \d
+</pre><p>
+      </p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="oview-reasons1.html">&lt;&lt;&lt; Zurück</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right"> <a accesskey="n" href="chapter_basics.html">Weiter &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">1.4. 10 Gründe GnuCash zu benutzen </td><td width="20%" align="center"><a accesskey="u" href="chapter_oview.html">Nach oben</a></td><td width="40%" align="right"> Kapitel 2. Die Grundlagen</td></tr></table></div></body></html>

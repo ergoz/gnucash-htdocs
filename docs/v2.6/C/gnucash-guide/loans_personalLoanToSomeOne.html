@@ -1,0 +1,50 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>7.5. A Personal Loan to a friend (How-To)</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_loans.html" title="Chapter 7. Loans"><link rel="prev" href="loans_mortgage1.html" title="7.4. House Mortgage (How-To)"><link rel="next" href="loans_CarLoan.html" title="7.6. Automobile Loan (How-To)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.5. A Personal Loan to a friend (How-To)</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="loans_mortgage1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 7. Loans</th><td width="20%" align="right"> <a accesskey="n" href="loans_CarLoan.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="7.5. A Personal Loan to a friend (How-To)"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="loans_personalLoanToSomeOne"></a>7.5. A Personal Loan to a friend (How-To)</h2></div></div></div><p>It is not always you are borrowing money from the bank, sometimes
+    you borrow money from your family, or perhaps even lend money to a friend.
+    This How-To chapter will describe one way to handle lending money to a
+    friend.</p><p>We are basing this How-To on the following generic account
+    structure.</p><div class="literallayout"><p><br>
+-Asset<br>
+   -Bank <br>
+        -Bank Account<br>
+   -Money owed to you<br>
+        -Person<br>
+-Income<br>
+   -Interest Income<br>
+        -Person<br>
+  </p></div><p>This example will show how to track a personal loan of 2,000 USD
+    (default currency) to your friend Peter</p><div class="sect2" title="7.5.1. Loan Specifications"><div class="titlepage"><div><div><h3 class="title"><a name="loans_personalLoanToSomeOne_loan"></a>7.5.1. Loan Specifications</h3></div></div></div><p>Peter wants to borrow $2,000 dollars from you and plans to pay you
+      back monthly for the next 18 months. Since he is your friend, (but not
+      that close) you both agree on a yearly interest rate of 5%.</p><p>In summary we have the below details. Peter’s loan details:
+      </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Pinciple Amount - $2,000</p></li><li class="listitem"><p>Term - 18 months with 12 payments per year</p></li><li class="listitem"><p>Annual Percentage Rate: 5%</p></li><li class="listitem"><p>Monthly Payment : ??</p></li></ul></div><p>So how do you calculate the Monthly Payment?</p><p>You have a number of different options, like paper and pen, 
+      Linux Calculator, Open Office’s Calc module, but the easiest is to use
+      <strong class="application"><code>GnuCash</code></strong> <span class="guilabel"><strong>Loan Repayment Calculator</strong></span>. This tells you that the Monthly Payment
+      should be $115.56.</p><p>But you need to know how much of this is Interest and how much is
+      Principal to be able to do a proper bookkeeping. For this you need a 
+      more powerful tool, something like the <strong class="application"><code>Calc</code></strong> module in 
+      <strong class="application"><code>OpenOffice.org</code></strong>, and
+      in particular the <acronym class="acronym">PMT</acronym> function.</p><div class="screenshot"><div class="mediaobject"><img src="figures/loans_PrivateLoanCalculation.png" alt="Calculation of Private Loan details"><div class="caption"><p>Detailed view over the private loan to
+          Peter</p></div></div></div></div><div class="sect2" title="7.5.2. Accounts for the loan"><div class="titlepage"><div><div><h3 class="title"><a name="loans_personalLoanToSomeOne_accounts"></a>7.5.2. Accounts for the loan</h3></div></div></div><p>Let’s start with the following accounts (all accounts have the
+      same currency, in this case USD)</p><div class="literallayout"><p><br>
+Assets:Bank:USD<br>
+Assets:Money owed to you:Peter<br>
+Income:Interest Income:Peter<br>
+Equity:Opening Balances:USD<br>
+  </p></div></div><div class="sect2" title="7.5.3. Lending the money"><div class="titlepage"><div><div><h3 class="title"><a name="loans_personalLoanToSomeOne_InitialSetup"></a>7.5.3. Lending the money</h3></div></div></div><p>When you have lended money to your friend, you have in fact moved
+      money from an Asset account (like Bank, Checking or similar) to your
+      Asset account <span class="emphasis"><strong>Money owed to you</strong></span>. To record this you enter the
+      following transaction into the <span class="emphasis"><strong>Assets:Money owed to you:Friend</strong></span>
+      account.</p><div class="table"><a name="idp59254656"></a><p class="title"><b>Table 7.2. Personal loan to a Friend</b></p><div class="table-contents"><table summary="Personal loan to a Friend" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td>Account</td><td>Increase</td><td>Decrease</td></tr><tr><td>Assets:Money owed to you:Friend</td><td>$2,000</td><td> </td></tr><tr><td>Assets:Bank:USD</td><td> </td><td>$2,000</td></tr></tbody></table></div></div><p><br class="table-break"></p><div class="screenshot"><div class="mediaobject"><img src="figures/loans_PrivateLoanInitial.png" alt="Lended money"><div class="caption"><p>Chart of Accounts after lending
+          money</p></div></div></div></div><div class="sect2" title="7.5.4. Receiving first payment"><div class="titlepage"><div><div><h3 class="title"><a name="loans_personalLoanToSomeOne_FirstPayment"></a>7.5.4. Receiving first payment</h3></div></div></div><p>When the first payment ($115.56) is received, you will need to
+      determine how much is for the principal loan, and how much is for the
+      loan interest.</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Outstanding loan amount this period = $2,000</p></li><li class="listitem"><p>Payment per month = $115.56</p></li><li class="listitem"><p>Payment breakdown</p></li><li class="listitem"><p>5%/12 * $2,000 = $8.33 Interest</p></li><li class="listitem"><p>$115.56 - $8.33 = $107.23 Principal</p></li></ul></div><p>This can be translated to the following <strong class="application"><code>GnuCash</code></strong> entry</p><div class="screenshot"><div class="mediaobject"><img src="figures/loans_PrivateLoanFirstPayment.png" alt="First payment"><div class="caption"><p>Detailed view over first payment</p></div></div></div><p>The balance on Peter’s loan is now $2,000 - $107.23 =
+      $1,892.77</p></div><div class="sect2" title="7.5.5. Receiving second payment"><div class="titlepage"><div><div><h3 class="title"><a name="loans_personalLoanToSomeOne_SecondPayment"></a>7.5.5. Receiving second payment</h3></div></div></div><p>When the second payment ($115.56) is received, you will again need
+      to determine how much is for the principal loan, and how much is for the
+      loan interest.</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Outstanding loan amount this period = $1,892.77</p></li><li class="listitem"><p>Payment per month = $115.56</p></li><li class="listitem"><p>Payment breakdown</p></li><li class="listitem"><p>5%/12 * $1,892.77 = $7.89 Interest</p></li><li class="listitem"><p>$115.56 - $7.89 = $107.67 Principal</p></li></ul></div><p>This can be translated to the following <strong class="application"><code>GnuCash</code></strong> entry</p><div class="screenshot"><div class="mediaobject"><img src="figures/loans_PrivateLoanSecondPayment.png" alt="Second payment"><div class="caption"><p>Detailed view over the second
+          payment</p></div></div></div><p>The balance on Peter’s loan is now $1,892.77 - $107.67 =
+      $1,785.10</p><p>The Chart of accounts looks now like this</p><div class="screenshot"><div class="mediaobject"><img src="figures/loans_PrivateLoanSecondPaymentAccounts.png" alt="Chart of Accounts after second payment"><div class="caption"><p>Chart of Accounts after second
+          payment</p></div></div></div><p>As you can see, the interest varies for every month, as well as
+      the principal amount. So for every payment you receive you need to
+      calculate the proper amounts for your various split entries.</p><p>The interest amount will be less and less for every payment (since
+      it is calculated on a smaller loan amount all the time), until the last
+      payment where it is more or less 0. Please review the Figure of Detailed
+      view over private loan to Peter for more details</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="loans_mortgage1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="loans_CarLoan.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">7.4. House Mortgage (How-To) </td><td width="20%" align="center"><a accesskey="u" href="chapter_loans.html">Up</a></td><td width="40%" align="right"> 7.6. Automobile Loan (How-To)</td></tr></table></div></body></html>

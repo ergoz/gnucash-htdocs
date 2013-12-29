@@ -1,0 +1,60 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2.1. Accounting Concepts</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_basics.html" title="Chapter 2. The Basics"><link rel="prev" href="chapter_basics.html" title="Chapter 2. The Basics"><link rel="next" href="basics-entry1.html" title="2.2. Data Entry Concepts"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">2.1. Accounting Concepts</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="chapter_basics.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 2. The Basics</th><td width="20%" align="right"> <a accesskey="n" href="basics-entry1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="2.1. Accounting Concepts"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="basics-accounting1"></a>2.1. Accounting Concepts</h2></div></div></div><p><strong class="application"><code>GnuCash</code></strong> is easy enough to use that you do not need to have a
+    complete understanding of accounting principles to find it useful.
+    However, you will find that some basic accounting knowledge will prove to
+    be invaluable as <strong class="application"><code>GnuCash</code></strong> was designed using these principles as a
+    template. It is highly recommended that you understand this section of the
+    guide before proceeding.</p><div class="sect2" title="2.1.1. The 5 Basic Accounts"><div class="titlepage"><div><div><h3 class="title"><a name="basics-accounting52"></a>2.1.1. The 5 Basic Accounts</h3></div></div></div><p>Basic accounting rules group all finance related things into 5
+      fundamental types of <span class="quote">“<span class="quote">accounts</span>”</span>. That is, everything that
+      accounting deals with can be placed into one of these 5 accounts:</p><div class="variablelist" title="Account types"><p class="title"><b>Account types</b></p><dl><dt><span class="term"><strong><span class="emphasis"><strong>Assets</strong></span></strong></span></dt><dd><p>Things you own</p></dd><dt><span class="term"><strong><span class="emphasis"><strong>Liabilities</strong></span></strong></span></dt><dd><p>Things you owe</p></dd><dt><span class="term"><strong><span class="emphasis"><strong>Equity</strong></span></strong></span></dt><dd><p>Overall net worth</p></dd><dt><span class="term"><strong><span class="emphasis"><strong>Income</strong></span></strong></span></dt><dd><p>Increases the value of your
+            accounts</p></dd><dt><span class="term"><strong><span class="emphasis"><strong>Expenses</strong></span></strong></span></dt><dd><p>Decreases the value of your
+            accounts</p></dd></dl></div><p>It is clear that it is possible to categorize your financial world
+      into these 5 groups. For example, the cash in your bank account is an
+      asset, your mortgage is a liability, your paycheck is income, and the
+      cost of dinner last night is an expense.</p></div><div class="sect2" title="2.1.2. The Accounting Equation"><div class="titlepage"><div><div><h3 class="title"><a name="basics-accountingequation2"></a>2.1.2. The Accounting Equation</h3></div></div></div><p>With the 5 basic accounts defined, what is the relationship
+      between them? How does one type of account affect the others? Firstly,
+      equity is defined by assets and liability. That is, your net worth is
+      calculated by subtracting your liabilities from your assets:</p><p><span class="emphasis"><strong>Assets - Liabilities = Equity</strong></span></p><p>Furthermore, you can increase your equity through income, and
+      decrease equity through expenses. This makes sense of course, when you
+      receive a paycheck you become <span class="quote">“<span class="quote">richer</span>”</span> and when you pay for dinner you
+      become <span class="quote">“<span class="quote">poorer</span>”</span>. This is expressed mathematically in what is known as
+      the Accounting Equation:</p><p><span class="emphasis"><strong>Assets - Liabilities = Equity + (Income -
+      Expenses)</strong></span></p><p>This equation must always be balanced, a condition that can only
+      be satisfied if you enter values to multiple accounts. For example: if
+      you receive money in the form of income you must see an equal increase
+      in your assets. As another example, you could have an increase in assets
+      if you have a parallel increase in liabilities.</p><div class="figure"><a name="idp55272880"></a><p class="title"><b>Figure 2.1. The basic accounts relationships</b></p><div class="figure-contents"><div class="screenshot"><div class="mediaobject"><img src="figures/basics_AccountRelationships.png" alt="The basic accounts relationships"><div class="caption"><p>A graphical view of the relationship between the 5 basic
+              accounts. Net worth (equity) increases through income and
+              decreases through expenses. The arrows represent the movement of
+              value.</p></div></div></div></div></div><br class="figure-break"></div><div class="sect2" title="2.1.3. Double Entry"><div class="titlepage"><div><div><h3 class="title"><a name="basics-accountingdouble2"></a>2.1.3. Double Entry</h3></div></div></div><p>The accounting equation is the very heart of a <em class="firstterm">double entry
+      accounting system</em>. For every change in value of one account in the
+      Accounting Equation, there must be a balancing change in another. This
+      concept is known as the <em class="firstterm">Principle of Balance</em>, and
+      is of fundamental importance for understanding <strong class="application"><code>GnuCash</code></strong> and other double
+      entry accounting systems. When you work with <strong class="application"><code>GnuCash</code></strong>, you will always be
+      concerned with at least 2 accounts, to keep the accounting equation
+      balanced.</p><p>Balancing changes (or transfers of money) among accounts are
+      done by debiting one account and simultaneously crediting another.
+      Accounting <em class="firstterm">debits</em> and
+      <em class="firstterm">credits</em> do not mean <span class="quote">“<span class="quote">decrease</span>”</span>
+      and <span class="quote">“<span class="quote">increase</span>”</span>. Debits and credits each increase certain
+      types of accounts and decrease others. In asset and expense accounts,
+      debits increase the balance and credits decrease the balance. In
+      liability, equity and income accounts, credits increase the balance
+      and debits decrease the balance.</p><p>In traditional double-entry accounting, the left column in the
+      register is used for debits, while the right column is used for credits.
+      Accountants record increases in asset, expense, and equity accounts on the
+      debit (left) side, and they record increases in liability, revenue, and capital
+      accounts on the credit (right) side. <strong class="application"><code>GnuCash</code></strong>
+      follows this convention in the register.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">This accounting terminology can be confusing to new users,
+        which is why <strong class="application"><code>GnuCash</code></strong> allows you to use the
+        common terms <span class="guilabel"><strong>Deposit</strong></span> and
+        <span class="guilabel"><strong>Withdrawal</strong></span>. If you prefer the formal accounting
+        terms, you can change the account register column headings to use
+        them in the <span class="guilabel"><strong>General</strong></span> tab under
+        <span class="guilabel"><strong>Preferences</strong></span> (see the
+        <strong class="application"><code>GnuCash</code></strong> Help Manual for more information on
+        setting preferences).</p></td></tr></table></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="warning" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/warning.png"></img></td><th align="left" valign="top">Warning</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Common use of the words <span class="emphasis"><strong>debit</strong></span> and <span class="emphasis"><strong>credit</strong></span> 
+        does not match how accountants use these words. In common use, 
+        <span class="emphasis"><strong>credit</strong></span> generally has positive associations; in accounting,
+        <span class="emphasis"><strong>credit</strong></span> is associated with decreases in asset,
+        expense and equity accounts.</p></td></tr></table></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="chapter_basics.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="basics-entry1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">Chapter 2. The Basics </td><td width="20%" align="center"><a accesskey="u" href="chapter_basics.html">Up</a></td><td width="40%" align="right"> 2.2. Data Entry Concepts</td></tr></table></div></body></html>

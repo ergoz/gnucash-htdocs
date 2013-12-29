@@ -1,0 +1,49 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>5.5. Ein persönliches Darlehen an einen Freund (wie wird es gemacht)</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Kurs und Konzepte"><link rel="up" href="chapter_loans.html" title="Kapitel 5. Darlehen"><link rel="prev" href="loans_mortgage1.html" title="5.4. Hypothekendarlehen (wie wird es gemacht)"><link rel="next" href="loans_CarLoan.html" title="5.6. Kfz-Darlehen (wie wird es gemacht)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.5. Ein persönliches Darlehen an einen Freund (wie wird es gemacht)</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="loans_mortgage1.html">&lt;&lt;&lt; Zurück</a> </td><th width="60%" align="center">Kapitel 5. Darlehen</th><td width="20%" align="right"> <a accesskey="n" href="loans_CarLoan.html">Weiter &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="5.5. Ein persönliches Darlehen an einen Freund (wie wird es gemacht)"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="loans_personalLoanToSomeOne"></a>5.5. Ein persönliches Darlehen an einen Freund (wie wird es gemacht)</h2></div></div></div><p>Nicht immer leihen sie sich Geld von der Bank, manchmal leihen sie sich Geld von ihren Familienangehörigen, oder vielleicht verleihen sie Geld an einen Freund. Dieses Kapitel wird einen Weg beschreiben, ihr persönliches Darlehen an einen Freund zu behandeln.</p><p>Dieses Beispiel basiert auf den folgenden allgemeinen Kontostrukturen.</p><div class="literallayout"><p><br>
+-Aktiva<br>
+    -Bank<br>
+      -Bankkonto<br>
+    -ihnen geschuldetes Geld<br>
+      -Person<br>
+-Ertrag<br>
+    -Zinsertrag<br>
+      -Person<br>
+    </p></div><p>Dieses Beispiel zeigt, wie sie die Entwicklung eines persönlichen Darlehens von 
+			2000 Dollar (Standardwährung) an ihren Freund Peter verfolgen</p><div class="sect2" title="5.5.1. Darlehensparameter"><div class="titlepage"><div><div><h3 class="title"><a name="idp58248688"></a>5.5.1. Darlehensparameter</h3></div></div></div><p>Peter möchte 2000 $ von ihnen ausleihen, und diesen Betrag während der nächsten 
+				 18 Monate zurückzahlen. Weil er ihr Freund ist, einigen sie sich auf einen jährlichen Zinssatz von 5 %.</p><p>Zusammenfassend haben wir also folgende Details für Peters Darlehen:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Darlehenssumme - $2,000</p></li><li class="listitem"><p>Darlehenskonditionen - 18 Monate mit 12 Zahlungen per Jahr</p></li><li class="listitem"><p>jährlicher Zinssatz: 5%</p></li><li class="listitem"><p>monatliche Zahlungen : ??</p></li></ul></div><p>Also wie berechnen sie die monatlichen Raten?</p><p>Für die Berechnungen haben sie verschiedene Möglichkeiten, zum Beispiel Papier und Bleistiften, 
+				 Linux Rechner, OpenOffice Calc-Modul, aber aber an einfachsten ist die Benutzung des 
+				 <strong class="application"><code>GnuCash</code></strong> <span class="guilabel"><strong>Darlehensrechner</strong></span>. 
+				 Dieser errechnet Ihnen, dass die monatliche Zahlung 115,56 $ betragen sollte.</p><p>Aber um eine ordentliche Buchführung zu machen, müssen Sie wissen, welcher Anteil 
+				 dieser Summe Zinsen sind, und welcher Anteil Tilgung des Darlehens. Dafür brauchen sie 
+				 ein leistungsfähiges Werkzeug, etwas wie das <strong class="application"><code>Calc</code></strong> Modul in 
+					<strong class="application"><code>OpenOffice.org</code></strong>, und im besonderen die <acronym class="acronym">PMT</acronym> Funktion.</p><div class="screenshot"><div class="mediaobject"><img src="figures/loans_PrivateLoanCalculation.png" alt="Berechnung der Details eines Privatdarlehens"><div class="caption"><p>Detaillierte Überblick über das Privatdarlehen an Peter.
+							</p></div></div></div></div><div class="sect2" title="5.5.2. Konten für das Darlehen"><div class="titlepage"><div><div><h3 class="title"><a name="loans_personalLoanToSomeOne_accounts"></a>5.5.2. Konten für das Darlehen</h3></div></div></div><p>
+					Wir beginnen mit folgender Kontenhierarchie (alle Konten haben dieselbe Währung, in diesem Fall US-Dollar)
+					</p><div class="literallayout"><p><br>
+Aktiva:Bank:USD<br>
+Aktiva:ihnen geschuldetes Geld:Peter<br>
+Ertrag: Zinsertrag:Peter<br>
+Vermögen:Anfangskontostand:USD<br>
+</p></div></div><div class="sect2" title="5.5.3. Geld verleihen"><div class="titlepage"><div><div><h3 class="title"><a name="loans_personalLoanToSomeOne_InitialSetup"></a>5.5.3. Geld verleihen</h3></div></div></div><p>Wenn sie das Geld an ihren Freund verliehen haben, haben sie tatsächlich 
+				 Geld von einem Aktiva (Girokonto Sparbuch oder ähnlichem) zu einem anderen Aktiva 
+				 <span class="emphasis"><strong>ihnen geschuldetes Geld</strong></span> verschoben. Um dies zu buchen, fügen 
+				 sie folgende Buchung im Konto <span class="emphasis"><strong>Aktiva:ihnen geschuldetes Geld:Peter</strong></span> ein.</p><p>
+					</p><div class="table"><a name="idp58270960"></a><p class="title"><b>Tabelle 5.2. Persönliches Darlehen an einen Freund</b></p><div class="table-contents"><table summary="Persönliches Darlehen an einen Freund" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td>Konto</td><td>Einzahlung</td><td>Auszahlung</td></tr><tr><td>Aktiva:Ihnen geschuldetes Geld:Peter</td><td>$2,000</td><td> </td></tr><tr><td>Aktiva:Bank:USD</td><td> </td><td>$2,000</td></tr></tbody></table></div></div><p><br class="table-break">
+				</p><div class="screenshot"><div class="mediaobject"><img src="figures/loans_PrivateLoanInitial.png" alt="Verliehenes Geld"><div class="caption"><p>
+								Kontostände nach dem Verleihen des Geldes.
+							</p></div></div></div></div><div class="sect2" title="5.5.4. Erste Zahlung"><div class="titlepage"><div><div><h3 class="title"><a name="idp58282080"></a>5.5.4. Erste Zahlung</h3></div></div></div><p>Wenn Sie die erste Rückzahlung (115,56 $) erhalten, müssen sie feststellen
+				 wie viel davon Tilgung des Darlehens, und wie viel Zinszahlung ist.</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Offen stehender Darlehensbetrag für diese Periode = $2,000</p></li><li class="listitem"><p>Zahlung pro Monat = $115.56</p></li><li class="listitem"><p>Aufteilung der Zahlung</p></li><li class="listitem"><p>5%/12 * $2,000 = $8.33 Zinsen</p></li><li class="listitem"><p>$115.56 - $8.33 = $107.23 Tilgung</p></li></ul></div><p>
+					Dies kann durch die folgende <strong class="application"><code>GnuCash</code></strong> Buchung umgesetzt werden.
+				</p><div class="screenshot"><div class="mediaobject"><img src="figures/loans_PrivateLoanFirstPayment.png" alt="Erste Zahlung"><div class="caption"><p>Übersicht über die erste Zahlung</p></div></div></div><p>Der Kontostand in Peters Darlehen ist nun $2,000 - $107.23 = $1,892.77</p></div><div class="sect2" title="5.5.5. Zweite Zahlung"><div class="titlepage"><div><div><h3 class="title"><a name="loans_personalLoanToSomeOne_SecondPayment"></a>5.5.5. Zweite Zahlung</h3></div></div></div><p>Wenn Sie die zweite Rückzahlung (115,56 $) erhalten müssen sie wieder feststellen 
+				 wie viel davon Tilgung des Darlehens, und wie viel Zinszahlung ist.</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Offen stehender Darlehensbetrag für diese Periode = $1,892.77</p></li><li class="listitem"><p>Zahlung pro Monat = $115.56</p></li><li class="listitem"><p>Aufteilung der Zahlung</p></li><li class="listitem"><p>5%/12 * $1,892.77 = $7.89 Zinsen</p></li><li class="listitem"><p>$115.56 - $7.89 = $107.67 Tilgung</p></li></ul></div><p>
+				Dies kann durch die folgende <strong class="application"><code>GnuCash</code></strong> Buchung umgesetzt werden.
+			</p><div class="screenshot"><div class="mediaobject"><img src="figures/loans_PrivateLoanSecondPayment.png" alt="Zweite Zahlung"><div class="caption"><p>
+							Übersicht über die zweite Zahlung
+						</p></div></div></div><p>Der Kontostand in Peters Darlehen ist nun $1,892.77 - $107.67 = $1,785.10</p><p>die Kontostände sehen jetzt folgendermaßen aus</p><div class="screenshot"><div class="mediaobject"><img src="figures/loans_PrivateLoanSecondPaymentAccounts.png" alt="Kontostände nach der zweiten Zahlung"><div class="caption"><p>
+							Kontostände nach der zweiten Zahlung
+						</p></div></div></div><p>Wie Sie sehen können verändert sich der Anteil der Zinsen, und der Anteil an Tilgung. 
+				 Sie müssen deshalb für jede Zahlung, die sie empfangen, die richtigen Beträge für ihre 
+				 verschiedenen Splitbuchung berechnen.</p><p>
+					 Der Zinsanteil wird mit jeder Zahlung kleiner und kleiner (da er von einer kleineren
+					 Darlehenssumme berechnet wird), bis er bei der letzten Zahlung gegen null geht.
+					 Sehen Sie dazu auch die Zahlen in der Berechnung (Detaillierte Überblick über das Privatdarlehen
+					 an Peter).</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="loans_mortgage1.html">&lt;&lt;&lt; Zurück</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right"> <a accesskey="n" href="loans_CarLoan.html">Weiter &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">5.4. Hypothekendarlehen (wie wird es gemacht) </td><td width="20%" align="center"><a accesskey="u" href="chapter_loans.html">Nach oben</a></td><td width="40%" align="right"> 5.6. Kfz-Darlehen (wie wird es gemacht)</td></tr></table></div></body></html>

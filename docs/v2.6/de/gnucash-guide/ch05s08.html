@@ -1,0 +1,108 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>5.8. Verkauf eines Hauses oder eines Kfz (Wie wird es gemacht)</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Kurs und Konzepte"><link rel="up" href="chapter_loans.html" title="Kapitel 5. Darlehen"><link rel="prev" href="loans_Reconciling.html" title="5.7. Abgleich eines Darlehnskontos (Wie wird es gemacht)"><link rel="next" href="chapter_capgain.html" title="Kapitel 6. Kapitalerträge"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.8. Verkauf eines Hauses oder eines Kfz (Wie wird es gemacht)</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="loans_Reconciling.html">&lt;&lt;&lt; Zurück</a> </td><th width="60%" align="center">Kapitel 5. Darlehen</th><td width="20%" align="right"> <a accesskey="n" href="chapter_capgain.html">Weiter &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="5.8. Verkauf eines Hauses oder eines Kfz (Wie wird es gemacht)"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp58326304"></a>5.8. Verkauf eines Hauses oder eines Kfz (Wie wird es gemacht)</h2></div></div></div><p>
+			Für die Buchung ihres Hausverkaufs gibt es verschiedene Möglichkeiten in 
+			<strong class="application"><code>GnuCash</code></strong>.	An dieser Stelle werden wir zwei von ihnen 
+			behandeln. Bei einer buchen Sie nur den Einkaufs und den Verkaufspreis. 
+			Bei der anderen haben sie die Bewegungen auf dem Häusermarkt verfolgt, 
+			und im Laufe der Zeit diverse unrealisierte Gewinne gebucht.
+		</p><p></p><div class="sect2" title="5.8.1. Einfache Buchung"><div class="titlepage"><div><div><h3 class="title"><a name="idp58329040"></a>5.8.1. Einfache Buchung</h3></div></div></div><p>Bei dieser Methode buchen sie lediglich die Kaufs- und Verkaufspreise.</p><p>
+				Lassen Sie uns zwei Beispiele eines Hausverkaufs durcharbeiten, ein Verkauf mit Gewinn
+				und einer mit Verlust. Wenn sie stattdessen ein Kfz verkaufen wollen, ersetzen sie einfach
+				das Hauskonto durch das Kfz-Konto.
+			</p><p>
+      </p><div class="literallayout"><p><br>
+-Aktiva<br>
+    -Anlagevermögen<br>
+        -Haus<br>
+    -Umlaufvermögen<br>
+        -Sparkonto<br>
+-Ertrag<br>
+    -langfristige Kapitalerträge<br>
+        -Haus<br>
+      </p></div><p>
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>
+						Sie haben vor einiger Zeit ein Haus für 300.000 € gekauft, und jetzt
+						haben Sie es geschafft es für 600.000 € zu verkaufen. Wie können Sie das buchen?
+					</p><p>
+						Um diesen Vorgang aufzuzeichnen müssen sie ihr Bankkonto um 600.000 € erhöhen,
+						und irgend ein anderes Konto um 600.000 € verringern. Das Hauskonto hat
+						nur einen Kontostand von 300.000 €, den damaligen Kaufpreis. Sie buchen diesen Betrag
+						auf ihr Bankkonto, aber es fehlen immer noch 300.000 €. Diesen Betrag	holen Sie
+						von dem Konto <span class="emphasis"><strong>Ertrag:langfristige Kapitalerträge:Haus</strong></span>.
+						Die Splitbuchung, die sie in ihr <span class="emphasis"><strong>Bank</strong></span>-Konto 
+						(<span class="emphasis"><strong>Aktiva:Umlaufvermögen:Sparkonto</strong></span>)buchen, sollte so aussehen.
+					</p><p>
+						</p><div class="table"><a name="idp58336528"></a><p class="title"><b>Tabelle 5.3. Verkauf eines Vermögensgegenstandes (Haus) mit Gewinn</b></p><div class="table-contents"><table summary="Verkauf eines Vermögensgegenstandes (Haus) mit Gewinn" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td>Konto</td><td>Einzahlung</td><td>Auszahlung</td></tr><tr><td>Aktiva:Umlaufvermögen:Sparkonto</td><td>600.000 €</td><td> </td></tr><tr><td>Aktiva:Anlagevermögen:Haus</td><td> </td><td>300.000 €</td></tr><tr><td>Ertrag:langfristige Kapitalerträge:Haus</td><td> </td><td>300.000 €</td></tr></tbody></table></div></div><p><br class="table-break">
+					</p></li><li class="listitem"><p>
+						Sie haben vor einiger Zeit ein Haus für 300.000 € gekauft, aber wegen eines
+						neugebauten Flughafens können sie es nur noch für 230.000 € verkaufen.
+						Wie können Sie das buchen?
+					</p><p>
+						Um diesen Vorgang aufzuzeichnen müssen sie ihr Bankkonto um 230.000 € erhöhen,
+						und irgend ein anderes Konto um 230.000 € verringern. Das Hauskonto hat
+						einen Kontostand von 300.000 €, das ist mehr als der Preis für den sie verkauft haben
+						Sie buchen 230.000 € auf ihr Bankkonto, haben danach aber immer noch 70.000 €
+						auf ihrem Hauskonto, die auch noch abgebucht werden müssen. Diesen Betrag buchen 
+						sie auf ihr Konto	<span class="emphasis"><strong>Ertrag:langfristige Kapitalerträge:Haus</strong></span>,
+						was einen Verlust bedeutet.
+						Die Splitbuchung, die sie in ihr <span class="emphasis"><strong>Bank</strong></span>-Konto
+						(<span class="emphasis"><strong>Aktiva:Umlaufvermögen:Sparkonto</strong></span>)buchen, sollte so aussehen.
+					</p><p>
+						</p><div class="table"><a name="idp58349280"></a><p class="title"><b>Tabelle 5.4. Verkauf eines Vermögensgegenstandes (Haus) mit Verlust</b></p><div class="table-contents"><table summary="Verkauf eines Vermögensgegenstandes (Haus) mit Verlust" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td>Konto</td><td>Einzahlung</td><td>Auszahlung</td></tr><tr><td>Aktiva:Anlagevermögen:Haus</td><td> </td><td>300.000 €</td></tr><tr><td>Aktiva:Umlaufvermögen:Sparkonto</td><td>230.000 €</td><td> </td></tr><tr><td>Ertrag:langfristige Kapitalerträge:Haus</td><td>70.000 €</td><td> </td></tr></tbody></table></div></div><p><br class="table-break">
+					</p></li></ul></div></div><div class="sect2" title="5.8.2. eine komplexere Betrachtung"><div class="titlepage"><div><div><h3 class="title"><a name="idp58357776"></a>5.8.2. eine komplexere Betrachtung</h3></div></div></div><p>
+				in diesem Beispiel werden wir uns mit etwas komplexeren
+				Prinzipien der Buchführung beschäftigen. Weitere Einzelheiten
+				zu diesem Thema finden Sie auch unter
+				<a class="xref" href="chapter_capgain.html" title="Kapitel 6. Kapitalerträge">Kapitel 6, <i>Kapitalerträge</i></a>
+			</p><p>
+				Hier werden wir uns nur mit dem Fall befassen, dass der augenblickliche Wert
+				des Hauses gut geschätzt werden konnte. Für die anderen Fälle (Über- und Unterschätzung),
+				lesen Sie bitte <a class="xref" href="chapter_capgain.html" title="Kapitel 6. Kapitalerträge">Kapitel 6, <i>Kapitalerträge</i></a>.
+			</p><p>
+				</p><div class="literallayout"><p><br>
+        -Aktiva<br>
+            -Anlagevermögen<br>
+                -Haus<br>
+                    -Anschaffung<br>
+                    -unrealisierter Gewinn<br>
+            -Umlaufvermögen<br>
+                -Sparkonto<br>
+        -Ertrag<br>
+            -realisierter Gewinn<br>
+                -Haus<br>
+            -unrealisierter Gewinn<br>
+                -Haus<br>
+        </p></div><p>
+			</p><p>
+				vor einiger Zeit haben sie ein Haus für 300.000 € gekauft
+				und während er Jahre haben sie den Häusermarkt beobachtet
+				und einen geschätzten Zeitwert ihres Hauses ermittelt.
+				Der augenblickliche Marktwert zum Zeitpunkt des Verkaufs
+				beträgt 600.000 €.
+			</p><p>
+				der Unterschied zwischen 600.000 € (geschätzter Marktwert)
+				und 300.000 € (Kaufpreis) ist der augenblickliche unrealisierte
+				Gewinn. Deshalb haben sie einen Betrag von 300.000 € auf ihrem
+				Konto <span class="emphasis"><strong>Aktiva:Anlagevermögen:Haus:unrealisierter Gewinn</strong></span>.
+			</p><p>Wie wird dieser Verkauf eingegeben?</p><p>
+				Um diesen Verkauf einzugeben, muss dem Bankkonto die Verkaufsumme
+				von 600.000 € gutgeschrieben werden, und gleichzeitig	andere Konten 
+				mit der Summe von 600.000 € belastet werden. Zuerst muss der 
+				unrealisierte Gewinn auf ihren <span class="emphasis"><strong>Ertrag</strong></span>-Konten
+				in einen realisierten Gewinn umgewandelt werden. Zum Schluss müssen 
+				sie die Gesamtsumme von ihren <span class="emphasis"><strong>Aktiva:Anlagevermögen:Haus</strong></span>
+				Unterkonten auf ihr Bankkonto übertragen.
+			</p><p>
+				Die Buchung, die sie in ihrem Konto	<span class="emphasis"><strong>Ertrag:realisierter Gewinn:Haus</strong></span>
+				eingeben, sollte folgendermaßen aussehen.
+			</p><p>
+				</p><div class="table"><a name="idp58369456"></a><p class="title"><b>Tabelle 5.5. Verkauf eines Vermögensgegenstandes (Haus) mit Gewinn</b></p><div class="table-contents"><table summary="Verkauf eines Vermögensgegenstandes (Haus) mit Gewinn" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td>Konto</td><td>Einzahlung</td><td>Auszahlung</td></tr><tr><td>Ertrag:realisierter Gewinn:Haus</td><td>300.000 €</td><td> </td></tr><tr><td>Ertrag:unrealisierter Gewinn:Haus</td><td> </td><td>300.000 €</td></tr></tbody></table></div></div><p><br class="table-break">
+			</p><p>
+				Die Buchung, die sie in ihrem Konto	<span class="emphasis"><strong>Aktiva:Umlaufvermögen:Sparkonto</strong></span>
+				eingeben, sollte folgendermaßen aussehen.
+			</p><p>
+				</p><div class="table"><a name="idp58377376"></a><p class="title"><b>Tabelle 5.6. Verkauf eines Vermögensgegenstandes (Haus) mit Gewinnen 2</b></p><div class="table-contents"><table summary="Verkauf eines Vermögensgegenstandes (Haus) mit Gewinnen 2" border="1"><colgroup><col><col><col></colgroup><tbody><tr><td>Konto</td><td>Einzahlung</td><td>Auszahlung</td></tr><tr><td>Aktiva:Umlaufvermögen:Sparkonto</td><td>600.000 €</td><td> </td></tr><tr><td>Aktiva:Anlagevermögen:Haus:Anschaffung</td><td> </td><td>300.000 €</td></tr><tr><td>Aktiva:Anlagevermögen:Haus:unrealisierter Gewinn</td><td> </td><td>300.000 €</td></tr></tbody></table></div></div><p><br class="table-break">
+			</p><p>
+				Nach Eingabe dieser Buchung sehen Sie, dass Ihr Hausvermögen jetzt den Wert null hat,
+				der Betrag auf ihrem Sparkonto wurde um 600.000 € erhöht, und zuletzt hat hat sich der 
+				Betrag unter <span class="emphasis"><strong>Ertrag:realisierte Gewinn</strong></span>auf 300.000 € erhöht
+			</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="loans_Reconciling.html">&lt;&lt;&lt; Zurück</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right"> <a accesskey="n" href="chapter_capgain.html">Weiter &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">5.7. Abgleich eines Darlehnskontos (Wie wird es gemacht) </td><td width="20%" align="center"><a accesskey="u" href="chapter_loans.html">Nach oben</a></td><td width="40%" align="right"> Kapitel 6. Kapitalerträge</td></tr></table></div></body></html>

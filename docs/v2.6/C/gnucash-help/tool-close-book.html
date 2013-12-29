@@ -1,0 +1,46 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>7.9. Close Book</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="help.html" title="GnuCash Help Manual"><link rel="up" href="ch_AccRegTools.html" title="Chapter 7. Tools &amp; Assistants"><link rel="prev" href="tool-calc.html" title="7.8. Loan Repayment Calculator"><link rel="next" href="Reports.html" title="Chapter 8. Reports And Charts"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.9. Close Book</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="tool-calc.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 7. Tools &amp; Assistants</th><td width="20%" align="right"> <a accesskey="n" href="Reports.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="7.9. Close Book"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="tool-close-book"></a>7.9. Close Book</h2></div></div></div><p>The <span class="guilabel"><strong>Close Book</strong></span> dialog box is used
+     for “closing the books,”--an accounting process that
+     resets the balances of the income and expense accounts. In this
+     process, income account balances are transferred into an income
+     equity account, while expense account balances are transferred
+     into an expense equity account. You must specify both these
+     accounts, which may be the same. You must also specify the date
+     for the closing transfer.</p><div class="sect2" title="7.9.1. Dialog Box Details"><div class="titlepage"><div><div><h3 class="title"><a name="tool-close-book-anatomy"></a>7.9.1. Dialog Box
+     Details</h3></div></div></div><p>The dialog box has the following parts:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="guilabel"><strong>Closing Date:</strong></span> Specify the date
+           for the closing transfer. You can type in a date or
+           choose one from the drop-down.</p></li><li class="listitem"><p><span class="guilabel"><strong>Income Total:</strong></span> Specify the
+           account into which the total balance of all income
+           accounts will be transferred. Optionally you can create a
+           new account to receive the transfer using the <span class="guibutton">
+           New</span> button.</p></li><li class="listitem"><p><span class="guilabel"><strong>Expense Total:</strong></span> Specify the
+           account into which the total balance of all expense
+           accounts will be transferred. Again, you can optionally
+           create a new account to receive the transfer using the
+           <span class="guibutton">New</span> button.</p></li><li class="listitem"><p><span class="guilabel"><strong>Description:</strong></span> Specify the
+           description that will be entered in the closing entry.
+           </p></li></ul></div></div><div class="sect2" title="7.9.2. How It Works"><div class="titlepage"><div><div><h3 class="title"><a name="tool-close-book-workings"></a>7.9.2. How It Works</h3></div></div></div><p><strong class="application"><code>GnuCash</code></strong> closes books by
+       creating one transaction per currency for income accounts,
+       and one transaction per currency for expense accounts. The
+       transactions all use the date selected by the user, and each
+       transaction may contain any number of splits. Each split
+       moves the balance out of one income or expense account. The
+       last split in each closing transaction moves the total
+       offsetting debit/credit balance into the specified equity
+       account.</p><p>Each transaction will use the description provided by
+       the user in the <span class="guilabel"><strong>Description:</strong></span> entry.</p><p>The fact that <strong class="application"><code>GnuCash</code></strong> just
+       uses transactions to close the books makes it very simple to
+       undo a book closing: just delete the closing transactions.</p></div><div class="sect2" title="7.9.3. What It Doesn’t Do"><div class="titlepage"><div><div><h3 class="title"><a name="tool-close-book-not"></a>7.9.3. What It Doesn’t
+     Do</h3></div></div></div><p>The book closing tool does not delete any accounts or
+       transactions; create any new files; or hide any accounts.</p></div><div class="sect2" title="7.9.4. Necessity"><div class="titlepage"><div><div><h3 class="title"><a name="tool-close-book-need"></a>7.9.4. Necessity</h3></div></div></div><p>Note that closing the books in <strong class="application"><code>GnuCash
+       </code></strong> is unnecessary. You do not need to zero out
+       your income and expense accounts at the end of each financial
+       period. <strong class="application"><code>GnuCash</code></strong>’s built-in
+       reports automatically handle concepts like retained earnings
+       between two different financial periods.</p><p>In fact, closing the books reduces the usefulness of
+       the standard reports because the reports don’t
+       currently understand closing transactions. So from their
+       point of view it simply looks like the net income or expense
+       in each account for a given period was simply zero.</p></div><div class="sect2" title="7.9.5. Conclusion"><div class="titlepage"><div><div><h3 class="title"><a name="tool-close-book-conclusion"></a>7.9.5. Conclusion</h3></div></div></div><p>If you close your books, be prepared to see inaccuracies
+       in the standard reports. On the other hand, you will see
+       current-period income and expense figures in the chart of
+       accounts.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="tool-calc.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="help.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="Reports.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">7.8. Loan Repayment Calculator </td><td width="20%" align="center"><a accesskey="u" href="ch_AccRegTools.html">Up</a></td><td width="40%" align="right"> Chapter 8. Reports And Charts</td></tr></table></div></body></html>

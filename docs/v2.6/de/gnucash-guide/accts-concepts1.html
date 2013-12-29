@@ -1,0 +1,52 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>3.1. Buchhaltungsgrundsätze</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Kurs und Konzepte"><link rel="up" href="chapter_accts.html" title="Kapitel 3. Konten"><link rel="prev" href="chapter_accts.html" title="Kapitel 3. Konten"><link rel="next" href="accts-types1.html" title="3.2. GnuCash-Konten"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.1. Buchhaltungsgrundsätze</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="chapter_accts.html">&lt;&lt;&lt; Zurück</a> </td><th width="60%" align="center">Kapitel 3. Konten</th><td width="20%" align="right"> <a accesskey="n" href="accts-types1.html">Weiter &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="3.1. Buchhaltungsgrundsätze"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="accts-concepts1"></a>3.1. Buchhaltungsgrundsätze</h2></div></div></div><p>Wie wir im vorigen Kapitel gesehen haben, basiert die Buchführung auf fünf grundlegenden
+		Kontenarten: <span class="guilabel"><strong>Aktiva</strong></span>, <span class="guilabel"><strong>Fremdkapital</strong></span>, 
+    <span class="guilabel"><strong>Eigenkapital</strong></span>, <span class="guilabel"><strong>Ertrag</strong></span> und <span class="guilabel"><strong>Aufwand</strong></span>. 
+    Wir erweitern nun unser Verständnis dieser Kontentypen und zeigen, wie sie in 
+    <strong class="application"><code>GnuCash</code></strong> dargestellt werden.
+		Zuerst aber wollen wir die Kontenarten in zwei Gruppen aufteilen: 
+		die <span class="guilabel"><strong>Bestandskonten</strong></span>, deren Zusammenfassung die <span class="emphasis"><strong>Bilanz zu einem bestimmten Zeitpunkt</strong></span> ist,
+		und die <span class="guilabel"><strong>Erfolgskonten</strong></span>, welche mit Aufwand und Ertrag die wertmäßigen <span class="emphasis"><strong>Veränderungen
+		 in einem Zeitraum</strong></span> wie dem Wirtschaftsjahr darstellen.</p><p>Bevor wir uns näher mit jedem Kontentyp befassen, lassen Sie uns noch einmal
+    zur Erinnerung die Buchhaltungsgleichung 
+    (<span class="emphasis"><strong>Aktiva - Fremdkapital = Eigenkapital + (Ertrag - Aufwand)</strong></span>)
+    betrachten.</p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_AccountRelationships.png" alt="Die Grundkonten"><div class="caption"><p>
+            Graphische Darstellung der Beziehungen der 5 Grundkonten zueinander.  
+            Das Reinvermögen (Eigenkapital) erhöht sich durch Erträge und 
+            vermindert sich durch Aufwendungen. Die Pfeile repräsentieren die
+            Wertbewegungen.
+          </p></div></div></div><div class="sect2" title="3.1.1. Bestandskonten"><div class="titlepage"><div><div><h3 class="title"><a name="accts-bsa2"></a>3.1.1. Bestandskonten</h3></div></div></div><p>Die drei sogenannten <span class="emphasis"><strong>Bestandskonten</strong></span> sind 
+      <span class="guilabel"><strong>Aktiva</strong></span>, <span class="guilabel"><strong>Fremdkapital</strong></span>, und
+      <span class="guilabel"><strong>Eigenkapital</strong></span>. Bestandskonten werden benutzt um über 
+      Ihren Besitz und Ihre Schulden Buch zu führen.</p><p><span class="guilabel"><strong>Aktiva</strong></span> bezeichnet den Bereich Ihres Besitzes.
+			Aktiva können zum Beispiel ein Auto, Bargeld, ein Haus,	Aktien und alles andere 
+			sein, was einen konvertiblen Wert besitzt. Konvertibler Wert bedeutet, dass Sie 
+			diesen Besitz zumindest theoretisch für Geld verkaufen können.</p><p><span class="guilabel"><strong>Fremdkapital</strong></span> bezeichnet den Bereich Ihrer Schulden.
+      Fremdkapital können zum Beispiel ein Autokredit, ein Studiendarlehen,
+      ein Hypothekendarlehen, ein Überziehungskredit und alles Andere sein, was Sie
+			zu einem späteren Zeitpunkt zurückzahlen müssen.</p><p><span class="guilabel"><strong>Eigenkapital</strong></span> ist dasselbe wie "Reinvermögen".
+        Er stellt dar, was übrig bleibt, wenn Sie Ihr Fremdkapital von Ihren Aktiva
+        abziehen. Es kann als der Teil Ihrer Aktiva betrachtet werden, den Sie
+        ohne irgendwelche Schulden besitzen.</p></div><div class="sect2" title="3.1.2. Erfolgskonten"><div class="titlepage"><div><div><h3 class="title"><a name="accts-ie2"></a>3.1.2. Erfolgskonten</h3></div></div></div><p>Die zwei Kontentypen <span class="guilabel"><strong>Ertrag</strong></span> und <span class="guilabel"><strong>Aufwand</strong></span> 
+        werden benutzt, um den Wert Ihrer Bestandskonten zu erhöhen oder zu vermindern. 
+        Somit erlauben Ihnen Ertrags- und Aufwandskonten, den Wert der Bestandskonten zu  
+        <span class="emphasis"><strong>ändern</strong></span>, während die Bestandskonten selbst nur den Wert des 
+        Besitzes, oder des Darlehens <span class="emphasis"><strong>erfassen</strong></span>.
+      </p><p><span class="guilabel"><strong>Ertrag</strong></span> ist die Bezahlung, die Sie für Ihre Zeit,
+      Ihre Dienstleistungen, oder den Gebrauch Ihres Geldes erhalten. Wenn Sie 
+      Ihr Gehalt erhalten, dann ist das zum Beispiel die Bezahlung für
+      die Arbeit, die Sie für Ihren Arbeitgeber verrichtet haben. Andere Beispiele
+      für Erträge sind Kommissionen, Trinkgelder, Dividenden Ihrer Aktien und Zinsen
+      Ihrer Bankkonten. Erträge erhöhen immer den Wert Ihrer Aktiva und somit des 
+      Eigenkapitals.</p><p><span class="guilabel"><strong>Aufwand</strong></span>
+      	bezieht sich auf Geld, welches Sie ausgeben, um Dinge oder
+      	Dienstleistungen eines anderen
+      	<span class="emphasis"><strong>zum baldigen Verbrauch</strong></span>
+      	zu erwerben. Beispiele von Aufwendungen sind ein Essen in
+      	einem Restaurant, Mietzahlungen, Lebensmitteleinkäufe,
+      	Treibstoff für Ihr Auto oder Eintrittskarten für ein
+      	Fußballspiel. Aufwendungen verringern immer Ihr Eigenkapital.
+      	Wenn Sie für die Aufwendungen direkt bezahlen, dann verringern
+      	Sie damit Ihre Aktiva, wenn Sie dagegen Aufwendungen über
+      	einen Kredit begleichen, dann erhöhen Sie Ihr Fremdkapital.
+      </p><p>Aufwands- und Ertragskonten lassen sich unter dem Oberbegriff 
+      <span class="emphasis"><strong>Erfolgskonten</strong></span> zusammenfassen.</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="chapter_accts.html">&lt;&lt;&lt; Zurück</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right"> <a accesskey="n" href="accts-types1.html">Weiter &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">Kapitel 3. Konten </td><td width="20%" align="center"><a accesskey="u" href="chapter_accts.html">Nach oben</a></td><td width="40%" align="right"> 3.2. <strong xmlns="" class="application"><code>GnuCash</code></strong>-Konten</td></tr></table></div></body></html>

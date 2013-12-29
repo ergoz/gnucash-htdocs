@@ -1,0 +1,268 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>2.2. Konzepte der Dateneingabe</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Kurs und Konzepte"><link rel="up" href="chapter_basics.html" title="Kapitel 2. Die Grundlagen"><link rel="prev" href="basics-accounting1.html" title="2.1. Grundlagen der Buchführung"><link rel="next" href="basics-interface1.html" title="2.3. Die GnuCash Benutzeroberfläche"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">2.2. Konzepte der Dateneingabe</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="basics-accounting1.html">&lt;&lt;&lt; Zurück</a> </td><th width="60%" align="center">Kapitel 2. Die Grundlagen</th><td width="20%" align="right"> <a accesskey="n" href="basics-interface1.html">Weiter &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="2.2. Konzepte der Dateneingabe"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="basics-entry1"></a>2.2. Konzepte der Dateneingabe</h2></div></div></div><a class="indexterm" name="idp56008688"></a><p>Wenn Sie Daten in GnuCash eingeben, sollten Sie sich der 3
+    Organisationsebenen bewusst sein, in die GnuCash Ihre Daten
+    unterteilt: Dateien, Konten und Buchungen.  Diese Ebenen werden
+    nach Komplexität geordnet vorgestellt.  Eine Datei enthält viele
+    Konten und ein Konto enthält viele Buchungen.  Diese Unterteilung
+    ist fundamental um zu verstehen, wie GnuCash benutzt wird.</p><div class="sect2" title="2.2.1. Dateien, Konten und Buchungen"><div class="titlepage"><div><div><h3 class="title"><a name="basics-accounts2"></a>2.2.1. Dateien, Konten und Buchungen</h3></div></div></div><a class="indexterm" name="idp56011376"></a><p>GnuCash nutzt <span class="emphasis"><strong>Dateien</strong></span> zum Speichern von
+      Informationen.  GnuCash nutzt drei Typen von Dateien: Datendateien,
+      Sicherungsdateien und Logdateien.  Die Hauptdatei die Sie benutzen
+      werden, ist eine Datendatei.  Sie werden wahrscheinlich nur eine
+      Datendatei haben, die Sie für Ihre privaten Daten nutzen. Aber
+      GnuCash wird automatisch jedes mal eine Sicherungsdatei anlegen,
+      wenn Sie Ihre Daten speichern.  GnuCash erzeugt auch Logdateien,
+      die notfalls benutzt werden können, um Daten zu rekonstruieren.
+      Sicherungsdateien und Logdateien werden später
+      in <a class="xref" href="basics-backup1.html" title="2.8. Datensicherung">Abschnitt 2.8, „Datensicherung“</a> beschrieben.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Anmerkung</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">
+          Die obigen Ausführungen zu der Bedeutung einzelner Dateien
+          gelten hauptsächlich beim Verwenden des traditionellen
+          XML-Formats.  Ab Version 2.4.0 kann GnuCash auch SQLite3,
+          MySQL oder PostgresSQL Datenbanken zum Speichern der Daten
+          nutzen.  Die Datenbanken haben leistungsfähigere Mechanismen
+          zum Sichern und Protokollieren, in die der Benutzer in der
+          Regel nicht eingreifen kann. Auch ein explizites Speichern
+          entfällt.  Für das leichtere Verständnis ist es aber
+          weiterhin sinnvoll, von einer Datei als oberster
+          Hierarchieebene auszugehen.
+        </p></td></tr></table></div><p>
+        Ein <a class="glossterm" href="glossary.html#account"><em class="glossterm">Konto</em></a> ist ein Ort
+        an dem Sie aufzeichnen, was Sie besitzen, schulden, ausgeben
+        oder einnehmen.  Obwohl Sie nur eine große Daten-Datei haben,
+        wird diese Datei viele Konten enthalten.  Wahrscheinlich
+        denken Sie schon von Geld das Sie besitzen oder schulden, als
+        ob es auf einem Konto wäre.  Zum Beispiel haben Sie irgendwann
+        ein <a class="glossterm" href="glossary.html#checking-account"><em class="glossterm">Girokonto</em></a>
+        und
+        <a class="glossterm" href="glossary.html#savings-account"><em class="glossterm">Sparkonto</em></a> bei
+        einer bestimmten Bank eröffnet und diese Bank sendet Ihnen
+        seither monatliche Kontoauszüge die zeigen, wie viel Geld Sie
+        in diesen Konten <span class="emphasis"><strong>besitzen</strong></span> (wie der
+        Kontostand ist).  Kreditkarten Konten senden Ihnen
+        Abrechnungen die zeigen, wie viel sie der
+        Kartengesellschaft <span class="emphasis"><strong>schulden</strong></span> und die
+        Hypothekenbank schickt Ihnen regelmäßig Auszüge, wie viel sie
+        für Ihr Darlehen noch <span class="emphasis"><strong>schulden</strong></span>.</p><p>
+        In GnuCash werden Konten auch genutzt um Gelder, die Sie
+        erhalten oder ausgeben, zu klassifizieren.  Natürlich sind
+        dies keine physischen Konten, für die es Kontoauszüge gäbe.
+        Wie wir in <a class="xref" href="chapter_accts.html" title="Kapitel 3. Konten">Kapitel 3, <i>Konten</i></a> sehen werden,
+        werden Ertragskonten genutzt um Einnahmen (wie die
+        Gehaltszahlung) zu klassifizieren und Aufwandskonten werden
+        verwendet um Ausgaben (für Pizza, Rechnungen etc.) zu
+        klassifizieren.  Diese Konten haben eine ähnliche Funktion wie
+        die Kategorien in einigen anderen Finanzprogrammen, haben aber
+        einige Vorteile, wie in <a class="xref" href="chapter_accts.html" title="Kapitel 3. Konten">Kapitel 3, <i>Konten</i></a>
+        diskutiert wird.</p><p>
+        Eine <a class="glossterm" href="glossary.html#simple-transaction"><em class="glossterm">Buchung</em></a>
+        ist ein Vorgang, der den Bestand (Saldo) eines Kontos
+        verändert.  Wir sprechen von
+        einer <span class="emphasis"><strong>Gutschrift</strong></span>
+        oder <span class="emphasis"><strong>Einzahlung</strong></span> auf ein Konto, wenn sich
+        der Bestand erhöht und von
+        einer <span class="emphasis"><strong>Lastschrift</strong></span>
+        oder <span class="emphasis"><strong>Abhebung</strong></span>, wenn sich der Bestand
+        erniedrigt.  Wann immer Sie Geld erhalten oder ausgeben, ist
+        dies eine Buchung.  In GnuCash, wie wir im nächsten Abschnitt
+        sehen werden, sind an Buchungen immer mindestens zwei Konten
+        beteiligt.  Beispiele für Buchungen: Bezahlen einer Rechnung,
+        Umbuchen vom Sparkonto auf das Girokonto, Kaufen einer Pizza,
+        Geldabheben oder Verbuchen einer Gehaltszahlung.
+        <a class="xref" href="chapter_txns.html" title="Kapitel 4. Buchungen">Kapitel 4, <i>Buchungen</i></a> beschreibt eingehender,
+        wie Sie in GnuCash Buchungen eingeben.
+      </p></div><div class="sect2" title="2.2.2. Doppelte Buchführung"><div class="titlepage"><div><div><h3 class="title"><a name="basics-dbentry2"></a>2.2.2. Doppelte Buchführung</h3></div></div></div><a class="indexterm" name="idp56029808"></a><p>
+        Wahrscheinlich haben Sie die Redewendung <span class="quote">„<span class="quote">Geld wächst
+        nicht auf Bäumen</span>“</span> schon einmal gehört.  Gemeint ist
+        damit, dass Geld von irgend woher kommen muss -
+        es <span class="quote">„<span class="quote">erscheint</span>“</span> nicht einfach.
+        Die <span class="emphasis"><strong>doppelte Buchführung</strong></span> ist eine
+        Buchführungsmethode, die gerade den Ursprung und Verbleib
+        Ihres Geldes nachvollziehbar macht.  Doppelte Buchführung zu
+        benutzen bedeutet, dass Geld niemals zunimmt oder abnimmt -
+        sondern ein Betrag wird immer nur von einem Konto zu einem
+        anderen übertragen.  Wenn Sie Bargeld abheben, übertragen Sie
+        Geld von Ihrem Bankkonto in Ihren Geldbeutel.  Wenn Sie im
+        Supermarkt mit Karte bezahlen, übertragen Sie Geld von Ihrem
+        Girokonto auf das Konto des Supermarktes.  Und wenn Ihr Gehalt
+        überwiesen wird, wird Geld vom Konto Ihres Arbeitgebers auf
+        Ihr Girokonto übertragen.</p><p>
+        In GnuCash werden diese Übertragungen
+        als <a class="glossterm" href="glossary.html#transaction"><em class="glossterm">Buchungssatz</em></a>
+        bezeichnet. Jeder Buchungssatz erfordert mindestens zwei
+        Konten.  Um zum Beispiel eine Barabhebung einzugeben, würden
+        Sie die Umbuchung des Betrags von Ihrem Girokonto auf Ihr
+        Bargeldkonto eingeben.  Sie würden die Kartenzahlung im
+        Supermarkt als eine Umbuchung von Ihrem Girokonto auf das
+        Lebensmittelkonto eingeben.  Und die Gehaltszahlung als
+        Umbuchung von einem Einkommenskonto auf Ihr Girokonto.</p><p>
+        Anders als traditionelle Buchführungssoftware, macht GnuCash die
+        Eingabe einer solchen doppelten Buchung sehr einfach.
+        <a class="xref" href="chapter_txns.html" title="Kapitel 4. Buchungen">Kapitel 4, <i>Buchungen</i></a> befasst sich
+        detaillierter mit der Eingabe von Buchungen, aber zunächst
+        wollen wir einen Überblick geben, wie dies prinzipiell
+        funktioniert.  Für eine einfache Buchung wie eine
+        Kartenzahlung im Supermarkt, benötigen Sie ein Girokonto und
+        ein Konto für Lebensmittelausgaben.  (Das Anlegen eines Kontos
+        wird in <a class="xref" href="chapter_accts.html" title="Kapitel 3. Konten">Kapitel 3, <i>Konten</i></a> erklärt.)  Um
+        den Vorgang zu erfassen, geben Sie einfach eine Buchung von
+        Ihrem Girokonto auf das Lebensmittelkonto ein.  In diesem
+        Beispiel sieht die GnuCash Buchung im Kontobuch
+        des Girokontos so aus:</p><p>
+        </p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_DoubleEntryIntro_compact.png" alt="Eine einfache Buchung"><div class="caption"><p>Die Abbildung zeigt die Eingabe von Datum,
+                Beschreibung und Gegenbuchungskonto für eine Zahlung
+                von <span class="guilabel"><strong>€50</strong></span> an
+                den <span class="guilabel"><strong>Supermarkt</strong></span>.
+              </p></div></div></div><p>
+      </p><p>
+        In dieser Buchung erfolgte eine Lastschrift durch
+        den <span class="guilabel"><strong>Supermarkt</strong></span>
+        für <span class="guilabel"><strong>€50</strong></span>.  Da dies eine Buchung für
+        doppelte Buchführung ist, sind mindestens zwei Konten
+        betroffen und müssen Teil der Buchung sein.  GnuCash fügt
+        automatisch den Namen des aktuellen Kontos
+        (<span class="guilabel"><strong>Aktiva:Barvermögen:Girokonto</strong></span>) für Sie
+        ein, so dass Sie nur den Namen des anderen betroffenen Kontos
+        eingeben müssen
+        (<span class="guilabel"><strong>Aufwendungen:Lebensmittel</strong></span>).
+      </p><p>Zur Verdeutlichung, dass GnuCash alles als doppelte Buchung
+      speichert, ändern wir die Ansicht
+      auf <span class="guilabel"><strong>Vollständig</strong></span> und passen auf, was
+      passiert.
+      </p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_DoubleEntryIntro_expanded.png" alt="Vollständige Ansicht einer einfachen Buchung"><div class="caption"><p>Die Abbildung zeigt die <span class="guilabel"><strong>vollständige
+            Ansicht</strong></span> des <span class="guilabel"><strong>Girokontos</strong></span>.
+            </p></div></div></div><p>Beachten Sie, dass wir eine Eintragung zur Einzahlung
+      (debit) in das <span class="guilabel"><strong>Aufwendungen:Lebensmittel</strong></span>
+      Konto haben und eine Eintragung zur Abhebung (credit) von
+      dem <span class="guilabel"><strong>Aktiva:Barvermögen:Girokonto</strong></span>.</p><p>Lassen Sie uns noch einen kurzen Blick darauf werfen, wie
+      dieselbe Buchung
+      vom <span class="guilabel"><strong>Aufwendungen:Lebensmittel</strong></span> Konto gesehen
+      aussieht.</p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_DoubleEntryIntro_groceries.png" alt="Ansicht einer einfachen Buchung in Aufwendungen:Lebensmittel"><div class="caption"><p>Die Abbildung zeigt die <span class="guilabel"><strong>vollständige
+            Ansicht</strong></span>
+            des <span class="guilabel"><strong>Aufwendungen:Lebensmittel</strong></span> Kontos.
+            </p></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Anmerkung</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">In diesem Beispiel für doppelte Buchführung haben wir
+        eine EC-Karte benutzt, um die Lebensmittel zu bezahlen.
+        Beachten Sie, dass das Konzept das gleiche bleibt, egal wie
+        wir zahlen.  Hätten wir statt dessen bar bezahlt, würde die
+        doppelte Buchführung einfach das Bargeldkonto statt des
+        Girokontos belasten.</p></td></tr></table></div><p>
+        Wie sieht es mit Ihrer Gehaltszahlung aus?  Sie können sehen,
+        dass das Geld auf dem Girokonto landet, aber wo kommt es her?
+        Bei der doppelten Buchführung muss es von irgendwo kommen.
+        Technisch gesehen kommt das Geld von Ihrem Arbeitgeber, aber
+        Sie wollen ja nicht für diesen die Konten führen.  Wie also
+        verbuchen wir Erträge?  In GnuCash gibt es einen speziellen
+        Einkommens-Kontentyp, den Sie benutzen, um Ihre Gehaltszahlung
+        zu buchen. (Siehe <a class="xref" href="chapter_accts.html" title="Kapitel 3. Konten">Kapitel 3, <i>Konten</i></a> für
+        weitere Informationen dazu, wie man Einkommenskonten anlegt.)
+        Um die Gehaltszahlung zu buchen, geben Sie einfach eine
+        Buchung von diesem Einkommenskonto auf Ihr Girokonto
+        ein.</p><p>
+        Hier sehen Sie, wie eine Gehaltsbuchung in GnuCash aussieht.
+      </p><p>
+        </p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_DoubleEntryIntro_Salary.png" alt="Eine einfache Gehaltsbuchung"><div class="caption"><p>Die Abbildung zeigt die Eingabe von Datum,
+                Beschreibung und Gegenbuchungskonto für die Zahlung
+                von <span class="guilabel"><strong>€600</strong></span> <span class="guilabel"><strong>
+                Gehalt</strong></span> von <span class="guilabel"><strong>Mein
+                Arbeitgeber</strong></span>.
+              </p></div></div></div><p>
+      </p><p>
+        In diesem Beispiel werden <span class="guilabel"><strong>€600</strong></span> von
+        einem <span class="guilabel"><strong>Gehalt</strong></span> Ertragskonto auf
+        das <span class="guilabel"><strong>Girokonto</strong></span> überwiesen.  Wegen der
+        speziellen Natur der Ertragskonten, wie in Kapitel 3
+        diskutiert wird, erhöht dieser Vorgang sowohl den Saldo des
+        Girokontos, als auch des Gehaltskontos um den überwiesenen
+        Betrag.
+      </p><p>
+        Aber was, wenn Sie Ihr Bruttogehalt und alle Abzüge ebenfalls
+        verbuchen wollen?  Dann geben Sie einen Vorgang
+        mit <span class="emphasis"><strong>mehreren Buchungen</strong></span> ein, was wir im
+        Abschnitt 4.3 behandeln werden. Bei dieser Art Vorgang
+        übertragen Sie einen Betrag von einem auf mehrere Konten.  Für
+        jeden Vorgang einer doppelten Buchung, muss
+        die <span class="emphasis"><strong>Summe</strong></span> des Geldes,
+        die <span class="emphasis"><strong>von</strong></span> Konten gebucht wird, gleich
+        der <span class="emphasis"><strong>Summe</strong></span> sein,
+        die <span class="emphasis"><strong>auf</strong></span> Konten gebucht wird.
+      </p><p>
+        Zum Beispiel, könnte Ihr Bruttogehalt € 1000 sein, wovon
+        aber nur €655 auf Ihrem Girokonto ankommen.  Die übrigen
+        €345 verteilen sich auf die Steuern und Sozialabgaben,
+        wie Lohnsteuer, Renten- Kranken- und Arbeitslosenversicherung.
+        Wie bucht man das in GnuCash?  Als erstes müssen Sie ein
+        Girokonto, sowie Konten für das Bruttogehalt und alle Arten
+        von Abzügen einrichten
+        (siehe <a class="xref" href="chapter_accts.html" title="Kapitel 3. Konten">Kapitel 3, <i>Konten</i></a> ).  Dann geben
+        einen Vorgang ein zur Übertragung von €1000 von dem
+        Konto für das <span class="guilabel"><strong>Bruttogehalt</strong></span> auf die
+        anderen
+        Konten: <span class="guilabel"><strong>Girokonto</strong></span>, <span class="guilabel"><strong>Lohnsteuer</strong></span>, <span class="guilabel"><strong>Krankenversicherung</strong></span>, <span class="guilabel"><strong>Rentenversicherung</strong></span>
+        und <span class="guilabel"><strong>Arbeitslosenversicherung</strong></span>.  Weil dies
+        ein Vorgang in doppelter Buchführung ist, muss der
+        Gesamtbetrag, der auf diese fünf Konten geht, gleich den
+        €1000 sein, die von dem Bruttogehaltskonto kommen.  Wir
+        behandeln diese Art von Vorgang detaillierter in Kapitel 4,
+        hier nur ein kurzer Ausblick darauf, wie es aussieht:
+
+        </p><div class="screenshot"><div class="mediaobject"><img src="figures/basics_DoubleEntryIntro_SalarySplit.png" alt="Eine mehrteilige Gehaltsbuchung"><div class="caption"><p>Die Abbildung zeigt die Eingabe von Datum,
+                Beschreibung und Gegenkonto für eine Buchung
+                von <span class="guilabel"><strong>€1000</strong></span> <span class="guilabel"><strong>
+                Bruttogehalt</strong></span> von <span class="guilabel"><strong>Mein
+                Arbeitgeber</strong></span>. Der Betrag wird dann auf
+                <span class="guilabel"><strong>Girokonto</strong></span>, <span class="guilabel"><strong>Lohnsteuer</strong></span>, <span class="guilabel"><strong>Kranken-</strong></span>, <span class="guilabel"><strong>Renten-</strong></span>
+                und <span class="guilabel"><strong>Arbeitslosenversicherung</strong></span>
+                aufgeteilt.
+              </p></div></div></div><p>
+      </p><p>
+        Das wesentliche Prinzip, das man sich merken muss ist, dass es
+        immer mindestens zwei Teile in jedem Buchungsvorgang gibt und
+        dass der Gesamtbetrag, der von einer Gruppe Konten abgebucht
+        wird, gleich dem Betrag sein muss, der einer anderen Gruppe
+        Konten gutgeschrieben wird.  Wenn ein Vorgang den gleichen
+        Betrag von Konten auf andere Konten bucht, sagt man, das die
+        Buchung <span class="emphasis"><strong>ausgeglichen</strong></span> ist.  In GnuCash, wie
+        in der doppelten Buchführung, wollen Sie, das alle Ihre
+        Buchungsvorgänge ausgeglichen sind.
+      </p><p>
+        Warum ist dies wichtig für Sie?  Wenn all Ihre
+        Buchungsvorgänge ausgeglichen sind, dann sind alle Beträge
+        abgerechnet.  GnuCash hat aufgezeichnet, wo das Geld herkam und
+        wohin es gegangen ist.  Indem Sie die Namen aller an den
+        Buchungen beteiligten Konten angegeben haben, können die Daten
+        später sortiert und in Form eines Berichts dargestellt werden.
+        Berichte erlauben es Ihnen zu sehen, wie viel sie im Jahr
+        verdient haben, wo das ganze Geld geblieben ist, wie viel
+        Vermögen Sie haben und wie viel Steuern Sie wohl bezahlen
+        müssen.  Je mehr Informationen Sie eingeben, desto
+        detaillierter können die Berichte sein.
+      </p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top"><a xmlns="" name="basics-accounting-terminology"></a>Buchführungsterminologie</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Buchhalter benutzen die
+        Begriffe <span class="emphasis"><strong>Soll</strong></span>
+        und <span class="emphasis"><strong>Haben</strong></span> um zu beschreiben, ob Beträge
+        einem Konto <span class="emphasis"><strong>gutgeschrieben</strong></span> oder von einem
+        Konto <span class="emphasis"><strong>abgebucht</strong></span> werden. Beträge werden in
+        der Soll-Spalte, welches immer die linke Spalte ist, notiert,
+        wenn sie <span class="emphasis"><strong>auf</strong></span> dem Konto gutgeschrieben
+        werden.  Beträge werden in der Haben-Spalte, welches immer die
+        rechte Spalte ist, notiert, wenn sie <span class="emphasis"><strong>von</strong></span>
+        einem Konto abgebucht werden.  Geld fließt immer von der
+        rechten Seite eines Kontos auf die linke Seite eines anderen
+        Kontos.
+        </p><p xmlns="">
+          Die Grundregel der Buchführung lautet: <span class="emphasis"><strong>Bei jedem
+          Buchungsvorgang muss die Summe von Soll und Haben gleich
+          sein. </strong></span> Dies ist nur eine andere Art die Regel der
+          doppelten Buchführung zu wiederholen, nämlich dass der
+          Betrag, der <span class="emphasis"><strong>von</strong></span> Konten abgebucht wird
+          der gleiche sein muss, der <span class="emphasis"><strong>auf</strong></span> andere
+          Konten gutgeschrieben wird.</p><p xmlns="">
+          Sie müssen nicht mit den Begriffen Soll und Haben arbeiten,
+          wenn Sie GnuCash benutzen wollen.  In den GnuCash Kontenbüchern
+          werden als Voreinstellung für die Spaltenüberschriften die
+          üblichen Bezeichnungen wie Einzahlung und Abhebung benutzt -
+          wenn Ihnen das recht ist, nutzen Sie es.  Wenn sie lieber
+          Soll und Haben als Überschrift möchten, können als
+          Spaltenüberschriften auch die Buchungsüberschriften aus dem
+          Rechnungswesen über den
+          Menüpunkt <span class="guimenu"><strong>Bearbeiten</strong></span> → <span class="guimenuitem"><strong>Einstellungen</strong></span>
+          <span class="guibutton">Konten</span> wählen
+          (siehe <a class="xref" href="basics-prefs1.html" title="2.4. GnuCash Einstellungen anpassen">Abschnitt 2.4, „GnuCash Einstellungen anpassen“</a> für
+          Einzelheiten, wie man Optionen einstellt).
+        </p></td></tr></table></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="basics-accounting1.html">&lt;&lt;&lt; Zurück</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right"> <a accesskey="n" href="basics-interface1.html">Weiter &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">2.1. Grundlagen der Buchführung </td><td width="20%" align="center"><a accesskey="u" href="chapter_basics.html">Nach oben</a></td><td width="40%" align="right"> 2.3. Die GnuCash Benutzeroberfläche</td></tr></table></div></body></html>

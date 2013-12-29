@@ -1,0 +1,130 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>3.2. GnuCash-Konten</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Kurs und Konzepte"><link rel="up" href="chapter_accts.html" title="Kapitel 3. Konten"><link rel="prev" href="accts-concepts1.html" title="3.1. Buchhaltungsgrundsätze"><link rel="next" href="accts-examples1.html" title="3.3. Alles zusammensetzen"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.2. <strong xmlns="" class="application"><code>GnuCash</code></strong>-Konten</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="accts-concepts1.html">&lt;&lt;&lt; Zurück</a> </td><th width="60%" align="center">Kapitel 3. Konten</th><td width="20%" align="right"> <a accesskey="n" href="accts-examples1.html">Weiter &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="3.2. GnuCash-Konten"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="accts-types1"></a>3.2. <strong class="application"><code>GnuCash</code></strong>-Konten</h2></div></div></div><p>Dieser Abschnitt beschreibt, wie die <strong class="application"><code>GnuCash</code></strong>-Definition 
+    eines Kontos mit den grundlegenden 5 Kontentypen zusammenpasst.</p><p>Lassen Sie uns zuerst mit der Definition eines <span class="guilabel"><strong>Kontos</strong></span>
+      in <strong class="application"><code>GnuCash</code></strong> anfangen. Ein <strong class="application"><code>GnuCash</code></strong>-
+      <span class="guilabel"><strong>Konto</strong></span> ist ein Objekt, welches andere Unterkonten oder 
+      <span class="guilabel"><strong>Buchungen</strong></span> enthält. Da ein Konto andere Konten beinhalten kann,
+      sehen Sie oft <span class="guilabel"><strong>Konten-Bäume</strong></span> in <strong class="application"><code>GnuCash</code></strong>,
+      bei denen sinngemäß zusammenhängende Konten unter einem gemeinsamen Oberkonto
+      zu einer Gruppe zusammengefasst werden.
+    </p><p>Ein <strong class="application"><code>GnuCash</code></strong> Konto muss einen eindeutigen Namen haben 
+      (den Sie zuweisen), und eine der vorgegebenen <strong class="application"><code>GnuCash</code></strong>-
+      <span class="quote">„<span class="quote">Kontenarten</span>“</span>. Es gibt insgesamt 12 Kontenarten in 
+      <strong class="application"><code>GnuCash</code></strong>. 
+      Diese 12 Kontenarten basieren auf den fünf grundlegenden Kontentypen; Grund für 
+      die höhere Anzahl an <strong class="application"><code>GnuCash</code></strong>-Kontenarten ist, dass
+      <strong class="application"><code>GnuCash</code></strong> dadurch für diese Konten eine besondere Erfassung und 
+      Behandlung von Buchungsvorgängen ermöglicht. 
+      Es gibt 6 Aktiva-Kontenarten (<span class="emphasis"><strong>Bargeld</strong></span>, 
+      <span class="emphasis"><strong>Bank</strong></span>, <span class="emphasis"><strong>Aktienkonto</strong></span>, 
+      <span class="emphasis"><strong>Investmentfonds</strong></span>, <span class="emphasis"><strong>Forderungen</strong></span>, 
+      und <span class="emphasis"><strong>Sonstige Aktiva</strong></span>), 3 Fremdkapital-Kontenarten 
+      (<span class="emphasis"><strong>Kreditkarte</strong></span>, <span class="emphasis"><strong>Verbindlichkeiten</strong></span>, 
+      und <span class="emphasis"><strong>Fremdkapital</strong></span>),
+      1 Eigenkapital-Kontoart (<span class="emphasis"><strong>Eigenkapital</strong></span>), 1 Ertrags-Kontoart
+      (<span class="emphasis"><strong>Ertrag</strong></span>), und eine Aufwands-Kontoart
+      (<span class="emphasis"><strong>Aufwand</strong></span>).</p><p>Diese <strong class="application"><code>GnuCash</code></strong> Kontenarten werden weiter unten 
+      genauer dargestellt.</p><div class="sect2" title="3.2.1. Bestandskonten"><div class="titlepage"><div><div><h3 class="title"><a name="accts-gc-bsa2"></a>3.2.1. Bestandskonten</h3></div></div></div><p>Das erste Bestandskonto, das wir untersuchen werden, ist das Konto
+      <span class="emphasis"><strong>Aktiva</strong></span>, welches sich, wie Sie sich sicherlich erinnern,
+      auf Ihren Besitz bezieht.</p><p>Um Ihnen zu helfen, Ihre Aktiva zu organisieren und um die Eingabe von Buchungen
+      zu vereinfachen, unterstützt <strong class="application"><code>GnuCash</code></strong> verschiedene Typen 
+      von Aktiva-Konten:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p><span class="guilabel"><strong>Bargeld:</strong></span> Benutzen Sie diese Kontoart, um
+          die Geldbeträge zu verfolgen, welche Sie in der Hand, Ihrer Geldbörse,
+          Ihrem Sparschwein, unter Ihrer Matratze oder an einem anderen 
+          Platz aufbewahren, um direkten Zugriff darauf zu haben. Das sind 
+          die am leichtesten <span class="emphasis"><strong>verfügbaren</strong></span> oder 
+          <span class="emphasis"><strong>liquiden</strong></span> Geldmittel.</p></li><li class="listitem"><p><span class="guilabel"><strong>Bank:</strong></span> Benutzen Sie diese Kontoart um Ihren
+          Guthaben bei Institutionen wie zum Beispiel Banken, Bausparkassen
+          oder Maklerfirmen (wo jemand anders Ihr Geld absichert) zu verfolgen. 
+          Das sind die am zweit leichtesten verfügbaren Geldmittel, da sie leicht
+          in Bargeld umgewandelt werden können.</p></li><li class="listitem"><p><span class="guilabel"><strong>Aktienkonto:</strong></span> Benutzen Sie diesen Kontentyp um
+          die Entwicklung Ihrer persönlichen Aktien und Rentenpapiere zu verfolgen.
+          Die Buchungsansicht dieses Kontentyps stellt Ihnen zusätzliche Spalten für die 
+          Eingabe der Anzahl der Aktien und ihres Preises zur Verfügung. Diese Art
+          von Vermögen können Sie nicht so einfach in Bargeld umwandeln, es sei denn,
+          Sie finden einen Käufer. Sie bekommen auch nicht unbedingt den selben
+          Geldbetrag, den Sie beim Kauf der Aktien und Rentenpapiere bezahlt haben.</p></li><li class="listitem"><p><span class="guilabel"><strong>Investmentfonds:</strong></span> Dieser Kontentyp ist dem
+          Aktienkonto ähnlich, außer dass er dazu benutzt wird, die Entwicklung von Investmentfonds 
+          zu verfolgen. Die Buchungsansicht stellt Ihnen dieselben zusätzlichen Spalten für
+          die Eingabe der Anzahl der Fondsanteile und ihres Preises zur Verfügung wie beim
+          Aktienkonto. Investmentfonds stellen einen Miteigentumsanteil für eine Vielzahl 
+          von Geldanlagen dar, und wie Aktien garantieren sie keinen festen Geldwert.</p></li><li class="listitem"><p><span class="guilabel"><strong>Forderungen</strong></span>: Dieser Kontentyp wird normalerweise
+          nur im Geschäftsleben verwendet, da Sie hier noch nicht eingegangene
+          Zahlungen für von Ihnen erbrachte Leistungen oder gelieferte Produkte verwalten.
+          Diese Beträge werden schon als Vermögen betrachtet, weil Sie normalerweise 
+          damit rechnen können, dass diese geschuldeten Geldbeträge bei Ihnen eintreffen.</p></li><li class="listitem"><p><span class="guilabel"><strong>Sonstiges Vermögen:</strong></span> Unabhängig davon, wie unterschiedlich
+          dieses Vermögen ist, kann <strong class="application"><code>GnuCash</code></strong> einfach viele
+          unterschiedliche Situationen verwalten. Der Bereich <span class="quote">„<span class="quote">Sonstiges Vermögen</span>“</span>
+          deckt alle Aktiva ab, die oben noch nicht aufgezählt wurden.</p><p>Konten sind Informationsspeicher, die dazu benutzt werden, um
+          die Art von auftretenden Vorgängen aufzuzeichnen oder zu verfolgen,
+          für die das Konto eingerichtet wurde.</p><p>Im Wirtschaftsleben sind häufig die Vorgänge, die aufgezeichneten und verfolgt 
+          werden, feiner aufgeteilt als wir bisher betrachtet haben. Für eine fortgeschrittene
+          Behandlung der Möglichkeiten lesen Sie bitte die Beschreibung in Kapitel
+          <a class="xref" href="chapter_other_assets.html" title="Kapitel 7. Andere Aktiva">Kapitel 7, <i>Andere Aktiva</i></a> in diesem Kurs.</p><p>Für Ihre persönlichen Finanzen können Sie die in der Wirtschaft verwendeten
+          Kontenrahmen benutzen oder nicht, je nachdem, ob sie Ihnen für die Erfassung, Verfolgung
+          und den Bericht der auftretenden Vorgänge bei der Verwaltung Ihrer persönlichen Finanzen
+          nützlich erscheinen. Zusätzliche Informationen finden Sie unter
+          <a class="xref" href="chapter_other_assets.html" title="Kapitel 7. Andere Aktiva">Kapitel 7, <i>Andere Aktiva</i></a> in diesem Leitfaden.</p></li></ol></div><p>Das zweite Bestandskonto ist das Konto
+      <span class="emphasis"><strong>Fremdkapital</strong></span>, welches sich, wie Sie sich sicherlich erinnern,
+        auf Ihre Schulden bezieht, also auf Geld, welches Sie geliehen haben
+        und zu einem späteren Zeitpunkt zurückzahlen müssen. Dies stellt das Recht
+        Ihrer Geldgeber dar, von Ihnen eine Rückzahlung zu erhalten. Die Beobachtung
+        Ihrer Darlehenstandes zeigt Ihnen, wie viele Schulden Sie zu einem bestimmten
+        Zeitpunkt haben.</p><p><strong class="application"><code>GnuCash</code></strong> bietet drei Kontentypen für Fremdkapital:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p><span class="guilabel"><strong>Kreditkarte</strong></span> Nutzen Sie diese Kontoart, um
+          Ihre Zahlungen mit der Kreditkarte zu verwalten und mit der Abrechnung
+          der Kreditkartengesellschaft abzugleichen. Kreditkarten stellen ein 
+          Kurzzeit-Darlehen dar, und Sie sind verpflichtet den Betrag an die 
+          Kreditkartengesellschaft zurückzuzahlen. Dieser Kontentyp kann auch für 
+          andere Kurzzeit-Darlehen benutzt werden, wie zum Beispiel einen
+          Überziehungskredit Ihrer Bank.</p></li><li class="listitem"><p><span class="guilabel"><strong>Verbindlichkeiten</strong></span> Diese Kontoart wird
+          normalerweise nur im Geschäftsleben verwendet, da Sie hier eingegangene,
+          aber noch nicht bezahlte Rechnungen für Waren und Dienstleistungen 
+          anderer verwalten. Diese Beträge werden als Darlehen betrachtet, weil 
+          Sie diese geschuldeten Geldbeträge zum Fälligkeitsdatum bezahlen müssen.</p></li><li class="listitem"><p><span class="guilabel"><strong>Fremdkapital</strong></span> Nutzen Sie diese Kontoart für 
+          alle anderen Darlehen. Das sind normalerweise langfristige Darlehen wie
+          Immobiliendarlehen oder Autokredite. Dieser Kontentyp hilft Ihnen
+          dabei, die Übersicht darüber zu behalten, wie viel Sie anderen noch 
+          schulden und wie viel Sie bereits zurückgezahlt haben.</p></li></ol></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Tipp</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Fremdkapital hat in der Buchführungs den gegenteiligen Effekt
+          wie Aktiva: <span class="emphasis"><strong>Haben</strong></span> (Einträge in der rechten Spalte) 
+          erhöhen die Kontenstände der Darlehnskonten und <span class="emphasis"><strong>Soll</strong></span> 
+          (Einträge in der linken Spalte) vermindert sie (siehe Anmerkung
+          weiter unten in diesem Kapitel).</p></td></tr></table></div><p>Die letzte Bestandskontoart ist <span class="emphasis"><strong>Eigenkapital</strong></span>,
+        was auch gleichbedeutend ist mit <span class="quote">„<span class="quote">Reinvermögen</span>“</span>.
+        Er stellt dar, was übrig bleibt, wenn Sie Ihr Fremdkapital von Ihren Aktiva
+        abziehen. Es kann als der Teil Ihrer Aktiva betrachtet werden, den Sie
+        ohne irgendwelche Schulden besitzen. Nutzen Sie diese Kontoart in
+        <strong class="application"><code>GnuCash</code></strong> als Quelle für die Eröffnungsbuchungen, 
+        die Erfassung der Anfangsbestände Ihrer Konten, 
+        da deren Summe Ihrem anfänglichen Nettowert oder Reinvermögen entspricht.</p><p>Es gibt normalerweise nur ein <strong class="application"><code>GnuCash</code></strong> Eigenkapitalkonto,
+      welches logischerweise auch <span class="guilabel"><strong>Eigenkapital</strong></span> genannt wird. 
+      Bei Firmen, WGs usw. kann aber pro Teilhaber ein Unterkonto angelegt werden.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Tipp</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">
+          In Eigenkapitalkonten erhöhen Haben-Buchungen die Kontenstände und Soll-Buchungen
+          verringern sie (mehr dazu später in diesem Kapitel).</p></td></tr></table></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Anmerkung</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Die Gleichung, die die Bestandskontentypen verbindet ist
+        Aktiva = Darlehen + Eigenkapital oder auch umgestellt 
+        Aktiva - Darlehen = Eigenkapital. Umgangssprachlich, die 
+        <span class="emphasis"><strong>Dinge die Sie besitzen</strong></span> minus die <span class="emphasis"><strong>Dinge die Sie schulden</strong></span>
+        ist gleich dem <span class="emphasis"><strong>Reinvermögen</strong></span>.</p></td></tr></table></div></div><div class="sect2" title="3.2.2. Erfolgskonten"><div class="titlepage"><div><div><h3 class="title"><a name="accts-gc-ie2"></a>3.2.2. Erfolgskonten</h3></div></div></div><p><span class="emphasis"><strong>Ertrag</strong></span> ist die Zahlung die Sie für Ihre bereitgestellte Zeit,
+        für von Ihnen erbrachte Dienstleistungen oder für die Nutzung Ihres
+        Geldes erhalten. Nutzen Sie ein Konto vom Typ <span class="guilabel"><strong>Ertrag </strong></span>, 
+        um diese Zahlungen in <strong class="application"><code>GnuCash</code></strong> zu verfolgen.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Tipp</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Haben-Buchungen erhöhen den Kontostand eines Ertragskontos und Soll-Buchungen
+        vermindern ihn. Wie in <a class="xref" href="basics-accounting1.html" title="2.1. Grundlagen der Buchführung">Abschnitt 2.1, „Grundlagen der Buchführung“</a> beschrieben, 
+        repräsentieren Haben-Buchungen Geld, welches <span class="emphasis"><strong>von</strong></span> einem 
+        Konto genommen wird. Speziell für Ertragskonten gilt, wenn Sie Geld <span class="emphasis"><strong>von</strong></span> 
+        diesem Konto (Haben) zu einem anderen Konto transferieren, <span class="emphasis"><strong>erhöht</strong></span> 
+        sich der Kontostand des Ertragskontos. Wenn Sie zum Beispiel eine Gehaltsbuchung
+        als Transaktionen von einem Ertragskonto zu Ihrem Bankkonto eingeben,
+        erhöht sich der Kontostand beider Konten.</p></td></tr></table></div><p><span class="emphasis"><strong>Aufwand</strong></span> bezieht sich auf Geld, welches Sie ausgeben, 
+      um Waren und Dienstleistungen eines Anderen zu erwerben. Benutzen Sie in
+      <strong class="application"><code>GnuCash</code></strong> ein Konto vom Typ <span class="guilabel"><strong>Aufwand</strong></span>,
+      um Ihre Aufwendungen zu erfassen.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/tip.png"></img></td><th align="left" valign="top">Tipp</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Soll-Buchungen erhöhen den Kontostand von Aufwandskonten und
+        Haben-Buchungen vermindern den Kontostand (siehe unten).</p></td></tr></table></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Anmerkung</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Wenn Sie für eine bestimmte Zeit Ihre gesamten Aufwendungen von 
+        Ihren gesamten Erträge abziehen, erhalten Sie Ihren Nettoertrag. Dieser 
+        Nettoertrag wird in der Bilanz als einbehaltener Gewinn aufgeführt,
+        woraus mit Abschluß des Wirtschaftsjahres
+        <span class="guilabel"><strong>Eigenkapital</strong></span> wird.</p></td></tr></table></div><p>Unten sehen Sie <span class="guilabel"><strong>Ertrags-</strong></span> and
+      <span class="guilabel"><strong>Aufwands-</strong></span>Konten nach der Auswahl von 
+        <span class="guilabel"><strong>Allgemeine Konten</strong></span> 
+      im Assistenten für die Erstellung eines neuen Kontenplans
+      (<span class="guimenu"><strong>Aktionen</strong></span> → <span class="guimenuitem"><strong>Kontenhierarchie hinzufügen...</strong></span>).
+      </p><div class="screenshot"><div class="mediaobject"><img src="figures/accts_DefaultIncomeAccounts.png" alt="vorgegebene Ertragskonten"><div class="caption"><p>Dieses Bild zeigt die allgemeinen 
+                <span class="emphasis"><strong>Ertrags</strong></span>-Konten</p></div></div></div><div class="screenshot"><div class="mediaobject"><img src="figures/accts_DefaultExpenseAccounts.png" alt="Einige vorgegebene Aufwandskonten"><div class="caption"><p>Dieses Bild zeigt einige allgemeine 
+                <span class="emphasis"><strong>Aufwands</strong></span>-Konten</p></div></div></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="accts-concepts1.html">&lt;&lt;&lt; Zurück</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right"> <a accesskey="n" href="accts-examples1.html">Weiter &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">3.1. Buchhaltungsgrundsätze </td><td width="20%" align="center"><a accesskey="u" href="chapter_accts.html">Nach oben</a></td><td width="40%" align="right"> 3.3. Alles zusammensetzen</td></tr></table></div></body></html>

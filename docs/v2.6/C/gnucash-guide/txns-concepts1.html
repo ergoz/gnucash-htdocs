@@ -1,0 +1,20 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>4.1. Basic Concepts</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_txns.html" title="Chapter 4. Transactions"><link rel="prev" href="chapter_txns.html" title="Chapter 4. Transactions"><link rel="next" href="txns-registers1.html" title="4.2. The Account Register"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">4.1. Basic Concepts</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="chapter_txns.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 4. Transactions</th><td width="20%" align="right"> <a accesskey="n" href="txns-registers1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="4.1. Basic Concepts"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="txns-concepts1"></a>4.1. Basic Concepts</h2></div></div></div><p>A <span class="emphasis"><strong>transaction</strong></span> in a double entry accounting
+    system such as <strong class="application"><code>GnuCash</code></strong> is an exchange between at least 2 accounts. Thus, a
+    single transaction must always consist of at least two parts, a <span class="emphasis"><strong>from</strong></span> and
+    a <span class="emphasis"><strong>to</strong></span> account. The <span class="emphasis"><strong>from</strong></span> account is transferring value to the <span class="emphasis"><strong>to</strong></span> account.
+    Accountants call these parts of a transaction <span class="emphasis"><strong>Ledger
+    Entries</strong></span>. In <strong class="application"><code>GnuCash</code></strong>, they are called
+    <span class="emphasis"><strong>Splits</strong></span>.</p><p>A split identifies the account to which it refers, the
+    amount of money specifically moved to or from that account, and
+    can contain a few other specific pieces of information if needed.
+    <strong class="application"><code>GnuCash</code></strong> supports multiple splits in a
+    single transaction, and the splits can move money into or out of
+    the involved accounts arbitrarily.</p><p>For example, you receive a paycheck and deposit it into your savings
+    account at the bank. The <span class="emphasis"><strong>transaction</strong></span> that occurs is
+    that your bank savings account (an asset) received money from your income
+    account. Two accounts are affected, and in this case there is a net
+    increase in your equity.</p><p>Working with transactions in <strong class="application"><code>GnuCash</code></strong> is performed using what is
+    known as the <span class="emphasis"><strong>account register</strong></span>. Every account you
+    create has an account register. It will appear familiar to you as it looks
+    very similar to the log used to track checkbooks.</p><p>The account register is explained in the upcoming section,
+    <a class="xref" href="txns-registers1.html" title="4.2. The Account Register">Section 4.2, “The Account Register”</a>.</p></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="chapter_txns.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="txns-registers1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">Chapter 4. Transactions </td><td width="20%" align="center"><a accesskey="u" href="chapter_txns.html">Up</a></td><td width="40%" align="right"> 4.2. The Account Register</td></tr></table></div></body></html>

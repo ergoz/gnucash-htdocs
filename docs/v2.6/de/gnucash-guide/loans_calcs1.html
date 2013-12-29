@@ -1,0 +1,154 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>5.3. Berechnungen</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Kurs und Konzepte"><link rel="up" href="chapter_loans.html" title="Kapitel 5. Darlehen"><link rel="prev" href="loans_accounts1.html" title="5.2. Einrichtung der Konten"><link rel="next" href="loans_mortgage1.html" title="5.4. Hypothekendarlehen (wie wird es gemacht)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5.3. Berechnungen</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="loans_accounts1.html">&lt;&lt;&lt; Zurück</a> </td><th width="60%" align="center">Kapitel 5. Darlehen</th><td width="20%" align="right"> <a accesskey="n" href="loans_mortgage1.html">Weiter &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="5.3. Berechnungen"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="loans_calcs1"></a>5.3. Berechnungen</h2></div></div></div><p>Bestimmung des Rückzahlungsplans, der periodische Zahlungen, der gesamten Rückzahlungssumme, 
+			oder der Zinsraten kann etwas kompliziert sein.	<strong class="application"><code>GnuCash</code></strong> hat einen eingebauten 
+				<span class="guilabel"><strong>Darlehensrechner</strong></span>um diese Art von Berechnungen zu vereinfachen.
+				Um diesen Rechner aufzurufen, gehen sie auf	<span class="guimenu"><strong>Werkzeuge</strong></span> → <span class="guimenuitem"><strong>Darlehensrechner</strong></span>.
+		</p><div class="screenshot"><div class="mediaobject"><img src="figures/loans_fcalc.png" alt="Darlehensrechner"><div class="caption"><p>
+						 Der <strong class="application"><code>GnuCash</code></strong> <span class="guilabel"><strong>Darlehensrechner</strong></span>.
+					 </p></div></div></div><p>Der <span class="guilabel"><strong>Darlehensrechner</strong></span> kann dazu benutzt werden aus jeweils vier 
+			bekannten Darlehensparametern jeden der Parameter: 
+				<span class="guilabel"><strong>Zahlungsintervalle</strong></span>, 
+				<span class="guilabel"><strong>Zinssatz</strong></span>, 
+				<span class="guilabel"><strong>Aktueller Wert</strong></span>, 
+				<span class="guilabel"><strong>Periodische Zahlungen</strong></span>,	oder 
+				<span class="guilabel"><strong>Zukünftiger Wert </strong></span> 
+				zu berechnen. Sie müssen auch die Zins- und die Zahlungsmodalitäten angeben.</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>
+               <span class="emphasis"><strong>Zahlungsintervalle</strong></span> – Die Anzahl der Zahlungsintervalle.</p></li><li class="listitem"><p>
+               <span class="emphasis"><strong>Zinssatz</strong></span> – Der Nominalzinssatz des Darlehens, bzw. der 
+							 Jahreszinssatz.</p></li><li class="listitem"><p>
+               <span class="emphasis"><strong>Aktueller Wert</strong></span>- Der aktuelle Wert des Darlehens, 
+							 beziehungsweise der augenblicklich geschuldete Geldbetrag des Darlehens.</p></li><li class="listitem"><p>
+               <span class="emphasis"><strong>Periodische Zahlung</strong></span> – Der pro Intervall zu zahlende Geldbetrag.</p></li><li class="listitem"><p>
+               <span class="emphasis"><strong>Zukünftiger Wert</strong></span> – Die zukünftige Darlehenssumme, 
+							 beziehungsweise die Darlehenssumme die nach Ablauf aller Zahlungsintervalle 
+							 noch geschuldet wird.</p></li><li class="listitem"><p>
+               <span class="emphasis"><strong>Zinstyp</strong></span> – Es gibt zwei Methoden der Verzinsung, 
+							 Schrittweise und kontinuierlich. Für eine schrittweise Verzinsung 
+							 wählen Sie bitte die Häufigkeit von jährlich bis täglich.</p></li><li class="listitem"><p>
+               <span class="emphasis"><strong>Zahlungszeitpunkt</strong></span> – Hier können Sie auswählen, 
+							 ob die Zahlungen am Anfang oder am Ende des Zahlungsintervalls erfolgen. 
+							 Weiterhin können hier die Zahlungsintervalle im Bereich von jährlich bis 
+							 täglich eingestellt werden. Sowohl Zahlungen am Beginn des Intervalls als 
+							 auch Vorwegzahlungen und noch geschuldetes Geld werden bei der Zinsberechnung 
+							 berücksichtigt.</p></li></ul></div><div class="sect2" title="5.3.1. Beispiel: monatliche Zahlungen"><div class="titlepage"><div><div><h3 class="title"><a name="loans_calcsexample1_2"></a>5.3.1. Beispiel: monatliche Zahlungen</h3></div></div></div><p>Wie hoch sind die monatlichen Raten für ein dreißigjähriges Darlehen von 
+				 100.000 € bei einem festen Zinssatz von 4 % und monatlicher Verzinsung?</p><p>Dieses Szenario wird im obigen Beispielbild dargestellt. Um die Berechnungen 
+				 durchzuführen, tragen sie unter <span class="guilabel"><strong>Zahlungsintervalle</strong></span> 360 ein 
+				 (12 Monate mal 30 Jahre), <span class="guilabel"><strong>Zinssatz</strong></span> auf <span class="emphasis"><strong>4</strong></span>, 
+				 <span class="guilabel"><strong>Aktueller Wert</strong></span> auf <span class="emphasis"><strong>100.000</strong></span>, lassen sie 
+				 <span class="guilabel"><strong>Periodische Zahlung</strong></span> frei, und setzen sie <span class="guilabel"><strong>Zukünftiger Wert</strong></span>
+				 auf <span class="emphasis"><strong>0</strong></span> (am Ende des Darlehens wollen sie schuldenfrei sein). 
+				 Die Verzinsung ist monatlich, die Zahlungen werden monatlich geleistet, unter der Annahme 
+				 einer Zahlung am Ende des Intervalls und schrittweiser Verzinsung. 
+				 Drücken Sie jetzt den <span class="guibutton">Berechnen</span> Knopf unter den Darlehensparametern. 
+				 Als Ergebnis sehen Sie -477.42€ im Feld periodische Zahlungen.</p><p>Antwort: die monatlichen Raten betragen -477,42€</p></div><div class="sect2" title="5.3.2. Beispiel: Zahlungsdauer"><div class="titlepage"><div><div><h3 class="title"><a name="loans_calcsexample2_2"></a>5.3.2. Beispiel: Zahlungsdauer</h3></div></div></div><p>Wie lange dauert die Rückzahlung eines 22.000€ Darlehen bei 10 % Zinssatz, monatlicher 
+				 Verzinsung und einer Rückzahlung von 500€ im Monat?</p><p>Zur Durchführung dieser Berechnungen lassen Sie <span class="guilabel"><strong>Zahlungsintervalle</strong></span> 
+				 frei, setzen den <span class="guilabel"><strong>Zinssatz</strong></span> auf <span class="emphasis"><strong>10</strong></span>, <span class="guilabel"><strong>Aktueller Wert</strong></span> 
+				 auf<span class="emphasis"><strong>20.000</strong></span>, <span class="guilabel"><strong>Periodische Zahlung</strong></span> ist <span class="emphasis"><strong>-500</strong></span>, 
+				 und <span class="guilabel"><strong>Zukünftiger Wert</strong></span> ist <span class="emphasis"><strong>0</strong></span> (am Ende des Darlehens 
+				 wollen sie schuldenfrei sein). <span class="guilabel"><strong>Verzinsung</strong></span> ist monatlich, 
+					 <span class="guilabel"><strong>Zahlungen</strong></span> sind monatlich, unter der Annahme einer Zahlung 
+					 am Ende des Intervalls und schrittweiser Verzinsung. Drücken Sie jetzt den 
+					 <span class="guibutton">Berechnen</span> Knopf unter den Darlehensparametern. Als Ergebnis sehen 
+					 sie 49 im Feld Zahlungsintervalle.</p><p>Antwort: Die Rückzahlung des Darlehens dauert vier Jahre und einen Monat (49 Monate).</p></div><div class="sect2" title="5.3.3. Erweitert: Einzelheiten der Berechnung"><div class="titlepage"><div><div><h3 class="title"><a name="loans_calcsdetails2"></a>5.3.3. Erweitert: Einzelheiten der Berechnung</h3></div></div></div><p>Für die Besprechungen der mathematischen Formeln, die durch 
+				 den <span class="guilabel"><strong>Darlehensrechner</strong></span> benutzt werden definieren
+				 wir erst die folgenden Variablen. 
+	
+</p><div class="literallayout"><p><br>
+ n   == Anzahl der Zahlungsperioden<br>
+ %i  == nominaler Zinssatz<br>
+ PV  == aktueller Wert<br>
+ PMT == periodische Zahlungen<br>
+ FV  == zukünftiger Wert<br>
+ CF  == Zinsperiode pro Jahr<br>
+ PF  == Zahlungsperiode pro Jahr<br>
+<br>
+Normale Werte für CF und PF sind:<br>
+  1   == jährlich<br>
+  2   == halbjährlich<br>
+  3   == dreimal im Jahr<br>
+  4   == vierteljährlich<br>
+  6   == alle zwei Monate<br>
+  12  == monatlich<br>
+  24  == halb monatlich<br>
+  26  == alle zwei Wochen<br>
+  52  == wöchentlich<br>
+  360 == täglich<br>
+  365 == täglich<br>
+<br>
+</p></div><p>
+				 </p><div class="sect3" title="5.3.3.1. Umrechnung zwischen nominalem und effektivem Zinssatz"><div class="titlepage"><div><div><h4 class="title"><a name="loans_calcsdetails_i2"></a>5.3.3.1. Umrechnung zwischen nominalem und effektivem Zinssatz</h4></div></div></div><p>Wenn eine Lösung für n, PV, PNT oder FV benötigt wird, muss zuerst
+						der nominale Zinssatz (i) in den effektiven Zinssatz (ieff) für die 
+						Zahlungsperiode	umgerechnet werden. Dieser effektive Zinssatz wird dann
+						benutzt, um die gewünschte Variable zu berechnen. Wenn eine Lösung für i
+						benötigt wird, ergibt die Berechnung den effektiven Zinssatz (ieff).
+						Deshalb benötigen wir Funktionen, die den nominalen Zinssatz in den
+						effektiven Zinssatz, und den effektiven Zinssatz in den Nominalzinssatz
+						umrechnen.</p><div class="literallayout"><p><br>
+Zur Umrechnung von i nach ieff werden folgende Formeln genutzt:<br>
+<br>
+schrittweise Verzinsung:     <span class="emphasis"><strong>ieff = (1 + i/CF)^(CF/PF) - 1</strong></span><br>
+kontinuierliche Verzinsung:  <span class="emphasis"><strong>ieff = e^(i/PF) - 1 = exp(i/PF) - 1</strong></span><br>
+<br>
+<br>
+Zur Umrechnung von ieff nach i werden folgende Formeln genutzt:<br>
+<br>
+schrittweise Verzinsung:     <span class="emphasis"><strong>i = CF*[(1+ieff)^(PF/CF) - 1]</strong></span><br>
+kontinuierliche Verzinsung:  <span class="emphasis"><strong>i = ln[(1+ieff)^PF]</strong></span><br>
+        </p></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Anmerkung</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">
+						 Hinweis: in den unten stehenden Gleichungen für Geldgeschäfte
+						 sind alle Zinssätze die effektiven Zinssätze, <span class="quote">„<span class="quote">ieff</span>“</span>. 
+						 Aus Gründen der Kürze wird statt <span class="quote">„<span class="quote">ieff</span>“</span> nur <span class="quote">„<span class="quote">i</span>“</span>benutzt.
+					 </p></td></tr></table></div></div><div class="sect3" title="5.3.3.2. Die grundlegenden Finanzgleichungen"><div class="titlepage"><div><div><h4 class="title"><a name="loans_calcsdetails_basic2"></a>5.3.3.2. Die grundlegenden Finanzgleichungen</h4></div></div></div><p>Eine Gleichung verbindet alle fünf genannten Variablen. Diese ist bekannt als 
+						die grundlegende Finanzgleichung:</p><div class="literallayout"><p><br>
+<span class="emphasis"><strong>PV*(1 + i)^n + PMT*(1 + iX)*[(1+i)^n - 1]/i + FV = 0</strong></span><br>
+<br>
+Dabei ist:  X = 0 für Zahlungen am Ende des Zeitraums, und<br>
+            X = 1 für Zahlungen am Anfang des Zeitraums.<br>
+         </p></div><p>Aus dieser Gleichung können Funktionen abgeleitet werden um einzelne Variablen 
+						zu berechnen. Für eine ausführliche Beschreibung der Ableitung dieser Gleichungen
+						Lesen Sie bitte die Kommentare in der Datei src/calculation/fin.c im 
+						<strong class="application"><code>GnuCash</code></strong> Quelltext.	Die Variablen A, B, und C werden 
+						zuerst definiert und die nachfolgenden Gleichungen übersichtlicher zu machen.</p><div class="literallayout"><p><br>
+<span class="emphasis"><strong>A = (1 + i)^n - 1</strong></span><br>
+<span class="emphasis"><strong>B = (1 + iX)/i</strong></span><br>
+<span class="emphasis"><strong>C = PMT*B</strong></span><br>
+<br>
+<span class="emphasis"><strong>n = ln[(C - FV)/(C + PV)]/ln((1 + i)</strong></span><br>
+<span class="emphasis"><strong>PV = -[FV + A*C]/(A + 1)</strong></span><br>
+<span class="emphasis"><strong>PMT = -[FV + PV*(A + 1)]/[A*B]</strong></span><br>
+<span class="emphasis"><strong>FV = -[PV + A*(PV + C)] </strong></span><br>
+<br>
+Die Auflösung nach dem Zinssatz wird in zwei Fälle unterteilt.<br>
+Der einfache Fall mit PMT == 0 ergibt die Gleichung:<br>
+<span class="emphasis"><strong>i = [FV/PV]^(1/n) - 1</strong></span><br>
+<br>
+         </p></div><p>
+							Der Fall wo PMT != 0 Ist ziemlich komplex und wird hier nicht behandelt.
+
+							Statt eine exakt lösbare Funktionen zur Bestimmung des Zinssatzes für den Fall PMT !=0 zu benutzen,
+							wird ein interaktiver Prozess verwendet. Bitte lesen Sie die Datei src/calculation/fin.c für eine 
+							ausführliche Erklärung.</p></div><div class="sect3" title="5.3.3.3. Beispiel: Monatliche Zahlungen"><div class="titlepage"><div><div><h4 class="title"><a name="loans_calcsdetails_ex2"></a>5.3.3.3. Beispiel: Monatliche Zahlungen</h4></div></div></div><p>
+					 Jetzt wollen wir das Beispiel <a class="xref" href="loans_calcs1.html#loans_calcsexample1_2" title="5.3.1. Beispiel: monatliche Zahlungen">Abschnitt 5.3.1, „Beispiel: monatliche Zahlungen“</a>,
+					 erneut berechnen, diesmal aber statt mit dem <span class="guilabel"><strong>Darlehensrechner</strong></span>
+					 mit den vorgestellt mathematischen Formeln.
+					 Wie hoch sind die monatlichen Raten für ein dreißigjähriges Darlehen von
+					 100.000 € bei einem festen Zinssatz von 4 % und monatlicher Verzinsung?
+				 </p><p>
+					 Zuerst wollen wir die Variablen bestimmen: n = (30*12) = 360, PV =
+					 100000, PMT = unbekannt, FV = 0, i = 4%=4/100=0.04, CF = PF = 12, X = 0
+					 (am Ende der Zahlungsintervalle).
+				 </p><p>
+					 Der zweite Schritt ist die Umwandlung des nominalen Zinssatzes (i) in 
+					 den effektiven Zinssatz (ieff). Da der Zinssatz monatlich berechnet wird,
+					 haben wir schrittweise Verzinsung, und wir benutzen die Formel: 
+					 ieff = (1 + i/CF)^(CF/PF) - 1, durch einsetzen der Werte ergibt sich
+					 ieff = (1 + 0.04/12)^(12/12) - 1, oder
+					 ieff = 1/300 = 0.0033333.
+				 </p><p>
+					 Jetzt können wir A und B berechnen. 
+					 A = (1 + i)^n - 1 = (1 + 1/300)^360 - 1 = 2.313498. 
+					 B = (1 + iX)/i = (1 + (1/300)*0)/(1/300) = 300.
+				 </p><p>
+					 Mit A und B können wir die PMT berechnen. PMT = -[FV + PV*(A +
+					 1)]/[A*B] = -[0 + 100000*(2.313498 + 1)] / [2.313498 * 300] =
+					 -331349.8 / 694.0494 = -477.415296 = -477.42.
+				 </p><p>Antwort: die monatlichen Raten betragen 477,42€.</p></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="loans_accounts1.html">&lt;&lt;&lt; Zurück</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right"> <a accesskey="n" href="loans_mortgage1.html">Weiter &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">5.2. Einrichtung der Konten </td><td width="20%" align="center"><a accesskey="u" href="chapter_loans.html">Nach oben</a></td><td width="40%" align="right"> 5.4. Hypothekendarlehen (wie wird es gemacht)</td></tr></table></div></body></html>

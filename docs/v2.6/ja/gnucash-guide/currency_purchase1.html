@@ -1,0 +1,66 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>10.4. 外貨購入の記録(How-To)</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCashチュートリアル・コンセプトガイド"><link rel="up" href="chapter_currency.html" title="第10章 複数通貨"><link rel="prev" href="currency_howto1.html" title="10.3. 為替の記録/更新(How-To)"><link rel="next" href="currency_invest1.html" title="10.5. 通貨投資の追跡(How-To)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">10.4. 外貨購入の記録(How-To)</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="currency_howto1.html">&lt;&lt;&lt; 前のページ</a> </td><th width="60%" align="center">第10章 複数通貨</th><td width="20%" align="right"> <a accesskey="n" href="currency_invest1.html">次のページ &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="10.4. 外貨購入の記録(How-To)"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="currency_purchase1"></a>10.4. 外貨購入の記録(How-To)</h2></div></div></div><p>2つの異なった方法で外貨購入の記録を行うことができます。</p><p>1)
+取引を行う時に、<strong class="application"><code>GnuCash</code></strong>組み込みの通貨為替機能を使用します。
+これは1回の取引、および定期的に発生しない取引に主に使用します。</p><p>2)
+同じ通貨を使用する勘定科目すべてが関与する、購入のための個別の勘定科目を使用します。
+追跡と捕捉をはるかに良く行うことができるので、これは推奨される方法です。
+この方法では、一度通貨為替取引を行い、その後に通常の取引を行います。</p><p>本節以降では、オプション2)に基づいてより詳しく説明します。</p><div class="sect2" title="10.4.1. 外貨建て資産の購入"><div class="titlepage"><div><div><h3 class="title"><a name="currency_purchase2"></a>10.4.1. 外貨建て資産の購入</h3></div></div></div><p>あなたはフロリダ州に通常居住しているとします。したがって、デフォルトの通貨として米ドルを使用します。
+しかし、バハマに旅行して釣りをするのが好きです。
+釣りが非常に好きなため、バハマでボートを購入することを決めました。
+これを行うために、ジャマイカで銀行預金口座を開きました。そしてアメリカからいくらかのお金を移しました。そして、夢であったボートを購入しました
+(最小構成)。</p><p>これを記録するために、<strong class="application"><code>GnuCash</code></strong>では次の基本勘定科目構造を使用します。</p><div class="literallayout"><p><br>
+-資産                          (USD)<br>
+   -流動資産                   (USD)<br>
+      -米国銀行                (USD)<br>
+      -ジャマイカ銀行          (JMD)<br>
+   -固定資産                   (USD)<br>
+      -ボート                  (JMD)<br>
+-純資産                        (USD)<br>
+   -開始残高<br>
+      -USD            (USD)<br>
+<br>
+注: それぞれの勘定科目の通貨は小括弧で表示しています。<br>
+</p></div><p>最初に、いくらかのお金 (10,000ドル) をジャマイカ銀行勘定科目に資金移動する必要があります。このためにいつもの米国銀行勘定科目
+(貸借残高100,000ドル) を使用します。
+銀行は、USD 1 = JMD 64の為替レートを提示します。また、両替手数料として150米ドルを請求します。</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_MoveMoney.png" alt="通貨の資金移動"><div class="caption"><p>ジャマイカへの資金移動</p></div></div></div><p>ジャマイカ銀行の取引行 (9,850.00ドル)
+を選択し、右クリックして、<span class="guilabel"><strong>為替・交換レートを編集</strong></span>を選択します。</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_SetExchangeRate.png" alt="為替レートの編集"><div class="caption"><p>通貨取引で為替レートを指定するダイアログウィンドウ</p></div></div></div><p><span class="guilabel"><strong>為替レート</strong></span>欄に銀行が提示した為替レートである64 (1 USD = 64 JMD)を入力します。
+<span class="guilabel"><strong>資金移動</strong></span> (為替レート編集)
+ウィンドウで<span class="guibutton">OK</span>をクリックし、このスプリット取引を保存します。
+メイン勘定科目表は次のようになります。</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_BeforeBoat.png" alt="ボート購入前の勘定科目表"><div class="caption"><p>ボート購入前の勘定科目表</p></div></div></div><p>ボートを見つけました。509,000ジャマイカ・ドルという安売りのため、それを購入することに決めました。
+<strong class="application"><code>GnuCash</code></strong>でこの取引を記録するために、<span class="emphasis"><strong>資産:流動資産:ジャマイカ銀行</strong></span>勘定科目から509,000ジャマイカ・ドルを引き出し、<span class="emphasis"><strong>資産:固定資産:ボート</strong></span>へ資金移動する単純な取引を入力する必要があります。</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_AfterBoat.png" alt="ボート購入後の勘定科目表"><div class="caption"><p>ボート購入後の勘定科目表</p></div></div></div><p>勘定科目表は、ボートの価格 (509,000ジャマイカ・ドル)
+分銀行勘定科目が減少し、同じ金額分ボート固定資産勘定科目が増加しているのを反映しています。
+また、<span class="guilabel"><strong>合計(USD)</strong></span>を表示させると、米ドルでの評価額が分かります。
+米ドルでの評価額は、自動または手動で更新された<strong class="application"><code>GnuCash</code></strong>の最新の為替レートを常に反映します。
+      </p></div><div class="sect2" title="10.4.2. 外国株の購入"><div class="titlepage"><div><div><h3 class="title"><a name="currency_purchase3"></a>10.4.2. 外国株の購入</h3></div></div></div><p>この例では、デフォルトの通貨と異なる通貨で価格を付けられる株式を購入する方法を説明します。</p><p>あなたはニューヨークに住んでいて、デフォルトの通貨として米ドルを設定していると仮定します。
+香港ドル建ての香港で取引される株式を購入すると決めます。
+株式と証券会社あたりのさまざまな損益も追跡します。</p><p>北京空港 (香港) の株式を購入すると決めます。
+(結局、2008年の北京オリンピックが終了して、価格は現実の世界に戻りました。)</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">注記</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">
+         この株式 (北京空港) は単に例として選んだだけであり、どんな種類の株式購入アドバイスとしても見なしてはいけません。
+      </p></td></tr></table></div><p>銘柄記号が何であるかを調べる必要があります。
+これを行うために、インターネット、特に<a class="ulink" href="http://finance.yahoo.com/lookup" target="_top"><em class="citetitle">Yahoo! Finance - Ticker
+Symbol Lookup (http://finance.yahoo.com/lookup)</em></a>
+で少し調査を行います。
+すると次のようになります。</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><strong>北京空港</strong></span>の Yahoo! での銘柄記号は 0694.HKです。</p></li></ul></div><p>すべてのさまざま損益を追跡可能にするために、次の勘定科目構造を作成します。</p><div class="literallayout"><p><br>
+資産:投資:証券会社:好況:0694.HK                        (北京空港)<br>
+資産:投資:証券会社:好況:現金                           (HKD)<br>
+純資産:開始残高:HKD                                    (HKD)<br>
+費用:手数料:好況.0694.HK                               (HKD)<br>
+収益:投資:配当:好況:0694.HK                            (HKD)<br>
+</p></div><p>必要なすべての勘定科目を作成後、勘定科目表はこのようになります。</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_BeforeStocks.png" alt="国際株式勘定科目表"><div class="caption"><p>国際株式勘定科目表</p></div></div></div><p>株式の定義は証券エディターで見ることができます
+(<span class="guimenu"><strong>ツール</strong></span>+<span class="guimenu"><strong>証券エディター</strong></span>)。
+      </p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_Commodities.png" alt="国際証券"><div class="caption"><p>国際証券</p></div></div></div><p>いくらかのお金 (50,000香港ドル)
+を証券会社の現金勘定科目(<span class="emphasis"><strong>資産:投資:証券会社:好況:現金</strong></span>)に移していないなら 、純資産 (香港ドル)
+勘定科目または既存の銀行勘定科目 (通貨両替) を使用して、ここで行います。</p><p>株価が1株あたり3香港ドルであると仮定します。
+この購入を記録するために証券会社の香港ドル現金勘定科目 (<span class="emphasis"><strong>資産:投資:証券会社:好況:現金</strong></span>)
+を開き、次のように入力します。</p><div class="literallayout"><p><br>
+株式購入<br>
+        資産:投資:証券会社:好況:現金                  出金 50,000<br>
+        費用:投資:手数料:好況:HKD                     入金 500<br>
+        資産:投資:証券会社:好況:0694                  入金 49,500 (16,500株)</p></div><p><span class="guilabel"><strong>資金移動</strong></span>ダイアログボックスが自動的に現れない場合、株式行を右クリックし、<span class="guilabel"><strong>為替・交換レートを編集</strong></span>を選択します。
+<span class="guilabel"><strong>資金移動先金額</strong></span>に株式数 (16,500) を入力します。
+      </p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_ToAmount.png" alt="資金移動"><div class="caption"><p>資金移動ダイアログへの株式数入力</p></div></div></div><p>勘定科目表に戻って来たら、株式勘定科目の合計に購入した株式数が反映されているのが分かります。</p><div class="screenshot"><div class="mediaobject"><img src="figures/currency_purchase_AfterStocks.png" alt="国際株式の購入"><div class="caption"><p>
+            国際株式の勘定科目表
+          </p></div></div></div><p>しかしながら、表示されているように、<strong class="application"><code>GnuCash</code></strong>に米ドルと香港ドル間の為替レートを設定していないなら、米ドルの合計は0になります。
+これを修正するためには、<span class="guimenu"><strong>ツール</strong></span> → <span class="guimenuitem"><strong>価格エディター</strong></span>を選択し、<span class="guibutton">相場表を取得</span>ボタンをクリックして、必要な為替レートを自動的に取得するようにします。</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">注記</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">この例は、支払いを行う現金勘定科目の記録簿で取引を入力することによって、どんな通貨でも株式を購入することができることを表します。
+株式勘定科目の記録簿でも購入取引を入力することができますが、実際に行う際は気を付けてください。
+そのようにすると、株式勘定科目の親勘定科目の通貨で株式が価格を付けられると仮定されます。</p><p xmlns="">この例では、株式勘定科目の親勘定科目 (資産:投資:証券会社:好況) である香港ドルに決定されます。
+これは株式の価格と同じ通貨なので、この場合は購入を株式勘定科目の記録簿で入力したとしても安全です。</p></td></tr></table></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="currency_howto1.html">&lt;&lt;&lt; 前のページ</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">ホーム</a></td><td width="40%" align="right"> <a accesskey="n" href="currency_invest1.html">次のページ &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">10.3. 為替の記録/更新(How-To) </td><td width="20%" align="center"><a accesskey="u" href="chapter_currency.html">上に戻る</a></td><td width="40%" align="right"> 10.5. 通貨投資の追跡(How-To)</td></tr></table></div></body></html>

@@ -1,0 +1,175 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>18.1. Import Bills or Invoices</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="ch_import_busisness_data.html" title="Chapter 18. Importing Business Data"><link rel="prev" href="ch_import_busisness_data.html" title="Chapter 18. Importing Business Data"><link rel="next" href="import-customers-vendors.html" title="18.2. Importing Customers and Vendors"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">18.1. Import Bills or Invoices</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch_import_busisness_data.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 18. Importing Business Data</th><td width="20%" align="right"> <a accesskey="n" href="import-customers-vendors.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="18.1. Import Bills or Invoices"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="import-invoices"></a>18.1. Import Bills or Invoices</h2></div></div></div><p>This functionality is only available by default for versions greater than 2.5.8.</p><p>For 2.4.13 and development versions lower than 2.5.8 the Customers and Vendors importer is an optional module and needs to enabled by editing the file <code class="filename">$HOME/.gnucash/config.user</code>,
+    adding the line:</p><p><code class="code">(gnc:module-load "gnucash/plugins/bi_import" 0)</code></p><p>On Linux systems this file is found at <code class="filename">$HOME/.gnucash/config.user</code>
+      and on Mac OSX it is <code class="filename">~/Library/Application Support/Gnucash/config.user</code>.
+      If the file doesn’t already exist you will have to create it.
+      After restarting <strong class="application"><code>GnuCash</code></strong>, the item will appear at the bottom 
+    of the business menu.</p><p>In order for the importer to work the data must be in a fixed field
+      length, comma separated line format. A example <strong class="application"><code>Python</code></strong> script to convert
+      a downloaded order is shown below.
+    </p><p>
+      </p><pre class="programlisting">
+import sys
+import csv
+
+VENDOR_ID="000013"
+INFILE=sys.argv[1]
+INV_ID=sys.argv[2]
+try:
+  ACCOUNT=sys.argv[3]
+except:
+  ACCOUNT="Expenses:Materials General"
+
+Reader = csv.reader(open(INFILE), delimiter=',')
+
+# Need to ignore 1st and last rows
+
+for row in Reader:
+  if row[0].isdigit(): # We only use numbered lines
+    outline=(INV_ID + ",," + VENDOR_ID + ",,,," + row[1] + " &gt; " + row[4] + ",ea," +
+      ACCOUNT + "," + row[2] + "," + row[5].replace("GBP", "") + ",,,,no,,,,,,,")
+  print outline
+      </pre><p>
+    </p><p>Example of a downloaded vendor order from <span class="emphasis"><strong>Rapid Electronics</strong></span> (UK).
+      </p><pre class="programlisting">
+line number,product code,quantity,availability,product description,unit price,discounts,line total,delivery,sub total,vat,grand total
+1,47-3524,100,100 Available,BC848C SOT-23 NPN TRANSISTOR (INF) (RC),GBP0.03,GBP0.00,GBP0.03
+2,47-3278,30,30 Available,L78L05ACZ 0.1A +5V VOLTAGE REG (ST) (RC),GBP0.18,GBP0.00,GBP0.18
+3,22-0120,1,1 Available,Tube 34 14pin DIL socket, narrow7.62mm, without central support,GBP1.05,GBP0.00,GBP1.05
+4,22-0127,1,0 Available&lt;br /&gt;1 on Back Order,Tube 17 28pin DIL socket, wide15.24mm, without central support,GBP1.22,GBP0.00,GBP1.22
+5,62-0368,1,1 Available,820R CR25 0.25W CF Resistor Pk 100,GBP0.50,GBP0.00,GBP0.50
+6,47-3130,100,100 Available,1N4001 1A 50V SILICON RECTIFIER DIODE RC,GBP0.01,GBP0.00,GBP0.01
+7,17-0310,1,1 Available,PROFESSIONAL MINATURE PROBE HOOK RED RC,GBP0.90,GBP0.00,GBP0.90
+8,17-0312,1,1 Available,PROFESSIONAL MINATURE PROBE HOOK BLACKRC,GBP0.90,GBP0.00,GBP0.90
+9,34-0655,1,1 Available,PROTOBLOC 2 BREADBOARD,GBP4.39,GBP0.00,GBP4.39
+10,18-0200,1,1 Available,PP3 9V ALKALINE BATTERY "Not For Retail Sale",GBP1.37,GBP0.00,GBP1.37
+,,,,,,,,GBP4.95,GBP24.93,GBP4.35,GBP29.28
+      </pre><p>
+    </p><p>A similar file after processing with the <strong class="application"><code>Python</code></strong> script.</p><p>
+        </p><pre class="programlisting">
+MEC-0071,,000013,,,,34-0655 &gt; PROTOBLOC 2 BREADBOARD,ea,Expenses:Materials General,1,4.39,,,,no,,,,,,,
+MEC-0071,,000013,,,,18-0105 &gt; PP3 / PP6 BATTERY CLIP 150MM (RC),ea,Expenses:Materials General,10,0.06,,,,no,,,,,,,
+MEC-0071,,000013,,,,62-0370 &gt; 1k CR25 0.25W CF Resistor Pk 100,ea,Expenses:Materials General,1,0.50,,,,no,,,,,,,
+MEC-0071,,000013,,,,62-0354 &gt; 220R CR25 0.25W CF Resistor Pk 100,ea,Expenses:Materials General,1,0.50,,,,no,,,,,,,
+MEC-0071,,000013,,,,34-5548 &gt; PLAIN DOCUMENT WALLET ASSORTED PK 50 RE,ea,Expenses:Materials General,1,6.95,,,,no,,,,,,,
+MEC-0071,,000013,,,,62-0386 &gt; 4k7 CR25 0.25W CF Resistor Pk 100,ea,Expenses:Materials General,1,0.50,,,,no,,,,,,,
+MEC-0071,,000013,,,,34-0860 &gt; COPPER CLAD SRBP SS 100 X 160 (RC),ea,Expenses:Materials General,5,0.50,,,,no,,,,,,,
+MEC-0071,,000013,,,,18-0163 &gt; PP3 BATTERY HOLDER WITH FLYING LEADS RC,ea,Expenses:Materials General,5,0.23,,,,no,,,,,,,
+MEC-0071,,000013,,,,73-4290 &gt; ATMEGA8-16PU 8-BIT MICRO 8K DIL-28 (RC),ea,Expenses:Materials General,3,1.99,,,,no,,,,,,,
+MEC-0071,,000013,,,,81-0014 &gt; BC108 NPN GP TRANSISTOR RC,ea,Expenses:Materials General,20,0.16,,,,no,,,,,,,
+MEC-0071,,000013,,,,DELIVERY,ea,Expenses:Postage,1,4.95,,,,no,,,,,,,
+MEC-0071,,000013,,,,VAT,tax,Expenses:VAT,1,4.35,,,,no,,,,,,,
+        </pre><p>
+    </p><p>
+      As can be seen there are some fields that are absent and some that
+      are not required for import. The first line is not required and the last
+      line is superfluous as <strong class="application"><code>GnuCash</code></strong> will total the order for us. All that is
+      required is to take what we want and produce an output file with the
+      correct format to import into <strong class="application"><code>GnuCash</code></strong>. In this case we join the part
+      number and description fields and these become description in <strong class="application"><code>GnuCash</code></strong>
+      invoice/bill. We need the qty and part price fields. Contrary to the
+      header line <acronym class="acronym">VAT</acronym> is not included by line and is always zero, the <acronym class="acronym">VAT</acronym> is
+      calculated on the last line as <acronym class="acronym">VAT</acronym> on the order total.
+      <div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">This will cause problems later.</p></td></tr></table></div>
+      In this example I have assigned the
+      <span class="emphasis"><strong>Expenses:Materials General</strong></span> account to be the target account. This can be
+      changed after import in the usual way, along with any other data. If there
+      is no such account as <span class="emphasis"><strong>Expenses:Materials General</strong></span> then that field will be
+      left blank on import and will have to be set manually. Lines beginning
+      with a <span class="quote">“<span class="quote">#</span>”</span> are regarded as comment lines and ignored.
+    </p><p>The script is called with the following command:</p><p> <span class="command"><strong>python importer.py <em class="replaceable"><code>file_to_import</code></em>,
+      <em class="replaceable"><code>invoice_id</code></em> &gt; <em class="replaceable"><code>file_to_save_as.csv</code></em></strong></span>
+      </p><p>This short script can easily be
+      changed to suit any downloaded format. The only restriction is that the
+      final number of field is fixed, at least at the moment. The importer will
+      ignore lines with the wrong number of fields. (This may be fixed in future
+      version). Vendor ID is simply the ID assigned to the specific vendor, or
+      client. The row[N] items refer to the position in the line where the
+      correct data lies. Note that the first field is row[0] NOT row[1].
+    </p><p>Once you have converted the file navigate to <span class="guimenu"><strong>Business</strong></span> → <span class="guimenuitem"><strong>Invoice &amp; Bill Import</strong></span> to open a new import window. 
+      Select the file you have just created, select <span class="guilabel"><strong>Bill</strong></span> 
+      or <span class="guilabel"><strong>Invoice</strong></span> and <span class="guilabel"><strong>Comma separated</strong></span> format. At this
+      point the data should show up in the preview window. Check that the field
+      data are in the correct columns before selecting <span class="guibutton">OK</span>. Once imported the
+      invoice can be opened for editing and posting in the usual way.
+    </p><p>A note on <acronym class="acronym">VAT</acronym>, or any purchase tax. As previously mentioned <span class="emphasis"><strong>Rapid
+      Electronics</strong></span> calculate the <acronym class="acronym">VAT</acronym> on the bill total not line by line. <strong class="application"><code>GnuCash</code></strong>
+      calculated the <acronym class="acronym">VAT</acronym> per line then totals the <acronym class="acronym">VAT</acronym>. This can lead to
+      inaccuracies in the <acronym class="acronym">VAT</acronym> of the region of a few pennies and is enough to
+      cause problems when reconciling the purchase with your bank or credit card
+      account used to make the purchase. As to how you overcome that, for the
+      moment, is a problem for you to use whatever method suits your conscience
+      or accountant best. Personally I add the <acronym class="acronym">VAT</acronym> as a separate line along with
+      delivery charges manually. So some work is left to the user but the tedium
+      of entering each item eliminated.
+    </p><p>Future: Currently the import format is quite strict and many users
+      may have problems with the conversion process. Adding a template for every
+      possible vendor <acronym class="acronym">CSV</acronym> format would be mammoth and likely impossible task
+      notwithstanding the fact the vendors are likely to change the format
+      without informing the <strong class="application"><code>GnuCash</code></strong> team. Future import enhancements will be
+      based on user feedback and hopefully the process can be made simpler or
+      more flexible. Note that often <span class="quote">“<span class="quote">simple</span>”</span> is incompatible with
+      <span class="quote">“<span class="quote">flexible</span>”</span>.
+    </p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">If <strong class="application"><code>Python</code></strong> (other languages are avaialble) is not your thing then
+      post a request to <a class="ulink" href="https://lists.gnucash.org/mailman/listinfo/gnucash-user" target="_top"><em class="citetitle">GnuCash user list</em></a>, 
+      with an example of your downloaded <acronym class="acronym">CSV</acronym>, and someone may write you a <strong class="application"><code>Python</code></strong> script to do the
+      translation.
+    </p></td></tr></table></div><div class="sect2" title="18.1.1. Notes for Python authors"><div class="titlepage"><div><div><h3 class="title"><a name="python-author-notes"></a>18.1.1. Notes for <strong class="application"><code>Python</code></strong> authors</h3></div></div></div><p>In order for the import to succeed the number of fields must be
+        adhered to, so the trailing commas are important.
+      </p><p>A complete list of the required fields is:</p><p>id, date_opened, owner_id, billingid, notes, date, desc, action,
+        account, quantity, price, disc_type, disc_how, discount, taxable,
+        taxincluded, tax_table, date_posted, due_date, account_posted,
+        memo_posted, accu_splits,
+      </p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">Mind the trailing comma.</p></td></tr></table></div></div><div class="sect2" title="18.1.2. A brief description of each field"><div class="titlepage"><div><div><h3 class="title"><a name="python-import-fields"></a>18.1.2. A brief description of each field</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><strong>id</strong></span> -
+            The invoice number. All lines must
+            contain this or the line will be rejected.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>date_opened</strong></span> -
+            Todays date is inserted if this is blank.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>owner_id</strong></span> -
+            ID number of the vendor or customer. All lines must
+            contain this or the line will be rejected.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>billingid</strong></span> -
+            Billing ID.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>notes</strong></span> -
+            Invoice notes.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>date</strong></span> -
+            The date of the item line. Can be left blank for todays
+            date.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>desc</strong></span> -
+            Description as per normal invoice or bill.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>action</strong></span> -
+            For bills usually <span class="quote">“<span class="quote">ea</span>”</span>.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>account</strong></span> -
+            Account to which the item is attributed.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>quantity</strong></span> -
+            Quantity of each item. Must contain a value or the line
+            will be rejected.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>price</strong></span> -
+            Price of each item. Must contain a value or the line will be
+            rejected.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>disc_type</strong></span> -
+            Type of discount, either <span class="quote">“<span class="quote">%</span>”</span> or <span class="quote">“<span class="quote">TODO</span>”</span>, only applies to
+            invoices. Some experimentation may be required here as may be currency
+            dependent.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>disc_how</strong></span> -
+            Only applies to invoices.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>discount</strong></span> -
+            Amount of discount to be applied. only applies to
+            invoices.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>taxable</strong></span> -
+            Will tax be applied to the item? <span class="quote">“<span class="quote">y</span>”</span> or blank.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>taxincluded</strong></span> -
+            Is tax included in the item price? <span class="quote">“<span class="quote">y</span>”</span> or blank.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>tax_table</strong></span> -
+            Tax table to apply to item.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>date_posted</strong></span> -
+            If posted, what date. Normally left blank for manual
+            posting after editing the invoice.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>due_date</strong></span> -
+            Date payment is due.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>account_posted</strong></span> -
+            Posted to what account.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>memo_posted </strong></span>-
+            If posted insert memo here.
+          </p></li><li class="listitem"><p><span class="emphasis"><strong>accu_splits</strong></span> -
+            Accumulate splits? <span class="quote">“<span class="quote">y</span>”</span> or blank.
+          </p></li></ul></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch_import_busisness_data.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="import-customers-vendors.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">Chapter 18. Importing Business Data </td><td width="20%" align="center"><a accesskey="u" href="ch_import_busisness_data.html">Up</a></td><td width="40%" align="right"> 18.2. Importing Customers and Vendors</td></tr></table></div></body></html>

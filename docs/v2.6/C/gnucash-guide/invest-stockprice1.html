@@ -1,0 +1,132 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>8.6. Setting Share Price</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCash Tutorial and Concepts Guide"><link rel="up" href="chapter_invest.html" title="Chapter 8. Investments"><link rel="prev" href="invest-buy-stock1.html" title="8.5. Buying Shares"><link rel="next" href="invest-sell1.html" title="8.7. Selling Shares"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">8.6. Setting Share Price</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="invest-buy-stock1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 8. Investments</th><td width="20%" align="right"> <a accesskey="n" href="invest-sell1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="8.6. Setting Share Price"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="invest-stockprice1"></a>8.6. Setting Share Price</h2></div></div></div><p>The value of a commodity, such as a stock, must be explicitly set.
+    The stock accounts track the quantity of stocks you own, but the value of
+    the stock is stored in the <span class="emphasis"><strong>Price Editor</strong></span>. The values
+    set in the <span class="guilabel"><strong>Price Editor</strong></span> can be updated manually or automatically.</p><div class="sect2" title="8.6.1. Initial Price Editor Setup"><div class="titlepage"><div><div><h3 class="title"><a name="invest-stockprice-initial2"></a>8.6.1. Initial Price Editor Setup</h3></div></div></div><p>To use the <span class="guilabel"><strong>Price Editor</strong></span> to track a stock value, you must initially
+      insert the stock. To do so, open the <span class="guilabel"><strong>Price Editor</strong></span>
+      (<span class="guimenu"><strong>Tools</strong></span> → <span class="guimenuitem"><strong>Price Editor</strong></span>) and
+      click on <span class="guibutton">Add</span> button. The first time a
+      Commodity/Stock is entered this window will be blank except for the
+      control buttons on the bottom. Select the appropriate Commodity you want
+      to insert into the <span class="guilabel"><strong>Price Editor</strong></span>. At this point, you can input the price
+      of the commodity manually. There are 6 fields in the New Commodity
+      window:</p><div class="variablelist"><dl><dt><span class="term"><strong><span class="guilabel"><strong>Namespace</strong></span></strong></span></dt><dd><p>The exchange market where the security/commodity
+              is traded (in this example NASDAQ)</p></dd><dt><span class="term"><strong><span class="guilabel"><strong>Security</strong></span></strong></span></dt><dd><p>The name of the commodity,
+              must be chosen from the <span class="guibutton">Select...</span> list</p></dd><dt><span class="term"><strong><span class="guilabel"><strong>Currency</strong></span></strong></span></dt><dd><p>The currency in which the
+              Price is expressed.</p></dd><dt><span class="term"><strong><span class="guilabel"><strong>Date</strong></span></strong></span></dt><dd><p>Date that the price is
+              valid</p></dd><dt><span class="term"><strong><span class="guilabel"><strong>Type</strong></span></strong></span></dt><dd><p>One of: <span class="guilabel"><strong>Bid</strong></span>
+              (the market buying price), <span class="guilabel"><strong>Ask</strong></span> (the market
+              selling price), <span class="guilabel"><strong>Last</strong></span> (the last transaction
+              price), <span class="guilabel"><strong>Net Asset Value</strong></span> (mutual fund price per
+              share), or <span class="guilabel"><strong>Unknown</strong></span>. Stocks and currencies will
+              usually give their quotes as one of bid, ask or last. Mutual funds
+              are often given as net asset value. For other commodities, simply
+              choose <span class="guilabel"><strong>Unknown</strong></span>. This option is for informational purposes only, it
+              is not used by <strong class="application"><code>GnuCash</code></strong>.</p></dd><dt><span class="term"><strong><span class="guilabel"><strong>Price</strong></span></strong></span></dt><dd><p>The price of one unit of this
+              commodity.</p></dd></dl></div><p>As an example of adding the AMZN commodity to the price editor,
+      with an initial value of $40.50 per share.</p><div class="screenshot"><div class="mediaobject"><img src="figures/invest_peditor.png" alt="Price Editor"><div class="caption"><p>Adding the AMZN commodity to the price editor, with
+          an initial value of $40.50 per share.</p></div></div></div><p>Click <span class="guibutton">OK</span> when finished. Once you have
+      performed this initial placement of the commodity into the <span class="guilabel"><strong>Price Editor</strong></span>,
+      you will not have to do it again, even if you use the same commodity in
+      another account.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">If you have online retrieval of quotes activated (see <a class="xref" href="invest-stockprice1.html#invest-stockprice-auto2" title="8.6.3. Configuring for Automatic Retrieval of Quotes">Section 8.6.3, “Configuring for Automatic Retrieval of Quotes”</a>), you can initialize a
+        commodity without manually making an entry. When you initially add
+        the security in the <span class="guilabel"><strong>Security Editor</strong></span>, check
+        <span class="guibutton">Get Online Quotes</span> and save the security.
+        Then, in the <span class="guilabel"><strong>Price Editor</strong></span>, click
+        <span class="guibutton">Get Quotes</span>, and the new security will be
+        inserted into the price list with the retrieved price.</p></td></tr></table></div></div><div class="sect2" title="8.6.2. Setting Stock Price Manually"><div class="titlepage"><div><div><h3 class="title"><a name="invest-stockprice-manual2"></a>8.6.2. Setting Stock Price Manually</h3></div></div></div><p>If the value of the commodity (stock) changes, you can adjust the
+      value by entering the <span class="guilabel"><strong>Price Editor</strong></span>, selecting the commodity, clicking on
+      <span class="guibutton">Edit</span> and entering the new price.</p><div class="screenshot"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="510"><tr><td><img src="figures/invest_peditor2.png" width="510" alt="Price Editor"></td></tr></table><div class="caption"><p>The main price editor window, showing the list of all
+          known commodities.</p></div></div></div></div><div class="sect2" title="8.6.3. Configuring for Automatic Retrieval of Quotes"><div class="titlepage"><div><div><h3 class="title"><a name="invest-stockprice-auto2"></a>8.6.3. Configuring for Automatic Retrieval of Quotes</h3></div></div></div><p>If you have more than a couple of commodities, you will tire of
+      having to update their prices constantly. <strong class="application"><code>GnuCash</code></strong> has the ability to
+      automatically download the most recent price for your commodities using
+      the Internet. This is accomplished through the <strong class="application"><code>Perl</code></strong> module
+      <strong class="application"><code>Finance::Quote</code></strong>, which must be installed in order to activate this
+      feature.</p><p>To determine if the <strong class="application"><code>Perl</code></strong> module <strong class="application"><code>Finance::Quote</code></strong> is already
+      installed on your system, type <span class="command"><strong>perldoc Finance::Quote</strong></span> in
+      a terminal window and check to see if there is any documentation
+      available. If you see the documentation, then the module is installed,
+      if you do not see the documentation, then it has not been
+      installed.</p><div class="sect3" title="8.6.3.1. Installing Finance::Quote"><div class="titlepage"><div><div><h4 class="title"><a name="invest-stockprice-auto-install3"></a>8.6.3.1. Installing <strong class="application"><code>Finance::Quote</code></strong></h4></div></div></div><p><span class="emphasis"><strong>Microsoft Windows:</strong></span>
+	</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Close <strong class="application"><code>GnuCash</code></strong>.</p></li><li class="listitem"><p>You need to have installed <a class="ulink" href="http://www.activestate.com/store/activeperl" target="_top">ActivePerl</a>
+            </p></li><li class="listitem"><p>Run <span class="emphasis"><strong>Install Online Price
+	    Retrieval</strong></span> in the <strong class="application"><code>GnuCash</code></strong>
+	    <span class="quote">“<span class="quote">Start</span>”</span> menu entry.</p></li></ul></div><p>
+        </p><p><span class="emphasis"><strong>Mac OS X:</strong></span> You need to
+	have XCode installed. XCode is an optional item from your OS X
+	distribution DVD. Run the <span class="emphasis"><strong>Update
+	Finance Quote</strong></span> app in the
+	<strong class="application"><code>GnuCash</code></strong> dmg. You can run it from the
+	dmg or copy it to the same folder to which you copied
+	<strong class="application"><code>GnuCash</code></strong>. It will open a Terminal
+	window and run a script for you which will ask lots of
+	questions. Accept the default for each unless you know what
+	you’re doing.</p><p><span class="emphasis"><strong>Linux:</strong></span> 
+	</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Close any running <strong class="application"><code>GnuCash</code></strong> instances.</p></li><li class="listitem"><p>Locate the folder where <strong class="application"><code>GnuCash</code></strong> 
+            is installed by searching for <strong class="application"><code>gnc-fq-update</code></strong></p></li><li class="listitem"><p>Change to that directory, open a root shell</p></li><li class="listitem"><p>Run the command <span class="command"><strong>gnc-fq-update</strong></span></p></li></ul></div><p>
+
+	This will launch a <strong class="application"><code>Perl</code></strong> CPAN update session that will go out
+	onto the internet and install the <strong class="application"><code>Finance::Quote</code></strong> module on
+	your system. The gnc-fq-update program is interactive,
+	however, with most systems you should be able to answer
+	<span class="quote">“<span class="quote">no</span>”</span> to the first question: <span class="quote">“<span class="quote">Are you ready
+	for manual configuration? [yes]</span>”</span> and the update will
+	continue automatically from that point.</p><p>After installation is complete, you should run the <span class="quote">“<span class="quote">gnc-fq-dump</span>”</span>
+        test program, in the same directory, distributed with <strong class="application"><code>GnuCash</code></strong> to test
+        if <strong class="application"><code>Finance::Quote</code></strong> is installed and working properly.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">If you feel uncomfortable about performing any of these steps,
+          please either email the <strong class="application"><code>GnuCash</code></strong>-user mailing list
+          (<code class="email">&lt;<a class="email" href="mailto:gnucash-user@gnucash.org">gnucash-user@gnucash.org</a>&gt;</code>) for help or come to the <strong class="application"><code>GnuCash</code></strong> IRC
+          channel on irc.gnome.org. You can also leave out this step and
+          manually update your stock prices.</p></td></tr></table></div></div><div class="sect3" title="8.6.3.2. Configuring Securities for Online Quotes"><div class="titlepage"><div><div><h4 class="title"><a name="invest-stockprice-auto-configure3"></a>8.6.3.2. Configuring Securities for Online Quotes</h4></div></div></div><p>With <strong class="application"><code>Finance::Quote</code></strong> installed and functioning correctly, you
+        must configure your <strong class="application"><code>GnuCash</code></strong> securities to use this feature to
+        obtain updated price information automatically. Whether creating new securities or modifying securities
+        that have already been setup, use the <span class="guimenu"><strong>Tools</strong></span> → <span class="guimenuitem"><strong>Security Editor</strong></span>, to edit the
+        security and check the <span class="guilabel"><strong>Get Online Quotes</strong></span> box. You will
+        now be able to modify the radio buttons for <span class="guilabel"><strong>Type of quote source</strong></span>, the pull-down menus 
+        to specify the specific source(s) and <span class="guilabel"><strong>The timezone for these
+        quotes</strong></span>. When finished editing, <span class="guilabel"><strong>Close</strong></span> the Security Editor to return to
+        the <span class="guilabel"><strong>Price Editor</strong></span> and click on the <span class="guibutton">Get Quotes</span>
+        button to update your stock prices on the Internet.</p><p>The command <span class="command"><strong>gnucash --add-price-quotes $HOME/gnucash-filename</strong></span>
+        can be used to fetch the current prices of your stocks.  The file specified
+        <code class="filename">$HOME/gnucash-filename</code> will depend on the name and location of your
+        data file.
+        This can be determined by the name displayed in the top frame of the <strong class="application"><code>GnuCash</code></strong> window,
+        before the <span class="quote">“<span class="quote">-</span>”</span>.  The file name can also be found under <span class="guimenu"><strong>File</strong></span>
+        in the recently opened file list; the first item, numbered 1, is the name of the currently
+        open file.</p><p>This can be automated by creating a <strong class="application"><code>crontab</code></strong> entry. For example,
+        to update your file every Friday evening (16:00) after the relevant exchange
+        markets close (modify the time accordingly for your time zone), you could add
+        the following to your personal <strong class="application"><code>crontab</code></strong>:</p><p>0 16 * * 5 gnucash --add-price-quotes $HOME/gnucash-filename &gt;
+        /dev/null 2&gt;&amp;1</p><p>Remember that Mutual Fund <span class="quote">“<span class="quote">prices</span>”</span> are really <span class="quote">“<span class="quote">Net Asset
+        Value</span>”</span> and require several hours after the exchange closes before being
+        available. If <acronym class="acronym">NAV</acronym>s are downloaded before the current days <acronym class="acronym">NAV</acronym>s are
+        determined, yesterday’s <acronym class="acronym">NAV</acronym>s are retrieved.</p></div></div><div class="sect2" title="8.6.4. Displaying Share Value"><div class="titlepage"><div><div><h3 class="title"><a name="invest-stockprice-view2"></a>8.6.4. Displaying Share Value</h3></div></div></div><p>The main account window, by default, only shows the quantity of
+      each commodity that you own, under the column heading
+      <span class="guilabel"><strong>Total</strong></span>. In the case of stocks, this commodity is the
+      number of shares. Often, however, you will want to see the value of your
+      stocks expressed in terms of some monetary unit. This is easily
+      accomplished by entering the main window, selecting the <span class="guilabel"><strong>Accounts</strong></span> tab,
+      by clicking on the <span class="emphasis"><strong>Titlebar</strong></span> <span class="guibutton">Options</span> button (the small
+      down pointing arrow on the right side of the main account window titles bar), and
+      selecting the option to display the account total field <span class="quote">“<span class="quote">Total
+      (USD)</span>”</span>. You will see a new column in the main window entitled
+      <span class="guilabel"><strong>Total (USD)</strong></span> that will express the value of all
+      commodities in the report currency.</p><div class="screenshot"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="510"><tr><td><img src="figures/invest_stockvalue.png" width="510" alt="Viewing Stock Value"></td></tr></table><div class="caption"><p>Viewing the value of a stock commodity in the main
+          window using the Total in Report Currency option.</p></div></div></div></div><div class="sect2" title="8.6.5. Selecting “Price Source” in Stock Value Reports"><div class="titlepage"><div><div><h3 class="title"><a name="invest-stockprice-report"></a>8.6.5. Selecting <span class="quote">“<span class="quote">Price Source</span>”</span> in Stock Value Reports</h3></div></div></div><p>Most <strong class="application"><code>GnuCash</code></strong> Asset reports have options to set/modify a number of parameters for the report.  The
+       Options windows is displayed by selecting the report tab then clicking on either the <span class="guibutton">Options</span>
+       icon in the <span class="emphasis"><strong>Menubar</strong></span> or selecting <span class="guimenu"><strong>Edit</strong></span> → <span class="guimenuitem"><strong>Report Options</strong></span>.  
+       The <span class="guilabel"><strong>General</strong></span> tab in the
+       resulting window contains various parameters for the report.  One of these is <span class="quote">“<span class="quote">Price Source</span>”</span> which of offers
+       three alternatives to determine stock prices in reports:</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">In the example below, the report is a customization of
+         the <span class="emphasis"><strong>Average Balance</strong></span> report
+         in the Assets &amp; Liabilities reports submenu.</p></td></tr></table></div><div class="screenshot"><div class="mediaobject"><img src="figures/invest_stockvalue_report_options.png" alt="Determining Stock Price Source in Reports"><div class="caption"><p>Determining the value of a stock commodity in a
+          report by setting the Price Source option.</p></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="guilabel"><strong>Weighted Average</strong></span> - gives you a graph of
+          the weighted price of all <span class="emphasis"><strong>transactions</strong></span>. It will
+          <span class="emphasis"><strong>not</strong></span> take into account prices defined in the
+          price editor.</p></li><li class="listitem"><p><span class="guilabel"><strong>Most recent</strong></span> - displays the changing value
+          of your stocks based solely on <span class="emphasis"><strong>the most recent</strong></span>
+          price available from the price editor. The price figuring in your
+          stock transactions is <span class="emphasis"><strong>not</strong></span> considered.</p></li><li class="listitem"><p><span class="guilabel"><strong>Nearest in time</strong></span> - the graph is
+          exclusively based on the prices available from the price editor. The
+          value of your stock at each step and point in time is calculated
+          based on the nearest available price in the price editor.</p></li></ul></div><div class="screenshot"><div class="mediaobject"><img src="figures/invest_stockvalue_report.png" alt="An Asset Barchart Report based on the Nearest in time Price Source."><div class="caption"><p>Tracking what value your stocks would’ve had on the
+          stock exchanges.</p></div></div></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="invest-buy-stock1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="invest-sell1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">8.5. Buying Shares </td><td width="20%" align="center"><a accesskey="u" href="chapter_invest.html">Up</a></td><td width="40%" align="right"> 8.7. Selling Shares</td></tr></table></div></body></html>

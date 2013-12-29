@@ -1,0 +1,81 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>C.1. 英国付加価値税</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="GnuCashチュートリアル・コンセプトガイド"><link rel="up" href="appendixc.html" title="付録C 寄付された勘定科目ツリー"><link rel="prev" href="appendixc.html" title="付録C 寄付された勘定科目ツリー"><link rel="next" href="appendixd.html" title="付録D 補助ファイル形式"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">C.1. 英国付加価値税</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="appendixc.html">&lt;&lt;&lt; 前のページ</a> </td><th width="60%" align="center">付録C 寄付された勘定科目ツリー</th><td width="20%" align="right"> <a accesskey="n" href="appendixd.html">次のページ &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="C.1. 英国付加価値税"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="appendixc_vat1"></a>C.1. 英国付加価値税</h2></div></div></div><p>
+勘定科目タイプ (親のタイプと異なる場合だけ表示)
+ </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>[E] 費用</p></li><li class="listitem"><p>[I] 収益</p></li><li class="listitem"><p>[A] 資産</p></li><li class="listitem"><p>[L] 負債</p></li><li class="listitem"><p>[Q] 純資産</p></li><li class="listitem"><p>[B] 銀行預金口座</p></li><li class="listitem"><p>[C] クレジットカード</p></li><li class="listitem"><p>[R] 売掛金</p></li><li class="listitem"><p>[P] 買掛金</p></li></ul></div><p>(Box n) は付加価値税形式ボックス番号を示します。(実際には勘定科目を思い出すための説明としてこれらがあります)</p><p>(ボックスn の一部)をすべて加えると、全体(ボックスn)を得られます。付加価値税は負債です。負であったら、支払い超過です。</p><p>資本設備(ボックス7 の一部)と(ボックス6 の一部)は、付加価値税返金期間でのすべての*加算*(購入)金額です。差異が完全な新規の購入のためでないなら、金額の絶対値でも金額の変化でもありません。そして、減価償却費、損失、(例:不完全な商品の清算)、可変資本における営業外費用は含まれていません。あなたが資本設備を売却する場合、その売却とその付加価値税は収益として記録されます。資産が「お金に変換」され、請求の支払があった時に銀行預金口座の「付加価値税の総額」が増加します。これは資本の減少と一致します。</p><div class="literallayout"><p><br>
+銀行預金口座 [B]<br>
+  |___ 主口座<br>
+  |___ 積立金口座<br>
+<br>
+現金 [A]<br>
+<br>
+資産 [A]<br>
+  |___ 資本設備    (ボックス7 の一部) - 絶対値ではなく、加算専用<br>
+  |           |___ コンピューター     今年、ゼロに減価償却するであることができます。<br>
+  |           |___ EEC購入付加価値税還付  (ボックス6の一部) 必要であるなら、子勘定科目を作成します。<br>
+  |___ その他<br>
+<br>
+売掛金 [R] 信用取引を行う得意先 - (ビジネス領域)<br>
+<br>
+<br>
+クレジットカード [C]<br>
+  |___  クレジットカード1<br>
+<br>
+負債 [L]<br>
+  |___  会社の税金負担<br>
+  |___  手数料負担<br>
+  |___  税金/国民保険(NI)負担<br>
+  |___  その他<br>
+<br>
+付加価値税 [L]   総額 (ボックス5)<br>
+  |___ i/p [A]   仕入(Box4)<br>
+  |___ o/p [L]   (Box3)<br>
+             |___欧州経済共同体   付加価値税の還付(ボックス2)<br>
+             |___売上   UK/EECおよび世界でのゼロ税率を全て含む(Box1)<br>
+<br>
+買掛金 [P]   信用取引を行う仕入先 (ビジネス領域)<br>
+<br>
+純資産 [Q]<br>
+  |___  会社の税金<br>
+  |___  取締役のローン<br>
+  |___  配当<br>
+  |        |___  取締役1<br>
+  |        |___  取締役2<br>
+  |        |___  株主1<br>
+  |___ 寄付金   (これとささいな物は収益にみなしません)<br>
+  |___ 開始残高<br>
+<br>
+収益 [I]   (ボックス6の一部)<br>
+   |___ 利子<br>
+   |___ 雑収入<br>
+   |___ 売上<br>
+                |___ EEC<br>
+                |     |____ 商品 (ボックス8) (子勘定科目が必要です。)<br>
+                |     |____ サービスとソフトウェアソフトウェア (子勘定科目が必要です)<br>
+                | ___ 英国<br>
+                |____ 世界<br>
+<br>
+費用 [E]<br>
+        |__ 減価償却費<br>
+        |__ 報酬<br>
+        |            |___ 取締役報酬<br>
+        |            |___ 雇用者国民保険<br>
+        |            |___ 従業員1<br>
+        |                     |___国民保険<br>
+        |                     |___税込給与<br>
+        |                     |___利害関係者<br>
+        |                     |___税金<br>
+        |___ 他の非付加価値税費用<br>
+        |___ 付加価値税購入(ボックス7の一部)<br>
+                    |___  会計業務<br>
+                    |___  銀行手数料<br>
+                    |___  消耗品<br>
+                    |___  EEC購入付加価値税還付 (ボックス6の一部)<br>
+                    |         |___ 商品 (ボックス9) (子勘定科目が必要です)<br>
+                    |         |___ サービスとソフトウェア  (子勘定科目が必要です)<br>
+                    |___  事務所費<br>
+                    |___  電話料金とインターネット料金<br>
+                    |___  ソフトウェア<br>
+                    |___  定期購読<br>
+                    |___  雑費<br>
+                    |___  出張費/宿泊費<br>
+<br>
+</p></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="appendixc.html">&lt;&lt;&lt; 前のページ</a> </td><td width="20%" align="center"><a accesskey="h" href="index.html">ホーム</a></td><td width="40%" align="right"> <a accesskey="n" href="appendixd.html">次のページ &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">付録C 寄付された勘定科目ツリー </td><td width="20%" align="center"><a accesskey="u" href="appendixc.html">上に戻る</a></td><td width="40%" align="right"> 付録D 補助ファイル形式</td></tr></table></div></body></html>
