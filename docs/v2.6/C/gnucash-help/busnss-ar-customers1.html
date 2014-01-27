@@ -1,0 +1,53 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>7.3. Customers</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="help.html" title="GnuCash Help Manual"><link rel="up" href="chapter_busnss.html" title="Chapter 7. Business Features"><link rel="prev" href="busnss-ar-components1.html" title="7.2. Accounts Receivable"><link rel="next" href="busnss-ar-invoices1.html" title="7.4. Invoices"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.3. Customers</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="busnss-ar-components1.html">&lt;&lt;&lt; Prev</a> </td><th width="60%" align="center">Chapter 7. Business Features</th><td width="20%" align="right"> <a accesskey="n" href="busnss-ar-invoices1.html">Next &gt;&gt;&gt;</a></td></tr></table><hr></hr></div><div class="sect1" title="7.3. Customers"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="busnss-ar-customers1"></a>7.3. Customers</h2></div></div></div><p>Customers are people or companies to whom you sell goods or
+    services. They must be registered within the A/R system.</p><div class="sect2" title="7.3.1. New"><div class="titlepage"><div><div><h3 class="title"><a name="busnss-ar-custnew2"></a>7.3.1. New</h3></div></div></div><p>To register a new customer, enter the menu <span class="guimenu"><strong>Business</strong></span> → <span class="guisubmenu"><strong>Customer</strong></span> → <span class="guimenuitem"><strong>New Customer</strong></span>. Fill in customer information, such as
+      Company Name, Address, Phone, Fax, etc. Below is a list of the other
+      options:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="guilabel"><strong>Identification - Customer Number</strong></span> - can be
+          any number by which you would like to refer to this customer. You
+          may leave it blank and a number will be chosen automatically. 
+          See <a class="xref" href="book-options.html#counters-book-options" title="10.3.4. Counters Book Options Tab">Section 10.3.4, “Counters Book Options Tab”</a> for more info.</p></li><li class="listitem"><p><span class="guilabel"><strong>Identification - Active</strong></span> - differentiates
+          active customers from inactive ones. This is useful when you have
+          many past customers, and you want to see only those marked
+          active.</p></li><li class="listitem"><p><span class="guilabel"><strong>Billing Address - Name</strong></span> - is the contact
+          name of the person to receive the invoices.</p></li><li class="listitem"><p><span class="guilabel"><strong>Notes</strong></span> - records any additional comments
+          about the customer.</p></li><li class="listitem"><p><span class="guilabel"><strong>Billing Information - Currency</strong></span> -
+          specifies the default billing currency.</p></li><li class="listitem"><p><span class="guilabel"><strong>Billing Information - Terms</strong></span> - specifies
+          the default billing terms for this customer. Billing terms must be
+          preregistered using <span class="guimenu"><strong>Business</strong></span> → <span class="guimenuitem"><strong>Billing Terms Editor</strong></span>.</p></li><li class="listitem"><p><span class="guilabel"><strong>Billing Information - Discount</strong></span> - gives
+          the customer a default percentage based discount at the time of
+          invoice creation. Enter a value from 0 to 100. You can override the
+          default discount when you create an invoice.</p></li><li class="listitem"><p><span class="guilabel"><strong>Billing Information - Credit Limit</strong></span> -
+          stores the maximum credit you are willing to extend to the customer.
+          This field is for your reference purposes only. <strong class="application"><code>GnuCash</code></strong> does not use
+          the value.</p></li><li class="listitem"><p><span class="guilabel"><strong>Billing Information - Tax Included</strong></span> - this
+          specifies whether nor not tax is included in invoice amounts by
+          default. You can choose <span class="guilabel"><strong>Yes</strong></span>,
+          <span class="guilabel"><strong>No</strong></span>, or <span class="guilabel"><strong>Use Global</strong></span>.
+          </p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p><span class="guilabel"><strong>Yes</strong></span> means that the tax is already
+                included in amounts on invoices.</p></li><li class="listitem"><p><span class="guilabel"><strong>No</strong></span> means tax is not
+                included.</p></li><li class="listitem"><p><span class="guilabel"><strong>Use Global</strong></span> means to use the setting
+                made in the global preferences accessible through
+                <span class="guimenu"><strong>Edit</strong></span> → <span class="guimenuitem"><strong>Preferences</strong></span>
+                (<span class="guimenu"><strong>Gnucash</strong></span> → <span class="guimenuitem"><strong>Preferences</strong></span> on Mac OS X).</p></li></ul></div></li><li class="listitem"><p><span class="guilabel"><strong>Billing Information - Tax Table</strong></span> -
+          specifies a default tax table to apply to invoice line items. Tax
+          tables must be registered from the <span class="guimenu"><strong>Business</strong></span> → <span class="guimenuitem"><strong>Tax Table Editor</strong></span> menu item.</p></li><li class="listitem"><p><span class="guilabel"><strong>Shipping Address</strong></span> - records the customer’s
+          shipping address if it is different from the billing address. The
+          shipping address is for your reference. <strong class="application"><code>GnuCash</code></strong> does not use the
+          value.</p></li></ul></div></div><div class="sect2" title="7.3.2. Find and Edit"><div class="titlepage"><div><div><h3 class="title"><a name="busnss-ar-custfind2"></a>7.3.2. Find and Edit</h3></div></div></div><p>To search for an existing customer, use the <span class="guimenu"><strong>Business</strong></span> → <span class="guisubmenu"><strong>Customer</strong></span> → <span class="guimenuitem"><strong>Find Customer</strong></span> window. You select a customer to
+      <span class="guilabel"><strong>View/Edit</strong></span> from the results of the search. This
+      window is also used to look up customers when creating invoices and
+      processing payments.</p><p>If many customers match the search criteria you provide, the
+      search can be refined by running an additional search within the current
+      results. The current result set is searched when the <span class="guilabel"><strong>Refine
+      Current Search</strong></span> radio button is selected. In fact, <strong class="application"><code>GnuCash</code></strong>
+      selects this option for you after you run the initial search.</p><p>If the customer you are searching for does not match the supplied
+      search criteria, change the search criteria, click the <span class="guilabel"><strong>New
+      Search</strong></span> radio button and then the <span class="guilabel"><strong>Find</strong></span>
+      button. The relevant step is the <span class="guilabel"><strong>New Search</strong></span>
+      selection. If the customer is not in the result of the original search,
+      and you only search within this set, the customer cannot be found,
+      regardless of new search criteria.</p><div xmlns="http://www.w3.org/TR/xhtml1/transitional" xmlns:doc="http://nwalsh.com/xsl/documentation/1.0" class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0"><tr><td rowspan="2" align="center" valign="top" width="25"><img src="./stylesheet/note.png"></img></td><th align="left" valign="top">Note</th></tr><tr><td colspan="2" align="left" valign="top"><p xmlns="">To return a list of all registered active customers, set the
+        search criterion to <span class="guilabel"><strong>matches regex</strong></span>, and place a
+        single dot "." in the text field area. Make sure <span class="guilabel"><strong>Search only
+        active data</strong></span> is checked, then click
+        <span class="guibutton">Find</span>. The regular expression "." means to match
+        anything.</p></td></tr></table></div></div></div><div xmlns="http://www.w3.org/TR/xhtml1/transitional" class="navfooter"><hr></hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="busnss-ar-components1.html">&lt;&lt;&lt; Prev</a> </td><td width="20%" align="center"><a accesskey="h" href="help.html">Home</a></td><td width="40%" align="right"> <a accesskey="n" href="busnss-ar-invoices1.html">Next &gt;&gt;&gt;</a></td></tr><tr><td width="40%" align="left">7.2. Accounts Receivable </td><td width="20%" align="center"><a accesskey="u" href="chapter_busnss.html">Up</a></td><td width="40%" align="right"> 7.4. Invoices</td></tr></table></div></body></html>
